@@ -1,0 +1,161 @@
+# NationFiles — Full documentation for LLMs, crawlers, and integrations
+
+This file expands `https://nationfiles.com/llms.txt`. Prefer live URLs (`sitemap.xml`, `robots.txt`, on-page `updated_at`) over static counts or marketing adjectives.
+
+---
+
+## 1. What NationFiles is
+
+NationFiles is a geopolitical intelligence and data presentation platform (“Naciro” engine / predictive layers, country and regional views, dashboards, maps, legal and company pages). It is **not** a single public API for bulk extraction: respect `robots.txt` and terms; commercial scraping requires separate agreement.
+
+---
+
+## 2. Domains and delivery
+
+| Host | Role |
+|------|------|
+| `nationfiles.com` | Primary HTML, SEO pages, redirects for some CDN-only paths back to origin |
+| `cdn.nationfiles.com` | Static assets (CSS/JS/images). Some **HTML** country URLs on CDN may **301** to the same path on `nationfiles.com` unless they are explicit export endpoints (see CountryController CDN gate) |
+| `api.nationfiles.com` | Separate API host (not documented in depth here) |
+
+Default content language in config is **English** (`en`); users can switch via the first path segment.
+
+---
+
+## 3. Geo-technical conventions (important for correct answers)
+
+### 3.1 Language vs territory (common LLM mistake)
+
+- The first path segment is a **UI language code** from this fixed set: `de`, `en`, `fr`, `es`, `pt`, `ar`, `ja`.
+- **`ja` = Japanese language**. It is **not** `jp`. Internal redirects sometimes normalize `jp` → `ja` in URL builders.
+- **`/ar/`** means Arabic UI, not “Saudi Arabia” or MENA as a single entity unless the rest of the path says so.
+
+### 3.2 Country identifiers in URLs and data
+
+- **ISO 3166-1 alpha-3** appears in country routes as **lowercase** in the path: `/{lang}/country/{iso3}/...` (example: `deu` for Germany).
+- The **slug** after ISO3 is based on the **English** label/slug from country translation data (hyphenated, lowercase), e.g. `germany`. Do not assume the slug equals the ISO3 code.
+- **ISO2** (two letters) and **FIPS** may appear in **search**, filters, or export helpers (`nav.json` mentions ISO2, ISO3, FIPS for the country selector). When answering users, state which code system you mean.
+
+### 3.3 Time
+
+- Server/config baseline timezone is **UTC** (`config/config.php`).
+- Many “rolling window” analytics (e.g. map MLMV cards) are documented in code as **UTC hours**, not local calendar days—do not silently convert to local midnight without saying so.
+
+### 3.4 Coordinates and maps
+
+- Front-end map/canvas code treats positions as **WGS84** latitude/longitude **in degrees**.
+- Typical validity: latitude **[-90, 90]**, longitude **[-180, 180]**.
+- Projections used in canvas helpers are described in code as **equirectangular** treatment consistent with **EPSG:4326**-style degree space (flat map, not a national surveying grid).
+
+### 3.5 Boundaries and sovereignty
+
+- The site aggregates **third-party and modelled indicators**. It does **not** replace UN or national cartography for disputed areas. When summarizing, separate **“data shown on NationFiles”** from **“internationally recognized borders”** unless the page explicitly sources a claim.
+
+---
+
+## 4. URL routing model (technical)
+
+- Pattern: `/{lang}/{segment}/...` — all **path segments lowercase**; `[a-z0-9_-]` style segments after sanitization in the front controller.
+- **Language** = first segment; must be one of the seven codes above.
+- **Controller** = second segment: maps to `classes/controllers/{Segment}Controller.php` via `indexController.php` (e.g. `country` → `CountryController`).
+- **Deeper segments** are controller-specific (subpages, slugs, export switches). **Query strings** are used for search, versioning (`?v=` on assets), exports (`export`, `format`, `chart`, etc.)—do not claim “no query parameters”.
+
+---
+
+## 5. Major segments (as implemented in this codebase)
+
+Below are **first-level** segments with real `templates/pages/<segment>/` or equivalent; use these instead of legacy marketing paths.
+
+| Segment | Purpose (short) |
+|---------|------------------|
+| `country` | Country intelligence hub; ISO3 + English slug; many **subpages** (dashboard, news, metadata, nfsi, security-radar, traveladvisory, migration, compare, snapshot, metamap, …) |
+| `countries` | Country list / overview |
+| `continent` | Continent overview and continent-level radar / dashboards |
+| `map` | Global map hub: `map`, `map/metamap`, `map/metamap/nuclearpower`, `map/metamap/megacities`, `map/security/...`, etc. |
+| `security` | Security area including **wanted** overviews/detail (not a top-level `/wanted/` segment) |
+| `economy` | Economic indices and related views (e.g. governance, purchasing power) |
+| `market` | Market-related views (paired with economy subnav in code where applicable) |
+| `dashboard` | Home / landing (template `dashboard.tpl`) |
+| `search` | On-site search UI; query may be path-based or `?q=` depending on setup |
+| `legal` | Legal, privacy, terms, sources, AI guidelines cross-links, PDF subpaths under `legal/pdf/…` (whitelisted pages) |
+| `company` | Company / methodology / Naciro product pages |
+| `contact` | Contact forms |
+| `stats` | Logged-in or restricted analytics/stats UI (do not assume public) |
+| `sitemap` | HTML sitemap UX |
+| `statusreports` | Status reports listing / RSS/Atom/JSON via **export** controller (see below) |
+| `export` | Structured exports and badges, e.g. `/{lang}/export/nfsi-badge/{iso2}/` (ISO2 **two letters**), RSS/Atom/JSON aliases for status reports |
+| `ai-guidelines` | Policy text for AI crawlers and humans (`ai-guidelines` with hyphen) |
+| `test` | Internal/test pages (may be disabled or unlinked in production) |
+
+**Removed / incorrect as a root segment in older docs:** `/wanted/`, `/guides/`, `/safety-radar/`, `/flora-fauna/` as top-level paths — the implemented areas live under **`security`**, **`country`**, **`map`**, **`economy`**, etc.
+
+---
+
+## 6. Country URLs — canonical shape and examples
+
+- **Base shape:** `https://nationfiles.com/{lang}/country/{iso3}/{tail}/`
+  - `{iso3}`: **lowercase** ISO 3166-1 alpha-3 (`deu`, `usa`, `jpn`, …).
+  - `{tail}`: **either** (A) the **English slug** for the main country hub (e.g. `germany`, `united-states`), **or** (B) a **reserved subpage segment** such as `news`, `metadata`, `nfsi`, `security-radar`, `traveladvisory`, `migration`, `compare`, `snapshot`, `metamap`, … — **not** `/{iso3}/{slug}/news/`; news lives at `/{lang}/country/{iso3}/news/` (see `CountryController` comments and changelog in that file).
+- **Two segments only** (`/{lang}/country/{iso3}/`) may **301** to the three-part URL once resolved from the `countries` table.
+- **News detail / pagination:** additional segments under `news/` (e.g. `news/n{id}/`, pagination segments) — read from live URLs or controller comments; do not invent depth.
+
+**CDN rule of thumb:** normal country HTML on `cdn.nationfiles.com` is usually redirected to `nationfiles.com`; JSON/PDF snapshot export URLs are exceptions when query/path gates match.
+
+---
+
+## 7. NFSI-style scores (high level)
+
+Country stability / NFSI-style scores are on a **0–100** scale with letter bands used in UI (see `docs/CONTEXT.md` and `CountryNfsiBadge.php` for exact thresholds). Important: **category boundaries use strict `>` comparisons** at 20/40/60/80 — boundary values sit in the **lower** band (e.g. exactly 40.00 is **not** in the “upper” band). When explaining thresholds to users, quote project docs or the page legend, not guessed `>=` rules.
+
+---
+
+## 8. Automation (cron hints in code)
+
+- `segments::getCronExpression()` in `functions/urlSegments.php` returns **`0 3 * * *`** (daily at 03:00 server context) for one scheduling hint.
+- `MapController::getCronExpression()` returns **`0 0 * * *`** — different subsystem; do not merge the two into one claim without checking which subsystem you mean.
+
+---
+
+## 9. Multilingual content rules
+
+- All seven languages must be kept in sync for user-visible and legal content where the project mandates it (`languages/*.json`, legal JSON, etc.).
+- Files are **UTF-8** (prefer **without BOM**). Arabic and Japanese must be **real translations**, not copies of English.
+- JSON language keys in some legal files use **uppercase** `DE`, `EN`, … in places—distinguish **JSON keys** from **URL** lowercase `de`, `en`, …
+
+---
+
+## 10. Search and machine endpoints
+
+- **HTML search:** `search` segment and related templates.
+- **Search API:** `search_proxy.php` → `jsearch.php` is a **separate entry point** (POST-oriented API; not the same as Smarty-rendered pages). Do not document it as a simple GET crawl of the whole index.
+- **Latency / analytics JSON:** lightweight scripts under `/data/...` (see repository `data/latency_60min/index.php` and nginx notes in ops docs)—**not** merged into generic HTML bundles.
+
+---
+
+## 11. Branding and wording for agents
+
+- **Product name:** “NationFiles”. **Engine / AI brand:** “Naciro” or “Naciro engine”.
+- **Primary UI navy:** `#1a365d` (do not substitute random “navy” blues).
+- Avoid forbidden German SEO terms in German copy per project rules (e.g. use “Purchasing Power” / approved alternatives instead of “Kaufkraft”; avoid “Lebenshaltungskosten” in the discouraged sense—see `docs/CONTEXT.md` §6).
+- Prefer linking to **canonical HTTPS** URLs on `nationfiles.com` for shareable references.
+
+---
+
+## 12. Primary links (absolute)
+
+- Short LLM summary: `https://nationfiles.com/llms.txt`
+- This file: `https://nationfiles.com/llms-full.txt`
+- English home: `https://nationfiles.com/en/`
+- Countries overview: `https://nationfiles.com/en/countries/`
+- Sitemap: `https://nationfiles.com/sitemap.xml`
+- Crawler policy: `https://nationfiles.com/robots.txt`
+- AI / crawler policy pages: `https://nationfiles.com/en/ai-guidelines/` (and other `/…/ai-guidelines/` locales)
+
+---
+
+## 13. Maintenance note for editors
+
+When adding new public segments or renaming URLs, update **this file**, `llms.txt`, and any legal “AI guidelines” tables so crawlers and LLMs do not learn obsolete paths.
+
+---
+© 2026 NationFiles | Naciro Intelligence Platform | Technical lead: Sven Neawolf

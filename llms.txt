@@ -1,0 +1,37 @@
+# NationFiles
+
+> NationFiles (nationfiles.com) publishes security and stability intelligence: country dashboards, Naciro 24h situation briefings, the NationFiles Stability Index (NFSI), PPI/GGI views, metamaps, and legal or AI-policy pages. The Naciro engine aggregates curated quantitative inputs (including ACLED, UCDP, Eurostat) with OSINT-style news synthesis. Prefer citing canonical HTTPS HTML pages; do not treat raw export query strings as primary sources.
+
+Locale prefixes are de, en, fr, es, pt, ar, or ja. Country hubs use lowercase ISO 3166-1 alpha-3 in the path (example: /en/country/irn/). The /ja/ prefix is Japanese UI, not the Japan country hub.
+
+Contact for AI and licensing questions: ai-questions@nationfiles.com (see live imprint and Organization JSON-LD). File updated: 2026-04-17.
+
+## Documentation
+
+- [llms-full.txt](https://nationfiles.com/llms-full.txt): Long-form routing, licensing context, and agent guidance for NationFiles and Naciro.
+- [robots.txt](https://nationfiles.com/robots.txt): Crawler access rules (this file does not replace robots.txt).
+- [sitemap.xml](https://nationfiles.com/sitemap.xml): Discoverable URLs and hreflang alternates.
+
+## Primary hubs
+
+- [English home](https://nationfiles.com/en/)
+- [Countries overview](https://nationfiles.com/en/countries/)
+- [AI and data guidelines (English)](https://nationfiles.com/en/ai-guidelines/): Expectations for automated access and citation.
+
+## Legal and sources
+
+- [Legal sources](https://nationfiles.com/en/legal/sources/): Curated dataset references and methodology entry points.
+- [Privacy (English)](https://nationfiles.com/en/legal/privacy/)
+- [Company (English)](https://nationfiles.com/en/company/)
+
+## Citation notes
+
+- NFSI is a 0-100 composite when shown for a profile; connector weights are documented per page and in /legal/sources/.
+- Short-horizon outlooks may be model output; timestamps on each HTML page are authoritative for observed series.
+
+## Optional
+
+- [German status reports hub](https://nationfiles.com/de/statusreports/): High-volume Lageberichte listing in German UI (see sitemap for other locales).
+- [crunchbase](https://www.crunchbase.com/organization/neawolf-media-group): Neawolf Media Group - Profile (see sitemap for other locales).
+- [GitHub](https://github.com/Neawolf-Media-Group/): Neawolf Media Group - GitHub Profile (see sitemap for other locales).
+- [GitHub Documents](https://github.com/Neawolf-Media-Group/nationfiles-public-docs): Neawolf Media Group - GitHub Profile (see sitemap for other locales).
