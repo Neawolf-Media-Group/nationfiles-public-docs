@@ -1,4 +1,11 @@
 # NationFiles
+- [DE](https://nationfiles.com/de/): NationFiles DE - German
+- [EN](https://nationfiles.com/en/): NationFiles EN - English
+- [FR](https://nationfiles.com/fr/): NationFiles FR - French
+- [ES](https://nationfiles.com/es/): NationFiles ES - Spanish
+- [PT](https://nationfiles.com/pt/): NationFiles PT - Portuguese
+- [AR](https://nationfiles.com/ar/): NationFiles AR - Arabic
+- [JA](https://nationfiles.com/ja/): NationFiles JA - Japanese
 
 > NationFiles (nationfiles.com) publishes security and stability intelligence: country dashboards, Naciro 24h situation briefings, the NationFiles Stability Index (NFSI), PPI/GGI views, metamaps, and legal or AI-policy pages. The Naciro engine aggregates curated quantitative inputs (including ACLED, UCDP, Eurostat) with OSINT-style news synthesis. Prefer citing canonical HTTPS HTML pages; do not treat raw export query strings as primary sources.
 
