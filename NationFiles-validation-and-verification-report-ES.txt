@@ -1,0 +1,561 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aquisgrán, Alemania
+
+
+
+________________________________________________________________________________
+Informe de validación y verificación
+
+
+
+
+________________________________________________________________________________
+Fecha de actualización:
+	18.04.2026
+	PDF de: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	Este informe describe la metodología, la procedencia de los datos y la trazabilidad técnica del NationFiles Stability Index (NFSI) y del pronóstico a 7 días. Está dirigido a universidades, autoridades públicas y auditores acreditados para verificar y respaldar la credibilidad y la reproducibilidad del sistema. NationFiles se compromete con la transparencia absoluta: todas las fórmulas y parámetros indicados corresponden a la implementación real; no se inventan valores ni se ajustan a posteriori. El NFSI es adecuado como referencia fiable para estudios científicos y auditorías.
+
+
+
+________________________________________________________________________________
+Resumen
+	El NFSI se basa en una agregación de tres capas (capa 1: indicadores, capa 2: suavizado temático con inercia de 7 días, capa 3: puntuación final ponderada incluyendo modo crisis). Todos los pesos y fórmulas son fijos y se implementan en consecuencia.
+	Los datos proceden de fuentes públicas y bajo licencia (p. ej. Banco Mundial, ACLED, INTERPOL, GDELT); la procedencia completa y las licencias están disponibles en el inventario de datos y en /legal/sources/.
+	El pronóstico a 7 días utiliza un método VAR con historial de 90 días y varias series temporales (p. ej. índice mundial, riesgo noticioso por país). La metodología está documentada de forma coherente en este documento y en la implementación.
+	La gobernanza incluye control de versiones, traza de auditoría y procesos definidos para auditores externos.
+
+
+
+________________________________________________________________________________
+Alcance y público objetivo
+	Público objetivo: universidades, instituciones de investigación, autoridades nacionales e internacionales y auditores acreditados que deban verificar o respaldar la validación y el reconocimiento del NFSI y del pronóstico. Cobertura geográfica: mundial. Cobertura temporal de la base de datos NFSI: desde febrero de 2026 en adelante, en curso. Fuera de alcance: asesoramiento de inversión o financiero individual; el NFSI sirve para evaluar estabilidad y riesgo, no para recomendar productos financieros.
+
+
+
+________________________________________________________________________________
+Integridad y credibilidad del NFSI
+	NationFiles y el NFSI están diseñados para servir como referencia fiable en estudios científicos, auditorías y evaluaciones reguladoras. Las siguientes posiciones subrayan la trazabilidad y la defensabilidad.
+	Sin valores inventados: todos los valores NFSI y pronósticos se producen únicamente a partir de fórmulas documentadas y las fuentes listadas en este informe y el inventario de datos. No hay sobreescrituras manuales ni correcciones de caja negra.
+	Totalmente basado en código y documentado: cada paso de cálculo (capas 1–4) está implementado en código y descrito en este informe con constantes, fórmulas y pseudocódigo.
+	Procedencia y traza de auditoría: el origen de los datos, las licencias y las frecuencias de actualización están documentados en el inventario de datos y las fuentes legales. Los cambios en el modelo y los datos se versionan y son trazables mediante una traza de auditoría.
+	La gobernanza incluye control de versiones, traza de auditoría y procesos definidos para auditores externos.
+	Las interpretaciones algorítmicas no representan evaluaciones oficiales. La seguridad técnica, los ciclos de auditoría (p. ej. SCA/SAST) y la infraestructura se describen en la Declaración global de seguridad y resiliencia (/legal/security/). Corrección de errores en datos crudos: reportar a data@nationfiles.com → revisión de la fuente → corrección en la base de datos → recálculo automático; la sobreescritura manual de puntuaciones queda excluida (véase Declaración de independencia /legal/independence/).
+
+
+
+________________________________________________________________________________
+Transparencia absoluta
+	NationFiles se compromete con la plena transparencia en la metodología, los datos y el cálculo del NFSI. No hay parámetros ocultos, ni correcciones opacas, ni información deliberadamente retenida relevante para la evaluación del índice.
+	Lo que se divulga:
+	Todas las fórmulas y pasos de cálculo (capas 1–4), incluido pseudocódigo y tabla completa de constantes, en este informe.
+	Inventario completo de datos de todas las fuentes con impacto en el NFSI: origen, licencia, frecuencia de actualización, peso temático. Acceso a las fuentes legales (/legal/sources/).
+	Sin ponderaciones secretas: la matriz de ponderación (pesos de conectores, grupos) está documentada; bajo petición, los auditores autorizados pueden acceder a artefactos técnicos en el marco de acuerdos de auditoría.
+	Los cambios en el modelo y los datos se versionan; una traza de auditoría (p. ej. marcas temporales, hashes) garantiza la trazabilidad. Los registros de cálculo por país/fecha pueden proporcionarse durante auditorías para verificar pasos intermedios.
+	Sin caja negra: cada valor NFSI publicado puede reconstruirse a partir de las fórmulas, constantes y datos de entrada documentados. No hay «correcciones secretas» posteriores ni sobreescrituras manuales.
+	La transparencia no es una afirmación de marketing sino una práctica documentada: este informe y las referencias enlazadas son la base.
+
+
+
+________________________________________________________________________________
+Cómo citar este informe
+	Este informe es citable para medios, ámbito académico y autoridades. Utilice lo siguiente:
+	Neawolf Media Group / NationFiles (2026). Informe de validación y verificación — NationFiles Stability Index (NFSI). Versión 1.0. Aquisgrán. ID documento: VVR-2026-03-07.
+	Corto:
+	NationFiles (2026). Informe de validación NFSI. VVR-2026-03-07.
+
+
+
+________________________________________________________________________________
+Arquitectura del sistema y pipeline de datos
+	Ingestión de datos → Preprocesamiento → Capa 1 (indicadores, normalización) → Capa 2 (agregación temática, suavizado 7 días) → Capa 3 (puntuación final, modo crisis) → Entrega vía API y feeds.
+	Fig.: Flujo de datos desde la ingestión a través de las capas 1–3 hasta la entrega.
+	Ingestión
+	Preprocesamiento
+	Capa 1 — Indicadores
+	Capa 2 — Agregación temática
+	Capa 3 — Puntuación final y modo crisis
+	Pronóstico 7 días / API
+
+
+
+________________________________________________________________________________
+Ponderación, escalas y normalización — cómo se pondera todo
+	Para que el lector pueda ver de forma inequívoca cómo funciona el sistema: todos los rangos de valor, escalas y reglas de normalización se describen a continuación.
+
+
+
+________________________________________________________________________________
+Rangos de valor (escalas) de un vistazo
+	Todas las puntuaciones de estabilidad en el sistema NFSI se sitúan en el intervalo [0, 100] tras el procesamiento.
+	QuantityRangeMeaningRaw value (raw)source-specificOriginal value from the data source (e.g. count, percentage, Goldstein −10 to +10). Normalized in Layer 1.score_row (row score)[0, 100]After Layer 1: one score per row (e.g. per country/date/event). Default 50 when spread is zero or min/max missing.dayScore (daily score per connector/country)[0, 100]After Layer 2 aggregation: one value per connector, country, and date. Security group: MIN of row scores; others: average (with dummies 0, 100 and pad 50).score_final (Layer 2 output)[0, 100]0.6×dayScore + 0.4×previous day; after recovery max 95. Stored in nfsi_connector.baseScore (Layer 3)[0, 100]Weighted average of all connector scores (effW = group × scoreValue/100 × updateMult). Dummies 0 and 100 with weight 1.rawScore / nfsi_raw[1, 100]After conflict malus, fragility malus, small-country malus, population bonus, WGI pull. Floor 1, cap 100.NFSI_Today (final index)[1, 100]After Layer 4 (inertia): daily change capped at ±3; in security crisis (min security < 25) immediate pass-through without smoothing.
+
+
+
+________________________________________________________________________________
+Layer 1 — Normalization and direction
+	Por fuente de datos se usa una columna de valor bruto (o una severidad calculada). Sobre todas las filas de la fuente se obtienen el mínimo y el máximo; por fila se normaliza al intervalo [0, 100] según la dirección del indicador.
+
+
+
+________________________________________________________________________________
+Layer 2 — Today vs. previous day weight and aggregation rules
+	Por conector, país y fecha se recogen todas las puntuaciones de fila (score_row) asociadas; se agregan y se suavizan con el día anterior (pesos 0,6 / 0,4).
+
+
+
+________________________________________________________________________________
+Layer 3 — Connector weights, groups, and effective weight
+	Cada conector tiene un peso configurado (p. ej. 40–100, véase inventario de datos) y un grupo temático; el peso efectivo depende del score actual.
+
+
+
+________________________________________________________________________________
+Layer 4 — Inertia weights and daily change cap
+	La puntuación bruta de la capa 3 (nfsi_raw) se suaviza con el NFSI del día anterior; en crisis de seguridad se omite el suavizado.
+
+
+
+________________________________________________________________________________
+Flujo del sistema — el NFSI como descripción legible
+	Lo siguiente describe el flujo completo desde los datos en bruto hasta el valor NFSI publicado.
+	Los datos en bruto se ingieren por fuente de datos (conector) y se preprocesan (imputación, zonas horarias, deduplicación). Cada fuente aporta filas con al menos una columna de valor bruto o una severidad calculada.
+	Capa 1 (Indicadores): Por cada fuente se calculan el mínimo y el máximo de los valores brutos sobre todas las filas. Si el rango es cero o indefinido, todas las filas reciben la puntuación de fila neutra 50. Si no, por fila el valor bruto se normaliza a [0, 100]: normalizado = (bruto − min) / rango × 100. Según el indicador, «más bruto = peor estabilidad» → puntuación de fila = 100 − normalizado, si no puntuación de fila = normalizado. El resultado se limita a [0, 100] y se redondea a dos decimales.
+	Capa 2 (Puntuación diaria por conector y país): Por conector, país y fecha se recogen todas las puntuaciones de fila asociadas. Grupo seguridad (grupo 100): puntuación diaria = MÍN de esos valores (faltantes rellenados con 100). Otros grupos: media aritmética de los valores recogidos más dummies 0 y 100 y relleno 50. Puntuación final capa 2 = 0,6 × puntuación diaria + 0,4 × día anterior. Resultado en [0, 100]. Días faltantes: recuperación (0,2 o 1,0 pt/día, techo 95, máx. 90 días).
+	Capa 3 (NFSI país): Por país y fecha están disponibles las puntuaciones capa 2 de todos los conectores. Conectores faltantes: puntuación neutra 50 (no_data). Peso efectivo = grupo × (peso conector/100) × multiplicador de actualización. Puntuación base = media ponderada con dummies 0 y 100. Si Mín(seguridad) < 70: malus de conflicto (máx. 35). Luego malus de fragilidad, malus país pequeño, bonus población, WGI pull. Puntuación bruta limitada a [1, 100].
+	Capa 4 (Suavizado diario): La puntuación bruta se suaviza con el NFSI del día anterior: por defecto 80 % anterior, 20 % hoy; con muchos no_data 45 % o 50 % hoy. Variación máx. ±3 puntos. En crisis de seguridad (mín seguridad < 25), sin suavizado: NFSI_Today = puntuación bruta. Resultado = valor NFSI publicado para ese país y fecha.
+
+
+
+________________________________________________________________________________
+Indicadores diarios y su impacto en el NFSI
+	El NFSI integra fuentes actualizadas diariamente que reflejan la estabilidad en tiempo casi real. Entre ellas figuran eventos noticiosos (GDELT), tono mediático y señales de riesgo por país. Entran mediante indicadores definidos en la capa 1 y afectan al valor diario a través de las capas 2 y 3.
+	Fuentes diarias relevantes: (1) GDELT — escala Goldstein, tono medio y nivel de riesgo de eventos por país; (2) sentimiento mediático; (3) señales propias de riesgo noticioso con ventanas 24h/48h.
+	Se forma una señal en vivo a partir de promedios de Goldstein, tono y nivel de riesgo. Si el riesgo medio supera un umbral, se aplica una deducción. El resultado puede suavizarse con el índice NFSI establecido (p. ej. 40 % en vivo, 60 % índice) para limitar el ruido.
+	Lógica simplificada (pseudocódigo, no idéntica a la implementación):
+	LIVE_BASE = 50
+	POR cada fuente: LIVE_BASE += (Goldstein_avg × k1) + (Tone_avg × k2) + (Sentiment_avg × k2)
+	SI risk_avg > threshold ENTONCES LIVE_BASE −= (risk_avg − threshold) × k3
+	LIVE_BASE = LIMITE(LIVE_BASE, 0, 100)
+	SI existe índice establecido ENTONCES SMOOTHED = 0.4 × LIVE_BASE + 0.6 × index
+
+
+
+________________________________________________________________________________
+Inventario de datos (procedencia seleccionada)
+	FuenteCampoLicenciaActualizaciónCoberturaPesoAcledMonthAllCrisis & Safety Radar (Level 1)ACLED / filtered, aggregated for Naciro IntelligencewöchentlichGlobal90AcledMonthAllOverviewCrisis & Safety Radar (Level 1)ACLED / filtered, aggregated for Naciro IntelligencewöchentlichGlobal95CountriesConflictUcdpGedUCDP GED conflict eventsFree for academic, commercial, governmental use (see UCDP)täglichGlobal85CountriesCurrencyFromFa7-Tage-Trend WährunginterntäglichGlobal65CountriesGdeltGlobRadarGDELT global event dataUnlimited use for academic, commercial, governmental (see Terms of Use)mehrmals täglichGlobal85CountriesNetAbuseIpDbAbuse IPs by country (AbuseIPDB)AbuseIPDB Terms of UsetäglichGlobal70CountriesNetGrpTrfcAnomTraffic anomalies by locationCloudflare Terms of Usemehrmals täglichGlobal55CountriesNetSpmBotBotnet C&C by country (Spamhaus)Spamhaus Terms & ConditionstäglichGlobal70CountriesNetTrfcAnomTraffic anomalies (Cloudflare Radar)Cloudflare Terms of Usemehrmals täglichGlobal70CountriesPopPrisn100KPrison population rate per 100kCC BY / Our World in DatawöchentlichGlobal50CountriesVatRatesApiVerVAT rates by country (APIVerve)APIVerve Terms of ServicewöchentlichGlobal60CountriesVatRatesVatLupVAT rates EU (VAT Lookup)Refer to source (EC data)wöchentlichGlobal60CountriesWb65UpPopulation 65+ %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal10CountriesWbAccsZsAccess to electricity %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal60CountriesWbCcEstControl of corruption (estimate)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal85CountriesWbCdrtInCrude death rateCC BY 4.0 / filtered, aggregatedwöchentlichGlobal30CountriesWbCpiTotlZgInflation, consumer prices %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal75CountriesWbFpCpiTotlInflation consumer prices % (WB)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal20CountriesWbLe00Life expectancy at birthCC BY 4.0 / filtered, aggregatedwöchentlichGlobal45CountriesWbMilTotlMilitary personnel totalCC BY 4.0 / filtered, aggregatedwöchentlichGlobal40CountriesWbNetUserInternet users %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal40CountriesWbPopDpndAge dependency ratio %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal20CountriesWbPopGrowPopulation growth %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal25CountriesWbPovGiniGini index (income inequality)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal60CountriesWbPsrcP5Intentional homicides per 100kCC BY 4.0 / filtered, aggregatedwöchentlichGlobal100CountriesWbResTotlCdTotal reserves (incl. gold) US$CC BY 4.0 / filtered, aggregatedwöchentlichGlobal25CountriesWbRlEstRule of law (estimate)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal80CountriesWbUem1524Youth unemployment (15-24) %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal70CountriesWbUemTotlUnemployment %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal55CountriesWbVaEstVoice and accountability (est.)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal50CountriesWbWgiPvCcRlWGI: stability, corruption, lawCC BY 4.0 / filtered, aggregatedwöchentlichGlobal85CountryNewsRiskLevelNews Risk (24h, Carry-Forward)CC BY-ND 4.0täglichGlobal100DisasterGdacsHumNatGDACS disaster alertsGDACS Terms of Usemehrmals täglichGlobal100EconFredHerCountScOvScOverall Economic Freedom (Heritage)Refer to Source LinkwöchentlichGlobal60EconFredHerCountScRanksWorld/region rank (Heritage)Refer to Source LinkwöchentlichGlobal60EconFredHerCountScRightsProperty Rights (Heritage)Refer to Source LinkwöchentlichGlobal100EconFredHerCountScTaxTax & gov. spending (Heritage)Refer to Source LinkwöchentlichGlobal60EurostatStatArblsQUnemployment rate (monthly)Refer to Source LinkwöchentlichGlobal60EurostatStatTpsPopulation on 1 JanuaryRefer to Source LinkwöchentlichGlobal40GovFbiMwFBI Most Wanted / fugitivesOpenSanctions / FBI data – Public Domain (DOJ)wöchentlichGlobal80GovIntPolINTERPOL Red Notices / wantedINTERPOL Terms of UsewöchentlichGlobal85NewsMediaStckIntelligence Briefing & sentiment (MediaStack)Refer to Service AgreementtäglichGlobal50NfMilitaryMassViolenceNfsiMLMV actor-day stress (NFSI)Internal processing for NationFiles Intelligencemehrmals täglichGlobal100NfNewsCountry24Country24hNewsCC BY-ND 4.0täglichGlobal70NfRawNewsSignalsEventRiskRaw News Signals Event RiskCC BY-ND 4.0täglichGlobal100OecdSdmxGdpvAnnpctGDP volume growth % (annual)OECD Terms & ConditionswöchentlichGlobal60OWIDDemocracyIndexDemocracy Index (EIU)CC BY / Our World in DatawöchentlichGlobal70SdgGlobalIndexSdsnSDG overall index (SDSN ArcGIS)Refer to Source LinkwöchentlichGlobal60TravelAdvisoryUnifiedTravel warnings (multi-authority)Refer to Source LinktäglichGlobal75TravelStateGovU.S. travel advisories Level 4 (Do Not Travel)U.S. Government WorktäglichGlobal80TrvlWarnCaVoyTravel advice Canada (Voyage)Open Government Licence – CanadawöchentlichGlobal75TrvlWarnDeTravel & security advice (AA)Refer to Source LinkwöchentlichGlobal75TrvlWarnDeWarnTravel & security advice (AA) – warning onlyRefer to Source LinkwöchentlichGlobal75TrvlWarnUkUK travel advice (GOV.UK)Open Government Licence v2.0täglichGlobal75WorldEarthQuakeUsgsEarthquakes worldwide (USGS)USGS Public Domainmehrmals täglichGlobal100WorldUnivDataSetIpsaWorld Universities Dataset (IPSA)Refer to repositorywöchentlichGlobal25
+
+
+
+________________________________________________________________________________
+Catálogo de indicadores (Capa 1) — Ejemplo
+	Ejemplos seleccionados incluyendo los principales indicadores diarios (GDELT, Media Stack, Naciro News):
+	UCDP GED
+	Conflictos armados (UCDP GED)
+	Número de incidentes (UCDP GED) por mes; columna: high.
+	eventos/mes · Más eventos → menor estabilidad.
+	Min-Max por fuente.
+	https://ucdp.uu.se/
+	GDELT Global Radar
+	Tonalidad de noticias y escala Goldstein
+	GDELT aporta por país y ventana temporal la escala Goldstein (−10 a +10) y tonalidad media. Valor Goldstein más alto = menos conflicto.
+	Escala / agregación · Valor más alto (positivo) → mejor estabilidad.
+	Agregado por país/día; dirección positiva.
+	https://www.gdeltproject.org/
+	News Media Stack
+	Sentimiento mediático
+	Sentimiento agregado de fuentes de noticias (API Media Stack) por país/región. Sentimiento típico −1 a +1; se convierte a 0–100 en capa 1.
+	Sentimiento (agregado) · Sentimiento negativo → menor estabilidad.
+	Específico por fuente; valor bruto más alto = peor.
+	https://mediastack.com/
+	Naciro News (24h / Event Risk)
+	Riesgo país 24h y riesgo de eventos
+	Indicadores propietarios: nivel de riesgo 24h por país (Naciro News) y nivel de riesgo de eventos (señales en bruto). Evaluación en tiempo casi real.
+	Nivel de riesgo 0–100 · Riesgo más alto → menor estabilidad.
+	Interno; dirección negativa.
+	/legal/sources/
+	Lista completa: 80+ fuentes; detalles en /legal/sources/.
+
+
+
+________________________________________________________________________________
+Capa 1 — Indicadores en detalle
+	En la capa 1 se calcula una puntuación de estabilidad entre 0 y 100 por fuente de datos y fila. El método depende del tipo de indicador (basado en valor o en conteo).
+	Indicadores basados en valor: se usa una columna de valor bruto por fuente. Se toman el mínimo y el máximo sobre todas las filas de esa fuente. Por fila: normalizado = (bruto − min) / (max − min) × 100. Si «más bruto = peor estabilidad», score_row = 100 − normalizado; si no, score_row = normalizado. Resultado limitado a [0, 100].
+	Indicadores basados en conteo: por fila se calcula una severidad (p. ej. por habitante). Se usa una población de referencia (p. ej. 1 millón) cuando hace falta. La puntuación se mapea de forma consistente a 0–100.
+	Ejemplo numérico capa 1 (basado en valor, simplificado):
+	Fuente «Eventos de conflicto», país X: valores brutos 5, 10, 20 para tres instantes. Min = 5, max = 20, rango = 15. Fila 1: (10−5)/15×100 = 33,3 → con «más = peor»: score_row = 100 − 33,3 = 66,7. Fila 2 (valor 5): score_row = 100; fila 3 (valor 20): score_row = 0.
+	Pseudocódigo (basado en valor, más = peor):
+	MIN_RAW = MIN(bruto) sobre todas las filas de la fuente
+	MAX_RAW = MAX(bruto) sobre todas las filas de la fuente
+	SPAN = MAX_RAW − MIN_RAW
+	POR cada fila:
+	SI SPAN = 0 ENTONCES score_row = 50
+	SINO normalizado = (bruto − MIN_RAW) / SPAN × 100
+	score_row = 100 − normalizado
+	score_row = LIMITE(score_row, 0, 100)
+
+
+
+________________________________________________________________________________
+Capa 2 — Agregación temática e inercia
+	La capa 2 agrega las puntuaciones de la capa 1 por fuente, país y fecha en una puntuación diaria y suaviza con el día anterior.
+	Por (fuente, país, fecha) se recogen todos los score_row asociados. Fuentes de seguridad (grupo 100): puntuación diaria = MIN(puntuaciones). Otros grupos: puntuación diaria = media de puntuaciones, con valores dummy fijos 0 y 100 para una ponderación estable.
+	Puntuación final capa 2: score_final = 0.6 × puntuación_diaria + 0.4 × puntuación_día_anterior. Si no hay entrada para el día, se usa un valor de recuperación (hasta 95) para que los huecos no se penalicen indefinidamente.
+	Pseudocódigo:
+	DAILY_SCORES = RECOGER score_row POR (fuente, país, fecha)
+	SI grupo = seguridad ENTONCES daily_score = MIN(DAILY_SCORES)
+	SINO daily_score = MEDIA(DAILY_SCORES, con dummies 0 y 100)
+	prev = LAST_SCORE(país, fuente, día_anterior)
+	score_final = 0.6 × daily_score + 0.4 × prev
+	score_final = LIMITE(score_final, 0, 100)
+
+
+
+________________________________________________________________________________
+Capa 3 — Puntuación final, modo crisis y suavizado
+	La capa 3 combina todas las puntuaciones por fuente en el NFSI del país. Cada fuente tiene un grupo temático y un peso; el peso efectivo depende de la puntuación actual.
+	effective_weight = group_weight × (score_node / 100) × update_multiplier. Grupos p. ej. 100 (seguridad), 85, 60, 50, 40; el grupo −1 se excluye.
+	NFSI_Base = SUM(score_node × effective_weight) / SUM(effective_weight), incluyendo dummies fijos 0 y 100 con peso 1.
+	Si el mínimo de puntuaciones de seguridad (grupo 100) < 70, se aplica un malus de conflicto: malus = (70 − min_security) × factor, con límite (p. ej. 35). NFSI_Base se reduce en ese malus.
+	Opcional: una gobernanza fuerte (p. ej. WGI est_total) puede elevar la puntuación bruta: final = bruto + (100 − bruto) × (est_total/100) × wgi_pull.
+	Suavizado diario (inercia): si el mínimo de seguridad ≥ 25, NFSI_Today = prev × 0.8 + today × 0.2, con cambio diario máx. ±3. En crisis de seguridad aguda (min < 25) se suspende el suavizado para que la puntuación reaccione de inmediato.
+	Pseudocódigo (núcleo):
+	POR cada fuente: eff_w = grupo × (score_node/100)
+	base = SUM(score × eff_w) / SUM(eff_w) incl. dummies 0, 100
+	min_sec = MIN(puntuaciones del grupo seguridad)
+	SI min_sec < 70 ENTONCES malus = (70 − min_sec) × 1.0; base = base − malus
+	raw = LIMITE(base, 0, 100)
+	SI min_sec >= 25 ENTONCES nfsi_today = 0.8×prev + 0.2×raw; cambio diario máx ±3
+	SINO nfsi_today = raw
+	Fig.: Fórmulas principales de las tres capas NFSI (nivel pseudocódigo).
+
+
+
+________________________________________________________________________________
+Agregación y ponderación (Capa 2)
+	Capa 1: impact = severity^1.6*100; score_row = max(0, 100 − impact). REF_POP = 1 000 000.
+	Capa 2: Score_Node = raw*0.2 + AvgLast7*0.8.
+	Capa 3: effective_weight = group_weight * (scoreValue/100). G1=100, G2=85, G3=60, G4=50, G5=40, G6=-1.
+	NFSI_Today = NFSI_Base*0.5 + NFSI_Last7*0.5.
+
+
+
+________________________________________________________________________________
+Ejemplo numérico desarrollado (anonimizado)
+	A modo de ilustración sin revelar la matriz de ponderación completa: un país tiene tres indicadores con puntuaciones capa 2 de 72, 85 y 90 en una fecha dada. Los grupos temáticos son 100, 60 y 40 con valor completo 100.
+	Paso 1: Pesos efectivos: 72×1 = 72, 85×0,6 = 51, 90×0,4 = 36. Suma de pesos = 159.
+	Paso 2: Media ponderada (sin dummies): (72×72 + 85×51 + 90×36) / 159 ≈ 80,2. Con dummies 0 y 100 el orden de magnitud sigue siendo comparable.
+	Paso 3: Min(seguridad) = 72 ≥ 70 → sin malus de conflicto. NFSI_Base ≈ 80,2.
+	Paso 4: Día anterior = 79. NFSI_Today = 0,5 × 80,2 + 0,5 × 79 = 79,6 (inercia simplificada).
+	La implementación real utiliza factores adicionales (bonus de población, pull de gobernanza, parámetros exactos de inercia). Este ejemplo es para trazabilidad, no para replicación completa.
+
+
+
+________________________________________________________________________________
+Cálculos matemáticos y procedimiento detallados
+	Las siguientes fórmulas y pasos coinciden con la lógica NFSI implementada. Todas las constantes están fijadas. Notación: bruto = valor bruto, puntuación = valor en [0, 100], sumas y pesos según se indica.
+
+
+
+________________________________________________________________________________
+Constantes centrales (referencia)
+	Estos valores se utilizan en las fórmulas:
+	Capa 1: Si no hay dispersión (min = max) o no hay min/max → puntuación por defecto = 50.
+	Capa 2: Peso hoy = 0,6; peso día anterior = 0,4. Valores dummy: 0 y 100 (peso 1 cada uno). Valor de relleno para entradas faltantes (no seguridad): 50. Grupo seguridad (grupo 100): rellenar faltantes con 100 (conservador). Recuperación por día: seguridad 0,2 puntos, otros 1,0; límite 95. Inicio sin historial: seguridad 70, otros 85.
+	Capa 3: Umbral conflicto = 70; factor malus = 1,0; límite malus conflicto 35. Población de referencia = 45 M; límite multiplicador pop-neg 2,0. Umbral país pequeño = 5 M; malus por paso log₁₀ = 4,0; límite 25. Bonus población: factor 0,5, límite 4,0. WGI pull = 0,95. Puntuación sin datos = 50. Fragilidad: escala WGI 0–10, factor 3,0, límite 15. Suelo de puntuación = 1.
+	Capa 4 (Inercia): Estándar 80 % día anterior, 20 % hoy; con muchos datos faltantes 45 % o 50 %. Cambio diario máx. ±3. Crisis de seguridad (min seguridad < 25): inercia desactivada, paso inmediato.
+
+
+
+________________________________________________________________________________
+Capa 1 — Puntuación por fila y por fuente de datos
+	Entrada: Por fuente de datos, una tabla de filas (p. ej. por país/fecha/hora). Una columna de valor bruto se define por fuente (o una severidad calculada).
+	Mínimo y máximo: Sobre todas las filas de la fuente se calculan min_raw y max_raw de los valores brutos. span = max_raw − min_raw.
+	Casos especiales: Si span ≤ 0 (sin dispersión) o min/max no disponibles, score_row = 50 para todas las filas (neutral).
+	Normalización por fila: normalizado = (bruto − min_raw) / span × 100. Así 0 ≤ normalizado ≤ 100.
+	Dirección: Si «valor bruto más alto = peor estabilidad», entonces score_row = 100 − normalizado; si no, score_row = normalizado.
+	Límite: score_row = max(0, min(100, score_row)); redondear a dos decimales. score_row se almacena por fila.
+
+
+
+________________________________________________________________________________
+Capa 2 — Puntuación diaria por fuente, país y fecha
+	Agregación por (fuente, país, fecha): Se recogen todas las puntuaciones de capa 1 (score_row) para este triple. Si falta una entrada para un país/fecha, se estima a partir del día anterior y la tendencia.
+	Grupo seguridad (grupo 100): Puntuación diaria = MIN(puntuaciones recogidas). Los valores faltantes se rellenan con 100 («un solo evento negativo basta»).
+	Otros grupos: Se usan dummy 0 y dummy 100 más valor de relleno 50 para entradas faltantes para uniformizar la longitud del array por fecha. Puntuación diaria = media aritmética de este array.
+	Día anterior: La última puntuación de capa 2 disponible para (fuente, país, día anterior) se usa como yesterday. Si falta, valor de arranque 70 (seguridad) u 85 (otros).
+	Suavizado: score_final = 0,6 × puntuación_diaria + 0,4 × yesterday. score_final = max(0, min(100, score_final)); dos decimales.
+	Recuperación: Si un país no tiene entrada en un día, se aplica recuperación: score = min(95, score + 0,2) para seguridad, score = min(95, score + 1,0) para otros; rellenar como máximo 90 días.
+
+
+
+________________________________________________________________________________
+Capa 3 — NFSI del país (puntuación bruta)
+	Contribuyentes: Por (país, fecha), se proporcionan todas las puntuaciones de capa 2 por fuente (conector). Las entradas de conector faltantes reciben puntuación 50 (no_data) y flag no_data.
+	Peso efectivo: Para cada fuente n: eff_w_n = group_n × (scoreValue_n / 100) × updateMult_n. group_n ∈ {100, 85, 60, 50, 40, …}; scoreValue_n ∈ [0, 100]. Fuentes con group < 0 se excluyen.
+	Media ponderada: sum_weighted = Σ_n (score_n × eff_w_n) + 0×1 + 100×1 (dummies). sum_weights = Σ_n eff_w_n + 2. baseScore = sum_weighted / sum_weights.
+	Mínimo seguridad: minSec = MIN(score_n para todos n con group_n = 100 y no no_data). Si no hay fuente de seguridad: minSec = 80 (por defecto).
+	Malus conflicto: Si minSec < 70: conflictMalus = min(35, (70 − minSec) × 1,0). rawScore = baseScore − conflictMalus; rawScore = max(0, min(100, rawScore)).
+	Multiplicador población (efectos negativos): popLog = log₁₀(max(pop, 100 000)); refLog = log₁₀(45 000 000). popNegMultiplier = min(2, refLog / popLog). Usado en fragilidad y opcionalmente malus país pequeño.
+	Malus fragilidad: WGI_0_10 = est_total / 10 (gobernanza 0–100 → 0–10). governanceGap = 10 − WGI_0_10. fragilityMalus limitado a [0, 15]. rawScore = rawScore − fragilityMalus.
+	Malus país pequeño: Si pop < 5 000 000: smallPopMalus limitado a [0, 25]. rawScore = rawScore − smallPopMalus.
+	Bonus población: popBonus = min(4, log₁₀(pop) × 0,5). rawScore = rawScore + popBonus; [0, 100].
+	WGI pull: Si est_total presente (0–100): finalScore = rawScore + (100 − rawScore) × (est_total / 100) × 0,95. nfsi_raw = max(1, min(100, finalScore)); dos decimales.
+
+
+
+________________________________________________________________________________
+Capa 4 — Suavizado diario (inercia)
+	Día anterior: prevScore = último valor NFSI almacenado para (país, día anterior).
+	Crisis de seguridad: Si minSec < 25 (seguridad física crítica), sin suavizado: NFSI_Today = nfsi_raw (paso inmediato).
+	Suavizado: Si existe prevScore y no hay crisis de seguridad: proporción no_data = número de conectores con no_data / número de contribuyentes. Si proporción no_data ≥ 50 %: inertiaWeight = 0,45 (55 % hoy). Si «puntuación sin datos L1/L2»: 0,50. Si no: 0,80 (20 % hoy). smoothed = prevScore × inertiaWeight + nfsi_raw × (1 − inertiaWeight).
+	Límite de cambio diario: diff = smoothed − prevScore. Si diff > 3: smoothed = prevScore + 3. Si diff < −3: smoothed = prevScore − 3. NFSI_Today = smoothed (dos decimales).
+
+
+
+________________________________________________________________________________
+Referencia de cálculo completa — fórmulas, constantes y pseudocódigo
+	Esta sección enumera todos los cálculos relevantes para el NFSI: fórmulas matemáticas, todas las constantes con valores exactos y pseudocódigo por capa de procesamiento. Sirve como referencia completa y auditable para auditores y científicos.
+
+
+
+________________________________________________________________________________
+Constantes — todos los valores que afectan al cálculo
+	Las siguientes constantes están fijadas en la implementación y se usan en las fórmulas de cada capa. Cada valor tiene un motivo definido; no se usan números arbitrarios.
+	ConstantValueDescriptionMotivo (por qué este valor)LAYER2_TODAY_WEIGHT0.6Peso del score de hoy en el suavizado capa 2 (60 % hoy, 40 % día anterior).Reparto 60/40: más peso en el día actual que en el anterior para que los nuevos eventos sean visibles; 40 % día anterior amortigua picos de un solo día.LAYER2_YESTERDAY_WEIGHT0.4Peso del día anterior en el suavizado capa 2.Complemento de 0,6; asegura transiciones suaves y evita sobre-reacción a un solo día.LAYER2_RECOVERY_PER_DAY_SECURITY0.2Puntos de recuperación por día sin datos para el grupo seguridad (grupo 100).Los indicadores de seguridad recuperan más conservadoramente; la ausencia de datos de seguridad no debe interpretarse como todo claro.LAYER2_RECOVERY_PER_DAY_OTHER1.0Puntos de recuperación por día sin datos para el resto de grupos.Retorno más rápido al neutro que para seguridad; 1 punto/día equivale aproximadamente a una semana hasta mitad de escala.LAYER2_RECOVERY_CAP95Score máximo bajo recuperación (no 100).Sin datos nuevos nunca asignamos «perfectamente estable» (100); 95 marca «muy bueno pero no confirmado por datos actuales».LAYER2_NO_DATA_START_SECURITY70Valor de arranque para el grupo seguridad cuando no existe día anterior.Ligeramente por debajo del punto medio: con seguridad desconocida no asumimos optimismo; 70 = «supuesto moderado».LAYER2_NO_DATA_START_OTHER85Valor de arranque para otros grupos cuando no existe día anterior.Ligeramente por encima del punto medio: indicadores macro sin historial se sitúan en el rango medio-alto hasta que haya datos.LAYER2_RECOVERY_MAX_DAYS90Número máximo de días rellenados por recuperación.Aproximadamente un cuarto; más allá la entrada se trata como ausente de forma permanente y no se extrapola.NFSI_ARRAY_PAD_VALUE50Valor de relleno para entradas faltantes en grupos no seguridad (longitud uniforme del array).50 = punto medio de la escala; los valores faltantes no sesgan la media.NFSI_DUMMY_LOW0Valor dummy bajo en la media ponderada capa 3.Ancla en el extremo bajo; evita que pocas fuentes eleven el score artificialmente.NFSI_DUMMY_HIGH100Valor dummy alto en la media ponderada capa 3; peso 1 cada uno.Ancla en el extremo alto; simétrico al dummy 0 para una ponderación estable.LAYER3_NO_DATA_NEUTRAL_SCORE50Score neutro para datos de conector faltantes (no_data).Ni penalización ni recompensa por conector faltante; 50 = punto medio de la escala 0–100.LAYER3_SCORE_FLOOR1Valor NFSI mínimo (no cero).0 significaría «sin estabilidad»; 1 evita división por cero y denota «muy bajo pero definido».NFSI_COUNTRY_CAP100Límite superior del score país.Escala 0–100; 100 = mejor evaluación de estabilidad posible en el modelo.LAYER3_NO_SECURITY_DEFAULT_MINSEC80Valor por defecto para Min(seguridad) cuando no existe fuente de seguridad.Sin datos de seguridad no se activa malus de conflicto; 80 está por encima del umbral 70 y señala «sin información de seguridad fiable».LAYER3_CONFLICT_THRESHOLD70Umbral: Min(seguridad) por debajo activa el malus de conflicto.70 = tercio superior de la escala; por debajo la seguridad se considera suficientemente crítica para una deducción.LAYER3_CONFLICT_MALUS_FACTOR1.0Malus = (UMBRAL − MinSec) × factor.Deducción lineal: 1 punto de malus por punto por debajo de 70; fácil de seguir y calibrar.LAYER3_CONFLICT_MALUS_CAP35Malus de conflicto limitado a 35.Evita que un solo indicador de seguridad domine el score total; 35 ≈ mitad del rango.LAYER3_POPULATION_REF45.000.000Población de referencia para el multiplicador pop-neg (log₁₀).Orden de magnitud de países grandes de la UE (p. ej. España); usado como referencia para la escala logarítmica de países pequeños.LAYER3_POP_NEG_MULTIPLIER_CAP2.0Multiplicador pop-neg como máximo 2 (países pequeños: efectos negativos más fuertes).Los países pequeños no deben ser sobre-penalizados; el factor 2 limita la amplificación al doble.LAYER3_POP_LOG_MIN100.000Población mínima para log₁₀ (evitar división por cero).log₁₀(100.000) = 5; evita valores extremos para países muy pequeños y división por cero.LAYER3_WGI_SENTIMENT_SCALE10WGI 0–100 mapeado a escala 0–10 (est_total/10).El WGI del Banco Mundial es 0–100; escalar a 10 simplifica la fórmula de fragilidad.LAYER3_FRAGILITY_POP_FACTOR3.0Factor en el malus de fragilidad: governanceGap × (1/log₁₀(pop)) × factor × popNegMult.Intensidad del efecto fragilidad; 3,0 calibrado para que los huecos de gobernanza en países pequeños sean visibles pero limitados.LAYER3_FRAGILITY_MALUS_CAP15Malus de fragilidad limitado a 15.La fragilidad debe bajar el score pero no anular el resto de factores; 15 puntos ≈ 15 % de la escala.LAYER3_SMALL_POP_THRESHOLD5.000.000Los países por debajo de esta población reciben malus de país pequeño.ONU/Banco Mundial suelen usar 5 M como umbral «país pequeño»; alineado con la literatura.LAYER3_SMALL_POP_MALUS_PER_LOG104.0Malus por paso log₁₀ por debajo del umbral.Escala log: cada orden de magnitud menos de población añade 4 puntos de malus; limitado por SMALL_POP_MALUS_CAP.LAYER3_SMALL_POP_MALUS_CAP25Malus de país pequeño limitado a 25.Deducción máxima para países muy pequeños; evita que el tamaño alone domine el score.LAYER3_POPULATION_BONUS_FACTOR0.5Bonus población: log₁₀(pop) × factor.Los países más grandes reciben un ligero bonus (calidad de datos, efectos de muestra); 0,5 mantiene el efecto moderado.LAYER3_POPULATION_BONUS_CAP4.0Bonus población limitado a 4.El bonus debe ser notable pero no compensar malus de conflicto o fragilidad; techo 4 puntos.LAYER3_WGI_PULL0.95WGI pull: finalScore = rawScore + (100−rawScore)×(est_total/100)×0,95.Una gobernanza fuerte puede elevar el score; 0,95 permite casi todo el hueco hasta 100 con WGI=100 sin sobre-corregir.LAYER1_DEFAULT_SCORE50Capa 1: score por defecto cuando span=0 o min/max faltantes.Valor neutro cuando la normalización no está definida; sin penalización ni recompensa arbitraria.LAYER4_INERTIA_STANDARD0.80Estándar: 80 % día anterior, 20 % hoy.Inercia principal; 20 % hoy deja que los nuevos eventos influyan sin sacudidas.LAYER4_INERTIA_HIGH_NO_DATA0.45Variación diaria máx. ±3 puntos.Evita saltos bruscos de un día a otro; 3 puntos/día permite reacción en pocos días.LAYER4_INERTIA_SCORE_WITHOUT_L1L20.50Umbral crisis seguridad: por debajo de 25, sin suavizado (paso inmediato).En crisis de seguridad física crítica el score refleja la situación de inmediato.LAYER4_DAILY_CHANGE_CAP±3Peso inercia si proporción no_data ≥ 50 % (55 % hoy).Con muchos datos faltantes se confía menos en el día actual.LAYER4_SECURITY_CRISIS_THRESHOLD25Peso inercia si score sin datos L1/L2 (50 % hoy).Caso sin datos capa 1/2: peso igual entre anterior y hoy.
+
+
+
+________________________________________________________________________________
+Capa 1 — Puntuación por fila por fuente de datos (normalización del indicador)
+	Formulas
+	span = max_raw − min_raw (over all rows of the source)
+	If span ≤ 0 or min_raw/max_raw undefined: score_row = 50 for all rows.
+	Else per row: normalized = (raw − min_raw) / span × 100
+	Direction: score_row = 100 − normalized if higher raw = worse stability, else score_row = normalized
+	score_row = clamp(round(score_row, 2); 0; 100)
+	Pseudo-code
+	MIN_RAW = MIN(bruto) sobre todas las filas de la fuente
+	MAX_RAW = MAX(bruto) sobre todas las filas de la fuente
+	SPAN = MAX_RAW − MIN_RAW
+	POR cada fila:
+	SI SPAN = 0 ENTONCES score_row = 50
+	SINO normalizado = (bruto − MIN_RAW) / SPAN × 100
+	score_row = 100 − normalizado
+	score_row = LIMITE(score_row, 0, 100)
+
+
+
+________________________________________________________________________________
+Capa 2 — Puntuación diaria por conector, país y fecha
+	Formulas
+	Security group (group = 100): dayScore = MIN(score_row for (connector, iso2, date)); pad missing with 100.
+	Other groups: arr = [0, score_row₁, …, score_rowₖ, 50, …, 50, 100]; pad 50 to uniform length M; dayScore = AVG(arr).
+	yesterday = last L1 score (connector, iso2, previous day); if missing: 70 (security) or 85 (other).
+	score_final = 0.6 × dayScore + 0.4 × yesterday
+	score_final = clamp(round(score_final, 2); 0; 100). Recovery: no entry → score += 0.2 (security) or 1.0 (other), cap 95, max 90 days.
+	Pseudo-code
+	RECOGER score_row por (connector_id, iso2, fecha)
+	SI grupo = 100: Rellenar huecos con 100
+	SINO Rellenar huecos con 50
+	puntuación_diaria = agregar según grupo
+	score_final = 0.6 × puntuación_diaria + 0.4 × día_anterior
+
+
+
+________________________________________________________________________________
+Capa 3 — NFSI del país (puntuación bruta y ajustes)
+	Fórmulas (orden como en la implementación)
+	Effective weight: effW_n = group_n × (scoreValue_n/100) × updateMult_n (scoreValue_n = connector weight/100).
+	sum_weighted = Σ_n (score_n × effW_n) + 0×1 + 100×1; sum_weights = Σ_n effW_n + 2; baseScore = sum_weighted / sum_weights.
+	minSec = MIN(score_n for group_n=100, not no_data); if none: minSec = 80.
+	conflictMalus = min(35, max(0, (70 − minSec)×1.0)); rawScore = baseScore − conflictMalus; rawScore = clamp(rawScore; 0; 100).
+	popNegMult = min(2, log₁₀(45e6)/log₁₀(max(pop, 100e3))). Fragility: WGI_0_10 = est_total/10; governanceGap = 10−WGI_0_10; popSens = 1/log₁₀(pop); fragilityMalus = min(15, governanceGap×popSens×3×popNegMult); rawScore −= fragilityMalus.
+	Small country (pop < 5e6): smallPopMalus = min(25, (log₁₀(5e6)−log₁₀(pop))×4); rawScore −= smallPopMalus.
+	popBonus = min(4, log₁₀(pop)×0.5); rawScore += popBonus; rawScore = clamp(rawScore; 0; 100).
+	WGI pull: finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95. nfsi_raw = max(1, min(100, finalScore)).
+	Pseudo-code
+	effW_n = grupo_n × (scoreValue_n/100) × updateMult_n
+	sum_weighted = Σ(score_n × effW_n) + dummies
+	baseScore = sum_weighted / sum_weights
+	SI minSec < 70 ENTONCES conflictMalus; rawScore = baseScore − malus
+	nfsi_raw = LIMITE(rawScore, 0, 100)
+
+
+
+________________________________________________________________________________
+Capa 4 — Suavizado diario (inercia) y modo crisis
+	Formulas
+	prevScore = last NFSI value (iso2, previous day). Security crisis = (minSec ≠ null AND minSec < 25).
+	If security crisis: NFSI_Today = nfsi_raw (no smoothing).
+	Else if prevScore exists: no_data_ratio = #no_data_connectors / #contributors. inertiaWeight = 0.45 if no_data_ratio ≥ 0.5; 0.50 if score without L1/L2 data; else 0.80. smoothed = prevScore×inertiaWeight + nfsi_raw×(1−inertiaWeight).
+	diff = smoothed − prevScore; if diff > 3: smoothed = prevScore + 3; if diff < −3: smoothed = prevScore − 3. NFSI_Today = round(smoothed, 2).
+	Pseudo-code
+	prevScore = LAST_NFSI(iso2, día anterior)
+	SecurityCrisis = (minSec != null Y minSec < 25)
+	SI SecurityCrisis ENTONCES NFSI_Today = nfsi_raw
+	SINO smoothed = prevScore × inertiaWeight + nfsi_raw × (1 − inertiaWeight); NFSI_Today = LIMITE_CAMBIO(smoothed, ±3)
+
+
+
+________________________________________________________________________________
+Puntuación final (Capa 3) y modo crash
+	NFSI_Base = media ponderada. Dummies 0 y 100.
+	Si MIN(scores seguridad grupo 100) < 70: malus conflicto. Puntuación neutra 50 para datos faltantes.
+	1) Indicadores normalizados → score_row. 2) Score_Node por fuente/día. 3) effective_weight. 4) NFSI_Base, NFSI_Today.
+
+
+
+________________________________________________________________________________
+Pronóstico 7 días
+	Pronóstico basado en método VAR (90 días de historial, varias series). No se declaran métricas de validación (RMSE, Diebold-Mariano); descripción para trazabilidad metodológica.
+
+
+
+________________________________________________________________________________
+Gobernanza, auditoría y gestión del cambio
+	Versionado: versionado semántico para cambios de modelo y datos; cada release incluye changelog y hashes de snapshot. Traza de auditoría: registros inmutables (hash + marca temporal) para snapshots de datos y binarios del modelo. Auditoría externa: incorporación (NDA → acceso temporal a datos → ejecución de reproducibilidad → informe de auditoría). Protocolo de incidentes: pasos definidos para remediación de falsas alarmas y comunicación pública.
+
+
+
+________________________________________________________________________________
+Ética, privacidad y licencias
+	RGPD: mapeo documentado; minimización de PII; política de retención definida. Licencias: tabla de licencias de datos de terceros en el inventario de datos y en /legal/sources/. Descargo: sin asesoramiento de inversión.
+
+
+
+________________________________________________________________________________
+Cómo se calcula la población (mundial) en detalle
+	Las cifras de población por país y año que utiliza NationFiles no provienen de una única fuente; se construyen por consenso ponderado a partir de varias fuentes (p. ej. ONU, Banco Mundial, censos).
+
+
+
+________________________________________________________________________________
+Fuentes y pesos utilizados
+	Cada fuente aporta valores por país (y opcionalmente año). Los pesos se utilizan para formar un consenso anual.
+	SourceWeightDescripción / Origenregional_stat1.5Eurostat (demo_pjan) — highest authority for European countriesun_proxy1.5UN Population Data Portal (WPP) — global referenceimf_stat1.2IMF WEO (DB.Nomics) — LP (population)worldbank1.2World Bank SP.POP.TOTL (2010–2026)wikidata0.9Wikidata SPARQL (P297, P1082)cia_wpr0.8CIA World Factbook / country-json (estimates)restcountries0.8REST Countries API v3.1 (population)ninjas0.5API-Ninjas Population (forecast; lowest weight)
+
+
+
+________________________________________________________________________________
+Fórmulas y pseudocódigo
+	Por año, los huecos se rellenan por extrapolación; el consenso es la media ponderada; se aplican restricciones biológicas de crecimiento.
+	Extrapolación (años 2000 al año objetivo)
+	Entrada: data = fuente[iso2] (año → población)
+	Ordenar data por año; minYear, maxYear
+	Para años entre minYear y año_objetivo: extrapolar huecos
+	Consenso = media ponderada por año
+	Consenso ponderado por año
+	rawConsensus = REDONDEAR( Σ(valor × peso) / Σ(peso) )
+	Solo fuentes con valor no nulo entran en la suma.
+	Restricción biológica (desde 2024)
+	Para suavizar previsiones API agresivas: la tasa de crecimiento interanual se limita (p. ej. máx. 2–3 % según contexto).
+	allowedGrowth = MAX(0.015, masterRate + 0.005)
+	SI (rawConsensus - prevConsensus) / prevConsensus > allowedGrowth ENTONCES limitar crecimiento
+
+
+
+________________________________________________________________________________
+Glosario — términos utilizados en este informe
+	Este glosario explica en lenguaje sencillo los términos clave utilizados en el informe. Está pensado para facilitar la lectura a no especialistas.
+	NFSINationFiles Stability Index. Indicador de estabilidad normalizado 0–100 por país y día. Valor más alto significa mayor estabilidad. Se calcula a partir de varias fuentes en capas 1–4.Capa 1Primer nivel de procesamiento: normalización de valores brutos de cada fuente a puntuación por fila 0–100 (min-max, dirección «más alto = mejor/peor» fija).Capa 2Segundo nivel: agregación de puntuaciones de fila en puntuación diaria por fuente, país y fecha, suavizada con el día anterior (p. ej. 60 % hoy, 40 % anterior).Capa 3Tercer nivel: cálculo del NFSI por país (puntuación bruta) a partir de todas las puntuaciones de fuentes. Media ponderada por pesos efectivos, malus conflicto, efecto WGI, otros ajustes.Capa 4Cuarto nivel: suavizado diario (inercia). El valor NFSI final combina día anterior y puntuación bruta del día (p. ej. 80 % anterior, 20 % día) con límite de variación (p. ej. ±3).Valor bruto (raw)Valor numérico original de la fuente antes de convertir a puntuación 0–100 (p. ej. número de eventos, ratio, escala).NormalizaciónConversión de valores brutos a un rango común (aquí 0–100). Min-max: (valor − min) / (max − min) × 100. Inversión posible si «más alto = peor».Puntuación (fila / diaria / país)Valor acotado 0–100: puntuación de fila (capa 1), puntuación diaria (fuente, país, fecha, capa 2), puntuación país = NFSI (capas 3–4).Escala de GoldsteinEscala −10 (conflicto) a +10 (cooperación) usada por GDELT. Se convierte en puntuación de estabilidad en la lógica NFSI (Goldstein alto = estabilidad alta).Valor dummyValor aditivo fijo (0 y 100) en la agregación para que medias y ponderaciones se mantengan estables incluso con pocas fuentes.InerciaSuavizado en el tiempo: el NFSI de hoy depende en parte del día anterior (p. ej. 80 % anterior, 20 % puntuación bruta nueva) para amortiguar el ruido a corto plazo.RecuperaciónCuando no hay datos nuevos para un país/fecha, la puntuación se eleva gradualmente (techo 95) para no penalizar indefinidamente las lagunas.Malus de conflictoDeducción del NFSI cuando el mínimo de indicadores de seguridad (conflictos, violencia, etc.) cae por debajo de un umbral (70). Enfatiza el papel de los datos de seguridad.WGI (Worldwide Governance Indicators)Indicadores del Banco Mundial de calidad gubernamental (estado de derecho, efectividad, etc.). En NFSI: el «efecto WGI» puede elevar la puntuación bruta cuando la gobernanza es fuerte.Grupo seguridad (grupo 100)Grupo temático de fuentes críticas de seguridad (conflictos, avisos de viaje, etc.). En la agregación diaria se toma el mínimo (un evento crítico basta).Conector / fuente de datosFuente de datos integrada (p. ej. Banco Mundial, GDELT, ACLED) que contribuye al NFSI en capas 1–3. Cada conector tiene un grupo temático y un peso.No-dataValor faltante para una fuente en una fecha dada. Se trata con puntuación neutra (p. ej. 50) o lógica de recuperación para que el cálculo no falle.VAR (autorregresión vectorial)Método estadístico para la previsión de 7 días: usa el historial de varias series (p. ej. NFSI, riesgo noticioso) para estimar los días siguientes.Procedencia de datosOrigen y trazabilidad de los datos: qué fuente, qué licencia, frecuencia de actualización. Documentado en el inventario de datos y las fuentes legales de este informe.Traza de auditoríaRegistro trazable de cambios (p. ej. snapshot de datos, versión del modelo) con marca temporal y hash, para auditores y reproducibilidad.ReproducibilidadPropiedad de que el mismo resultado puede obtenerse con las mismas entradas y metodología. Perseguida mediante fórmulas, código y procedencia de datos documentados.
+
+
+
+________________________________________________________________________________
+Documentos relacionados (Legal y Company)
+	Las siguientes páginas contienen información complementaria sobre metodología, procedencia de datos y referencias legales.
+	Registro de fuentes — Todos los DataSourceConnectors activos con proveedor, licencia, endpoint, intervalo y última obtención (UTC). Lista dinámica; incluye fuentes sin impacto NFSI. (/legal/sources/)Declaración de independencia — Seis principios fundamentales, trato algorítmico igual, proceso de corrección de errores (data@nationfiles.com), control de versiones (changelog), descargo de previsión. (/legal/independence/)Gobernanza y ética de datos — Gobernanza de datos, control de ejecución (Cron, Last Known Value 24h), NFSI v2.5, sourceQuality, human-in-the-loop, retención, contacto gobernanza. (/legal/governance/)Seguridad global y resiliencia — Gobernanza de seguridad (IPS, WAF, TLS 1.3, PDO, SCA/SAST), ciclos de auditoría, zero-knowledge, salvaguardas técnicas. (/legal/security/)NFSI — descripción del producto — Descripción operativa del NFSI: ciclo de 15 minutos, cuatro pilares (seguridad, gobernanza, macroeconomía, demografía), modo crisis, casos de uso. (/company/nfsi/)Aviso legal — Operador, contacto, jurisdicción, licencia (CC BY-ND 4.0), base legal. (/legal/legal-notice/)Política de privacidad — Minimización de datos, aislamiento de IA (sin entrenamiento de Naciro con PII), ubicación de almacenamiento, autoridad supervisora. (/legal/privacy/)
+	Neawolf Media Group / NationFiles
+	Reinhardstr. 1b, 52078 Aachen, Alemania
+	Aviso legal | Transparencia y ética de datos
+
+================================================================================
+
+https://nationfiles.com/es/legal/validation-and-verification-report/
+
+________________________________________________________________________________
+Fecha:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+Solo la versión alemana tiene carácter vinculante
+	Solo la versión alemana tiene carácter vinculante.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	Esta página no sustituye asesoramiento jurídico ni constituye advertencias o recomendaciones oficiales. Las previsiones y valoraciones son basadas en modelos.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contacto para consultas jurídicas: véase impreso.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparencia y ética de datos:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Fuentes y licencias:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infraestructura:
+	Procesamiento exclusivamente en Alemania, TLS 1.3, aislamiento VPC.
+
+
+
+________________________________________________________________________________
+Protección de datos:
+	Procesamiento de datos personales conforme al RGPD; sin cesión ni uso para entrenamiento de IA.
+
+
+
+________________________________________________________________________________
+Responsabilidad:
+	Sin responsabilidad por contenidos externos o decisiones derivadas. No asesoramiento en inversiones en sentido del WpHG.
+
+
+
+________________________________________________________________________________
+Foro:
+	Aquisgrán, Alemania. Derecho alemán aplicable con exclusión de la CVIM (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – Todos los derechos reservados.
+
+nationfiles.com | Informe de validación y verificación | 18.04.2026 21:45

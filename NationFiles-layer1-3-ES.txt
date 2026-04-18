@@ -1,0 +1,193 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aquisgrán, Alemania
+
+
+
+________________________________________________________________________________
+Cálculo NFSI
+
+
+
+
+________________________________________________________________________________
+Fecha de actualización:
+	18.04.2026
+	PDF de: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+Resumen rápido
+	El NFSI es un índice de estabilidad (0–100) por país y día.
+	Cálculo en tres capas: micro (fila), meso (fuente/país/día), macro (un valor por país/día).
+	Diagrama de flujo a la izquierda; el NFSI se recalcula cada 15 minutos (tiempo real).
+	Para analistas, B2B y autoridades: decisiones basadas en datos en tiempo real.
+	El Índice de Estabilidad NationFiles (NFSI) se calcula en tres niveles: nivel micro (puntuación por fila de datos), nivel meso (puntuación por fuente, país y día) y nivel macro (un valor de índice por país y día). El diagrama de flujo a la izquierda muestra las ramas y los pasos siguientes.
+
+
+
+________________________________________________________________________________
+¿Qué es el NFSI?
+	El Índice de Estabilidad NationFiles (NFSI) es una métrica de la estabilidad relativa de los países en una escala de 0 a 100. Agrupa numerosos indicadores públicos y mantenidos (seguridad, economía, gobernanza, estructura) en un único valor actualizado diariamente por país. Para analistas, estrategas y gestores de crisis en empresas y autoridades ofrece una referencia rápida y comparable: ¿dónde está un país hoy? ¿Cómo ha evolucionado la situación? ¿Qué regiones o países socios afrontan riesgos particulares? El NFSI apoya la priorización de mercados, la evaluación de riesgos de cadenas de suministro y ubicación, la alerta temprana ante deterioros y la contextualización de noticias y eventos. No sustituye un análisis país en profundidad sino que lo complementa – como brújula diaria para decisiones basadas en datos.
+
+
+
+________________________________________________________________________________
+Cálculo en tiempo real 24/7
+	Cada minuto entran nuevos datos en la red NationFiles: se categorizan, ponderan y procesan en tiempo real. El NFSI se recalcula cada 15 minutos, por lo que está siempre actualizado, 24 horas. Lo que la competencia ofrece en ciclos diarios o semanales, NationFiles lo ofrece en minutos: evaluaciones de estabilidad que se traducen en decisiones accionables. Para B2B, autoridades y organizaciones: detectar riesgos antes de que escalen; aprovechar oportunidades cuando los mercados cambian; tomar las decisiones correctas en el momento correcto con un único índice en tiempo real. NationFiles – estabilidad en tiempo real, sin compromisos.
+
+
+
+________________________________________________________________________________
+Fuentes y ponderación (nodos fuente)
+	Cada fuente de datos (nodo fuente) aporta datos brutos por país y opcionalmente por fecha. Las fuentes se agrupan temáticamente (p. ej. seguridad, economía, estructura). Cada nodo tiene un peso base (score_value) y un multiplicador de actualización: las fuentes actualizadas con frecuencia se ponderan más en la agregación que las raramente actualizadas para que el índice responda a tiempo. Las fuentes estáticas o puramente referenciales (p. ej. geodatos, clasificaciones) se excluyen del cálculo del índice (lista negra). Solo se incluyen indicadores relevantes para la estabilidad.
+	La polaridad de cada fuente está definida: para indicadores negativos (p. ej. conflicto, inflación) un valor bruto mayor significa peor estabilidad; para indicadores positivos (p. ej. Estado de derecho, infraestructura) un valor bruto mayor significa mejor estabilidad. Para conteos absolutos se incluye siempre la población del país para que países pequeños y grandes sigan siendo comparables.
+
+
+
+________________________________________________________________________________
+Capa 1: puntuación por fila (nivel micro)
+	Se determina una puntuación uniforme de 0 a 100 por fila de datos de una tabla fuente.
+	Si un país no tiene fila en un día, la capa 2 utiliza el último valor de capa 1 (predecesor). Si un país no tiene ninguna fila en una fuente, se aplica 100 (mejor valor) para la contribución faltante.
+	Por fuente se utiliza de forma coherente una columna de valor bruto definida o una medida calculada (agregación/severidad).
+	En todas las filas de la tabla se determinan el mínimo y el máximo del valor bruto (una escala para todo el conjunto de datos).
+	Para cada fila con valor bruto x: norm = (x - x_min) / (x_max - x_min) × 100. Si x_max = x_min (sin dispersión), se asigna puntuación 50 (neutral) a todas las filas.
+	Si mayor = peor, entonces puntuación = 100 - norm; en caso contrario puntuación = norm. De forma uniforme: 0 = peor estabilidad, 100 = mejor estabilidad.
+	Solo se actualizan las filas aún no calculadas; las ya calculadas permanecen sin cambios (historial reproducible, sin sesgo retrospectivo).
+
+
+
+________________________________________________________________________________
+Caso especial: MLMV / militar y violencia masiva (NFSI)
+	El conector NfMilitaryMassViolenceNfsi (grupo seguridad 100, peso completo) lee principalmente la tabla gatekeeper GDELT (gatekeeper_keep = 1), con respaldo en la tabla espejo MLMV. A diferencia de la normalización min–max habitual, la columna mlmv_actor_day_stress usa una escala fija 0–100 (más alto = peor). Día calendario con al menos un evento: valor bruto 100. Luego decaimiento lineal hasta la referencia neutra 50 en 30 días por defecto (NFSI_MLMV_RECOVERY_DAYS, 1–365). Días tranquilos sin nuevo evento no producen refuerzo positivo; como mucho 50 tras el decaimiento. Ventana histórica por defecto 730 días (NFSI_MLMV_DAYS_BACK, 30–2190). Asignación por día civil (UTC/SQL).
+
+
+
+________________________________________________________________________________
+Capa 2: puntuación conector por país y fecha (nivel meso)
+	Se forma y persiste una puntuación diaria 0-100 por fuente, país y fecha.
+	Última puntuación de capa 1 de este país en esta fuente; sin entrada = 100.
+	Grupo Existencia y seguridad: puntuación del día = MÍN de todas las puntuaciones del día (una entrada mala fija el día). Otros grupos: media con dummy 0/100 y valor de relleno (misma longitud de array por país).
+	Tendencia = media(puntuaciones del día) / media(predecesor) solo sobre países con datos; puntuación del día estimada = predecesor × tendencia, limitada 0-100.
+	score_final = 0,6 × dayScore + 0,4 × predecesor. El multiplicador de actualización no cambia la puntuación, solo el peso en la capa 3.
+	Tras varios días sin datos, la puntuación puede recuperarse gradualmente hacia el valor por defecto (límite por día, techo, según grupo).
+
+
+
+________________________________________________________________________________
+Capa 3: puntuación país (NFSI) por país y fecha (nivel macro)
+	A partir de todas las puntuaciones de capa 2 se calcula un único valor NFSI por país y fecha (0-100).
+	Fuente faltante para (país, fecha) = neutral 50 (no 100), para que los países con pocos datos no queden por encima de los que tienen muchos datos reales. No-data se registra.
+	effW = grupo × peso base × multiplicador de actualización; baseScore = suma(puntuación × effW) / suma(effW); más dummy 0 y 100 con peso fijo.
+	Para efectos negativos: población de referencia; países más pequeños obtienen factor ≥ 1 (p. ej. vía log10(población), limitado). Cuantos menos habitantes, más se aplica el malus de conflicto/fragilidad.
+	MinSec = mínimo sobre todas las fuentes de seguridad con datos reales. Si MinSec está por debajo del umbral (p. ej. 70): malus = (umbral - MinSec) × factor × popNegMultiplier (techo p. ej. 35). Sin datos de seguridad reales: MinSec por defecto p. ej. 80 (sin doble penalización).
+	Indicador de gobernanza y población; cuanto peor la gobernanza y más pequeño el país, mayor el malus (con techo).
+	Países por debajo del umbral de población: malus adicional por desviación log10 (techo).
+	popBonus = min(log10(población) × factor, techo); la puntuación bruta se incrementa, limitada 0-100.
+	finalScore = rawScore + (100 - rawScore) × (est_total/100) × WGI_PULL (0,95). Buena gobernanza sube la puntuación, mala la baja; una fórmula para todos los países (países objetivo p. ej. estables > 85, crisis ≤ 60).
+	Puntuación bruta al menos 1, como máximo 100. Se almacena la puntuación bruta absoluta (sin normalización min/max diaria). El registro de cálculo (baseScore, malus, bonus, conectores no-data) se persiste.
+
+
+
+________________________________________________________________________________
+Resumen
+	Tres niveles: datos brutos por fila (L1), agregación por fuente/país/día (L2), agregación a índice país (L3). Una fórmula para todos los países; ponderación por grupos y multiplicador de actualización; valores faltantes representados por no-data (50), recuperación y estimación de tendencia. Malus y bonus (conflicto, fragilidad, población, WGI) y todas las constantes son configurables.
+
+
+
+________________________________________________________________________________
+Previsión por país (7 días)
+	La previsión NFSI a 7 días por país (Naciro Country Predictor) se basa en un enfoque de series temporales multivariantes: se modelan conjuntamente varias magnitudes (NFSI país, NFSI mundo, indicador de evento/riesgo local y global, volumen de noticias). El cálculo es determinista y auditable: mismas entradas, mismo resultado; no se usan valores aleatorios. En detalle:
+	La previsión a 7 días se muestra en las páginas de detalle de país en el gráfico (transparente/sombreado) y en la exportación JSON (prediction).
+	Entradas (últimos 90 días cada una): NFSI país de nfsi_country (mín. 5 puntos); NFSI mundo de nfsi_world; indicador de evento/riesgo local y global (p. ej. fuentes de noticias); volumen de noticias por país y día. Todas las series alimentan un único modelo VAR común.
+	Modelo: VAR(2) – Vector Autoregresión con dos retardos. Los parámetros (matriz Beta) se estiman a partir del historial. En caso de matrices numéricamente inestables se usa regularización Ridge; en casos singulares la pseudoinversa de Moore-Penrose. Ambos son métodos establecidos y reproducibles en econometría.
+	El NFSI mundo es una de las cinco series del VAR. Un índice mundial en descenso ejerce presión a la baja sobre la previsión país (riesgo sistémico); uno en alza tiene efecto estabilizador.
+	El riesgo local y global (p. ej. de fuentes de conflicto y eventos) tiene más peso en el VAR. Además se evalúa una tendencia del riesgo: si el riesgo empeora, la reversión al alza del NFSI se amortigua (p. ej. en conflictos prolongados). El volumen de noticias actúa como contexto de la fuerza del efecto del riesgo.
+	Cálculo iterativo día a día: Para cada uno de los 7 días de previsión el modelo se reestima a partir del historial actual (incluidos días ya previstos). El siguiente valor = combinación lineal de los retardos (Beta) más un residuo elegido de forma determinista. Los residuos se usan para continuar fluctuaciones pasadas típicas en la previsión (reconocimiento de patrones). Además se aplica reversión a la media hacia la media de 90 días del país: el país «revierte» hacia esta media (objetivo alcanzado en 90 días, no en 7). Cambio diario limitado (inercia).
+	Patrón de residuos: Los últimos 7 residuos del historial se usan como patrón de fluctuación para los 7 días de previsión (día 1 = residuo de hace 7 días, …, día 7 = último). El NFSI previsto está acotado al intervalo 0–100.
+	Determinista: sin aleatoriedad; mismas entradas → misma salida. Todos los parámetros usados son configurables y están documentados. La previsión no sustituye el análisis país en profundidad sino que lo complementa.
+
+================================================================================
+
+https://nationfiles.com/es/legal/layer1-3/
+
+________________________________________________________________________________
+Fecha:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+Solo la versión alemana tiene carácter vinculante
+	Solo la versión alemana tiene carácter vinculante.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	Esta página no sustituye asesoramiento jurídico ni constituye advertencias o recomendaciones oficiales. Las previsiones y valoraciones son basadas en modelos.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contacto para consultas jurídicas: véase impreso.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparencia y ética de datos:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Fuentes y licencias:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infraestructura:
+	Procesamiento exclusivamente en Alemania, TLS 1.3, aislamiento VPC.
+
+
+
+________________________________________________________________________________
+Protección de datos:
+	Procesamiento de datos personales conforme al RGPD; sin cesión ni uso para entrenamiento de IA.
+
+
+
+________________________________________________________________________________
+Responsabilidad:
+	Sin responsabilidad por contenidos externos o decisiones derivadas. No asesoramiento en inversiones en sentido del WpHG.
+
+
+
+________________________________________________________________________________
+Foro:
+	Aquisgrán, Alemania. Derecho alemán aplicable con exclusión de la CVIM (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – Todos los derechos reservados.
+
+nationfiles.com | Cálculo NFSI | 18.04.2026 21:45

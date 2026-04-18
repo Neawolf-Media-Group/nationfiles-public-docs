@@ -1,0 +1,193 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aix-la-Chapelle, Allemagne
+
+
+
+________________________________________________________________________________
+Calcul NFSI
+
+
+
+
+________________________________________________________________________________
+Date de mise à jour :
+	18.04.2026
+	PDF du: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+Aperçu rapide
+	Le NFSI est un indice de stabilité (0–100) par pays et par jour.
+	Calcul en trois niveaux : micro (ligne), méso (source/pays/jour), macro (une valeur par pays/jour).
+	Schéma à gauche ; le NFSI est recalculé toutes les 15 minutes (temps réel).
+	Pour analystes, B2B et autorités : décisions basées sur les données en temps réel.
+	L'indice de stabilité NationFiles (NFSI) est calculé en trois niveaux : niveau micro (score par ligne de données), niveau méso (score par source, pays et jour) et niveau macro (une valeur d'indice par pays et jour). Le schéma à gauche montre les embranchements et les étapes suivantes.
+
+
+
+________________________________________________________________________________
+Qu'est-ce que le NFSI ?
+	L'indice de stabilité NationFiles (NFSI) est une métrique de la stabilité relative des pays sur une échelle de 0 à 100. Il regroupe de nombreux indicateurs publics et maintenus – sécurité, économie, gouvernance, structure – en une seule valeur mise à jour quotidiennement par pays. Pour les analystes, stratèges et responsables de crise des entreprises et des autorités, il offre une référence rapide et comparable : où en est un pays aujourd'hui ? Comment la situation a-t-elle évolué ? Quelles régions ou pays partenaires sont exposés à des risques particuliers ? Le NFSI aide à prioriser les marchés, à évaluer les risques de chaînes d'approvisionnement et d'implantation, à anticiper les dégradations et à mettre en contexte l'actualité. Il ne remplace pas une analyse pays approfondie mais la complète – comme boussole quotidienne pour des décisions fondées sur les données.
+
+
+
+________________________________________________________________________________
+Calcul en temps réel 24h/24
+	Chaque minute, de nouvelles données entrent dans le réseau NationFiles – catégorisées, pondérées et traitées en temps réel. Le NFSI est recalculé toutes les 15 minutes, il est donc toujours à jour, 24h/24. Ce que la concurrence livre en cycles quotidiens ou hebdomadaires, NationFiles le livre en minutes : des évaluations de stabilité qui se traduisent directement en décisions actionnables. Pour le B2B, les autorités et les organisations : repérer les risques avant qu’ils n’escaladent ; saisir les opportunités quand les marchés bougent ; prendre les bonnes décisions au bon moment avec un indice temps réel unique. NationFiles – la stabilité en temps réel, sans compromis.
+
+
+
+________________________________________________________________________________
+Sources et pondération (nœuds source)
+	Chaque source de données (nœud source) fournit des données brutes par pays et éventuellement par date. Les sources sont regroupées thématiquement (ex. sécurité, économie, structure). Chaque nœud a un poids de base (score_value) et un multiplicateur de mise à jour : les sources mises à jour fréquemment sont pondérées plus fort dans l'agrégation que les sources rarement mises à jour, pour que l'indice réagisse à temps. Les sources statiques ou purement référentielles (ex. géodonnées, classifications) sont exclues du calcul de l'indice (liste noire). Seuls les indicateurs pertinents pour la stabilité sont inclus.
+	La polarité de chaque source est définie : pour les indicateurs négatifs (ex. conflit, inflation), une valeur brute plus élevée signifie une stabilité pire ; pour les indicateurs positifs (ex. État de droit, infrastructure), une valeur brute plus élevée signifie une meilleure stabilité. Pour les effectifs absolus, la population du pays est toujours prise en compte pour que les petits et grands pays restent comparables.
+
+
+
+________________________________________________________________________________
+Layer 1 : score par ligne (niveau micro)
+	Une score de 0 à 100 uniforme est déterminé par ligne de données d'une table source.
+	Si un pays n'a pas de ligne un jour donné, la couche 2 utilise la dernière valeur de couche 1 (prédécesseur). Si un pays n'a aucune ligne dans une source, 100 (meilleure valeur) s'applique pour la contribution manquante.
+	Une colonne de valeur brute définie ou une grandeur calculée (agrégation/sévérité) est utilisée de façon cohérente par source.
+	Sur toutes les lignes du tableau, le minimum et le maximum de la valeur brute sont déterminés (une échelle pour l'ensemble des données).
+	Pour chaque ligne de valeur brute x : norm = (x - x_min) / (x_max - x_min) × 100. Si x_max = x_min (pas de dispersion), le score 50 (neutre) est attribué à toutes les lignes.
+	Si plus élevé = pire, alors score = 100 - norm ; sinon score = norm. Uniformément : 0 = pire stabilité, 100 = meilleure stabilité.
+	Seules les lignes pas encore calculées sont mises à jour ; les calculées restent inchangées (historique reproductible, pas de biais rétrospectif).
+
+
+
+________________________________________________________________________________
+Cas particulier : MLMV / militaire et violence de masse (NFSI)
+	Le connecteur NfMilitaryMassViolenceNfsi (groupe sécurité 100, poids plein) lit d’abord la table gatekeeper GDELT (gatekeeper_keep = 1), avec repli sur la table miroir MLMV. Contrairement à la normalisation min–max habituelle sur toutes les lignes, la colonne brute mlmv_actor_day_stress utilise une échelle fixe 0–100 (plus haut = pire). Jour civil avec au moins un événement pertinent : valeur brute 100. Puis décroissance linéaire vers la référence neutre 50 sur 30 jours par défaut (NFSI_MLMV_RECOVERY_DAYS, 1–365). Les jours calmes sans nouvel événement n’apportent aucun bonus positif de stabilité ; au plus 50 après la décroissance. Fenêtre historique par défaut 730 jours (NFSI_MLMV_DAYS_BACK, 30–2190). Attribution par jour civil (UTC/SQL).
+
+
+
+________________________________________________________________________________
+Layer 2 : score connecteur par pays et date (niveau méso)
+	Un score journalier 0-100 est formé et persisté par source, pays et date.
+	Dernier score de couche 1 de ce pays dans cette source ; aucune entrée = 100.
+	Groupe Existence et sécurité : score du jour = MIN de tous les scores du jour (une mauvaise entrée fixe le jour). Autres groupes : moyenne avec dummy 0/100 et valeur de remplissage (même longueur de tableau par pays).
+	Tendance = moyenne(scores du jour) / moyenne(prédécesseur) uniquement sur les pays avec données ; score du jour estimé = prédécesseur × tendance, plafonné 0-100.
+	score_final = 0,6 × dayScore + 0,4 × prédécesseur. Le multiplicateur de mise à jour ne change pas le score, seulement le poids en couche 3.
+	Après plusieurs jours sans données, le score peut progressivement se rapprocher de la valeur par défaut (limite par jour, plafond, selon le groupe).
+
+
+
+________________________________________________________________________________
+Couche 3 : score pays (NFSI) par pays et date (niveau macro)
+	À partir de tous les scores de couche 2, une seule valeur NFSI par pays et date (0-100) est calculée.
+	Source manquante pour (pays, date) = neutre 50 (pas 100), pour que les pays avec peu de données ne se classent pas artificiellement au-dessus de ceux avec beaucoup de données réelles. No-data est enregistré.
+	effW = groupe × poids de base × multiplicateur de mise à jour ; baseScore = somme(score × effW) / somme(effW) ; plus dummy 0 et 100 avec poids fixe.
+	Pour les effets négatifs : population de référence ; les pays plus petits ont un facteur ≥ 1 (ex. via log10(population), plafonné). Moins d’habitants, plus le malus conflit/fragilité s’applique.
+	MinSec = minimum sur toutes les sources de sécurité avec données réelles. Si MinSec est sous le seuil (ex. 70) : malus = (seuil - MinSec) × facteur × popNegMultiplier (plafond ex. 35). Sans données de sécurité réelles : MinSec par défaut ex. 80 (pas de double pénalité).
+	Indicateur de gouvernance et population ; plus la gouvernance est mauvaise et plus le pays est petit, plus le malus est élevé (plafonné).
+	Pays sous le seuil de population : malus supplémentaire à partir de l’écart log10 (plafond).
+	popBonus = min(log10(population) × facteur, plafond) ; le score brut est augmenté, plafonné 0-100.
+	finalScore = rawScore + (100 - rawScore) × (est_total/100) × WGI_PULL (0,95). Une bonne gouvernance élève le score, une mauvaise le baisse ; une formule pour tous les pays (pays cibles ex. stables > 85, crise ≤ 60).
+	Score brut au moins 1, au plus 100. Le score brut absolu est stocké (pas de normalisation min/max quotidienne). Le journal de calcul (baseScore, malus, bonus, connecteurs no-data) est persisté.
+
+
+
+________________________________________________________________________________
+Résumé
+	Trois niveaux : données brutes par ligne (L1), agrégation par source/pays/jour (L2), agrégation en indice pays (L3). Une formule pour tous les pays ; pondération par groupes et multiplicateur de mise à jour ; valeurs manquantes représentées par no-data (50), récupération et estimation de tendance. Malus et bonus (conflit, fragilité, population, WGI) et toutes les constantes sont configurables.
+
+
+
+________________________________________________________________________________
+Prévision pays (7 jours)
+	La prévision NFSI sur 7 jours par pays (Naciro Country Predictor) repose sur une approche multivariée : plusieurs grandeurs sont modélisées ensemble (NFSI pays, NFSI monde, indicateur événement/risque local et global, volume de news). Le calcul est déterministe et auditable – mêmes entrées, même résultat ; aucun tirage aléatoire. En détail :
+	La prévision 7 jours est affichée sur les pages pays dans le graphique et dans l’export JSON (prediction).
+	Entrées (90 derniers jours) : NFSI pays (nfsi_country, min. 5 points), NFSI monde (nfsi_world), indicateur événement/risque local et global (ex. sources news), volume de news par pays et jour. Toutes les séries alimentent un modèle VAR commun.
+	Modèle : VAR(2) – Vector Autoregression à deux retards. Les paramètres (matrice Beta) sont estimés sur l’historique. En cas de matrice instable : régularisation Ridge ; en cas singulier : pseudo-inverse Moore-Penrose. Méthodes reconnues en économétrie.
+	Le NFSI monde est une des cinq séries du VAR. Un indice monde en baisse exerce une pression à la baisse sur la prévision pays (risque systémique) ; une hausse stabilise.
+	Le risque local et global (ex. sources conflit/événements) est plus fortement pondéré dans le VAR. Un trend du risque est évalué : si le risque se dégrade, la remontée du NFSI est freinée (ex. conflits durables). Le volume de news contextualise l’effet du risque.
+	Calcul itératif jour par jour : Pour chaque des 7 jours, le modèle est ré-estimé sur l’historique courant (y compris jours déjà prévus). Valeur suivante = combinaison linéaire des lags (Beta) + un résidu choisi de façon déterministe. Les résidus servent à prolonger les fluctuations passées dans la prévision (reconnaissance de motif). Mean-reversion vers la moyenne 90 jours du pays : le pays « revient » vers cette moyenne (objectif atteint sur 90 jours, pas en 7). Variation journalière plafonnée (inertie).
+	Motif de résidus : Les 7 derniers résidus de l’historique forment le motif pour les 7 jours de prévision (jour 1 = résidu d’il y a 7 jours, …, jour 7 = dernier). Le NFSI prévu est borné à [0, 100].
+	Déterministe : pas de hasard ; mêmes entrées → même sortie. Paramètres configurables et documentés. La prévision complète l’analyse pays, ne s’y substitue pas.
+
+================================================================================
+
+https://nationfiles.com/fr/legal/layer1-3/
+
+________________________________________________________________________________
+Date :
+	18.04.2026
+
+
+
+________________________________________________________________________________
+Seule la version allemande fait foi
+	Seule la version allemande fait foi.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	Cette page ne remplace pas un conseil juridique et ne constitue pas d'avertissements ou recommandations officiels. Les prévisions et évaluations sont basées sur des modèles.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contact pour demandes juridiques : voir mentions légales.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA : abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparence et éthique des données :
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Sources et licences :
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infrastructure :
+	Traitement exclusivement en Allemagne, TLS 1.3, isolement VPC.
+
+
+
+________________________________________________________________________________
+Protection des données :
+	Traitement des données personnelles conformément au RGPD ; pas de partage ni d'utilisation pour l'entraînement IA.
+
+
+
+________________________________________________________________________________
+Responsabilité :
+	Aucune responsabilité pour les contenus externes ou décisions dérivées. Pas de conseil en investissement au sens du WpHG.
+
+
+
+________________________________________________________________________________
+Tribunal compétent :
+	Aix-la-Chapelle, Allemagne. Droit allemand applicable, à l'exclusion de la CVIM (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – Tous droits réservés.
+
+nationfiles.com | Calcul NFSI | 18.04.2026 21:45

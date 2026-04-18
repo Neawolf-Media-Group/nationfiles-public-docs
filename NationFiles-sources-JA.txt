@@ -1,0 +1,940 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+データソース
+
+
+
+
+________________________________________________________________________________
+更新日:
+	18.04.2026
+	PDF作成日時: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	このページは、NationFilesがリアルタイムで利用するすべてのデータソースを表示します。
+
+
+
+________________________________________________________________________________
+システム構成：データソース
+	コンプライアンス要件に従い、すべてのアクティブなインテリジェンスコネクタを自動リスト化。
+
+
+
+________________________________________________________________________________
+方法論
+	このページに掲載されているデータソースは、DataSourceConnectorシステムによりNaciro Intelligence Engineに自動接続されています。取得は表に表示されている間隔に従い、スケジュール（Cron）で実行されます。インポート後、生データはフィルタリング・クリーニング・集約され、可視化（地図、ダッシュボード等）および安定性・予測モデルに投入されます。各ソースには重み（スコア）が設定されている場合があり、値はレジストリのコネクタ列に記載されています。方法論は本ソースレジストリの透明性要件に準拠しています。
+
+
+
+________________________________________________________________________________
+アクティブなデータソース
+	コネクタ: NewsMediaStck · ã¤ã³ããªã¸ã§ã³ã¹ã»ææ
+	プロバイダー: APILayer GmbH (Mediastack)
+	参照: https://mediastack.com/
+	ライセンス: ライセンス情報
+	エンドポイント: Mediastack
+	間隔: 15 */8 * * *
+	最終更新: 18.04.2026 16:15
+	コネクタ: AcledMonthAll · 危機と安全のレーダー
+	プロバイダー: Armed Conflict Location & Event Data Project (ACLED)
+	参照: https://acleddata.com/
+	ライセンス: ライセンス情報
+	間隔: 43 0 * * *
+	最終更新: 18.04.2026 01:15
+	コネクタ: AcledMonthAllOverview · 危機と安全のレーダー
+	プロバイダー: Armed Conflict Location & Event Data Project (ACLED)
+	参照: https://acleddata.com/
+	ライセンス: ライセンス情報
+	エンドポイント: Acleddata
+	間隔: 23 */6 * * *
+	最終更新: 18.04.2026 18:23
+	コネクタ: BlindContinentNewsAsean · 大陸ニュース ASEAN
+	プロバイダー: ASEAN (Association of Southeast Asian Nations)
+	参照: https://asean.org
+	ライセンス: ライセンス情報
+	エンドポイント: Asean
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: BlindContinentNewsAS · 大陸ニュース ASPI Strategi
+	プロバイダー: Australian Strategic Policy Institute (ASPI)
+	参照: https://www.aspistrategist.org.au
+	ライセンス: ライセンス情報
+	エンドポイント: Org
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: CurrencyDailyFred · FRB H.10為替 (FRED)
+	プロバイダー: Board of Governors of the Federal Reserve System (H.10 via FRED)
+	参照: https://fred.stlouisfed.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Stlouisfed
+	間隔: 27 * * * *
+	最終更新: 18.04.2026 21:28
+	コネクタ: AnaCldfZone · Analytics Zone (device/country/d
+	プロバイダー: Cloudflare, Inc.
+	参照: https://www.cloudflare.com
+	ライセンス: ライセンス情報
+	エンドポイント: Cloudflare
+	間隔: */5 * * * *
+	最終更新: 18.04.2026 21:51
+	コネクタ: CountriesNetGrpTrfcAnom · ãã©ãã£ãã¯ç°å¸¸ï¼å°å
+	プロバイダー: Cloudflare, Inc.
+	参照: https://www.cloudflare.com
+	ライセンス: ライセンス情報
+	エンドポイント: Cloudflare
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: CountriesNetTrfcAnom · トラフィック異常 (Cloudf
+	プロバイダー: Cloudflare, Inc.
+	参照: https://www.cloudflare.com
+	ライセンス: ライセンス情報
+	エンドポイント: Cloudflare
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: NetTrfcRadarDevice · ããã¤ã¹å¥ãã©ãã£ãã
+	プロバイダー: Cloudflare, Inc.
+	参照: https://www.cloudflare.com
+	ライセンス: ライセンス情報
+	エンドポイント: Cloudflare
+	間隔: */15 * * * *
+	最終更新: 18.04.2026 21:45
+	コネクタ: CountriesRaw · 国リスト（生データ）
+	プロバイダー: Countries dataset (Martijn van der Lee / mledoze)
+	参照: https://github.com/mledoze/countries
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 9 0 1 * *
+	最終更新: 11.04.2026 00:22
+	コネクタ: CountryBase · 国ベース（CCA2）
+	プロバイダー: Countries dataset (Martijn van der Lee / mledoze)
+	参照: https://github.com/mledoze/countries
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 12 0 * * 0
+	最終更新: 18.04.2026 00:38
+	コネクタ: CountryStates · 州/県
+	プロバイダー: Countries, States and Cities Database (Darshan Gajara / dr5hn)
+	参照: https://github.com/dr5hn/countries-states-cities-database
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 14 0 * * 0
+	最終更新: 18.04.2026 00:40
+	コネクタ: CountriesFips · 国コード（FIPS）
+	プロバイダー: Country Codes and International Organizations (Diego Hernán Mantellini / dieghernan)
+	参照: https://github.com/dieghernan/Country-Codes-and-International-Organizations
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 3 0 1 * *
+	最終更新: 11.04.2026 00:15
+	コネクタ: BlindContinentNewsDN · 大陸ニュース Defense News
+	プロバイダー: Defense News (Sightline Media Group, LLC)
+	参照: https://www.defensenews.com
+	ライセンス: ライセンス情報
+	エンドポイント: Defensenews
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: BlindEsriSatelliteFetcher · Esri Satellite (ArcGIS Export)
+	プロバイダー: Esri (Environmental Systems Research Institute, Inc.)
+	参照: https://www.arcgis.com
+	ライセンス: ライセンス情報
+	間隔: 7 */12 * * *
+	最終更新: 18.04.2026 12:07
+	コネクタ: CurrencyBulkFa · ECB為替USD (一括)
+	プロバイダー: European Central Bank (reference rates via Frankfurter)
+	参照: https://www.frankfurter.app
+	ライセンス: ライセンス情報
+	エンドポイント: Frankfurter
+	間隔: 0 4 1 * *
+	最終更新: 01.04.2026 04:02
+	コネクタ: CurrencyDailyFa · ECB日次レート USD
+	プロバイダー: European Central Bank (reference rates via Frankfurter)
+	参照: https://www.frankfurter.app
+	ライセンス: ライセンス情報
+	エンドポイント: Frankfurter
+	間隔: 18 * * * *
+	最終更新: 18.04.2026 21:22
+	コネクタ: BlindContinentNewsEc · 大陸ニュース EC Press Corn
+	プロバイダー: European Commission (European Union)
+	参照: https://ec.europa.eu/commission/presscorner
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: EurostatStatArblsQ · 失業率（月次）
+	プロバイダー: Eurostat (European Commission)
+	参照: https://ec.europa.eu/eurostat
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: 55 5 */7 * *
+	最終更新: 18.04.2026 06:18
+	コネクタ: EurostatStatTps · 1月1日人口
+	プロバイダー: Eurostat (European Commission)
+	参照: https://ec.europa.eu/eurostat
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: 35 5 2 * *
+	最終更新: 11.04.2026 05:50
+	コネクタ: EurostatTradeWs · EU貿易（Eurostat）
+	プロバイダー: Eurostat (European Commission)
+	参照: https://ec.europa.eu/eurostat
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: 18 6 5 * *
+	最終更新: 22.03.2026 07:34
+	コネクタ: MigrationEurostat · 欧州統計避難申請
+	プロバイダー: Eurostat (European Commission)
+	参照: https://ec.europa.eu/eurostat
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: 25 3 5 * *
+	最終更新: 05.04.2026 03:25
+	コネクタ: MigrationEurostatEmi · 欧州統計移出
+	プロバイダー: Eurostat (European Commission)
+	参照: https://ec.europa.eu/eurostat
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: 38 3 5 * *
+	最終更新: 23.03.2026 00:02
+	コネクタ: MigrationEurostatImm · 欧州統計移入
+	プロバイダー: Eurostat (European Commission)
+	参照: https://ec.europa.eu/eurostat
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: 36 3 5 * *
+	最終更新: 22.03.2026 23:45
+	コネクタ: MigrationEurostatNetm · 欧州統計純移民
+	プロバイダー: Eurostat (European Commission)
+	参照: https://ec.europa.eu/eurostat
+	ライセンス: ライセンス情報
+	エンドポイント: Europa
+	間隔: 34 3 5 * *
+	最終更新: 23.03.2026 00:16
+	コネクタ: CountriesVatRatesApiVer · 国別付加価値税 (APIVerve)
+	プロバイダー: EvlarSoft LLC (APIVerve)
+	参照: https://www.apiverve.com
+	ライセンス: ライセンス情報
+	エンドポイント: Apiverve
+	間隔: 45 */8 * * *
+	最終更新: 18.04.2026 16:47
+	コネクタ: ExchangeRateHstChange · 為替変動（日次）
+	プロバイダー: ExchangeRate.host
+	参照: https://exchangerate.host/
+	ライセンス: ライセンス情報
+	エンドポイント: Exchangerate
+	間隔: 52 */12 * * *
+	最終更新: 18.04.2026 12:52
+	コネクタ: GovFbiMw · FBIæéè¦æåæéãªã¹ã
+	プロバイダー: FBI (U.S. Department of Justice)
+	参照: https://www.fbi.gov
+	ライセンス: ライセンス情報
+	エンドポイント: Opensanctions
+	間隔: 15 23 * * *
+	最終更新: 17.04.2026 23:18
+	コネクタ: TrvlWarnDe · 渡航・安全情報 (AA)
+	プロバイダー: Federal Foreign Office of Germany (Auswärtiges Amt)
+	参照: https://www.auswaertiges-amt.de
+	ライセンス: ライセンス情報
+	エンドポイント: Auswaertiges-amt
+	間隔: 18 */8 * * *
+	最終更新: 18.04.2026 16:19
+	コネクタ: TrvlWarnDeWarn · æ¸¡èªã»å®å¨æå ± (AA) â è
+	プロバイダー: Federal Foreign Office of Germany (Auswärtiges Amt)
+	参照: https://www.auswaertiges-amt.de
+	ライセンス: ライセンス情報
+	間隔: 18 */8 * * *
+	最終更新: 18.04.2026 16:19
+	コネクタ: CurrencyDailyFl · USD日次レート (FloatRates)
+	プロバイダー: FloatRates
+	参照: https://www.floatrates.com
+	ライセンス: ライセンス情報
+	エンドポイント: Floatrates
+	間隔: 0 */1 * * *
+	最終更新: 18.04.2026 21:00
+	コネクタ: TrvlWarnUk · 英国渡航情報 (GOV.UK)
+	プロバイダー: Foreign, Commonwealth & Development Office (United Kingdom)
+	参照: https://www.gov.uk/foreign-travel-advice
+	ライセンス: ライセンス情報
+	エンドポイント: Gov
+	間隔: 45 23 * * *
+	最終更新: 17.04.2026 23:45
+	コネクタ: BlindGeonames · 地名・場所・座標 (geonam
+	プロバイダー: GeoNames geographical database
+	参照: https://www.geonames.org
+	ライセンス: ライセンス情報
+	エンドポイント: Geonames
+	間隔: 13 4 2 * *
+	最終更新: 02.04.2026 04:13
+	コネクタ: ContinentGeoJson · 大陸GeoJSON (AM/NA/SA)
+	プロバイダー: GitHub, Inc. (community geographic datasets)
+	参照: https://github.com/datasets/geo-countries
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 23 13 5 * *
+	最終更新: 05.04.2026 13:24
+	コネクタ: TrvlWarnCaVoy · カナダ渡航情報
+	プロバイダー: Global Affairs Canada (Government of Canada)
+	参照: https://travel.gc.ca
+	ライセンス: ライセンス情報
+	エンドポイント: Gc
+	間隔: 25 */8 * * *
+	最終更新: 18.04.2026 16:26
+	コネクタ: CountriesGdeltGlobRadar · GDELT世界イベントデータ
+	プロバイダー: Global Database of Events, Language, and Tone (GDELT Project)
+	参照: https://www.gdeltproject.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Gdeltproject
+	間隔: */15 * * * *
+	最終更新: 18.04.2026 21:45
+	コネクタ: GdeltMilAndProtests · GDELT軍事アクションとプ
+	プロバイダー: Global Database of Events, Language, and Tone (GDELT Project)
+	参照: https://www.gdeltproject.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Gdeltproject
+	間隔: */15 * * * *
+	最終更新: 18.04.2026 21:45
+	コネクタ: DisasterGdacsHumNat · GDACS災害アラート
+	プロバイダー: Global Disaster Alert and Coordination System (GDACS)
+	参照: https://www.gdacs.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Gdacs
+	間隔: */29 * * * *
+	最終更新: 18.04.2026 21:31
+	コネクタ: BlindContinentNewsFB · 大陸ニュース FeedBurner
+	プロバイダー: Google LLC (FeedBurner)
+	参照: https://feedburner.google.com
+	ライセンス: ライセンス情報
+	エンドポイント: Google
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: ContinentCountryGeoJson · 大陸GeoJSON
+	プロバイダー: Highsoft AS (Highcharts)
+	参照: https://www.highcharts.com/
+	ライセンス: ライセンス情報
+	エンドポイント: Highcharts
+	間隔: 1 0 1 * *
+	最終更新: 11.04.2026 00:14
+	コネクタ: AnaMatomoNf · Matomo Analytics (NF, 7 reports)
+	プロバイダー: InnoCraft Ltd. (Matomo Analytics)
+	参照: https://matomo.org
+	ライセンス: ライセンス情報
+	エンドポイント: Nationfiles
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: AnaMatomoNfEntryLocale · Matomo 入口→言語/日
+	プロバイダー: InnoCraft Ltd. (Matomo Analytics)
+	参照: https://matomo.org
+	ライセンス: ライセンス情報
+	エンドポイント: Nationfiles
+	間隔: 12 * * * *
+	最終更新: 18.04.2026 21:12
+	コネクタ: BlindContinentNewsIC · 大陸ニュース InSight Crime
+	プロバイダー: InSight Crime Incorporated
+	参照: https://insightcrime.org
+	ライセンス: ライセンス情報
+	エンドポイント: Insightcrime
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: GovIntPol · INTERPOL赤通告
+	プロバイダー: INTERPOL (International Criminal Police Organization)
+	参照: https://www.interpol.int
+	ライセンス: ライセンス情報
+	エンドポイント: Interpol
+	間隔: 30 23 * * *
+	最終更新: 17.04.2026 23:32
+	コネクタ: BlindContinentNewsMP · 大陸ニュース MercoPress
+	プロバイダー: MercoPress (South Atlantic News Agency)
+	参照: https://en.mercopress.com
+	ライセンス: ライセンス情報
+	エンドポイント: Mercopress
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: BlindContinentNewsTDip · 大陸ニュース The Diplomat
+	プロバイダー: MHT Corporation (The Diplomat)
+	参照: https://thediplomat.com
+	ライセンス: ライセンス情報
+	エンドポイント: Thediplomat
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: BlindNasaSatelliteFetcher · NASA Satellite (wms.cgi)
+	プロバイダー: National Aeronautics and Space Administration (NASA)
+	参照: https://nasa.gov
+	ライセンス: ライセンス情報
+	間隔: 7 */12 * * *
+	最終更新: 18.04.2026 12:07
+	コネクタ: NASA · NASA FIRMS アクティブ火災
+	プロバイダー: National Aeronautics and Space Administration (NASA)
+	参照: https://firms.modaps.eosdis.nasa.gov/
+	ライセンス: ライセンス情報
+	エンドポイント: Nasa
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:33
+	コネクタ: CountryNewsRiskLevel · ãã¥ã¼ã¹ãªã¹ã¯(24hã»ç¹°è
+	プロバイダー: NationFiles
+	参照: https://nationfiles.com
+	ライセンス: ライセンス情報
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: GdeltMilAndProtestsGatekeeper · GDELTゲートキーパー（現
+	プロバイダー: NationFiles
+	参照: https://nationfiles.com/
+	ライセンス: ライセンス情報
+	間隔: */15 * * * *
+	最終更新: 18.04.2026 21:50
+	コネクタ: NfMilitaryMassViolenceNfsi · MLMVè¡çºèã»æ¥æ¬¡ã¹ãã¬ã
+	プロバイダー: NationFiles
+	参照: https://nationfiles.com/
+	ライセンス: ライセンス情報
+	間隔: */15 * * * *
+	最終更新: 18.04.2026 21:45
+	コネクタ: NfNewsCountry24 · Country24hNews
+	プロバイダー: NationFiles
+	参照: https://nationfiles.com
+	ライセンス: ライセンス情報
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: NfRawNewsSignals · Rawãã¥ã¼ã¹ã·ã°ãã«(ææ
+	プロバイダー: NationFiles
+	参照: https://nationfiles.com
+	ライセンス: ライセンス情報
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: NfRawNewsSignalsEventRisk · Rawãã¥ã¼ã¹ã·ã°ãã«ã»ã
+	プロバイダー: NationFiles
+	参照: https://nationfiles.com
+	ライセンス: ライセンス情報
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: TravelAdvisoryUnified · 渡航警告（複数当局）
+	プロバイダー: NationFiles
+	参照: https://www.nationfiles.com/
+	ライセンス: ライセンス情報
+	間隔: 32 */3 * * *
+	最終更新: 18.04.2026 21:47
+	コネクタ: OsFtm · OpenSanctions PEP (FTM)
+	プロバイダー: OpenSanctions
+	参照: https://www.opensanctions.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Opensanctions
+	間隔: 20 1 * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: MilitaryBase · OSM軍事基地
+	プロバイダー: OpenStreetMap Foundation
+	参照: https://overpass-api.de/
+	ライセンス: ライセンス情報
+	エンドポイント: Overpass-api
+	間隔: 54 * * * *
+	最終更新: 18.04.2026 20:54
+	コネクタ: Powerplant · WRI+OSM発電所
+	プロバイダー: OpenStreetMap Foundation
+	参照: https://overpass-api.de/
+	ライセンス: ライセンス情報
+	エンドポイント: Overpass-api
+	間隔: 43 9 * * *
+	最終更新: 18.04.2026 09:44
+	コネクタ: MigrationOecdMig · OECD MIG 入出国（B11/B12）
+	プロバイダー: Organisation for Economic Co-operation and Development (OECD)
+	参照: https://www.oecd.org
+	ライセンス: ライセンス情報
+	エンドポイント: Nomics
+	間隔: 34 3 5 * *
+	最終更新: 21.03.2026 11:44
+	コネクタ: OecdSdmxGdpvAnnpct · GDP実質成長率 %（年次）
+	プロバイダー: Organisation for Economic Co-operation and Development (OECD)
+	参照: https://www.oecd.org
+	ライセンス: ライセンス情報
+	エンドポイント: Oecd
+	間隔: 35 13 */14 * *
+	最終更新: 18.04.2026 14:52
+	コネクタ: CountriesPopPrisn100K · 10万人当たり受刑者数
+	プロバイダー: Our World in Data (Global Change Data Lab, University of Oxford)
+	参照: https://ourworldindata.org
+	ライセンス: ライセンス情報
+	エンドポイント: Ourworldindata
+	間隔: 8 12 15 * *
+	最終更新: 15.04.2026 12:09
+	コネクタ: OWIDDemocracyIndex · 民主主義指数 (EIU)
+	プロバイダー: Our World in Data (Global Change Data Lab, University of Oxford)
+	参照: https://ourworldindata.org
+	ライセンス: ライセンス情報
+	エンドポイント: Ourworldindata
+	間隔: 23 12 */14 * *
+	最終更新: 18.04.2026 12:37
+	コネクタ: Airports · 空港（世界）
+	プロバイダー: OurAirports (open airport database)
+	参照: https://davidmegginson.github.io/ourairports-data/
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 0 0 1 * *
+	最終更新: 01.04.2026 00:11
+	コネクタ: CountryGeoJson · 国GeoJSON
+	プロバイダー: R2 Datahub (CKAN)
+	参照: https://datahub.io/
+	ライセンス: ライセンス情報
+	エンドポイント: Datahub
+	間隔: 13 2 1 * *
+	最終更新: 01.04.2026 02:13
+	コネクタ: BlindContinentNewsRand · 大陸ニュース RAND
+	プロバイダー: RAND Corporation
+	参照: https://www.rand.org
+	ライセンス: ライセンス情報
+	エンドポイント: Rand
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: CountriesNatBorders · 国境・隣国
+	プロバイダー: REST Countries API
+	参照: https://restcountries.com
+	ライセンス: ライセンス情報
+	エンドポイント: Restcountries
+	間隔: 5 0 3 * *
+	最終更新: 03.04.2026 00:06
+	コネクタ: CountriesNatLanguages · 国名・言語
+	プロバイダー: REST Countries API
+	参照: https://restcountries.com
+	ライセンス: ライセンス情報
+	エンドポイント: Restcountries
+	間隔: 5 1 3 * *
+	最終更新: 11.04.2026 01:15
+	コネクタ: CountriesNatRegSubReg · 地域・サブ地域・首都
+	プロバイダー: REST Countries API
+	参照: https://restcountries.com
+	ライセンス: ライセンス情報
+	エンドポイント: Restcountries
+	間隔: 6 0 3 * *
+	最終更新: 03.04.2026 00:06
+	コネクタ: CountryBaseInfo · 国の基本情報（REST）
+	プロバイダー: REST Countries API
+	参照: https://restcountries.com
+	ライセンス: ライセンス情報
+	エンドポイント: Restcountries
+	間隔: 33 3 * * *
+	最終更新: 18.04.2026 03:49
+	コネクタ: WorldUnivDataSetIpsa · 世界大学データセット (
+	プロバイダー: scientia-ipsa (University of Lucerne)
+	参照: https://github.com/scientia-ipsa/World_Universities_Datasets
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 25 2 5 * *
+	最終更新: 05.04.2026 02:25
+	コネクタ: BlindContinentNewsTD · 大陸ニュース The Defense P
+	プロバイダー: The Defense Post
+	参照: https://www.thedefensepost.com
+	ライセンス: ライセンス情報
+	エンドポイント: Thedefensepost
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: EconFredHerCountScOvSc · 経済自由度総合 (Heritage)
+	プロバイダー: The Heritage Foundation
+	参照: https://www.heritage.org/index
+	ライセンス: ライセンス情報
+	エンドポイント: Heritage
+	間隔: 20 21 */14 * *
+	最終更新: 17.04.2026 23:26
+	コネクタ: EconFredHerCountScRanks · 世界・地域ランク (Herita
+	プロバイダー: The Heritage Foundation
+	参照: https://www.heritage.org/index
+	ライセンス: ライセンス情報
+	エンドポイント: Heritage
+	間隔: 15 20 */14 * *
+	最終更新: 18.04.2026 20:28
+	コネクタ: EconFredHerCountScRights · 財産権スコア (Heritage)
+	プロバイダー: The Heritage Foundation
+	参照: https://www.heritage.org/index
+	ライセンス: ライセンス情報
+	エンドポイント: Heritage
+	間隔: 5 17 */14 * *
+	最終更新: 17.04.2026 22:51
+	コネクタ: EconFredHerCountScTax · 税・政府支出負担 (Herita
+	プロバイダー: The Heritage Foundation
+	参照: https://www.heritage.org/index
+	ライセンス: ライセンス情報
+	エンドポイント: Heritage
+	間隔: 10 19 */14 * *
+	最終更新: 18.04.2026 19:24
+	コネクタ: CountriesNetSpmBot · Botnet C&C国別 (Spamhaus)
+	プロバイダー: The Spamhaus Project Ltd.
+	参照: https://www.spamhaus.org
+	ライセンス: ライセンス情報
+	エンドポイント: Spamhaus
+	間隔: 7 */8 * * *
+	最終更新: 18.04.2026 16:08
+	コネクタ: TravelStateGov · 米国渡航警告レベル4
+	プロバイダー: U.S. Department of State (Bureau of Consular Affairs)
+	参照: https://travel.state.gov
+	ライセンス: ライセンス情報
+	エンドポイント: State
+	間隔: 18 */8 * * *
+	最終更新: 18.04.2026 16:19
+	コネクタ: SdgGlobalIndexSdsn · SDG総合指数 (SDSN ArcGIS)
+	プロバイダー: UN Sustainable Development Solutions Network (SDSN)
+	参照: https://www.sdgindex.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Arcgis
+	間隔: 45 22 */14 * *
+	最終更新: 17.04.2026 22:51
+	コネクタ: SdgIndexCountryPop · SDG指数人口 (SDSN)
+	プロバイダー: UN Sustainable Development Solutions Network (SDSN)
+	参照: https://dashboards.sdgindex.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Sdgindex
+	間隔: 30 21 */14 * *
+	最終更新: 18.04.2026 21:44
+	コネクタ: BlindContinentNewsUneca · 大陸ニュース UNECA
+	プロバイダー: United Nations Economic Commission for Africa (UNECA)
+	参照: https://www.uneca.org
+	ライセンス: ライセンス情報
+	エンドポイント: Uneca
+	間隔: */30 * * * *
+	最終更新: 18.04.2026 21:30
+	コネクタ: WorldEarthQuakeUsgs · 世界の地震 (USGS)
+	プロバイダー: United States Geological Survey (USGS)
+	参照: https://earthquake.usgs.gov
+	ライセンス: ライセンス情報
+	エンドポイント: Usgs
+	間隔: * * * * *
+	最終更新: 18.04.2026 21:52
+	コネクタ: SeaPort · 海港（世界）
+	プロバイダー: Upply SAS
+	参照: https://www.upply.com/
+	ライセンス: ライセンス情報
+	間隔: 16 0 1 * *
+	最終更新: 01.04.2026 00:19
+	コネクタ: CountriesConflictUcdpGed · UCDP GED紛争イベント
+	プロバイダー: Uppsala Conflict Data Program (UCDP)
+	参照: https://ucdp.uu.se/
+	ライセンス: ライセンス情報
+	エンドポイント: Uu
+	間隔: 45 */8 * * *
+	最終更新: 18.04.2026 16:46
+	コネクタ: CountriesVatRatesVatLup · EU付加価値税 (VAT Lookup)
+	プロバイダー: VAT Lookup
+	参照: https://www.vatlookup.eu
+	ライセンス: ライセンス情報
+	エンドポイント: Vatlookup
+	間隔: 50 2 5 * *
+	最終更新: 05.04.2026 02:51
+	コネクタ: CountriesHeadOfStateWD · 国家元首・政府首脳
+	プロバイダー: Wikidata (Wikimedia Foundation, Inc.)
+	参照: https://www.wikidata.org
+	ライセンス: ライセンス情報
+	エンドポイント: Wikidata
+	間隔: 17 3 * * *
+	最終更新: 18.04.2026 06:16
+	コネクタ: CountryCapitalWD · 首都（座標・名称）
+	プロバイダー: Wikidata (Wikimedia Foundation, Inc.)
+	参照: https://www.wikidata.org
+	ライセンス: ライセンス情報
+	エンドポイント: Wikidata
+	間隔: 6 3 * * *
+	最終更新: 18.04.2026 03:07
+	コネクタ: CountriesWb65Up · 人口65歳以上 %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 10 0 3 * *
+	最終更新: 03.04.2026 00:12
+	コネクタ: CountriesWbAccsZs · 電力アクセス %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 4 8 * *
+	最終更新: 08.04.2026 04:31
+	コネクタ: CountriesWbAirPsgr · 航空旅客輸送数
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 11 3 4 * *
+	最終更新: 04.04.2026 03:12
+	コネクタ: CountriesWbArtcSc · 科学・技術論文数
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 9 * *
+	最終更新: 09.04.2026 02:31
+	コネクタ: CountriesWbCcEst · 腐敗統制（推定値）
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 4 5 * *
+	最終更新: 05.04.2026 04:31
+	コネクタ: CountriesWbCdrtIn · 粗死亡率
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 12 0 3 * *
+	最終更新: 03.04.2026 00:15
+	コネクタ: CountriesWbCpiTotlZg · 消費者物価インフレ率 %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 11 * *
+	最終更新: 11.04.2026 02:34
+	コネクタ: CountriesWbFpCpiTotl · æ¶è²»èç©ä¾¡ã¤ã³ãã¬ % (ä
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 50 2 4 * *
+	最終更新: 04.04.2026 02:51
+	コネクタ: CountriesWbLe00 · 平均寿命（出生時）
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 13 0 2 * *
+	最終更新: 02.04.2026 00:16
+	コネクタ: CountriesWbLndTotl · 陸地面積（km²）
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 14 0 3 * *
+	最終更新: 11.04.2026 00:24
+	コネクタ: CountriesWbMilTotl · 軍人総数
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 15 0 3 * *
+	最終更新: 03.04.2026 00:20
+	コネクタ: CountriesWbNetUser · インターネット利用者 %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 16 0 3 * *
+	最終更新: 03.04.2026 00:21
+	コネクタ: CountriesWbPcapPpCd · 1人当たりGDP、PPP (int. $)
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 11 * *
+	最終更新: 11.04.2026 02:33
+	コネクタ: CountriesWbPop · 総人口
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 18 0 7 * *
+	最終更新: 07.04.2026 00:19
+	コネクタ: CountriesWbPopDpnd · 従属人口指数 %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 10 * *
+	最終更新: 10.04.2026 02:33
+	コネクタ: CountriesWbPopGrow · 人口増加率 %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 17 0 2 * *
+	最終更新: 02.04.2026 00:19
+	コネクタ: CountriesWbPovGini · ジニ係数（所得格差）
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 11 * *
+	最終更新: 11.04.2026 02:34
+	コネクタ: CountriesWbPsrcP5 · 故意殺人（10万人あたり
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 6 * *
+	最終更新: 06.04.2026 02:32
+	コネクタ: CountriesWbResTotlCd · 総準備高（金含む）US$
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 11 * *
+	最終更新: 11.04.2026 02:34
+	コネクタ: CountriesWbRlEst · 法の支配（推定値）
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 4 5 * *
+	最終更新: 05.04.2026 04:31
+	コネクタ: CountriesWbSrfTotl · 面積（km²）
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 19 0 3 * *
+	最終更新: 11.04.2026 00:29
+	コネクタ: CountriesWbTEchMfZs · ハイテク輸出 %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 2 9 * *
+	最終更新: 09.04.2026 02:31
+	コネクタ: CountriesWbUem1524 · 若年失業率（15-24歳）%
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 20 3 4 * *
+	最終更新: 04.04.2026 03:21
+	コネクタ: CountriesWbUemTotl · 失業率 %
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 17 3 4 * *
+	最終更新: 11.04.2026 03:28
+	コネクタ: CountriesWbVaEst · è¨è«ã¨èª¬æè²¬ä»»ï¼æ¨å®å
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 30 4 5 * *
+	最終更新: 05.04.2026 04:31
+	コネクタ: CountriesWbWgiPvCcRl · WGI: 安定・腐敗・法の支
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 35 2 * * *
+	最終更新: 18.04.2026 02:36
+	コネクタ: MigrationWbNetm · 世銀純移民
+	プロバイダー: World Bank Group
+	参照: https://www.worldbank.org/
+	ライセンス: ライセンス情報
+	エンドポイント: Worldbank
+	間隔: 32 3 5 * *
+	最終更新: 21.03.2026 10:59
+	コネクタ: CountriesInLang · 国メタデータ（言語）
+	プロバイダー: world-countries (stefangabos)
+	参照: https://github.com/stefangabos/world_countries
+	ライセンス: ライセンス情報
+	エンドポイント: Github
+	間隔: 4 0 7 * *
+	最終更新: 07.04.2026 00:05
+
+
+
+________________________________________________________________________________
+データ融合と著作権：
+	NationFilesは、上記のリポジトリおよび公式データベースから自動化されたデータストリームを集約・融合しています。処理された生データの著作権は、それぞれの権利者に完全に帰属します。ライセンスと利用条件は、参照リンクから提供元で直接ご確認ください。
+
+
+
+________________________________________________________________________________
+免責事項：
+	慎重な技術的検証にもかかわらず、NationFilesは第三者から取得したデータの正確性、完全性、または最新性を保証しません。提供される情報は一般的な情報提供のみを目的としており、法的、金融、または投資助言を構成するものではありません。データの利用は自己責任で行ってください。
+
+
+
+________________________________________________________________________________
+データ保護と処理：
+	掲載されているソースには、非個人データ（国別統計、地理的・経済的指標など）に加え、公的指名手配・通告データ（INTERPOL赤通告、FBI Most Wanted、OpenSanctions）が含まれ、これらには指名手配者の個人データが含まれる場合があります。これらのソースへデータを送信することはなく、アクセスは読み取り専用です。処理は公益および各ソースの法的根拠に基づいて行われます。すべてのデータは自動取得され、表示・分析のためにフィルタリング、集約、加工される場合があります。詳細はプライバシーポリシーをご確認ください。
+
+
+
+________________________________________________________________________________
+可用性とキャッシュ：
+	外部ソースの常時利用可能性は保証しません。
+
+================================================================================
+
+https://nationfiles.com/ja/legal/sources/
+
+________________________________________________________________________________
+基準日:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+法的に有効なのはドイツ語版のみです。
+	法的に有効なのはドイツ語版のみです。
+
+
+
+________________________________________________________________________________
+Disclaimer
+	本ページは法務助言に代わるものではなく、公式の警告・勧告を構成しません。予測・評価はモデルに基づきます。
+
+
+
+________________________________________________________________________________
+Kontakt
+	法務お問い合わせ: インプリント参照。
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+透明性・データ倫理:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+出典・ライセンス:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+インフラ:
+	処理はドイツ国内のみ、TLS 1.3、VPC分離。
+
+
+
+________________________________________________________________________________
+データ保護:
+	GDPRに従った個人データ処理。第三者提供・AI学習利用なし。
+
+
+
+________________________________________________________________________________
+免責:
+	外部コンテンツ・派生判断について責任を負いません。WpHG上の投資助言ではありません。
+
+
+
+________________________________________________________________________________
+管轄裁判所:
+	アーヘン、ドイツ。国連国際物品売買条約（CISG）を除くドイツ法が適用。
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – All rights reserved.
+
+nationfiles.com | データソース | 18.04.2026 21:45

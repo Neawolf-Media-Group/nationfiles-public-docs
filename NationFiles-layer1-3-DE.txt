@@ -1,0 +1,193 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+NFSI Berechnung
+
+
+
+
+________________________________________________________________________________
+Stand vom:
+	18.04.2026
+	PDF vom: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+Kurzüberblick
+	Der NFSI ist ein Stabilitäts-Index (0–100) pro Land und Tag.
+	Berechnung in drei Ebenen: Mikro (Zeile), Meso (Quelle/Land/Tag), Makro (ein Wert pro Land/Tag).
+	Ablaufdiagramm links; NFSI wird alle 15 Minuten neu berechnet (Echtzeit).
+	Für Analysten, B2B und Behörden: datenbasierte Entscheidungen in Echtzeit.
+	Der NationFiles Stability Index (NFSI) wird in drei Ebenen berechnet: Mikroebene (Score pro Datenzeile), Mesoebene (Score pro Quelle, Land und Tag) und Makroebene (ein Indexwert pro Land und Tag). Im Ablaufdiagramm links sind die Verzweigungen (Fallunterscheidungen) und die jeweiligen Folgeschritte dargestellt.
+
+
+
+________________________________________________________________________________
+Was ist der NFSI?
+	Der NationFiles Stability Index (NFSI) ist eine Kennzahl für die relative Stabilität von Ländern auf einer Skala von 0 bis 100. Er bündelt zahlreiche öffentlich verfügbare und gepflegte Indikatoren – von Sicherheit über Wirtschaft bis zu Governance und Struktur – in einen einzigen, täglich aktualisierten Wert pro Land. Damit bietet er Analysten, Strategen und Krisenmanagern in Unternehmen und Behörden eine schnelle, vergleichbare Orientierung: Wo steht ein Land heute? Wie hat sich die Lage entwickelt? Welche Regionen oder Partnerländer sind besonderen Risiken ausgesetzt? Der NFSI eignet sich zur Priorisierung von Märkten, zur Abschätzung von Lieferketten- und Standortrisiken, zur Frühwarnung bei Verschlechterungen und zur Einordnung von Nachrichten und Ereignissen. Er ersetzt keine tiefere Länderanalyse, sondern ergänzt sie – als täglicher Kompass für datenbasierte Entscheidungen.
+
+
+
+________________________________________________________________________________
+Echtzeit-Berechnung 24/7
+	Jede Minute fließen neue Daten in das NationFiles-Netzwerk ein – sie werden in Echtzeit kategorisiert, gewichtet und verarbeitet. Der NFSI wird alle 15 Minuten neu berechnet und steht damit rund um die Uhr aktuell zur Verfügung. Was die Konkurrenz in Tages- oder Wochenrhythmen liefert, liefert NationFiles in Minuten: Stabilitätsbewertungen, die sich sofort in Handlungsentscheidungen übersetzen lassen. Für B2B, Behörden und Organisationen bedeutet das: Risiken erkennen, bevor sie eskalieren; Chancen nutzen, wenn sich Märkte verändern; mit einem einzigen, einzigartigen Echtzeit-Index die richtigen Entscheidungen zum richtigen Zeitpunkt treffen. NationFiles – Stabilität in Echtzeit, keine Kompromisse.
+
+
+
+________________________________________________________________________________
+Quellen und Gewichtung (Source Nodes)
+	Jede Datenquelle (Source Node) liefert Rohdaten pro Land und ggf. pro Zeitpunkt. Die Quellen werden thematisch gruppiert (z. B. Sicherheit, Wirtschaft, Struktur). Jeder Node hat ein Basisgewicht (score_value) und einen Aktualisierungsmultiplikator: häufig aktualisierte Quellen werden in der Aggregation stärker gewichtet als selten aktualisierte, damit der Index zeitnah reagiert. Statische oder rein referenzielle Quellen (z. B. Geodaten, Klassifikationen) sind von der Indexberechnung ausgenommen (Blacklist). So fließen nur stabilitätsrelevante Indikatoren ein.
+	Die Polarität jeder Quelle ist definiert: Bei Negativ-Indikatoren (z. B. Konflikt, Inflation) bedeutet ein höherer Rohwert schlechtere Stabilität; bei Positiv-Indikatoren (z. B. Rechtsstaatlichkeit, Infrastruktur) bedeutet ein höherer Rohwert bessere Stabilität. Bei absoluten Anzahlen wird stets die Bevölkerung des Landes einbezogen, damit kleine und große Länder vergleichbar bleiben.
+
+
+
+________________________________________________________________________________
+Layer 1: Zeilen-Score (Mikroebene)
+	Pro Datenzeile einer Quelltabelle wird ein einheitlicher Score von 0 bis 100 ermittelt.
+	Hat ein Land an einem Tag keine Zeile, wird in Layer 2 der letzte Layer-1-Wert (Vorgänger) verwendet. Hat ein Land in einer Quelle gar keine Zeile, gilt für den fehlenden Beitrag 100 (bester Wert).
+	Pro Quelle wird einheitlich eine definierte Rohwert-Spalte oder eine berechnete Größe (Aggregation/Severity) verwendet.
+	Über alle Zeilen der Tabelle werden Minimum und Maximum des Rohwerts ermittelt (eine Skala für die gesamte Datenmenge).
+	Für jede Zeile mit Rohwert x: norm = (x minus x_min) / (x_max minus x_min) mal 100. Bei x_max = x_min (keine Streuung) wird für alle Zeilen der Score 50 (neutral) gesetzt.
+	Ist höher = schlechter, dann score = 100 minus norm; sonst score = norm. Einheitlich: 0 = schlechteste, 100 = beste Stabilität.
+	Nur noch nicht berechnete Zeilen werden aktualisiert; berechnete bleiben unverändert (reproduzierbare Historie, kein nachträglicher Bias).
+
+
+
+________________________________________________________________________________
+Sonderfall: MLMV / Militär & Massengewalt (NFSI)
+	Die Quelle NfMilitaryMassViolenceNfsi (Sicherheitsgruppe 100, volles Connector-Gewicht) bezieht ihre Ereignisse primär aus der GDELT-Gatekeeper-Tabelle (gatekeeper_keep = 1), mit Fallback auf die MLMV-Spiegel-Tabelle. Anders als bei der üblichen Min-Max-Normalisierung über alle Zeilen einer Quelle liegt der Rohwert mlmv_actor_day_stress auf einer festen Skala 0–100 (höher = schlechter). Kalendertag mit mindestens einem relevanten Ereignis: Rohwert 100. Anschließend lineares Abklingen auf den neutralen Referenzwert 50 über standardmäßig 30 Tage (Umgebungsvariable NFSI_MLMV_RECOVERY_DAYS, zulässig 1–365). Tage ohne neues Ereignis im Fenster erzeugen keinen positiven Stabilitäts-Boost (kein „Frieden“ als volle Stabilität); höchstens den neutralen Wert 50 nach vollständiger Abklingphase. Das historische Betrachtungsfenster ist standardmäßig 730 Tage (NFSI_MLMV_DAYS_BACK, 30–2190). Zuordnung tagesbezogen (UTC/SQL-Kalendertag).
+
+
+
+________________________________________________________________________________
+Layer 2: Connector-Score pro Land und Datum (Mesoebene)
+	Pro Quelle, Land und Datum wird ein täglicher Score 0-100 gebildet und persistiert.
+	Letzter Layer-1-Score dieses Landes in dieser Quelle; kein Eintrag = 100.
+	Gruppe Existenz und Sicherheit: Tages-Score = MIN aller Scores des Tages (ein schlechter Eintrag setzt den Tag). Andere Gruppen: Durchschnitt inkl. Dummy 0/100 und Auffüllwert (gleiche Array-Länge pro Land).
+	Trend = Durchschnitt(Tages-Scores) / Durchschnitt(Vorgänger) nur über Länder mit Daten; geschätzter Tages-Score = Vorgänger mal Trend, begrenzt 0-100.
+	score_final = 0,6 mal dayScore + 0,4 mal Vorgänger. Der Aktualisierungsmultiplikator ändert nicht den Score, sondern nur das Gewicht in Layer 3.
+	Bei mehreren Tagen ohne Daten kann der Score schrittweise in Richtung Standardwert erholen (pro Tag begrenzt, Obergrenze, gruppenabhängig).
+
+
+
+________________________________________________________________________________
+Layer 3: Länder-Score (NFSI) pro Land und Datum (Makroebene)
+	Aus allen Layer-2-Scores wird ein einziger NFSI-Wert pro Land und Datum (0-100) berechnet.
+	Fehlende Quelle für (Land, Datum) = neutral 50 (nicht 100), damit Länder mit wenig Daten nicht künstlich über solche mit vielen echten Daten liegen. No-Data wird im Log geführt.
+	effW = Gruppe mal Basisgewicht mal Aktualisierungsmultiplikator; baseScore = Summe(score mal effW) / Summe(effW); zusätzlich Dummy 0 und 100 mit festem Gewicht.
+	Für Negativ-Einflüsse: Referenzbevölkerung; kleinere Länder erhalten Faktor größer gleich 1 (z. B. über log10(Population), begrenzt). Je weniger Einwohner, desto stärker wirken Konflikt-/Fragility-Malus.
+	MinSec = Minimum über alle Sicherheits-Quellen mit echten Daten. Liegt MinSec unter Schwellwert (z. B. 70): Malus = (Schwellwert minus MinSec) mal Faktor mal popNegMultiplier (Obergrenze z. B. 35). Ohne echte Sicherheitsdaten: Standard-MinSec z. B. 80 (keine Doppelbestrafung).
+	Governance-Indikator und Bevölkerung; je schlechter Governance und je kleiner das Land, desto höher der Malus (mit Deckel).
+	Länder unter Bevölkerungsgrenze: Zusatz-Malus aus log10-Abweichung (Obergrenze).
+	popBonus = min(log10(Population) mal Faktor, Cap); Roh-Score wird erhöht, auf 0-100 begrenzt.
+	finalScore = rawScore + (100 minus rawScore) mal (est_total/100) mal WGI_PULL (0,95). Hohes Governance hebt den Score, niedriges senkt ihn; eine Formel für alle Länder (Zielländer z. B. stabile Länder größer 85, Krisenlaender kleiner gleich 60).
+	Roh-Score mindestens 1, maximal 100. Absoluter Roh-Score wird gespeichert (keine tagesweise Min/Max-Normalisierung). Berechnungslog (baseScore, Malus, Bonus, No-Data-Connectors) wird persistiert.
+
+
+
+________________________________________________________________________________
+Zusammenfassung
+	Drei Ebenen: Rohdaten pro Zeile (L1), Aggregation pro Quelle/Land/Tag (L2), Aggregation zum Länder-Index (L3). Eine einheitliche Formel für alle Länder; Gewichtung über Gruppen und Aktualisierungsmultiplikator; fehlende Werte über No-Data (50), Recovery und Trend-Schätzung abgebildet. Malus und Bonus (Konflikt, Fragilität, Bevölkerung, WGI) und alle Konstanten sind konfigurierbar.
+
+
+
+________________________________________________________________________________
+Länder-Prognose (7 Tage)
+	Die 7-Tage-Prognose des NFSI pro Land (Naciro Country Predictor) beruht auf einer multivariaten Zeitreihenmethode: Es werden mehrere Größen gemeinsam modelliert (Landes-NFSI, Welt-NFSI, Ereignis-/Risiko-Indikator lokal und global, Nachrichten-Volumen). Die Berechnung ist deterministisch und auditfähig – gleiche Eingaben liefern stets dasselbe Ergebnis; es werden keine Zufallswerte verwendet. Im Einzelnen:
+	Die 7-Tage-Prognose wird auf den Länder-Detailseiten im Chart (transparent/schraffiert) sowie im JSON-Export (prediction) dargestellt.
+	Eingaben (jeweils letzte 90 Tage): Landes-NFSI aus nfsi_country (mind. 5 Punkte); Welt-NFSI aus nfsi_world; lokaler und globaler Ereignis-/Risiko-Indikator (z. B. aus Nachrichtenquellen); Nachrichten-Volumen pro Land und Tag. Alle Reihen fließen in ein gemeinsames Modell ein.
+	Modell: VAR(2) – Vector Autoregression mit zwei Verzögerungen (Lags). Aus der Historie werden die Modellparameter (Koeffizientenmatrix Beta) geschätzt. Bei numerisch instabilen Matrizen kommt Ridge-Regularisierung zum Einsatz; bei singulären Fällen die Moore-Penrose-Pseudoinverse. Beides sind etablierte, nachvollziehbare Verfahren der Ökonometrie.
+	Welt-NFSI ist eine der fünf Zeitreihen im VAR. Ein sinkender Welt-Index übt Abwärtsdruck auf die Länderprognose aus (systemisches Risiko); ein steigender wirkt stabilisierend.
+	Lokales und globales Risiko (z. B. aus konflikt- und ereignisbezogenen Quellen) sind im VAR stärker gewichtet. Zusätzlich wird ein Risiko-Trend ausgewertet: Verschlechtert sich das Risiko, wird ein Aufwärtspendeln des NFSI gedämpft (z. B. bei anhaltenden Konflikten). Das Nachrichten-Volumen wirkt als Kontext für die Stärke des Risiko-Einflusses.
+	Iterative Tag-für-Tag-Berechnung: Für jeden der 7 Prognosetage wird das Modell aus der aktuellen Historie (inkl. bereits vorhergesagter Tage) neu geschätzt. Der nächste Wert = lineare Kombination der Lags (aus Beta) plus ein deterministisch gewähltes Residuum. Die Residuen (Abweichungen Modell vs. Historie) werden genutzt, um typische Schwingungen der Vergangenheit in der Prognose fortzusetzen (Mustererkennung). Zusätzlich wirkt eine Mean-Reversion zum 90-Tage-Durchschnitt des Landes: Das Land „pendelt“ Richtung dieses Mittels, wobei das Ziel erst über 90 Tage voll erreicht wird (in 7 Tagen nur ein Teil der Strecke). Die tägliche Änderung ist nach oben begrenzt (Trägheit: Länder ändern sich nicht sprunghaft).
+	Residuen-Muster: Die letzten 7 Residuen der Historie werden als Schwingungsmuster für die 7 Prognosetage übernommen (Tag 1 entspricht dem Residuum von vor 7 Tagen, …, Tag 7 dem letzten). So bleiben typische Schwankungen der Vergangenheit in der Kurve sichtbar. Der prognostizierte NFSI wird auf das Intervall 0–100 begrenzt.
+	Deterministisch: Kein Zufall; gleiche Eingabe → gleiches Ergebnis. Alle verwendeten Parameter sind zentral konfigurierbar und dokumentiert. Die Prognose ersetzt keine tiefere Länderanalyse, sondern ergänzt sie als datenbasierte Kurzfrist-Orientierung.
+
+================================================================================
+
+https://nationfiles.com/de/legal/layer1-3/
+
+________________________________________________________________________________
+Stand:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+Rechtsverbindlich ist ausschließlich die deutsche Fassung
+	Rechtsverbindlich ist ausschließlich die deutsche Fassung.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	Diese Seite ersetzt keine rechtliche Beratung und stellt keine amtlichen Warnungen oder Handlungsempfehlungen dar. Prognosen und Bewertungen sind modellbasiert.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Kontakt für rechtliche Anfragen: siehe Impressum.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparenz & Datenethik:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Quellen & Lizenzen:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infrastruktur:
+	Verarbeitung ausschließlich in Deutschland, TLS 1.3, VPC‑Isolation.
+
+
+
+________________________________________________________________________________
+Datenschutz:
+	Verarbeitung personenbezogener Daten gemäß DSGVO; keine Weitergabe oder Nutzung für KI‑Training.
+
+
+
+________________________________________________________________________________
+Haftung:
+	Keine Haftung für externe Inhalte oder abgeleitete Entscheidungen. Keine Anlageberatung im Sinne des WpHG.
+
+
+
+________________________________________________________________________________
+Gerichtsstand:
+	Aachen, Deutschland. Es gilt deutsches Recht unter Ausschluss des UN‑Kaufrechts (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – Alle Rechte vorbehalten.
+
+nationfiles.com | NFSI Berechnung | 18.04.2026 21:45

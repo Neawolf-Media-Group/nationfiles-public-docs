@@ -1,0 +1,940 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+مصادر البيانات
+
+
+
+
+________________________________________________________________________________
+تاريخ التحديث:
+	18.04.2026
+	PDF من: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	تعرض هذه الصفحة جميع مصادر البيانات التي يستخدمها NationFiles في الوقت الفعلي.
+
+
+
+________________________________________________________________________________
+تكوين النظام: مصادر البيانات
+	قائمة آلية لجميع موصلات الذكاء النشطة وفقاً لمتطلبات الامتثال.
+
+
+
+________________________________________________________________________________
+المنهجية
+	يتم ربط مصادر البيانات المدرجة في هذه الصفحة بمحرك Naciro Intelligence عبر نظام DataSourceConnector. يتم الجلب وفق جدول زمني (Cron) حسب الفواصل الموضحة في الجدول. بعد الاستيراد، يتم تصفية البيانات الأولية وتنظيفها ودمجها، وتغذي التصورات (مثل الخرائط ولوحات المعلومات) ونماذج الاستقرار والتنبؤ. قد يكون لكل مصدر وزن (score). القيم معروضة في عمود الموصل في السجل. تتوافق المنهجية مع متطلبات الشفافية لسجل المصادر هذا.
+
+
+
+________________________________________________________________________________
+مصادر البيانات النشطة
+	الموصل: NewsMediaStck · ØªÙØ±ÙØ± Ø§ÙØ§Ø³ØªØ®Ø¨Ø§Ø±Ø§Ø
+	المزود: APILayer GmbH (Mediastack)
+	المرجع: https://mediastack.com/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Mediastack
+	الفاصل: 15 */8 * * *
+	آخر تحديث: 18.04.2026 16:15
+	الموصل: AcledMonthAll · رادار الأزمات وال
+	المزود: Armed Conflict Location & Event Data Project (ACLED)
+	المرجع: https://acleddata.com/
+	الترخيص: معلومات الترخيص
+	الفاصل: 43 0 * * *
+	آخر تحديث: 18.04.2026 01:15
+	الموصل: AcledMonthAllOverview · رادار الأزمات وال
+	المزود: Armed Conflict Location & Event Data Project (ACLED)
+	المرجع: https://acleddata.com/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Acleddata
+	الفاصل: 23 */6 * * *
+	آخر تحديث: 18.04.2026 18:23
+	الموصل: BlindContinentNewsAsean · أخبار القارة ASEAN
+	المزود: ASEAN (Association of Southeast Asian Nations)
+	المرجع: https://asean.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Asean
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: BlindContinentNewsAS · أخبار القارة ASPI Str
+	المزود: Australian Strategic Policy Institute (ASPI)
+	المرجع: https://www.aspistrategist.org.au
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Org
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: CurrencyDailyFred · Ø£Ø³Ø¹Ø§Ø± USD Ø§ÙØ§Ø­ØªÙØ§Ø·Ù
+	المزود: Board of Governors of the Federal Reserve System (H.10 via FRED)
+	المرجع: https://fred.stlouisfed.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Stlouisfed
+	الفاصل: 27 * * * *
+	آخر تحديث: 18.04.2026 21:28
+	الموصل: AnaCldfZone · Analytics Zone (device/country/d
+	المزود: Cloudflare, Inc.
+	المرجع: https://www.cloudflare.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Cloudflare
+	الفاصل: */5 * * * *
+	آخر تحديث: 18.04.2026 21:51
+	الموصل: CountriesNetGrpTrfcAnom · Ø´Ø°ÙØ° Ø§ÙØ­Ø±ÙØ© Ø­Ø³Ø¨ Ø§Ù
+	المزود: Cloudflare, Inc.
+	المرجع: https://www.cloudflare.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Cloudflare
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: CountriesNetTrfcAnom · شذوذ الحركة (Cloudflar
+	المزود: Cloudflare, Inc.
+	المرجع: https://www.cloudflare.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Cloudflare
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: NetTrfcRadarDevice · Ø§ÙØ­Ø±ÙØ© Ø­Ø³Ø¨ ÙÙØ¹ Ø§ÙØ
+	المزود: Cloudflare, Inc.
+	المرجع: https://www.cloudflare.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Cloudflare
+	الفاصل: */15 * * * *
+	آخر تحديث: 18.04.2026 21:45
+	الموصل: CountriesRaw · ÙØ§Ø¦ÙØ© Ø§ÙØ¨ÙØ¯Ø§Ù (Ø®Ø§Ù
+	المزود: Countries dataset (Martijn van der Lee / mledoze)
+	المرجع: https://github.com/mledoze/countries
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 9 0 1 * *
+	آخر تحديث: 11.04.2026 00:22
+	الموصل: CountryBase · قاعدة البلد (CCA2)
+	المزود: Countries dataset (Martijn van der Lee / mledoze)
+	المرجع: https://github.com/mledoze/countries
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 12 0 * * 0
+	آخر تحديث: 18.04.2026 00:38
+	الموصل: CountryStates · ولايات/مقاطعات
+	المزود: Countries, States and Cities Database (Darshan Gajara / dr5hn)
+	المرجع: https://github.com/dr5hn/countries-states-cities-database
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 14 0 * * 0
+	آخر تحديث: 18.04.2026 00:40
+	الموصل: CountriesFips · رموز البلد (FIPS)
+	المزود: Country Codes and International Organizations (Diego Hernán Mantellini / dieghernan)
+	المرجع: https://github.com/dieghernan/Country-Codes-and-International-Organizations
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 3 0 1 * *
+	آخر تحديث: 11.04.2026 00:15
+	الموصل: BlindContinentNewsDN · أخبار القارة Defense
+	المزود: Defense News (Sightline Media Group, LLC)
+	المرجع: https://www.defensenews.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Defensenews
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: BlindEsriSatelliteFetcher · Esri Satellite (ArcGIS Export)
+	المزود: Esri (Environmental Systems Research Institute, Inc.)
+	المرجع: https://www.arcgis.com
+	الترخيص: معلومات الترخيص
+	الفاصل: 7 */12 * * *
+	آخر تحديث: 18.04.2026 12:07
+	الموصل: CurrencyBulkFa · أسعار الصرف BCE USD (b
+	المزود: European Central Bank (reference rates via Frankfurter)
+	المرجع: https://www.frankfurter.app
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Frankfurter
+	الفاصل: 0 4 1 * *
+	آخر تحديث: 01.04.2026 04:02
+	الموصل: CurrencyDailyFa · أسعار يومية BCE USD
+	المزود: European Central Bank (reference rates via Frankfurter)
+	المرجع: https://www.frankfurter.app
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Frankfurter
+	الفاصل: 18 * * * *
+	آخر تحديث: 18.04.2026 21:22
+	الموصل: BlindContinentNewsEc · أخبار القارة EC Press
+	المزود: European Commission (European Union)
+	المرجع: https://ec.europa.eu/commission/presscorner
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: EurostatStatArblsQ · ÙØ¹Ø¯Ù Ø§ÙØ¨Ø·Ø§ÙØ© (Ø´ÙØ±Ù
+	المزود: Eurostat (European Commission)
+	المرجع: https://ec.europa.eu/eurostat
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: 55 5 */7 * *
+	آخر تحديث: 18.04.2026 06:18
+	الموصل: EurostatStatTps · Ø¹Ø¯Ø¯ Ø§ÙØ³ÙØ§Ù ÙÙ 1 ÙÙØ
+	المزود: Eurostat (European Commission)
+	المرجع: https://ec.europa.eu/eurostat
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: 35 5 2 * *
+	آخر تحديث: 11.04.2026 05:50
+	الموصل: EurostatTradeWs · تجارة الاتحاد الأ
+	المزود: Eurostat (European Commission)
+	المرجع: https://ec.europa.eu/eurostat
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: 18 6 5 * *
+	آخر تحديث: 22.03.2026 07:34
+	الموصل: MigrationEurostat · يوروستات لجوء ثنا
+	المزود: Eurostat (European Commission)
+	المرجع: https://ec.europa.eu/eurostat
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: 25 3 5 * *
+	آخر تحديث: 05.04.2026 03:25
+	الموصل: MigrationEurostatEmi · يوروستات الهجرة ا
+	المزود: Eurostat (European Commission)
+	المرجع: https://ec.europa.eu/eurostat
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: 38 3 5 * *
+	آخر تحديث: 23.03.2026 00:02
+	الموصل: MigrationEurostatImm · يوروستات الهجرة ا
+	المزود: Eurostat (European Commission)
+	المرجع: https://ec.europa.eu/eurostat
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: 36 3 5 * *
+	آخر تحديث: 22.03.2026 23:45
+	الموصل: MigrationEurostatNetm · يوروستات صافي اله
+	المزود: Eurostat (European Commission)
+	المرجع: https://ec.europa.eu/eurostat
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Europa
+	الفاصل: 34 3 5 * *
+	آخر تحديث: 23.03.2026 00:16
+	الموصل: CountriesVatRatesApiVer · معدلات ضريبة القي
+	المزود: EvlarSoft LLC (APIVerve)
+	المرجع: https://www.apiverve.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Apiverve
+	الفاصل: 45 */8 * * *
+	آخر تحديث: 18.04.2026 16:47
+	الموصل: ExchangeRateHstChange · تغير سعر الصرف (يو
+	المزود: ExchangeRate.host
+	المرجع: https://exchangerate.host/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Exchangerate
+	الفاصل: 52 */12 * * *
+	آخر تحديث: 18.04.2026 12:52
+	الموصل: GovFbiMw · المطلوبون من مكتب
+	المزود: FBI (U.S. Department of Justice)
+	المرجع: https://www.fbi.gov
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Opensanctions
+	الفاصل: 15 23 * * *
+	آخر تحديث: 17.04.2026 23:18
+	الموصل: TrvlWarnDe · نصائح السفر والأم
+	المزود: Federal Foreign Office of Germany (Auswärtiges Amt)
+	المرجع: https://www.auswaertiges-amt.de
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Auswaertiges-amt
+	الفاصل: 18 */8 * * *
+	آخر تحديث: 18.04.2026 16:19
+	الموصل: TrvlWarnDeWarn · ÙØµØ§Ø¦Ø­ Ø§ÙØ³ÙØ± (AA) â Ø
+	المزود: Federal Foreign Office of Germany (Auswärtiges Amt)
+	المرجع: https://www.auswaertiges-amt.de
+	الترخيص: معلومات الترخيص
+	الفاصل: 18 */8 * * *
+	آخر تحديث: 18.04.2026 16:19
+	الموصل: CurrencyDailyFl · أسعار يومية USD (Float
+	المزود: FloatRates
+	المرجع: https://www.floatrates.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Floatrates
+	الفاصل: 0 */1 * * *
+	آخر تحديث: 18.04.2026 21:00
+	الموصل: TrvlWarnUk · نصائح السفر الممل
+	المزود: Foreign, Commonwealth & Development Office (United Kingdom)
+	المرجع: https://www.gov.uk/foreign-travel-advice
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Gov
+	الفاصل: 45 23 * * *
+	آخر تحديث: 17.04.2026 23:45
+	الموصل: BlindGeonames · أسماء جغرافية، أم
+	المزود: GeoNames geographical database
+	المرجع: https://www.geonames.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Geonames
+	الفاصل: 13 4 2 * *
+	آخر تحديث: 02.04.2026 04:13
+	الموصل: ContinentGeoJson · GeoJSON القارات (AM/NA/SA
+	المزود: GitHub, Inc. (community geographic datasets)
+	المرجع: https://github.com/datasets/geo-countries
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 23 13 5 * *
+	آخر تحديث: 05.04.2026 13:24
+	الموصل: TrvlWarnCaVoy · نصائح السفر كندا
+	المزود: Global Affairs Canada (Government of Canada)
+	المرجع: https://travel.gc.ca
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Gc
+	الفاصل: 25 */8 * * *
+	آخر تحديث: 18.04.2026 16:26
+	الموصل: CountriesGdeltGlobRadar · بيانات أحداث GDELT ا
+	المزود: Global Database of Events, Language, and Tone (GDELT Project)
+	المرجع: https://www.gdeltproject.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Gdeltproject
+	الفاصل: */15 * * * *
+	آخر تحديث: 18.04.2026 21:45
+	الموصل: GdeltMilAndProtests · Ø§ÙØªØ­Ø±ÙØ§Øª Ø§ÙØ¹Ø³ÙØ±ÙØ
+	المزود: Global Database of Events, Language, and Tone (GDELT Project)
+	المرجع: https://www.gdeltproject.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Gdeltproject
+	الفاصل: */15 * * * *
+	آخر تحديث: 18.04.2026 21:45
+	الموصل: DisasterGdacsHumNat · تنبيهات الكوارث GD
+	المزود: Global Disaster Alert and Coordination System (GDACS)
+	المرجع: https://www.gdacs.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Gdacs
+	الفاصل: */29 * * * *
+	آخر تحديث: 18.04.2026 21:31
+	الموصل: BlindContinentNewsFB · أخبار القارة FeedBurn
+	المزود: Google LLC (FeedBurner)
+	المرجع: https://feedburner.google.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Google
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: ContinentCountryGeoJson · GeoJSON القارة
+	المزود: Highsoft AS (Highcharts)
+	المرجع: https://www.highcharts.com/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Highcharts
+	الفاصل: 1 0 1 * *
+	آخر تحديث: 11.04.2026 00:14
+	الموصل: AnaMatomoNf · Matomo Analytics (NF, 7 reports)
+	المزود: InnoCraft Ltd. (Matomo Analytics)
+	المرجع: https://matomo.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Nationfiles
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: AnaMatomoNfEntryLocale · مداخل ماتومو ← لغ
+	المزود: InnoCraft Ltd. (Matomo Analytics)
+	المرجع: https://matomo.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Nationfiles
+	الفاصل: 12 * * * *
+	آخر تحديث: 18.04.2026 21:12
+	الموصل: BlindContinentNewsIC · أخبار القارة InSight
+	المزود: InSight Crime Incorporated
+	المرجع: https://insightcrime.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Insightcrime
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: GovIntPol · Ø¥Ø´Ø¹Ø§Ø±Ø§Øª Ø§ÙØ¥ÙØªØ±Ø¨ÙÙ
+	المزود: INTERPOL (International Criminal Police Organization)
+	المرجع: https://www.interpol.int
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Interpol
+	الفاصل: 30 23 * * *
+	آخر تحديث: 17.04.2026 23:32
+	الموصل: BlindContinentNewsMP · أخبار القارة MercoPre
+	المزود: MercoPress (South Atlantic News Agency)
+	المرجع: https://en.mercopress.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Mercopress
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: BlindContinentNewsTDip · أخبار القارة The Dipl
+	المزود: MHT Corporation (The Diplomat)
+	المرجع: https://thediplomat.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Thediplomat
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: BlindNasaSatelliteFetcher · NASA Satellite (wms.cgi)
+	المزود: National Aeronautics and Space Administration (NASA)
+	المرجع: https://nasa.gov
+	الترخيص: معلومات الترخيص
+	الفاصل: 7 */12 * * *
+	آخر تحديث: 18.04.2026 12:07
+	الموصل: NASA · حرائق نشطة ناسا FIR
+	المزود: National Aeronautics and Space Administration (NASA)
+	المرجع: https://firms.modaps.eosdis.nasa.gov/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Nasa
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:33
+	الموصل: CountryNewsRiskLevel · مخاطر الأخبار (24 س
+	المزود: NationFiles
+	المرجع: https://nationfiles.com
+	الترخيص: معلومات الترخيص
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: GdeltMilAndProtestsGatekeeper · بوابة GDELT (حالي)
+	المزود: NationFiles
+	المرجع: https://nationfiles.com/
+	الترخيص: معلومات الترخيص
+	الفاصل: */15 * * * *
+	آخر تحديث: 18.04.2026 21:50
+	الموصل: NfMilitaryMassViolenceNfsi · ضغط يوم-فاعل MLMV
+	المزود: NationFiles
+	المرجع: https://nationfiles.com/
+	الترخيص: معلومات الترخيص
+	الفاصل: */15 * * * *
+	آخر تحديث: 18.04.2026 21:45
+	الموصل: NfNewsCountry24 · Country24hNews
+	المزود: NationFiles
+	المرجع: https://nationfiles.com
+	الترخيص: معلومات الترخيص
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: NfRawNewsSignals · إشارات الأخبار ال
+	المزود: NationFiles
+	المرجع: https://nationfiles.com
+	الترخيص: معلومات الترخيص
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: NfRawNewsSignalsEventRisk · مخاطر أحداث إشارا
+	المزود: NationFiles
+	المرجع: https://nationfiles.com
+	الترخيص: معلومات الترخيص
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: TravelAdvisoryUnified · ØªØ­Ø°ÙØ±Ø§Øª Ø³ÙØ± (ÙØªØ¹Ø¯Ø
+	المزود: NationFiles
+	المرجع: https://www.nationfiles.com/
+	الترخيص: معلومات الترخيص
+	الفاصل: 32 */3 * * *
+	آخر تحديث: 18.04.2026 21:47
+	الموصل: OsFtm · OpenSanctions PEP
+	المزود: OpenSanctions
+	المرجع: https://www.opensanctions.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Opensanctions
+	الفاصل: 20 1 * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: MilitaryBase · قواعد عسكرية OSM
+	المزود: OpenStreetMap Foundation
+	المرجع: https://overpass-api.de/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Overpass-api
+	الفاصل: 54 * * * *
+	آخر تحديث: 18.04.2026 20:54
+	الموصل: Powerplant · محطات طاقة WRI + OSM
+	المزود: OpenStreetMap Foundation
+	المرجع: https://overpass-api.de/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Overpass-api
+	الفاصل: 43 9 * * *
+	آخر تحديث: 18.04.2026 09:44
+	الموصل: MigrationOecdMig · منظمة التعاون اله
+	المزود: Organisation for Economic Co-operation and Development (OECD)
+	المرجع: https://www.oecd.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Nomics
+	الفاصل: 34 3 5 * *
+	آخر تحديث: 21.03.2026 11:44
+	الموصل: OecdSdmxGdpvAnnpct · ÙÙÙ Ø­Ø¬Ù Ø§ÙÙØ§ØªØ¬ Ø§ÙÙ
+	المزود: Organisation for Economic Co-operation and Development (OECD)
+	المرجع: https://www.oecd.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Oecd
+	الفاصل: 35 13 */14 * *
+	آخر تحديث: 18.04.2026 14:52
+	الموصل: CountriesPopPrisn100K · معدل السجناء لكل 1
+	المزود: Our World in Data (Global Change Data Lab, University of Oxford)
+	المرجع: https://ourworldindata.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Ourworldindata
+	الفاصل: 8 12 15 * *
+	آخر تحديث: 15.04.2026 12:09
+	الموصل: OWIDDemocracyIndex · مؤشر الديمقراطية
+	المزود: Our World in Data (Global Change Data Lab, University of Oxford)
+	المرجع: https://ourworldindata.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Ourworldindata
+	الفاصل: 23 12 */14 * *
+	آخر تحديث: 18.04.2026 12:37
+	الموصل: Airports · المطارات عالمياً
+	المزود: OurAirports (open airport database)
+	المرجع: https://davidmegginson.github.io/ourairports-data/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 0 0 1 * *
+	آخر تحديث: 01.04.2026 00:11
+	الموصل: CountryGeoJson · GeoJSON البلد
+	المزود: R2 Datahub (CKAN)
+	المرجع: https://datahub.io/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Datahub
+	الفاصل: 13 2 1 * *
+	آخر تحديث: 01.04.2026 02:13
+	الموصل: BlindContinentNewsRand · أخبار القارة RAND
+	المزود: RAND Corporation
+	المرجع: https://www.rand.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Rand
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: CountriesNatBorders · حدود الدول (الدول
+	المزود: REST Countries API
+	المرجع: https://restcountries.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Restcountries
+	الفاصل: 5 0 3 * *
+	آخر تحديث: 03.04.2026 00:06
+	الموصل: CountriesNatLanguages · أسماء الدول واللغ
+	المزود: REST Countries API
+	المرجع: https://restcountries.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Restcountries
+	الفاصل: 5 1 3 * *
+	آخر تحديث: 11.04.2026 01:15
+	الموصل: CountriesNatRegSubReg · المنطقة، المنطقة
+	المزود: REST Countries API
+	المرجع: https://restcountries.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Restcountries
+	الفاصل: 6 0 3 * *
+	آخر تحديث: 03.04.2026 00:06
+	الموصل: CountryBaseInfo · معلومات أساسية عن
+	المزود: REST Countries API
+	المرجع: https://restcountries.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Restcountries
+	الفاصل: 33 3 * * *
+	آخر تحديث: 18.04.2026 03:49
+	الموصل: WorldUnivDataSetIpsa · مجموعة جامعات الع
+	المزود: scientia-ipsa (University of Lucerne)
+	المرجع: https://github.com/scientia-ipsa/World_Universities_Datasets
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 25 2 5 * *
+	آخر تحديث: 05.04.2026 02:25
+	الموصل: BlindContinentNewsTD · أخبار القارة The Defe
+	المزود: The Defense Post
+	المرجع: https://www.thedefensepost.com
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Thedefensepost
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: EconFredHerCountScOvSc · Ø§ÙØ­Ø±ÙØ© Ø§ÙØ§ÙØªØµØ§Ø¯ÙØ
+	المزود: The Heritage Foundation
+	المرجع: https://www.heritage.org/index
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Heritage
+	الفاصل: 20 21 */14 * *
+	آخر تحديث: 17.04.2026 23:26
+	الموصل: EconFredHerCountScRanks · ترتيب العالم/المن
+	المزود: The Heritage Foundation
+	المرجع: https://www.heritage.org/index
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Heritage
+	الفاصل: 15 20 */14 * *
+	آخر تحديث: 18.04.2026 20:28
+	الموصل: EconFredHerCountScRights · Ø­ÙÙÙ Ø§ÙÙÙÙÙØ© (ÙÙØ±Ù
+	المزود: The Heritage Foundation
+	المرجع: https://www.heritage.org/index
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Heritage
+	الفاصل: 5 17 */14 * *
+	آخر تحديث: 17.04.2026 22:51
+	الموصل: EconFredHerCountScTax · الضريبة والإنفاق
+	المزود: The Heritage Foundation
+	المرجع: https://www.heritage.org/index
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Heritage
+	الفاصل: 10 19 */14 * *
+	آخر تحديث: 18.04.2026 19:24
+	الموصل: CountriesNetSpmBot · Botnet C&C حسب البلد (Sp
+	المزود: The Spamhaus Project Ltd.
+	المرجع: https://www.spamhaus.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Spamhaus
+	الفاصل: 7 */8 * * *
+	آخر تحديث: 18.04.2026 16:08
+	الموصل: TravelStateGov · تحذيرات السفر الأ
+	المزود: U.S. Department of State (Bureau of Consular Affairs)
+	المرجع: https://travel.state.gov
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: State
+	الفاصل: 18 */8 * * *
+	آخر تحديث: 18.04.2026 16:19
+	الموصل: SdgGlobalIndexSdsn · مؤشر أهداف التنمي
+	المزود: UN Sustainable Development Solutions Network (SDSN)
+	المرجع: https://www.sdgindex.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Arcgis
+	الفاصل: 45 22 */14 * *
+	آخر تحديث: 17.04.2026 22:51
+	الموصل: SdgIndexCountryPop · Ø¹Ø¯Ø¯ Ø§ÙØ³ÙØ§Ù ÙØ¤Ø´Ø± Ø£Ù
+	المزود: UN Sustainable Development Solutions Network (SDSN)
+	المرجع: https://dashboards.sdgindex.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Sdgindex
+	الفاصل: 30 21 */14 * *
+	آخر تحديث: 18.04.2026 21:44
+	الموصل: BlindContinentNewsUneca · أخبار القارة UNECA
+	المزود: United Nations Economic Commission for Africa (UNECA)
+	المرجع: https://www.uneca.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Uneca
+	الفاصل: */30 * * * *
+	آخر تحديث: 18.04.2026 21:30
+	الموصل: WorldEarthQuakeUsgs · زلازل عالمية (USGS)
+	المزود: United States Geological Survey (USGS)
+	المرجع: https://earthquake.usgs.gov
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Usgs
+	الفاصل: * * * * *
+	آخر تحديث: 18.04.2026 21:52
+	الموصل: SeaPort · الموانئ البحرية ع
+	المزود: Upply SAS
+	المرجع: https://www.upply.com/
+	الترخيص: معلومات الترخيص
+	الفاصل: 16 0 1 * *
+	آخر تحديث: 01.04.2026 00:19
+	الموصل: CountriesConflictUcdpGed · أحداث الصراع UCDP GED
+	المزود: Uppsala Conflict Data Program (UCDP)
+	المرجع: https://ucdp.uu.se/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Uu
+	الفاصل: 45 */8 * * *
+	آخر تحديث: 18.04.2026 16:46
+	الموصل: CountriesVatRatesVatLup · ÙØ¹Ø¯ÙØ§Øª Ø¶.Ù.Ù. Ø§ÙØ§ØªØ
+	المزود: VAT Lookup
+	المرجع: https://www.vatlookup.eu
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Vatlookup
+	الفاصل: 50 2 5 * *
+	آخر تحديث: 05.04.2026 02:51
+	الموصل: CountriesHeadOfStateWD · رؤساء الدول والحك
+	المزود: Wikidata (Wikimedia Foundation, Inc.)
+	المرجع: https://www.wikidata.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Wikidata
+	الفاصل: 17 3 * * *
+	آخر تحديث: 18.04.2026 06:16
+	الموصل: CountryCapitalWD · العواصم (إحداثيات
+	المزود: Wikidata (Wikimedia Foundation, Inc.)
+	المرجع: https://www.wikidata.org
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Wikidata
+	الفاصل: 6 3 * * *
+	آخر تحديث: 18.04.2026 03:07
+	الموصل: CountriesWb65Up · السكان 65+ ٪
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 10 0 3 * *
+	آخر تحديث: 03.04.2026 00:12
+	الموصل: CountriesWbAccsZs · الوصول إلى الكهرب
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 4 8 * *
+	آخر تحديث: 08.04.2026 04:31
+	الموصل: CountriesWbAirPsgr · الركاب الجويون ال
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 11 3 4 * *
+	آخر تحديث: 04.04.2026 03:12
+	الموصل: CountriesWbArtcSc · المقالات العلمية
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 9 * *
+	آخر تحديث: 09.04.2026 02:31
+	الموصل: CountriesWbCcEst · ÙØ±Ø§ÙØ¨Ø© Ø§ÙÙØ³Ø§Ø¯ (ØªÙØ
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 4 5 * *
+	آخر تحديث: 05.04.2026 04:31
+	الموصل: CountriesWbCdrtIn · معدل الوفيات الخا
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 12 0 3 * *
+	آخر تحديث: 03.04.2026 00:15
+	الموصل: CountriesWbCpiTotlZg · التضخم أسعار الاس
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 11 * *
+	آخر تحديث: 11.04.2026 02:34
+	الموصل: CountriesWbFpCpiTotl · التضخم أسعار الاس
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 50 2 4 * *
+	آخر تحديث: 04.04.2026 02:51
+	الموصل: CountriesWbLe00 · ÙØªÙØ³Ø· Ø§ÙØ¹ÙØ± Ø¹ÙØ¯ Ø§Ù
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 13 0 2 * *
+	آخر تحديث: 02.04.2026 00:16
+	الموصل: CountriesWbLndTotl · Ø§ÙÙØ³Ø§Ø­Ø© Ø§ÙØ¨Ø±ÙØ© (ÙÙ
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 14 0 3 * *
+	آخر تحديث: 11.04.2026 00:24
+	الموصل: CountriesWbMilTotl · إجمالي الأفراد ال
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 15 0 3 * *
+	آخر تحديث: 03.04.2026 00:20
+	الموصل: CountriesWbNetUser · مستخدمو الإنترنت
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 16 0 3 * *
+	آخر تحديث: 03.04.2026 00:21
+	الموصل: CountriesWbPcapPpCd · ÙØµÙØ¨ Ø§ÙÙØ±Ø¯ ÙÙ Ø§ÙÙØ
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 11 * *
+	آخر تحديث: 11.04.2026 02:33
+	الموصل: CountriesWbPop · إجمالي السكان
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 18 0 7 * *
+	آخر تحديث: 07.04.2026 00:19
+	الموصل: CountriesWbPopDpnd · نسبة الإعالة العم
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 10 * *
+	آخر تحديث: 10.04.2026 02:33
+	الموصل: CountriesWbPopGrow · نمو السكان ٪
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 17 0 2 * *
+	آخر تحديث: 02.04.2026 00:19
+	الموصل: CountriesWbPovGini · معامل جيني (عدم ال
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 11 * *
+	آخر تحديث: 11.04.2026 02:34
+	الموصل: CountriesWbPsrcP5 · جرائم القتل العمد
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 6 * *
+	آخر تحديث: 06.04.2026 02:32
+	الموصل: CountriesWbResTotlCd · Ø¥Ø¬ÙØ§ÙÙ Ø§ÙØ§Ø­ØªÙØ§Ø·ÙØ
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 11 * *
+	آخر تحديث: 11.04.2026 02:34
+	الموصل: CountriesWbRlEst · Ø³ÙØ§Ø¯Ø© Ø§ÙÙØ§ÙÙÙ (ØªÙØ
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 4 5 * *
+	آخر تحديث: 05.04.2026 04:31
+	الموصل: CountriesWbSrfTotl · المساحة (كم²)
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 19 0 3 * *
+	آخر تحديث: 11.04.2026 00:29
+	الموصل: CountriesWbTEchMfZs · ØµØ§Ø¯Ø±Ø§Øª Ø§ÙØªÙÙÙÙÙØ¬Ù
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 2 9 * *
+	آخر تحديث: 09.04.2026 02:31
+	الموصل: CountriesWbUem1524 · بطالة الشباب (15-24)
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 20 3 4 * *
+	آخر تحديث: 04.04.2026 03:21
+	الموصل: CountriesWbUemTotl · البطالة ٪
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 17 3 4 * *
+	آخر تحديث: 11.04.2026 03:28
+	الموصل: CountriesWbVaEst · Ø§ÙØµÙØª ÙØ§ÙÙØ³Ø§Ø¡ÙØ© (Ø
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 30 4 5 * *
+	آخر تحديث: 05.04.2026 04:31
+	الموصل: CountriesWbWgiPvCcRl · WGI: استقرار، فساد،
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 35 2 * * *
+	آخر تحديث: 18.04.2026 02:36
+	الموصل: MigrationWbNetm · صافي الهجرة البنك
+	المزود: World Bank Group
+	المرجع: https://www.worldbank.org/
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Worldbank
+	الفاصل: 32 3 5 * *
+	آخر تحديث: 21.03.2026 10:59
+	الموصل: CountriesInLang · بيانات البلد (لغة)
+	المزود: world-countries (stefangabos)
+	المرجع: https://github.com/stefangabos/world_countries
+	الترخيص: معلومات الترخيص
+	نقطة النهاية: Github
+	الفاصل: 4 0 7 * *
+	آخر تحديث: 07.04.2026 00:05
+
+
+
+________________________________________________________________________________
+دمج البيانات وحقوق النشر:
+	يجمع NationFiles ويدمج تدفقات البيانات المؤتمتة من المستودات وقواعد البيانات الرسمية المدرجة أعلاه. تبقى حقوق النشر للبيانات الأولية المعالجة بالكامل لدى أصحاب الحقوق المعنيين. يمكن الاطلاع على التراخيص وشروط الاستخدام مباشرة من المزود عبر روابط المراجع.
+
+
+
+________________________________________________________________________________
+إخلاء المسؤولية:
+	على الرغم من المراجعة الفنية الدقيقة، لا يضمن NationFiles دقة أو اكتمال أو حداثة البيانات التي تم الحصول عليها من أطراف ثالثة. المعلومات المقدمة هي لأغراض إعلامية فقط ولا تشكل مشورة قانونية أو مالية أو استثمارية. استخدام البيانات على مسؤوليتك الخاصة.
+
+
+
+________________________________________________________________________________
+حماية البيانات والمعالجة:
+	تشمل المصادر المدرجة كلاً من البيانات غير الشخصية (مثل إحصائيات الدول، المؤشرات الجغرافية أو الاقتصادية) والبيانات الرسمية للمطلوبين والإشعارات (مثل إشعارات الإنتربول الحمراء، FBI Most Wanted، OpenSanctions)، التي قد تحتوي على بيانات شخصية عن المطلوبين. لا يتم نقل أي بيانات إلى هذه المصادر؛ الوصول للقراءة فقط. تتم المعالجة على أساس المصلحة العامة والأسس القانونية للمصادر المعنية. يتم جلب جميع البيانات تلقائياً وقد تُصفى وتُجمّع وتُعالج للعرض والتحليل. راجع سياسة الخصوصية للتفاصيل.
+
+
+
+________________________________________________________________________________
+التوفر والذاكرة المؤقتة:
+	لا ضمان للوصول الدائم للمصادر الخارجية.
+
+================================================================================
+
+https://nationfiles.com/ar/legal/sources/
+
+________________________________________________________________________________
+التاريخ:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+النص الألماني هو الوحيد الملزم قانونياً
+	النص الألماني هو الوحيد الملزم قانونياً.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	هذه الصفحة لا تحل محل الاستشارة القانونية ولا تمثل تحذيرات أو توصيات رسمية. التوقعات والتقييمات قائمة على نماذج.
+
+
+
+________________________________________________________________________________
+Kontakt
+	للاستفسارات القانونية: انظر بيانات النشر.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+الشفافية وأخلاقيات البيانات:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+المصادر والتراخيص:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+البنية التحتية:
+	المعالجة حصرياً في ألمانيا، TLS 1.3، عزل VPC.
+
+
+
+________________________________________________________________________________
+حماية البيانات:
+	معالجة البيانات الشخصية وفقاً للائحة العامة لحماية البيانات؛ لا إفصاح أو استخدام لتدريب الذكاء الاصطناعي.
+
+
+
+________________________________________________________________________________
+المسؤولية:
+	لا مسؤولية عن المحتوى الخارجي أو القرارات المشتقة. لا مشورة استثمارية بمعنى WpHG.
+
+
+
+________________________________________________________________________________
+المحكمة المختصة:
+	آخن، ألمانيا. القانون الألماني مع استبعاد اتفاقية فيينا (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	(c) NationFiles / Neawolf Media Group – جميع الحقوق محفوظة.
+
+nationfiles.com | مصادر البيانات | 18.04.2026 21:45

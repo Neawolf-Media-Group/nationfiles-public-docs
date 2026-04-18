@@ -1,0 +1,940 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Alemanha
+
+
+
+________________________________________________________________________________
+Fontes de dados
+
+
+
+
+________________________________________________________________________________
+Data de atualização:
+	18.04.2026
+	PDF de: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	Esta página mostra todas as fontes de dados que o NationFiles utiliza em tempo real.
+
+
+
+________________________________________________________________________________
+CONFIGURAÇÃO DO SISTEMA: FONTES DE DADOS
+	Listagem automatizada de todos os conectores de inteligência ativos de acordo com os requisitos de conformidade.
+
+
+
+________________________________________________________________________________
+Metodologia
+	As fontes de dados listadas nesta página são ligadas ao motor Naciro Intelligence através do sistema DataSourceConnector. A recolha é feita de forma agendada (Cron) conforme os intervalos indicados na tabela. Após a importação, os dados brutos são filtrados, limpos e agregados e alimentam as visualizações (p. ex. mapas, painéis) e os modelos de estabilidade e previsão. Cada fonte pode ter um peso (score); os valores constam na coluna Conector do registo. A metodologia cumpre os requisitos de transparência deste registo de fontes.
+
+
+
+________________________________________________________________________________
+Fontes de dados ativas
+	Conector: NewsMediaStck · Relatório de inteligência e se
+	Fornecedor: APILayer GmbH (Mediastack)
+	Referência: https://mediastack.com/
+	Licença: Info. licença
+	Ponto final: Mediastack
+	Intervalo: 15 */8 * * *
+	Última atualização: 18.04.2026 16:15
+	Conector: AcledMonthAll · Radar de crise e segurança
+	Fornecedor: Armed Conflict Location & Event Data Project (ACLED)
+	Referência: https://acleddata.com/
+	Licença: Info. licença
+	Intervalo: 43 0 * * *
+	Última atualização: 18.04.2026 01:15
+	Conector: AcledMonthAllOverview · Radar de crise e segurança
+	Fornecedor: Armed Conflict Location & Event Data Project (ACLED)
+	Referência: https://acleddata.com/
+	Licença: Info. licença
+	Ponto final: Acleddata
+	Intervalo: 23 */6 * * *
+	Última atualização: 18.04.2026 18:23
+	Conector: BlindContinentNewsAsean · Notícias continente ASEAN
+	Fornecedor: ASEAN (Association of Southeast Asian Nations)
+	Referência: https://asean.org
+	Licença: Info. licença
+	Ponto final: Asean
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: BlindContinentNewsAS · Notícias continente ASPI Strate
+	Fornecedor: Australian Strategic Policy Institute (ASPI)
+	Referência: https://www.aspistrategist.org.au
+	Licença: Info. licença
+	Ponto final: Org
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: CurrencyDailyFred · USD Fed H.10 (FRED)
+	Fornecedor: Board of Governors of the Federal Reserve System (H.10 via FRED)
+	Referência: https://fred.stlouisfed.org/
+	Licença: Info. licença
+	Ponto final: Stlouisfed
+	Intervalo: 27 * * * *
+	Última atualização: 18.04.2026 21:28
+	Conector: AnaCldfZone · Analytics Zone (device/country/d
+	Fornecedor: Cloudflare, Inc.
+	Referência: https://www.cloudflare.com
+	Licença: Info. licença
+	Ponto final: Cloudflare
+	Intervalo: */5 * * * *
+	Última atualização: 18.04.2026 21:51
+	Conector: CountriesNetGrpTrfcAnom · Anomalias de tráfego por local
+	Fornecedor: Cloudflare, Inc.
+	Referência: https://www.cloudflare.com
+	Licença: Info. licença
+	Ponto final: Cloudflare
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: CountriesNetTrfcAnom · Anomalias de tráfego (Cloudflar
+	Fornecedor: Cloudflare, Inc.
+	Referência: https://www.cloudflare.com
+	Licença: Info. licença
+	Ponto final: Cloudflare
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: NetTrfcRadarDevice · Tráfego por tipo de dispositivo
+	Fornecedor: Cloudflare, Inc.
+	Referência: https://www.cloudflare.com
+	Licença: Info. licença
+	Ponto final: Cloudflare
+	Intervalo: */15 * * * *
+	Última atualização: 18.04.2026 21:45
+	Conector: CountriesRaw · Lista países (bruta)
+	Fornecedor: Countries dataset (Martijn van der Lee / mledoze)
+	Referência: https://github.com/mledoze/countries
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 9 0 1 * *
+	Última atualização: 11.04.2026 00:22
+	Conector: CountryBase · Base países (CCA2)
+	Fornecedor: Countries dataset (Martijn van der Lee / mledoze)
+	Referência: https://github.com/mledoze/countries
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 12 0 * * 0
+	Última atualização: 18.04.2026 00:38
+	Conector: CountryStates · Estados/províncias
+	Fornecedor: Countries, States and Cities Database (Darshan Gajara / dr5hn)
+	Referência: https://github.com/dr5hn/countries-states-cities-database
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 14 0 * * 0
+	Última atualização: 18.04.2026 00:40
+	Conector: CountriesFips · Códigos país (FIPS)
+	Fornecedor: Country Codes and International Organizations (Diego Hernán Mantellini / dieghernan)
+	Referência: https://github.com/dieghernan/Country-Codes-and-International-Organizations
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 3 0 1 * *
+	Última atualização: 11.04.2026 00:15
+	Conector: BlindContinentNewsDN · Notícias continente Defense New
+	Fornecedor: Defense News (Sightline Media Group, LLC)
+	Referência: https://www.defensenews.com
+	Licença: Info. licença
+	Ponto final: Defensenews
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: BlindEsriSatelliteFetcher · Esri Satellite (ArcGIS Export)
+	Fornecedor: Esri (Environmental Systems Research Institute, Inc.)
+	Referência: https://www.arcgis.com
+	Licença: Info. licença
+	Intervalo: 7 */12 * * *
+	Última atualização: 18.04.2026 12:07
+	Conector: CurrencyBulkFa · Câmbios BCE USD (bulk)
+	Fornecedor: European Central Bank (reference rates via Frankfurter)
+	Referência: https://www.frankfurter.app
+	Licença: Info. licença
+	Ponto final: Frankfurter
+	Intervalo: 0 4 1 * *
+	Última atualização: 01.04.2026 04:02
+	Conector: CurrencyDailyFa · Cotações diárias BCE USD
+	Fornecedor: European Central Bank (reference rates via Frankfurter)
+	Referência: https://www.frankfurter.app
+	Licença: Info. licença
+	Ponto final: Frankfurter
+	Intervalo: 18 * * * *
+	Última atualização: 18.04.2026 21:22
+	Conector: BlindContinentNewsEc · Notícias continente EC Press Co
+	Fornecedor: European Commission (European Union)
+	Referência: https://ec.europa.eu/commission/presscorner
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: EurostatStatArblsQ · Taxa de desemprego (mensal)
+	Fornecedor: Eurostat (European Commission)
+	Referência: https://ec.europa.eu/eurostat
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: 55 5 */7 * *
+	Última atualização: 18.04.2026 06:18
+	Conector: EurostatStatTps · População em 1 de janeiro
+	Fornecedor: Eurostat (European Commission)
+	Referência: https://ec.europa.eu/eurostat
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: 35 5 2 * *
+	Última atualização: 11.04.2026 05:50
+	Conector: EurostatTradeWs · Comércio UE (Eurostat)
+	Fornecedor: Eurostat (European Commission)
+	Referência: https://ec.europa.eu/eurostat
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: 18 6 5 * *
+	Última atualização: 22.03.2026 07:34
+	Conector: MigrationEurostat · Eurostat asilo bilateral
+	Fornecedor: Eurostat (European Commission)
+	Referência: https://ec.europa.eu/eurostat
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: 25 3 5 * *
+	Última atualização: 05.04.2026 03:25
+	Conector: MigrationEurostatEmi · Eurostat emigração
+	Fornecedor: Eurostat (European Commission)
+	Referência: https://ec.europa.eu/eurostat
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: 38 3 5 * *
+	Última atualização: 23.03.2026 00:02
+	Conector: MigrationEurostatImm · Eurostat imigração
+	Fornecedor: Eurostat (European Commission)
+	Referência: https://ec.europa.eu/eurostat
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: 36 3 5 * *
+	Última atualização: 22.03.2026 23:45
+	Conector: MigrationEurostatNetm · Eurostat migração líquida
+	Fornecedor: Eurostat (European Commission)
+	Referência: https://ec.europa.eu/eurostat
+	Licença: Info. licença
+	Ponto final: Europa
+	Intervalo: 34 3 5 * *
+	Última atualização: 23.03.2026 00:16
+	Conector: CountriesVatRatesApiVer · IVA por país (APIVerve)
+	Fornecedor: EvlarSoft LLC (APIVerve)
+	Referência: https://www.apiverve.com
+	Licença: Info. licença
+	Ponto final: Apiverve
+	Intervalo: 45 */8 * * *
+	Última atualização: 18.04.2026 16:47
+	Conector: ExchangeRateHstChange · Variação câmbio (diário)
+	Fornecedor: ExchangeRate.host
+	Referência: https://exchangerate.host/
+	Licença: Info. licença
+	Ponto final: Exchangerate
+	Intervalo: 52 */12 * * *
+	Última atualização: 18.04.2026 12:52
+	Conector: GovFbiMw · FBI Most Wanted / procurados
+	Fornecedor: FBI (U.S. Department of Justice)
+	Referência: https://www.fbi.gov
+	Licença: Info. licença
+	Ponto final: Opensanctions
+	Intervalo: 15 23 * * *
+	Última atualização: 17.04.2026 23:18
+	Conector: TrvlWarnDe · Avisos de viagem e segurança (A
+	Fornecedor: Federal Foreign Office of Germany (Auswärtiges Amt)
+	Referência: https://www.auswaertiges-amt.de
+	Licença: Info. licença
+	Ponto final: Auswaertiges-amt
+	Intervalo: 18 */8 * * *
+	Última atualização: 18.04.2026 16:19
+	Conector: TrvlWarnDeWarn · Avisos de viagem (AA) – aviso
+	Fornecedor: Federal Foreign Office of Germany (Auswärtiges Amt)
+	Referência: https://www.auswaertiges-amt.de
+	Licença: Info. licença
+	Intervalo: 18 */8 * * *
+	Última atualização: 18.04.2026 16:19
+	Conector: CurrencyDailyFl · Cotações diárias USD (FloatRa
+	Fornecedor: FloatRates
+	Referência: https://www.floatrates.com
+	Licença: Info. licença
+	Ponto final: Floatrates
+	Intervalo: 0 */1 * * *
+	Última atualização: 18.04.2026 21:00
+	Conector: TrvlWarnUk · Avisos de viagem UK (GOV.UK)
+	Fornecedor: Foreign, Commonwealth & Development Office (United Kingdom)
+	Referência: https://www.gov.uk/foreign-travel-advice
+	Licença: Info. licença
+	Ponto final: Gov
+	Intervalo: 45 23 * * *
+	Última atualização: 17.04.2026 23:45
+	Conector: BlindGeonames · Nomes geográficos, lugares, coo
+	Fornecedor: GeoNames geographical database
+	Referência: https://www.geonames.org
+	Licença: Info. licença
+	Ponto final: Geonames
+	Intervalo: 13 4 2 * *
+	Última atualização: 02.04.2026 04:13
+	Conector: ContinentGeoJson · GeoJSON continentes (AM/NA/SA)
+	Fornecedor: GitHub, Inc. (community geographic datasets)
+	Referência: https://github.com/datasets/geo-countries
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 23 13 5 * *
+	Última atualização: 05.04.2026 13:24
+	Conector: TrvlWarnCaVoy · Avisos de viagem Canadá
+	Fornecedor: Global Affairs Canada (Government of Canada)
+	Referência: https://travel.gc.ca
+	Licença: Info. licença
+	Ponto final: Gc
+	Intervalo: 25 */8 * * *
+	Última atualização: 18.04.2026 16:26
+	Conector: CountriesGdeltGlobRadar · Dados de eventos globais GDELT
+	Fornecedor: Global Database of Events, Language, and Tone (GDELT Project)
+	Referência: https://www.gdeltproject.org/
+	Licença: Info. licença
+	Ponto final: Gdeltproject
+	Intervalo: */15 * * * *
+	Última atualização: 18.04.2026 21:45
+	Conector: GdeltMilAndProtests · Ações militares e protestos GD
+	Fornecedor: Global Database of Events, Language, and Tone (GDELT Project)
+	Referência: https://www.gdeltproject.org/
+	Licença: Info. licença
+	Ponto final: Gdeltproject
+	Intervalo: */15 * * * *
+	Última atualização: 18.04.2026 21:45
+	Conector: DisasterGdacsHumNat · Alertas de desastres GDACS
+	Fornecedor: Global Disaster Alert and Coordination System (GDACS)
+	Referência: https://www.gdacs.org/
+	Licença: Info. licença
+	Ponto final: Gdacs
+	Intervalo: */29 * * * *
+	Última atualização: 18.04.2026 21:31
+	Conector: BlindContinentNewsFB · Notícias continente FeedBurner
+	Fornecedor: Google LLC (FeedBurner)
+	Referência: https://feedburner.google.com
+	Licença: Info. licença
+	Ponto final: Google
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: ContinentCountryGeoJson · GeoJSON continente
+	Fornecedor: Highsoft AS (Highcharts)
+	Referência: https://www.highcharts.com/
+	Licença: Info. licença
+	Ponto final: Highcharts
+	Intervalo: 1 0 1 * *
+	Última atualização: 11.04.2026 00:14
+	Conector: AnaMatomoNf · Matomo Analytics (NF, 7 reports)
+	Fornecedor: InnoCraft Ltd. (Matomo Analytics)
+	Referência: https://matomo.org
+	Licença: Info. licença
+	Ponto final: Nationfiles
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: AnaMatomoNfEntryLocale · Matomo entradas → locale/dia
+	Fornecedor: InnoCraft Ltd. (Matomo Analytics)
+	Referência: https://matomo.org
+	Licença: Info. licença
+	Ponto final: Nationfiles
+	Intervalo: 12 * * * *
+	Última atualização: 18.04.2026 21:12
+	Conector: BlindContinentNewsIC · Notícias continente InSight Cri
+	Fornecedor: InSight Crime Incorporated
+	Referência: https://insightcrime.org
+	Licença: Info. licença
+	Ponto final: Insightcrime
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: GovIntPol · Notices vermelhas INTERPOL
+	Fornecedor: INTERPOL (International Criminal Police Organization)
+	Referência: https://www.interpol.int
+	Licença: Info. licença
+	Ponto final: Interpol
+	Intervalo: 30 23 * * *
+	Última atualização: 17.04.2026 23:32
+	Conector: BlindContinentNewsMP · Notícias continente MercoPress
+	Fornecedor: MercoPress (South Atlantic News Agency)
+	Referência: https://en.mercopress.com
+	Licença: Info. licença
+	Ponto final: Mercopress
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: BlindContinentNewsTDip · Notícias continente The Diploma
+	Fornecedor: MHT Corporation (The Diplomat)
+	Referência: https://thediplomat.com
+	Licença: Info. licença
+	Ponto final: Thediplomat
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: BlindNasaSatelliteFetcher · NASA Satellite (wms.cgi)
+	Fornecedor: National Aeronautics and Space Administration (NASA)
+	Referência: https://nasa.gov
+	Licença: Info. licença
+	Intervalo: 7 */12 * * *
+	Última atualização: 18.04.2026 12:07
+	Conector: NASA · Fogos ativos NASA FIRMS
+	Fornecedor: National Aeronautics and Space Administration (NASA)
+	Referência: https://firms.modaps.eosdis.nasa.gov/
+	Licença: Info. licença
+	Ponto final: Nasa
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:33
+	Conector: CountryNewsRiskLevel · Risco notícias (24h, reporte)
+	Fornecedor: NationFiles
+	Referência: https://nationfiles.com
+	Licença: Info. licença
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: GdeltMilAndProtestsGatekeeper · Filtro GDELT (atual)
+	Fornecedor: NationFiles
+	Referência: https://nationfiles.com/
+	Licença: Info. licença
+	Intervalo: */15 * * * *
+	Última atualização: 18.04.2026 21:50
+	Conector: NfMilitaryMassViolenceNfsi · Stress dia-ator MLMV (NFSI)
+	Fornecedor: NationFiles
+	Referência: https://nationfiles.com/
+	Licença: Info. licença
+	Intervalo: */15 * * * *
+	Última atualização: 18.04.2026 21:45
+	Conector: NfNewsCountry24 · Country24hNews
+	Fornecedor: NationFiles
+	Referência: https://nationfiles.com
+	Licença: Info. licença
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: NfRawNewsSignals · Sinais notícias brutos (índice
+	Fornecedor: NationFiles
+	Referência: https://nationfiles.com
+	Licença: Info. licença
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: NfRawNewsSignalsEventRisk · Risco evento sinais notícias
+	Fornecedor: NationFiles
+	Referência: https://nationfiles.com
+	Licença: Info. licença
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: TravelAdvisoryUnified · Avisos de viagem (multi)
+	Fornecedor: NationFiles
+	Referência: https://www.nationfiles.com/
+	Licença: Info. licença
+	Intervalo: 32 */3 * * *
+	Última atualização: 18.04.2026 21:47
+	Conector: OsFtm · OpenSanctions PEP (FTM JSON)
+	Fornecedor: OpenSanctions
+	Referência: https://www.opensanctions.org/
+	Licença: Info. licença
+	Ponto final: Opensanctions
+	Intervalo: 20 1 * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: MilitaryBase · Bases militares OSM
+	Fornecedor: OpenStreetMap Foundation
+	Referência: https://overpass-api.de/
+	Licença: Info. licença
+	Ponto final: Overpass-api
+	Intervalo: 54 * * * *
+	Última atualização: 18.04.2026 20:54
+	Conector: Powerplant · Usinas WRI + OSM
+	Fornecedor: OpenStreetMap Foundation
+	Referência: https://overpass-api.de/
+	Licença: Info. licença
+	Ponto final: Overpass-api
+	Intervalo: 43 9 * * *
+	Última atualização: 18.04.2026 09:44
+	Conector: MigrationOecdMig · OCDE MIG entradas/saídas (B11/B
+	Fornecedor: Organisation for Economic Co-operation and Development (OECD)
+	Referência: https://www.oecd.org
+	Licença: Info. licença
+	Ponto final: Nomics
+	Intervalo: 34 3 5 * *
+	Última atualização: 21.03.2026 11:44
+	Conector: OecdSdmxGdpvAnnpct · Crescimento PIB volume % (anual)
+	Fornecedor: Organisation for Economic Co-operation and Development (OECD)
+	Referência: https://www.oecd.org
+	Licença: Info. licença
+	Ponto final: Oecd
+	Intervalo: 35 13 */14 * *
+	Última atualização: 18.04.2026 14:52
+	Conector: CountriesPopPrisn100K · Taxa de prisioneiros por 100 mil
+	Fornecedor: Our World in Data (Global Change Data Lab, University of Oxford)
+	Referência: https://ourworldindata.org
+	Licença: Info. licença
+	Ponto final: Ourworldindata
+	Intervalo: 8 12 15 * *
+	Última atualização: 15.04.2026 12:09
+	Conector: OWIDDemocracyIndex · Índice de democracia (EIU)
+	Fornecedor: Our World in Data (Global Change Data Lab, University of Oxford)
+	Referência: https://ourworldindata.org
+	Licença: Info. licença
+	Ponto final: Ourworldindata
+	Intervalo: 23 12 */14 * *
+	Última atualização: 18.04.2026 12:37
+	Conector: Airports · Aeroportos mundial
+	Fornecedor: OurAirports (open airport database)
+	Referência: https://davidmegginson.github.io/ourairports-data/
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 0 0 1 * *
+	Última atualização: 01.04.2026 00:11
+	Conector: CountryGeoJson · GeoJSON país
+	Fornecedor: R2 Datahub (CKAN)
+	Referência: https://datahub.io/
+	Licença: Info. licença
+	Ponto final: Datahub
+	Intervalo: 13 2 1 * *
+	Última atualização: 01.04.2026 02:13
+	Conector: BlindContinentNewsRand · Notícias continente RAND
+	Fornecedor: RAND Corporation
+	Referência: https://www.rand.org
+	Licença: Info. licença
+	Ponto final: Rand
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: CountriesNatBorders · Fronteiras (países vizinhos)
+	Fornecedor: REST Countries API
+	Referência: https://restcountries.com
+	Licença: Info. licença
+	Ponto final: Restcountries
+	Intervalo: 5 0 3 * *
+	Última atualização: 03.04.2026 00:06
+	Conector: CountriesNatLanguages · Nomes de países e idiomas
+	Fornecedor: REST Countries API
+	Referência: https://restcountries.com
+	Licença: Info. licença
+	Ponto final: Restcountries
+	Intervalo: 5 1 3 * *
+	Última atualização: 11.04.2026 01:15
+	Conector: CountriesNatRegSubReg · Região, subregião, capital
+	Fornecedor: REST Countries API
+	Referência: https://restcountries.com
+	Licença: Info. licença
+	Ponto final: Restcountries
+	Intervalo: 6 0 3 * *
+	Última atualização: 03.04.2026 00:06
+	Conector: CountryBaseInfo · Info básica países REST
+	Fornecedor: REST Countries API
+	Referência: https://restcountries.com
+	Licença: Info. licença
+	Ponto final: Restcountries
+	Intervalo: 33 3 * * *
+	Última atualização: 18.04.2026 03:49
+	Conector: WorldUnivDataSetIpsa · Dataset universidades mundo (IPS
+	Fornecedor: scientia-ipsa (University of Lucerne)
+	Referência: https://github.com/scientia-ipsa/World_Universities_Datasets
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 25 2 5 * *
+	Última atualização: 05.04.2026 02:25
+	Conector: BlindContinentNewsTD · Notícias continente The Defense
+	Fornecedor: The Defense Post
+	Referência: https://www.thedefensepost.com
+	Licença: Info. licença
+	Ponto final: Thedefensepost
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: EconFredHerCountScOvSc · Liberdade econômica geral (Heri
+	Fornecedor: The Heritage Foundation
+	Referência: https://www.heritage.org/index
+	Licença: Info. licença
+	Ponto final: Heritage
+	Intervalo: 20 21 */14 * *
+	Última atualização: 17.04.2026 23:26
+	Conector: EconFredHerCountScRanks · Ranking mundial/regional (Herita
+	Fornecedor: The Heritage Foundation
+	Referência: https://www.heritage.org/index
+	Licença: Info. licença
+	Ponto final: Heritage
+	Intervalo: 15 20 */14 * *
+	Última atualização: 18.04.2026 20:28
+	Conector: EconFredHerCountScRights · Direitos de propriedade (Heritag
+	Fornecedor: The Heritage Foundation
+	Referência: https://www.heritage.org/index
+	Licença: Info. licença
+	Ponto final: Heritage
+	Intervalo: 5 17 */14 * *
+	Última atualização: 17.04.2026 22:51
+	Conector: EconFredHerCountScTax · Fiscal e gastos gov. (Heritage)
+	Fornecedor: The Heritage Foundation
+	Referência: https://www.heritage.org/index
+	Licença: Info. licença
+	Ponto final: Heritage
+	Intervalo: 10 19 */14 * *
+	Última atualização: 18.04.2026 19:24
+	Conector: CountriesNetSpmBot · Botnet C&C por país (Spamhaus)
+	Fornecedor: The Spamhaus Project Ltd.
+	Referência: https://www.spamhaus.org
+	Licença: Info. licença
+	Ponto final: Spamhaus
+	Intervalo: 7 */8 * * *
+	Última atualização: 18.04.2026 16:08
+	Conector: TravelStateGov · Avisos de viagem EUA nível 4
+	Fornecedor: U.S. Department of State (Bureau of Consular Affairs)
+	Referência: https://travel.state.gov
+	Licença: Info. licença
+	Ponto final: State
+	Intervalo: 18 */8 * * *
+	Última atualização: 18.04.2026 16:19
+	Conector: SdgGlobalIndexSdsn · Índice ODS global (SDSN ArcGIS)
+	Fornecedor: UN Sustainable Development Solutions Network (SDSN)
+	Referência: https://www.sdgindex.org/
+	Licença: Info. licença
+	Ponto final: Arcgis
+	Intervalo: 45 22 */14 * *
+	Última atualização: 17.04.2026 22:51
+	Conector: SdgIndexCountryPop · População índice ODS (SDSN)
+	Fornecedor: UN Sustainable Development Solutions Network (SDSN)
+	Referência: https://dashboards.sdgindex.org/
+	Licença: Info. licença
+	Ponto final: Sdgindex
+	Intervalo: 30 21 */14 * *
+	Última atualização: 18.04.2026 21:44
+	Conector: BlindContinentNewsUneca · Notícias continente UNECA
+	Fornecedor: United Nations Economic Commission for Africa (UNECA)
+	Referência: https://www.uneca.org
+	Licença: Info. licença
+	Ponto final: Uneca
+	Intervalo: */30 * * * *
+	Última atualização: 18.04.2026 21:30
+	Conector: WorldEarthQuakeUsgs · Terremotos mundial (USGS)
+	Fornecedor: United States Geological Survey (USGS)
+	Referência: https://earthquake.usgs.gov
+	Licença: Info. licença
+	Ponto final: Usgs
+	Intervalo: * * * * *
+	Última atualização: 18.04.2026 21:52
+	Conector: SeaPort · Portos marítimos mundial
+	Fornecedor: Upply SAS
+	Referência: https://www.upply.com/
+	Licença: Info. licença
+	Intervalo: 16 0 1 * *
+	Última atualização: 01.04.2026 00:19
+	Conector: CountriesConflictUcdpGed · Eventos de conflito UCDP GED
+	Fornecedor: Uppsala Conflict Data Program (UCDP)
+	Referência: https://ucdp.uu.se/
+	Licença: Info. licença
+	Ponto final: Uu
+	Intervalo: 45 */8 * * *
+	Última atualização: 18.04.2026 16:46
+	Conector: CountriesVatRatesVatLup · IVA UE (VAT Lookup)
+	Fornecedor: VAT Lookup
+	Referência: https://www.vatlookup.eu
+	Licença: Info. licença
+	Ponto final: Vatlookup
+	Intervalo: 50 2 5 * *
+	Última atualização: 05.04.2026 02:51
+	Conector: CountriesHeadOfStateWD · Chefes de Estado e de governo
+	Fornecedor: Wikidata (Wikimedia Foundation, Inc.)
+	Referência: https://www.wikidata.org
+	Licença: Info. licença
+	Ponto final: Wikidata
+	Intervalo: 17 3 * * *
+	Última atualização: 18.04.2026 06:16
+	Conector: CountryCapitalWD · Capitais (coordenadas e nomes)
+	Fornecedor: Wikidata (Wikimedia Foundation, Inc.)
+	Referência: https://www.wikidata.org
+	Licença: Info. licença
+	Ponto final: Wikidata
+	Intervalo: 6 3 * * *
+	Última atualização: 18.04.2026 03:07
+	Conector: CountriesWb65Up · População 65+ %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 10 0 3 * *
+	Última atualização: 03.04.2026 00:12
+	Conector: CountriesWbAccsZs · Acesso à eletricidade %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 4 8 * *
+	Última atualização: 08.04.2026 04:31
+	Conector: CountriesWbAirPsgr · Passageiros aéreos transportado
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 11 3 4 * *
+	Última atualização: 04.04.2026 03:12
+	Conector: CountriesWbArtcSc · Artigos científicos e técnicos
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 9 * *
+	Última atualização: 09.04.2026 02:31
+	Conector: CountriesWbCcEst · Controle da corrupção (est.)
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 4 5 * *
+	Última atualização: 05.04.2026 04:31
+	Conector: CountriesWbCdrtIn · Taxa mortalidade bruta
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 12 0 3 * *
+	Última atualização: 03.04.2026 00:15
+	Conector: CountriesWbCpiTotlZg · Inflação preços consumo %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 11 * *
+	Última atualização: 11.04.2026 02:34
+	Conector: CountriesWbFpCpiTotl · Inflação preços consumo % (BM
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 50 2 4 * *
+	Última atualização: 04.04.2026 02:51
+	Conector: CountriesWbLe00 · Esperança de vida à nascença
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 13 0 2 * *
+	Última atualização: 02.04.2026 00:16
+	Conector: CountriesWbLndTotl · Área terrestre (km²)
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 14 0 3 * *
+	Última atualização: 11.04.2026 00:24
+	Conector: CountriesWbMilTotl · Pessoal militar total
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 15 0 3 * *
+	Última atualização: 03.04.2026 00:20
+	Conector: CountriesWbNetUser · Utilizadores Internet %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 16 0 3 * *
+	Última atualização: 03.04.2026 00:21
+	Conector: CountriesWbPcapPpCd · PIB per capita, PPC (int. $)
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 11 * *
+	Última atualização: 11.04.2026 02:33
+	Conector: CountriesWbPop · População total
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 18 0 7 * *
+	Última atualização: 07.04.2026 00:19
+	Conector: CountriesWbPopDpnd · Rácio dependência etária %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 10 * *
+	Última atualização: 10.04.2026 02:33
+	Conector: CountriesWbPopGrow · Crescimento população %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 17 0 2 * *
+	Última atualização: 02.04.2026 00:19
+	Conector: CountriesWbPovGini · Índice Gini (desigualdade renda
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 11 * *
+	Última atualização: 11.04.2026 02:34
+	Conector: CountriesWbPsrcP5 · Homicídios intencionais por 100
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 6 * *
+	Última atualização: 06.04.2026 02:32
+	Conector: CountriesWbResTotlCd · Reservas totais (incl. ouro) $
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 11 * *
+	Última atualização: 11.04.2026 02:34
+	Conector: CountriesWbRlEst · Estado de direito (est.)
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 4 5 * *
+	Última atualização: 05.04.2026 04:31
+	Conector: CountriesWbSrfTotl · Superfície (km²)
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 19 0 3 * *
+	Última atualização: 11.04.2026 00:29
+	Conector: CountriesWbTEchMfZs · Export. alta tecnologia %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 2 9 * *
+	Última atualização: 09.04.2026 02:31
+	Conector: CountriesWbUem1524 · Desemprego juvenil (15-24) %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 20 3 4 * *
+	Última atualização: 04.04.2026 03:21
+	Conector: CountriesWbUemTotl · Desemprego %
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 17 3 4 * *
+	Última atualização: 11.04.2026 03:28
+	Conector: CountriesWbVaEst · Voz e prestação de contas
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 30 4 5 * *
+	Última atualização: 05.04.2026 04:31
+	Conector: CountriesWbWgiPvCcRl · WGI: estabilidade, corrupção,
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 35 2 * * *
+	Última atualização: 18.04.2026 02:36
+	Conector: MigrationWbNetm · Migração líquida BM (SM.POP.N
+	Fornecedor: World Bank Group
+	Referência: https://www.worldbank.org/
+	Licença: Info. licença
+	Ponto final: Worldbank
+	Intervalo: 32 3 5 * *
+	Última atualização: 21.03.2026 10:59
+	Conector: CountriesInLang · Metadados país (idioma)
+	Fornecedor: world-countries (stefangabos)
+	Referência: https://github.com/stefangabos/world_countries
+	Licença: Info. licença
+	Ponto final: Github
+	Intervalo: 4 0 7 * *
+	Última atualização: 07.04.2026 00:05
+
+
+
+________________________________________________________________________________
+Fusão de dados e direitos de autor:
+	O NationFiles agrega e funde fluxos de dados automatizados dos repositórios e bases de dados oficiais listados acima. Os direitos de autor dos dados brutos processados permanecem integralmente com os respetivos titulares. As licenças e condições de utilização podem ser consultadas diretamente no fornecedor através dos links de referência.
+
+
+
+________________________________________________________________________________
+Aviso legal:
+	Apesar de uma revisão técnica cuidadosa, o NationFiles não garante a exatidão, integridade ou atualidade dos dados obtidos de terceiros. As informações fornecidas são apenas para fins informativos e não constituem aconselhamento jurídico, financeiro ou de investimento. A utilização dos dados é por sua conta e risco.
+
+
+
+________________________________________________________________________________
+Proteção de dados e tratamento:
+	As fontes listadas incluem tanto dados não pessoais (estatísticas por país, indicadores geográficos ou económicos) como dados oficiais de procurados e avisos (p. ex. notices vermelhas INTERPOL, FBI Most Wanted, OpenSanctions), que podem conter dados pessoais sobre procurados. Nenhum dado é transmitido a estas fontes; o acesso é apenas de leitura. O tratamento baseia-se no interesse público e nas bases legais das respetivas fontes. Todos os dados são obtidos automaticamente e podem ser filtrados, agregados e processados para visualização e análise. Consulte a política de privacidade para mais detalhes.
+
+
+
+________________________________________________________________________________
+Disponibilidade e cache:
+	Sem garantia de disponibilidade constante de fontes externas.
+
+================================================================================
+
+https://nationfiles.com/pt/legal/sources/
+
+________________________________________________________________________________
+Data:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+Apenas a versão alemã é juridicamente vinculativa
+	Apenas a versão alemã é juridicamente vinculativa.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	Esta página não substitui aconselhamento jurídico nem constitui avisos ou recomendações oficiais. Previsões e avaliações são baseadas em modelos.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contacto para pedidos jurídicos: ver impresso.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparência e ética de dados:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Fontes e licenças:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infraestrutura:
+	Processamento exclusivamente na Alemania, TLS 1.3, isolamento VPC.
+
+
+
+________________________________________________________________________________
+Proteção de dados:
+	Processamento de dados pessoais em conformidade com o RGPD; sem partilha ou uso para treino de IA.
+
+
+
+________________________________________________________________________________
+Responsabilidade:
+	Sem responsabilidade por conteúdos externos ou decisões derivadas. Sem aconselhamento de investimento no sentido do WpHG.
+
+
+
+________________________________________________________________________________
+Foro:
+	Aachen, Alemanha. Direito alemão aplicável com exclusão da CVIM (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – Todos os direitos reservados.
+
+nationfiles.com | Fontes de dados | 18.04.2026 21:45

@@ -1,0 +1,538 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+Impressum
+
+
+
+
+________________________________________________________________________________
+Stand vom:
+	11.02.2026
+	PDF vom: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	Rechtsverbindlich ist ausschließlich die deutsche Fassung.
+	Support ausschließlich in DE/EN.
+
+
+
+________________________________________________________________________________
+Legal TL;DR (Kurzfassung)
+	Betreiber: Neawolf Media Group (DE)
+	Inhalt: KI-generierte Echtzeit-Simulationen (Keine Beratung)
+	Lizenz: CC BY-ND 4.0 (Nutzung erlaubt, keine Bearbeitung)
+
+
+
+________________________________________________________________________________
+Rechtliche Basis & Kennzeichnung
+
+
+
+________________________________________________________________________________
+Anbieterkennzeichnung (§ 5 DDG)
+	Neawolf Media Group, Reinhardstr. 1b, 52078 Aachen. Inhaber: Sven Schmidt.
+
+
+
+________________________________________________________________________________
+Verantwortlich (§ 18 MStV)
+	Journalistisch-redaktionelle Verantwortung: Sven Schmidt, Reinhardstr. 1b, 52078 Aachen.
+
+
+
+________________________________________________________________________________
+Markenrechte (DPMA)
+	Neawolf® ist eine eingetragene Marke. NationFiles ist ein geschütztes Projekt der Neawolf Media Group.
+
+
+
+________________________________________________________________________________
+Digital Services Act (DSA)
+	Konformität gemäß EU 2022/2065. Zentrale Meldestelle für rechtswidrige Inhalte eingerichtet.
+
+
+
+________________________________________________________________________________
+KI-Haftung (AI Act)
+	Inhalte werden durch die Naciro Engine generiert. Kennzeichnung gemäß EU AI Act erfolgt.
+
+
+
+________________________________________________________________________________
+Haftungsbeschränkung
+	Simulationen stellen keine Tatsachenbehauptungen dar. Haftung für Real-Daten ausgeschlossen.
+
+
+
+________________________________________________________________________________
+Urheberrechtsschutz
+	Alle Texte und Strukturen sind geistiges Eigentum der Neawolf Media Group.
+
+
+
+________________________________________________________________________________
+Bildrechte (Naciro AI)
+	Visuals stammen von der Naciro Graphic AI. Externe Bilder/Quellen sind gesondert angegeben.
+
+
+
+________________________________________________________________________________
+Infrastruktur, Daten & Datenschutz
+
+
+
+________________________________________________________________________________
+Datenschutz (DSGVO/CCPA/LGPD)
+	Verarbeitung personenbezogener Daten gemäß EU-Richtlinien. Durch das strikte „Non-Sale“ und „Non-Sharing“ Prinzip werden die Anforderungen von CCPA/CPRA (USA) und LGPD (Brasilien) vollumfänglich gewahrt.
+
+
+
+________________________________________________________________________________
+Server-Infrastruktur
+	Verwaltung: Aachen. Nodes: Nürnberg (DE) & Lauterbourg (FR) - Contabo.
+
+
+
+________________________________________________________________________________
+Echtzeit-Datenverarbeitung
+	Verarbeitung von Live-Forex, Krypto- und Sicherheitsdaten via Groq LPU™.
+
+
+
+________________________________________________________________________________
+Scraping-Untersagung
+	Automatisierte Datenauslese für KI-Training (TDM) ist gemäß § 44b UrhG untersagt.
+
+
+
+________________________________________________________________________________
+Cyber-Sicherheit
+	Verschlüsselung nach TLS 1.3 Standard (A+ Rating).
+
+
+
+________________________________________________________________________________
+Globale Re-Evaluation
+	Tägliche Neubewertung aller geopolitischen Datenpunkte durch Naciro.
+
+
+
+________________________________________________________________________________
+Hardware-Stack
+	Nutzung dedizierter KI-Infrastruktur zur Latenzminimierung.
+
+
+
+________________________________________________________________________________
+Steuerstatus
+	Einzelunternehmen, registriert beim Finanzamt Aachen-Stadt.
+
+
+
+________________________________________________________________________________
+Algorithmen (Art. 27 DSA)
+	Parameter der Informationsdarstellung sind im Hilfezentrum einsehbar.
+
+
+
+________________________________________________________________________________
+Barrierefreiheit
+	Bestreben zur Einhaltung der WCAG 2.1 Standards, soweit mit den technischen Schutzmaßnahmen zur Sicherung der Lizenzbedingungen vereinbar.
+
+
+
+________________________________________________________________________________
+Verfügbarkeit
+	Keine Garantie auf 100%ige Systemverfügbarkeit (SLA 99.5%).
+
+
+
+________________________________________________________________________________
+Technischer Betrieb
+	Die Plattform wird durch die Naciro Simulation Engine gesteuert.
+
+
+
+________________________________________________________________________________
+Resource Monitoring
+	Überwachung globaler Rohstoffflüsse und deren Einfluss auf Kosten.
+
+
+
+________________________________________________________________________________
+Live-Audit Log
+	Interne Protokollierung von Systementscheidungen zur Transparenz.
+
+
+
+________________________________________________________________________________
+Nutzung, Inhalte & Nutzerinteraktion
+
+
+
+________________________________________________________________________________
+Transparente Werbung (FTC)
+	Affiliate-Inhalte werden gemäß UWG/FTC als Anzeige markiert. Kein Einfluss auf KI-Neutralität.
+
+
+
+________________________________________________________________________________
+Predictive Layer Forecasts
+	Prognosen basieren auf mathematischen Wahrscheinlichkeitsmodellen ohne Gewähr.
+
+
+
+________________________________________________________________________________
+Externe Verlinkungen
+	Keine Haftung für die Inhalte Dritter trotz regelmäßiger Kontrolle.
+
+
+
+________________________________________________________________________________
+Meldestelle (Abuse/DMCA)
+	Rechtsverstöße oder DMCA Takedowns sind umgehend an abuse@nationfiles.com zu melden.
+
+
+
+________________________________________________________________________________
+Sprachfassungen
+	Angebot in 7 Sprachen. Korrespondenz nur in DE oder EN zulässig.
+
+
+
+________________________________________________________________________________
+API-Nutzungsrechte
+	Inhalte dritter Datenquellen verbleiben im Eigentum der Rechteinhaber.
+
+
+
+________________________________________________________________________________
+Content Moderation
+	Hybride Moderation durch KI und menschliche Reviewer.
+
+
+
+________________________________________________________________________________
+Deep Links
+	Verlinkung auf Unterseiten ist ausdrücklich erwünscht.
+
+
+
+________________________________________________________________________________
+Authentizitäts-Check
+	Validierung von Lagebericht-Sentiment zur Vermeidung von Falschmeldungen.
+
+
+
+________________________________________________________________________________
+Archivierung
+	Historische Datenvergleiche dienen der Trendanalyse.
+
+
+
+________________________________________________________________________________
+Digitale Nomaden Guides
+	Informationen zu Visas/Regeln ohne Rechtsberatungscharakter.
+
+
+
+________________________________________________________________________________
+App-Schnittstellen
+	Nutzung der Plattform-APIs unterliegt separaten Bedingungen.
+
+
+
+________________________________________________________________________________
+AGB Hinweis
+	Es gelten die Allgemeinen Geschäftsbedingungen in der aktuellen Fassung.
+
+
+
+________________________________________________________________________________
+Lagebericht-Sentiment Analyse
+	KI-gestützte Bewertung der globalen Lageberichte zur Stimmungserkennung.
+
+
+
+________________________________________________________________________________
+3D-Weltkarten-Interaktion
+	Visualisierung komplexer Daten durch interaktive 3D-Modelle.
+
+
+
+________________________________________________________________________________
+Push-Alert System
+	Benachrichtigungen bei signifikanten Änderungen der Sicherheitslage.
+
+
+
+________________________________________________________________________________
+Hybride Datenquellen
+	Kombination aus offiziellen Statistiken, Live-Feeds und KI-Synthese.
+
+
+
+________________________________________________________________________________
+Historical Comparison
+	Direkter Vergleich aktueller Daten mit historischen Epochen (Benchmarking).
+
+
+
+________________________________________________________________________________
+Society Vibes Analysis
+	Erfassung kultureller Trends und gesellschaftlicher Strömungen per KI.
+
+
+
+________________________________________________________________________________
+Digital Nomad Compliance
+	Aggregierte Informationen zu steuerlichen und rechtlichen Rahmenbedingungen.
+
+
+
+________________________________________________________________________________
+API-Rate Limiting
+	Schutz der Infrastruktur vor Überlastung durch strikte Abfrage-Kontrolle.
+
+
+
+________________________________________________________________________________
+Zero-Bias Bestreben
+	Algorithmische Filterung zur Minimierung von subjektiven Bias-Faktoren.
+
+
+
+________________________________________________________________________________
+Ethical AI Guidelines
+	Einhaltung ethischer Standards bei der Generierung von Analysen.
+
+
+
+________________________________________________________________________________
+Predictive Layer 7d
+	Wochenprognosen für makroökonomische Trends und geopolitische Entwicklung.
+
+
+
+________________________________________________________________________________
+Haftung, Risiko, Governance & Monitoring
+
+
+
+________________________________________________________________________________
+Gerichtsstand
+	Ausschließlicher Gerichtsstand für alle Streitigkeiten ist Aachen, Deutschland.
+
+
+
+________________________________________________________________________________
+Anwendbares Recht
+	Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts (CISG).
+
+
+
+________________________________________________________________________________
+Berufsgenossenschaft
+	Zugehörigkeit zur BG ETEM (Elektro Textil Energie Medienerzeugnisse), Köln.
+
+
+
+________________________________________________________________________________
+Geopolitische Neutralität
+	Analyse erfolgt datenbasiert ohne politische Einflussnahme.
+
+
+
+________________________________________________________________________________
+Finanzdaten-Disclaimer
+	Keine Anlageberatung im Sinne des WpHG.
+
+
+
+________________________________________________________________________________
+Sicherheits-Radar
+	Warnhinweise basieren auf Aggregation öffentlicher Quellen.
+
+
+
+________________________________________________________________________________
+Flora & Fauna Live
+	Umwelt-Monitoring basierend auf KI-Bildauswertung.
+
+
+
+________________________________________________________________________________
+Kausalitäts-Monitoring
+	Analyse von Ursache-Wirkungs-Zusammenhängen in geopolitischen Events.
+
+
+
+________________________________________________________________________________
+Real-Time Intelligence
+	Datenströme werden ohne signifikante Latenz verarbeitet und evaluiert.
+
+
+
+________________________________________________________________________________
+Predictive Layer 24h
+	Kurzfristprognosen basierend auf historischem Pattern-Matching.
+
+
+
+________________________________________________________________________________
+Global Stability Index
+	Eigener Score zur Bewertung der gesellschaftlichen Stabilität von Nationen.
+
+
+
+________________________________________________________________________________
+User-Voting Validierung
+	Einbezug von Community-Feedback zur Verfeinerung von Daten Clustern.
+
+
+
+________________________________________________________________________________
+Economic Causality
+	Zusammenhangsanalyse zwischen Währungskursen und politischen Dekreten.
+
+
+
+________________________________________________________________________________
+Security Crisis Radar
+	Frühwarnsystem für regionale Instabilitäten und Krisenherde.
+
+
+
+________________________________________________________________________________
+Impressum
+	Unternehmen Neawolf Media Group
+	Gegründet 01.06.2025
+	Verantwortlicher Inhaber Sven Schmidt (Einzelunternehmer)
+	Projekt & Brand NationFiles
+	Gestartet 22.01.2026
+
+
+
+________________________________________________________________________________
+Kontakt
+	Anschrift Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+	Zentraler Kontakt info@nationfiles.com
+	Gerichtsstand Amtsgericht Aachen
+
+
+
+________________________________________________________________________________
+Compliance
+	USt-ID gemäß §27a UStG DE323880906
+	GVL Labelcode LC 101196
+	GS1 GTIN-Unternehmensblock 42700048635
+	Berufsgenossenschaft BG ETEM (ID: 738207165880001)
+	Markenschutz Neawolf® – eingetragene Wort- und Bildmarke (§4 MarkenG, DPMA)
+	Zoll & Handel (EORI) DE12345678901
+
+
+
+________________________________________________________________________________
+Lizenz
+
+
+
+________________________________________________________________________________
+LIZENZIERUNG & NUTZUNG
+	CC BY-ND 4.0
+	Die Nutzung der Daten ist unter Angabe der Quelle (NationFiles.com) gestattet. Dies schließt die kommerzielle Nutzung ein. Jegliche Veränderung oder Weiterverarbeitung der Daten (Derivative Works) ist jedoch untersagt.
+
+================================================================================
+
+https://nationfiles.com/de/legal/legal-notice/
+
+________________________________________________________________________________
+Stand:
+	11.02.2026
+
+
+
+________________________________________________________________________________
+Rechtsverbindlich ist ausschließlich die deutsche Fassung
+	Rechtsverbindlich ist ausschließlich die deutsche Fassung.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	Diese Seite ersetzt keine rechtliche Beratung und stellt keine amtlichen Warnungen oder Handlungsempfehlungen dar. Prognosen und Bewertungen sind modellbasiert.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Kontakt für rechtliche Anfragen: siehe Impressum.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparenz & Datenethik:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Quellen & Lizenzen:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infrastruktur:
+	Verarbeitung ausschließlich in Deutschland, TLS 1.3, VPC‑Isolation.
+
+
+
+________________________________________________________________________________
+Datenschutz:
+	Verarbeitung personenbezogener Daten gemäß DSGVO; keine Weitergabe oder Nutzung für KI‑Training.
+
+
+
+________________________________________________________________________________
+Haftung:
+	Keine Haftung für externe Inhalte oder abgeleitete Entscheidungen. Keine Anlageberatung im Sinne des WpHG.
+
+
+
+________________________________________________________________________________
+Gerichtsstand:
+	Aachen, Deutschland. Es gilt deutsches Recht unter Ausschluss des UN‑Kaufrechts (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – Alle Rechte vorbehalten.
+
+nationfiles.com | Impressum | 18.04.2026 21:45

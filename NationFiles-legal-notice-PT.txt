@@ -1,0 +1,538 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Alemanha
+
+
+
+________________________________________________________________________________
+Aviso Legal
+
+
+
+
+________________________________________________________________________________
+Data de atualização:
+	11.02.2026
+	PDF de: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	Apenas a versão alemã é juridicamente vinculativa.
+	Suporte exclusivo em DE/EN.
+
+
+
+________________________________________________________________________________
+Resumo Legal (TL;DR)
+	Operador: Neawolf Media Group (DE)
+	Conteúdo: Simulações IA em tempo real (Sem consultoria)
+	Licença: CC BY-ND 4.0 (Uso permitido, sem modificações)
+
+
+
+________________________________________________________________________________
+Base Legal e Identificação
+
+
+
+________________________________________________________________________________
+Identificação do provedor (§ 5 DDG)
+	Neawolf Media Group, Reinhardstr. 1b, 52078 Aachen. Titular: Sven Schmidt.
+
+
+
+________________________________________________________________________________
+Responsabilidade editorial (§ 18 MStV)
+	Sven Schmidt, Reinhardstr. 1b, 52078 Aachen, Alemanha.
+
+
+
+________________________________________________________________________________
+Propriedade de marca (DPMA)
+	Neawolf® é marca registada. NationFiles é projeto da Neawolf Media Group.
+
+
+
+________________________________________________________________________________
+Lei de Serviços Digitais (DSA)
+	Conformidade conforme UE 2022/2065. Centro de denúncias estabelecido.
+
+
+
+________________________________________________________________________________
+Responsabilidade IA (AI Act)
+	Conteúdo gerado por Naciro. Rotulagem conforme a Lei de IA da UE.
+
+
+
+________________________________________________________________________________
+Limitação de responsabilidade
+	Simulações não são factos. Exclui-se responsabilidade por dados reais.
+
+
+
+________________________________________________________________________________
+Proteção de autor
+	Textos e estruturas propriedade da Neawolf Media Group.
+
+
+
+________________________________________________________________________________
+Direitos de imagem (IA)
+	Visuais gerados por Naciro Graphic IA. Fontes citadas à parte.
+
+
+
+________________________________________________________________________________
+Infraestrutura e Privacidade
+
+
+
+________________________________________________________________________________
+Privacidade (RGPD/CCPA/LGPD)
+	Tratamento conforme diretivas UE. Cumprimento estrito de 'Não venda' para salvaguardar direitos CCPA e LGPD.
+
+
+
+________________________________________________________________________________
+Infraestrutura
+	Gestão: Aachen. Nodos: Nuremberga (DE) e Lauterbourg (FR).
+
+
+
+________________________________________________________________________________
+Processamento Live
+	Dados Forex, cripto e segurança via Groq LPU™.
+
+
+
+________________________________________________________________________________
+Proibição de Scraping
+	Extração automática para IA (TDM) proibida conforme § 44b UrhG.
+
+
+
+________________________________________________________________________________
+Cibersegurança
+	Criptografia TLS 1.3 (Rating A+).
+
+
+
+________________________________________________________________________________
+Reavaliação Global
+	Atualização diária de todos os dados por Naciro.
+
+
+
+________________________________________________________________________________
+Pilha de hardware
+	Infraestrutura dedicada para latência mínima.
+
+
+
+________________________________________________________________________________
+Estado fiscal
+	Empresa individual registada em Aachen.
+
+
+
+________________________________________________________________________________
+Algoritmos (Art. 27 DSA)
+	Parâmetros visíveis no centro de ajuda.
+
+
+
+________________________________________________________________________________
+Acessibilidade
+	Compromisso com WCAG 2.1, na medida em que compatível com as medidas técnicas de proteção das condições de licença.
+
+
+
+________________________________________________________________________________
+Disponibilidade
+	Sem garantia de 100% (SLA 99.5%).
+
+
+
+________________________________________________________________________________
+Operação Técnica
+	Plataforma controlada por Naciro Simulation Engine.
+
+
+
+________________________________________________________________________________
+Monitor de Recursos
+	Vigilância de matérias-primas e custos.
+
+
+
+________________________________________________________________________________
+Audit Log
+	Registo interno para transparência.
+
+
+
+________________________________________________________________________________
+Uso e Interação
+
+
+
+________________________________________________________________________________
+Publicidade Transparente (FTC)
+	Links afiliados marcados como anúncio. Sem impacto na neutralidade.
+
+
+
+________________________________________________________________________________
+Predictive Layer
+	Previsões baseadas em probabilidade sem garantia.
+
+
+
+________________________________________________________________________________
+Links externos
+	Sem responsabilidade por terceiros.
+
+
+
+________________________________________________________________________________
+Abuse/DMCA
+	Reportar a abuse@nationfiles.com.
+
+
+
+________________________________________________________________________________
+Idiomas
+	7 idiomas. Correspondência em DE ou EN.
+
+
+
+________________________________________________________________________________
+Direitos API
+	Dados de terceiros propriedade dos donos.
+
+
+
+________________________________________________________________________________
+Moderação
+	Híbrida por IA e humanos.
+
+
+
+________________________________________________________________________________
+Deep Links
+	Links diretos incentivados.
+
+
+
+________________________________________________________________________________
+Intelligence Briefing Sentiment
+	Validação do sentimento do relatório de inteligência contra desinformação.
+
+
+
+________________________________________________________________________________
+Arquivo
+	Comparativas históricas.
+
+
+
+________________________________________________________________________________
+Guia Nómada
+	Info sem consultoria jurídica.
+
+
+
+________________________________________________________________________________
+App API
+	Condições separadas.
+
+
+
+________________________________________________________________________________
+Aviso Termos
+	Aplicam-se Termos e Condições atuais.
+
+
+
+________________________________________________________________________________
+Sentiment Analysis
+	Avaliação IA global.
+
+
+
+________________________________________________________________________________
+3D World Map
+	Visualização interativa.
+
+
+
+________________________________________________________________________________
+Alertas Push
+	Avisos de segurança.
+
+
+
+________________________________________________________________________________
+Fontes Híbridas
+	Estatística e IA.
+
+
+
+________________________________________________________________________________
+Benchmark
+	Comparação histórica.
+
+
+
+________________________________________________________________________________
+Society Vibes
+	Tendências culturais por IA.
+
+
+
+________________________________________________________________________________
+Digital Nomad Compliance
+	Marco legal agregado.
+
+
+
+________________________________________________________________________________
+Rate Limiting
+	Proteção de infraestrutura.
+
+
+
+________________________________________________________________________________
+Zero-Bias
+	Minimização de sesgos.
+
+
+
+________________________________________________________________________________
+Ethical AI
+	Padrões éticos na IA.
+
+
+
+________________________________________________________________________________
+Layer 7d
+	Previsões geopolíticas semanais.
+
+
+
+________________________________________________________________________________
+Risco e Governação
+
+
+
+________________________________________________________________________________
+Jurisdição
+	Tribunal em Aachen, Alemanha.
+
+
+
+________________________________________________________________________________
+Direito Aplicável
+	Direito alemão, excluindo CISG.
+
+
+
+________________________________________________________________________________
+Associação pro
+	Membro da BG ETEM (Colónia).
+
+
+
+________________________________________________________________________________
+Neutralidade
+	Análise sem política.
+
+
+
+________________________________________________________________________________
+Finanças
+	Sem consultoria de investimento.
+
+
+
+________________________________________________________________________________
+Radar Segurança
+	Fontes públicas agregadas.
+
+
+
+________________________________________________________________________________
+Flora & Fauna
+	Monitorização por imagem IA.
+
+
+
+________________________________________________________________________________
+Causalidade
+	Análise causa-efeito.
+
+
+
+________________________________________________________________________________
+Intelligence
+	Real-time sem latência.
+
+
+
+________________________________________________________________________________
+Layer 24h
+	Previsões de curto prazo.
+
+
+
+________________________________________________________________________________
+Stability Index
+	Score de estabilidade por nação.
+
+
+
+________________________________________________________________________________
+Votação Utilizador
+	Feedback de clusters.
+
+
+
+________________________________________________________________________________
+Causalidade Económica
+	Análise cambial.
+
+
+
+________________________________________________________________________________
+Crisis Radar
+	Alerta regional.
+
+
+
+________________________________________________________________________________
+Impressum
+	Empresa Neawolf Media Group
+	Fundada 01.06.2025
+	Titular responsável Sven Schmidt (Empresário em nome individual)
+	Projeto e Marca NationFiles
+	Iniciado 22.01.2026
+
+
+
+________________________________________________________________________________
+Kontakt
+	Endereço Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Alemanha
+	Contacto central info@nationfiles.com
+	Jurisdição Tribunal de Aachen (Amtsgericht)
+
+
+
+________________________________________________________________________________
+Compliance
+	NIF-IVA conforme §27a UStG DE323880906
+	Código Label GVL LC 101196
+	Prefixo GS1 GTIN 42700048635
+	Associação profissional BG ETEM (ID: 738207165880001)
+	Proteção de marca Neawolf® – Marca registada (§4 MarkenG, DPMA)
+	Alfândega e Comércio (EORI) DE12345678901
+
+
+
+________________________________________________________________________________
+Lizenz
+
+
+
+________________________________________________________________________________
+LICENCIAMENTO E USO
+	CC BY-ND 4.0
+	O uso dos dados é permitido citando a fonte (NationFiles.com). Inclui uso comercial. É proibida qualquer modificação ou obra derivada.
+
+================================================================================
+
+https://nationfiles.com/pt/legal/legal-notice/
+
+________________________________________________________________________________
+Data:
+	11.02.2026
+
+
+
+________________________________________________________________________________
+Apenas a versão alemã é juridicamente vinculativa
+	Apenas a versão alemã é juridicamente vinculativa.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	Esta página não substitui aconselhamento jurídico nem constitui avisos ou recomendações oficiais. Previsões e avaliações são baseadas em modelos.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contacto para pedidos jurídicos: ver impresso.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparência e ética de dados:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Fontes e licenças:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infraestrutura:
+	Processamento exclusivamente na Alemania, TLS 1.3, isolamento VPC.
+
+
+
+________________________________________________________________________________
+Proteção de dados:
+	Processamento de dados pessoais em conformidade com o RGPD; sem partilha ou uso para treino de IA.
+
+
+
+________________________________________________________________________________
+Responsabilidade:
+	Sem responsabilidade por conteúdos externos ou decisões derivadas. Sem aconselhamento de investimento no sentido do WpHG.
+
+
+
+________________________________________________________________________________
+Foro:
+	Aachen, Alemanha. Direito alemão aplicável com exclusão da CVIM (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – Todos os direitos reservados.
+
+nationfiles.com | Aviso Legal | 18.04.2026 21:45

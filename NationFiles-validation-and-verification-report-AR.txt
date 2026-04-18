@@ -1,0 +1,561 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+تقرير التحقق والتحقق من الصحة
+
+
+
+
+________________________________________________________________________________
+تاريخ التحديث:
+	18.04.2026
+	PDF من: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	يصف هذا التقرير المنهجية ومصدر البيانات وإمكانية التتبع التقنية لمؤشر NationFiles للاستقرار (NFSI) والتنبؤ لمدة 7 أيام. وهو موجّه للجامعات والسلطات العامة والمدققين المعتمدين للتحقق من مصداقية النظام وقابليته لإعادة الإنتاج. تلتزم NationFiles بالشفافية المطلقة: جميع الصيغ والمعاملات المذكورة تطابق التنفيذ الفعلي؛ لا تُختلق قيم ولا تُعدّل لاحقاً. NFSI مناسب كمرجع موثوق للدراسات العلمية والتدقيقات.
+
+
+
+________________________________________________________________________________
+الملخص
+	يعتمد NFSI على تجميع من ثلاث طبقات (الطبقة 1: المؤشرات، الطبقة 2: التنعيم الموضوعي مع قصور ذاتي 7 أيام، الطبقة 3: الدرجة النهائية المرجحة بما فيها وضع الأزمة). جميع الأوزان والصيغ ثابتة ومُنفَّذة وفقاً لذلك.
+	البيانات مأخوذة من مصادر عامة ومرخّصة (مثلاً البنك الدولي، ACLED، الإنتربول، GDELT)؛ المصدر الكامل والتراخيص متاحة في جرد البيانات وعبر /legal/sources/.
+	التنبؤ لـ 7 أيام يستخدم طريقة VAR مع تاريخ 90 يوماً وعدة سلاسل زمنية (مثلاً المؤشر العالمي، مخاطر الأخبار حسب البلد). المنهجية موثقة بشكل متسق هنا وفي التنفيذ.
+	الحوكمة تشمل التحكم بالإصدارات ومسار التدقيق والعمليات المحددة للمدققين الخارجيين.
+
+
+
+________________________________________________________________________________
+النطاق والجمهور المستهدف
+	الجمهور المستهدف: الجامعات ومؤسسات البحث والسلطات الوطنية والدولية والمدققون المعتمدون الذين يتحققون أو يؤكدون التحقق والاعتراف بـ NFSI والتنبؤ. التغطية الجغرافية: عالمية. التغطية الزمنية لقاعدة بيانات NFSI: من فبراير 2026 فصاعداً، مستمرة. خارج النطاق: الاستشارة الاستثمارية أو المالية الفردية؛ NFSI يقيّم الاستقرار والمخاطر ولا يوصي بمنتجات مالية.
+
+
+
+________________________________________________________________________________
+نزاهة NFSI ومصداقيته
+	NationFiles وNFSI مصمّمان ليكونا مرجعاً موثوقاً في الدراسات العلمية والتدقيقات والتقييمات التنظيمية. المواضيع التالية تؤكد إمكانية التتبع والدفاعية.
+	لا قيم مختلقة: جميع قيم NFSI والتنبؤات تُنتج فقط من صيغ موثقة والمصادر المدرجة في هذا التقرير وجرد البيانات. لا توجد تعديلات يدوية ولا تصحيحات صندوق أسود.
+	مبني بالكامل على الكود وموثق: كل خطوة حساب (الطبقات 1–4) منفّذة في الكود وموصوفة في هذا التقرير مع الثوابت والصيغ والشفرة الزائفة.
+	المصدر ومسار التدقيق: أصل البيانات والتراخيص وترددات التحديث موثقة في جرد البيانات والمصادر القانونية. التغييرات على النموذج والبيانات مُنسّقة وقابلة للتتبع عبر مسار تدقيق.
+	الحوكمة تشمل التحكم بالإصدارات ومسار التدقيق والعمليات المحددة للمدققين الخارجيين.
+	التفسيرات الخوارزمية لا تمثل تقييمات رسمية. الأمن التقني ودورات التدقيق (مثلاً SCA/SAST) والبنية التحتية موصوفة في بيان الأمن العالمي والمرونة (/legal/security/). تصحيح أخطاء البيانات الخام: الإبلاغ إلى data@nationfiles.com.
+
+
+
+________________________________________________________________________________
+شفافية مطلقة
+	تلتزم NationFiles بالشفافية الكاملة في منهجية NFSI وبياناته وحسابه. لا توجد معاملات مخفية ولا تصحيحات غير شفافة.
+	ما يُكشف:
+	جميع الصيغ وخطوات الحساب (الطبقات 1–4) بما فيها الشفرة الزائفة وجدول الثوابت الكامل في هذا التقرير.
+	جرد بيانات كامل لجميع المصادر ذات التأثير على NFSI: المنشأ والترخيص وتردد التحديث والوزن الموضوعي. الوصول إلى المصادر القانونية (/legal/sources/).
+	لا أوزان سرية: مصفوفة الأوزان موثقة؛ عند الطلب يمكن للمدققين المخوّلين الوصول إلى القطع التقنية في إطار اتفاقيات التدقيق.
+	التغييرات على النموذج والبيانات مُنسّقة؛ مسار تدقيق يضمن إمكانية التتبع. سجلات الحساب لكل بلد/تاريخ يمكن توفيرها أثناء التدقيقات.
+	لا صندوق أسود: كل قيمة NFSI منشورة يمكن إعادة بنائها من الصيغ والثوابت وبيانات الإدخال الموثقة.
+	الشفافية ليست ادعاءً تسويقياً بل ممارسة موثقة: هذا التقرير والمراجع المرتبطة به هي الأساس.
+
+
+
+________________________________________________________________________________
+كيفية اقتباس هذا التقرير
+	هذا التقرير قابل للاقتباس للإعلام والأوساط الأكاديمية والسلطات العامة. استخدم التالي:
+	Neawolf Media Group / NationFiles (2026). تقرير التحقق والتحقق من الصحة — NationFiles Stability Index (NFSI). الإصدار 1.0. آخن. معرف المستند: VVR-2026-03-07.
+	قصير:
+	NationFiles (2026). تقرير التحقق NFSI. VVR-2026-03-07.
+
+
+
+________________________________________________________________________________
+بنية النظام وخط البيانات
+	التقاط البيانات → المعالجة المسبقة → الطبقة 1 (المؤشرات، التطبيع) → الطبقة 2 (التجميع الموضوعي، تنعيم 7 أيام) → الطبقة 3 (الدرجة النهائية، وضع الأزمة) → التسليم عبر API والتغذيات.
+	شكل: تدفق البيانات من الالتقاط عبر الطبقات 1–3 حتى التسليم.
+	الالتقاط
+	المعالجة المسبقة
+	الطبقة 1 — المؤشرات
+	الطبقة 2 — التجميع الموضوعي
+	الطبقة 3 — الدرجة النهائية ووضع الأزمة
+	تنبؤ 7 أيام / API
+
+
+
+________________________________________________________________________________
+الوزن والمقاييس والتطبيع — كيف يُوزّن كل شيء
+	لكي يرى القارئ بشكل لا لبس فيه كيف يعمل النظام: كل نطاقات القيمة والمقاييس وقواعد التطبيع موصوفة أدناه.
+
+
+
+________________________________________________________________________________
+نطاقات القيمة (مقاييس) في لمحة
+	كل درجات الاستقرار في نظام NFSI تقع في النطاق [0، 100] بعد المعالجة.
+	QuantityRangeMeaningRaw value (raw)source-specificOriginal value from the data source (e.g. count, percentage, Goldstein −10 to +10). Normalized in Layer 1.score_row (row score)[0, 100]After Layer 1: one score per row (e.g. per country/date/event). Default 50 when spread is zero or min/max missing.dayScore (daily score per connector/country)[0, 100]After Layer 2 aggregation: one value per connector, country, and date. Security group: MIN of row scores; others: average (with dummies 0, 100 and pad 50).score_final (Layer 2 output)[0, 100]0.6×dayScore + 0.4×previous day; after recovery max 95. Stored in nfsi_connector.baseScore (Layer 3)[0, 100]Weighted average of all connector scores (effW = group × scoreValue/100 × updateMult). Dummies 0 and 100 with weight 1.rawScore / nfsi_raw[1, 100]After conflict malus, fragility malus, small-country malus, population bonus, WGI pull. Floor 1, cap 100.NFSI_Today (final index)[1, 100]After Layer 4 (inertia): daily change capped at ±3; in security crisis (min security < 25) immediate pass-through without smoothing.
+
+
+
+________________________________________________________________________________
+Layer 1 — Normalization and direction
+	لكل مصدر بيانات يُستخدم عمود قيمة خام (أو خطورة محسوبة). على كل صفوف المصدر يؤخذ الأدنى والأقصى؛ لكل صف يُطبّع إلى [0، 100] حسب اتجاه المؤشر.
+
+
+
+________________________________________________________________________________
+Layer 2 — Today vs. previous day weight and aggregation rules
+	لكل موصل وبلد وتاريخ تُجمع كل درجات الصف (score_row) المرتبطة؛ تُجمّع وتُنعّم مع اليوم السابق (أوزان 0,6 / 0,4).
+
+
+
+________________________________________________________________________________
+Layer 3 — Connector weights, groups, and effective weight
+	كل موصل له وزن مضبوط (مثلاً 40–100، انظر جرد البيانات) ومجموعة موضوعية؛ الوزن الفعال يعتمد على الدرجة الحالية.
+
+
+
+________________________________________________________________________________
+Layer 4 — Inertia weights and daily change cap
+	الدرجة الخام للطبقة 3 (nfsi_raw) تُنعّم مع NFSI اليوم السابق؛ في أزمة أمن يُحذف التنعيم.
+
+
+
+________________________________________________________________________________
+سير النظام — NFSI كوصف قابل للقراءة
+	ما يلي يصف التدفق الكامل من البيانات الخام إلى قيمة NFSI المنشورة.
+	يتم استيعاب البيانات الخام لكل مصدر بيانات (موصل) ومعالجتها مسبقاً (الإسناد، المناطق الزمنية، إزالة التكرار). يوفر كل مصدر صفوفاً بعمود قيمة خام واحد على الأقل أو خطورة محسوبة.
+	الطبقة 1 (المؤشرات): لكل مصدر بيانات يُحسب الحدّان الأدنى والأعلى للقيم الخام على كل الصفوف. إذا كان المدى صفراً أو غير معرّف، تُمنح كل الصفوف درجة الصف المحايدة 50. وإلاّ تُطبّع القيمة الخام لكل صف على [0، 100]: معادلة = (خام − أدنى) / مدى × 100. حسب المؤشر «أعلى خام = أسوأ استقرار» → درجة صف = 100 − معادلة، وإلا درجة صف = معادلة. النتيجة محدودة بـ [0، 100] ومقربة إلى منزلتين عشريتين.
+	الطبقة 2 (الدرجة اليومية لكل موصل وبلد): لكل موصل وبلد وتاريخ تُجمع كل درجات الصفوف المرتبطة. مجموعة الأمن (المجموعة 100): الدرجة اليومية = الحد الأدنى لهذه القيم (المفقودة تُملأ بـ 100). المجموعات الأخرى: الوسط الحسابي للقيم المجمعة زائد قيم وهمية 0 و100 وحشوة 50. الدرجة النهائية للطبقة 2 = 0.6×الدرجة اليومية + 0.4×اليوم السابق. النتيجة في [0، 100]. الأيام المفقودة: استرداد (0.2 أو 1.0 نقطة/يوم، سقف 95، 90 يوماً كحد أقصى).
+	الطبقة 3 (NFSI البلد): لكل بلد وتاريخ تتوفر درجات الطبقة 2 لجميع الموصلات. الموصلات المفقودة: الدرجة المحايدة 50 (لا_بيانات). الوزن الفعّال = مجموعة × (وزن الموصل/100) × مضاعف التحديث. الدرجة الأساسية = المتوسط المرجح مع القيم الوهمية 0 و100. إذا كان الحد الأدنى للأمن < 70: خصم نزاع (35 كحد أقصى). ثم خصم الهشاشة، خصم البلد الصغير، مكافأة السكان، سحب WGI. الدرجة الخام محدودة بـ [1، 100].
+	الطبقة 4 (التنعيم اليومي): تُنعّم الدرجة الخام مع NFSI اليوم السابق: افتراضياً 80% سابق، 20% اليوم؛ مع الكثير من لا_بيانات 45% أو 50% اليوم. التغير الأقصى ±3 نقاط. في أزمة أمنية (الحد الأدنى للأمن < 25) لا تنعيم: NFSI_اليوم = الدرجة الخام. النتيجة = قيمة NFSI المنشورة لذلك البلد وتاريخ.
+
+
+
+________________________________________________________________________________
+المؤشرات اليومية وتأثيرها على NFSI
+	يدمج NFSI مصادر محدثة يومياً تعكس الاستقرار في شبه الوقت الفعلي. وتشمل أحداث الأخبار (GDELT) ونبرة الوسائط وإشارات المخاطر الخاصة بكل بلد. تدخل عبر مؤشرات محددة في الطبقة 1 وتؤثر على القيمة اليومية عبر الطبقتين 2 و3.
+	مصادر يومية ذات صلة: (1) GDELT — مقياس غولدشتاين، النبرة المتوسطة، مستوى مخاطر الأحداث لكل بلد؛ (2) معنويات الوسائط؛ (3) إشارات مخاطر أخبار ملكية بنوافذ 24س/48س.
+	تُشكّل إشارة حية من متوسطات غولدشتاين والنبرة ومستوى المخاطر. إن تجاوز متوسط المخاطر عتبةً يُطبّق خصم. النتيجة قد تُنعّم بمؤشر NFSI القائم (مثلاً 40% حي، 60% مؤشر) للحد من التشويش.
+	منطق مبسط (شفرة زائفة، غير مطابق للتنفيذ):
+	LIVE_BASE = 50
+	لكل مصدر: LIVE_BASE += (Goldstein_avg × k1) + (Tone_avg × k2) + (Sentiment_avg × k2)
+	إذا risk_avg > threshold إذن LIVE_BASE −= (risk_avg − threshold) × k3
+	LIVE_BASE = حد(LIVE_BASE, 0, 100)
+	إذا مؤشر قائم موجود إذن SMOOTHED = 0.4 × LIVE_BASE + 0.6 × index
+
+
+
+________________________________________________________________________________
+جرد البيانات (المصدر المحدد)
+	المصدرالحقلالترخيصالتحديثالتغطيةالوزنAcledMonthAllCrisis & Safety Radar (Level 1)ACLED / filtered, aggregated for Naciro IntelligencewöchentlichGlobal90AcledMonthAllOverviewCrisis & Safety Radar (Level 1)ACLED / filtered, aggregated for Naciro IntelligencewöchentlichGlobal95CountriesConflictUcdpGedUCDP GED conflict eventsFree for academic, commercial, governmental use (see UCDP)täglichGlobal85CountriesCurrencyFromFa7-Tage-Trend WährunginterntäglichGlobal65CountriesGdeltGlobRadarGDELT global event dataUnlimited use for academic, commercial, governmental (see Terms of Use)mehrmals täglichGlobal85CountriesNetAbuseIpDbAbuse IPs by country (AbuseIPDB)AbuseIPDB Terms of UsetäglichGlobal70CountriesNetGrpTrfcAnomTraffic anomalies by locationCloudflare Terms of Usemehrmals täglichGlobal55CountriesNetSpmBotBotnet C&C by country (Spamhaus)Spamhaus Terms & ConditionstäglichGlobal70CountriesNetTrfcAnomTraffic anomalies (Cloudflare Radar)Cloudflare Terms of Usemehrmals täglichGlobal70CountriesPopPrisn100KPrison population rate per 100kCC BY / Our World in DatawöchentlichGlobal50CountriesVatRatesApiVerVAT rates by country (APIVerve)APIVerve Terms of ServicewöchentlichGlobal60CountriesVatRatesVatLupVAT rates EU (VAT Lookup)Refer to source (EC data)wöchentlichGlobal60CountriesWb65UpPopulation 65+ %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal10CountriesWbAccsZsAccess to electricity %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal60CountriesWbCcEstControl of corruption (estimate)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal85CountriesWbCdrtInCrude death rateCC BY 4.0 / filtered, aggregatedwöchentlichGlobal30CountriesWbCpiTotlZgInflation, consumer prices %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal75CountriesWbFpCpiTotlInflation consumer prices % (WB)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal20CountriesWbLe00Life expectancy at birthCC BY 4.0 / filtered, aggregatedwöchentlichGlobal45CountriesWbMilTotlMilitary personnel totalCC BY 4.0 / filtered, aggregatedwöchentlichGlobal40CountriesWbNetUserInternet users %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal40CountriesWbPopDpndAge dependency ratio %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal20CountriesWbPopGrowPopulation growth %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal25CountriesWbPovGiniGini index (income inequality)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal60CountriesWbPsrcP5Intentional homicides per 100kCC BY 4.0 / filtered, aggregatedwöchentlichGlobal100CountriesWbResTotlCdTotal reserves (incl. gold) US$CC BY 4.0 / filtered, aggregatedwöchentlichGlobal25CountriesWbRlEstRule of law (estimate)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal80CountriesWbUem1524Youth unemployment (15-24) %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal70CountriesWbUemTotlUnemployment %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal55CountriesWbVaEstVoice and accountability (est.)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal50CountriesWbWgiPvCcRlWGI: stability, corruption, lawCC BY 4.0 / filtered, aggregatedwöchentlichGlobal85CountryNewsRiskLevelNews Risk (24h, Carry-Forward)CC BY-ND 4.0täglichGlobal100DisasterGdacsHumNatGDACS disaster alertsGDACS Terms of Usemehrmals täglichGlobal100EconFredHerCountScOvScOverall Economic Freedom (Heritage)Refer to Source LinkwöchentlichGlobal60EconFredHerCountScRanksWorld/region rank (Heritage)Refer to Source LinkwöchentlichGlobal60EconFredHerCountScRightsProperty Rights (Heritage)Refer to Source LinkwöchentlichGlobal100EconFredHerCountScTaxTax & gov. spending (Heritage)Refer to Source LinkwöchentlichGlobal60EurostatStatArblsQUnemployment rate (monthly)Refer to Source LinkwöchentlichGlobal60EurostatStatTpsPopulation on 1 JanuaryRefer to Source LinkwöchentlichGlobal40GovFbiMwFBI Most Wanted / fugitivesOpenSanctions / FBI data – Public Domain (DOJ)wöchentlichGlobal80GovIntPolINTERPOL Red Notices / wantedINTERPOL Terms of UsewöchentlichGlobal85NewsMediaStckIntelligence Briefing & sentiment (MediaStack)Refer to Service AgreementtäglichGlobal50NfMilitaryMassViolenceNfsiMLMV actor-day stress (NFSI)Internal processing for NationFiles Intelligencemehrmals täglichGlobal100NfNewsCountry24Country24hNewsCC BY-ND 4.0täglichGlobal70NfRawNewsSignalsEventRiskRaw News Signals Event RiskCC BY-ND 4.0täglichGlobal100OecdSdmxGdpvAnnpctGDP volume growth % (annual)OECD Terms & ConditionswöchentlichGlobal60OWIDDemocracyIndexDemocracy Index (EIU)CC BY / Our World in DatawöchentlichGlobal70SdgGlobalIndexSdsnSDG overall index (SDSN ArcGIS)Refer to Source LinkwöchentlichGlobal60TravelAdvisoryUnifiedTravel warnings (multi-authority)Refer to Source LinktäglichGlobal75TravelStateGovU.S. travel advisories Level 4 (Do Not Travel)U.S. Government WorktäglichGlobal80TrvlWarnCaVoyTravel advice Canada (Voyage)Open Government Licence – CanadawöchentlichGlobal75TrvlWarnDeTravel & security advice (AA)Refer to Source LinkwöchentlichGlobal75TrvlWarnDeWarnTravel & security advice (AA) – warning onlyRefer to Source LinkwöchentlichGlobal75TrvlWarnUkUK travel advice (GOV.UK)Open Government Licence v2.0täglichGlobal75WorldEarthQuakeUsgsEarthquakes worldwide (USGS)USGS Public Domainmehrmals täglichGlobal100WorldUnivDataSetIpsaWorld Universities Dataset (IPSA)Refer to repositorywöchentlichGlobal25
+
+
+
+________________________________________________________________________________
+كتالوج المؤشرات (الطبقة 1) — مثال
+	أمثلة مختارة تشمل أهم المؤشرات اليومية (GDELT، Media Stack، Naciro News):
+	UCDP GED
+	صراعات مسلحة (UCDP GED)
+	عدد حوادث الصراع المسلح (UCDP GED) شهرياً؛ العمود: high.
+	أحداث/شهر · المزيد من الأحداث → استقرار أقل.
+	Min-Max لكل مصدر.
+	https://ucdp.uu.se/
+	GDELT Global Radar
+	نبرة الأخبار ومقياس غولدشتاين
+	GDELT يقدم لكل بلد ونافذة زمنية مقياس غولدشتاين (−10 إلى +10) والنبرة المتوسطة. قيمة أعلى = أقل نزاعاً.
+	مقياس / تجميع · قيمة أعلى (موجبة) → استقرار أفضل.
+	مجمّع لكل بلد/يوم؛ اتجاه موجب.
+	https://www.gdeltproject.org/
+	News Media Stack
+	المشاعر الإعلامية
+	مشاعر مجمعة من مصادر الأخبار (واجهة Media Stack) لكل بلد/منطقة. مشاعر نموذجية −1 إلى +1؛ تُحوّل إلى 0–100 في الطبقة 1.
+	مشاعر (مجمّعة) · مشاعر سلبية → استقرار أقل.
+	خاص بالمصدر؛ قيمة خام أعلى = أسوأ.
+	https://mediastack.com/
+	Naciro News (24h / Event Risk)
+	خطر البلد 24 ساعة وخطر الأحداث
+	مؤشرات خاصة: مستوى خطر 24 ساعة لكل بلد (Naciro News) ومستوى خطر الأحداث (إشارات خام). تقييم شبه فوري.
+	مستوى خطر 0–100 · خطر أعلى → استقرار أقل.
+	داخلي؛ اتجاه سلبي.
+	/legal/sources/
+	قائمة كاملة: 80+ مصدر؛ التفاصيل تحت /legal/sources/.
+
+
+
+________________________________________________________________________________
+الطبقة 1 — المؤشرات بالتفصيل
+	في الطبقة 1 يُحسب درجة استقرار بين 0 و100 لكل مصدر بيانات وصف. الطريقة تعتمد على نوع المؤشر (قائم على القيمة أو على العدد).
+	مؤشرات قائمة على القيمة: تُستخدم عمود قيمة خام لكل مصدر. يؤخذ الحد الأدنى والأقصى على جميع صفوف ذلك المصدر. لكل صف: طبيعي = (خام − أدنى) / (أقصى − أدنى) × 100. إذا «أعلى خام = استقرار أسوأ» فإن score_row = 100 − طبيعي، وإلا score_row = طبيعي. النتيجة محدودة إلى [0، 100].
+	مؤشرات قائمة على العدد: يُحسب خطورة (مثلاً للفرد) لكل صف. تُستخدم جماعة مرجعية (مثلاً مليون) عند الحاجة. يُرسم الدرجة إلى 0–100 بشكل متسق.
+	مثال عددي الطبقة 1 (قائم على القيمة، مبسط):
+	مصدر «أحداث النزاع»، بلد X: قيم خام 5، 10، 20 لثلاث نقاط زمنية. أدنى = 5، أقصى = 20، المدى = 15. صف 1: (10−5)/15×100 = 33,3 → مع «أعلى = أسوأ»: score_row = 100 − 33,3 = 66,7. صف 2 (قيمة 5): score_row = 100؛ صف 3 (قيمة 20): score_row = 0.
+	شفرة زائفة (قائمة على القيمة، أعلى = أسوأ):
+	MIN_RAW = أدنى(خام) على كل صفوف المصدر
+	MAX_RAW = أقصى(خام) على كل صفوف المصدر
+	SPAN = MAX_RAW − MIN_RAW
+	لكل صف:
+	إذا SPAN = 0 إذن score_row = 50
+	وإلا طبيعي = (خام − MIN_RAW) / SPAN × 100
+	score_row = 100 − طبيعي
+	score_row = حد(score_row, 0, 100)
+
+
+
+________________________________________________________________________________
+الطبقة 2 — التجميع الموضوعي والقصور الذاتي
+	الطبقة 2 تجمع درجات الطبقة 1 لكل مصدر وبلد وتاريخ في درجة يومية وتنعّم مع اليوم السابق.
+	لكل (مصدر، بلد، تاريخ) تُجمع كل قيم score_row المرتبطة. مصادر متعلقة بالأمن (المجموعة 100): الدرجة اليومية = MIN(الدرجات). مجموعات أخرى: الدرجة اليومية = متوسط الدرجات، مع قيم وهمية ثابتة 0 و100 لوزن مستقر.
+	الدرجة النهائية الطبقة 2: score_final = 0,6 × الدرجة_اليومية + 0,4 × درجة_اليوم_السابق. إن لم يكن هناك إدخال لليوم يُستخدم قيمة استرداد (حتى 95) كي لا تُعاقب الفجوات indefinitely.
+	شفرة زائفة:
+	DAILY_SCORES = اجمع score_row لكل (مصدر، بلد، تاريخ)
+	IF مجموعة = أمن THEN الدرجة_اليومية = MIN(DAILY_SCORES)
+	ELSE الدرجة_اليومية = متوسط(DAILY_SCORES، مع وهمي 0 و100)
+	prev = LAST_SCORE(بلد، مصدر، اليوم_السابق)
+	score_final = 0.6 × الدرجة_اليومية + 0.4 × prev
+	score_final = CLAMP(score_final, 0, 100)
+
+
+
+________________________________________________________________________________
+الطبقة 3 — الدرجة النهائية، وضع الأزمة والتنعيم
+	الطبقة 3 تجمع كل درجات المصادر في NFSI البلد. كل مصدر له مجموعة موضوعية ووزن؛ الوزن الفعال يعتمد على الدرجة الحالية.
+	الوزن_الفعال = وزن_المجموعة × (score_node / 100) × مضاعف_التحديث. المجموعات مثلاً 100 (أمن)، 85، 60، 50، 40؛ المجموعة −1 مستبعدة.
+	NFSI_Base = SUM(score_node × الوزن_الفعال) / SUM(الوزن_الفعال)، بما في ذلك وهمي ثابت 0 و100 بوزن 1.
+	إن كان حد أدنى درجات الأمن (المجموعة 100) < 70 يُطبّق malus نزاع: malus = (70 − أدنى_الأمن) × عامل، محدود (مثلاً 35). يُخفّض NFSI_Base بهذا malus.
+	اختياري: حوكمة قوية (مثلاً WGI est_total) يمكن أن تسحب الدرجة الخام لأعلى: النهائي = خام + (100 − خام) × (est_total/100) × wgi_pull.
+	تنعيم يومي (قصور ذاتي): إن أدنى الأمن ≥ 25، NFSI_Today = prev × 0,8 + today × 0,2، بأقصى تغير يومي ±3. في أزمة أمن حادة (أدنى < 25) يُوقف التنعيم لترد الدرجة فوراً.
+	شفرة زائفة (نواة):
+	لكل مصدر: eff_w = مجموعة × (score_node/100)
+	base = SUM(درجة × eff_w) / SUM(eff_w) بما في ذلك وهمي 0، 100
+	min_sec = أدنى(درجات مجموعة الأمن)
+	إذا min_sec < 70 إذن malus = (70 − min_sec) × 1.0؛ base = base − malus
+	raw = حد(base, 0, 100)
+	إذا min_sec >= 25 إذن nfsi_today = 0.8×prev + 0.2×raw؛ أقصى تغير يومي ±3
+	وإلا nfsi_today = raw
+	شكل: الصيغ الأساسية لطبقات NFSI الثلاث (مستوى الشفرة الزائفة).
+
+
+
+________________________________________________________________________________
+التجميع والوزن (الطبقة 2)
+	الطبقة 1: impact = severity^1.6*100؛ score_row = max(0, 100 − impact). REF_POP = 1,000,000.
+	الطبقة 2: Score_Node = raw*0.2 + AvgLast7*0.8.
+	الطبقة 3: effective_weight = group_weight * (scoreValue/100). G1=100, G2=85, G3=60, G4=50, G5=40, G6=-1.
+	NFSI_Today = NFSI_Base*0.5 + NFSI_Last7*0.5.
+
+
+
+________________________________________________________________________________
+مثال عددي معمول (مجهول)
+	للتوضيح دون كشف مصفوفة الأوزان الكاملة: بلد له ثلاثة مؤشرات بدرجات الطبقة 2 وهي 72، 85 و90 في تاريخ معطى. المجموعات الموضوعية 100، 60 و40 بقيمة كاملة 100.
+	خطوة 1: أوزان فعالة: 72×1 = 72، 85×0,6 = 51، 90×0,4 = 36. مجموع الأوزان = 159.
+	خطوة 2: متوسط مرجح (بدون وهمي): (72×72 + 85×51 + 90×36) / 159 ≈ 80,2. مع وهمي 0 و100 يبقى ترتيب الحجم مماثلاً.
+	خطوة 3: Min(أمن) = 72 ≥ 70 → لا malus نزاع. NFSI_Base ≈ 80,2.
+	خطوة 4: اليوم السابق = 79. NFSI_Today = 0,5 × 80,2 + 0,5 × 79 = 79,6 (قصور ذاتي مبسط).
+	التنفيذ الفعلي يستخدم عوامل إضافية (مكافأة سكان، سحب حوكمة، معاملات قصور ذاتي دقيقة). هذا المثال للتبعية وليس للتكرار الكامل.
+
+
+
+________________________________________________________________________________
+حسابات رياضية وإجراء مفصّل
+	الصيغ والخطوات التالية تطابق منطق NFSI المنفذ. كل الثوابت ثابتة. تدوين: خام = قيمة خام، درجة = قيمة في [0، 100]، المجاميع والأوزان كما هو مذكور.
+
+
+
+________________________________________________________________________________
+ثوابت مركزية (مرجع)
+	هذه القيم تُستخدم في الصيغ:
+	الطبقة 1: إن لم يكن هناك انتشار (min = max) أو لا min/max → الدرجة الافتراضية = 50.
+	الطبقة 2: وزن اليوم = 0.6؛ وزن اليوم السابق = 0.4. قيم وهمية: 0 و 100 (وزن 1 لكل منهما). قيمة الحشو للدخول المفقود (غير الأمن): 50. مجموعة الأمن (المجموعة 100): حشو المفقود بـ 100 (محافظ). الاسترداد يومياً: أمن 0.2 نقطة، أخرى 1.0؛ حد 95. بدء بلا سجل: أمن 70، أخرى 85.
+	الطبقة 3: عتبة النزاع = 70؛ عامل malus = 1.0؛ حد malus النزاع 35. عدد السكان المرجعي = 45 م؛ حد مضاعف pop-neg 2.0. عتبة البلد الصغير = 5 م؛ malus لكل خطوة log₁₀ = 4.0؛ حد 25. مكافأة السكان: عامل 0.5، حد 4.0. WGI pull = 0.95. درجة no-data = 50. الهشاشة: مقياس WGI 0–10، عامل 3.0، حد 15. أرضية الدرجة = 1.
+	الطبقة 4 (القصور الذاتي): معياري 80% يوم سابق، 20% اليوم؛ مع كثير من البيانات المفقودة 45% أو 50%. أقصى تغير يومي ±3. أزمة أمن (min أمن < 25): قصور ذاتي معطل، مرور فوري.
+
+
+
+________________________________________________________________________________
+الطبقة 1 — درجة الصف لكل مصدر بيانات
+	إدخال: لكل مصدر بيانات، جدول صفوف (مثلاً لكل بلد/تاريخ/وقت). عمود قيمة خام واحد معرّف لكل مصدر (أو خطورة محسوبة).
+	الحد الأدنى والأقصى: على كل صفوف المصدر، يُحسب min_raw و max_raw للقيم الخام. span = max_raw − min_raw.
+	حالات خاصة: إن كان span ≤ 0 (لا انتشار) أو min/max غير متاحين، score_row = 50 لجميع الصفوف (محايد).
+	تطبيع لكل صف: normalizado = (raw − min_raw) / span × 100. إذن 0 ≤ normalizado ≤ 100.
+	الاتجاه: إن «أعلى خام = استقرار أسوأ» فإن score_row = 100 − normalizado؛ وإلا score_row = normalizado.
+	حد: score_row = max(0, min(100, score_row)); تقريب إلى منزلتين عشريتين. يُخزن score_row لكل صف.
+
+
+
+________________________________________________________________________________
+الطبقة 2 — الدرجة اليومية لكل مصدر وبلد وتاريخ
+	تجميع لكل (مصدر، بلد، تاريخ): تجمع كل درجات الطبقة 1 (score_row) لهذا الثلاثي. إن فُقد إدخال لبلد/تاريخ يُقدّر من اليوم السابق والاتجاه.
+	مجموعة الأمن (المجموعة 100): الدرجة اليومية = MIN(الدرجات المجموعة). القيم المفقودة تُملأ بـ 100 («حدث سيء واحد يكفي»).
+	مجموعات أخرى: وهمي 0 ووهمي 100 زائد قيمة حشو 50 للدخول المفقود لطول موحد للجدول لكل تاريخ. الدرجة اليومية = الوسط الحسابي لهذا الجدول.
+	اليوم السابق: آخر درجة طبقة 2 متاحة لـ(مصدر، بلد، اليوم السابق) تُستخدم كـ yesterday. إن فُقدت، قيمة بدء 70 (أمن) أو 85 (أخرى).
+	تنعيم: score_final = 0.6 × الدرجة_اليومية + 0.4 × yesterday. score_final = max(0, min(100, score_final)); منزلتان عشريتان.
+	استرداد: إن لم يكن لبلد إدخال في يوم، يُطبّق الاسترداد: score = min(95, score + 0.2) للأمن، score = min(95, score + 1.0) للآخرين؛ ملء 90 يوماً كحد أقصى.
+
+
+
+________________________________________________________________________________
+الطبقة 3 — NFSI البلد (الدرجة الخام)
+	المساهمون: لكل (بلد، تاريخ)، تُقدّم كل درجات الطبقة 2 لكل مصدر (موصل). الدخول المفقودة للموصل تحصل على درجة 50 (no_data) وعلامة no_data.
+	الوزن الفعال: لكل مصدر n: eff_w_n = group_n × (scoreValue_n / 100) × updateMult_n. group_n ∈ {100, 85, 60, 50, 40, …}; scoreValue_n ∈ [0, 100]. مصادر ذات group < 0 مستبعدة.
+	متوسط مرجح: sum_weighted = Σ_n (score_n × eff_w_n) + 0×1 + 100×1 (وهمي). sum_weights = Σ_n eff_w_n + 2. baseScore = sum_weighted / sum_weights.
+	أدنى الأمن: minSec = MIN(score_n لجميع n حيث group_n = 100 وليس no_data). إن لم يكن مصدر أمن: minSec = 80 (افتراضي).
+	malus النزاع: إن minSec < 70: conflictMalus = min(35, (70 − minSec) × 1.0). rawScore = baseScore − conflictMalus؛ rawScore = max(0, min(100, rawScore)).
+	مضاعف السكان (تأثيرات سلبية): popLog = log₁₀(max(pop, 100000)); refLog = log₁₀(45000000). popNegMultiplier = min(2, refLog / popLog). يُستخدم في الهشاشة واختيارياً malus البلد الصغير.
+	malus الهشاشة: WGI_0_10 = est_total / 10 (حوكمة 0–100 → 0–10). governanceGap = 10 − WGI_0_10. fragilityMalus محدد [0, 15]. rawScore = rawScore − fragilityMalus.
+	malus البلد الصغير: إن pop < 5000000: smallPopMalus محدد [0, 25]. rawScore = rawScore − smallPopMalus.
+	مكافأة السكان: popBonus = min(4, log₁₀(pop) × 0.5). rawScore = rawScore + popBonus.
+	WGI pull: إن est_total حاضر (0–100): finalScore = rawScore + (100 − rawScore) × (est_total/100) × 0.95. nfsi_raw = max(1, min(100, finalScore)).
+
+
+
+________________________________________________________________________________
+الطبقة 4 — التنعيم اليومي (القصور الذاتي)
+	اليوم السابق: prevScore = آخر قيمة NFSI مخزنة لـ(بلد، اليوم السابق).
+	أزمة أمن: إن minSec < 25 (أمن فيزيائي حرج)، لا تنعيم: NFSI_Today = nfsi_raw (مرور فوري).
+	تنعيم: إن وُجد prevScore ولا أزمة أمن: حصة no_data = عدد الموصلات ذات no_data / عدد المساهمين. inertiaWeight = 0.45 أو 0.50 أو 0.80 حسب الحالة. smoothed = prevScore × inertiaWeight + nfsi_raw × (1 − inertiaWeight).
+	حد التغير اليومي: diff = smoothed − prevScore. إن diff > 3: smoothed = prevScore + 3. إن diff < −3: smoothed = prevScore − 3. NFSI_Today = smoothed (منزلتان عشريتان).
+
+
+
+________________________________________________________________________________
+مرجع حساب كامل — صيغ، ثوابت وشفرة زائفة
+	هذا القسم يدرج كل الحسابات ذات الصلة بـ NFSI: صيغ رياضية، كل الثوابت بقيم دقيقة وشفرة زائفة لكل طبقة معالجة. يخدم كمرجع كامل وقابل للتدقيق للمدققين والعلماء.
+
+
+
+________________________________________________________________________________
+ثوابت — كل القيم التي تؤثر على الحساب
+	الثوابت التالية ثابتة في التنفيذ وتُستخدم في صيغ كل طبقة. كل قيمة لها مبرر محدد؛ لا تُستخدم أرقام اعتباطية.
+	ConstantValueDescriptionالمبرر (لماذا هذه القيمة)LAYER2_TODAY_WEIGHT0.6Weight of today's score in Layer-2 smoothing (60% today, 40% previous day).60/40 split: stronger weight on current day than previous so new events are visible; 40% previous day dampens single-day spikes.LAYER2_YESTERDAY_WEIGHT0.4Weight of previous day in Layer-2 smoothing.Complement to 0.6; ensures smooth transitions and avoids overreaction to single days.LAYER2_RECOVERY_PER_DAY_SECURITY0.2Recovery points per day without data for security group (group 100).Security indicators recover more conservatively (slower than others); missing security data should not be interpreted as all-clear.LAYER2_RECOVERY_PER_DAY_OTHER1.0Recovery points per day without data for all other groups.Faster return to neutral than for security; 1 point/day roughly corresponds to about a week to mid-scale.LAYER2_RECOVERY_CAP95Maximum score under recovery (not full 100).Without new data we never assign "perfectly stable" (100); 95 marks "very good but not confirmed by current data".LAYER2_NO_DATA_START_SECURITY70Start value for security group when no previous day exists.Slightly below midpoint: with unknown security we do not assume optimism; 70 = "moderate assumption".LAYER2_NO_DATA_START_OTHER85Start value for other groups when no previous day exists.Slightly above midpoint: macro indicators without history are set in the upper mid-range until data exists.LAYER2_RECOVERY_MAX_DAYS90Maximum number of days filled by recovery.About one quarter; beyond that the entry is treated as permanently missing and not extrapolated.NFSI_ARRAY_PAD_VALUE50Pad value for missing entries in non-security groups (uniform array length).50 = scale midpoint; missing values do not bias the average up or down.NFSI_DUMMY_LOW0Low dummy value in Layer-3 weighted average.Anchor at lower end of scale; prevents few sources from pulling the score up artificially.NFSI_DUMMY_HIGH100High dummy value in Layer-3 weighted average; weight 1 each.Anchor at upper end; symmetric to dummy 0 for stable weighting.LAYER3_NO_DATA_NEUTRAL_SCORE50Neutral score for missing connector data (no_data).Neither penalty nor reward for missing connector; 50 = midpoint of 0–100 scale.LAYER3_SCORE_FLOOR1Minimum NFSI value (no zero).0 would mean "no stability"; 1 avoids division by zero and denotes "extremely low but defined".NFSI_COUNTRY_CAP100Upper bound of country score.Scale 0–100; 100 = best possible stability assessment within the model.LAYER3_NO_SECURITY_DEFAULT_MINSEC80Default for Min(security) when no security source exists.Without security data no conflict malus is triggered; 80 is above threshold 70 and signals "no reliable security info".LAYER3_CONFLICT_THRESHOLD70Threshold: Min(security) below this triggers conflict malus.70 = upper third of scale; below that security is considered critical enough for a deduction.LAYER3_CONFLICT_MALUS_FACTOR1.0Malus = (THRESHOLD − MinSec) × factor.Linear deduction: 1 point malus per point below 70; easy to follow and calibrate.LAYER3_CONFLICT_MALUS_CAP35Conflict malus capped at 35.Prevents a single security indicator from dominating the total score; 35 ≈ half the score range.LAYER3_POPULATION_REF45,000,000Reference population for pop-neg multiplier (log₁₀).Order of magnitude of large EU countries (e.g. Spain); used as reference for log-based scaling of smaller countries.LAYER3_POP_NEG_MULTIPLIER_CAP2.0Pop-neg multiplier at most 2 (small countries: negative effects stronger).Small countries should not be over-penalized; factor 2 caps the amplification at double.LAYER3_POP_LOG_MIN100,000Minimum population for log₁₀ (avoid division by zero).log₁₀(100,000) = 5; avoids extreme values for very small countries and division by zero.LAYER3_WGI_SENTIMENT_SCALE10WGI 0–100 mapped to scale 0–10 (est_total/10).World Bank WGI is 0–100; scaling to 10 simplifies the fragility formula and matches common 10-point scales.LAYER3_FRAGILITY_POP_FACTOR3.0Factor in fragility malus: governanceGap × (1/log₁₀(pop)) × factor × popNegMult.Strength of fragility effect; 3.0 calibrated so governance gaps in small countries are visible but capped.LAYER3_FRAGILITY_MALUS_CAP15Fragility malus capped at 15.Fragility should lower the score but not override all other factors; 15 points ≈ 15% of scale.LAYER3_SMALL_POP_THRESHOLD5,000,000Countries below this population receive small-country malus.UN/World Bank often use 5M as "small country" threshold; aligns with literature.LAYER3_SMALL_POP_MALUS_PER_LOG104.0Malus per log₁₀ step below threshold.Log scale: each order of magnitude less population adds 4 points malus; capped by SMALL_POP_MALUS_CAP.LAYER3_SMALL_POP_MALUS_CAP25Small-country malus capped at 25.Maximum deduction for very small countries; prevents size alone from dominating the score.LAYER3_POPULATION_BONUS_FACTOR0.5Population bonus: log₁₀(pop) × factor.Larger countries get a slight bonus (data quality, sample effects); 0.5 keeps the effect moderate.LAYER3_POPULATION_BONUS_CAP4.0Population bonus capped at 4.Bonus should be noticeable but not offset conflict or fragility malus; 4 points ceiling.LAYER3_WGI_PULL0.95WGI pull: finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95.Strong governance can raise the score; 0.95 allows almost the full gap to 100 at WGI=100 without oversteering.LAYER1_DEFAULT_SCORE50Layer 1: default score when span=0 or min/max missing.Neutral value when normalization is undefined; no arbitrary penalty or reward.LAYER4_INERTIA_STANDARD0.80Standard: 80% previous day, 20% today.Strong smoothing: index should not overreact to single events; 80/20 matches common practice for stability indices.LAYER4_INERTIA_HIGH_NO_DATA0.45When no_data share ≥ 50%: 45% previous, 55% today.When many connector data are missing, more weight (55%) on current raw score, as previous day is less informative.LAYER4_INERTIA_SCORE_WITHOUT_L1L20.50When score without L1/L2 data: 50% previous, 50% today.No preference when today's value is not based on real L1/L2 data; equal weight for stability and recency.LAYER4_DAILY_CHANGE_CAP±3Maximum daily change in points (after inertia).Prevents jumps e.g. from 70 to 50 in one day; 3 points/day allows up to 21 points movement in a week.LAYER4_SECURITY_CRISIS_THRESHOLD25Min(security) < 25: inertia off, immediate pass-through (crash mode).Below 25 = critical security level; smoothing would mask acute crises — so raw score is applied immediately.
+
+
+
+________________________________________________________________________________
+الطبقة 1 — درجة الصف لكل مصدر بيانات (تطبيع المؤشر)
+	Formulas
+	span = max_raw − min_raw (over all rows of the source)
+	If span ≤ 0 or min_raw/max_raw undefined: score_row = 50 for all rows.
+	Else per row: normalized = (raw − min_raw) / span × 100
+	Direction: score_row = 100 − normalized if higher raw = worse stability, else score_row = normalized
+	score_row = clamp(round(score_row, 2); 0; 100)
+	Pseudo-code
+	MIN_RAW = أدنى(خام) على كل صفوف المصدر
+	MAX_RAW = أقصى(خام) على كل صفوف المصدر
+	SPAN = MAX_RAW − MIN_RAW
+	لكل صف:
+	إذا SPAN = 0 إذن score_row = 50
+	وإلا طبيعي = (خام − MIN_RAW) / SPAN × 100
+	score_row = 100 − طبيعي
+	score_row = حد(score_row, 0, 100)
+
+
+
+________________________________________________________________________________
+الطبقة 2 — الدرجة اليومية لكل موصل وبلد وتاريخ
+	Formulas
+	Security group (group = 100): dayScore = MIN(score_row for (connector, iso2, date)); pad missing with 100.
+	Other groups: arr = [0, score_row₁, …, score_rowₖ, 50, …, 50, 100]; pad 50 to uniform length M; dayScore = AVG(arr).
+	yesterday = last L1 score (connector, iso2, previous day); if missing: 70 (security) or 85 (other).
+	score_final = 0.6 × dayScore + 0.4 × yesterday
+	score_final = clamp(round(score_final, 2); 0; 100). Recovery: no entry → score += 0.2 (security) or 1.0 (other), cap 95, max 90 days.
+	Pseudo-code
+	اجمع score_row لكل (connector_id، iso2، تاريخ)
+	IF مجموعة = 100: املأ الفجوات بـ 100
+	ELSE املأ الفجوات بـ 50
+	الدرجة_اليومية = تجميع حسب مجموعة
+	score_final = 0.6 × الدرجة_اليومية + 0.4 × اليوم_السابق
+
+
+
+________________________________________________________________________________
+الطبقة 3 — NFSI البلد (الدرجة الخام والتعديلات)
+	صيغ (ترتيب كما في التنفيذ)
+	Effective weight: effW_n = group_n × (scoreValue_n/100) × updateMult_n (scoreValue_n = connector weight/100).
+	sum_weighted = Σ_n (score_n × effW_n) + 0×1 + 100×1; sum_weights = Σ_n effW_n + 2; baseScore = sum_weighted / sum_weights.
+	minSec = MIN(score_n for group_n=100, not no_data); if none: minSec = 80.
+	conflictMalus = min(35, max(0, (70 − minSec)×1.0)); rawScore = baseScore − conflictMalus; rawScore = clamp(rawScore; 0; 100).
+	popNegMult = min(2, log₁₀(45e6)/log₁₀(max(pop, 100e3))). Fragility: WGI_0_10 = est_total/10; governanceGap = 10−WGI_0_10; popSens = 1/log₁₀(pop); fragilityMalus = min(15, governanceGap×popSens×3×popNegMult); rawScore −= fragilityMalus.
+	Small country (pop < 5e6): smallPopMalus = min(25, (log₁₀(5e6)−log₁₀(pop))×4); rawScore −= smallPopMalus.
+	popBonus = min(4, log₁₀(pop)×0.5); rawScore += popBonus; rawScore = clamp(rawScore; 0; 100).
+	WGI pull: finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95. nfsi_raw = max(1, min(100, finalScore)).
+	Pseudo-code
+	effW_n = مجموعة_n × (scoreValue_n/100) × updateMult_n
+	sum_weighted = Σ(درجة_n × effW_n) + وهمي
+	baseScore = sum_weighted / sum_weights
+	IF minSec < 70 THEN conflictMalus؛ rawScore = baseScore − malus
+	nfsi_raw = CLAMP(rawScore, 0, 100)
+
+
+
+________________________________________________________________________________
+الطبقة 4 — التنعيم اليومي (القصور الذاتي) ووضع الأزمة
+	Formulas
+	prevScore = last NFSI value (iso2, previous day). Security crisis = (minSec ≠ null AND minSec < 25).
+	If security crisis: NFSI_Today = nfsi_raw (no smoothing).
+	Else if prevScore exists: no_data_ratio = #no_data_connectors / #contributors. inertiaWeight = 0.45 if no_data_ratio ≥ 0.5; 0.50 if score without L1/L2 data; else 0.80. smoothed = prevScore×inertiaWeight + nfsi_raw×(1−inertiaWeight).
+	diff = smoothed − prevScore; if diff > 3: smoothed = prevScore + 3; if diff < −3: smoothed = prevScore − 3. NFSI_Today = round(smoothed, 2).
+	Pseudo-code
+	prevScore = LAST_NFSI(iso2، اليوم السابق)
+	SecurityCrisis = (minSec != null و minSec < 25)
+	IF SecurityCrisis THEN NFSI_Today = nfsi_raw
+	ELSE smoothed = prevScore × inertiaWeight + nfsi_raw × (1 − inertiaWeight)؛ NFSI_Today = حد_التغير(smoothed، ±3)
+
+
+
+________________________________________________________________________________
+النتيجة النهائية (الطبقة 3) ووضع التعطل
+	NFSI_Base = المتوسط المرجح. الدمى 0 و 100.
+	إذا MIN(درجات الأمان مجموعة 100) < 70: خصم الصراع. النتيجة المحايدة 50 للبيانات الناقصة.
+	1) مؤشرات طبيعية → score_row. 2) Score_Node لكل مصدر/يوم. 3) effective_weight. 4) NFSI_Base، NFSI_Today.
+
+
+
+________________________________________________________________________________
+توقعات 7 أيام
+	التوقعات تعتمد على طريقة VAR (90 يوماً من السجل، سلاسل متعددة). لا تُعلن مقاييس التحقق (RMSE، Diebold-Mariano)； الوصف للتتبع المنهجي.
+
+
+
+________________________________________________________________________________
+الحوكمة والتدقيق وإدارة التغيير
+	النسخ: نسخ دلالي لتغييرات النموذج والبيانات؛ كل إصدار يتضمن سجل التغييرات وتجزئات اللقطات. مسار التدقيق: سجلات ثابتة (تجزئة + طابع زمني) للقطات البيانات وثنائيات النموذج. التدقيق الخارجي: الانضمام (NDA → وصول مؤقت للبيانات → تشغيل إعادة الإنتاج → تقرير التدقيق). بروتوكول الحوادث: خطوات محددة لمعالجة الإنذارات الكاذبة والتواصل العام.
+
+
+
+________________________________________________________________________________
+الأخلاق والخصوصية والتراخيص
+	RGPD: تعيين موثق؛ تقليل PII؛ سياسة الاحتفاظ محددة. التراخيص: جدول تراخيص بيانات الطرف الثالث في جرد البيانات وعبر /legal/sources/. إخلاء مسؤولية: لا مشورة استثمارية.
+
+
+
+________________________________________________________________________________
+كيف يُحسب عدد السكان (العالمي) بالتفصيل
+	أرقام السكان لكل بلد وسنة التي تستخدمها NationFiles لا تأتي من مصدر واحد؛ تُبنى بإجماع مرجح من عدة مصادر (مثلاً الأمم المتحدة، البنك الدولي، التعدادات).
+
+
+
+________________________________________________________________________________
+المصادر والأوزان المستخدمة
+	كل مصدر يقدم قيماً لكل بلد (وربما سنة). الأوزان تُستخدم لتشكيل إجماع سنوي.
+	SourceWeightالوصف / المنشأregional_stat1.5Eurostat (demo_pjan) — highest authority for European countriesun_proxy1.5UN Population Data Portal (WPP) — global referenceimf_stat1.2IMF WEO (DB.Nomics) — LP (population)worldbank1.2World Bank SP.POP.TOTL (2010–2026)wikidata0.9Wikidata SPARQL (P297, P1082)cia_wpr0.8CIA World Factbook / country-json (estimates)restcountries0.8REST Countries API v3.1 (population)ninjas0.5API-Ninjas Population (forecast; lowest weight)
+
+
+
+________________________________________________________________________________
+صيغ وشفرة زائفة
+	لكل سنة تُملأ الفجوات بالاستقراء؛ الإجماع هو المتوسط المرجح؛ تُطبّق قيود النمو البيولوجي.
+	استقراء (سنوات 2000 إلى سنة الهدف)
+	إدخال: بيانات = مصدر[iso2] (سنة → سكان)
+	رتب البيانات حسب السنة؛ minYear، maxYear
+	للسنوات بين minYear وسنة_الهدف: استقراء الفجوات
+	الإجماع = متوسط مرجح حسب السنة
+	إجماع مرجح لكل سنة
+	rawConsensus = تقريب( Σ(قيمة × وزن) / Σ(وزن) )
+	فقط المصادر ذات قيمة غير null تدخل في المجموع.
+	قيود بيولوجية (من 2024)
+	لتنعيم توقعات API العدوانية: معدل النمو السنوي محدود (مثلاً أقصى 2–3 % حسب السياق).
+	allowedGrowth = MAX(0.015, masterRate + 0.005)
+	IF (rawConsensus - prevConsensus) / prevConsensus > allowedGrowth THEN حد نمو
+
+
+
+________________________________________________________________________________
+مسرد — مصطلحات مستخدمة في هذا التقرير
+	هذا المسرد يشرح بلغة بسيطة المصطلحات الرئيسية المستخدمة في التقرير. يهدف إلى تسهيل القراءة لغير المتخصصين.
+	NFSINationFiles Stability Index. مؤشر استقرار طبيعي 0–100 لكل بلد ويوم. كلما زادت القيمة زاد تقييم الاستقرار. يُحسب من عدة مصادر في الطبقات 1–4.الطبقة 1أول مستوى معالجة: تطبيع القيم الخام لكل مصدر إلى درجة لكل سطر 0–100 (min-max، اتجاه « أعلى = أفضل/أسوأ » ثابت).الطبقة 2المستوى الثاني: تجميع درجات السطر في درجة يومية لكل مصدر وبلد وتاريخ، مع تنعيم باليوم السابق (مثلاً 60٪ اليوم، 40٪ السابق).الطبقة 3المستوى الثالث: حساب NFSI لكل بلد (الدرجة الخام) من جميع درجات المصادر. متوسط مرجح بالأوزان الفعالة، خصم النزاع، سحب WGI، تعديلات أخرى.الطبقة 4المستوى الرابع: تنعيم يومي (القصور الذاتي). قيمة NFSI النهائية تجمع اليوم السابق والدرجة الخام لليوم (مثلاً 80٪ سابق، 20٪ يوم) مع حد تغير (مثلاً ±3).القيمة الخام (raw)الرقم الأصلي من مصدر البيانات قبل التحويل إلى درجة 0–100 (مثلاً عدد الأحداث، النسبة، مقياس).التطبيعتحويل القيم الخام إلى نطاق مشترك (هنا 0–100). Min-max: (القيمة − الأدنى) / (الأعلى − الأدنى) × 100. انعكاس ممكن إذا « أعلى = أسوأ ».الدرجة (سطر / يومية / بلد)قيمة محدودة 0–100: درجة السطر (الطبقة 1)، الدرجة اليومية (مصدر، بلد، تاريخ، الطبقة 2)، درجة البلد = NFSI (الطبقات 3–4).مقياس غولدشتاينمقياس −10 (صراع) إلى +10 (تعاون) تستخدمه GDELT. يُحوّل إلى درجة استقرار في منطق NFSI (غولدشتاين أعلى = استقرار أعلى).القيمة الوهمية (dummy)قيمة مضافة ثابتة (0 و 100) في التجميع حتى تبقى المتوسطات والوزن مستقرتين حتى مع قلة المصادر.القصور الذاتيتنعيم عبر الزمن: NFSI اليوم يعتمد جزئياً على اليوم السابق (مثلاً 80٪ سابق، 20٪ درجة خام جديدة) لتهدئة الضجيج قصير الأمد.الاستردادعند عدم وجود بيانات جديدة لبلد/تاريخ، تُرفع الدرجة تدريجياً (سقف 95) حتى لا تُعاقب الفجوات indefinitely.خصم النزاعخصم من NFSI عندما يقل أدنى مؤشرات الأمن (النزاعات، العنف، إلخ) عن العتبة (70). يؤكد دور بيانات الأمن.WGI (مؤشرات الحوكمة العالمية)مؤشرات البنك الدولي لجودة الحوكمة (سيادة القانون، الفعالية، إلخ). في NFSI: «سحب WGI» يمكن أن يرفع الدرجة الخام عندما تكون الحوكمة قوية.مجموعة الأمن (المجموعة 100)مجموعة موضوعية لمصادر حرجة للأمن (النزاعات، تحذيرات السفر، إلخ). في التجميع اليومي يُؤخذ الأدنى (حدث حرج واحد يكفي).الموصل / مصدر البياناتمصدر بيانات متكامل (مثلاً البنك الدولي، GDELT، ACLED) يساهم في NFSI في الطبقات 1–3. كل موصل له مجموعة موضوعية ووزن.بدون بياناتقيمة مفقودة لمصدر في تاريخ معين. تُعالج بدرجة محايدة (مثلاً 50) أو منطق استرداد حتى لا يفشل الحساب.VAR (الانحدار الذاتي المتجهي)طريقة إحصائية للتنبؤ بـ 7 أيام: تستخدم تاريخ عدة سلاسل زمنية (مثلاً NFSI، خطر الأخبار) لتقدير الأيام التالية.مسارات البياناتأصل وتبعية البيانات: أي مصدر، أي ترخيص، معدل التحديث. موثق في جرد البيانات والمصادر القانونية لهذا التقرير.أثر التدقيقسجل تتبع للتغييرات (مثلاً لقطة البيانات، إصدار النموذج) مع الطابع الزمني والهاش، للمدققين وإعادة الإنتاج.إعادة الإنتاجخاصية أن نفس النتيجة يمكن الحصول عليها من نفس المدخلات والمنهجية. تُسعى عبر الصيغ والكود ومسارات البيانات الموثقة.
+
+
+
+________________________________________________________________________________
+وثائق ذات صلة (قانوني وشركة)
+	الصفحات التالية تحتوي معلومات تكميلية عن المنهجية ومسارات البيانات والمراجع القانونية.
+	سجل المصادر — جميع DataSourceConnectors النشطة مع المزود والترخيص ونقطة النهاية والفاصل وآخر جلب (UTC). قائمة ديناميكية؛ تشمل مصادر بدون تأثير NFSI. (/legal/sources/)بيان الاستقلالية — ست مبادئ أساسية، معاملة خوارزمية متساوية، عملية تصحيح الأخطاء (data@nationfiles.com)، إدارة الإصدارات (changelog)، إخلاء مسؤولية التوقعات. (/legal/independence/)الحوكمة وأخلاقيات البيانات — حوكمة البيانات، التحكم في التنفيذ (Cron، Last Known Value 24h)، NFSI v2.5، sourceQuality، human-in-the-loop، الاحتفاظ، جهة اتصال الحوكمة. (/legal/governance/)الأمن العالمي والمرونة — حوكمة الأمن (IPS، WAF، TLS 1.3، PDO، SCA/SAST)، دورات التدقيق، zero-knowledge، ضمانات تقنية. (/legal/security/)NFSI — وصف المنتج — وصف تشغيلي لـ NFSI: دورة 15 دقيقة، أربع ركائز (الأمن، الحوكمة، الاقتصاد الكلي، الديموغرافيا)، وضع التوقف، حالات الاستخدام. (/company/nfsi/)إشعار قانوني — المشغل، جهة الاتصال، الاختصاص القضائي، الترخيص (CC BY-ND 4.0)، الأساس القانوني. (/legal/legal-notice/)سياسة الخصوصية — تقليل البيانات، عزل الذكاء الاصطناعي (بدون تدريب Naciro على PII)، موقع التخزين، السلطة الإشرافية. (/legal/privacy/)
+	Neawolf Media Group / NationFiles
+	Reinhardstr. 1b, 52078 Aachen, ألمانيا
+	إشعار قانوني | الشفافية وأخلاقيات البيانات
+
+================================================================================
+
+https://nationfiles.com/ar/legal/validation-and-verification-report/
+
+________________________________________________________________________________
+التاريخ:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+النص الألماني هو الوحيد الملزم قانونياً
+	النص الألماني هو الوحيد الملزم قانونياً.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	هذه الصفحة لا تحل محل الاستشارة القانونية ولا تمثل تحذيرات أو توصيات رسمية. التوقعات والتقييمات قائمة على نماذج.
+
+
+
+________________________________________________________________________________
+Kontakt
+	للاستفسارات القانونية: انظر بيانات النشر.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+الشفافية وأخلاقيات البيانات:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+المصادر والتراخيص:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+البنية التحتية:
+	المعالجة حصرياً في ألمانيا، TLS 1.3، عزل VPC.
+
+
+
+________________________________________________________________________________
+حماية البيانات:
+	معالجة البيانات الشخصية وفقاً للائحة العامة لحماية البيانات؛ لا إفصاح أو استخدام لتدريب الذكاء الاصطناعي.
+
+
+
+________________________________________________________________________________
+المسؤولية:
+	لا مسؤولية عن المحتوى الخارجي أو القرارات المشتقة. لا مشورة استثمارية بمعنى WpHG.
+
+
+
+________________________________________________________________________________
+المحكمة المختصة:
+	آخن، ألمانيا. القانون الألماني مع استبعاد اتفاقية فيينا (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	(c) NationFiles / Neawolf Media Group – جميع الحقوق محفوظة.
+
+nationfiles.com | تقرير التحقق والتحقق من الصحة | 18.04.2026 21:45

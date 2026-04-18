@@ -1,0 +1,560 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+検証・妥当性確認レポート
+
+
+
+
+________________________________________________________________________________
+更新日:
+	18.04.2026
+	PDF作成日時: 18.04.2026 21:45
+
+================================================================================
+
+________________________________________________________________________________
+
+	本レポートはNationFiles Stability Index（NFSI）および7日間予測の手法・データプロビナンス・技術的追跡可能性を記述しています。大学・公的機関・認定監査人がシステムの信頼性と再現性を検証・確認するためのものです。NationFilesは完全な透明性を約束します：記載の全数式・パラメータは実装と一致し、虚構の値や事後調整はありません。NFSIは科学研究および監査の信頼できる参照として利用可能です。
+
+
+
+________________________________________________________________________________
+要約
+	NFSIは3層の集約に基づく（レイヤー1：指標、レイヤー2：7日慣性を伴うテーマ別平滑化、レイヤー3：クラッシュモード含む加重最終スコア）。全重みと数式は固定され実装に反映。
+	データは公的・ライセンスソース（例：世界銀行、ACLED、INTERPOL、GDELT）から取得。完全なプロビナンスとライセンスはデータインベントリおよび /legal/sources/ で利用可能。
+	7日予測は90日履歴と複数時系列（世界指数、国別ニュースリスク等）を用いたVARベースの手法。手法は本ドキュメントおよび実装で一貫して文書化。
+	ガバナンスにはバージョン管理、監査トレイル、外部監査人向けの定義済みプロセスを含む。
+
+
+
+________________________________________________________________________________
+範囲と対象読者
+	対象：大学、研究機関、国内外の当局およびNFSIと予測の検証・認定を行う認定監査人。地理的範囲：全世界。NFSIデータベースの時間範囲：2026年2月以降、継続。範囲外：個別の投資・金融アドバイス。NFSIは安定性・リスクの評価に用い、金融商品の推奨には用いない。
+
+
+
+________________________________________________________________________________
+NFSIの整合性と信頼性
+	NationFilesとNFSIは科学研究・監査・規制評価における信頼できる参照として設計されています。以下の方針は追跡可能性と防御可能性を強調します。
+	虚構の値なし：すべてのNFSI値と予測は文書化された数式および本レポート・データインベントリに列挙されたソースのみから生成。手動上書きやブラックボックス補正はない。
+	完全にコードベースかつ文書化：計算ステップ（レイヤー1–4）はすべてコードで実装され、定数・数式・疑似コードとともに本レポートで記述。
+	プロビナンスと監査トレイル：データの出所、ライセンス、更新頻度はデータインベントリおよび法務ソースに文書化。モデル・データの変更は版管理され監査トレイルで追跡可能。
+	ガバナンスにはバージョン管理、監査トレイル、外部監査人向けの定義済みプロセスを含む。
+	アルゴリズム的解釈は公式評価を表さない。技術セキュリティ、監査サイクル（SCA/SAST等）、インフラはグローバル・セキュリティ＆レジリエンス声明（/legal/security/）に記載。生データの誤り訂正：data@nationfiles.com へ報告 → ソース確認 → DB修正 → 自動再計算。スコアの手動上書きは不可（独立性声明 /legal/independence/ 参照）。
+
+
+
+________________________________________________________________________________
+完全な透明性
+	NationFilesはNFSIの手法・データ・計算における完全な透明性を約束します。隠れたパラメータ、不透明な補正、指数評価に関連する意図的な情報保留はありません。
+	開示内容：
+	本レポート内の全数式・計算ステップ（レイヤー1–4）、疑似コードおよび完全な定数表。
+	NFSIに影響する全ソースの完全なデータインベントリ：出所、ライセンス、更新頻度、テーマ重み。法務ソース（/legal/sources/）へのアクセス。
+	秘密の重み付けなし：重み行列（コネクタ重み、グループ）は文書化。要請に応じ認定監査人は監査契約に基づき技術成果物にアクセス可能。
+	モデル・データの変更は版管理され、監査トレイル（タイムスタンプ、ハッシュ等）で追跡可能。国・日付ごとの計算ログは監査時に中間ステップ確認のため提供可能。
+	ブラックボックスなし：公表されるすべてのNFSI値は文書化された数式・定数・入力データから再構成可能。下流の「秘密補正」や手動上書きはない。
+	透明性はマーケティング主張ではなく文書化された実践です。本レポートとリンク参照がその基盤です。
+
+
+
+________________________________________________________________________________
+本レポートの引用方法
+	メディア・学術・公的機関での引用が可能です。以下の形式を使用してください：
+	Neawolf Media Group / NationFiles (2026). 検証・妥当性確認レポート — NationFiles Stability Index (NFSI). Version 1.0. アーヘン. 文書ID: VVR-2026-03-07.
+	短い形式:
+	NationFiles (2026). NFSI検証レポート. VVR-2026-03-07.
+
+
+
+________________________________________________________________________________
+システムアーキテクチャとデータパイプライン
+	データ取り込み → 前処理 → レイヤー1（指標・正規化）→ レイヤー2（テーマ別集約・7日平滑化）→ レイヤー3（最終スコア・クラッシュモード）→ API・フィードによる配信。
+	図：取り込みからレイヤー1–3を経て配信までのデータフロー。
+	取り込み
+	前処理
+	レイヤー1 — 指標
+	レイヤー2 — テーマ別集約
+	レイヤー3 — 最終スコアとクラッシュモード
+	7日予測 / API
+
+
+
+________________________________________________________________________________
+重み・尺度・正規化 — すべての重み付け
+	読者がシステムの動作を一義的に把握できるよう、すべての値域・尺度・正規化ルールを以下に記載。
+
+
+
+________________________________________________________________________________
+値域（尺度）一覧
+	NFSIシステムの安定性スコアは処理後すべて [0, 100] の範囲。
+	QuantityRangeMeaningRaw value (raw)source-specificOriginal value from the data source (e.g. count, percentage, Goldstein −10 to +10). Normalized in Layer 1.score_row (row score)[0, 100]After Layer 1: one score per row (e.g. per country/date/event). Default 50 when spread is zero or min/max missing.dayScore (daily score per connector/country)[0, 100]After Layer 2 aggregation: one value per connector, country, and date. Security group: MIN of row scores; others: average (with dummies 0, 100 and pad 50).score_final (Layer 2 output)[0, 100]0.6×dayScore + 0.4×previous day; after recovery max 95. Stored in nfsi_connector.baseScore (Layer 3)[0, 100]Weighted average of all connector scores (effW = group × scoreValue/100 × updateMult). Dummies 0 and 100 with weight 1.rawScore / nfsi_raw[1, 100]After conflict malus, fragility malus, small-country malus, population bonus, WGI pull. Floor 1, cap 100.NFSI_Today (final index)[1, 100]After Layer 4 (inertia): daily change capped at ±3; in security crisis (min security < 25) immediate pass-through without smoothing.
+
+
+
+________________________________________________________________________________
+Layer 1 — Normalization and direction
+	データソースごとに生値列（または算出深刻度）を使用。ソース全行で最小・最大を取得し、行ごとに指標の向きに応じて [0, 100] に正規化。
+
+
+
+________________________________________________________________________________
+Layer 2 — Today vs. previous day weight and aggregation rules
+	コネクタ・国・日付ごとに関連する全 score_row を収集し集約、前日で平滑化（重み 0.6 / 0.4）。
+
+
+
+________________________________________________________________________________
+Layer 3 — Connector weights, groups, and effective weight
+	各コネクタに設定重み（例40–100、データインベントリ参照）とテーマグループがあり、有効重みは現在スコアに依存。
+
+
+
+________________________________________________________________________________
+Layer 4 — Inertia weights and daily change cap
+	レイヤー3の生スコア（nfsi_raw）は前日NFSIで平滑化；セキュリティ危機時は平滑化を行わない。
+
+
+
+________________________________________________________________________________
+システムの流れ — 読みやすいNFSI記述
+	以下は生データから公開NFSI値までの全フローを記述。
+	生データはデータソース（コネクタ）ごとに取り込まれ、前処理（補完・タイムゾーン・重複除去）されます。各ソースは少なくとも1つの生値列または算出された深刻度を持つ行を提供します。
+	レイヤー1（指標）：各データソースについて、全行の生値の最小・最大を算出します。スパンが0または未定義の場合は全行に中立の行スコア50を付与。それ以外は行ごとに生値を[0, 100]に正規化：正規化 = (生値 − 最小) / スパン × 100。指標により「生値が高い＝安定性が悪い」の場合は行スコア = 100 − 正規化、そうでなければ行スコア = 正規化。結果は[0, 100]にクランプし小数第2位に丸めます。これにより各行が統一された安定性スコアを持ちます。
+	レイヤー2（コネクタ・国ごとの日次スコア）：各コネクタ・国・日付について、関連する全行スコアを収集。セキュリティグループ（グループ100）では日次スコアはこれらの値の最小（欠損は100でパッド）。その他のグループでは収集値の算術平均に固定ダミー0・100と欠損用パッド50を加えたものを採用。最終レイヤー2スコアは 0.6×日次スコア + 0.4×前日（前日：直近の利用可能値、なければ70または85）。結果は[0, 100]。欠損日はリカバリ（1日あたり0.2または1.0ステップ、キャップ95、最大90日）で補填可能。
+	レイヤー3（国別NFSI）：各国・各日付について全コネクタのレイヤー2スコアが利用可能。欠損コネクタは中立スコア50（no_data）で含める。各コネクタの有効重みは グループ×(コネクタ重み/100)×更新乗数。ベーススコアは全スコアの加重平均（固定ダミー0・100を重み1で含む）。セキュリティスコアの最小が70未満の場合は紛争マルス（最大35）を減算。続いて脆弱性マルス、小国マルス、人口ボーナス、WGIプルを適用。生スコアは[1, 100]にクランプ。
+	レイヤー4（日次平滑化）：生スコアを前日NFSIで平滑化。標準は前日80％・今日20％。no_dataが多い場合は今日45％または50％。前日からの変動は±3ポイントに制限。セキュリティ危機の場合は平滑化せず生スコアをそのままNFSI_Todayとして出力。結果がその国・その日付の公開NFSI値です。
+
+
+
+________________________________________________________________________________
+日次指標とNFSIへの影響
+	NFSIは準リアルタイムで安定性を反映する日次更新ソースを統合しています。ニュースイベント（GDELT）、メディアトーン、国別リスクシグナルを含み、レイヤー1で定義された指標を経て入り、レイヤー2・3を通じて日次値に影響します。
+	関連する日次ソース：（1）GDELT — ゴールドスタイン尺度、平均トーン、国別イベントリスクレベル；（2）メディアセンチメント；（3）24h/48h窓の独自ニュースリスクシグナル。
+	ゴールドスタイン・トーン・リスクレベルの平均からライブシグナルを形成。平均リスクが閾値を超えると控除を適用。結果は既存NFSI指数（例：ライブ40％、指数60％）で平滑化しノイズを抑制できます。
+	簡略ロジック（疑似コード、実装と同一ではない）：
+	LIVE_BASE = 50
+	各ソースについて: LIVE_BASE += (Goldstein_avg × k1) + (Tone_avg × k2) + (Sentiment_avg × k2)
+	IF risk_avg > threshold THEN LIVE_BASE −= (risk_avg − threshold) × k3
+	LIVE_BASE = CLAMP(LIVE_BASE, 0, 100)
+	IF 既存指数あり THEN SMOOTHED = 0.4 × LIVE_BASE + 0.6 × index
+
+
+
+________________________________________________________________________________
+データインベントリ（選択プロビナンス）
+	ソースフィールドライセンス更新カバレッジ重みAcledMonthAllCrisis & Safety Radar (Level 1)ACLED / filtered, aggregated for Naciro IntelligencewöchentlichGlobal90AcledMonthAllOverviewCrisis & Safety Radar (Level 1)ACLED / filtered, aggregated for Naciro IntelligencewöchentlichGlobal95CountriesConflictUcdpGedUCDP GED conflict eventsFree for academic, commercial, governmental use (see UCDP)täglichGlobal85CountriesCurrencyFromFa7-Tage-Trend WährunginterntäglichGlobal65CountriesGdeltGlobRadarGDELT global event dataUnlimited use for academic, commercial, governmental (see Terms of Use)mehrmals täglichGlobal85CountriesNetAbuseIpDbAbuse IPs by country (AbuseIPDB)AbuseIPDB Terms of UsetäglichGlobal70CountriesNetGrpTrfcAnomTraffic anomalies by locationCloudflare Terms of Usemehrmals täglichGlobal55CountriesNetSpmBotBotnet C&C by country (Spamhaus)Spamhaus Terms & ConditionstäglichGlobal70CountriesNetTrfcAnomTraffic anomalies (Cloudflare Radar)Cloudflare Terms of Usemehrmals täglichGlobal70CountriesPopPrisn100KPrison population rate per 100kCC BY / Our World in DatawöchentlichGlobal50CountriesVatRatesApiVerVAT rates by country (APIVerve)APIVerve Terms of ServicewöchentlichGlobal60CountriesVatRatesVatLupVAT rates EU (VAT Lookup)Refer to source (EC data)wöchentlichGlobal60CountriesWb65UpPopulation 65+ %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal10CountriesWbAccsZsAccess to electricity %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal60CountriesWbCcEstControl of corruption (estimate)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal85CountriesWbCdrtInCrude death rateCC BY 4.0 / filtered, aggregatedwöchentlichGlobal30CountriesWbCpiTotlZgInflation, consumer prices %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal75CountriesWbFpCpiTotlInflation consumer prices % (WB)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal20CountriesWbLe00Life expectancy at birthCC BY 4.0 / filtered, aggregatedwöchentlichGlobal45CountriesWbMilTotlMilitary personnel totalCC BY 4.0 / filtered, aggregatedwöchentlichGlobal40CountriesWbNetUserInternet users %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal40CountriesWbPopDpndAge dependency ratio %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal20CountriesWbPopGrowPopulation growth %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal25CountriesWbPovGiniGini index (income inequality)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal60CountriesWbPsrcP5Intentional homicides per 100kCC BY 4.0 / filtered, aggregatedwöchentlichGlobal100CountriesWbResTotlCdTotal reserves (incl. gold) US$CC BY 4.0 / filtered, aggregatedwöchentlichGlobal25CountriesWbRlEstRule of law (estimate)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal80CountriesWbUem1524Youth unemployment (15-24) %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal70CountriesWbUemTotlUnemployment %CC BY 4.0 / filtered, aggregatedwöchentlichGlobal55CountriesWbVaEstVoice and accountability (est.)CC BY 4.0 / filtered, aggregatedwöchentlichGlobal50CountriesWbWgiPvCcRlWGI: stability, corruption, lawCC BY 4.0 / filtered, aggregatedwöchentlichGlobal85CountryNewsRiskLevelNews Risk (24h, Carry-Forward)CC BY-ND 4.0täglichGlobal100DisasterGdacsHumNatGDACS disaster alertsGDACS Terms of Usemehrmals täglichGlobal100EconFredHerCountScOvScOverall Economic Freedom (Heritage)Refer to Source LinkwöchentlichGlobal60EconFredHerCountScRanksWorld/region rank (Heritage)Refer to Source LinkwöchentlichGlobal60EconFredHerCountScRightsProperty Rights (Heritage)Refer to Source LinkwöchentlichGlobal100EconFredHerCountScTaxTax & gov. spending (Heritage)Refer to Source LinkwöchentlichGlobal60EurostatStatArblsQUnemployment rate (monthly)Refer to Source LinkwöchentlichGlobal60EurostatStatTpsPopulation on 1 JanuaryRefer to Source LinkwöchentlichGlobal40GovFbiMwFBI Most Wanted / fugitivesOpenSanctions / FBI data – Public Domain (DOJ)wöchentlichGlobal80GovIntPolINTERPOL Red Notices / wantedINTERPOL Terms of UsewöchentlichGlobal85NewsMediaStckIntelligence Briefing & sentiment (MediaStack)Refer to Service AgreementtäglichGlobal50NfMilitaryMassViolenceNfsiMLMV actor-day stress (NFSI)Internal processing for NationFiles Intelligencemehrmals täglichGlobal100NfNewsCountry24Country24hNewsCC BY-ND 4.0täglichGlobal70NfRawNewsSignalsEventRiskRaw News Signals Event RiskCC BY-ND 4.0täglichGlobal100OecdSdmxGdpvAnnpctGDP volume growth % (annual)OECD Terms & ConditionswöchentlichGlobal60OWIDDemocracyIndexDemocracy Index (EIU)CC BY / Our World in DatawöchentlichGlobal70SdgGlobalIndexSdsnSDG overall index (SDSN ArcGIS)Refer to Source LinkwöchentlichGlobal60TravelAdvisoryUnifiedTravel warnings (multi-authority)Refer to Source LinktäglichGlobal75TravelStateGovU.S. travel advisories Level 4 (Do Not Travel)U.S. Government WorktäglichGlobal80TrvlWarnCaVoyTravel advice Canada (Voyage)Open Government Licence – CanadawöchentlichGlobal75TrvlWarnDeTravel & security advice (AA)Refer to Source LinkwöchentlichGlobal75TrvlWarnDeWarnTravel & security advice (AA) – warning onlyRefer to Source LinkwöchentlichGlobal75TrvlWarnUkUK travel advice (GOV.UK)Open Government Licence v2.0täglichGlobal75WorldEarthQuakeUsgsEarthquakes worldwide (USGS)USGS Public Domainmehrmals täglichGlobal100WorldUnivDataSetIpsaWorld Universities Dataset (IPSA)Refer to repositorywöchentlichGlobal25
+
+
+
+________________________________________________________________________________
+指標カタログ（レイヤ1）— 例
+	主要な日次指標（GDELT、Media Stack、Naciro News）を含む選択例：
+	UCDP GED
+	武力紛争（UCDP GED）
+	武力紛争インシデント数（UCDP GED）/月；列：high。
+	イベント/月 · イベント増 → 安定性低下。
+	ソースごとMin-Max。
+	https://ucdp.uu.se/
+	GDELT Global Radar
+	ニューストーンとGoldsteinスケール
+	GDELTは国・時間窓ごとにGoldsteinスケール（−10〜+10）と平均トーンを提供。値が高いほど紛争少なめ。
+	スケール/集計 · 値が高い（正）→ 安定性向上。
+	国・日で集計；方向は正。
+	https://www.gdeltproject.org/
+	News Media Stack
+	メディアセンチメント
+	ニュースソース（Media Stack API）の国・地域別集計センチメント。典型的に−1〜+1；レイヤ1で0–100に変換。
+	センチメント（集計） · ネガティブセンチメント → 安定性低下。
+	ソース別；生値が高い＝悪い。
+	https://mediastack.com/
+	Naciro News (24h / Event Risk)
+	国別24hリスクとイベントリスク
+	独自指標：Naciro Newsの国別24hリスクレベルと生シグナルからのイベントリスクレベル。準リアルタイム評価。
+	リスクレベル0–100 · リスクが高い → 安定性低下。
+	内部；方向は負。
+	/legal/sources/
+	完全リスト：80+ソース；詳細は/legal/sources/。
+
+
+
+________________________________________________________________________________
+レイヤー1 — 指標の詳細
+	レイヤー1ではデータソース・行ごとに0〜100の安定性スコアを算出。手法は指標タイプ（値ベース／件数ベース）に依存します。
+	値ベース指標：ソースごとに生値列を使用。そのソースの全行で最小・最大を取得。行ごと：正規化 = (生値 − 最小) / (最大 − 最小) × 100。「生値が高い＝安定性が悪い」なら score_row = 100 − 正規化、そうでなければ score_row = 正規化。結果は [0, 100] にクランプ。
+	件数ベース指標：行ごとに深刻度（例：人口当たり）を算出。必要に応じて参照人口（例：100万）を使用。スコアは一貫して0〜100にマッピング。
+	レイヤー1数値例（値ベース、簡略）：
+	ソース「紛争イベント」、国X：3時点の生値 5, 10, 20。最小=5、最大=20、スパン=15。行1：(10−5)/15×100 = 33.3 →「高い＝悪い」で score_row = 100 − 33.3 = 66.7。行2（値5）：score_row = 100；行3（値20）：score_row = 0。
+	疑似コード（値ベース、高い＝悪い）：
+	MIN_RAW = ソース全行のMIN(生値)
+	MAX_RAW = ソース全行のMAX(生値)
+	SPAN = MAX_RAW − MIN_RAW
+	各行について:
+	IF SPAN = 0 THEN score_row = 50
+	ELSE 正規化 = (生値 − MIN_RAW) / SPAN × 100
+	score_row = 100 − 正規化
+	score_row = CLAMP(score_row, 0, 100)
+
+
+
+________________________________________________________________________________
+レイヤー2 — テーマ別集約と慣性
+	レイヤー2はソース・国・日付ごとにレイヤー1スコアを日次スコアに集約し前日で平滑化します。
+	(ソース、国、日付)ごとに関連する全 score_row を収集。セキュリティ関連ソース（グループ100）：日次スコア = MIN(スコア)。その他：日次スコア = スコア平均、安定重み付けのため固定ダミー0と100を含む。
+	レイヤー2最終スコア：score_final = 0.6 × 日次スコア + 0.4 × 前日スコア。当日エントリがなければ回復値（最大95）を使い、欠損を無期限にペナルティしません。
+	疑似コード：
+	DAILY_SCORES = (ソース、国、日付)について score_row を収集
+	IF グループ = セキュリティ THEN 日次スコア = MIN(DAILY_SCORES)
+	ELSE 日次スコア = AVERAGE(DAILY_SCORES, ダミー0と100)
+	prev = LAST_SCORE(国、ソース、前日)
+	score_final = 0.6 × 日次スコア + 0.4 × prev
+	score_final = CLAMP(score_final, 0, 100)
+
+
+
+________________________________________________________________________________
+レイヤー3 — 最終スコア、危機モード、平滑化
+	レイヤー3は全ソーススコアを国別NFSIに統合。各ソースにテーマグループと重みがあり、有効重みは現在スコアに依存。
+	effective_weight = group_weight × (score_node / 100) × update_multiplier。グループは例：100（セキュリティ）、85、60、50、40；グループ−1は除外。
+	NFSI_Base = SUM(score_node × effective_weight) / SUM(effective_weight)、重み1の固定ダミー0と100を含む。
+	セキュリティスコア（グループ100）の最小値 < 70 の場合、紛争マルスを適用：malus = (70 − min_security) × 係数、上限（例35）。NFSI_Baseからこのmalusを減算。
+	オプション：ガバナンスが強い（例 WGI est_total）と生スコアを上方に引き寄せ可能：final = raw + (100 − raw) × (est_total/100) × wgi_pull。
+	日次平滑化（慣性）：セキュリティ最小 ≥ 25 なら NFSI_Today = prev × 0.8 + today × 0.2、日次変動最大 ±3。深刻なセキュリティ危機（最小 < 25）では平滑化を止めスコアが即時反応。
+	疑似コード（コア）：
+	各ソースについて: eff_w = group × (score_node/100)
+	base = SUM(score × eff_w) / SUM(eff_w) ダミー0, 100含む
+	min_sec = セキュリティグループのMIN(スコア)
+	IF min_sec < 70 THEN malus = (70 − min_sec) × 1.0; base = base − malus
+	raw = CLAMP(base, 0, 100)
+	IF min_sec >= 25 THEN nfsi_today = 0.8×prev + 0.2×raw; 日次変動最大 ±3
+	ELSE nfsi_today = raw
+	図：NFSI三レイヤーの主要数式（疑似コードレベル）。
+
+
+
+________________________________________________________________________________
+集約と重み付け（レイヤ2）
+	レイヤ1：impact = severity^1.6*100；score_row = max(0, 100 − impact)。REF_POP = 1,000,000。
+	レイヤ2：Score_Node = raw*0.2 + AvgLast7*0.8。
+	レイヤ3：effective_weight = group_weight * (scoreValue/100)。G1=100, G2=85, G3=60, G4=50, G5=40, G6=-1。
+	NFSI_Today = NFSI_Base*0.5 + NFSI_Last7*0.5。
+
+
+
+________________________________________________________________________________
+計算例（匿名化）
+	重み行列の全文を開示せず説明：ある国でレイヤー2スコアが72、85、90の3指標がある日を想定。テーマグループは100、60、40で満値100。
+	ステップ 1: 有効重み：72×1 = 72、85×0.6 = 51、90×0.4 = 36。重み合計 = 159。
+	ステップ 2: 加重平均（ダミーなし）：(72×72 + 85×51 + 90×36) / 159 ≈ 80.2。ダミー0と100でも桁は同等。
+	ステップ 3: Min(セキュリティ) = 72 ≥ 70 → 紛争マルスなし。NFSI_Base ≈ 80.2。
+	ステップ 4: 前日 = 79。NFSI_Today = 0.5 × 80.2 + 0.5 × 79 = 79.6（簡略慣性）。
+	実装では人口ボーナス、ガバナンスプル、慣性パラメータ等の追加要素を使用。本例は追跡可能性のためであり完全再現用ではない。
+
+
+
+________________________________________________________________________________
+数式と手順の詳細
+	以下の式と手順は実装NFSIロジックに一致。全定数は固定。表記：raw = 生値、score = [0, 100]の値、合計・重みは記載のとおり。
+
+
+
+________________________________________________________________________________
+中心定数（参照）
+	これらの値は式で使用：
+	レイヤー1：スプレッドなし（min = max）または min/max なし → デフォルトスコア = 50。
+	レイヤー2：当日重み = 0.6、前日重み = 0.4。ダミー値 0 と 100（各重み 1）。欠損エントリ（非セキュリティ）のパッド値 50。セキュリティグループ（グループ100）：欠損を 100 でパッド。1日あたり回復：セキュリティ 0.2 点、その他 1.0。上限 95。履歴なし開始：セキュリティ 70、その他 85。
+	レイヤー3：紛争閾値 = 70、マルス係数 = 1.0、紛争マルス上限 35。参照人口 = 45M、pop-neg 乗数上限 2.0。小国閾値 = 5M。人口ボーナス：係数 0.5、上限 4.0。WGI pull = 0.95。No-data スコア = 50。脆弱性：WGI スケール 0–10、係数 3.0、上限 15。スコアフロア = 1。
+	レイヤー4（慣性）：標準 80% 前日、20% 当日。欠損データ多い場合は 45% または 50%。日次変動最大 ±3。セキュリティ危機（min セキュリティ < 25）：慣性オフ、即時パススルー。
+
+
+
+________________________________________________________________________________
+レイヤー1 — データソースごとの行スコア
+	入力：データソースごとに行のテーブル（国/日付/時間など）。ソースごとに生値列1つ（または算出深刻度）を定義。
+	最小・最大：ソース全行で生値の min_raw と max_raw を算出。span = max_raw − min_raw。
+	特殊ケース：span ≤ 0 または min/max 未定義の場合、全行で score_row = 50（中立）。
+	行ごと正規化：normalized = (raw − min_raw) / span × 100。0 ≤ normalized ≤ 100。
+	方向：「生値が高い＝安定性が悪い」なら score_row = 100 − normalized、そうでなければ score_row = normalized。
+	クランプ：score_row = max(0, min(100, score_row))。小数第2位に丸める。score_row は行ごとに保存。
+
+
+
+________________________________________________________________________________
+レイヤー2 — ソース・国・日付ごとの日次スコア
+	(ソース、国、日付)ごとの集約：この三重に対応する全レイヤー1スコア(score_row)を収集。国/日付でエントリが欠けている場合は前日とトレンドから推定。
+	セキュリティグループ（グループ100）：日次スコア = MIN(収集スコア)。欠損値は 100 でパッド（「悪い事象1件で十分」）。
+	その他グループ：ダミー 0 と 100 に欠損用パッド値 50 を加え、日付ごとの配列長を統一。日次スコア = この配列の算術平均。
+	前日：(ソース、国、前日)の最後のレイヤー2スコアを yesterday として使用。欠損時は開始値 70（セキュリティ）または 85（その他）。
+	平滑化：score_final = 0.6 × 日次スコア + 0.4 × yesterday。score_final = max(0, min(100, score_final))。小数第2位。
+	回復：国にその日のエントリがない場合、回復を適用：セキュリティは score = min(95, score + 0.2)、その他は score = min(95, score + 1.0)。最大90日まで補充。
+
+
+
+________________________________________________________________________________
+レイヤー3 — 国別 NFSI（生スコア）
+	寄与：(国、日付)ごとに全ソース（コネクタ）のレイヤー2スコアを提供。欠損コネクタエントリはスコア 50（no_data）と no_data フラグ。
+	有効重み：各ソース n について eff_w_n = group_n × (scoreValue_n/100) × updateMult_n。group < 0 のソースは除外。
+	加重平均：sum_weighted = Σ_n(score_n × eff_w_n) + 0×1 + 100×1（ダミー）。baseScore = sum_weighted / sum_weights。
+	セキュリティ最小：minSec = MIN(score_n、group_n=100 かつ no_data でない n 全体)。セキュリティソースがなければ minSec = 80。
+	紛争マルス：minSec < 70 なら conflictMalus = min(35, (70−minSec)×1.0)。rawScore = baseScore − conflictMalus。rawScore = max(0, min(100, rawScore))。
+	人口乗数（負の効果）：popNegMultiplier = min(2, refLog/popLog)。脆弱性およびオプションで小国マルスに使用。
+	脆弱性マルス：WGI_0_10 = est_total/10。governanceGap = 10 − WGI_0_10。fragilityMalus は [0, 15] にクランプ。rawScore = rawScore − fragilityMalus。
+	小国マルス：pop < 5,000,000 なら smallPopMalus、[0, 25] にクランプ。rawScore = rawScore − smallPopMalus。
+	人口ボーナス：popBonus = min(4, log₁₀(pop) × 0.5)。rawScore = rawScore + popBonus。[0, 100]。
+	WGI pull：est_total がある場合(0–100)：finalScore = rawScore + (100−rawScore) × (est_total/100) × 0.95。nfsi_raw = max(1, min(100, finalScore))。小数第2位。
+
+
+
+________________________________________________________________________________
+レイヤー4 — 日次平滑化（慣性）
+	前日：prevScore = (国、前日)の最後に保存された NFSI 値。
+	セキュリティ危機：minSec < 25 の場合、平滑化なし：NFSI_Today = nfsi_raw（即時パススルー）。
+	平滑化：prevScore が存在しセキュリティ危機でない場合：no_data 割合に応じて inertiaWeight = 0.45 / 0.50 / 0.80。smoothed = prevScore × inertiaWeight + nfsi_raw × (1 − inertiaWeight)。
+	日次変動上限：diff = smoothed − prevScore。diff > 3 なら smoothed = prevScore + 3。diff < −3 なら smoothed = prevScore − 3。NFSI_Today = smoothed（小数第2位）。
+
+
+
+________________________________________________________________________________
+計算参照 — 式・定数・疑似コード
+	本節はNFSIに関連する全計算を列挙：数式、全定数の正確な値、各処理レイヤーの疑似コード。監査人・研究者向けの完全な監査可能参照として機能。
+
+
+
+________________________________________________________________________________
+定数 — 計算に影響する全値
+	以下の定数は実装で固定され各レイヤー式で使用。各値には定義された根拠があり、任意の数は使わない。
+	ConstantValueDescription根拠（なぜこの値か）LAYER2_TODAY_WEIGHT0.6レイヤー2平滑化における当日スコアの重み（当日60％、前日40％）。60/40の割合：当日を前日より強くし新規イベントを反映。前日40％で単日スパイクを抑制。LAYER2_YESTERDAY_WEIGHT0.4レイヤー2平滑化における前日の重み。0.6の補数。滑らかな遷移を確保し単日への過反応を防ぐ。LAYER2_RECOVERY_PER_DAY_SECURITY0.2セキュリティグループ（グループ100）でデータなしの場合の1日あたり回復ポイント。セキュリティ指標はより保守的に回復。欠損セキュリティデータを「問題なし」と解釈しない。LAYER2_RECOVERY_PER_DAY_OTHER1.0その他全グループでデータなしの場合の1日あたり回復ポイント。セキュリティより速く中立へ。1ポイント/日はおおよそ1週間でスケール中央に相当。LAYER2_RECOVERY_CAP95回復時の最大スコア（100ではない）。新データなしでは「完全安定」(100)を付けない。95は「非常に良いが現データで未確認」。LAYER2_NO_DATA_START_SECURITY70前日が存在しない場合のセキュリティグループの開始値。中央やや下。未知のセキュリティでは楽観を仮定しない。70＝「穏健な仮定」。LAYER2_NO_DATA_START_OTHER85前日が存在しない場合のその他グループの開始値。中央やや上。履歴のないマクロ指標はデータが出るまで中〜上範囲に設定。LAYER2_RECOVERY_MAX_DAYS90回復で埋める最大日数。約4分の1。それを超えるとエントリは恒久欠損として扱い外挿しない。NFSI_ARRAY_PAD_VALUE50非セキュリティグループの欠損エントリのパッド値（配列長統一）。50＝スケール中央。欠損値で平均を偏らせない。NFSI_DUMMY_LOW0レイヤー3加重平均の低いダミー値。スケール下端のアンカー。少数ソースがスコアを人為的に引き上げるのを防ぐ。NFSI_DUMMY_HIGH100レイヤー3加重平均の高いダミー値。各重み1。上端のアンカー。安定重み付けのためダミー0と対称。LAYER3_NO_DATA_NEUTRAL_SCORE50欠損コネクタデータ（no_data）の中立スコア。欠損コネクタにペナルティも報酬もなし。50＝0–100スケールの中央。LAYER3_SCORE_FLOOR1NFSI最小値（ゼロ不可）。0は「安定性なし」。1でゼロ除算を避け「極めて低いが定義済み」を示す。NFSI_COUNTRY_CAP100国スコアの上限。スケール0–100。100＝モデル内で可能な最良の安定性評価。LAYER3_NO_SECURITY_DEFAULT_MINSEC80セキュリティソースが存在しない場合のMin(セキュリティ)のデフォルト。セキュリティデータなしでは紛争マルスは発動しない。80は閾値70を上回り「信頼できるセキュリティ情報なし」を示す。LAYER3_CONFLICT_THRESHOLD70閾値：Min(セキュリティ)がこれを下回ると紛争マルスが発動。70＝スケールの上1/3。それを下回るとセキュリティは減算に十分重要とみなされる。LAYER3_CONFLICT_MALUS_FACTOR1.0マルス = (閾値 − MinSec) × 係数。線形減算：70を1ポイント下回るごとに1ポイントマルス。把握・較正が容易。LAYER3_CONFLICT_MALUS_CAP35紛争マルスは35を上限。単一のセキュリティ指標が総合スコアを支配しないように。35≈スコア範囲の半分。LAYER3_POPULATION_REF45,000,000pop-neg乗数用の参照人口（log₁₀）。EU大国（例スペイン）の桁。小国の対数スケーリングの参照に使用。LAYER3_POP_NEG_MULTIPLIER_CAP2.0pop-neg乗数は最大2（小国：負の効果が強い）。小国を過度にペナルティしない。係数2で増幅を2倍に制限。LAYER3_POP_LOG_MIN100,000log₁₀用の最小人口（ゼロ除算回避）。log₁₀(100,000)=5。極小国での極端な値とゼロ除算を避ける。LAYER3_WGI_SENTIMENT_SCALE10WGI 0–100をスケール0–10にマッピング（est_total/10）。世銀WGIは0–100。10にスケールすると脆弱性式が簡潔になり10点尺度と一致。LAYER3_FRAGILITY_POP_FACTOR3.0脆弱性マルスの係数：governanceGap × (1/log₁₀(pop)) × 係数 × popNegMult。脆弱性効果の強さ。3.0は小国のガバナンスギャップが目立つが上限付きになるよう較正。LAYER3_FRAGILITY_MALUS_CAP15脆弱性マルスは15を上限。脆弱性はスコアを下げるが他の要因を覆さない。15ポイント≈スケールの15％。LAYER3_SMALL_POP_THRESHOLD5,000,000この人口未満の国に小国マルスを適用。UN/世銀はしばしば5Mを「小国」閾値に使用。文献と一致。LAYER3_SMALL_POP_MALUS_PER_LOG104.0閾値以下のlog₁₀ステップあたりのマルス。対数スケール：人口が1桁少ないごとに4ポイントマルス。SMALL_POP_MALUS_CAPで上限。LAYER3_SMALL_POP_MALUS_CAP25小国マルスは25を上限。極小国への最大減算。サイズだけがスコアを支配しないように。LAYER3_POPULATION_BONUS_FACTOR0.5人口ボーナス：log₁₀(pop) × 係数。大国はわずかなボーナス（データ品質・サンプル効果）。0.5で効果を穏やかに。LAYER3_POPULATION_BONUS_CAP4.0人口ボーナスは4を上限。ボーナスは目立つが紛争・脆弱性マルスを相殺しない。上限4ポイント。LAYER3_WGI_PULL0.95WGI pull：finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95。強いガバナンスがスコアを引き上げ。0.95でWGI=100時に100へのギャップをほぼ全開。LAYER1_DEFAULT_SCORE50レイヤー1：span=0またはmin/max欠損時のデフォルトスコア。正規化が未定義のときの中立値。任意のペナルティ・報酬なし。LAYER4_INERTIA_STANDARD0.80標準：前日80％、今日20％。主な慣性。今日20％で新規イベントが急変なく反映。LAYER4_INERTIA_HIGH_NO_DATA0.45日次変動最大±3ポイント。日をまたぐ急なジャンプを防ぐ。3ポイント/日で数日で反応可能。LAYER4_INERTIA_SCORE_WITHOUT_L1L20.50セキュリティ危機閾値：25未満で平滑化なし（即時パススルー）。25未満＝重大なセキュリティ水準。平滑化すると急性危機が隠れるため生スコアを即時適用。LAYER4_DAILY_CHANGE_CAP±3no_data割合≥50％時の慣性重み（今日55％）。欠損データが多いほど今日のスコアへの依存を減らす。LAYER4_SECURITY_CRISIS_THRESHOLD25L1/L2データなしスコア時の慣性重み（今日50％）。今日の値が実L1/L2データに基づかない場合の等比重。安定性と新しさを同等に。
+
+
+
+________________________________________________________________________________
+レイヤー1 — データソースごとの行スコア（指標正規化）
+	Formulas
+	span = max_raw − min_raw (over all rows of the source)
+	If span ≤ 0 or min_raw/max_raw undefined: score_row = 50 for all rows.
+	Else per row: normalized = (raw − min_raw) / span × 100
+	Direction: score_row = 100 − normalized if higher raw = worse stability, else score_row = normalized
+	score_row = clamp(round(score_row, 2); 0; 100)
+	Pseudo-code
+	MIN_RAW = ソース全行のMIN(生値)
+	MAX_RAW = ソース全行のMAX(生値)
+	SPAN = MAX_RAW − MIN_RAW
+	各行: IF SPAN = 0 THEN score_row = 50
+	ELSE 正規化 = (生値 − MIN_RAW) / SPAN × 100
+	score_row = 100 − 正規化
+	score_row = CLAMP(score_row, 0, 100)
+
+
+
+________________________________________________________________________________
+レイヤー2 — コネクタ・国・日付ごとの日次スコア
+	Formulas
+	Security group (group = 100): dayScore = MIN(score_row for (connector, iso2, date)); pad missing with 100.
+	Other groups: arr = [0, score_row₁, …, score_rowₖ, 50, …, 50, 100]; pad 50 to uniform length M; dayScore = AVG(arr).
+	yesterday = last L1 score (connector, iso2, previous day); if missing: 70 (security) or 85 (other).
+	score_final = 0.6 × dayScore + 0.4 × yesterday
+	score_final = clamp(round(score_final, 2); 0; 100). Recovery: no entry → score += 0.2 (security) or 1.0 (other), cap 95, max 90 days.
+	Pseudo-code
+	(connector_id, iso2, 日付)ごとに score_row を収集
+	IF グループ = 100: 欠損を100で埋める
+	ELSE 欠損を50で埋める
+	日次スコア = グループで集約
+	score_final = 0.6 × 日次スコア + 0.4 × 前日
+
+
+
+________________________________________________________________________________
+レイヤー3 — 国別NFSI（生スコアと調整）
+	式（実装順）
+	Effective weight: effW_n = group_n × (scoreValue_n/100) × updateMult_n (scoreValue_n = connector weight/100).
+	sum_weighted = Σ_n (score_n × effW_n) + 0×1 + 100×1; sum_weights = Σ_n effW_n + 2; baseScore = sum_weighted / sum_weights.
+	minSec = MIN(score_n for group_n=100, not no_data); if none: minSec = 80.
+	conflictMalus = min(35, max(0, (70 − minSec)×1.0)); rawScore = baseScore − conflictMalus; rawScore = clamp(rawScore; 0; 100).
+	popNegMult = min(2, log₁₀(45e6)/log₁₀(max(pop, 100e3))). Fragility: WGI_0_10 = est_total/10; governanceGap = 10−WGI_0_10; popSens = 1/log₁₀(pop); fragilityMalus = min(15, governanceGap×popSens×3×popNegMult); rawScore −= fragilityMalus.
+	Small country (pop < 5e6): smallPopMalus = min(25, (log₁₀(5e6)−log₁₀(pop))×4); rawScore −= smallPopMalus.
+	popBonus = min(4, log₁₀(pop)×0.5); rawScore += popBonus; rawScore = clamp(rawScore; 0; 100).
+	WGI pull: finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95. nfsi_raw = max(1, min(100, finalScore)).
+	Pseudo-code
+	effW_n = group_n × (scoreValue_n/100) × updateMult_n
+	sum_weighted = Σ(score_n × effW_n) + ダミー
+	baseScore = sum_weighted / sum_weights
+	IF minSec < 70 THEN conflictMalus; rawScore = baseScore − malus
+	nfsi_raw = CLAMP(rawScore, 0, 100)
+
+
+
+________________________________________________________________________________
+レイヤー4 — 日次平滑化（慣性）とクラッシュモード
+	Formulas
+	prevScore = last NFSI value (iso2, previous day). Security crisis = (minSec ≠ null AND minSec < 25).
+	If security crisis: NFSI_Today = nfsi_raw (no smoothing).
+	Else if prevScore exists: no_data_ratio = #no_data_connectors / #contributors. inertiaWeight = 0.45 if no_data_ratio ≥ 0.5; 0.50 if score without L1/L2 data; else 0.80. smoothed = prevScore×inertiaWeight + nfsi_raw×(1−inertiaWeight).
+	diff = smoothed − prevScore; if diff > 3: smoothed = prevScore + 3; if diff < −3: smoothed = prevScore − 3. NFSI_Today = round(smoothed, 2).
+	Pseudo-code
+	prevScore = LAST_NFSI(iso2, 前日)
+	SecurityCrisis = (minSec != null かつ minSec < 25)
+	IF SecurityCrisis THEN NFSI_Today = nfsi_raw
+	ELSE smoothed = prevScore × inertiaWeight + nfsi_raw × (1 − inertiaWeight); NFSI_Today = 変動上限(smoothed, ±3)
+
+
+
+________________________________________________________________________________
+最終スコア（レイヤ3）とクラッシュモード
+	NFSI_Base = 加重平均。ダミー0と100。
+	MIN(グループ100セキュリティスコア) < 70の場合：コンフリクトマルス。欠損データは中立スコア50。
+	1) 正規化指標 → score_row。2) ソース/日ごとScore_Node。3) effective_weight。4) NFSI_Base、NFSI_Today。
+
+
+
+________________________________________________________________________________
+7日予測
+	VAR法に基づく予測（90日履歴、複数系列）。検証指標（RMSE、Diebold-Mariano）は主張しない；方法論の追跡可能性のための記述。
+
+
+
+________________________________________________________________________________
+ガバナンス・監査・変更管理
+	版管理：モデル・データ変更のセマンティック版管理。各リリースに changelog とスナップショットハッシュを含む。監査トレイル：データスナップショットとモデルバイナリの不変ログ（ハッシュ＋タイムスタンプ）。外部監査：オンボーディング（NDA → 一時データアクセス → 再現実行 → 監査報告）。インシデント手順：誤報是正と対外コミュニケーションの定義済みステップ。
+
+
+
+________________________________________________________________________________
+倫理・プライバシー・ライセンス
+	GDPR：マッピング文書化。PII最小化。保持ポリシー定義。ライセンス：データインベントリおよび /legal/sources/ の第三者データライセンス一覧。免責：投資助言ではない。
+
+
+
+________________________________________________________________________________
+人口（世界）の算出詳細
+	NationFilesが使用する国・年別人口は単一ソースではなく、複数ソース（国連、世界銀行、国勢調査等）の加重コンセンサスで構築。
+
+
+
+________________________________________________________________________________
+使用ソースと重み
+	各ソースが国（および任意で年）ごとの値を提供。重みで年次コンセンサスを形成。
+	SourceWeight説明・出典regional_stat1.5Eurostat (demo_pjan) — highest authority for European countriesun_proxy1.5UN Population Data Portal (WPP) — global referenceimf_stat1.2IMF WEO (DB.Nomics) — LP (population)worldbank1.2World Bank SP.POP.TOTL (2010–2026)wikidata0.9Wikidata SPARQL (P297, P1082)cia_wpr0.8CIA World Factbook / country-json (estimates)restcountries0.8REST Countries API v3.1 (population)ninjas0.5API-Ninjas Population (forecast; lowest weight)
+
+
+
+________________________________________________________________________________
+式と疑似コード
+	年ごとに欠損を外挿で補完；コンセンサスは加重平均；生物学的成長制約を適用。
+	外挿（2000年から目標年）
+	入力: data = ソース[iso2] (年 → 人口)
+	年でソート；minYear, maxYear
+	minYearから目標年まで：欠損を外挿
+	コンセンサス = 年別加重平均
+	年別加重コンセンサス
+	rawConsensus = ROUND( Σ(値 × 重み) / Σ(重み) )
+	nullでない値を持つソースのみ合計に含む。
+	生物学的制約（2024年以降）
+	APIの急激な予測を和らげるため、年間成長率に上限（文脈に応じ例：最大2–3％）を設定。
+	allowedGrowth = MAX(0.015, masterRate + 0.005)
+	IF (rawConsensus - prevConsensus) / prevConsensus > allowedGrowth THEN 成長を制限
+
+
+
+________________________________________________________________________________
+用語集 — 本レポートで使用する用語
+	本用語集はレポートで使う主要用語を平易に説明。非専門家の理解を助けるため。
+	NFSINationFiles Stability Index。国・日ごとの0–100正規化安定性指標。値が高いほど安定評価。複数データソースからレイヤー1–4で算出。レイヤー1第一処理層：各ソースの生値を行単位スコア0–100に正規化(Min-Max、方向「高い＝良い/悪い」固定)。レイヤー2第二層：行スコアをソース・国・日付ごとに日次スコアに集約し前日値で平滑化(例：当日60％、前日40％)。レイヤー3第三層：全ソーススコアから国別NFSI(生スコア)を算出。有効重みでの加重平均、紛争マルス、WGIプル、その他調整。レイヤー4第四層：日次平滑化(慣性)。最終NFSI日次値は前日と当日生スコアを組み合わせ(例：前日80％、当日20％)、日次変動に上限(例±3)。生値 (raw)0–100スコアに変換する前のデータソースの元の数値(例：紛争件数、割合、スケール値)。正規化生値を共通範囲(ここでは0–100)へ変換。Min-Maxでは(値−最小)/(最大−最小)×100。「高い＝悪い」時は反転可。スコア(行/日次/国)0–100に制限された値：行スコア(レイヤー1)、日次スコア(ソース・国・日付、レイヤー2)、国スコア＝NFSI(レイヤー3–4)。ゴールドスタイン尺度GDELTが使う−10(紛争的)〜+10(協調的)の尺度。NFSIロジックで安定性スコアに変換(ゴールドスタインが高い＝安定性が高い)。ダミー値集約時の固定加算値(0と100)。ソースが少なくても平均・重みが安定するようにする。慣性時間による平滑化：当日NFSIは前日に一部依存(例：前日80％、新規生スコア20％)し短期ノイズを抑制。リカバリ国・日付で新データがない場合、スコアを段階的に引き上げ(上限95)、欠損を無期限にペナルティしない。紛争マルスセキュリティ指標(紛争・暴力等)の最小が閾値(70)を下回るとNFSIから減算。セキュリティデータの役割を強調。WGI (Worldwide Governance Indicators)世銀の政府品質指標(法の支配、有効性等)。NFSIでは「WGIプル」でガバナンスが強いと生スコアを引き上げ可能。セキュリティグループ(グループ100)セキュリティ重視ソースのテーマグループ(紛争、渡航注意等)。日次集約では最小値を採用(1件の重大事象で十分)。コネクタ / データソースNFSIのレイヤー1–3に寄与する統合データソース(例：世銀、GDELT、ACLED)。各コネクタにテーマグループと重みあり。No-data特定日のソースの欠損値。中立スコア(例50)またはリカバリロジックで扱い、計算が失敗しないようにする。VAR(ベクトル自己回帰)7日予測の統計手法。複数時系列(NFSI、ニュースリスク等)の履歴で翌日以降を推定。データプロビナンスデータの出所と追跡可能性：どのソース、どのライセンス、更新頻度。本レポートのデータインベントリと法務ソースに記載。監査トレイル変更(データスナップショット、モデル版等)の追跡可能なログ。タイムスタンプとハッシュで監査・再現性に供する。再現性同じ入力と手法から同じ結果が得られる性質。文書化された式・コード・データプロビナンスで追求。
+
+
+
+________________________________________________________________________________
+関連文書（法務・会社）
+	以下のページに方法論・データ出所・法的参照の補足情報があります。
+	ソースレジストリ — プロバイダー・ライセンス・エンドポイント・間隔・最終取得(UTC)付きの全アクティブ DataSourceConnector。動的リスト。NFSIに影響しないソースも含む。 (/legal/sources/)独立性声明 — 六つの基本原則、アルゴリズムの平等取扱い、エラー修正プロセス(data@nationfiles.com)、版管理(changelog)、予測免責事項。 (/legal/independence/)ガバナンス・データ倫理 — データガバナンス、実行制御(Cron、Last Known Value 24h)、NFSI v2.5、sourceQuality、Human-in-the-Loop、保持、ガバナンス連絡先。 (/legal/governance/)グローバルセキュリティ・レジリエンス — セキュリティガバナンス(IPS、WAF、TLS 1.3、PDO、SCA/SAST)、監査サイクル、ゼロ知識、技術的保護措置。 (/legal/security/)NFSI — 製品説明 — NFSIの運用説明：15分サイクル、四本柱(セキュリティ、ガバナンス、マクロ経済、人口統計)、クラッシュモード、ユースケース。 (/company/nfsi/)法的表示 — 運営者、連絡先、管轄、ライセンス(CC BY-ND 4.0)、法的根拠。 (/legal/legal-notice/)プライバシーポリシー — データ最小化、AI分離(NaciroはPIIで学習しない)、保存場所、監督当局。 (/legal/privacy/)
+	Neawolf Media Group / NationFiles
+	Reinhardstr. 1b, 52078 Aachen, ドイツ
+	法的表示 | 透明性とデータ倫理
+
+================================================================================
+
+https://nationfiles.com/ja/legal/validation-and-verification-report/
+
+________________________________________________________________________________
+基準日:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+法的に有効なのはドイツ語版のみです。
+	法的に有効なのはドイツ語版のみです。
+
+
+
+________________________________________________________________________________
+Disclaimer
+	本ページは法務助言に代わるものではなく、公式の警告・勧告を構成しません。予測・評価はモデルに基づきます。
+
+
+
+________________________________________________________________________________
+Kontakt
+	法務お問い合わせ: インプリント参照。
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+透明性・データ倫理:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+出典・ライセンス:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+インフラ:
+	処理はドイツ国内のみ、TLS 1.3、VPC分離。
+
+
+
+________________________________________________________________________________
+データ保護:
+	GDPRに従った個人データ処理。第三者提供・AI学習利用なし。
+
+
+
+________________________________________________________________________________
+免責:
+	外部コンテンツ・派生判断について責任を負いません。WpHG上の投資助言ではありません。
+
+
+
+________________________________________________________________________________
+管轄裁判所:
+	アーヘン、ドイツ。国連国際物品売買条約（CISG）を除くドイツ法が適用。
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – All rights reserved.
+
+nationfiles.com | 検証・妥当性確認レポート | 18.04.2026 21:45
