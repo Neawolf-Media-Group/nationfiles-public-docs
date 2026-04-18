@@ -1,0 +1,940 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+Data Sources
+
+
+
+
+________________________________________________________________________________
+As of:
+	18.04.2026
+	PDF from: 18.04.2026 21:30
+
+================================================================================
+
+________________________________________________________________________________
+
+	This page shows all data sources that NationFiles uses in real time.
+
+
+
+________________________________________________________________________________
+SYSTEM CONFIGURATION: DATA SOURCES
+	Automated listing of all active intelligence connectors in accordance with compliance requirements.
+
+
+
+________________________________________________________________________________
+Methodology
+	The data sources listed on this page are connected to the Naciro Intelligence Engine via the DataSourceConnector system. Fetching runs on a schedule (Cron) according to the intervals shown in the table. After import, raw data is filtered, cleaned and aggregated, and feeds into visualizations (e.g. maps, dashboards) as well as stability and prediction models. Each source may have a weight (score); values are shown in the Connector column of the registry. The methodology complies with the transparency requirements of this source registry.
+
+
+
+________________________________________________________________________________
+Active Data Sources
+	Connector: NewsMediaStck · Intelligence Briefing & sentimen
+	Provider: APILayer GmbH (Mediastack)
+	Reference: https://mediastack.com/
+	License: License Info
+	Endpoint: Mediastack
+	Interval: 15 */8 * * *
+	Last Update: 18.04.2026 16:15
+	Connector: AcledMonthAll · Crisis & Safety Radar (Level 1)
+	Provider: Armed Conflict Location & Event Data Project (ACLED)
+	Reference: https://acleddata.com/
+	License: License Info
+	Interval: 43 0 * * *
+	Last Update: 18.04.2026 01:15
+	Connector: AcledMonthAllOverview · Crisis & Safety Radar (Level 1)
+	Provider: Armed Conflict Location & Event Data Project (ACLED)
+	Reference: https://acleddata.com/
+	License: License Info
+	Endpoint: Acleddata
+	Interval: 23 */6 * * *
+	Last Update: 18.04.2026 18:23
+	Connector: BlindContinentNewsAsean · Continent news ASEAN
+	Provider: ASEAN (Association of Southeast Asian Nations)
+	Reference: https://asean.org
+	License: License Info
+	Endpoint: Asean
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: BlindContinentNewsAS · Continent news ASPI Strategist
+	Provider: Australian Strategic Policy Institute (ASPI)
+	Reference: https://www.aspistrategist.org.au
+	License: License Info
+	Endpoint: Org
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: CurrencyDailyFred · USD rates Fed H.10 (FRED)
+	Provider: Board of Governors of the Federal Reserve System (H.10 via FRED)
+	Reference: https://fred.stlouisfed.org/
+	License: License Info
+	Endpoint: Stlouisfed
+	Interval: 27 * * * *
+	Last Update: 18.04.2026 21:28
+	Connector: AnaCldfZone · Analytics Zone (device/country/d
+	Provider: Cloudflare, Inc.
+	Reference: https://www.cloudflare.com
+	License: License Info
+	Endpoint: Cloudflare
+	Interval: */5 * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: CountriesNetGrpTrfcAnom · Traffic anomalies by location
+	Provider: Cloudflare, Inc.
+	Reference: https://www.cloudflare.com
+	License: License Info
+	Endpoint: Cloudflare
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: CountriesNetTrfcAnom · Traffic anomalies (Cloudflare Ra
+	Provider: Cloudflare, Inc.
+	Reference: https://www.cloudflare.com
+	License: License Info
+	Endpoint: Cloudflare
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: NetTrfcRadarDevice · Traffic by device type (Radar)
+	Provider: Cloudflare, Inc.
+	Reference: https://www.cloudflare.com
+	License: License Info
+	Endpoint: Cloudflare
+	Interval: */15 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: CountriesRaw · Country list (raw)
+	Provider: Countries dataset (Martijn van der Lee / mledoze)
+	Reference: https://github.com/mledoze/countries
+	License: License Info
+	Endpoint: Github
+	Interval: 9 0 1 * *
+	Last Update: 11.04.2026 00:22
+	Connector: CountryBase · Country base (CCA2)
+	Provider: Countries dataset (Martijn van der Lee / mledoze)
+	Reference: https://github.com/mledoze/countries
+	License: License Info
+	Endpoint: Github
+	Interval: 12 0 * * 0
+	Last Update: 18.04.2026 00:38
+	Connector: CountryStates · States/provinces
+	Provider: Countries, States and Cities Database (Darshan Gajara / dr5hn)
+	Reference: https://github.com/dr5hn/countries-states-cities-database
+	License: License Info
+	Endpoint: Github
+	Interval: 14 0 * * 0
+	Last Update: 18.04.2026 00:40
+	Connector: CountriesFips · Country codes (FIPS)
+	Provider: Country Codes and International Organizations (Diego Hernán Mantellini / dieghernan)
+	Reference: https://github.com/dieghernan/Country-Codes-and-International-Organizations
+	License: License Info
+	Endpoint: Github
+	Interval: 3 0 1 * *
+	Last Update: 11.04.2026 00:15
+	Connector: BlindContinentNewsDN · Continent news Defense News
+	Provider: Defense News (Sightline Media Group, LLC)
+	Reference: https://www.defensenews.com
+	License: License Info
+	Endpoint: Defensenews
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: BlindEsriSatelliteFetcher · Esri Satellite (ArcGIS Export)
+	Provider: Esri (Environmental Systems Research Institute, Inc.)
+	Reference: https://www.arcgis.com
+	License: License Info
+	Interval: 7 */12 * * *
+	Last Update: 18.04.2026 12:07
+	Connector: CurrencyBulkFa · ECB exchange rates USD (bulk)
+	Provider: European Central Bank (reference rates via Frankfurter)
+	Reference: https://www.frankfurter.app
+	License: License Info
+	Endpoint: Frankfurter
+	Interval: 0 4 1 * *
+	Last Update: 01.04.2026 04:02
+	Connector: CurrencyDailyFa · ECB daily rates USD (Frankfurter
+	Provider: European Central Bank (reference rates via Frankfurter)
+	Reference: https://www.frankfurter.app
+	License: License Info
+	Endpoint: Frankfurter
+	Interval: 18 * * * *
+	Last Update: 18.04.2026 21:22
+	Connector: BlindContinentNewsEc · Continent news EC Press Corner
+	Provider: European Commission (European Union)
+	Reference: https://ec.europa.eu/commission/presscorner
+	License: License Info
+	Endpoint: Europa
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: EurostatStatArblsQ · Unemployment rate (monthly)
+	Provider: Eurostat (European Commission)
+	Reference: https://ec.europa.eu/eurostat
+	License: License Info
+	Endpoint: Europa
+	Interval: 55 5 */7 * *
+	Last Update: 18.04.2026 06:18
+	Connector: EurostatStatTps · Population on 1 January
+	Provider: Eurostat (European Commission)
+	Reference: https://ec.europa.eu/eurostat
+	License: License Info
+	Endpoint: Europa
+	Interval: 35 5 2 * *
+	Last Update: 11.04.2026 05:50
+	Connector: EurostatTradeWs · EU trade (Eurostat API)
+	Provider: Eurostat (European Commission)
+	Reference: https://ec.europa.eu/eurostat
+	License: License Info
+	Endpoint: Europa
+	Interval: 18 6 5 * *
+	Last Update: 22.03.2026 07:34
+	Connector: MigrationEurostat · Eurostat asylum bilateral
+	Provider: Eurostat (European Commission)
+	Reference: https://ec.europa.eu/eurostat
+	License: License Info
+	Endpoint: Europa
+	Interval: 25 3 5 * *
+	Last Update: 05.04.2026 03:25
+	Connector: MigrationEurostatEmi · Eurostat emigration (migr_emi1ct
+	Provider: Eurostat (European Commission)
+	Reference: https://ec.europa.eu/eurostat
+	License: License Info
+	Endpoint: Europa
+	Interval: 38 3 5 * *
+	Last Update: 23.03.2026 00:02
+	Connector: MigrationEurostatImm · Eurostat immigration (migr_imm1c
+	Provider: Eurostat (European Commission)
+	Reference: https://ec.europa.eu/eurostat
+	License: License Info
+	Endpoint: Europa
+	Interval: 36 3 5 * *
+	Last Update: 22.03.2026 23:45
+	Connector: MigrationEurostatNetm · Eurostat net migration (migr_net
+	Provider: Eurostat (European Commission)
+	Reference: https://ec.europa.eu/eurostat
+	License: License Info
+	Endpoint: Europa
+	Interval: 34 3 5 * *
+	Last Update: 23.03.2026 00:16
+	Connector: CountriesVatRatesApiVer · VAT rates by country (APIVerve)
+	Provider: EvlarSoft LLC (APIVerve)
+	Reference: https://www.apiverve.com
+	License: License Info
+	Endpoint: Apiverve
+	Interval: 45 */8 * * *
+	Last Update: 18.04.2026 16:47
+	Connector: ExchangeRateHstChange · Exchange rate change (daily)
+	Provider: ExchangeRate.host
+	Reference: https://exchangerate.host/
+	License: License Info
+	Endpoint: Exchangerate
+	Interval: 52 */12 * * *
+	Last Update: 18.04.2026 12:52
+	Connector: GovFbiMw · FBI Most Wanted / fugitives
+	Provider: FBI (U.S. Department of Justice)
+	Reference: https://www.fbi.gov
+	License: License Info
+	Endpoint: Opensanctions
+	Interval: 15 23 * * *
+	Last Update: 17.04.2026 23:18
+	Connector: TrvlWarnDe · Travel & security advice (AA)
+	Provider: Federal Foreign Office of Germany (Auswärtiges Amt)
+	Reference: https://www.auswaertiges-amt.de
+	License: License Info
+	Endpoint: Auswaertiges-amt
+	Interval: 18 */8 * * *
+	Last Update: 18.04.2026 16:19
+	Connector: TrvlWarnDeWarn · Travel & security advice (AA) â
+	Provider: Federal Foreign Office of Germany (Auswärtiges Amt)
+	Reference: https://www.auswaertiges-amt.de
+	License: License Info
+	Interval: 18 */8 * * *
+	Last Update: 18.04.2026 16:19
+	Connector: CurrencyDailyFl · USD daily rates (FloatRates)
+	Provider: FloatRates
+	Reference: https://www.floatrates.com
+	License: License Info
+	Endpoint: Floatrates
+	Interval: 0 */1 * * *
+	Last Update: 18.04.2026 21:00
+	Connector: TrvlWarnUk · UK travel advice (GOV.UK)
+	Provider: Foreign, Commonwealth & Development Office (United Kingdom)
+	Reference: https://www.gov.uk/foreign-travel-advice
+	License: License Info
+	Endpoint: Gov
+	Interval: 45 23 * * *
+	Last Update: 17.04.2026 23:45
+	Connector: BlindGeonames · Geographic names, places, coordi
+	Provider: GeoNames geographical database
+	Reference: https://www.geonames.org
+	License: License Info
+	Endpoint: Geonames
+	Interval: 13 4 2 * *
+	Last Update: 02.04.2026 04:13
+	Connector: ContinentGeoJson · Continent GeoJSON (AM/NA/SA)
+	Provider: GitHub, Inc. (community geographic datasets)
+	Reference: https://github.com/datasets/geo-countries
+	License: License Info
+	Endpoint: Github
+	Interval: 23 13 5 * *
+	Last Update: 05.04.2026 13:24
+	Connector: TrvlWarnCaVoy · Travel advice Canada (Voyage)
+	Provider: Global Affairs Canada (Government of Canada)
+	Reference: https://travel.gc.ca
+	License: License Info
+	Endpoint: Gc
+	Interval: 25 */8 * * *
+	Last Update: 18.04.2026 16:26
+	Connector: CountriesGdeltGlobRadar · GDELT global event data
+	Provider: Global Database of Events, Language, and Tone (GDELT Project)
+	Reference: https://www.gdeltproject.org/
+	License: License Info
+	Endpoint: Gdeltproject
+	Interval: */15 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: GdeltMilAndProtests · GDELT military actions & protest
+	Provider: Global Database of Events, Language, and Tone (GDELT Project)
+	Reference: https://www.gdeltproject.org/
+	License: License Info
+	Endpoint: Gdeltproject
+	Interval: */15 * * * *
+	Last Update: 18.04.2026 21:31
+	Connector: DisasterGdacsHumNat · GDACS disaster alerts
+	Provider: Global Disaster Alert and Coordination System (GDACS)
+	Reference: https://www.gdacs.org/
+	License: License Info
+	Endpoint: Gdacs
+	Interval: */29 * * * *
+	Last Update: 18.04.2026 21:31
+	Connector: BlindContinentNewsFB · Continent news FeedBurner
+	Provider: Google LLC (FeedBurner)
+	Reference: https://feedburner.google.com
+	License: License Info
+	Endpoint: Google
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: ContinentCountryGeoJson · Continent GeoJSON
+	Provider: Highsoft AS (Highcharts)
+	Reference: https://www.highcharts.com/
+	License: License Info
+	Endpoint: Highcharts
+	Interval: 1 0 1 * *
+	Last Update: 11.04.2026 00:14
+	Connector: AnaMatomoNf · Matomo Analytics (NF, 7 reports)
+	Provider: InnoCraft Ltd. (Matomo Analytics)
+	Reference: https://matomo.org
+	License: License Info
+	Endpoint: Nationfiles
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: AnaMatomoNfEntryLocale · Matomo entry pages → locale/da
+	Provider: InnoCraft Ltd. (Matomo Analytics)
+	Reference: https://matomo.org
+	License: License Info
+	Endpoint: Nationfiles
+	Interval: 12 * * * *
+	Last Update: 18.04.2026 21:12
+	Connector: BlindContinentNewsIC · Continent news InSight Crime
+	Provider: InSight Crime Incorporated
+	Reference: https://insightcrime.org
+	License: License Info
+	Endpoint: Insightcrime
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: GovIntPol · INTERPOL Red Notices / wanted
+	Provider: INTERPOL (International Criminal Police Organization)
+	Reference: https://www.interpol.int
+	License: License Info
+	Endpoint: Interpol
+	Interval: 30 23 * * *
+	Last Update: 17.04.2026 23:32
+	Connector: BlindContinentNewsMP · Continent news MercoPress
+	Provider: MercoPress (South Atlantic News Agency)
+	Reference: https://en.mercopress.com
+	License: License Info
+	Endpoint: Mercopress
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: BlindContinentNewsTDip · Continent news The Diplomat
+	Provider: MHT Corporation (The Diplomat)
+	Reference: https://thediplomat.com
+	License: License Info
+	Endpoint: Thediplomat
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: BlindNasaSatelliteFetcher · NASA Satellite (wms.cgi)
+	Provider: National Aeronautics and Space Administration (NASA)
+	Reference: https://nasa.gov
+	License: License Info
+	Interval: 7 */12 * * *
+	Last Update: 18.04.2026 12:07
+	Connector: NASA · NASA FIRMS active fires
+	Provider: National Aeronautics and Space Administration (NASA)
+	Reference: https://firms.modaps.eosdis.nasa.gov/
+	License: License Info
+	Endpoint: Nasa
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:33
+	Connector: CountryNewsRiskLevel · News Risk (24h, Carry-Forward)
+	Provider: NationFiles
+	Reference: https://nationfiles.com
+	License: License Info
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: GdeltMilAndProtestsGatekeeper · GDELT gatekeeper (current)
+	Provider: NationFiles
+	Reference: https://nationfiles.com/
+	License: License Info
+	Interval: */15 * * * *
+	Last Update: 18.04.2026 21:35
+	Connector: NfMilitaryMassViolenceNfsi · MLMV actor-day stress (NFSI)
+	Provider: NationFiles
+	Reference: https://nationfiles.com/
+	License: License Info
+	Interval: */15 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: NfNewsCountry24 · Country24hNews
+	Provider: NationFiles
+	Reference: https://nationfiles.com
+	License: License Info
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: NfRawNewsSignals · Raw News Signals (Index)
+	Provider: NationFiles
+	Reference: https://nationfiles.com
+	License: License Info
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: NfRawNewsSignalsEventRisk · Raw News Signals Event Risk
+	Provider: NationFiles
+	Reference: https://nationfiles.com
+	License: License Info
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: TravelAdvisoryUnified · Travel warnings (multi-authority
+	Provider: NationFiles
+	Reference: https://www.nationfiles.com/
+	License: License Info
+	Interval: 32 */3 * * *
+	Last Update: 18.04.2026 18:44
+	Connector: OsFtm · OpenSanctions PEP (FTM JSON)
+	Provider: OpenSanctions
+	Reference: https://www.opensanctions.org/
+	License: License Info
+	Endpoint: Opensanctions
+	Interval: 20 1 * * *
+	Last Update: 18.04.2026 21:40
+	Connector: MilitaryBase · OSM military bases
+	Provider: OpenStreetMap Foundation
+	Reference: https://overpass-api.de/
+	License: License Info
+	Endpoint: Overpass-api
+	Interval: 54 * * * *
+	Last Update: 18.04.2026 20:54
+	Connector: Powerplant · WRI + OSM power plants
+	Provider: OpenStreetMap Foundation
+	Reference: https://overpass-api.de/
+	License: License Info
+	Endpoint: Overpass-api
+	Interval: 43 9 * * *
+	Last Update: 18.04.2026 09:44
+	Connector: MigrationOecdMig · OECD MIG in/out migration (B11/B
+	Provider: Organisation for Economic Co-operation and Development (OECD)
+	Reference: https://www.oecd.org
+	License: License Info
+	Endpoint: Nomics
+	Interval: 34 3 5 * *
+	Last Update: 21.03.2026 11:44
+	Connector: OecdSdmxGdpvAnnpct · GDP volume growth % (annual)
+	Provider: Organisation for Economic Co-operation and Development (OECD)
+	Reference: https://www.oecd.org
+	License: License Info
+	Endpoint: Oecd
+	Interval: 35 13 */14 * *
+	Last Update: 18.04.2026 14:52
+	Connector: CountriesPopPrisn100K · Prison population rate per 100k
+	Provider: Our World in Data (Global Change Data Lab, University of Oxford)
+	Reference: https://ourworldindata.org
+	License: License Info
+	Endpoint: Ourworldindata
+	Interval: 8 12 15 * *
+	Last Update: 15.04.2026 12:09
+	Connector: OWIDDemocracyIndex · Democracy Index (EIU)
+	Provider: Our World in Data (Global Change Data Lab, University of Oxford)
+	Reference: https://ourworldindata.org
+	License: License Info
+	Endpoint: Ourworldindata
+	Interval: 23 12 */14 * *
+	Last Update: 18.04.2026 12:37
+	Connector: Airports · Airports worldwide
+	Provider: OurAirports (open airport database)
+	Reference: https://davidmegginson.github.io/ourairports-data/
+	License: License Info
+	Endpoint: Github
+	Interval: 0 0 1 * *
+	Last Update: 01.04.2026 00:11
+	Connector: CountryGeoJson · Country GeoJSON
+	Provider: R2 Datahub (CKAN)
+	Reference: https://datahub.io/
+	License: License Info
+	Endpoint: Datahub
+	Interval: 13 2 1 * *
+	Last Update: 01.04.2026 02:13
+	Connector: BlindContinentNewsRand · Continent news RAND
+	Provider: RAND Corporation
+	Reference: https://www.rand.org
+	License: License Info
+	Endpoint: Rand
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: CountriesNatBorders · Country borders (neighbours)
+	Provider: REST Countries API
+	Reference: https://restcountries.com
+	License: License Info
+	Endpoint: Restcountries
+	Interval: 5 0 3 * *
+	Last Update: 03.04.2026 00:06
+	Connector: CountriesNatLanguages · Country names & languages
+	Provider: REST Countries API
+	Reference: https://restcountries.com
+	License: License Info
+	Endpoint: Restcountries
+	Interval: 5 1 3 * *
+	Last Update: 11.04.2026 01:15
+	Connector: CountriesNatRegSubReg · Region, subregion, capital
+	Provider: REST Countries API
+	Reference: https://restcountries.com
+	License: License Info
+	Endpoint: Restcountries
+	Interval: 6 0 3 * *
+	Last Update: 03.04.2026 00:06
+	Connector: CountryBaseInfo · REST Countries base info
+	Provider: REST Countries API
+	Reference: https://restcountries.com
+	License: License Info
+	Endpoint: Restcountries
+	Interval: 33 3 * * *
+	Last Update: 18.04.2026 03:49
+	Connector: WorldUnivDataSetIpsa · World Universities Dataset (IPSA
+	Provider: scientia-ipsa (University of Lucerne)
+	Reference: https://github.com/scientia-ipsa/World_Universities_Datasets
+	License: License Info
+	Endpoint: Github
+	Interval: 25 2 5 * *
+	Last Update: 05.04.2026 02:25
+	Connector: BlindContinentNewsTD · Continent news The Defense Post
+	Provider: The Defense Post
+	Reference: https://www.thedefensepost.com
+	License: License Info
+	Endpoint: Thedefensepost
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: EconFredHerCountScOvSc · Overall Economic Freedom (Herita
+	Provider: The Heritage Foundation
+	Reference: https://www.heritage.org/index
+	License: License Info
+	Endpoint: Heritage
+	Interval: 20 21 */14 * *
+	Last Update: 17.04.2026 23:26
+	Connector: EconFredHerCountScRanks · World/region rank (Heritage)
+	Provider: The Heritage Foundation
+	Reference: https://www.heritage.org/index
+	License: License Info
+	Endpoint: Heritage
+	Interval: 15 20 */14 * *
+	Last Update: 18.04.2026 20:28
+	Connector: EconFredHerCountScRights · Property Rights (Heritage)
+	Provider: The Heritage Foundation
+	Reference: https://www.heritage.org/index
+	License: License Info
+	Endpoint: Heritage
+	Interval: 5 17 */14 * *
+	Last Update: 17.04.2026 22:51
+	Connector: EconFredHerCountScTax · Tax & gov. spending (Heritage)
+	Provider: The Heritage Foundation
+	Reference: https://www.heritage.org/index
+	License: License Info
+	Endpoint: Heritage
+	Interval: 10 19 */14 * *
+	Last Update: 18.04.2026 19:24
+	Connector: CountriesNetSpmBot · Botnet C&C by country (Spamhaus)
+	Provider: The Spamhaus Project Ltd.
+	Reference: https://www.spamhaus.org
+	License: License Info
+	Endpoint: Spamhaus
+	Interval: 7 */8 * * *
+	Last Update: 18.04.2026 16:08
+	Connector: TravelStateGov · U.S. travel advisories Level 4 (
+	Provider: U.S. Department of State (Bureau of Consular Affairs)
+	Reference: https://travel.state.gov
+	License: License Info
+	Endpoint: State
+	Interval: 18 */8 * * *
+	Last Update: 18.04.2026 16:19
+	Connector: SdgGlobalIndexSdsn · SDG overall index (SDSN ArcGIS)
+	Provider: UN Sustainable Development Solutions Network (SDSN)
+	Reference: https://www.sdgindex.org/
+	License: License Info
+	Endpoint: Arcgis
+	Interval: 45 22 */14 * *
+	Last Update: 17.04.2026 22:51
+	Connector: SdgIndexCountryPop · SDG Index population (SDSN)
+	Provider: UN Sustainable Development Solutions Network (SDSN)
+	Reference: https://dashboards.sdgindex.org/
+	License: License Info
+	Endpoint: Sdgindex
+	Interval: 30 21 */14 * *
+	Last Update: 17.04.2026 21:43
+	Connector: BlindContinentNewsUneca · Continent news UNECA
+	Provider: United Nations Economic Commission for Africa (UNECA)
+	Reference: https://www.uneca.org
+	License: License Info
+	Endpoint: Uneca
+	Interval: */30 * * * *
+	Last Update: 18.04.2026 21:30
+	Connector: WorldEarthQuakeUsgs · Earthquakes worldwide (USGS)
+	Provider: United States Geological Survey (USGS)
+	Reference: https://earthquake.usgs.gov
+	License: License Info
+	Endpoint: Usgs
+	Interval: * * * * *
+	Last Update: 18.04.2026 21:40
+	Connector: SeaPort · Seaports worldwide
+	Provider: Upply SAS
+	Reference: https://www.upply.com/
+	License: License Info
+	Interval: 16 0 1 * *
+	Last Update: 01.04.2026 00:19
+	Connector: CountriesConflictUcdpGed · UCDP GED conflict events
+	Provider: Uppsala Conflict Data Program (UCDP)
+	Reference: https://ucdp.uu.se/
+	License: License Info
+	Endpoint: Uu
+	Interval: 45 */8 * * *
+	Last Update: 18.04.2026 16:46
+	Connector: CountriesVatRatesVatLup · VAT rates EU (VAT Lookup)
+	Provider: VAT Lookup
+	Reference: https://www.vatlookup.eu
+	License: License Info
+	Endpoint: Vatlookup
+	Interval: 50 2 5 * *
+	Last Update: 05.04.2026 02:51
+	Connector: CountriesHeadOfStateWD · Heads of state & government
+	Provider: Wikidata (Wikimedia Foundation, Inc.)
+	Reference: https://www.wikidata.org
+	License: License Info
+	Endpoint: Wikidata
+	Interval: 17 3 * * *
+	Last Update: 18.04.2026 06:16
+	Connector: CountryCapitalWD · Capitals (coordinates & names)
+	Provider: Wikidata (Wikimedia Foundation, Inc.)
+	Reference: https://www.wikidata.org
+	License: License Info
+	Endpoint: Wikidata
+	Interval: 6 3 * * *
+	Last Update: 18.04.2026 03:07
+	Connector: CountriesWb65Up · Population 65+ %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 10 0 3 * *
+	Last Update: 03.04.2026 00:12
+	Connector: CountriesWbAccsZs · Access to electricity %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 4 8 * *
+	Last Update: 08.04.2026 04:31
+	Connector: CountriesWbAirPsgr · Air passengers carried
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 11 3 4 * *
+	Last Update: 04.04.2026 03:12
+	Connector: CountriesWbArtcSc · Scientific & technical articles
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 9 * *
+	Last Update: 09.04.2026 02:31
+	Connector: CountriesWbCcEst · Control of corruption (estimate)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 4 5 * *
+	Last Update: 05.04.2026 04:31
+	Connector: CountriesWbCdrtIn · Crude death rate
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 12 0 3 * *
+	Last Update: 03.04.2026 00:15
+	Connector: CountriesWbCpiTotlZg · Inflation, consumer prices %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 11 * *
+	Last Update: 11.04.2026 02:34
+	Connector: CountriesWbFpCpiTotl · Inflation consumer prices % (WB)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 50 2 4 * *
+	Last Update: 04.04.2026 02:51
+	Connector: CountriesWbLe00 · Life expectancy at birth
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 13 0 2 * *
+	Last Update: 02.04.2026 00:16
+	Connector: CountriesWbLndTotl · Land area (km²)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 14 0 3 * *
+	Last Update: 11.04.2026 00:24
+	Connector: CountriesWbMilTotl · Military personnel total
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 15 0 3 * *
+	Last Update: 03.04.2026 00:20
+	Connector: CountriesWbNetUser · Internet users %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 16 0 3 * *
+	Last Update: 03.04.2026 00:21
+	Connector: CountriesWbPcapPpCd · GDP per capita, PPP (int. $)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 11 * *
+	Last Update: 11.04.2026 02:33
+	Connector: CountriesWbPop · Total population
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 18 0 7 * *
+	Last Update: 07.04.2026 00:19
+	Connector: CountriesWbPopDpnd · Age dependency ratio %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 10 * *
+	Last Update: 10.04.2026 02:33
+	Connector: CountriesWbPopGrow · Population growth %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 17 0 2 * *
+	Last Update: 02.04.2026 00:19
+	Connector: CountriesWbPovGini · Gini index (income inequality)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 11 * *
+	Last Update: 11.04.2026 02:34
+	Connector: CountriesWbPsrcP5 · Intentional homicides per 100k
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 6 * *
+	Last Update: 06.04.2026 02:32
+	Connector: CountriesWbResTotlCd · Total reserves (incl. gold) US$
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 11 * *
+	Last Update: 11.04.2026 02:34
+	Connector: CountriesWbRlEst · Rule of law (estimate)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 4 5 * *
+	Last Update: 05.04.2026 04:31
+	Connector: CountriesWbSrfTotl · Surface area (km²)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 19 0 3 * *
+	Last Update: 11.04.2026 00:29
+	Connector: CountriesWbTEchMfZs · High-technology exports %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 2 9 * *
+	Last Update: 09.04.2026 02:31
+	Connector: CountriesWbUem1524 · Youth unemployment (15-24) %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 20 3 4 * *
+	Last Update: 04.04.2026 03:21
+	Connector: CountriesWbUemTotl · Unemployment %
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 17 3 4 * *
+	Last Update: 11.04.2026 03:28
+	Connector: CountriesWbVaEst · Voice and accountability (est.)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 30 4 5 * *
+	Last Update: 05.04.2026 04:31
+	Connector: CountriesWbWgiPvCcRl · WGI: stability, corruption, law
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 35 2 * * *
+	Last Update: 18.04.2026 02:36
+	Connector: MigrationWbNetm · WB net migration (SM.POP.NETM)
+	Provider: World Bank Group
+	Reference: https://www.worldbank.org/
+	License: License Info
+	Endpoint: Worldbank
+	Interval: 32 3 5 * *
+	Last Update: 21.03.2026 10:59
+	Connector: CountriesInLang · Country metadata (lang)
+	Provider: world-countries (stefangabos)
+	Reference: https://github.com/stefangabos/world_countries
+	License: License Info
+	Endpoint: Github
+	Interval: 4 0 7 * *
+	Last Update: 07.04.2026 00:05
+
+
+
+________________________________________________________________________________
+Data Fusion & Copyright:
+	NationFiles aggregates and merges automated data streams from the repositories and official databases listed above. The copyrights of the processed raw data remain fully with the respective rights holders. Licenses and terms of use can be viewed directly from the provider via the reference links.
+
+
+
+________________________________________________________________________________
+Disclaimer:
+	Despite careful technical review, NationFiles does not guarantee the accuracy, completeness or timeliness of data obtained from third parties. The information provided is for general information only and does not constitute legal, financial or investment advice. Use of the data is at your own risk.
+
+
+
+________________________________________________________________________________
+Data Protection & Processing:
+	The listed sources include both non-personal data (e.g. country statistics, geographic or economic indicators) and official wanted-persons and notice data (e.g. INTERPOL Red Notices, FBI Most Wanted, OpenSanctions), which may contain personal data on wanted individuals. No data is transmitted to these sources; access is read-only. Processing is based on public interest and the legal bases of the respective sources. All data is automatically fetched and may be filtered, aggregated and further processed for display and analysis. See Privacy Policy for details.
+
+
+
+________________________________________________________________________________
+Availability & caching:
+	No guarantee of constant availability of external sources. Data is fetched periodically and may be cached; see cron intervals in the registry.
+
+================================================================================
+
+https://nationfiles.com/en/legal/sources/
+
+________________________________________________________________________________
+As of:
+	18.04.2026
+
+
+
+________________________________________________________________________________
+Only the German version is legally binding
+	Only the German version is legally binding.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	This page does not replace legal advice and does not constitute official warnings or recommendations. Forecasts and assessments are model-based.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contact for legal inquiries: see imprint.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparency & data ethics:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Sources & licences:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infrastructure:
+	Processing exclusively in Germany, TLS 1.3, VPC isolation.
+
+
+
+________________________________________________________________________________
+Data protection:
+	Processing of personal data in accordance with GDPR; no sharing or use for AI training.
+
+
+
+________________________________________________________________________________
+Liability:
+	No liability for external content or derived decisions. No investment advice within the meaning of the German Securities Trading Act (WpHG).
+
+
+
+________________________________________________________________________________
+Place of jurisdiction:
+	Aachen, Germany. German law applies to the exclusion of the UN Convention on Contracts for the International Sale of Goods (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – All rights reserved.
+
+nationfiles.com | Data Sources | 18.04.2026 21:30

@@ -1,0 +1,332 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+Independence Statement
+
+
+
+
+________________________________________________________________________________
+As of:
+	25.02.2026
+	PDF from: 18.04.2026 21:30
+
+================================================================================
+
+________________________________________________________________________________
+
+	Legally binding version: Only the German version of this document is legally binding.
+	Translations into other languages are for information and international understanding only.
+
+
+
+________________________________________________________________________________
+Legal TL;DR & Disclaimer
+	NationFiles is a privately funded, fully independent intelligence project of Neawolf Media Group. The NationFiles Stability Index (NFSI) and all derived geopolitical metrics are computed entirely automatically by the Naciro Engine using openly documented mathematical formulas (Layers 1–3). There are no government grants, no political influence, no paid rankings, and no manual score manipulation. Categories such as EXCELLENCE or DISASTER are purely technical classifications of data volatility, not political judgments. Forecasts are statistical extrapolations of data trends and do not constitute recommendations for action.
+	The content, scores, and forecasts on NationFiles are for analytical and informational purposes only. Despite the highest technical care, NationFiles assumes no liability for direct or indirect damages or for investment, travel, or security decisions made on the basis of the information provided. For legally binding or life-saving operational decisions, the competent public authorities must be consulted.
+
+
+
+________________________________________________________________________________
+The 6 core principles
+
+
+
+________________________________________________________________________________
+100 % independent
+	NationFiles operates without influence from government bodies, political parties, companies, or lobby groups. No external advertising is displayed; there are no paid placements or sponsorships that could influence data collection.
+
+
+
+________________________________________________________________________________
+Algorithmic equal treatment
+	Each of the 190+ countries covered is assessed using the same, openly documented rules (Layers 1–3). There are no geopolitical exceptions, buffer zones, manual overrides, or "premium countries."
+
+
+
+________________________________________________________________________________
+No data manipulation
+	All scores, trends, and forecasts from the Naciro Engine are produced fully automatically. Manual changes to scores by administrators are technically excluded. Corrections for faulty raw data are made only through reproducible recalculations.
+
+
+
+________________________________________________________________________________
+Transparent methodology (open formulas)
+	Formulas, weightings, trend calculations (e.g. WLS), and volatility clamping are publicly documented. Every change to the mathematical model is versioned and communicated in the changelog.
+
+
+
+________________________________________________________________________________
+Neutral analytics & language
+	Categories such as SOLID or UNSTABLE are purely technical classifications of system stability. NationFiles does not make political judgments, does not forecast election results, and does not give security-policy recommendations.
+
+
+
+________________________________________________________________________________
+Open data sources
+	Only publicly accessible, machine-readable macro, event, and trend data are processed (see /legal/sources/). Secret or politically filtered government data without verification options are not included in the assessment.
+
+
+
+________________________________________________________________________________
+I. Political and institutional independence
+
+
+
+________________________________________________________________________________
+Principle
+	NationFiles is a project of Neawolf Media Group and operates solely on the principle of radical objectivity.
+
+
+
+________________________________________________________________________________
+Funding
+	The project is fully self-funded (bootstrapped) and supported by disclosed license sales (API access). Government grants, party-political funding, and donations from interest groups are strictly declined.
+
+
+
+________________________________________________________________________________
+Conflicts of interest
+	Employees, developers, and advisors of Neawolf Media Group are contractually required to disclose potential financial or political conflicts of interest. Persons with direct access to the Naciro Engine codebase may not be involved in geopolitical decision-making processes.
+
+
+
+________________________________________________________________________________
+II. Algorithmic pipelines & equal treatment
+
+
+
+________________________________________________________________________________
+Unified pipeline
+	The NationFiles Stability Index (NFSI) is computed via a global, unified pipeline.
+
+
+
+________________________________________________________________________________
+No discrimination
+	Sanctioned states, non-UN members, or crisis regions go through the same scripts as G7 nations. There are no blocks on countries based on political directives.
+
+
+
+________________________________________________________________________________
+Automation
+	The process from data retrieval (scraping/APIs) through normalization to score assignment runs without human intervention. Systems run uniformly worldwide and are monitored by automated plausibility checks.
+
+
+
+________________________________________________________________________________
+III. Methodology, reproducibility and versioning
+
+
+
+________________________________________________________________________________
+Layer model
+	The assessment is composed of Layer 1 (economic and hard baseline data), Layer 2 (daily event aggregation), and Layer 3 (structural country index/rule of law). Formulas and weighting parameters are disclosed in the methodology whitepaper.
+
+
+
+________________________________________________________________________________
+Versioning (changelog)
+	Every change to weighting or bug fix in the code receives a version number (e.g. Naciro Engine v1.2.4), a change date, and documented rationale. Historical scores remain mathematically reproducible through archiving of older versions.
+
+
+
+________________________________________________________________________________
+IV. Data sources, processing & quality assurance
+
+
+
+________________________________________________________________________________
+Role of NationFiles
+	NationFiles acts as an aggregator and analytical interpreter, not as a primary intelligence service.
+
+
+
+________________________________________________________________________________
+Source hygiene
+	The basis is event feeds, economic data, demographic metrics, and global open-data initiatives. Sources subject to proven, massive state censorship are downweighted in Layer 2 via trust factors (trust penalty).
+
+
+
+________________________________________________________________________________
+Error correction process
+	When faulty raw data are identified: report to data@nationfiles.com → source review → correction of the faulty data point in the database → automatic score recalculation. Manual overwriting of the final score is prohibited. System-relevant corrections are documented.
+
+
+
+________________________________________________________________________________
+V. Interpretation limits & forecast disclaimer
+
+
+
+________________________________________________________________________________
+Forecasts (predictive layer)
+	Forecast values are solely statistical extrapolations of current volatilities (including Weighted Least Squares, mean reversion). They visualize the mathematical inertia of a system, not certainties.
+
+
+
+________________________________________________________________________________
+Limitations
+	NationFiles does not model irrational human decisions. Unexpected events (e.g. coup, natural disaster) cannot be predicted from historical data. Scores assess a country's resilience to such shocks, not the occurrence of the shock itself.
+
+
+
+________________________________________________________________________________
+VI. Data protection & security
+
+
+
+________________________________________________________________________________
+Privacy by design
+	NationFiles does not store personal data of anonymous website visitors. No user profiles are created for political orientation or sold to third parties.
+
+
+
+________________________________________________________________________________
+Security
+	Databases, API interfaces, and the Naciro Core Engine are protected by modern encryption (in-transit and at-rest) and regular penetration testing.
+
+
+
+________________________________________________________________________________
+VII. Use, citation & badges
+
+
+
+________________________________________________________________________________
+Editorial use
+	Editorial use of our data, charts, and SVG/JPG badges (e.g. by journalists or bloggers) is expressly welcome and free of charge, but requires clear attribution to NationFiles as the source and an active backlink to the relevant country page.
+
+
+
+________________________________________________________________________________
+Commercial use
+	Systematic machine harvesting (scraping) and commercial resale of our aggregated data are prohibited without obtaining an official API license.
+
+
+
+________________________________________________________________________________
+International required disclosures
+
+
+
+________________________________________________________________________________
+Operator
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Founder & lead developer
+	Sven Schmidt
+
+
+
+________________________________________________________________________________
+Contact
+	Data requests & corrections: data@nationfiles.com | Press & media: press@nationfiles.com | Legal & licenses: legal@nationfiles.com
+
+
+
+________________________________________________________________________________
+Jurisdiction & applicable law
+	Exclusive place of jurisdiction is the Federal Republic of Germany. German law applies. For full details on address, commercial register, VAT ID, and data controller under GDPR, please refer to our legal notice / imprint.
+
+
+
+________________________________________________________________________________
+Closing
+
+
+
+________________________________________________________________________________
+Closing statement
+	NationFiles is committed to radical transparency, methodological reproducibility, and institutional independence. This statement is part of our unwavering commitment to users worldwide. Signed: Sven Schmidt / Neawolf Media Group. Effective: 25 February 2026.
+
+================================================================================
+
+https://nationfiles.com/en/legal/independence/
+
+________________________________________________________________________________
+As of:
+	25.02.2026
+
+
+
+________________________________________________________________________________
+Only the German version is legally binding
+	Only the German version is legally binding.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	This page does not replace legal advice and does not constitute official warnings or recommendations. Forecasts and assessments are model-based.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contact for legal inquiries: see imprint.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparency & data ethics:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Sources & licences:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infrastructure:
+	Processing exclusively in Germany, TLS 1.3, VPC isolation.
+
+
+
+________________________________________________________________________________
+Data protection:
+	Processing of personal data in accordance with GDPR; no sharing or use for AI training.
+
+
+
+________________________________________________________________________________
+Liability:
+	No liability for external content or derived decisions. No investment advice within the meaning of the German Securities Trading Act (WpHG).
+
+
+
+________________________________________________________________________________
+Place of jurisdiction:
+	Aachen, Germany. German law applies to the exclusion of the UN Convention on Contracts for the International Sale of Goods (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – All rights reserved.
+
+nationfiles.com | Independence Statement | 18.04.2026 21:30

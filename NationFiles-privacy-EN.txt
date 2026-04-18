@@ -1,0 +1,536 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+Privacy Policy
+
+
+
+
+________________________________________________________________________________
+As of:
+	11.02.2026
+	PDF from: 18.04.2026 21:30
+
+================================================================================
+
+________________________________________________________________________________
+
+	Neawolf Media Group is a German company. Only the German text is legally binding.
+	Jurisdiction: Germany (Aachen).
+
+
+
+________________________________________________________________________________
+Privacy at a Glance
+	Data minimization: Only operationally necessary data (Art. 5 GDPR); for contact requests: name, email, message for processing; IP pseudonymized (SHA-256).
+	AI Isolation: Personal data is not used for Naciro training.
+	US Transfer: Protected by EU-US Data Privacy Framework (Art. 45 GDPR).
+	Zero Tracking: No data transfer to third parties before your consent.
+
+
+
+________________________________________________________________________________
+Foundations & Legal Framework
+
+
+
+________________________________________________________________________________
+Data Protection
+	The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially.
+
+
+
+________________________________________________________________________________
+Responsible Body
+	Neawolf Media Group, Owner Sven Schmidt, is responsible for data processing on this platform.
+
+
+
+________________________________________________________________________________
+Legal Basis
+	Processing according to Art. 6 Para. 1 lit. a (consent), lit. b (contract), and lit. f (legitimate interest).
+
+
+
+________________________________________________________________________________
+Data Minimization
+	In accordance with Art. 5 Para. 1 lit. c GDPR, we only collect data that is strictly necessary for operation.
+
+
+
+________________________________________________________________________________
+Balancing Test
+	Processing under Art. 6 Para. 1 lit. f is based on a positive balancing test to maintain platform integrity.
+
+
+
+________________________________________________________________________________
+Storage Limitation
+	Data is deleted as soon as the purpose no longer exists or legal deadlines require it. Contact requests are deleted after the matter is resolved.
+
+
+
+________________________________________________________________________________
+Storage Periods & Deletion Concept
+	Contact requests: until the matter is resolved; server logs: 30 days (IP anonymized). Aggregated source data and wanted-person data are obtained read-only from public sources and processed in compliance with source licenses and operational retention periods.
+
+
+
+________________________________________________________________________________
+Integrity
+	Technical and organizational measures (TOM) protect against unauthorized access.
+
+
+
+________________________________________________________________________________
+Supervisory Authority
+	Competent: State Commissioner for Data Protection and Freedom of Information North Rhine-Westphalia (LDI NRW).
+
+
+
+________________________________________________________________________________
+Right to Change
+	We adapt this statement in the event of technical further development or legal changes.
+
+
+
+________________________________________________________________________________
+Protection of Minors
+	Use of the platform is only permitted for persons under 16 years of age with parental consent.
+
+
+
+________________________________________________________________________________
+Data Collection & Infrastructure
+
+
+
+________________________________________________________________________________
+Server Log Files
+	Storage of IP, browser, and timestamp for 30 days for threat prevention (Art. 6 Para. 1 lit. f GDPR).
+
+
+
+________________________________________________________________________________
+Encryption
+	End-to-end AES-256 SSL encryption for all data transfers (Grade A+).
+
+
+
+________________________________________________________________________________
+Hosting (Contabo)
+	Data processing by Contabo GmbH on ISO 27001 certified servers in Germany.
+
+
+
+________________________________________________________________________________
+Database Security
+	MariaDB instances with encryption of data at rest.
+
+
+
+________________________________________________________________________________
+Backup Management
+	Encrypted off-site backups to ensure integrity according to Art. 32 GDPR.
+
+
+
+________________________________________________________________________________
+Security Standard 2026
+	Full compliance with the 96-hour reporting deadline for IT security incidents.
+
+
+
+________________________________________________________________________________
+Session Handling
+	Use of technically necessary session cookies for session management.
+
+
+
+________________________________________________________________________________
+Design Preference
+	Storage of dark mode choice in LocalStorage (legitimate interest).
+
+
+
+________________________________________________________________________________
+Language Auto-Detection
+	Local storage of language choice to provide country-specific data.
+
+
+
+________________________________________________________________________________
+Anonymization
+	IP addresses are anonymized before any statistical evaluation.
+
+
+
+________________________________________________________________________________
+Technical Safeguards
+	Use of TLS encryption (AES-256, Grade A+), access control, hashing (e.g. SHA-256 for IP pseudonymization), and log minimization. No transfer of raw data to third parties.
+
+
+
+________________________________________________________________________________
+AI Processing (Naciro Engine)
+
+
+
+________________________________________________________________________________
+AI Transparency
+	Compliance with the EU AI Act: Labeling of all AI-generated analysis content.
+
+
+
+________________________________________________________________________________
+Training Exclusion
+	No use of your personal data for training machine learning models.
+
+
+
+________________________________________________________________________________
+Human Oversight
+	Algorithmic results are regularly validated by experts (human-in-the-loop).
+
+
+
+________________________________________________________________________________
+Profiling Prohibition
+	No automated creation of personality profiles (Art. 22 GDPR).
+
+
+
+________________________________________________________________________________
+Data Streams
+	AI calculations are based on aggregated metadata, not on your identity.
+
+
+
+________________________________________________________________________________
+Data Origin
+	Processing of public data (OSINT) with strict separation from user profiles.
+
+
+
+________________________________________________________________________________
+Prediction Models
+	Predictive Layer analyzes geopolitical macro trends, not individual behavior.
+
+
+
+________________________________________________________________________________
+Sentiment Analysis
+	Statistical evaluation of global intelligence briefing sentiment without personal reference.
+
+
+
+________________________________________________________________________________
+Causality Logic
+	Automated determination of relationships on a purely mathematical basis.
+
+
+
+________________________________________________________________________________
+Integrity Check
+	Permanent monitoring of the AI engine for bias and factual correctness.
+
+
+
+________________________________________________________________________________
+Third-Party Providers & Global Transfer
+
+
+
+________________________________________________________________________________
+Google Analytics 4
+	Analysis only occurs with explicit consent according to Art. 6 Para. 1 lit. a GDPR.
+
+
+
+________________________________________________________________________________
+Google AdSense
+	Ad serving in compliance with the EU-US Data Privacy Framework.
+
+
+
+________________________________________________________________________________
+US Data Transfer
+	Transfer to third countries only if adequacy decisions or SCCs are in place.
+
+
+
+________________________________________________________________________________
+YouTube Plugins
+	Embedding in 'Enhanced Data Protection Mode' to prevent advance tracking.
+
+
+
+________________________________________________________________________________
+Real-Time APIs
+	Financial data retrievals are anonymized without transferring end-user data.
+
+
+
+________________________________________________________________________________
+Security Feeds
+	Display of INTERPOL, FBI Most Wanted, and OpenSanctions data occurs server-side without user tracking.
+
+
+
+________________________________________________________________________________
+Legal Basis Wanted-Person Data
+	Processing of wanted-person data is read-only and based on Art. 6(1)(e) GDPR in conjunction with public interest in security. No data is transmitted to the sources.
+
+
+
+________________________________________________________________________________
+Categories of Personal Data (Wanted Persons)
+	Wanted-person data may include name, photo, offense, nationality, date of birth, and other details provided by the source. See Source Registry (Legal → Sources) for details.
+
+
+
+________________________________________________________________________________
+Social Links
+	Links to external platforms only transfer data to the provider upon clicking.
+
+
+
+________________________________________________________________________________
+Affiliate Tracking
+	Use of partner links occurs without linking to your NationFiles profile.
+
+
+
+________________________________________________________________________________
+Abuse Prevention
+	Technical defense mechanisms against bot attacks (Art. 6 Para. 1 lit. f GDPR).
+
+
+
+________________________________________________________________________________
+Standard Contractual Clauses
+	Securing international data flows through EU Standard Contractual Clauses.
+
+
+
+________________________________________________________________________________
+Statistical Data Sources
+	NationFiles automatically ingests aggregated, non-personal data from public and licensed sources (e.g. World Bank, Open Data Commons). A full list of providers and licenses is available in the Source Registry (Legal → Sources).
+
+
+
+________________________________________________________________________________
+Data Subject Rights & Revocation
+
+
+
+________________________________________________________________________________
+Right to Information
+	You have the right to confirmation and a copy of your stored data (Art. 15 GDPR).
+
+
+
+________________________________________________________________________________
+Correction
+	Immediate correction of incorrect data according to Art. 16 GDPR.
+
+
+
+________________________________________________________________________________
+Right to Deletion
+	Claim to data deletion (right to be forgotten) according to Art. 17 GDPR.
+
+
+
+________________________________________________________________________________
+Restriction
+	Limitation of processing under the conditions of Art. 18 GDPR.
+
+
+
+________________________________________________________________________________
+Portability
+	Provision of your data in a machine-readable format (Art. 20 GDPR).
+
+
+
+________________________________________________________________________________
+Objection
+	Objection to data processing for special reasons (Art. 21 GDPR).
+
+
+
+________________________________________________________________________________
+Revocation of Consent
+	Anytime revocation of consent with effect for the future.
+
+
+
+________________________________________________________________________________
+Complaint Authority
+	Right to lodge a complaint with the competent supervisory authority (LDI NRW).
+
+
+
+________________________________________________________________________________
+Provision Obligation
+	There is no contractual or legal obligation to provide data.
+
+
+
+________________________________________________________________________________
+Data Contact
+	Central point of contact for all rights: privacy@nationfiles.com.
+
+
+
+________________________________________________________________________________
+Regional Standards & Compliance
+
+
+
+________________________________________________________________________________
+CCPA / CPRA
+	Compliance with Californian privacy rights including 'Do Not Sell' policy.
+
+
+
+________________________________________________________________________________
+LGPD Brazil
+	Compliance with the Lei Geral de Proteção de Dados for users in Brazil.
+
+
+
+________________________________________________________________________________
+PIPL China
+	Protection measures according to the Personal Information Protection Law of the PR China.
+
+
+
+________________________________________________________________________________
+COPPA USA
+	Strict protection of children's privacy according to US federal law.
+
+
+
+________________________________________________________________________________
+Copyright / DMCA
+	Central process for takedown requests regarding AI content.
+
+
+
+________________________________________________________________________________
+Trademark Law
+	Protection of the Neawolf® brand and associated user data stocks.
+
+
+
+________________________________________________________________________________
+Anti-Fraud Policy
+	Data processing to identify misuse and manipulation.
+
+
+
+________________________________________________________________________________
+Advertising Objection
+	Prohibition of the use of our contact details for marketing purposes.
+
+
+
+________________________________________________________________________________
+Voting Integrity
+	Storage of user votings occurs exclusively in anonymized form.
+
+
+
+________________________________________________________________________________
+Severability Clause
+	Validity of the statement remains even if individual clauses are partially ineffective.
+
+================================================================================
+
+https://nationfiles.com/en/legal/privacy/
+
+________________________________________________________________________________
+As of:
+	11.02.2026
+
+
+
+________________________________________________________________________________
+Only the German version is legally binding
+	Only the German version is legally binding.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	This page does not replace legal advice and does not constitute official warnings or recommendations. Forecasts and assessments are model-based.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contact for legal inquiries: see imprint.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparency & data ethics:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Sources & licences:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infrastructure:
+	Processing exclusively in Germany, TLS 1.3, VPC isolation.
+
+
+
+________________________________________________________________________________
+Data protection:
+	Processing of personal data in accordance with GDPR; no sharing or use for AI training.
+
+
+
+________________________________________________________________________________
+Liability:
+	No liability for external content or derived decisions. No investment advice within the meaning of the German Securities Trading Act (WpHG).
+
+
+
+________________________________________________________________________________
+Place of jurisdiction:
+	Aachen, Germany. German law applies to the exclusion of the UN Convention on Contracts for the International Sale of Goods (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – All rights reserved.
+
+nationfiles.com | Privacy Policy | 18.04.2026 21:30

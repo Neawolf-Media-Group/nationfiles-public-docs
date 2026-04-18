@@ -1,0 +1,251 @@
+________________________________________________________________________________
+NationFiles
+	Neawolf Media Group
+
+
+
+________________________________________________________________________________
+Anschrift
+	Neawolf Media Group
+	Reinhardstr. 1b
+	52078 Aachen, Germany
+
+
+
+________________________________________________________________________________
+Data Governance
+
+
+
+
+________________________________________________________________________________
+As of:
+	21.02.2026
+	PDF from: 18.04.2026 21:30
+
+================================================================================
+
+________________________________________________________________________________
+
+	Neawolf Media Group is a German company. Only the German text is legally binding.
+	Place of jurisdiction is Germany (Aachen).
+
+
+
+________________________________________________________________________________
+Data governance at a glance
+	Source registry and data freshness: All data sources are loaded dynamically from the DataSourceConnector Audit and published under Legal → Data Sources. Update guarantees: real-time (Forex/Crypto) and structural (World Bank, demographics).
+	Resilience and human-in-the-loop: In case of API failures, the Last Known Value procedure applies (grace mode up to 24h). Automated anomaly detection for extreme score fluctuations, including manual quality checks.
+	Infrastructure and audit: Own infrastructure only in Germany (Contabo); SSL/TLS for all data streams, database isolation (VPC). Historical snapshots for gapless audit trails (Enterprise).
+	Methodology and control processes: Stability algorithm NFSI version 2.5 (explicitly versioned). Cron-driven fetch, Lock/LastRun, optional Queue (FIFO); quality per source (sourceQuality) and stability index (NFSI) according to documented methodology.
+
+
+
+________________________________________________________________________________
+Sources, provenance and data flow
+
+
+
+________________________________________________________________________________
+Source registry
+	The public source directory under Legal → Data Sources is fed from the DataSourceConnector system. Each source shows connector_id, provider, license, endpoint, Cron interval and last fetch (UTC).
+
+
+
+________________________________________________________________________________
+License and provider
+	Per SourceNode, provider_name, provider_link, provider_license and optionally provider_license_link are defined. The license link must not be empty (fallback: provider website). These details appear on the Data Sources page and support transparency and rights-holder communication.
+
+
+
+________________________________________________________________________________
+Discovery
+	New connectors are discovered via SourceNode/[Name]/[Name]Connector.php. Only non-abstract subclasses with ACTIVE = true are considered in Cron and Audit. No manual entry in a central list.
+
+
+
+________________________________________________________________________________
+Source provenance classification
+	All data sources are classified: Primary Official Data (authorities, UN, World Bank, INTERPOL); Licensed Data (commercial providers); Public Open Data (open data portals); Derived Data (computed values such as NFSI, indices, aggregations); Community Signals (voting, crowd inputs). Purpose: transparency on origin, quality and reliability.
+
+
+
+________________________________________________________________________________
+High-level data flow
+	Data flow is traceable for auditors and authorities: Source → DataSourceConnector → Audit → Database → Naciro Engine → API/Dashboard. No transfer of user data to external systems; read-only access to sources.
+
+
+
+________________________________________________________________________________
+Execution, resilience and retention
+
+
+
+________________________________________________________________________________
+Cron and run decision
+	The runner is invoked every minute. getRunnableInstances() filters by Cron expression, LastRun and optional catch-up interval. Per connector: acquire lock, run execute(), set LastRun, write log, release lock. Maximum runtime per run is limited (DATA_SOURCE_CONNECTOR_MAX_RUNTIME).
+
+
+
+________________________________________________________________________________
+Queue and worker
+	In queue mode, due connector IDs are enqueued in a FIFO queue (pending.json). A worker with worker lock runs up to DATA_SOURCE_CONNECTOR_PARALLEL_MAX jobs in parallel. Running jobs are listed in running.json; when one finishes, the next is started from the queue.
+
+
+
+________________________________________________________________________________
+Source quality (sourceQuality)
+	Each SourceNode can set sourceQuality 0–100 (e.g. 0–20 private, 21–49 community, 50 neutral, 51–69 enterprise, 70–84 university, 85–100 government). It is used for classification and can be used when multiple sources exist for the same value.
+
+
+
+________________________________________________________________________________
+Error and failure management (resilience & failover)
+	On source failure: grace mode with last valid record up to 24h (Last Known Value). Automatic retries with backoff; monitoring and alerts on sustained failures. No propagation of stale values beyond the defined grace period.
+
+
+
+________________________________________________________________________________
+Retention matrix
+	Raw data: 7–30 days (re-evaluation). Aggregated data: unlimited for statistical models. Logs: 30–90 days (debugging, compliance). Contact requests: 6 months (support). Details in the privacy policy; GDPR-compliant.
+
+
+
+________________________________________________________________________________
+Re-evaluation cycle (24h/7d)
+	Daily global re-evaluation; 7-day predictive layer for stability forecasts. Update intervals per source are documented in the source registry (Legal → Sources). Methodological transparency for auditors and authorities.
+
+
+
+________________________________________________________________________________
+Stability index, audit, security and ethics
+
+
+
+________________________________________________________________________________
+NFSI inclusion and methodology versioning
+	Stability algorithm NFSI version 2.5 (explicitly versioned). Only connectors with getStabilityWeight() or scoreValue ≥ 0 are included in the NFSI calculation (Layers 1–3). scoreValue = -1 means not in the stability index. The exact methodology is described in the project documentation (NFSI_BERECHNUNG_LAYER_1-3.md).
+
+
+
+________________________________________________________________________________
+Auditability (historical snapshots)
+	Historical snapshots are stored for gapless audit trails (Enterprise feature). Changes to methodology, new/removed connectors, NFSI adjustments and API changes are versioned and traceable in an audit-proof manner.
+
+
+
+________________________________________________________________________________
+Human-in-the-loop (anomaly detection)
+	Automatic detection of extreme score fluctuations; optional manual quality review when defined thresholds are exceeded. No automated individual decision without documented review option (Art. 22 GDPR).
+
+
+
+________________________________________________________________________________
+No training on user data
+	Personal data from contact form or usage are not sent to external AI or training APIs. Naciro uses only the documented data streams and analysis logic; no profiling based on user behaviour.
+
+
+
+________________________________________________________________________________
+Storage location and deletion
+	Processing and storage take place on own infrastructure in Germany (Contabo). Retention for contact requests and logs is set out in the privacy policy. Aggregated source data are subject to the respective source licenses and operational requirements.
+
+
+
+________________________________________________________________________________
+Bias control and fairness
+	No personal data for scoring; no profiling; no political classifications; no discriminatory models. All indices and scores are based on aggregated, public or licensed data. Purpose: ethics and press trust.
+
+
+
+________________________________________________________________________________
+Security measures (security governance)
+	API key security (no disclosure, isolated storage). Rate limits (Gatekeeper v3.7) and abuse protection. Continuous monitoring and access control. SSL/TLS for all data streams; database isolation (VPC). Purpose: trust for banks, insurers and authorities.
+
+
+
+________________________________________________________________________________
+Limitations statement
+	Forecasts and stability indices are model-based evaluations. They do not constitute official warnings or recommendations for action. No guarantee is given for completeness, timeliness or fitness for particular decisions. Legal safeguard; details in the terms and conditions and privacy policy.
+
+
+
+________________________________________________________________________________
+Governance contact
+	A dedicated governance contact is available for authorities, press and auditors. Inquiries regarding methodology, audit trails and compliance are processed with priority. Contact details see imprint and privacy contact (Legal).
+
+================================================================================
+
+https://nationfiles.com/en/legal/governance/
+
+________________________________________________________________________________
+As of:
+	21.02.2026
+
+
+
+________________________________________________________________________________
+Only the German version is legally binding
+	Only the German version is legally binding.
+
+
+
+________________________________________________________________________________
+Disclaimer
+	This page does not replace legal advice and does not constitute official warnings or recommendations. Forecasts and assessments are model-based.
+
+
+
+________________________________________________________________________________
+Kontakt
+	Contact for legal inquiries: see imprint.
+
+
+
+________________________________________________________________________________
+Abuse / DMCA
+	Abuse/DMCA: abuse@nationfiles.com
+
+
+
+________________________________________________________________________________
+Transparency & data ethics:
+	nationfiles.com/legal/governance/
+
+
+
+________________________________________________________________________________
+Sources & licences:
+	nationfiles.com/legal/sources/
+
+
+
+________________________________________________________________________________
+Infrastructure:
+	Processing exclusively in Germany, TLS 1.3, VPC isolation.
+
+
+
+________________________________________________________________________________
+Data protection:
+	Processing of personal data in accordance with GDPR; no sharing or use for AI training.
+
+
+
+________________________________________________________________________________
+Liability:
+	No liability for external content or derived decisions. No investment advice within the meaning of the German Securities Trading Act (WpHG).
+
+
+
+________________________________________________________________________________
+Place of jurisdiction:
+	Aachen, Germany. German law applies to the exclusion of the UN Convention on Contracts for the International Sale of Goods (CISG).
+
+
+
+________________________________________________________________________________
+Copyright
+	© NationFiles / Neawolf Media Group – All rights reserved.
+
+nationfiles.com | Data Governance | 18.04.2026 21:30
