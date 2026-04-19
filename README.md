@@ -239,5 +239,7 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Producthunt NAtionFiles](https://www.producthunt.com/@neawolf_media_group): NationFiles Producthunt Profile
 - [Producthunt Naciro AI](https://www.producthunt.com/products/naciro-ai): Naciro AI Producthunt Profile
 - [Linkedin Founder](https://www.linkedin.com/in/sven-neawolf-55b4582aa/): Founder Linkedin Profile
+- [WikiData Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781): WikiData Neawolf Media Group
+- [WikiData NationFiles](https://www.wikidata.org/wiki/Q139473767): WikiData NationFiles
 
 © 2026 NationFiles | Naciro Intelligence Platform | Technical lead: Sven Neawolf
