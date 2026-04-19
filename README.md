@@ -1,3 +1,29 @@
+---
+language:
+- de
+- en
+- fr
+- es
+- pt
+- ar
+- ja
+license: other
+library_name: transformers
+tags:
+- geopolitics
+- risk-analysis
+- real-time-intelligence
+- predictive-analytics
+- nfsi
+- groq-powered
+datasets:
+- Neawolf-Media-Group/Naciro-NFSI-Engine
+metrics:
+- accuracy
+- timeliness
+pretty_name: Naciro AI Engine
+pipeline_tag: text-generation
+---
 # NationFiles
 - [DE](https://nationfiles.com/de/): NationFiles DE - German
 - [EN](https://nationfiles.com/en/): NationFiles EN - English
