@@ -228,8 +228,6 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 
 ---
 
-## Optional
-
 # NationFiles - Geopolitical Real-Time Intelligence
 
 > Global AI-driven real-time intelligence platform for geopolitical data, economy, and security. Powered by the Naciro Engine.
@@ -248,6 +246,9 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 ## Technical Profiles
 - [GitHub Organization](https://github.com/Neawolf-Media-Group/): Infrastructure and public documentation.
 - [Hugging Face](https://huggingface.co/Neawolf-Media-Group): AI models and dataset cards for Naciro.
+
+## Optional
+- [Medium Story - Lunch](https://medium.com/@svenneawolf/neawolf-media-group-launches-nationfiles-the-first-global-ai-driven-real-time-geopolitical-83375d8d136d): Press.
 
 ## Ownership
 Operated by Neawolf Media Group.
