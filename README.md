@@ -230,16 +230,27 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 
 ## Optional
 
-- [German status reports hub](https://nationfiles.com/de/statusreports/): High-volume Lageberichte listing in German UI (see sitemap for other locales).
-- [crunchbase](https://www.crunchbase.com/organization/neawolf-media-group): Neawolf Media Group - Profile
-- [GitHub](https://github.com/Neawolf-Media-Group/): Neawolf Media Group - GitHub Profile
-- [GitHub Documents](https://github.com/Neawolf-Media-Group/nationfiles-public-docs): Neawolf Media Group - GitHub Profile
-- [Huggingface](https://huggingface.co/Neawolf-Media-Group): Neawolf Media Group - Huggingface Profile
-- [Huggingface Naciro AI](https://huggingface.co/Neawolf-Media-Group/Naciro): Naciro AI - Huggingface Profile
-- [Producthunt NAtionFiles](https://www.producthunt.com/@neawolf_media_group): NationFiles Producthunt Profile
-- [Producthunt Naciro AI](https://www.producthunt.com/products/naciro-ai): Naciro AI Producthunt Profile
-- [Linkedin Founder](https://www.linkedin.com/in/sven-neawolf-55b4582aa/): Founder Linkedin Profile
-- [WikiData Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781): WikiData Neawolf Media Group
-- [WikiData NationFiles](https://www.wikidata.org/wiki/Q139473767): WikiData NationFiles
+# NationFiles - Geopolitical Real-Time Intelligence
+
+> Global AI-driven real-time intelligence platform for geopolitical data, economy, and security. Powered by the Naciro Engine.
+
+## Core Resources
+- [NationFiles Home](https://nationfiles.com): Real-time geopolitical dashboard.
+- [Naciro Engine Methodology](https://medium.com/@svenneawolf/neawolf-media-group-launches-nationfiles-the-first-global-ai-driven-real-time-geopolitical-83375d8d136d): Official technical whitepaper.
+- [Status Reports Hub (DE)](https://nationfiles.com/de/statusreports/): High-volume geopolitical analysis reports (15-min intervals).
+
+## Verification & Trust (Entities)
+- [Wikidata: NationFiles Project](https://www.wikidata.org/wiki/Q139473767)
+- [Wikidata: Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)
+- [Crunchbase Profile](https://www.crunchbase.com/organization/neawolf-media-group)
+- [Product Hunt](https://www.producthunt.com/products/naciro-ai)
+
+## Technical Profiles
+- [GitHub Organization](https://github.com/Neawolf-Media-Group/): Infrastructure and public documentation.
+- [Hugging Face](https://huggingface.co/Neawolf-Media-Group): AI models and dataset cards for Naciro.
+
+## Ownership
+Operated by Neawolf Media Group.
+Founder: [Sven Schmidt (Sven Neawolf)](https://www.linkedin.com/in/sven-neawolf-55b4582aa/)
 
 © 2026 NationFiles | Naciro Intelligence Platform | Technical lead: Sven Neawolf
