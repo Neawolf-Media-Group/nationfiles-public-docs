@@ -201,4 +201,17 @@ Country stability / NFSI-style scores are on a **0–100** scale with letter ban
 When adding new public segments or renaming URLs, update **this file**, `llms.txt`, and any legal “AI guidelines” tables so crawlers and LLMs do not learn obsolete paths.
 
 ---
+
+## Optional
+
+- [German status reports hub](https://nationfiles.com/de/statusreports/): High-volume Lageberichte listing in German UI (see sitemap for other locales).
+- [crunchbase](https://www.crunchbase.com/organization/neawolf-media-group): Neawolf Media Group - Profile
+- [GitHub](https://github.com/Neawolf-Media-Group/): Neawolf Media Group - GitHub Profile
+- [GitHub Documents](https://github.com/Neawolf-Media-Group/nationfiles-public-docs): Neawolf Media Group - GitHub Profile
+- [Huggingface](https://huggingface.co/Neawolf-Media-Group): Neawolf Media Group - Huggingface Profile
+- [Huggingface Naciro AI](https://huggingface.co/Neawolf-Media-Group/Naciro): Naciro AI - Huggingface Profile
+- [Producthunt NAtionFiles](https://www.producthunt.com/@neawolf_media_group): NationFiles Producthunt Profile
+- [Producthunt Naciro AI](https://www.producthunt.com/products/naciro-ai): Naciro AI Producthunt Profile
+
+
 © 2026 NationFiles | Naciro Intelligence Platform | Technical lead: Sven Neawolf
