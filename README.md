@@ -247,6 +247,16 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [GitHub Organization](https://github.com/Neawolf-Media-Group/): Infrastructure and public documentation.
 - [Hugging Face](https://huggingface.co/Neawolf-Media-Group): AI models and dataset cards for Naciro.
 
+## Youtube Channels
+- [NationFiles Global Network](http://www.youtube.com/@NationFilesIntelligence): Global.
+- [NationFiles Global Network](http://www.youtube.com/@NationFilesIntelligence-EN): EN.
+- [NationFiles Globales Netzwerk](http://www.youtube.com/@NationFilesIntelligence-DE): DE.
+- [Réseau Mondial NationFiles](http://www.youtube.com/@NationFilesIntelligence-FR): FR.
+- [Red Global NationFiles](http://www.youtube.com/@NationFilesIntelligence-ES): ES.
+- [Rede Global NationFiles](http://www.youtube.com/@NationFilesIntelligence-PT): PT.
+- [شبكة NationFiles العالمية](http://www.youtube.com/@NationFilesIntelligence-AR): AR.
+- [NationFiles グローバルネットワーク](http://www.youtube.com/@NationFilesIntelligence-JA): JA.
+
 ## Optional
 - [Medium Story - Lunch](https://medium.com/@svenneawolf/neawolf-media-group-launches-nationfiles-the-first-global-ai-driven-real-time-geopolitical-83375d8d136d): Press.
 
