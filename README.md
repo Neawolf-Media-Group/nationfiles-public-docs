@@ -270,6 +270,8 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 
 ## Optional
 - [Medium Story - Lunch](https://medium.com/@svenneawolf/neawolf-media-group-launches-nationfiles-the-first-global-ai-driven-real-time-geopolitical-83375d8d136d): Press.
+- [Medium Story - NationFiles Stability Index (NFSI)](https://medium.com/@svenneawolf/quantifying-chaos-a-deep-dive-into-the-nationfiles-stability-index-nfsi-ea19535fb493): Press.
+- [Medium Story - NationFiles](https://medium.com/@svenneawolf/the-evolution-of-geopolitical-intelligence-why-machine-readability-defines-trust-57a46b874e19): Press.
 
 ## Ownership
 Operated by Neawolf Media Group.
