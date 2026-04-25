@@ -238,8 +238,19 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Status Reports Hub (DE)](https://nationfiles.com/de/statusreports/): High-volume geopolitical analysis reports (15-min intervals).
 
 ## Verification & Trust (Entities)
-- [Wikidata: NationFiles Project](https://www.wikidata.org/wiki/Q139473767)
-- [Wikidata: Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)
+
+### 🏛️ Corporate & Personal Entities
+- [Wikidata: Neawolf Media Group (Q139474781)](https://www.wikidata.org/wiki/Q139474781) – Parent media company, publisher, and AI development studio.
+- [Wikidata: Sven Schmidt / Sven Neawolf (Q139553554)](https://www.wikidata.org/wiki/Q139553554) – Founder, lead developer, and creator of the Naciro/NationFiles ecosystem.
+
+### ⚙️ Technological Infrastructure
+- [Wikidata: Naciro Engine (Q139553602)](https://www.wikidata.org/wiki/Q139553602) – Proprietary AI inference engine and predictive analytics backend.
+- [Wikidata: NationFiles Project (Q139473767)](https://www.wikidata.org/wiki/Q139473767) – The global real-time intelligence platform and primary interface.
+
+### 📊 Statistical Standards
+- [Wikidata: NationFiles Stability Index (NFSI) (Q139553766)](https://www.wikidata.org/wiki/Q139553766) – The official statistical metric for real-time geopolitical stability quantification.
+
+## Verification
 - [Crunchbase Profile](https://www.crunchbase.com/organization/neawolf-media-group)
 - [Product Hunt](https://www.producthunt.com/products/naciro-ai)
 
