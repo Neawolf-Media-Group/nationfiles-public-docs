@@ -61,3 +61,6 @@ Every stability shift must be auditable. The [Validation and Verification Report
 
 ---
 **Labels:** #GlobalIntelligence #Scaling #DataScience #Infrastructure #NationFiles #NaciroAI
+
+**References:**
+Schmidt, Sven (2026). *Real-time Geopolitical Stability Modeling*. Neawolf Media Group. DOI: [10.5281/zenodo.19758466](https://doi.org/10.5281/zenodo.19758466)

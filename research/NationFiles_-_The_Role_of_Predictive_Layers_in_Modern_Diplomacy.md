@@ -58,3 +58,6 @@ Predictive layers represent the next frontier in geopolitical intelligence. By p
 
 ---
 **Labels:** #Diplomacy #Geopolitics #ArtificialIntelligence #PredictiveIntelligence #NaciroAI #NFSI
+
+**References:**
+Schmidt, Sven (2026). *Seminar Paper: The Role of Predictive Layers in Modern Diplomacy*. Neawolf Media Group. DOI: [10.5281/zenodo.19758828](https://doi.org/10.5281/zenodo.19758828)

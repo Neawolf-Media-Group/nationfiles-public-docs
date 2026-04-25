@@ -62,3 +62,6 @@ The entire 24-hour cycle is governed by the [NationFiles Governance Protocol](ht
 
 ---
 **Labels:** #Geopolitics #NaciroAI #NFSI #TemporalAnalysis #DataScience #Governance
+
+**References:**
+Schmidt, Sven (2026). *The Global Re-Evaluation Framework*. Neawolf Media Group. DOI: [10.5281/zenodo.19758934](https://doi.org/10.5281/zenodo.19758934)

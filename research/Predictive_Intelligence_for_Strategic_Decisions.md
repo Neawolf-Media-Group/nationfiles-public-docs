@@ -55,3 +55,6 @@ Predictive intelligence is no longer a luxury but a necessity for modern strateg
 **Organization:** [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)  
 **Project:** [NationFiles](https://www.wikidata.org/wiki/Q139473767)  
 **Core Technology:** [Naciro Engine](https://www.wikidata.org/wiki/Q139553602)
+
+**References:**
+Schmidt, Sven (2026). *Predictive Intelligence for Strategic Decisions*. Neawolf Media Group. DOI: [10.5281/zenodo.19758858](https://doi.org/10.5281/zenodo.19758858)

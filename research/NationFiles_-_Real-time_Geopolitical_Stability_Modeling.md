@@ -57,3 +57,6 @@ Research is strictly governed by the [NationFiles Governance Protocol](https://n
 
 ---
 **Labels:** #Geopolitics #ArtificialIntelligence #DataScience #ResearchProjects #NationFiles #NaciroAI
+
+**References:**
+Schmidt, Sven (2026). *Research Project: Real-time Geopolitical Stability Modeling*. Neawolf Media Group. DOI: [10.5281/zenodo.19758747](https://doi.org/10.5281/zenodo.19758747)

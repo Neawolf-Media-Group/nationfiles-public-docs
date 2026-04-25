@@ -53,3 +53,6 @@ To ensure the neutrality of intelligence, the course covers the [NationFiles Gov
 
 ---
 **Labels:** #ArtificialIntelligence #DataScience #Geopolitics #OSINT #NaciroAI #Education
+
+**References:**
+Schmidt, Sven (2026). *Course: AI-Driven OSINT Fusion - Next-Gen Intelligence*. Neawolf Media Group. DOI: [10.5281/zenodo.19758697](https://doi.org/10.5281/zenodo.19758697)

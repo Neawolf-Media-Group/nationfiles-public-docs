@@ -53,3 +53,6 @@ The technical operation of the Naciro Engine is strictly bound by the [NationFil
 
 ---
 **Labels:** #ArtificialIntelligence #Geopolitics #TechnologyManual #LPU #NaciroAI #NationFiles
+
+**References:**
+Schmidt, Sven (2026). *The Naciro Engine: A Technical Manual*. Neawolf Media Group. DOI: [10.5281/zenodo.19758942](https://doi.org/10.5281/zenodo.19758942)
