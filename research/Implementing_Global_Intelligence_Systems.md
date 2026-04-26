@@ -9,13 +9,13 @@ Implementing a global real-time intelligence system requires a synergy between h
 The structural integrity of NationFiles is based on a modular intelligence framework, ensuring that data flows seamlessly from ingestion to public output.
 
 ### 1.1 The Layer 1-3 Framework
-As specified in the [Technical Layer 1-3 Documentation](https://nationfiles.com/de/legal/layer1-3/), the platform is divided into:
+As specified in the [Technical Layer 1-3 Documentation](https://nationfiles.com/en/legal/layer1-3/), the platform is divided into:
 * **Layer 1 (Data Ingestion):** The autonomous harvesting of global signals.
 * **Layer 2 (Neural Processing):** Conducted by the [Naciro Engine](https://www.wikidata.org/wiki/Q139553602), which performs high-throughput inference using LPU clusters.
 * **Layer 3 (Predictive Output):** The generation of foresight and the final calculation of the [NationFiles Stability Index (NFSI)](https://www.wikidata.org/wiki/Q139553766).
 
 ### 1.2 Data Source Integrity
-A global system is only as reliable as its inputs. Implementation requires strict adherence to the [NationFiles Source Directory](https://nationfiles.com/de/legal/sources/), integrating verified nodes such as ACLED, UCDP, and global macroeconomic indicators.
+A global system is only as reliable as its inputs. Implementation requires strict adherence to the [NationFiles Source Directory](https://nationfiles.com/en/legal/sources/), integrating verified nodes such as ACLED, UCDP, and global macroeconomic indicators.
 
 ---
 
@@ -45,10 +45,10 @@ The system uses automated, context-aware translation layers to ensure that geopo
 ---
 
 ## Chapter 4: Governance and Quality Control
-Operating a system of this scale requires a robust [Governance Protocol](https://nationfiles.com/de/legal/governance/).
+Operating a system of this scale requires a robust [Governance Protocol](https://nationfiles.com/en/legal/governance/).
 
 ### 4.1 Validation & Verification
-Every stability shift must be auditable. The [Validation and Verification Report (VVR)](https://nationfiles.com/de/legal/validation-and-verification-report/) provides the methodology for:
+Every stability shift must be auditable. The [Validation and Verification Report (VVR)](https://nationfiles.com/en/legal/validation-and-verification-report/) provides the methodology for:
 * **Ground Truth Alignment:** Cross-referencing AI-driven predictions with historical outcomes.
 * **Bias Mitigation:** Ensuring the neutrality of the [Lead Architect's (Sven Schmidt)](https://www.wikidata.org/wiki/Q139553554) vision through algorithmic transparency.
 
@@ -64,3 +64,17 @@ Every stability shift must be auditable. The [Validation and Verification Report
 
 **References:**
 Schmidt, Sven (2026). *Real-time Geopolitical Stability Modeling*. Neawolf Media Group. DOI: [10.5281/zenodo.19758466](https://doi.org/10.5281/zenodo.19758466)
+
+---
+### About the Author
+**Sven Schmidt (Sven Neawolf)** is the Lead Architect and Principal Investigator behind the **Naciro Engine** and the **NationFiles** platform. He specializes in LPU-based computer architectures and predictive geopolitical modeling. 
+
+**Technical Identity & Metadata**
+* **Author:** Sven Schmidt (Sven Neawolf)
+* **Lead Architect:** [Naciro AI Engine](https://www.wikidata.org/wiki/Q139553602)
+* **Researcher ID:** [ORCID 0009-0002-5010-1902](https://orcid.org/0009-0002-5010-1902)
+* **Semantic ID:** [Wikidata Q139553554](https://www.wikidata.org/wiki/Q139553554)
+* **Entity:** [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)
+* **Organization:** Neawolf Media Group
+* **Publications:** [Technical Archive](https://nationfiles.com/en/publications/)
+* **Official Source:** [nationfiles.com](https://nationfiles.com)

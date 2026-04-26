@@ -13,7 +13,7 @@ This research project focuses on the **investigation of real-time data streams t
 ---
 
 ## Technical Framework & Architecture
-The project utilizes the [Layer 1-3 Technical Infrastructure](https://nationfiles.com/de/legal/layer1-3/) developed for the [NationFiles](https://www.wikidata.org/wiki/Q139473767) platform:
+The project utilizes the [Layer 1-3 Technical Infrastructure](https://nationfiles.com/en/legal/layer1-3/) developed for the [NationFiles](https://www.wikidata.org/wiki/Q139473767) platform:
 
 ### 1. Ingestion & Neural Processing (Naciro Engine)
 The backbone of the research is the [Naciro AI Engine](https://www.wikidata.org/wiki/Q139553602) ([Wikidata: Q139553602](https://www.wikidata.org/wiki/Q139553602)). This engine employs a Large Processing Unit (LPU) architecture to handle high-throughput inference, enabling the autonomous ingestion of millions of signals from:
@@ -30,14 +30,14 @@ Central to the modeling is the [NationFiles Stability Index (NFSI)](https://www.
 ---
 
 ## Methodology: Validation and Data Integrity
-To ensure the scientific validity of the predictive models, the project adheres to the [Validation and Verification Report (VVR)](https://nationfiles.com/de/legal/validation-and-verification-report/). This involves:
+To ensure the scientific validity of the predictive models, the project adheres to the [Validation and Verification Report (VVR)](https://nationfiles.com/en/legal/validation-and-verification-report/). This involves:
 * **Cross-Referencing:** Validating AI-generated alerts against verified historical ground truth.
-* **Source Transparency:** Mapping data lineage back to the [NationFiles Source Directory](https://nationfiles.com/de/legal/sources/) to ensure auditability.
+* **Source Transparency:** Mapping data lineage back to the [NationFiles Source Directory](https://nationfiles.com/en/legal/sources/) to ensure auditability.
 
 ---
 
 ## Ethical Framework & Governance
-The research is governed by the [NationFiles Governance Protocol](https://nationfiles.com/de/legal/governance/). This framework ensures:
+The research is governed by the [NationFiles Governance Protocol](https://nationfiles.com/en/legal/governance/). This framework ensures:
 * **Algorithm Accountability:** Full transparency of the AI decision-making process.
 * **Human-in-the-Loop (HITL) Integration:** Utilizing expert feedback to refine the predictive layer and reduce "AI hallucinations" in geopolitical contexts.
 
@@ -60,3 +60,17 @@ The research is governed by the [NationFiles Governance Protocol](https://nation
 
 **References:**
 Schmidt, Sven (2026). *Research Project: Real-time Geopolitical Stability Modeling*. Neawolf Media Group. DOI: [10.5281/zenodo.197588908](https://doi.org/10.5281/zenodo.19758890)
+
+---
+### About the Author
+**Sven Schmidt (Sven Neawolf)** is the Lead Architect and Principal Investigator behind the **Naciro Engine** and the **NationFiles** platform. He specializes in LPU-based computer architectures and predictive geopolitical modeling. 
+
+**Technical Identity & Metadata**
+* **Author:** Sven Schmidt (Sven Neawolf)
+* **Lead Architect:** [Naciro AI Engine](https://www.wikidata.org/wiki/Q139553602)
+* **Researcher ID:** [ORCID 0009-0002-5010-1902](https://orcid.org/0009-0002-5010-1902)
+* **Semantic ID:** [Wikidata Q139553554](https://www.wikidata.org/wiki/Q139553554)
+* **Entity:** [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)
+* **Organization:** Neawolf Media Group
+* **Publications:** [Technical Archive](https://nationfiles.com/en/publications/)
+* **Official Source:** [nationfiles.com](https://nationfiles.com)

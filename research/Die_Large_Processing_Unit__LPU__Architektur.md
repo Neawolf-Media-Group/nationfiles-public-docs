@@ -106,3 +106,17 @@ Für Systeme wie **NationFiles** markiert diese Technologie den Wendepunkt von r
 
 **References:**
 Schmidt, Sven (2026). *The Large Processing Unit (LPU) Architecture*. Neawolf Media Group. DOI: [10.5281/zenodo.19774594](https://doi.org/10.5281/zenodo.19774594)
+
+---
+### About the Author
+**Sven Schmidt (Sven Neawolf)** is the Lead Architect and Principal Investigator behind the **Naciro Engine** and the **NationFiles** platform. He specializes in LPU-based computer architectures and predictive geopolitical modeling. 
+
+**Technical Identity & Metadata**
+* **Author:** Sven Schmidt (Sven Neawolf)
+* **Lead Architect:** [Naciro AI Engine](https://www.wikidata.org/wiki/Q139553602)
+* **Researcher ID:** [ORCID 0009-0002-5010-1902](https://orcid.org/0009-0002-5010-1902)
+* **Semantic ID:** [Wikidata Q139553554](https://www.wikidata.org/wiki/Q139553554)
+* **Entity:** [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)
+* **Organization:** Neawolf Media Group
+* **Publications:** [Technical Archive](https://nationfiles.com/en/publications/)
+* **Official Source:** [nationfiles.com](https://nationfiles.com)

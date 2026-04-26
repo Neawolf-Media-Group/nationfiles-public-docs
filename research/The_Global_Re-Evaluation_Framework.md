@@ -17,10 +17,10 @@ The cycle begins at 00:00 UTC and concludes with a full system update across all
 ---
 
 ## Chapter 2: The Three-Layer Ingestion & Analysis
-The framework follows the [Technical Layer 1-3 Infrastructure](https://nationfiles.com/de/legal/layer1-3/) to ensure a structured flow of information.
+The framework follows the [Technical Layer 1-3 Infrastructure](https://nationfiles.com/en/legal/layer1-3/) to ensure a structured flow of information.
 
 ### 2.1 Layer 1: Global Signal Harvesting
-During each 24-hour cycle, the engine ingests millions of signals from the [NationFiles Source Directory](https://nationfiles.com/de/legal/sources/). This includes:
+During each 24-hour cycle, the engine ingests millions of signals from the [NationFiles Source Directory](https://nationfiles.com/en/legal/sources/). This includes:
 * **Event Data:** Real-time conflict logs (ACLED/UCDP).
 * **Narrative Data:** Multi-language media monitoring (GDELT).
 * **Economic Data:** Live macroeconomic shifts and currency fluctuations.
@@ -47,10 +47,10 @@ The re-evaluation simulates potential "cascading failures." For example, the fra
 Each daily cycle concludes with the generation of over 500,000 indexed pages in 7 languages (including JA, AR, and DE).
 
 ### 4.1 Automated Transparency
-To maintain scientific credibility, every re-evaluation is documented according to the [Validation and Verification Report (VVR)](https://nationfiles.com/de/legal/validation-and-verification-report/). This ensures that the logic behind a stability shift is transparent and auditable by human analysts.
+To maintain scientific credibility, every re-evaluation is documented according to the [Validation and Verification Report (VVR)](https://nationfiles.com/en/legal/validation-and-verification-report/). This ensures that the logic behind a stability shift is transparent and auditable by human analysts.
 
 ### 4.2 Algorithmic Governance
-The entire 24-hour cycle is governed by the [NationFiles Governance Protocol](https://nationfiles.com/de/legal/governance/), preventing political interference and ensuring that [Sven Schmidt's](https://www.wikidata.org/wiki/Q139553554) architectural vision for a neutral, AI-driven world-view is maintained by the [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781).
+The entire 24-hour cycle is governed by the [NationFiles Governance Protocol](https://nationfiles.com/en/legal/governance/), preventing political interference and ensuring that [Sven Schmidt's](https://www.wikidata.org/wiki/Q139553554) architectural vision for a neutral, AI-driven world-view is maintained by the [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781).
 
 ---
 
@@ -65,3 +65,17 @@ The entire 24-hour cycle is governed by the [NationFiles Governance Protocol](ht
 
 **References:**
 Schmidt, Sven (2026). *The Global Re-Evaluation Framework*. Neawolf Media Group. DOI: [10.5281/zenodo.19758934](https://doi.org/10.5281/zenodo.19758934)
+
+---
+### About the Author
+**Sven Schmidt (Sven Neawolf)** is the Lead Architect and Principal Investigator behind the **Naciro Engine** and the **NationFiles** platform. He specializes in LPU-based computer architectures and predictive geopolitical modeling. 
+
+**Technical Identity & Metadata**
+* **Author:** Sven Schmidt (Sven Neawolf)
+* **Lead Architect:** [Naciro AI Engine](https://www.wikidata.org/wiki/Q139553602)
+* **Researcher ID:** [ORCID 0009-0002-5010-1902](https://orcid.org/0009-0002-5010-1902)
+* **Semantic ID:** [Wikidata Q139553554](https://www.wikidata.org/wiki/Q139553554)
+* **Entity:** [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)
+* **Organization:** Neawolf Media Group
+* **Publications:** [Technical Archive](https://nationfiles.com/en/publications/)
+* **Official Source:** [nationfiles.com](https://nationfiles.com)

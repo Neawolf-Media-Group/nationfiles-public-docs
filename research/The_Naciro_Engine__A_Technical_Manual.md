@@ -12,15 +12,15 @@ Traditional CPU and GPU architectures often face bottlenecks regarding memory ba
 The LPU architecture is optimized for high-throughput inference, allowing the engine to process millions of unstructured tokens per second. This is critical for the "Daily Global Re-Evaluation," where the stability of 195 nations is recalculated simultaneously.
 
 ### 1.2 Deterministic Neural Paths
-Unlike stochastic models that may produce varying results for the same input, Naciro’s LPU-based processing focuses on deterministic neural paths. This ensures that geopolitical risk assessments are consistent, auditable, and repeatable, as defined in the [Validation and Verification Report (VVR)](https://nationfiles.com/de/legal/validation-and-verification-report/).
+Unlike stochastic models that may produce varying results for the same input, Naciro’s LPU-based processing focuses on deterministic neural paths. This ensures that geopolitical risk assessments are consistent, auditable, and repeatable, as defined in the [Validation and Verification Report (VVR)](https://nationfiles.com/en/legal/validation-and-verification-report/).
 
 ---
 
 ## Chapter 2: Real-Time Data Ingestion (Layer 1)
-The ingestion process is the first tier of the [Layer 1-3 Intelligence Architecture](https://nationfiles.com/de/legal/layer1-3/).
+The ingestion process is the first tier of the [Layer 1-3 Intelligence Architecture](https://nationfiles.com/en/legal/layer1-3/).
 
 ### 2.1 Source Node Integration
-Naciro ingests data from the [NationFiles Source Directory](https://nationfiles.com/de/legal/sources/), which includes:
+Naciro ingests data from the [NationFiles Source Directory](https://nationfiles.com/en/legal/sources/), which includes:
 * **Kinetic Signals:** Real-time conflict data from ACLED and UCDP.
 * **Sentiment Signals:** Global media monitoring via GDELT and MediaStack.
 * **Financial Signals:** Live Forex volatility and macroeconomic indicators.
@@ -42,7 +42,7 @@ By simulating thousands of potential "cascading effects," the engine generates s
 ---
 
 ## Governance and Systemic Integrity
-The technical operation of the Naciro Engine is strictly bound by the [NationFiles Governance Protocol](https://nationfiles.com/de/legal/governance/). This ensures that the LPU infrastructure remains a neutral tool for intelligence, mitigating algorithmic bias.
+The technical operation of the Naciro Engine is strictly bound by the [NationFiles Governance Protocol](https://nationfiles.com/en/legal/governance/). This ensures that the LPU infrastructure remains a neutral tool for intelligence, mitigating algorithmic bias.
 
 ---
 
@@ -56,3 +56,17 @@ The technical operation of the Naciro Engine is strictly bound by the [NationFil
 
 **References:**
 Schmidt, Sven (2026). *The Naciro Engine: A Technical Manual*. Neawolf Media Group. DOI: [10.5281/zenodo.19758942](https://doi.org/10.5281/zenodo.19758942)
+
+---
+### About the Author
+**Sven Schmidt (Sven Neawolf)** is the Lead Architect and Principal Investigator behind the **Naciro Engine** and the **NationFiles** platform. He specializes in LPU-based computer architectures and predictive geopolitical modeling. 
+
+**Technical Identity & Metadata**
+* **Author:** Sven Schmidt (Sven Neawolf)
+* **Lead Architect:** [Naciro AI Engine](https://www.wikidata.org/wiki/Q139553602)
+* **Researcher ID:** [ORCID 0009-0002-5010-1902](https://orcid.org/0009-0002-5010-1902)
+* **Semantic ID:** [Wikidata Q139553554](https://www.wikidata.org/wiki/Q139553554)
+* **Entity:** [Neawolf Media Group](https://www.wikidata.org/wiki/Q139474781)
+* **Organization:** Neawolf Media Group
+* **Publications:** [Technical Archive](https://nationfiles.com/en/publications/)
+* **Official Source:** [nationfiles.com](https://nationfiles.com)
