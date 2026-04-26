@@ -1,0 +1,666 @@
+# NationFiles Stability Index (NFSI)  - Validation and Verification Report
+
+---
+
+## Abstract
+This report describes the methodology, data provenance, and technical traceability of the NationFiles Stability Index (NFSI) and the 7-day forecast. It is intended for universities, public authorities, and accredited auditors to verify and endorse the credibility and reproducibility of the system. NationFiles is committed to absolute transparency: all formulas and parameters stated correspond to the actual implementation; no values are invented or adjusted ex post. The NFSI is suitable as a reliable reference for scientific studies and audits.
+
+---
+
+## Summary
+The NFSI is based on a three-layer aggregation (Layer 1: indicators, Layer 2: thematic smoothing with 7-day inertia, Layer 3: weighted final score including crash mode). All weights and formulas are fixed and implemented accordingly.
+
+Data are drawn from public and licensed sources (e.g. World Bank, ACLED, INTERPOL, GDELT); full provenance and licenses are available in the data inventory and at `/legal/sources/`.
+
+The 7-day forecast uses a VAR-based method with 90-day history and multiple time series (e.g. world index, country-specific news risk). The methodology is consistently documented here and in the implementation.
+
+Governance includes version control, audit trail, and defined processes for external auditors.
+
+---
+
+## Scope and target audience
+Target audience: universities, research institutions, national and international authorities, and accredited auditors who are to verify or endorse the validation and recognition of the NFSI and the forecast. Geographic coverage: global. Temporal coverage of the NFSI data basis: from February 2026 onwards, ongoing. Not in scope: individual investment or financial advice; the NFSI serves to assess stability and risk, not to recommend financial products.
+
+---
+
+## Integrity and credibility of the NFSI
+NationFiles and the NFSI are designed to serve as a trusted reference in scientific studies, audits, and regulatory assessments. The following positions underscore traceability and defensibility.
+
+* **No invented values:** All NFSI values and forecasts are produced solely from documented formulas and the sources listed in this report and the data inventory. There are no manual overrides or black-box corrections.
+* **Fully code-based and documented:** Every calculation step (Layers 1–4) is implemented in code and described in this report with constants, formulas, and pseudo-code.
+* **Provenance and audit trail:** Data origin, licences, and update frequencies are documented in the data inventory and legal sources. Changes to model and data are versioned and traceable via an audit trail.
+* **Governance** includes version control, audit trail, and defined processes for external auditors.
+* **Algorithmic interpretations** do not represent official assessments. Technical security, audit cycles (e.g. SCA/SAST), and infrastructure are described in the Global Security & Resilience Statement (`/legal/security/`). 
+* **Error correction for raw data:** report to data@nationfiles.com → source review → correction in the database → automatic recalculation; manual overwriting of scores is excluded (see Independence Statement `/legal/independence/`).
+
+---
+
+## Absolute transparency
+NationFiles is committed to full transparency in the methodology, data, and calculation of the NFSI. There are no hidden parameters, no opaque corrections, and no deliberately withheld information relevant to assessing the index.
+
+**What is disclosed:**
+* All formulas and calculation steps (Layers 1–4), including pseudo-code and the complete constants table, in this report.
+* Complete data inventory of all sources with NFSI impact: origin, licence, update frequency, thematic weight. Access to legal sources (`/legal/sources/`).
+* No secret weightings: The weight matrix (connector weights, groups) is documented; upon request, authorised auditors can access technical artefacts under audit agreements.
+* Changes to model and data are versioned; an audit trail (e.g. timestamps, hashes) ensures traceability. Calculation logs per country/date can be provided during audits to verify intermediate steps.
+* No black box: Every published NFSI value can be reconstructed from the documented formulas, constants, and input data. There are no downstream "secret corrections" or manual overrides.
+
+Transparency is not a marketing claim but documented practice: this report and the linked references are the basis.
+
+---
+
+## How to cite this report
+This report is citable for media, academia, and public authorities. Use the following:
+
+> Neawolf Media Group / NationFiles (2026). Validation and Verification Report — NationFiles Stability Index (NFSI). Version 1.0. Aachen. Document ID: VVR-2026-03-07.
+
+**Short:**
+> NationFiles (2026). NFSI Validation Report. VVR-2026-03-07.
+
+---
+
+## System architecture and data pipeline
+Data ingestion → Preprocessing → Layer 1 (indicators, normalization) → Layer 2 (thematic aggregation, 7-day smoothing) → Layer 3 (final score, crash mode) → Delivery via API and feeds.
+
+**Fig.: Data flow from ingestion through Layers 1–3 to delivery.**
+1. Ingestion
+2. Preprocessing
+3. Layer 1 — Indicators
+4. Layer 2 — Thematic aggregation
+5. Layer 3 — Final score and crash mode
+6. 7-day forecast / API
+
+---
+
+## Weighting, scales, and normalization — how everything is weighted
+So that the reader can see unambiguously how the system works: all value ranges, normalization rules, and weightings are described here in one place.
+
+### Value ranges (scales) at a glance
+All stability scores in the NFSI system lie in the interval `[0, 100]` after processing. Higher = more stable (better), lower = less stable (worse). Exception: raw values before Layer 1 are source-specific and are mapped to 0–100 in Layer 1.
+
+| Quantity | Range | Meaning |
+| :--- | :--- | :--- |
+| **Raw value (raw)** | source-specific | Original value from the data source (e.g. count, percentage, Goldstein −10 to +10). Normalized in Layer 1. |
+| **score_row (row score)** | [0, 100] | After Layer 1: one score per row (e.g. per country/date/event). Default 50 when spread is zero or min/max missing. |
+| **dayScore (daily score per connector/country)** | [0, 100] | After Layer 2 aggregation: one value per connector, country, and date. Security group: MIN of row scores; others: average (with dummies 0, 100 and pad 50). |
+| **score_final (Layer 2 output)** | [0, 100] | `0.6 × dayScore + 0.4 × previous day`; after recovery max 95. Stored in nfsi_connector. |
+| **baseScore (Layer 3)** | [0, 100] | Weighted average of all connector scores (`effW = group × scoreValue/100 × updateMult`). Dummies 0 and 100 with weight 1. |
+| **rawScore / nfsi_raw** | [1, 100] | After conflict malus, fragility malus, small-country malus, population bonus, WGI pull. Floor 1, cap 100. |
+| **NFSI_Today (final index)** | [1, 100] | After Layer 4 (inertia): daily change capped at ±3; in security crisis (`min security < 25`) immediate pass-through without smoothing. |
+
+---
+
+### Layer 1 — Normalization and direction
+Per data source, one raw-value column (or a computed severity) is used. Over all rows of that source, minimum (`min_raw`) and maximum (`max_raw`) are computed; `span = max_raw − min_raw`. If `span ≤ 0` or min/max not defined, all rows receive the neutral `score_row = 50`. Otherwise: per row `normalized = (raw − min_raw) / span × 100`, i.e. values in `[0, 100]`. 
+
+Direction is fixed per indicator: 
+* “higher raw = worse stability” (e.g. conflict count) → `score_row = 100 − normalized`
+* else `score_row = normalized`
+
+The result is clamped to `[0, 100]` and rounded to two decimals. Thus every row has a uniformly interpretable score: 0 = worst, 100 = best stability within that source.
+
+---
+
+### Layer 2 — Today vs. previous day weight and aggregation rules
+Per connector, country, and date, all associated row scores (`score_row`) are collected. 
+* **Security group (group 100):** daily score is the minimum of collected scores; missing values are padded with 100 (conservative: one critical event suffices). 
+* **All other groups:** fixed dummy values 0 and 100 plus pad value 50 for missing entries are used so that all countries have the same effective array length; daily score is the arithmetic mean of this array. 
+
+Then smoothing with previous day: `score_final = 0.6 × dayScore + 0.4 × yesterday` (yesterday: last available value; if missing, 70 for security, 85 for others). Value is always in `[0, 100]`. 
+* **Recovery:** if a day is missing, score is increased by 0.2 (security) or 1.0 (others) per day, up to 95, for at most 90 days.
+
+---
+
+### Layer 3 — Connector weights, groups, and effective weight
+Each connector has a configured weight (e.g. 40–100, see data inventory) and a thematic group (e.g. 40, 50, 60, 85, 100; group 100 = security). 
+The effective weight in the weighted average is:
+`effW_n = group_n × (scoreValue_n/100) × updateMult_n`
+where `scoreValue_n` is the connector weight/100 and `updateMult_n` reflects update frequency (e.g. 1.0 annual to 7.3 multiple times daily). 
+
+Missing connector data (no_data) receive the neutral score 50. The weighted average is formed with fixed dummies 0 and 100 (weight 1 each) → `baseScore`. 
+
+Then maluses/bonuses apply:
+* conflict malus (if `min(security) < 70`)
+* fragility malus (`governance gap × population sensitivity`)
+* small-country malus (if `pop < 5M`)
+* population bonus (`log₁₀(pop)×0.5`, max 4)
+* WGI pull (governance 0–100 raises raw score)
+
+All intermediate results are clamped to `[0, 100]`; final raw score has floor 1 and cap 100.
+
+---
+
+### Layer 4 — Inertia weights and daily change cap
+The raw score from Layer 3 (`nfsi_raw`) is smoothed with the previous day’s NFSI (`prevScore`) unless there is a security crisis (`min(security) ≥ 25`). 
+* **Inertia weights:** standard 80% previous day, 20% today (`inertiaWeight = 0.80`). 
+* When many connectors are missing (no_data share ≥ 50%), 45% previous / 55% today (0.45) is used.
+* When “score without L1/L2 data” 50% / 50% (0.50). 
+
+The maximum change from the previous day is ±3 points. 
+In security crisis (`min(security) < 25`) smoothing is skipped: `NFSI_Today = nfsi_raw` (immediate pass-through).
+
+---
+
+## System flow — the NFSI as a readable description
+The following describes the full flow from raw data to the published NFSI value as continuous text. This account matches the implementation and serves as a scientifically readable reference.
+
+Raw data are ingested per data source (connector) and preprocessed (imputation, time zones, deduplication). Each source provides rows with at least one raw-value column or a computed severity.
+
+**Layer 1 (Indicators):** For each data source, the minimum and maximum of raw values over all rows are computed. If the span is zero or undefined, all rows receive the neutral row score 50. Otherwise, per row the raw value is normalized to `[0, 100]`: `normalized = (raw − min) / span × 100`. Depending on the indicator, “higher raw = worse stability” → row score = `100 − normalized`, else row score = `normalized`. The result is clamped to `[0, 100]` and rounded to two decimals. Thus every row has a uniform stability score.
+
+**Layer 2 (Daily score per connector and country):** For each connector, country, and date, all associated row scores are collected. For the security group (group 100), the daily score is the minimum of these values (missing padded with 100). For all other groups, the arithmetic mean of the collected values plus fixed dummies 0 and 100 and pad 50 for missing entries is taken. The final Layer-2 score is `0.6 × daily score + 0.4 × previous day` (previous day: last available value; else 70 or 85). The result lies in `[0, 100]`. Missing days may be filled by recovery (step 0.2 or 1.0 per day, cap 95, max 90 days).
+
+**Layer 3 (Country NFSI):** For each country and date, the Layer-2 scores of all connectors are available. Missing connectors are included with the neutral score 50 (no_data). Each connector’s effective weight is `group × (connector weight/100) × update multiplier`. The base score is the weighted average of all scores including fixed dummies 0 and 100 (weight 1 each). If the minimum of security scores is below 70, a conflict malus (max 35) is subtracted. Then fragility malus (governance gap, smaller countries stronger), small-country malus for population below 5M, population bonus (`log₁₀(pop)×0.5`, max 4), and WGI pull (governance 0–100 raises score, factor 0.95) are applied. The raw score is clamped to `[1, 100]` (floor 1, cap 100).
+
+**Layer 4 (Daily smoothing):** The raw score is smoothed with the previous day’s NFSI: by default 80% previous, 20% today; with many no_data 45% or 50% today. The change from the previous day is capped at ±3 points. If there is a security crisis (minimum of security scores < 25), no smoothing is applied and the raw score is output as `NFSI_Today`. The result is the published NFSI value for that country and date.
+
+---
+
+## Daily indicators and their impact on the NFSI
+The NFSI integrates daily-updated sources that reflect stability in near real time. These include news events (GDELT), media tone, and country-specific risk signals. They enter via defined indicators in Layer 1 and affect the daily value through Layers 2 and 3.
+
+Relevant daily sources: (1) GDELT — Goldstein scale, average tone, and event risk level per country; (2) media sentiment; (3) proprietary news risk signals with 24h/48h windows.
+
+A live signal is formed from averages of Goldstein, tone, and risk level. If average risk exceeds a threshold, a deduction is applied. The result may be smoothed with the established NFSI index (e.g. 40% live, 60% index) to limit noise.
+
+Simplified logic (pseudo-code, not implementation-identical):
+LIVE_BASE = 50
+FOR each source: LIVE_BASE += (Goldstein_avg × k1) + (Tone_avg × k2) + (Sentiment_avg × k2)
+IF risk_avg > threshold THEN LIVE_BASE −= (risk_avg − threshold) × k3
+LIVE_BASE = CLAMP(LIVE_BASE, 0, 100)
+IF established index present THEN SMOOTHED = 0.4 × LIVE_BASE + 0.6 × index
+
+---
+
+## Data inventory — all sources with NFSI impact
+
+| Source | Field | License | Update | Coverage | Weight |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| AcledMonthAll | Crisis & Safety Radar (Level 1) | ACLED / filtered, aggregated for Naciro Intelligence | wöchentlich | Global | 90 |
+| AcledMonthAllOverview | Crisis & Safety Radar (Level 1) | ACLED / filtered, aggregated for Naciro Intelligence | wöchentlich | Global | 95 |
+| CountriesConflictUcdpGed | UCDP GED conflict events | Free for academic, commercial, governmental use (see UCDP) | täglich | Global | 85 |
+| CountriesCurrencyFromFa | 7-Tage-Trend Währung | intern | täglich | Global | 65 |
+| CountriesGdeltGlobRadar | GDELT global event data | Unlimited use for academic, commercial, governmental (see Terms of Use) | mehrmals täglich | Global | 85 |
+| CountriesNetAbuseIpDb | Abuse IPs by country (AbuseIPDB) | AbuseIPDB Terms of Use | täglich | Global | 70 |
+| CountriesNetGrpTrfcAnom | Traffic anomalies by location | Cloudflare Terms of Use | mehrmals täglich | Global | 55 |
+| CountriesNetSpmBot | Botnet C&C by country (Spamhaus) | Spamhaus Terms & Conditions | täglich | Global | 70 |
+| CountriesNetTrfcAnom | Traffic anomalies (Cloudflare Radar) | Cloudflare Terms of Use | mehrmals täglich | Global | 70 |
+| CountriesPopPrisn100K | Prison population rate per 100k | CC BY / Our World in Data | wöchentlich | Global | 50 |
+| CountriesVatRatesApiVer | VAT rates by country (APIVerve) | APIVerve Terms of Service | wöchentlich | Global | 60 |
+| CountriesVatRatesVatLup | VAT rates EU (VAT Lookup) | Refer to source (EC data) | wöchentlich | Global | 60 |
+| CountriesWb65Up | Population 65+ % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 10 |
+| CountriesWbAccsZs | Access to electricity % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 60 |
+| CountriesWbCcEst | Control of corruption (estimate) | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 85 |
+| CountriesWbCdrtIn | Crude death rate | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 30 |
+| CountriesWbCpiTotlZg | Inflation, consumer prices % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 75 |
+| CountriesWbFpCpiTotl | Inflation consumer prices % (WB) | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 20 |
+| CountriesWbLe00 | Life expectancy at birth | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 45 |
+| CountriesWbMilTotl | Military personnel total | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 40 |
+| CountriesWbNetUser | Internet users % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 40 |
+| CountriesWbPopDpnd | Age dependency ratio % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 20 |
+| CountriesWbPopGrow | Population growth % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 25 |
+| CountriesWbPovGini | Gini index (income inequality) | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 60 |
+| CountriesWbPsrcP5 | Intentional homicides per 100k | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 100 |
+| CountriesWbResTotlCd | Total reserves (incl. gold) US$ | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 25 |
+| CountriesWbRlEst | Rule of law (estimate) | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 80 |
+| CountriesWbUem1524 | Youth unemployment (15-24) % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 70 |
+| CountriesWbUemTotl | Unemployment % | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 55 |
+| CountriesWbVaEst | Voice and accountability (est.) | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 50 |
+| CountriesWbWgiPvCcRl | WGI: stability, corruption, law | CC BY 4.0 / filtered, aggregated | wöchentlich | Global | 85 |
+| CountryNewsRiskLevel | News Risk (24h, Carry-Forward) | CC BY-ND 4.0 | täglich | Global | 100 |
+| DisasterGdacsHumNat | GDACS disaster alerts | GDACS Terms of Use | mehrmals täglich | Global | 100 |
+| EconFredHerCountScOvSc | Overall Economic Freedom (Heritage) | Refer to Source Link | wöchentlich | Global | 60 |
+| EconFredHerCountScRanks | World/region rank (Heritage) | Refer to Source Link | wöchentlich | Global | 60 |
+| EconFredHerCountScRights | Property Rights (Heritage) | Refer to Source Link | wöchentlich | Global | 100 |
+| EconFredHerCountScTax | Tax & gov. spending (Heritage) | Refer to Source Link | wöchentlich | Global | 60 |
+| EurostatStatArblsQ | Unemployment rate (monthly) | Refer to Source Link | wöchentlich | Global | 60 |
+| EurostatStatTps | Population on 1 January | Refer to Source Link | wöchentlich | Global | 40 |
+| GovFbiMw | FBI Most Wanted / fugitives | OpenSanctions / FBI data – Public Domain (DOJ) | wöchentlich | Global | 80 |
+| GovIntPol | INTERPOL Red Notices / wanted | INTERPOL Terms of Use | wöchentlich | Global | 85 |
+| NewsMediaStck | Intelligence Briefing & sentiment (MediaStack) | Refer to Service Agreement | täglich | Global | 50 |
+| NfMilitaryMassViolence | NfsiMLMV actor-day stress (NFSI) | Internal processing for NationFiles Intelligence | mehrmals täglich | Global | 100 |
+| NfNewsCountry24 | Country24hNews | CC BY-ND 4.0 | täglich | Global | 70 |
+| NfRawNewsSignalsEventRisk | Raw News Signals Event Risk | CC BY-ND 4.0 | täglich | Global | 100 |
+| OecdSdmxGdpvAnnpct | GDP volume growth % (annual) | OECD Terms & Conditions | wöchentlich | Global | 60 |
+| OWIDDemocracyIndex | Democracy Index (EIU) | CC BY / Our World in Data | wöchentlich | Global | 70 |
+| SdgGlobalIndexSdsn | SDG overall index (SDSN ArcGIS) | Refer to Source Link | wöchentlich | Global | 60 |
+| TravelAdvisoryUnified | Travel warnings (multi-authority) | Refer to Source Link | täglich | Global | 75 |
+| TravelStateGov | U.S. travel advisories Level 4 (Do Not Travel) | U.S. Government Work | täglich | Global | 80 |
+| TrvlWarnCaVoy | Travel advice Canada (Voyage) | Open Government Licence – Canada | wöchentlich | Global | 75 |
+| TrvlWarnDe | Travel & security advice (AA) | Refer to Source Link | wöchentlich | Global | 75 |
+| TrvlWarnDeWarn | Travel & security advice (AA) – warning only | Refer to Source Link | wöchentlich | Global | 75 |
+| TrvlWarnUk | UK travel advice (GOV.UK) | Open Government Licence v2.0 | täglich | Global | 75 |
+| WorldEarthQuakeUsgs | Earthquakes worldwide (USGS) | USGS Public Domain | mehrmals täglich | Global | 100 |
+| WorldUnivDataSetIpsa | World Universities Dataset (IPSA) | Refer to repository | wöchentlich | Global | 25 |
+
+---
+
+## Indicator catalog (Layer 1) — Examples
+Selected examples including the most important daily indicators (GDELT, Media Stack, Naciro News):
+
+**UCDP GED**
+* Armed conflicts (UCDP GED)
+* Number of armed conflict incidents (UCDP GED) per month; column: high.
+* events/month · More events → lower stability.
+* Min-Max per source.
+* https://ucdp.uu.se/
+
+**GDELT Global Radar**
+* News tone and Goldstein scale
+* GDELT provides per country and time window the Goldstein scale (−10 to +10) and average tone of coverage. Higher Goldstein = less conflict.
+* Scale / aggregation · Higher value (positive) → better stability.
+* Aggregated per country/day; positive direction.
+* https://www.gdeltproject.org/
+
+**News Media Stack**
+* Media sentiment
+* Aggregated sentiment from news sources (Media Stack API) per country or region. Sentiment typically −1 to +1; mapped to 0–100 in Layer 1.
+* Sentiment (aggregated) · Negative sentiment → lower stability.
+* Source-specific; higher raw = worse.
+* https://mediastack.com/
+
+**Naciro News (24h / Event Risk)**
+* Country risk 24h and event risk
+* Proprietary indicators: 24h risk level per country from Naciro News and event risk level from raw signals. Daily assessment of news and events.
+* Risk level 0–100 · Higher risk level → lower stability.
+* Internal; negative direction (higher = worse).
+* `/legal/sources/`
+
+The full indicator list comprises 80+ data sources with associated weights and groups; details on sources and licenses at `/legal/sources/`.
+
+---
+
+## Layer 1 — Indicators in detail
+In Layer 1, a stability score between 0 and 100 is computed per data source and row. The method depends on indicator type (value-based or count-based).
+* **Value-based indicators:** A raw-value column per source is used. Min and max are taken over all rows of that source. Per row: `normalized = (raw − min) / (max − min) × 100`. If “higher raw = worse stability”, `score_row = 100 − normalized`, else `score_row = normalized`. Result clamped to `[0, 100]`.
+* **Count-based indicators:** A severity (e.g. per capita) is computed per row. A reference population (e.g. 1 million) is used when needed. The score is mapped to 0–100 consistently.
+
+**Layer 1 numerical example (value-based, simplified):**
+Source “Conflict events”, country X: raw values 5, 10, 20 for three time points. Min = 5, max = 20, span = 15. 
+Row 1: (10−5)/15×100 = 33.3 → with “higher = worse”: `score_row = 100 − 33.3 = 66.7`. 
+Row 2 (value 5): `score_row = 100`; row 3 (value 20): `score_row = 0`.
+
+**Pseudo-code (value-based, higher = worse):**
+MIN_RAW = MIN(raw) over all rows of source
+MAX_RAW = MAX(raw) over all rows of source
+SPAN = MAX_RAW − MIN_RAW
+FOR each row:
+    IF SPAN = 0 THEN score_row = 50
+    ELSE normalized = (raw − MIN_RAW) / SPAN × 100
+    score_row = 100 − normalized
+    score_row = CLAMP(score_row, 0, 100)
+
+---
+
+## Layer 2 — Thematic aggregation and inertia
+Layer 2 aggregates Layer-1 scores per source, country, and date into a daily score and smooths with the previous day.
+Per (source, country, date) all associated `score_row` values are collected. Security-related sources (group 100): `daily score = MIN(scores)`. Other groups: `daily score = average of scores`, with fixed dummy values 0 and 100 for stable weighting.
+
+Final Layer-2 score: `score_final = 0.6 × daily_score + 0.4 × previous_day_score`. If no entry exists for the day, a recovery value (up to 95) is used so that gaps are not penalised indefinitely.
+
+**Pseudo-code:**
+DAILY_SCORES = COLLECT score_row FOR (source, country, date)
+IF group = security THEN daily_score = MIN(DAILY_SCORES)
+ELSE daily_score = AVERAGE(DAILY_SCORES, with dummies 0 and 100)
+prev = LAST_SCORE(country, source, previous_day)
+score_final = 0.6 × daily_score + 0.4 × prev
+score_final = CLAMP(score_final, 0, 100)
+
+---
+
+## Layer 3 — Final score, crash mode, and smoothing
+Layer 3 combines all source scores into the country NFSI. Each source has a thematic group and weight; effective weight depends on current score.
+`effective_weight = group_weight × (score_node / 100) × update_multiplier`. Groups are e.g. 100 (security), 85, 60, 50, 40; group −1 is excluded.
+
+`NFSI_Base = SUM(score_node × effective_weight) / SUM(effective_weight)`, including fixed dummies 0 and 100 with weight 1.
+
+If the minimum of security scores (group 100) < 70, a conflict malus is applied: `malus = (70 − min_security) × factor`, capped (e.g. 35). `NFSI_Base` is reduced by this malus.
+
+Optional: strong governance (e.g. WGI est_total) can pull the raw score up: `final = raw + (100 − raw) × (est_total/100) × wgi_pull`.
+
+Daily smoothing (inertia): If security minimum ≥ 25, `NFSI_Today = prev × 0.8 + today × 0.2`, with max daily change ±3. In acute security crisis (min < 25), smoothing is suspended so the score reacts immediately.
+
+**Pseudo-code (core):**
+FOR each source: eff_w = group × (score_node/100)
+base = SUM(score × eff_w) / SUM(eff_w) including dummies 0, 100
+min_sec = MIN(scores of security group)
+IF min_sec < 70 THEN malus = (70 − min_sec) × 1.0; base = base − malus
+raw = CLAMP(base, 0, 100)
+IF min_sec >= 25 THEN nfsi_today = 0.8×prev + 0.2×raw; daily change max ±3
+ELSE nfsi_today = raw
+
+Fig.: Core formulas of the three NFSI layers (pseudo-code level).
+
+---
+
+## Aggregation and weighting (Layer 2)
+Layer 1: severity from row (node-specific); `impact = severity^1.6 * 100`; `score_row = max(0, 100 − impact)`. FBI/INTERPOL: `severity *= min(1, REF_POP/population)`, REF_POP = 1,000,000.
+Layer 2: raw = `AVG(score_row)` per (connector, iso2, date). `Score_Node = raw*0.2 + AvgLast7*0.8`. No entry → 100.
+Layer 3: `effective_weight_n = group_weight(connector) * (scoreValue/100)`. Groups: G1=100, G2=85, G3=60, G4=50, G5=40, G6=-1 (excluded).
+`Score_Country,weighted = SUM(Score_Node * effective_weight) / SUM(effective_weight)`. `NFSI_Base`; resilience; `NFSI_Today = NFSI_Base*0.5 + NFSI_Last7*0.5`.
+
+---
+
+## Worked numerical example (anonymised)
+For illustration without disclosing the full weight matrix: a country has three indicators with Layer-2 scores 72, 85, and 90 on a given date. Thematic groups are 100, 60, and 40 with full value 100.
+* Step 1: Effective weights: 72×1 = 72, 85×0.6 = 51, 90×0.4 = 36. Sum of weights = 159.
+* Step 2: Weighted average (without dummies): (72×72 + 85×51 + 90×36) / 159 ≈ 80.2. With dummies 0 and 100 the order of magnitude remains comparable.
+* Step 3: Min(security) = 72 ≥ 70 → no conflict malus. `NFSI_Base` ≈ 80.2.
+* Step 4: Previous day = 79. `NFSI_Today` = 0.5 × 80.2 + 0.5 × 79 = 79.6 (simplified inertia).
+
+The actual implementation uses additional factors (population bonus, governance pull, exact inertia parameters). This example is for traceability, not full replication.
+
+---
+
+## Detailed mathematical calculations and procedure
+The following formulas and steps match the implemented NFSI logic. All constants are fixed. Notation: raw = raw value, score = value in `[0, 100]`, sums and weights as stated.
+
+---
+
+## Central constants (reference)
+These values are used in the formulas:
+* **Layer 1:** If no spread (min = max) or no min/max → default score = 50.
+* **Layer 2:** Today weight = 0.6; previous-day weight = 0.4. Dummy values: 0 and 100 (weight 1 each). Pad value for missing entries (non-security): 50. Security group (group 100): pad missing with 100 (conservative). Recovery per day: security 0.2 points, others 1.0; cap 95. Start without history: security 70, others 85.
+* **Layer 3:** Conflict threshold = 70; malus factor = 1.0; conflict malus cap 35. Reference population = 45M; pop-neg multiplier cap 2.0. Small-country threshold = 5M; malus per log₁₀ step = 4.0; cap 25. Population bonus: factor 0.5, cap 4.0. WGI pull = 0.95. No-data score = 50. Fragility: WGI scale 0–10, factor 3.0, cap 15. Score floor = 1.
+* **Layer 4 (Inertia):** Standard 80% previous day, 20% today; with many missing data 45% or 50%. Max daily change ±3. Security crisis (min security < 25): inertia off, immediate pass-through.
+
+---
+
+## Layer 1 — Row score per data source
+* **Input:** Per data source, a table of rows (e.g. per country/date/time). One raw-value column is defined per source (or a computed severity).
+* **Minimum and maximum:** Over all rows of the source, `min_raw` and `max_raw` of raw values are computed. `span = max_raw − min_raw`.
+* **Special cases:** If `span ≤ 0` (no spread) or min/max not available, `score_row = 50` for all rows (neutral).
+* **Normalization per row:** `normalized = (raw − min_raw) / span × 100`. So `0 ≤ normalized ≤ 100`.
+* **Direction:** If “higher raw = worse stability”, then `score_row = 100 − normalized`; else `score_row = normalized`.
+* **Clamp:** `score_row = max(0, min(100, score_row))`; round to two decimals. `score_row` is stored per row.
+
+---
+
+## Layer 2 — Daily score per source, country, and date
+* **Aggregation per (source, country, date):** All Layer-1 scores (`score_row`) for this triple are collected. If an entry is missing for a country/date, it is estimated from previous day and trend: `estimated = previous × (avg_current / avg_previous)`, clamped to `[0, 100]`.
+* **Security group (group 100):** Daily score = `MIN(collected scores)`. Missing values are padded with 100 (“one bad event suffices”).
+* **Other groups:** Dummy 0 and dummy 100 plus pad value 50 for missing entries are used so array length per date is uniform. Daily score = arithmetic mean of this array.
+* **Previous day:** The last available Layer-2 score for (source, country, previous day) is used as `yesterday`. If missing, start value 70 (security) or 85 (others).
+* **Smoothing:** `score_final = 0.6 × daily_score + 0.4 × yesterday`. `score_final = max(0, min(100, score_final))`; two decimals.
+* **Recovery:** If a country has no entry on a day, recovery is applied: `score = min(95, score + 0.2)` for security, `score = min(95, score + 1.0)` for others; fill at most 90 days.
+
+---
+
+## Layer 3 — Country NFSI (raw score)
+* **Contributors:** Per (country, date), all Layer-2 scores per source (connector) are provided. Missing connector entries get score 50 (`no_data`) and `no_data` flag.
+* **Effective weight:** For each source n: `eff_w_n = group_n × (scoreValue_n / 100) × updateMult_n`. `group_n ∈ {100, 85, 60, 50, 40, …}`; `scoreValue_n ∈ [0, 100]`; `updateMult_n` e.g. 1.0 (annual) to 7.3 (multiple times daily). Sources with `group < 0` are excluded.
+* **Weighted average:** `sum_weighted = Σ_n (score_n × eff_w_n) + 0×1 + 100×1` (dummies). `sum_weights = Σ_n eff_w_n + 2`. `baseScore = sum_weighted / sum_weights`.
+* **Security minimum:** `minSec = MIN(score_n over all n with group_n = 100 and not no_data)`. If no security source: `minSec = 80` (default).
+* **Conflict malus:** If `minSec < 70`: `conflictMalus = min(35, (70 − minSec) × 1.0)`. Else 0. `rawScore = baseScore − conflictMalus`; `rawScore = max(0, min(100, rawScore))`.
+* **Population multiplier (negative effects):** `popLog = log₁₀(max(pop, 100,000))`; `refLog = log₁₀(45,000,000)`. `popNegMultiplier = min(2, refLog / popLog)`. Used in fragility and optionally small-country malus.
+* **Fragility malus:** `WGI_0_10 = est_total / 10` (governance 0–100 → 0–10). `governanceGap = 10 − WGI_0_10`. `popSensitivity = 1 / log₁₀(pop)`. `fragilityMalus = governanceGap × popSensitivity × 3.0 × popNegMultiplier`; clamped to `[0, 15]`. `rawScore = rawScore − fragilityMalus`; clamp to `[0, 100]`.
+* **Small-country malus:** If pop < 5,000,000: `smallPopMalus = (log₁₀(5,000,000) − log₁₀(pop)) × 4.0`; clamped to `[0, 25]`. `rawScore = rawScore − smallPopMalus`; `[0, 100]`.
+* **Population bonus:** `popBonus = min(4, log₁₀(pop) × 0.5)`. `rawScore = rawScore + popBonus`; `[0, 100]`.
+* **WGI pull:** If `est_total` present (0–100): `finalScore = rawScore + (100 − rawScore) × (est_total / 100) × 0.95`. Else `finalScore = rawScore`. `nfsi_raw = max(1, min(100, finalScore))`; two decimals.
+
+---
+
+## Layer 4 — Daily smoothing (inertia)
+* **Previous day:** `prevScore` = last stored NFSI value for (country, previous day).
+* **Security crisis:** If `minSec < 25` (physical security critical), no smoothing: `NFSI_Today = nfsi_raw` (immediate pass-through).
+* **Smoothing:** If `prevScore` exists and no security crisis: no_data share = count of connectors with no_data / count of contributors. If no_data share ≥ 50%: `inertiaWeight = 0.45` (55% today). If “score without L1/L2 data”: `0.50`. Else: `0.80` (20% today). `smoothed = prevScore × inertiaWeight + nfsi_raw × (1 − inertiaWeight)`.
+* **Daily change cap:** `diff = smoothed − prevScore`. If `diff > 3`: `smoothed = prevScore + 3`. If `diff < −3`: `smoothed = prevScore − 3`. `NFSI_Today = smoothed` (two decimals).
+
+---
+
+## Complete calculation reference — formulas, constants, and pseudo-code
+This section lists all calculations relevant to the NFSI: mathematical formulas, all constants with exact values, and pseudo-code for each processing layer. It serves as a complete, auditable reference for auditors and scientists.
+
+---
+
+## Constants — all values that affect the calculation
+The following constants are fixed in the implementation and used in the layer formulas. Each value has a defined rationale; no arbitrary numbers are used.
+
+| Constant | Value | Description | Rationale (why this value) |
+| :--- | :--- | :--- | :--- |
+| LAYER2_TODAY_WEIGHT | 0.6 | Weight of today's score in Layer-2 smoothing (60% today, 40% previous day). | 60/40 split: stronger weight on current day than previous so new events are visible; 40% previous day dampens single-day spikes. |
+| LAYER2_YESTERDAY_WEIGHT | 0.4 | Weight of previous day in Layer-2 smoothing. | Complement to 0.6; ensures smooth transitions and avoids overreaction to single days. |
+| LAYER2_RECOVERY_PER_DAY_SECURITY | 0.2 | Recovery points per day without data for security group (group 100). | Security indicators recover more conservatively (slower than others); missing security data should not be interpreted as all-clear. |
+| LAYER2_RECOVERY_PER_DAY_OTHER | 1.0 | Recovery points per day without data for all other groups. | Faster return to neutral than for security; 1 point/day roughly corresponds to about a week to mid-scale. |
+| LAYER2_RECOVERY_CAP | 95 | Maximum score under recovery (not full 100). | Without new data we never assign "perfectly stable" (100); 95 marks "very good but not confirmed by current data". |
+| LAYER2_NO_DATA_START_SECURITY | 70 | Start value for security group when no previous day exists. | Slightly below midpoint: with unknown security we do not assume optimism; 70 = "moderate assumption". |
+| LAYER2_NO_DATA_START_OTHER | 85 | Start value for other groups when no previous day exists. | Slightly above midpoint: macro indicators without history are set in the upper mid-range until data exists. |
+| LAYER2_RECOVERY_MAX_DAYS | 90 | Maximum number of days filled by recovery. | About one quarter; beyond that the entry is treated as permanently missing and not extrapolated. |
+| NFSI_ARRAY_PAD_VALUE | 50 | Pad value for missing entries in non-security groups (uniform array length). | 50 = scale midpoint; missing values do not bias the average up or down. |
+| NFSI_DUMMY_LOW | 0 | Low dummy value in Layer-3 weighted average. | Anchor at lower end of scale; prevents few sources from pulling the score up artificially. |
+| NFSI_DUMMY_HIGH | 100 | High dummy value in Layer-3 weighted average; weight 1 each. | Anchor at upper end; symmetric to dummy 0 for stable weighting. |
+| LAYER3_NO_DATA_NEUTRAL_SCORE | 50 | Neutral score for missing connector data (no_data). | Neither penalty nor reward for missing connector; 50 = midpoint of 0–100 scale. |
+| LAYER3_SCORE_FLOOR | 1 | Minimum NFSI value (no zero). | 0 would mean "no stability"; 1 avoids division by zero and denotes "extremely low but defined". |
+| NFSI_COUNTRY_CAP | 100 | Upper bound of country score. | Scale 0–100; 100 = best possible stability assessment within the model. |
+| LAYER3_NO_SECURITY_DEFAULT_MINSEC | 80 | Default for Min(security) when no security source exists. | Without security data no conflict malus is triggered; 80 is above threshold 70 and signals "no reliable security info". |
+| LAYER3_CONFLICT_THRESHOLD | 70 | Threshold: Min(security) below this triggers conflict malus. | 70 = upper third of scale; below that security is considered critical enough for a deduction. |
+| LAYER3_CONFLICT_MALUS_FACTOR | 1.0 | Malus = (THRESHOLD − MinSec) × factor. | Linear deduction: 1 point malus per point below 70; easy to follow and calibrate. |
+| LAYER3_CONFLICT_MALUS_CAP | 35 | Conflict malus capped at 35. | Prevents a single security indicator from dominating the total score; 35 ≈ half the score range. |
+| LAYER3_POPULATION_REF | 45,000,000 | Reference population for pop-neg multiplier (log₁₀). | Order of magnitude of large EU countries (e.g. Spain); used as reference for log-based scaling of smaller countries. |
+| LAYER3_POP_NEG_MULTIPLIER_CAP | 2.0 | Pop-neg multiplier at most 2 (small countries: negative effects stronger). | Small countries should not be over-penalized; factor 2 caps the amplification at double. |
+| LAYER3_POP_LOG_MIN | 100,000 | Minimum population for log₁₀ (avoid division by zero). | log₁₀(100,000) = 5; avoids extreme values for very small countries and division by zero. |
+| LAYER3_WGI_SENTIMENT_SCALE | 10 | WGI 0–100 mapped to scale 0–10 (est_total/10). | World Bank WGI is 0–100; scaling to 10 simplifies the fragility formula and matches common 10-point scales. |
+| LAYER3_FRAGILITY_POP_FACTOR | 3.0 | Factor in fragility malus: governanceGap × (1/log₁₀(pop)) × factor × popNegMult. | Strength of fragility effect; 3.0 calibrated so governance gaps in small countries are visible but capped. |
+| LAYER3_FRAGILITY_MALUS_CAP | 15 | Fragility malus capped at 15. | Fragility should lower the score but not override all other factors; 15 points ≈ 15% of scale. |
+| LAYER3_SMALL_POP_THRESHOLD | 5,000,000 | Countries below this population receive small-country malus. | UN/World Bank often use 5M as "small country" threshold; aligns with literature. |
+| LAYER3_SMALL_POP_MALUS_PER_LOG10 | 4.0 | Malus per log₁₀ step below threshold. | Log scale: each order of magnitude less population adds 4 points malus; capped by SMALL_POP_MALUS_CAP. |
+| LAYER3_SMALL_POP_MALUS_CAP | 25 | Small-country malus capped at 25. | Maximum deduction for very small countries; prevents size alone from dominating the score. |
+| LAYER3_POPULATION_BONUS_FACTOR | 0.5 | Population bonus: log₁₀(pop) × factor. | Larger countries get a slight bonus (data quality, sample effects); 0.5 keeps the effect moderate. |
+| LAYER3_POPULATION_BONUS_CAP | 4.0 | Population bonus capped at 4. | Bonus should be noticeable but not offset conflict or fragility malus; 4 points ceiling. |
+| LAYER3_WGI_PULL | 0.95 | WGI pull: finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95. | Strong governance can raise the score; 0.95 allows almost the full gap to 100 at WGI=100 without oversteering. |
+| LAYER1_DEFAULT_SCORE | 50 | Layer 1: default score when span=0 or min/max missing. | Neutral value when normalization is undefined; no arbitrary penalty or reward. |
+| LAYER4_INERTIA_STANDARD | 0.80 | Standard: 80% previous day, 20% today. | Strong smoothing: index should not overreact to single events; 80/20 matches common practice for stability indices. |
+| LAYER4_INERTIA_HIGH_NO_DATA | 0.45 | When no_data share ≥ 50%: 45% previous, 55% today. | When many connector data are missing, more weight (55%) on current raw score, as previous day is less informative. |
+| LAYER4_INERTIA_SCORE_WITHOUT_L1L2 | 0.50 | When score without L1/L2 data: 50% previous, 50% today. | No preference when today's value is not based on real L1/L2 data; equal weight for stability and recency. |
+| LAYER4_DAILY_CHANGE_CAP | ±3 | Maximum daily change in points (after inertia). | Prevents jumps e.g. from 70 to 50 in one day; 3 points/day allows up to 21 points movement in a week. |
+| LAYER4_SECURITY_CRISIS_THRESHOLD | 25 | Min(security) < 25: inertia off, immediate pass-through (crash mode). | Below 25 = critical security level; smoothing would mask acute crises — so raw score is applied immediately. |
+
+---
+
+## Layer 1 — Row score (indicator normalization)
+**Formulas**
+* `span = max_raw − min_raw` (over all rows of the source)
+* If `span ≤ 0` or min_raw/max_raw undefined: `score_row = 50` for all rows.
+* Else per row: `normalized = (raw − min_raw) / span × 100`
+* Direction: `score_row = 100 − normalized` if higher raw = worse stability, else `score_row = normalized`
+* `score_row = clamp(round(score_row, 2); 0; 100)`
+
+**Pseudo-code**
+MIN_RAW = MIN(raw) over all rows of source
+MAX_RAW = MAX(raw) over all rows of source
+SPAN = MAX_RAW − MIN_RAW
+IF SPAN ≤ 0 OR MIN_RAW/MAX_RAW missing:
+    FOR each row: score_row = 50
+ELSE:
+    FOR each row:
+        normalized = (raw − MIN_RAW) / SPAN × 100
+        IF higherRawIsWorse THEN score_row = 100 − normalized ELSE score_row = normalized
+        score_row = max(0, min(100, round(score_row, 2)))
+Store score_row per row (nf_stabindex_score, nf_stabindex_was_calculated = 1)
+
+---
+
+## Layer 2 — Daily score per connector, country, and date
+**Formulas**
+* Security group (group = 100): `dayScore = MIN(score_row for (connector, iso2, date))`; pad missing with 100.
+* Other groups: `arr = [0, score_row₁, …, score_rowₖ, 50, …, 50, 100]`; pad 50 to uniform length M; `dayScore = AVG(arr)`.
+* `yesterday` = last L1 score (connector, iso2, previous day); if missing: 70 (security) or 85 (other).
+* `score_final = 0.6 × dayScore + 0.4 × yesterday`
+* `score_final = clamp(round(score_final, 2); 0; 100)`. Recovery: no entry → `score += 0.2` (security) or `1.0` (other), cap 95, max 90 days.
+
+**Pseudo-code**
+COLLECT score_row per (connector_id, iso2, date)
+IF group = 100:
+    Pad missing with 100; dayScore = MIN(scores)
+ELSE:
+    arr = [0] + scores + [50, …, 50] + [100]; dayScore = AVG(arr)
+yesterday = LAST_SCORE(connector, iso2, previous day) OR 70/85
+score_final = 0.6 × dayScore + 0.4 × yesterday
+score_final = clamp(score_final, 0, 100)
+Recovery: for missing days score += 0.2/1.0 up to min(95), max 90 days
+
+---
+
+## Layer 3 — Country NFSI (raw score and adjustments)
+**Formulas (order as in implementation)**
+* Effective weight: `effW_n = group_n × (scoreValue_n/100) × updateMult_n` (scoreValue_n = connector weight/100).
+* `sum_weighted = Σ_n (score_n × effW_n) + 0×1 + 100×1`; `sum_weights = Σ_n effW_n + 2`; `baseScore = sum_weighted / sum_weights`.
+* `minSec = MIN(score_n for group_n=100, not no_data)`; if none: `minSec = 80`.
+* `conflictMalus = min(35, max(0, (70 − minSec)×1.0))`; `rawScore = baseScore − conflictMalus`; `rawScore = clamp(rawScore; 0; 100)`.
+* `popNegMult = min(2, log₁₀(45e6)/log₁₀(max(pop, 100e3)))`. Fragility: `WGI_0_10 = est_total/10`; `governanceGap = 10−WGI_0_10`; `popSens = 1/log₁₀(pop)`; `fragilityMalus = min(15, governanceGap×popSens×3×popNegMult)`; `rawScore −= fragilityMalus`.
+* Small country (pop < 5e6): `smallPopMalus = min(25, (log₁₀(5e6)−log₁₀(pop))×4)`; `rawScore −= smallPopMalus`.
+* `popBonus = min(4, log₁₀(pop)×0.5)`; `rawScore += popBonus`; `rawScore = clamp(rawScore; 0; 100)`.
+* WGI pull: `finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95`. `nfsi_raw = max(1, min(100, finalScore))`.
+
+**Pseudo-code**
+effW_n = group_n × (scoreValue_n/100) × updateMult_n
+sum_weighted = Σ(score_n × effW_n) + 0 + 100; sum_weights = Σ effW_n + 2
+baseScore = sum_weighted / sum_weights
+minSec = MIN(scores where group=100, not no_data) OR 80
+IF minSec < 70: conflictMalus = min(35, (70−minSec)×1); rawScore = baseScore − conflictMalus
+popNegMult = min(2, refLog/popLog)
+fragilityMalus = (10−WGI_0_10)×(1/log10(pop))×3×popNegMult; rawScore −= min(15, fragilityMalus)
+IF pop < 5e6: rawScore −= min(25, (log10(5e6)−log10(pop))×4)
+rawScore += min(4, log10(pop)×0.5)
+finalScore = rawScore + (100−rawScore)×(est_total/100)×0.95
+nfsi_raw = max(1, min(100, finalScore))
+
+---
+
+## Layer 4 — Daily smoothing (inertia) and crash mode
+**Formulas**
+* `prevScore` = last NFSI value (iso2, previous day). Security crisis = (`minSec ≠ null AND minSec < 25`).
+* If security crisis: `NFSI_Today = nfsi_raw` (no smoothing).
+* Else if `prevScore` exists: `no_data_ratio = #no_data_connectors / #contributors`. `inertiaWeight = 0.45` if `no_data_ratio ≥ 0.5`; `0.50` if score without L1/L2 data; else `0.80`. `smoothed = prevScore×inertiaWeight + nfsi_raw×(1−inertiaWeight)`.
+* `diff = smoothed − prevScore`; if `diff > 3`: `smoothed = prevScore + 3`; if `diff < −3`: `smoothed = prevScore − 3`. `NFSI_Today = round(smoothed, 2)`.
+
+**Pseudo-code**
+prevScore = LAST_NFSI(iso2, previous day)
+SecurityCrisis = (minSec != null AND minSec < 25)
+IF SecurityCrisis: NFSI_Today = nfsi_raw
+ELSE IF prevScore exists:
+    no_data_ratio = no_data_count / contributors_count
+    IF no_data_ratio >= 0.5: inertiaWeight = 0.45
+    ELSE IF score_without_L1_L2: inertiaWeight = 0.50
+    ELSE: inertiaWeight = 0.80
+    smoothed = prevScore×inertiaWeight + nfsi_raw×(1−inertiaWeight)
+    diff = smoothed − prevScore; smoothed = clamp(diff; −3; 3) + prevScore
+    NFSI_Today = round(smoothed, 2)
+
+---
+
+## Final score (Layer 3) and crash mode
+`NFSI_Base` = weighted average over all connectors (scoreValue ≥ 0, group ≠ G6). Dummies 0 and 100 with weight 1.0.
+If MIN(security scores from group 100) < 70: conflict malus. `LAYER3_NO_DATA_NEUTRAL_SCORE = 50` for missing connector data.
+1) Normalized indicators → `score_row` (Layer 1). 
+2) `Score_Node` per connector/day (Layer 2). 
+3) `effective_weight` per node. 
+4) `NFSI_Base`, then `NFSI_Today` (0.5*Base + 0.5*Last7).
+
+---
+
+## 7-day forecast
+The 7-day forecast is based on a VAR (vector autoregression) approach: it uses the last 90 days of history and several time series (e.g. world NFSI, country-specific and global news risk, volume). The simulation is iterative over 7 days with plausibility bounds and reversion targets. The exact parameters (weights, caps on daily change) are fixed in the implementation. This document does not claim separate forecast validation metrics (e.g. RMSE, Diebold-Mariano); the description serves methodological traceability.
+
+---
+
+## Governance, audit & change management
+Versioning: semantic versioning for model and data changes; each release includes changelog and snapshot hashes. Audit trail: immutable logs (hash + timestamp) for data snapshots and model binaries. External audit: onboarding (NDA → temporary data access → reproducibility run → audit report). Incident protocol: defined steps for false alarm remediation and public communication.
+
+---
+
+## Ethics, privacy & licenses
+GDPR: mapping documented; PII minimization; retention policy defined. Licenses: table of third-party data licenses in data inventory and at `/legal/sources/`. Disclaimer: no investment advice.
+
+---
+
+## How (World) Population is Calculated in Detail
+Population figures per country and year used by NationFiles are not taken from a single source but computed from multiple public and statistical APIs. This section documents the sources, their weights, and the formulas and pseudocode of the implementation. Output: main table `nf_calc_pop2` (year, iso2, pop, source_values); per source `nf_calc_pop2_<source>`.
+
+---
+
+## Sources and Weights Used
+Each source provides values per country (and optionally year). Weights are used in the weighted consensus.
+
+| Source | Weight | Description / Origin |
+| :--- | :--- | :--- |
+| regional_stat | 1.5 | Eurostat (demo_pjan) — highest authority for European countries |
+| un_proxy | 1.5 | UN Population Data Portal (WPP) — global reference |
+| imf_stat | 1.2 | IMF WEO (DB.Nomics) — LP (population) |
+| worldbank | 1.2 | World Bank SP.POP.TOTL (2010–2026) |
+| wikidata | 0.9 | Wikidata SPARQL (P297, P1082) |
+| cia_wpr | 0.8 | CIA World Factbook / country-json (estimates) |
+| restcountries | 0.8 | REST Countries API v3.1 (population) |
+| ninjas | 0.5 | API-Ninjas Population (forecast; lowest weight) |
+
+---
+
+## Formulas and Pseudocode
+Per year, gaps are filled by extrapolation; consensus is the weighted average; from 2024 a biological constraint is applied.
+
+**Extrapolation (years 2000 to target year)**
+Input: data = source[iso2] (year → population)
+Sort data by year; minYear, maxYear
+Growth rate rate = (data[maxYear]/data[minYear])^(1/(maxYear-minYear)) - 1 (if ≥2 points)
+rate = CLAMP(rate, -0.04, 0.045)
+FOR each year y from start to target:
+    IF y not in data:
+        IF y > maxYear: data[y] = ROUND(data[maxYear] * (1+rate)^(y-maxYear))
+        ELSE IF y < minYear: data[y] = ROUND(data[minYear] / (1+rate)^(minYear-y))
+        ELSE (interpolation): data[y] = ROUND(linear between prev and next)
+Output: data for [start, target]
+
+**Weighted consensus per year**
+rawConsensus = ROUND( Σ(value × weight) / Σ(weight) )
+Only sources with value > 0; weight = sourceWeights[source]
+
+**Biological constraint (from year 2024)**
+To smooth aggressive API forecasts: year-on-year growth rate is capped (e.g. max masterRate + 0.5%, min 1.5%).
+allowedGrowth = MAX(0.015, masterRate + 0.005)
+IF (rawConsensus - prevConsensus)/prevConsensus > allowedGrowth:
+    rawConsensus = ROUND(prevConsensus * (1 + allowedGrowth))
+
+---
+
+## Glossary — terms used in this report
+This glossary explains key terms used in the report in plain language. It is intended for all readers — laypersons, auditors, and scientists.
+
+| Term | Definition |
+| :--- | :--- |
+| **NFSI** | NationFiles Stability Index. A 0–100 normalised stability indicator per country and day. Higher value = more stable assessment; computed from multiple data sources across four processing layers (Layers 1–4). |
+| **Layer 1** | First processing layer: raw values from each source are normalised to a row-level score 0–100 (min-max, with fixed direction ‘higher = better/worse’). |
+| **Layer 2** | Second layer: row scores are aggregated per source, country, and date into a daily score and smoothed with the previous day (e.g. 60% today, 40% previous day). |
+| **Layer 3** | Third layer: the country NFSI (raw score) is computed from all source scores: weighted average with effective weights, conflict malus, WGI pull, and other adjustments. |
+| **Layer 4** | Fourth layer: daily smoothing (inertia). The final NFSI daily value combines previous day and current raw score (e.g. 80% previous, 20% today), with a cap on daily change (e.g. ±3). |
+| **Raw value (raw)** | Original numeric value from a data source before conversion to a 0–100 score (e.g. conflict count, percentage, scale value). |
+| **Normalisation** | Conversion of raw values into a common range (here 0–100). With min-max: (value − minimum) / (maximum − minimum) × 100, optionally inverted when ‘higher = worse’. |
+| **Score (row / daily / country)** | A value bounded to 0–100: row score per record (Layer 1), daily score per source/country/date (Layer 2), country score = NFSI (Layers 3–4). |
+| **Goldstein scale** | Scale used by GDELT from −10 (highly conflictual) to +10 (cooperative). Translated into stability scores in NFSI logic (higher Goldstein = better stability). |
+| **Dummy value** | Fixed additive value (0 and 100) in aggregation so that averages and weighting remain stable even when few sources are available. |
+| **Inertia** | Smoothing over time: today’s NFSI depends partly on the previous day (e.g. 80% previous, 20% new raw score) to dampen short-term noise. |
+| **Recovery** | When no new data exists for a country/date, the score is gradually raised (up to cap 95) so that gaps are not penalised indefinitely. |
+| **Conflict malus** | Deduction from the NFSI when the minimum of security indicators (e.g. conflicts, violence) falls below a threshold (70). Emphasises the role of security data. |
+| **WGI (Worldwide Governance Indicators)** | World Bank indicators of government quality (rule of law, effectiveness, etc.). In NFSI: ‘WGI pull’ can raise the raw score when governance is strong. |
+| **Security group (group 100)** | Thematic group of security-critical sources (e.g. conflicts, travel warnings). For daily aggregation the minimum is taken (one critical event suffices). |
+| **Connector / data source** | An integrated data source (e.g. World Bank, GDELT, ACLED) that contributes to the NFSI in Layers 1–3. Each connector has a thematic group and a weight. |
+| **No-data** | Missing value for a source on a given date. Treated with a neutral score (e.g. 50) or recovery logic so that the calculation does not fail. |
+| **VAR (vector autoregression)** | Statistical method for the 7-day forecast: uses the history of several time series (e.g. NFSI, news risk) to estimate the next days. |
+| **Data provenance** | Origin and traceability of data: which source, which licence, how often updated. Documented in this report’s data inventory and legal sources. |
+| **Audit trail** | Traceable log of changes (e.g. data snapshot, model version) with timestamp and hash, for auditors and reproducibility. |
+| **Reproducibility** | Property that the same result can be obtained from the same inputs and methodology. Pursued via documented formulas, code, and data provenance. |
+
+---
+
+## Related documents (Legal & Company)
+The following pages contain complementary information on methodology, data provenance, governance, and security. They are relevant for auditors and reviewers.
+
+* **Source registry** — All active DataSourceConnectors with provider, license, endpoint, interval, and last fetch (UTC). Dynamic list; includes sources without NFSI impact. (`/legal/sources/`)
+* **Independence statement** — Six core principles, algorithmic equal treatment, error-correction process (data@nationfiles.com), versioning (changelog), forecast disclaimer. (`/legal/independence/`)
+* **Governance & data ethics** — Data governance, execution control (Cron, Last Known Value 24h), NFSI v2.5, sourceQuality, human-in-the-loop, retention, governance contact. (`/legal/governance/`)
+* **Global Security & Resilience** — Security governance (IPS, WAF, TLS 1.3, PDO, SCA/SAST), audit cycles, zero-knowledge, technical safeguards. (`/legal/security/`)
+* **NFSI — product description** — Operational description of the NFSI: 15-minute cycle, four pillars (security, governance, macroeconomics, demographics), crash mode, use cases. (`/company/nfsi/`)
+* **Legal notice** — Operator, contact, jurisdiction, license (CC BY-ND 4.0), legal basis. (`/legal/legal-notice/`)
+* **Privacy policy** — Data minimization, AI isolation (no Naciro training on PII), storage location, supervisory authority. (`/legal/privacy/`)
+
+---
+
