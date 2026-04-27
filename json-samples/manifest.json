@@ -1,0 +1,81 @@
+{
+  "copyright": "Copyright (c) NationFiles / Neawolf Media Group. Manifest of generated JSON export sample files.",
+  "source_url": "https://nationfiles.com/sitemap.xml",
+  "meta": {
+    "record_type": "scientific_peer_review_manifest",
+    "language": "en",
+    "created_at_utc": "2026-04-27T12:45:00Z",
+    "generated_by": "download/dataset/generate_json_export_samples.py",
+    "scope": "English endpoints with country exports canonized to USA samples",
+    "sampling_strategy": "single-endpoint snapshot without pagination",
+    "scientific_alignment": {
+      "principles": [
+        "FAIR-supportive metadata",
+        "transparent provenance",
+        "reproducibility support"
+      ]
+    },
+    "included_bin_feeds": [
+      "bin_global_source_nodes_feed.json",
+      "bin_global_stability_time_series_feed.json"
+    ]
+  },
+  "description": {
+    "text": "Index of JSON export sample files generated from discovered NationFiles export endpoints.",
+    "keydata": {
+      "source_url": "Original JSON export endpoint URL.",
+      "file": "Local file name generated from source_url."
+    }
+  },
+  "sample_data": [
+    {
+      "source_url": "https://nationfiles.com/en/?export=json&chart=world_index_30d",
+      "file": "export_json_chart_world_index_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/continent/south-america/?export=json&chart=continent_nfsi_30d",
+      "file": "continent_south_america__export_json_chart_continent_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/compare/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_compare__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/metadata/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_metadata__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/metamap/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_metamap__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/migration/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_migration__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/news/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_news__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/nfsi/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_nfsi__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/security-radar/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_security_radar__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/country/usa/snapshot/?export=json&chart=country_nfsi_30d",
+      "file": "country_usa_snapshot__export_json_chart_country_nfsi_30d.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/de/company/about/",
+      "file": "bin_global_source_nodes_feed.json"
+    },
+    {
+      "source_url": "https://nationfiles.com/en/",
+      "file": "bin_global_stability_time_series_feed.json"
+    }
+  ],
+  "generated_at_utc": "2026-04-27T12:45:00Z"
+}

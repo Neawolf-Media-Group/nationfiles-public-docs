@@ -1,0 +1,281 @@
+{
+  "copyright": "Copyright (c) NationFiles / Neawolf Media Group. This file contains sampled public export data for documentation purposes.",
+  "source_url": "https://nationfiles.com/en/",
+  "meta": {
+    "record_type": "scientific_peer_review_sample",
+    "title": "NationFiles Bin Feed Sample - Global Stability Time-Series Feed",
+    "abstract": "Machine-readable sample dataset prepared for peer review and publication support. Data is represented in a security-preserving, documentation-oriented wrapper.",
+    "language": "en",
+    "created_at_utc": "2026-04-27T12:45:00Z",
+    "version": "1.0.0",
+    "context_scope": "frontend_feed",
+    "controller": "Global Dashboard Controller",
+    "source_domain": "nationfiles.com",
+    "source_path": "/en/",
+    "source_query": "",
+    "payload_type": "object",
+    "top_level_count": 2,
+    "sampling_strategy": "single snapshot from generated frontend feed artifact",
+    "quality_note": "Values can change over time; schema semantics are primary for peer review.",
+    "methodology": {
+      "collection_method": "generated feed snapshot import",
+      "pagination_applied": false,
+      "truncation_policy": "sample_data truncated to first 10 list/items and bounded object depth",
+      "normalization": "feed label transformed to alphanumeric output filename"
+    },
+    "provenance": {
+      "primary_source": "nationfiles.com platform-generated feed artifact",
+      "source_url": "https://nationfiles.com/en/",
+      "generated_by": "download/dataset/generate_json_export_samples.py"
+    },
+    "license": {
+      "rights_holder": "NationFiles / Neawolf Media Group",
+      "usage_note": "For documentation, peer review, and publication supplements; verify reuse terms with publisher/rights holder.",
+      "copyright_statement": "Copyright (c) NationFiles / Neawolf Media Group."
+    },
+    "citation": {
+      "recommended": "NationFiles feed sample (accessed via source_url, generated_at_utc).",
+      "citation_format": "Author/Organization. Title. Version. Source URL. Access date."
+    },
+    "scientific_alignment": {
+      "principles": [
+        "FAIR-supportive metadata",
+        "reproducibility-oriented sampling",
+        "transparent provenance"
+      ],
+      "standards": [
+        "Dublin Core (conceptual alignment)",
+        "DataCite citation elements (conceptual alignment)",
+        "JSON data package style metadata (practical alignment)"
+      ],
+      "peer_review_focus": [
+        "dataset context",
+        "key semantics",
+        "data provenance",
+        "sampling constraints"
+      ]
+    },
+    "integrity": {
+      "checksum_sha256_sample_data": "not_computed",
+      "verification_note": "Add cryptographic checksum in publication pipeline if required."
+    }
+  },
+  "description": {
+    "text": "This endpoint provides global export data used in high-level NationFiles dashboards. The sampled payload was fetched from path '/en/' with query 'none'. The payload type is object with 2 top-level entries. This sample is intentionally truncated (no pagination) to provide a stable, lightweight download artifact for documentation, QA checks, and integration previews. Representative key paths include: meta, meta.timestamp, meta.worldscore, meta.worldscore_prev, meta.worldscore_change, meta.worldscore_change_pct, meta.world_population, meta.world_population_prev.",
+    "keydata": {
+      "meta": "Nested object with detailed fields.",
+      "country": "Nested object with detailed fields."
+    },
+    "keyvalue": {
+      "meta": "Nested object with detailed fields.",
+      "meta.timestamp": "Date/time value for this data point.",
+      "meta.worldscore": "Calculated score/index value.",
+      "meta.worldscore_prev": "Calculated score/index value.",
+      "meta.worldscore_change": "Calculated score/index value.",
+      "meta.worldscore_change_pct": "Calculated score/index value.",
+      "meta.world_population": "Integer numeric value.",
+      "meta.world_population_prev": "Integer numeric value.",
+      "meta.continent_scores": "Calculated score/index value.",
+      "meta.continent_scores.Africa": "Nested object with detailed fields.",
+      "meta.continent_scores.Africa.score": "Calculated score/index value.",
+      "meta.continent_scores.Africa.population": "Integer numeric value.",
+      "meta.continent_scores.Americas": "Nested object with detailed fields.",
+      "meta.continent_scores.Americas.score": "Calculated score/index value.",
+      "meta.continent_scores.Americas.population": "Integer numeric value.",
+      "meta.continent_scores.Asia": "Nested object with detailed fields.",
+      "meta.continent_scores.Asia.score": "Calculated score/index value.",
+      "meta.continent_scores.Asia.population": "Integer numeric value.",
+      "meta.continent_scores.Europe": "Nested object with detailed fields.",
+      "meta.continent_scores.Europe.score": "Calculated score/index value.",
+      "meta.continent_scores.Europe.population": "Integer numeric value.",
+      "meta.continent_scores.Oceania": "Nested object with detailed fields.",
+      "meta.continent_scores.Oceania.score": "Calculated score/index value.",
+      "meta.continent_scores.Oceania.population": "Integer numeric value.",
+      "meta.continent_scores_prev": "Calculated score/index value.",
+      "meta.continent_scores_prev.Africa": "Nested object with detailed fields.",
+      "meta.continent_scores_prev.Africa.score": "Calculated score/index value.",
+      "meta.continent_scores_prev.Africa.population": "Integer numeric value.",
+      "meta.continent_scores_prev.Americas": "Nested object with detailed fields.",
+      "meta.continent_scores_prev.Americas.score": "Calculated score/index value.",
+      "meta.continent_scores_prev.Americas.population": "Integer numeric value.",
+      "meta.continent_scores_prev.Asia": "Nested object with detailed fields.",
+      "meta.continent_scores_prev.Asia.score": "Calculated score/index value.",
+      "meta.continent_scores_prev.Asia.population": "Integer numeric value.",
+      "meta.continent_scores_prev.Europe": "Nested object with detailed fields.",
+      "meta.continent_scores_prev.Europe.score": "Calculated score/index value.",
+      "meta.continent_scores_prev.Europe.population": "Integer numeric value.",
+      "meta.continent_scores_prev.Oceania": "Nested object with detailed fields.",
+      "meta.continent_scores_prev.Oceania.score": "Calculated score/index value.",
+      "meta.continent_scores_prev.Oceania.population": "Integer numeric value.",
+      "country": "Nested object with detailed fields.",
+      "country.AD": "Nested object with detailed fields.",
+      "country.AD.score": "Calculated score/index value.",
+      "country.AD.score_prev": "Calculated score/index value.",
+      "country.AD.change": "Decimal numeric value.",
+      "country.AD.change_pct": "Decimal numeric value.",
+      "country.AD.population": "Integer numeric value.",
+      "country.AE": "Nested object with detailed fields.",
+      "country.AE.score": "Calculated score/index value.",
+      "country.AE.score_prev": "Calculated score/index value.",
+      "country.AE.change": "Decimal numeric value.",
+      "country.AE.change_pct": "Decimal numeric value.",
+      "country.AE.population": "Integer numeric value.",
+      "country.AF": "Nested object with detailed fields.",
+      "country.AF.score": "Calculated score/index value.",
+      "country.AF.score_prev": "Calculated score/index value.",
+      "country.AF.change": "Decimal numeric value.",
+      "country.AF.change_pct": "Decimal numeric value.",
+      "country.AF.population": "Integer numeric value.",
+      "country.AG": "Nested object with detailed fields.",
+      "country.AG.score": "Calculated score/index value.",
+      "country.AG.score_prev": "Calculated score/index value.",
+      "country.AG.change": "Decimal numeric value.",
+      "country.AG.change_pct": "Decimal numeric value.",
+      "country.AG.population": "Integer numeric value.",
+      "country.AI": "Nested object with detailed fields.",
+      "country.AI.score": "Calculated score/index value.",
+      "country.AI.score_prev": "Calculated score/index value.",
+      "country.AI.change": "Decimal numeric value.",
+      "country.AI.change_pct": "Integer numeric value.",
+      "country.AI.population": "Integer numeric value.",
+      "country.AL": "Nested object with detailed fields.",
+      "country.AL.score": "Calculated score/index value.",
+      "country.AL.score_prev": "Calculated score/index value.",
+      "country.AL.change": "Decimal numeric value.",
+      "country.AL.change_pct": "Decimal numeric value.",
+      "country.AL.population": "Integer numeric value.",
+      "country.AM": "Nested object with detailed fields.",
+      "country.AM.score": "Calculated score/index value.",
+      "country.AM.score_prev": "Calculated score/index value."
+    }
+  },
+  "sample_data": {
+    "meta": {
+      "timestamp": 1777293183,
+      "worldscore": 49.37,
+      "worldscore_prev": 50.48,
+      "worldscore_change": -1.11,
+      "worldscore_change_pct": -2.2,
+      "world_population": 8091807963,
+      "world_population_prev": 8091807963,
+      "continent_scores": {
+        "Africa": {
+          "score": 39.96,
+          "population": 1477494889
+        },
+        "Americas": {
+          "score": 56.25,
+          "population": 1047275687
+        },
+        "Asia": {
+          "score": 48.86,
+          "population": 4767106395
+        },
+        "Europe": {
+          "score": 60.8,
+          "population": 741126042
+        },
+        "Oceania": {
+          "score": 70.7,
+          "population": 45804950
+        }
+      },
+      "continent_scores_prev": {
+        "Africa": {
+          "score": 40.03,
+          "population": 1477494889
+        },
+        "Americas": {
+          "score": 57.28,
+          "population": 1047275687
+        },
+        "Asia": {
+          "score": 50.38,
+          "population": 4767106395
+        },
+        "Europe": {
+          "score": 61.54,
+          "population": 741126042
+        },
+        "Oceania": {
+          "score": 72.05,
+          "population": 45804950
+        }
+      }
+    },
+    "country": {
+      "AD": {
+        "score": 80.88,
+        "score_prev": 77.93,
+        "change": 2.95,
+        "change_pct": 3.79,
+        "population": 80216
+      },
+      "AE": {
+        "score": 68.7,
+        "score_prev": 68.57,
+        "change": 0.13,
+        "change_pct": 0.19,
+        "population": 9554746
+      },
+      "AF": {
+        "score": 28.16,
+        "score_prev": 29.72,
+        "change": -1.56,
+        "change_pct": -5.25,
+        "population": 42802656
+      },
+      "AG": {
+        "score": 74.16,
+        "score_prev": 71.62,
+        "change": 2.54,
+        "change_pct": 3.55,
+        "population": 94558
+      },
+      "AI": {
+        "score": 70.74,
+        "score_prev": 70.04,
+        "change": 0.7,
+        "change_pct": 1,
+        "population": 16093
+      },
+      "AL": {
+        "score": 51.19,
+        "score_prev": 53.92,
+        "change": -2.73,
+        "change_pct": -5.06,
+        "population": 2828089
+      },
+      "AM": {
+        "score": 48.85,
+        "score_prev": 49.27,
+        "change": -0.42,
+        "change_pct": -0.85,
+        "population": 2778229
+      },
+      "AO": {
+        "score": 59.78,
+        "score_prev": 56.78,
+        "change": 3,
+        "change_pct": 5.28,
+        "population": 37240003
+      },
+      "AQ": {
+        "score": 13.48,
+        "score_prev": 14.37,
+        "change": -0.89,
+        "change_pct": -6.19,
+        "population": 2615
+      },
+      "AR": {
+        "score": 52.41,
+        "score_prev": 55.07,
+        "change": -2.66,
+        "change_pct": -4.83,
+        "population": 45917069
+      },
+      "__truncated__": "only first 10 keys kept"
+    }
+  },
+  "generated_at_utc": "2026-04-27T12:45:00Z"
+}

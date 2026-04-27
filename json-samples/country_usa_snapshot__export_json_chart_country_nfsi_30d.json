@@ -1,0 +1,138 @@
+{
+  "copyright": "Copyright (c) NationFiles / Neawolf Media Group. This file contains sampled public export data for documentation purposes.",
+  "source_url": "https://nationfiles.com/en/country/usa/snapshot/?export=json&chart=country_nfsi_30d",
+  "meta": {
+    "record_type": "scientific_peer_review_sample",
+    "title": "NationFiles JSON Export Sample - /en/country/usa/snapshot/",
+    "abstract": "Machine-readable sample dataset prepared for peer review, reproducibility checks, and publication supplements. The sample mirrors the live JSON export structure while remaining intentionally lightweight.",
+    "language": "en",
+    "created_at_utc": "2026-04-27T12:44:59Z",
+    "version": "1.0.0",
+    "context_scope": "country_snapshot",
+    "source_domain": "nationfiles.com",
+    "source_path": "/en/country/usa/snapshot/",
+    "source_query": "export=json&chart=country_nfsi_30d",
+    "payload_type": "object",
+    "top_level_count": 1,
+    "sampling_strategy": "single-endpoint snapshot without pagination",
+    "quality_note": "Sample is generated from a live export endpoint; values may change over time. Schema shape is the primary stable reference for review.",
+    "methodology": {
+      "collection_method": "automated HTTP GET from public endpoint",
+      "pagination_applied": false,
+      "truncation_policy": "sample_data truncated to first 10 list/items and bounded object depth",
+      "normalization": "URL-derived filename with non-alphanumeric characters replaced by underscore"
+    },
+    "provenance": {
+      "primary_source": "nationfiles.com public JSON export endpoint",
+      "source_url": "https://nationfiles.com/en/country/usa/snapshot/?export=json&chart=country_nfsi_30d",
+      "generated_by": "download/dataset/generate_json_export_samples.py"
+    },
+    "license": {
+      "rights_holder": "NationFiles / Neawolf Media Group",
+      "usage_note": "For documentation, peer review, and publication supplements; verify reuse terms with publisher/rights holder.",
+      "copyright_statement": "Copyright (c) NationFiles / Neawolf Media Group."
+    },
+    "citation": {
+      "recommended": "NationFiles JSON Export Sample (accessed via source_url, generated_at_utc).",
+      "citation_format": "Author/Organization. Title. Version. Source URL. Access date."
+    },
+    "scientific_alignment": {
+      "principles": [
+        "FAIR-supportive metadata",
+        "reproducibility-oriented sampling",
+        "transparent provenance"
+      ],
+      "standards": [
+        "Dublin Core (conceptual alignment)",
+        "DataCite citation elements (conceptual alignment)",
+        "JSON data package style metadata (practical alignment)"
+      ],
+      "peer_review_focus": [
+        "dataset context",
+        "key semantics",
+        "data provenance",
+        "sampling constraints"
+      ]
+    },
+    "integrity": {
+      "checksum_sha256_sample_data": "not_computed",
+      "verification_note": "Add cryptographic checksum in publication pipeline if required."
+    }
+  },
+  "description": {
+    "text": "This endpoint provides snapshot export data for the USA country dashboard state. The sampled payload was fetched from path '/en/country/usa/snapshot/' with query 'export=json&chart=country_nfsi_30d'. The payload type is object with 1 top-level entries. This sample is intentionally truncated (no pagination) to provide a stable, lightweight download artifact for documentation, QA checks, and integration previews. Representative key paths include: country_nfsi_30d, country_nfsi_30d.timeline, country_nfsi_30d.timeline.2026-03-28, country_nfsi_30d.timeline.2026-03-29, country_nfsi_30d.timeline.2026-03-30, country_nfsi_30d.timeline.2026-03-31, country_nfsi_30d.timeline.2026-04-01, country_nfsi_30d.timeline.2026-04-02.",
+    "keydata": {
+      "country_nfsi_30d": "Nested object with detailed fields."
+    },
+    "keyvalue": {
+      "country_nfsi_30d": "Nested object with detailed fields.",
+      "country_nfsi_30d.timeline": "Date/time value for this data point.",
+      "country_nfsi_30d.timeline.2026-03-28": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-03-29": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-03-30": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-03-31": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-01": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-02": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-03": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-04": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-05": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-06": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-07": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-08": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-09": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-10": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-11": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-12": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-13": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-14": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-15": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-16": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-17": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-18": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-19": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-20": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-21": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-22": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-23": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-24": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-25": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-26": "Decimal numeric value.",
+      "country_nfsi_30d.timeline.2026-04-27": "Decimal numeric value.",
+      "country_nfsi_30d.prediction": "Nested object with detailed fields.",
+      "country_nfsi_30d.prediction.2026-04-28": "Decimal numeric value.",
+      "country_nfsi_30d.prediction.2026-04-29": "Decimal numeric value.",
+      "country_nfsi_30d.prediction.2026-04-30": "Decimal numeric value.",
+      "country_nfsi_30d.prediction.2026-05-01": "Decimal numeric value.",
+      "country_nfsi_30d.prediction.2026-05-02": "Decimal numeric value.",
+      "country_nfsi_30d.prediction.2026-05-03": "Decimal numeric value.",
+      "country_nfsi_30d.prediction.2026-05-04": "Decimal numeric value."
+    }
+  },
+  "sample_data": {
+    "country_nfsi_30d": {
+      "timeline": {
+        "2026-03-28": 72.46,
+        "2026-03-29": 72.39,
+        "2026-03-30": 69.54,
+        "2026-03-31": 69.8,
+        "2026-04-01": 69.54,
+        "2026-04-02": 70.57,
+        "2026-04-03": 68.42,
+        "2026-04-04": 68.71,
+        "2026-04-05": 69.01,
+        "2026-04-06": 68.64,
+        "__truncated__": "only first 10 keys kept"
+      },
+      "prediction": {
+        "2026-04-28": 67.45,
+        "2026-04-29": 65.08,
+        "2026-04-30": 64.29,
+        "2026-05-01": 64.29,
+        "2026-05-02": 64.29,
+        "2026-05-03": 64.29,
+        "2026-05-04": 64.29
+      }
+    }
+  },
+  "generated_at_utc": "2026-04-27T12:44:59Z"
+}

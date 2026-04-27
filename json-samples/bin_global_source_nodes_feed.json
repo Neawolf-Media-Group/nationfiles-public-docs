@@ -1,0 +1,359 @@
+{
+  "copyright": "Copyright (c) NationFiles / Neawolf Media Group. This file contains sampled public export data for documentation purposes.",
+  "source_url": "https://nationfiles.com/de/company/about/",
+  "meta": {
+    "record_type": "scientific_peer_review_sample",
+    "title": "NationFiles Bin Feed Sample - Global Source Nodes Feed",
+    "abstract": "Machine-readable sample dataset prepared for peer review and publication support. Data is represented in a security-preserving, documentation-oriented wrapper.",
+    "language": "en",
+    "created_at_utc": "2026-04-27T12:45:00Z",
+    "version": "1.0.0",
+    "context_scope": "frontend_feed",
+    "controller": "Public Knowledge Graph Controller",
+    "source_domain": "nationfiles.com",
+    "source_path": "/de/company/about/",
+    "source_query": "",
+    "payload_type": "object",
+    "top_level_count": 2,
+    "sampling_strategy": "single snapshot from generated frontend feed artifact",
+    "quality_note": "Values can change over time; schema semantics are primary for peer review.",
+    "methodology": {
+      "collection_method": "generated feed snapshot import",
+      "pagination_applied": false,
+      "truncation_policy": "sample_data truncated to first 10 list/items and bounded object depth",
+      "normalization": "feed label transformed to alphanumeric output filename"
+    },
+    "provenance": {
+      "primary_source": "nationfiles.com platform-generated feed artifact",
+      "source_url": "https://nationfiles.com/de/company/about/",
+      "generated_by": "download/dataset/generate_json_export_samples.py"
+    },
+    "license": {
+      "rights_holder": "NationFiles / Neawolf Media Group",
+      "usage_note": "For documentation, peer review, and publication supplements; verify reuse terms with publisher/rights holder.",
+      "copyright_statement": "Copyright (c) NationFiles / Neawolf Media Group."
+    },
+    "citation": {
+      "recommended": "NationFiles feed sample (accessed via source_url, generated_at_utc).",
+      "citation_format": "Author/Organization. Title. Version. Source URL. Access date."
+    },
+    "scientific_alignment": {
+      "principles": [
+        "FAIR-supportive metadata",
+        "reproducibility-oriented sampling",
+        "transparent provenance"
+      ],
+      "standards": [
+        "Dublin Core (conceptual alignment)",
+        "DataCite citation elements (conceptual alignment)",
+        "JSON data package style metadata (practical alignment)"
+      ],
+      "peer_review_focus": [
+        "dataset context",
+        "key semantics",
+        "data provenance",
+        "sampling constraints"
+      ]
+    },
+    "integrity": {
+      "checksum_sha256_sample_data": "not_computed",
+      "verification_note": "Add cryptographic checksum in publication pipeline if required."
+    }
+  },
+  "description": {
+    "text": "This endpoint provides global export data used in high-level NationFiles dashboards. The sampled payload was fetched from path '/de/company/about/' with query 'none'. The payload type is object with 2 top-level entries. This sample is intentionally truncated (no pagination) to provide a stable, lightweight download artifact for documentation, QA checks, and integration previews. Representative key paths include: generated_at, connectors, connectors.AcledMonthAllConnector, connectors.AcledMonthAllConnector.connector_id, connectors.AcledMonthAllConnector.connector_short_desc, connectors.AcledMonthAllConnector.connector_short_desc.DE, connectors.AcledMonthAllConnector.connector_short_desc.EN, connectors.AcledMonthAllConnector.connector_short_desc.FR.",
+    "keydata": {
+      "generated_at": "Integer numeric value.",
+      "connectors": "Nested object with detailed fields."
+    },
+    "keyvalue": {
+      "generated_at": "Integer numeric value.",
+      "connectors": "Nested object with detailed fields.",
+      "connectors.AcledMonthAllConnector": "Nested object with detailed fields.",
+      "connectors.AcledMonthAllConnector.connector_id": "Unique identifier value.",
+      "connectors.AcledMonthAllConnector.connector_short_desc": "Nested object with detailed fields.",
+      "connectors.AcledMonthAllConnector.connector_short_desc.DE": "Text value.",
+      "connectors.AcledMonthAllConnector.connector_short_desc.EN": "Text value.",
+      "connectors.AcledMonthAllConnector.connector_short_desc.FR": "Text value.",
+      "connectors.AcledMonthAllConnector.connector_short_desc.ES": "Text value.",
+      "connectors.AcledMonthAllConnector.connector_short_desc.PT": "Text value.",
+      "connectors.AcledMonthAllConnector.connector_short_desc.AR": "Text value.",
+      "connectors.AcledMonthAllConnector.connector_short_desc.JA": "Text value.",
+      "connectors.AcledMonthAllConnector.since": "Text value.",
+      "connectors.AcledMonthAllConnector.source_url": "Reference URL.",
+      "connectors.AcledMonthAllConnector.source_hostname_tld": "Human-readable name.",
+      "connectors.AcledMonthAllConnector.source_hostname_label": "Human-readable name.",
+      "connectors.AcledMonthAllConnector.source_username": "Human-readable name.",
+      "connectors.AcledMonthAllConnector.cron_expression": "Text value.",
+      "connectors.AcledMonthAllConnector.last_fetched_at": "Integer numeric value.",
+      "connectors.AcledMonthAllConnector.provider_name": "Human-readable name.",
+      "connectors.AcledMonthAllConnector.provider_link": "Unique identifier value.",
+      "connectors.AcledMonthAllConnector.provider_license": "Unique identifier value.",
+      "connectors.AcledMonthAllConnector.provider_license_link": "Unique identifier value.",
+      "connectors.AcledMonthAllConnector.score_value": "Calculated score/index value.",
+      "connectors.AcledMonthAllConnector.source_quality": "Integer numeric value.",
+      "connectors.AcledMonthAllConnector.total_items": "Integer numeric value.",
+      "connectors.AcledMonthAllConnector.total_names": "Human-readable name.",
+      "connectors.AcledMonthAllOverviewConnector": "Nested object with detailed fields.",
+      "connectors.AcledMonthAllOverviewConnector.connector_id": "Unique identifier value.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc": "Nested object with detailed fields.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc.DE": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc.EN": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc.FR": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc.ES": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc.PT": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc.AR": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.connector_short_desc.JA": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.since": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.source_url": "Reference URL.",
+      "connectors.AcledMonthAllOverviewConnector.source_hostname_tld": "Human-readable name.",
+      "connectors.AcledMonthAllOverviewConnector.source_hostname_label": "Human-readable name.",
+      "connectors.AcledMonthAllOverviewConnector.source_username": "Human-readable name.",
+      "connectors.AcledMonthAllOverviewConnector.cron_expression": "Text value.",
+      "connectors.AcledMonthAllOverviewConnector.last_fetched_at": "Integer numeric value.",
+      "connectors.AcledMonthAllOverviewConnector.provider_name": "Human-readable name.",
+      "connectors.AcledMonthAllOverviewConnector.provider_link": "Unique identifier value.",
+      "connectors.AcledMonthAllOverviewConnector.provider_license": "Unique identifier value.",
+      "connectors.AcledMonthAllOverviewConnector.provider_license_link": "Unique identifier value.",
+      "connectors.AcledMonthAllOverviewConnector.score_value": "Calculated score/index value.",
+      "connectors.AcledMonthAllOverviewConnector.source_quality": "Integer numeric value.",
+      "connectors.AcledMonthAllOverviewConnector.total_items": "Integer numeric value.",
+      "connectors.AcledMonthAllOverviewConnector.total_names": "Human-readable name.",
+      "connectors.AirportsConnector": "Nested object with detailed fields.",
+      "connectors.AirportsConnector.connector_id": "Unique identifier value.",
+      "connectors.AirportsConnector.connector_short_desc": "Nested object with detailed fields.",
+      "connectors.AirportsConnector.connector_short_desc.DE": "Text value.",
+      "connectors.AirportsConnector.connector_short_desc.EN": "Text value.",
+      "connectors.AirportsConnector.connector_short_desc.FR": "Text value.",
+      "connectors.AirportsConnector.connector_short_desc.ES": "Text value.",
+      "connectors.AirportsConnector.connector_short_desc.PT": "Text value.",
+      "connectors.AirportsConnector.connector_short_desc.AR": "Text value.",
+      "connectors.AirportsConnector.connector_short_desc.JA": "Text value.",
+      "connectors.AirportsConnector.since": "Text value.",
+      "connectors.AirportsConnector.source_url": "Reference URL.",
+      "connectors.AirportsConnector.source_hostname_tld": "Human-readable name.",
+      "connectors.AirportsConnector.source_hostname_label": "Human-readable name.",
+      "connectors.AirportsConnector.source_username": "Human-readable name.",
+      "connectors.AirportsConnector.cron_expression": "Text value.",
+      "connectors.AirportsConnector.last_fetched_at": "Integer numeric value.",
+      "connectors.AirportsConnector.provider_name": "Human-readable name.",
+      "connectors.AirportsConnector.provider_link": "Unique identifier value.",
+      "connectors.AirportsConnector.provider_license": "Unique identifier value.",
+      "connectors.AirportsConnector.provider_license_link": "Unique identifier value.",
+      "connectors.AirportsConnector.score_value": "Calculated score/index value.",
+      "connectors.AirportsConnector.source_quality": "Integer numeric value.",
+      "connectors.AirportsConnector.total_items": "Integer numeric value.",
+      "connectors.AirportsConnector.total_names": "Human-readable name.",
+      "connectors.AnaCldfZoneConnector": "Nested object with detailed fields.",
+      "connectors.AnaCldfZoneConnector.connector_id": "Unique identifier value.",
+      "connectors.AnaCldfZoneConnector.connector_short_desc": "Nested object with detailed fields."
+    }
+  },
+  "sample_data": {
+    "generated_at": 1777293870,
+    "connectors": {
+      "AcledMonthAllConnector": {
+        "connector_id": "AcledMonthAll",
+        "connector_short_desc": {
+          "DE": "Krisen- & Sicherheits-Radar (Level 1)",
+          "EN": "Crisis & Safety Radar (Level 1)",
+          "FR": "Radar de crise et de sécurité",
+          "ES": "Radar de crisis y seguridad",
+          "PT": "Radar de crise e segurança",
+          "AR": "رادار الأزمات والسلامة",
+          "JA": "危機と安全のレーダー"
+        },
+        "since": "2026-03-21",
+        "source_url": "",
+        "source_hostname_tld": "",
+        "source_hostname_label": "",
+        "source_username": "",
+        "cron_expression": "43 0 * * *",
+        "last_fetched_at": 1777250787,
+        "provider_name": "Armed Conflict Location & Event Data Project (ACLED)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "AcledMonthAllOverviewConnector": {
+        "connector_id": "AcledMonthAllOverview",
+        "connector_short_desc": {
+          "DE": "Krisen- & Sicherheits-Radar (Level 1)",
+          "EN": "Crisis & Safety Radar (Level 1)",
+          "FR": "Radar de crise et de sécurité",
+          "ES": "Radar de crisis y seguridad",
+          "PT": "Radar de crise e segurança",
+          "AR": "رادار الأزمات والسلامة",
+          "JA": "危機と安全のレーダー"
+        },
+        "since": "2026-03-21",
+        "source_url": "https://apps.acleddata.com/newexplorer/standard//data/acled/month_all_overview.json",
+        "source_hostname_tld": "acleddata.com",
+        "source_hostname_label": "Acleddata",
+        "source_username": "",
+        "cron_expression": "23 */6 * * *",
+        "last_fetched_at": 1777292657,
+        "provider_name": "Armed Conflict Location & Event Data Project (ACLED)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "AirportsConnector": {
+        "connector_id": "Airports",
+        "connector_short_desc": {
+          "DE": "Flughäfen weltweit",
+          "EN": "Airports worldwide",
+          "FR": "Aéroports mondiaux",
+          "ES": "Aeropuertos mundial",
+          "PT": "Aeroportos mundial",
+          "AR": "المطارات عالمياً",
+          "JA": "空港（世界）"
+        },
+        "since": "2026-03-21",
+        "source_url": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+        "source_hostname_tld": "github.io",
+        "source_hostname_label": "Github",
+        "source_username": "ourairports-data",
+        "cron_expression": "0 0 1 * *",
+        "last_fetched_at": 1775002319,
+        "provider_name": "OurAirports (open airport database)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "AnaCldfZoneConnector": {
+        "connector_id": "AnaCldfZone",
+        "connector_short_desc": {
+          "DE": "Analytics Zone (Gerät/Land/Tag)",
+          "EN": "Analytics Zone (device/country/day)"
+        },
+        "since": "2026-03-21",
+        "source_url": "https://api.cloudflare.com/client/v4/graphql",
+        "source_hostname_tld": "cloudflare.com",
+        "source_hostname_label": "Cloudflare",
+        "source_username": "",
+        "cron_expression": "*/5 * * * *",
+        "last_fetched_at": 1777293621,
+        "provider_name": "Cloudflare, Inc.",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "AnaMatomoNfConnector": {
+        "connector_id": "AnaMatomoNf",
+        "connector_short_desc": {
+          "DE": "Matomo Analytics (NF, 7 Reports)",
+          "EN": "Matomo Analytics (NF, 7 reports)"
+        },
+        "since": "2026-03-25",
+        "source_url": "https://nationfiles.com/nf-track-matomo/",
+        "source_hostname_tld": "nationfiles.com",
+        "source_hostname_label": "Nationfiles",
+        "source_username": "",
+        "cron_expression": "* * * * *",
+        "last_fetched_at": 1777293855,
+        "provider_name": "InnoCraft Ltd. (Matomo Analytics)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "AnaMatomoNfEntryLocaleConnector": {
+        "connector_id": "AnaMatomoNfEntryLocale",
+        "connector_short_desc": {
+          "DE": "Matomo Einstieg → Locale/Tag",
+          "EN": "Matomo entry pages → locale/day",
+          "FR": "Matomo entrées → locale/jour",
+          "ES": "Matomo entradas → locale/día",
+          "PT": "Matomo entradas → locale/dia",
+          "AR": "مداخل ماتومو ← لغة/يوم",
+          "JA": "Matomo 入口→言語/日"
+        },
+        "since": "2026-03-25",
+        "source_url": "https://nationfiles.com/nf-track-matomo/",
+        "source_hostname_tld": "nationfiles.com",
+        "source_hostname_label": "Nationfiles",
+        "source_username": "",
+        "cron_expression": "12 * * * *",
+        "last_fetched_at": 1777291992,
+        "provider_name": "InnoCraft Ltd. (Matomo Analytics)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "BlindContinentNewsASConnector": {
+        "connector_id": "BlindContinentNewsAS",
+        "connector_short_desc": {
+          "DE": "Kontinent-News ASPI Strategist",
+          "EN": "Continent news ASPI Strategist",
+          "FR": "Actualités continent ASPI Strategist",
+          "ES": "Noticias continente ASPI Strategist",
+          "PT": "Notícias continente ASPI Strategist",
+          "AR": "أخبار القارة ASPI Strategist",
+          "JA": "大陸ニュース ASPI Strategist"
+        },
+        "since": "2026-03-21",
+        "source_url": "https://www.aspistrategist.org.au",
+        "source_hostname_tld": "org.au",
+        "source_hostname_label": "Org",
+        "source_username": "",
+        "cron_expression": "*/30 * * * *",
+        "last_fetched_at": 1777293029,
+        "provider_name": "Australian Strategic Policy Institute (ASPI)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "BlindContinentNewsAseanConnector": {
+        "connector_id": "BlindContinentNewsAsean",
+        "connector_short_desc": {
+          "DE": "Kontinent-News ASEAN",
+          "EN": "Continent news ASEAN",
+          "FR": "Actualités continent ASEAN",
+          "ES": "Noticias continente ASEAN",
+          "PT": "Notícias continente ASEAN",
+          "AR": "أخبار القارة ASEAN",
+          "JA": "大陸ニュース ASEAN"
+        },
+        "since": "2026-03-16",
+        "source_url": "https://asean.org",
+        "source_hostname_tld": "asean.org",
+        "source_hostname_label": "Asean",
+        "source_username": "",
+        "cron_expression": "*/30 * * * *",
+        "last_fetched_at": 1777293029,
+        "provider_name": "ASEAN (Association of Southeast Asian Nations)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "BlindContinentNewsDNConnector": {
+        "connector_id": "BlindContinentNewsDN",
+        "connector_short_desc": {
+          "DE": "Kontinent-News Defense News",
+          "EN": "Continent news Defense News",
+          "FR": "Actualités continent Defense News",
+          "ES": "Noticias continente Defense News",
+          "PT": "Notícias continente Defense News",
+          "AR": "أخبار القارة Defense News",
+          "JA": "大陸ニュース Defense News"
+        },
+        "since": "2026-03-21",
+        "source_url": "https://www.defensenews.com",
+        "source_hostname_tld": "defensenews.com",
+        "source_hostname_label": "Defensenews",
+        "source_username": "",
+        "cron_expression": "*/30 * * * *",
+        "last_fetched_at": 1777293029,
+        "provider_name": "Defense News (Sightline Media Group, LLC)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "BlindContinentNewsEcConnector": {
+        "connector_id": "BlindContinentNewsEc",
+        "connector_short_desc": {
+          "DE": "Kontinent-News EC Press Corner",
+          "EN": "Continent news EC Press Corner",
+          "FR": "Actualités continent EC Press Corner",
+          "ES": "Noticias continente EC Press Corner",
+          "PT": "Notícias continente EC Press Corner",
+          "AR": "أخبار القارة EC Press Corner",
+          "JA": "大陸ニュース EC Press Corner"
+        },
+        "since": "2026-03-21",
+        "source_url": "https://ec.europa.eu/commission/presscorner",
+        "source_hostname_tld": "europa.eu",
+        "source_hostname_label": "Europa",
+        "source_username": "",
+        "cron_expression": "*/30 * * * *",
+        "last_fetched_at": 1777293029,
+        "provider_name": "European Commission (European Union)",
+        "__truncated__": "only first 10 keys kept"
+      },
+      "__truncated__": "only first 10 keys kept"
+    }
+  },
+  "generated_at_utc": "2026-04-27T12:45:00Z"
+}
