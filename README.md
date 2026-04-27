@@ -288,6 +288,11 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Academia EDU](https://independentresearcher.academia.edu/SvenSchmidt): https://independentresearcher.academia.edu/SvenSchmidt
 - [ORCID](https://orcid.org/0009-0002-5010-1902): https://orcid.org/0009-0002-5010-1902
 - [Zenodo](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22): https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22
+- [OSF Profile](https://osf.io/user/krm46): https://osf.io/user/krm46
+- [OSF Project](https://osf.io/yxbu3/overview): https://osf.io/yxbu3/overview
+
+
+https://osf.io/yxbu3/overview
 
 ## Ownership
 Operated by Neawolf Media Group.
