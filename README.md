@@ -273,6 +273,10 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Medium Story - NationFiles Stability Index (NFSI)](https://medium.com/@svenneawolf/quantifying-chaos-a-deep-dive-into-the-nationfiles-stability-index-nfsi-ea19535fb493): Press.
 - [Medium Story - NationFiles](https://medium.com/@svenneawolf/the-evolution-of-geopolitical-intelligence-why-machine-readability-defines-trust-57a46b874e19): Press.
 
+## Kaggle
+- [Profile](https://www.kaggle.com/svenneawolf): Sven Schmidt.
+- [Dataset research-papers](https://www.kaggle.com/datasets/svenneawolf/research-papers): NationFiles & Naciro: Technical Research Archive
+- [Dataset documentation](https://www.kaggle.com/datasets/svenneawolf/documentation): NationFiles & Naciro: Technical Markdown Documents
 
 ## References
 - Schmidt, Sven (2026). *The Naciro Engine: A Technical Manual*. Neawolf Media Group. DOI: [10.5281/zenodo.19758942](https://doi.org/10.5281/zenodo.19758942)
