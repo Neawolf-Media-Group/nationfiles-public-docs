@@ -284,6 +284,10 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - Schmidt, Sven (2026). *Course: AI-Driven OSINT Fusion - Next-Gen Intelligence*. Neawolf Media Group. DOI: [10.5281/zenodo.19758697](https://doi.org/10.5281/zenodo.19758697)
 - Schmidt, Sven (2026). *Real-time Geopolitical Stability Modeling*. Neawolf Media Group. DOI: [10.5281/zenodo.19758466](https://doi.org/10.5281/zenodo.19758466)
 
+## Identity & Verification
+- [Academia EDU](https://independentresearcher.academia.edu/SvenSchmidt): https://independentresearcher.academia.edu/SvenSchmidt
+- [ORCID](https://orcid.org/0009-0002-5010-1902): https://orcid.org/0009-0002-5010-1902
+- [Zenodo](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22): https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22
 
 ## Ownership
 Operated by Neawolf Media Group.
