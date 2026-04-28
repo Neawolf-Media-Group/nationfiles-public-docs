@@ -334,9 +334,10 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Zenodo](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22): https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22
 - [OSF Profile](https://osf.io/user/krm46): https://osf.io/user/krm46
 - [OSF Project](https://osf.io/yxbu3/overview): https://osf.io/yxbu3/overview
-
-
-https://osf.io/yxbu3/overview
+- [Kaggle Profile](https://www.kaggle.com/svenneawolf): https://www.kaggle.com/svenneawolf
+- [Kaggle Project](https://osf.io/yxbu3/overview): https://osf.io/yxbu3/overview
+- [Kaggle Markdown](https://www.kaggle.com/datasets/svenneawolf/documentation): https://www.kaggle.com/datasets/svenneawolf/documentation
+- [Kaggle Samples](https://www.kaggle.com/datasets/svenneawolf/json-samples): https://www.kaggle.com/datasets/svenneawolf/json-samples
 
 ## Ownership
 Operated by Neawolf Media Group.
