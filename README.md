@@ -148,7 +148,7 @@ Default content language in config is **English** (`en`); users can switch via t
 
 ### 3.3 Time
 
-- Server/config baseline timezone is **UTC** (`config/config.php`).
+- Server/config baseline timezone is **UTC**.
 - Many “rolling window” analytics (e.g. map MLMV cards) are documented in code as **UTC hours**, not local calendar days—do not silently convert to local midnight without saying so.
 
 ### 3.4 Coordinates and maps
@@ -167,7 +167,6 @@ Default content language in config is **English** (`en`); users can switch via t
 
 - Pattern: `/{lang}/{segment}/...` — all **path segments lowercase**; `[a-z0-9_-]` style segments after sanitization in the front controller.
 - **Language** = first segment; must be one of the seven codes above.
-- **Controller** = second segment: maps to `classes/controllers/{Segment}Controller.php` via `indexController.php` (e.g. `country` → `CountryController`).
 - **Deeper segments** are controller-specific (subpages, slugs, export switches). **Query strings** are used for search, versioning (`?v=` on assets), exports (`export`, `format`, `chart`, etc.)—do not claim “no query parameters”.
 
 ---
@@ -215,13 +214,13 @@ Below are **first-level** segments with real `templates/pages/<segment>/` or equ
 
 ## 7. NFSI-style scores (high level)
 
-Country stability / NFSI-style scores are on a **0–100** scale with letter bands used in UI (see `docs/CONTEXT.md` and `CountryNfsiBadge.php` for exact thresholds). Important: **category boundaries use strict `>` comparisons** at 20/40/60/80 — boundary values sit in the **lower** band (e.g. exactly 40.00 is **not** in the “upper” band). When explaining thresholds to users, quote project docs or the page legend, not guessed `>=` rules.
+Country stability / NFSI-style scores are on a **0–100** scale with letter bands used in UI (see `docs/CONTEXT.md` for exact thresholds). Important: **category boundaries use strict `>` comparisons** at 20/40/60/80 — boundary values sit in the **lower** band (e.g. exactly 40.00 is **not** in the “upper” band). When explaining thresholds to users, quote project docs or the page legend, not guessed `>=` rules.
 
 ---
 
 ## 8. Automation (cron hints in code)
 
-- `segments::getCronExpression()` in `functions/urlSegments.php` returns **`0 3 * * *`** (daily at 03:00 server context) for one scheduling hint.
+- `segments::getCronExpression()` in `urlSegments` returns **`0 3 * * *`** (daily at 03:00 server context) for one scheduling hint.
 - `MapController::getCronExpression()` returns **`0 0 * * *`** — different subsystem; do not merge the two into one claim without checking which subsystem you mean.
 
 ---
@@ -237,8 +236,8 @@ Country stability / NFSI-style scores are on a **0–100** scale with letter ban
 ## 10. Search and machine endpoints
 
 - **HTML search:** `search` segment and related templates.
-- **Search API:** `search_proxy.php` → `jsearch.php` is a **separate entry point** (POST-oriented API; not the same as Smarty-rendered pages). Do not document it as a simple GET crawl of the whole index.
-- **Latency / analytics JSON:** lightweight scripts under `/data/...` (see repository `data/latency_60min/index.php` and nginx notes in ops docs)—**not** merged into generic HTML bundles.
+- **Search API:** `search_proxy` → `jsearch` is a **separate entry point** (POST-oriented API; not the same as Smarty-rendered pages). Do not document it as a simple GET crawl of the whole index.
+- **Latency / analytics JSON:** lightweight scripts under `/data/...` (see repository `latency_60min` and nginx notes in ops docs)—**not** merged into generic HTML bundles.
 
 ---
 
