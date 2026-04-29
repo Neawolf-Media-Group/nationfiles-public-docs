@@ -1,0 +1,346 @@
+{
+    "schema_version": "2026-04-28",
+    "id": "core-hierarchy",
+    "kind": "entity",
+    "type": "TechArticle",
+    "status": "active",
+    "updated_utc": "2026-04-28T12:00:00Z",
+    "topics": [
+        "architecture",
+        "hierarchy",
+        "organization",
+        "knowledge-graph"
+    ],
+    "aliases": [
+        "hierarchy",
+        "core hierarchy",
+        "system hierarchy"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "multi_level hierarchy map",
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ]
+        },
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ]
+        },
+        {
+            "key": "system_engine",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "core_metric",
+            "value": "{{nfsi}}",
+            "depends_on": [
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        }
+    ],
+    "hierarchy": {
+        "model": "multi_level",
+        "root_entity_id": "neawolf-media-group",
+        "levels": [
+            {
+                "level": 1,
+                "entity_id": "neawolf-media-group",
+                "label": "Neawolf Media Group",
+                "schema_type": "Organization",
+                "role": "Company"
+            },
+            {
+                "level": 2,
+                "entity_id": "nationfiles",
+                "label": "NationFiles",
+                "schema_type": "WebSite",
+                "role": "System"
+            },
+            {
+                "level": 3,
+                "entity_id": "naciro",
+                "label": "Naciro Engine",
+                "schema_type": "SoftwareApplication",
+                "role": "Inference & Logic"
+            },
+            {
+                "level": 4,
+                "entity_id": "lpu-architecture",
+                "label": "LPU Architecture",
+                "schema_type": "CreativeWork",
+                "role": "Hardware Layer"
+            },
+            {
+                "level": 4,
+                "entity_id": "nfsi",
+                "label": "NationFiles Stability Index (NFSI)",
+                "schema_type": "Dataset",
+                "role": "Statistical Metric"
+            }
+        ]
+    },
+    "blocks": [
+        {
+            "type": "markdown"
+        },
+        {
+            "type": "summary"
+        },
+        {
+            "type": "attribute_table"
+        },
+        {
+            "type": "hierarchy_levels"
+        },
+        {
+            "type": "fact_table"
+        },
+        {
+            "type": "relations"
+        }
+    ],
+    "relations": [
+        {
+            "rel": "relatedTo",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "lpu-architecture"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Core Hierarchy",
+            "teaser": "Die Core Hierarchy beschreibt die definierte System- und Unternehmens-Hierarchie von Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture und NFSI — als klare Navigations- und Zitiergrundlage.",
+            "summary_bullets": [
+                "Einheitliche Hierarchie für Menschen, Crawler und RAG-Systeme.",
+                "Stellt klar: Unternehmen → System → Inferenz/Logik → Hardware-Layer → Metrik.",
+                "Verlinkbar und exportierbar als JSON/JSON-LD sowie als mehrsprachiges Markdown."
+            ],
+            "facts": [
+                {
+                    "k": "Scope",
+                    "v": "Definitions & hierarchy"
+                },
+                {
+                    "k": "Format",
+                    "v": "HTML view + JSON exports + optional MD"
+                }
+            ]
+        },
+        "en": {
+            "title": "Core Hierarchy",
+            "teaser": "The Core Hierarchy defines the corporate and system stack of Neawolf Media Group, NationFiles, the Naciro Engine, the LPU Architecture, and NFSI — as a citable, navigable reference.",
+            "summary_bullets": [
+                "Single hierarchy for humans, crawlers, and RAG pipelines.",
+                "Clarifies: company → system → inference & logic → hardware layer → metric.",
+                "Linkable and exportable as JSON/JSON-LD plus optional multilingual Markdown."
+            ]
+        },
+        "fr": {
+            "title": "Hiérarchie centrale",
+            "teaser": "La hiérarchie centrale décrit la structure système et entreprise de Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture et NFSI comme référence claire de navigation et de citation.",
+            "summary_bullets": [
+                "Hiérarchie unifiée pour les personnes, les crawlers et les systèmes RAG.",
+                "Clarifie : entreprise → système → inférence/logique → couche matérielle → métrique.",
+                "Liable et exportable en JSON/JSON-LD ainsi qu’en Markdown multilingue."
+            ],
+            "facts": [
+                {
+                    "k": "Portée",
+                    "v": "Définitions et hiérarchie"
+                },
+                {
+                    "k": "Format",
+                    "v": "Vue HTML + exports JSON + MD optionnel"
+                }
+            ]
+        },
+        "es": {
+            "title": "Jerarquía central",
+            "teaser": "La jerarquía central describe la estructura del sistema y de la empresa de Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture y NFSI como base clara de navegación y citación.",
+            "summary_bullets": [
+                "Jerarquía unificada para personas, crawlers y sistemas RAG.",
+                "Aclara: empresa → sistema → inferencia/lógica → capa de hardware → métrica.",
+                "Enlazable y exportable como JSON/JSON-LD y Markdown multilingüe."
+            ],
+            "facts": [
+                {
+                    "k": "Alcance",
+                    "v": "Definiciones y jerarquía"
+                },
+                {
+                    "k": "Formato",
+                    "v": "Vista HTML + exportaciones JSON + MD opcional"
+                }
+            ]
+        },
+        "pt": {
+            "title": "Hierarquia central",
+            "teaser": "A hierarquia central descreve a estrutura de sistema e empresa de Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture e NFSI como referência clara para navegação e citação.",
+            "summary_bullets": [
+                "Hierarquia unificada para pessoas, crawlers e sistemas RAG.",
+                "Esclarece: empresa → sistema → inferência/lógica → camada de hardware → métrica.",
+                "Linkável e exportável como JSON/JSON-LD e Markdown multilíngue."
+            ],
+            "facts": [
+                {
+                    "k": "Escopo",
+                    "v": "Definições e hierarquia"
+                },
+                {
+                    "k": "Formato",
+                    "v": "Visualização HTML + exports JSON + MD opcional"
+                }
+            ]
+        },
+        "ar": {
+            "title": "الهيكلية الأساسية",
+            "teaser": "تصف الهيكلية الأساسية بنية النظام والشركة لـ Neawolf Media Group وNationFiles وNaciro Engine وLPU Architecture وNFSI كمرجع واضح للتنقل والاستشهاد.",
+            "summary_bullets": [
+                "هيكلية موحّدة للبشر والزواحف وأنظمة RAG.",
+                "توضح: شركة → نظام → استدلال/منطق → طبقة عتاد → مقياس.",
+                "قابلة للربط والتصدير بصيغ JSON/JSON-LD وكذلك Markdown متعدد اللغات."
+            ],
+            "facts": [
+                {
+                    "k": "النطاق",
+                    "v": "تعريفات وتسلسل هرمي"
+                },
+                {
+                    "k": "التنسيق",
+                    "v": "عرض HTML + صادرات JSON + MD اختياري"
+                }
+            ]
+        },
+        "ja": {
+            "title": "コア階層",
+            "teaser": "コア階層は、Neawolf Media Group、NationFiles、Naciro Engine、LPU Architecture、NFSI の企業・システム構造を、明確なナビゲーションと引用の基盤として定義します。",
+            "summary_bullets": [
+                "人間、クローラー、RAG システム向けの統一階層。",
+                "企業 → システム → 推論/ロジック → ハードウェア層 → 指標 を明確化。",
+                "JSON/JSON-LD および多言語 Markdown としてリンク・エクスポート可能。"
+            ],
+            "facts": [
+                {
+                    "k": "範囲",
+                    "v": "定義と階層"
+                },
+                {
+                    "k": "形式",
+                    "v": "HTML表示 + JSONエクスポート + オプションMD"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "core-hierarchy"
+        },
+        "repository_relative_path": "knowledge-data/entities/core-hierarchy.json"
+    }
+}

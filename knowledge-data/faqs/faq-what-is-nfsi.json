@@ -1,0 +1,113 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "faq-what-is-nfsi",
+    "kind": "faq",
+    "status": "active",
+    "updated_utc": "2026-04-28T11:45:00Z",
+    "entity_refs": [
+        "nfsi",
+        "naciro",
+        "nationfiles"
+    ],
+    "i18n": {
+        "de": {
+            "q": "Was ist der NFSI?",
+            "a_short": "Der NFSI ist ein Stabilitäts-Score (0–100), berechnet durch die Naciro Engine und veröffentlicht als Echtzeit-Output in NationFiles.",
+            "a_long_md": "Der {{nfsi}} ist ein standardisierter Output-Index.\n\nEr wird von {{naciro}} berechnet und über {{nationfiles}} bereitgestellt.\n\nIm Knowledge-Portal kann der aktuelle Wert dynamisch eingebunden werden."
+        },
+        "en": {
+            "q": "What is NFSI?",
+            "a_short": "NFSI is a stability score (0–100) computed by the Naciro Engine and published as a real-time output within NationFiles.",
+            "a_long_md": "{{nfsi}} is a standardized output index.\n\nIt is computed by {{naciro}} and published within {{nationfiles}}.\n\nThe knowledge portal can embed the current value dynamically."
+        },
+        "fr": {
+            "q": "Qu’est-ce que le NFSI ?",
+            "a_short": "Le NFSI est un score de stabilité (0–100), calculé par Naciro Engine et publié comme sortie en temps réel dans NationFiles.",
+            "a_long_md": "{{nfsi}} est un indice de sortie standardisé.\n\nIl est calculé par {{naciro}} et publié via {{nationfiles}}.\n\nLe portail Knowledge peut intégrer dynamiquement la valeur actuelle."
+        },
+        "es": {
+            "q": "¿Qué es el NFSI?",
+            "a_short": "El NFSI es una puntuación de estabilidad (0–100), calculada por Naciro Engine y publicada como salida en tiempo real dentro de NationFiles.",
+            "a_long_md": "{{nfsi}} es un índice de salida estandarizado.\n\nLo calcula {{naciro}} y se publica mediante {{nationfiles}}.\n\nEl portal de Knowledge puede integrar dinámicamente el valor actual."
+        },
+        "pt": {
+            "q": "O que é o NFSI?",
+            "a_short": "O NFSI é uma pontuação de estabilidade (0–100), calculada pela Naciro Engine e publicada como saída em tempo real na NationFiles.",
+            "a_long_md": "{{nfsi}} é um índice de saída padronizado.\n\nEle é calculado por {{naciro}} e publicado via {{nationfiles}}.\n\nO portal de Knowledge pode incorporar dinamicamente o valor atual."
+        },
+        "ar": {
+            "q": "ما هو NFSI؟",
+            "a_short": "NFSI هو درجة استقرار (0–100) تحسبها Naciro Engine وتُنشر كمخرج لحظي داخل NationFiles.",
+            "a_long_md": "يمثل {{nfsi}} مؤشر مخرجات موحداً.\n\nيتم حسابه بواسطة {{naciro}} ونشره عبر {{nationfiles}}.\n\nيمكن لبوابة Knowledge تضمين القيمة الحالية بشكل ديناميكي."
+        },
+        "ja": {
+            "q": "NFSIとは何ですか？",
+            "a_short": "NFSI は、Naciroエンジンが計算し、NationFiles 内でリアルタイム出力として公開される安定性スコア（0–100）です。",
+            "a_long_md": "{{nfsi}} は標準化された出力インデックスです。\n\n{{naciro}} が計算し、{{nationfiles}} を通じて公開されます。\n\nKnowledge ポータルでは現在値を動的に埋め込めます。"
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "faq",
+            "id": "faq-what-is-nfsi"
+        },
+        "repository_relative_path": "knowledge-data/faqs/faq-what-is-nfsi.json"
+    }
+}

@@ -1,0 +1,996 @@
+{
+    "schema_version": 1,
+    "description": "Zentrale Begriffe/Abkürzungen für Knowledge-Entity-Seiten. Matching über aliases (Groß/Kleinschreibung ignoriert). i18n: Kurzdefinition je Sprache.",
+    "terms": [
+        {
+            "id": "json-ld",
+            "aliases": [
+                "JSON-LD",
+                "JSON LD"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "JSON-LD",
+                    "definition": "Strukturierte Daten im JSON-Format nach schema.org — hilft Suchmaschinen und KI, Seiteninhalte als eindeutige Fakten zu verstehen."
+                },
+                "en": {
+                    "label": "JSON-LD",
+                    "definition": "JSON-based structured data using schema.org vocabulary so search engines and AI can interpret page content as explicit facts."
+                },
+                "fr": {
+                    "label": "JSON-LD",
+                    "definition": "Données structurées JSON (schema.org) pour que moteurs de recherche et IA interprètent le contenu comme des faits explicites."
+                },
+                "es": {
+                    "label": "JSON-LD",
+                    "definition": "Datos estructurados en JSON (schema.org) para que buscadores e IA interpreten el contenido como hechos explícitos."
+                },
+                "pt": {
+                    "label": "JSON-LD",
+                    "definition": "Dados estruturados em JSON (schema.org) para motores de busca e IA interpretarem o conteúdo como factos explícitos."
+                },
+                "ar": {
+                    "label": "JSON-LD",
+                    "definition": "بيانات منظّمة بصيغة JSON وفق مخطوطات schema.org لتفسير محتوى الصفحة كحقائق صريحة لمحركات البحث وأنظمة الذكاء الاصطناعي."
+                },
+                "ja": {
+                    "label": "JSON-LD",
+                    "definition": "schema.org に基づく JSON 形式の構造化データ。検索エンジンや AI がページ内容を明示的な事実として解釈するのに使われます。"
+                }
+            }
+        },
+        {
+            "id": "json",
+            "aliases": [
+                "JSON"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "JSON",
+                    "definition": "Leichtes Datenaustauschformat (JavaScript Object Notation), u. a. für Knowledge-Exporte und APIs."
+                },
+                "en": {
+                    "label": "JSON",
+                    "definition": "Lightweight data interchange format (JavaScript Object Notation), used for knowledge exports and APIs."
+                },
+                "fr": {
+                    "label": "JSON",
+                    "definition": "Format d’échange de données léger (JavaScript Object Notation), utilisé pour les exports et les API."
+                },
+                "es": {
+                    "label": "JSON",
+                    "definition": "Formato ligero de intercambio de datos (JavaScript Object Notation), usado en exportaciones y APIs."
+                },
+                "pt": {
+                    "label": "JSON",
+                    "definition": "Formato leve de troca de dados (JavaScript Object Notation), usado em exportações e APIs."
+                },
+                "ar": {
+                    "label": "JSON",
+                    "definition": "تنسيق خفيف لتبادل البيانات (JavaScript Object Notation) يُستخدم في التصدير وواجهات البرمجة."
+                },
+                "ja": {
+                    "label": "JSON",
+                    "definition": "データ交換用の軽量テキスト形式（JavaScript Object Notation）。エクスポートや API で使われます。"
+                }
+            }
+        },
+        {
+            "id": "nfsi",
+            "aliases": [
+                "NFSI",
+                "NationFiles Stability Index"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "NFSI",
+                    "definition": "NationFiles Stability Index — quantifiziert geopolitische Stabilität aus vielen Signalen in einem nachvollziehbaren Score."
+                },
+                "en": {
+                    "label": "NFSI",
+                    "definition": "NationFiles Stability Index — quantifies geopolitical stability from many signals in an auditable score."
+                },
+                "fr": {
+                    "label": "NFSI",
+                    "definition": "NationFiles Stability Index — quantifie la stabilité géopolitique à partir de nombreux signaux, sous forme de score vérifiable."
+                },
+                "es": {
+                    "label": "NFSI",
+                    "definition": "NationFiles Stability Index — cuantifica la estabilidad geopolítica a partir de muchas señales en un puntuación auditable."
+                },
+                "pt": {
+                    "label": "NFSI",
+                    "definition": "NationFiles Stability Index — quantifica a estabilidade geopolítica a partir de muitos sinais num score auditável."
+                },
+                "ar": {
+                    "label": "NFSI",
+                    "definition": "مؤشر استقرار NationFiles — يقيس الاستقرار الجيوسياسي من إشارات عديدة في درجة قابلة للمراجعة."
+                },
+                "ja": {
+                    "label": "NFSI",
+                    "definition": "NationFiles Stability Index — 多数のシグナルから地政学的安定性を監査可能なスコアで定量化します。"
+                }
+            }
+        },
+        {
+            "id": "vvr",
+            "aliases": [
+                "VVR",
+                "Validation & Verification Report",
+                "Validation and Verification Report"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "VVR",
+                    "definition": "Validation & Verification Report — beschreibt Methodik, Datenpfade und Prüfschritte der NationFiles-Analysen."
+                },
+                "en": {
+                    "label": "VVR",
+                    "definition": "Validation & Verification Report — documents methodology, data paths, and verification steps for NationFiles analytics."
+                },
+                "fr": {
+                    "label": "VVR",
+                    "definition": "Rapport de validation et vérification — décrit méthodologie, flux de données et contrôles des analyses NationFiles."
+                },
+                "es": {
+                    "label": "VVR",
+                    "definition": "Informe de validación y verificación — describe metodología, rutas de datos y comprobaciones de los análisis NationFiles."
+                },
+                "pt": {
+                    "label": "VVR",
+                    "definition": "Relatório de validação e verificação — documenta metodologia, linhas de dados e passos de verificação das análises NationFiles."
+                },
+                "ar": {
+                    "label": "VVR",
+                    "definition": "تقرير التحقق والتوثيق — يوثق المنهجية ومسارات البيانات وخطوات التدقيق لتحليلات NationFiles."
+                },
+                "ja": {
+                    "label": "VVR",
+                    "definition": "検証・実証レポート。NationFiles 分析の手法、データ経路、検証ステップを文書化します。"
+                }
+            }
+        },
+        {
+            "id": "lpu",
+            "aliases": [
+                "LPU",
+                "Language Processing Unit"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "LPU",
+                    "definition": "Language Processing Unit — Architektur-/Pipeline-Begriff für sprachnahe Verarbeitungsschichten in Naciro."
+                },
+                "en": {
+                    "label": "LPU",
+                    "definition": "Language Processing Unit — architecture/pipeline term for language-oriented processing layers in Naciro."
+                },
+                "fr": {
+                    "label": "LPU",
+                    "definition": "Language Processing Unit — terme d’architecture/pipeline pour les couches orientées langage dans Naciro."
+                },
+                "es": {
+                    "label": "LPU",
+                    "definition": "Language Processing Unit — término de arquitectura/pipeline para capas de procesamiento orientadas al lenguaje en Naciro."
+                },
+                "pt": {
+                    "label": "LPU",
+                    "definition": "Language Processing Unit — termo de arquitetura/pipeline para camadas de processamento orientadas a linguagem no Naciro."
+                },
+                "ar": {
+                    "label": "LPU",
+                    "definition": "وحدة معالجة اللغة — مصطلح بنية/مسار للطبقات الموجّهة للغة ضمن Naciro."
+                },
+                "ja": {
+                    "label": "LPU",
+                    "definition": "Language Processing Unit — Naciro 内の言語処理に近いレイヤーを指すアーキテクチャ／パイプライン用語です。"
+                }
+            }
+        },
+        {
+            "id": "rag",
+            "aliases": [
+                "RAG",
+                "Retrieval-Augmented Generation"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "RAG",
+                    "definition": "Retrieval-Augmented Generation — KI-Antworten werden mit abgerufenen Quellen/Fakten gestützt statt nur aus dem Modellgedächtnis."
+                },
+                "en": {
+                    "label": "RAG",
+                    "definition": "Retrieval-Augmented Generation — AI answers are grounded with retrieved sources/facts, not only model memory."
+                },
+                "fr": {
+                    "label": "RAG",
+                    "definition": "Génération augmentée par récupération — les réponses IA s’appuient sur des sources/faits récupérés, pas seulement sur la mémoire du modèle."
+                },
+                "es": {
+                    "label": "RAG",
+                    "definition": "Generación aumentada por recuperación — las respuestas de IA se apoyan en fuentes/hechos recuperados, no solo en la memoria del modelo."
+                },
+                "pt": {
+                    "label": "RAG",
+                    "definition": "Geração aumentada por recuperação — respostas de IA fundamentadas em fontes/factos recuperados, não só na memória do modelo."
+                },
+                "ar": {
+                    "label": "RAG",
+                    "definition": "توليد معزّز بالاسترجاع — تستند إجابات الذكاء الاصطناعي إلى مصادر/حقائق مُسترجعة وليس إلى ذاكرة النموذج فقط."
+                },
+                "ja": {
+                    "label": "RAG",
+                    "definition": "検索拡張生成。取得したソースや事実に根ざした回答を生成し、モデル記憶だけに頼りません。"
+                }
+            }
+        },
+        {
+            "id": "lod",
+            "aliases": [
+                "LOD",
+                "Linked Open Data"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "LOD",
+                    "definition": "Linked Open Data — verlinkte, offene Datenbestände im Web (oft mit stabilen IDs und Ontologien)."
+                },
+                "en": {
+                    "label": "LOD",
+                    "definition": "Linked Open Data — interlinked open datasets on the web, often with stable IDs and ontologies."
+                },
+                "fr": {
+                    "label": "LOD",
+                    "definition": "Données ouvertes liées — jeux de données ouverts reliés sur le web, souvent avec identifiants stables et ontologies."
+                },
+                "es": {
+                    "label": "LOD",
+                    "definition": "Datos abiertos enlazados — conjuntos de datos abiertos interconectados en la web, a menudo con IDs y ontologías estables."
+                },
+                "pt": {
+                    "label": "LOD",
+                    "definition": "Dados abertos ligados — conjuntos de dados abertos interligados na web, muitas vezes com IDs e ontologias estáveis."
+                },
+                "ar": {
+                    "label": "LOD",
+                    "definition": "البيانات المفتوحة المترابطة — مجموعات بيانات مفتوحة ومترابطة على الويب غالباً مع معرفات وأنطولوجيا مستقرة."
+                },
+                "ja": {
+                    "label": "LOD",
+                    "definition": "リンクドオープンデータ。安定した ID やオントロジーを伴う、ウェブ上の相互につながったオープンデータセット。"
+                }
+            }
+        },
+        {
+            "id": "doi",
+            "aliases": [
+                "DOI",
+                "Digital Object Identifier"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "DOI",
+                    "definition": "Digital Object Identifier — dauerhafte ID für digitale Objekte (z. B. Zenodo), zitierfähig über doi.org."
+                },
+                "en": {
+                    "label": "DOI",
+                    "definition": "Digital Object Identifier — persistent ID for digital objects (e.g. Zenodo), citable via doi.org."
+                },
+                "fr": {
+                    "label": "DOI",
+                    "definition": "Identifiant d’objet numérique — identifiant persistant (ex. Zenodo), citable via doi.org."
+                },
+                "es": {
+                    "label": "DOI",
+                    "definition": "Identificador de objeto digital — ID persistente (p. ej. Zenodo), citable vía doi.org."
+                },
+                "pt": {
+                    "label": "DOI",
+                    "definition": "Identificador de objeto digital — ID persistente (ex. Zenodo), citável via doi.org."
+                },
+                "ar": {
+                    "label": "DOI",
+                    "definition": "معرّف الكائن الرقمي — معرف دائم للمواد الرقمية (مثل Zenodo) وقابل للاستشهاد عبر doi.org."
+                },
+                "ja": {
+                    "label": "DOI",
+                    "definition": "デジタルオブジェクト識別子。Zenodo などのデジタル資料の永続 ID で、doi.org 経由で引用できます。"
+                }
+            }
+        },
+        {
+            "id": "zenodo",
+            "aliases": [
+                "Zenodo"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Zenodo",
+                    "definition": "Open-Access-Repository (CERN) für Forschungsartefakte; DOIs werden dort vergeben."
+                },
+                "en": {
+                    "label": "Zenodo",
+                    "definition": "Open-access research repository (CERN) where DOIs are minted for artifacts."
+                },
+                "fr": {
+                    "label": "Zenodo",
+                    "definition": "Dépôt open access (CERN) pour artefacts de recherche ; les DOI y sont attribués."
+                },
+                "es": {
+                    "label": "Zenodo",
+                    "definition": "Repositorio de acceso abierto (CERN) para artefactos de investigación; allí se emiten DOI."
+                },
+                "pt": {
+                    "label": "Zenodo",
+                    "definition": "Repositório open access (CERN) para artefactos de investigação; os DOI são emitidos lá."
+                },
+                "ar": {
+                    "label": "Zenodo",
+                    "definition": "مستودع بحثي مفتوح الوصول (CERN) تُصدَر فيه معرفات DOI للمواد."
+                },
+                "ja": {
+                    "label": "Zenodo",
+                    "definition": "CERN のオープンアクセス研究リポジトリ。DOI が付与されます。"
+                }
+            }
+        },
+        {
+            "id": "schema-org",
+            "aliases": [
+                "schema.org",
+                "Schema.org"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "schema.org",
+                    "definition": "Gemeinsames Vokabular für strukturierte Daten (Typen/Eigenschaften), u. a. für JSON-LD auf Webseiten."
+                },
+                "en": {
+                    "label": "schema.org",
+                    "definition": "Shared vocabulary of types and properties for structured data, including JSON-LD on the web."
+                },
+                "fr": {
+                    "label": "schema.org",
+                    "definition": "Vocabulaire partagé de types et propriétés pour données structurées, dont JSON-LD sur le web."
+                },
+                "es": {
+                    "label": "schema.org",
+                    "definition": "Vocabulario compartido de tipos y propiedades para datos estructurados, p. ej. JSON-LD."
+                },
+                "pt": {
+                    "label": "schema.org",
+                    "definition": "Vocabulário partilhado de tipos e propriedades para dados estruturados, incluindo JSON-LD."
+                },
+                "ar": {
+                    "label": "schema.org",
+                    "definition": "مفردات مشتركة للأنواع والخصائص للبيانات المنظّمة بما في ذلك JSON-LD."
+                },
+                "ja": {
+                    "label": "schema.org",
+                    "definition": "構造化データ用の共通語彙（型とプロパティ）。Web 上の JSON-LD などで使われます。"
+                }
+            }
+        },
+        {
+            "id": "knowledge-graph",
+            "aliases": [
+                "Knowledge Graph",
+                "knowledge graph",
+                "Knowledge-Graph"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Knowledge Graph",
+                    "definition": "Netz aus Entitäten (Knoten) und Relationen (Kanten) statt nur isolierter Textseiten."
+                },
+                "en": {
+                    "label": "Knowledge Graph",
+                    "definition": "Network of entities (nodes) and relations (edges), not just isolated text pages."
+                },
+                "fr": {
+                    "label": "Knowledge Graph",
+                    "definition": "Réseau d’entités (nœuds) et de relations (arêtes), au-delà de pages texte isolées."
+                },
+                "es": {
+                    "label": "Knowledge Graph",
+                    "definition": "Red de entidades (nodos) y relaciones (aristas), más allá de páginas de texto aisladas."
+                },
+                "pt": {
+                    "label": "Knowledge Graph",
+                    "definition": "Rede de entidades (nós) e relações (arestas), para além de páginas de texto isoladas."
+                },
+                "ar": {
+                    "label": "Knowledge Graph",
+                    "definition": "شبكة كيانات (عُقد) وعلاقات (حواف) وليس مجرد صفحات نصية منفصلة."
+                },
+                "ja": {
+                    "label": "ナレッジグラフ",
+                    "definition": "エンティティ（ノード）と関係（エッジ）のネットワーク。単独のテキストページだけではありません。"
+                }
+            }
+        },
+        {
+            "id": "first-party",
+            "aliases": [
+                "first-party",
+                "first party",
+                "First-Party",
+                "First Party"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "First-Party",
+                    "definition": "Vom Betreiber selbst kuratierte/gehostete Daten — im Gegensatz zu primär aggregierten Drittanbieter-Faktenströmen."
+                },
+                "en": {
+                    "label": "First-party",
+                    "definition": "Data curated and hosted by the operator itself, contrasted with relying primarily on third-party fact streams."
+                },
+                "fr": {
+                    "label": "First-party",
+                    "definition": "Données hébergées et curatées par l’opérateur lui-même, par opposition à des flux tiers principalement agrégés."
+                },
+                "es": {
+                    "label": "First-party",
+                    "definition": "Datos alojados y curados por el propio operador, frente a flujos agregados principalmente de terceros."
+                },
+                "pt": {
+                    "label": "First-party",
+                    "definition": "Dados alojados e curados pelo próprio operador, em contraste com fluxos agregados de terceiros."
+                },
+                "ar": {
+                    "label": "First-party",
+                    "definition": "بيانات يستضيفها المشغّل ويُديرها بنفسه مقابل الاعتماد بشكل أساسي على تدفقات طرف ثالث."
+                },
+                "ja": {
+                    "label": "ファーストパーティ",
+                    "definition": "事業者自身がホスト・キュレーションするデータ。第三者の事実ストリームへの依存が主ではないことと対比されます。"
+                }
+            }
+        },
+        {
+            "id": "cc-by-nd",
+            "aliases": [
+                "CC BY-ND",
+                "BY-ND 4.0",
+                "CC BY-ND 4.0"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "CC BY-ND 4.0",
+                    "definition": "Creative-Commons-Lizenz: Namensnennung, keine Bearbeitung (keine Derivative)."
+                },
+                "en": {
+                    "label": "CC BY-ND 4.0",
+                    "definition": "Creative Commons license: attribution required; no derivative works."
+                },
+                "fr": {
+                    "label": "CC BY-ND 4.0",
+                    "definition": "Licence Creative Commons : paternité, pas de travaux dérivés."
+                },
+                "es": {
+                    "label": "CC BY-ND 4.0",
+                    "definition": "Licencia Creative Commons: reconocimiento, sin obras derivadas."
+                },
+                "pt": {
+                    "label": "CC BY-ND 4.0",
+                    "definition": "Licença Creative Commons: atribuição, sem obras derivadas."
+                },
+                "ar": {
+                    "label": "CC BY-ND 4.0",
+                    "definition": "رخصة المشاع الإبداعي: الإسناد مطلوب، دون أعمال مشتقة."
+                },
+                "ja": {
+                    "label": "CC BY-ND 4.0",
+                    "definition": "クリエイティブ・コモンズ（表示・改変禁止）。派生物を作れません。"
+                }
+            }
+        },
+        {
+            "id": "utc",
+            "aliases": [
+                "UTC",
+                "ISO 8601",
+                "ISO8601"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "UTC / ISO 8601",
+                    "definition": "UTC: koordinierte Weltzeit für Zeitstempel. ISO 8601: Standardformat für Datums-/Zeitangaben (z. B. Exporte)."
+                },
+                "en": {
+                    "label": "UTC / ISO 8601",
+                    "definition": "UTC: coordinated universal time for timestamps. ISO 8601: standard machine-readable date/time format (e.g. in exports)."
+                },
+                "fr": {
+                    "label": "UTC / ISO 8601",
+                    "definition": "UTC : temps universel coordonné. ISO 8601 : format normalisé de date/heure (p. ex. dans les exports)."
+                },
+                "es": {
+                    "label": "UTC / ISO 8601",
+                    "definition": "UTC: tiempo universal coordinado. ISO 8601: formato estándar de fecha/hora (p. ej. en exportaciones)."
+                },
+                "pt": {
+                    "label": "UTC / ISO 8601",
+                    "definition": "UTC: tempo universal coordenado. ISO 8601: formato padrão de data/hora (ex. em exportações)."
+                },
+                "ar": {
+                    "label": "UTC / ISO 8601",
+                    "definition": "UTC: التوقيت العالمي المنسّق. ISO 8601: تنسيق قياسي للتاريخ والوقت (مثل التصدير)."
+                },
+                "ja": {
+                    "label": "UTC / ISO 8601",
+                    "definition": "UTC は協定世界時。ISO 8601 は日時の標準表記（エクスポートなど）。"
+                }
+            }
+        },
+        {
+            "id": "gs1",
+            "aliases": [
+                "GS1"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "GS1",
+                    "definition": "Standardsorganisation für Lieferketten-Identifikatoren (z. B. GTIN/EAN)."
+                },
+                "en": {
+                    "label": "GS1",
+                    "definition": "Standards body for supply-chain identifiers (e.g. GTIN/EAN)."
+                },
+                "fr": {
+                    "label": "GS1",
+                    "definition": "Organisme de normalisation pour identifiants de chaîne d’approvisionnement (ex. GTIN/EAN)."
+                },
+                "es": {
+                    "label": "GS1",
+                    "definition": "Organismo de estándares para identificadores de cadena de suministro (p. ej. GTIN/EAN)."
+                },
+                "pt": {
+                    "label": "GS1",
+                    "definition": "Organismo de normas para identificadores da cadeia de abastecimento (ex. GTIN/EAN)."
+                },
+                "ar": {
+                    "label": "GS1",
+                    "definition": "هيئة معايير للمعرفات في سلسلة التوريد (مثل GTIN/EAN)."
+                },
+                "ja": {
+                    "label": "GS1",
+                    "definition": "サプライチェーン識別子（GTIN/EAN 等）の標準化団体。"
+                }
+            }
+        },
+        {
+            "id": "eori",
+            "aliases": [
+                "EORI"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "EORI",
+                    "definition": "Economic Operators Registration and Identification — EU-Nummer für Zoll und Handel."
+                },
+                "en": {
+                    "label": "EORI",
+                    "definition": "Economic Operators Registration and Identification — EU identifier for customs and trade."
+                },
+                "fr": {
+                    "label": "EORI",
+                    "definition": "Economic Operators Registration and Identification — identifiant UE pour douanes et commerce."
+                },
+                "es": {
+                    "label": "EORI",
+                    "definition": "Economic Operators Registration and Identification — identificador de la UE para aduanas y comercio."
+                },
+                "pt": {
+                    "label": "EORI",
+                    "definition": "Economic Operators Registration and Identification — identificador da UE para alfândega e comércio."
+                },
+                "ar": {
+                    "label": "EORI",
+                    "definition": "تسجيل وتعريف المشغلين الاقتصاديين — معرف الاتحاد الأوروبي للجمارك والتجارة."
+                },
+                "ja": {
+                    "label": "EORI",
+                    "definition": "経済事業者登録・識別番号。EU の税関・貿易向け識別子。"
+                }
+            }
+        },
+        {
+            "id": "api",
+            "aliases": [
+                "API",
+                "APIs"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "API",
+                    "definition": "Application Programming Interface — programmierbare Schnittstelle (z. B. Suche oder Datenexport)."
+                },
+                "en": {
+                    "label": "API",
+                    "definition": "Application Programming Interface — programmable interface (e.g. search or data export)."
+                },
+                "fr": {
+                    "label": "API",
+                    "definition": "Interface de programmation d’application — point d’accès programmable (recherche, export, etc.)."
+                },
+                "es": {
+                    "label": "API",
+                    "definition": "Interfaz de programación de aplicaciones — acceso programable (búsqueda, exportación, etc.)."
+                },
+                "pt": {
+                    "label": "API",
+                    "definition": "Interface de programação de aplicações — acesso programável (pesquisa, exportação, etc.)."
+                },
+                "ar": {
+                    "label": "API",
+                    "definition": "واجهة برمجة التطبيقات — وصول قابل للبرمجة (بحث أو تصدير بيانات)."
+                },
+                "ja": {
+                    "label": "API",
+                    "definition": "アプリケーション・プログラミング・インターフェース。検索やデータエクスポートなどのプログラム可能な窓口。"
+                }
+            }
+        },
+        {
+            "id": "naciro",
+            "aliases": [
+                "Naciro"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Naciro",
+                    "definition": "KI-/Analyse-Engine der NationFiles-Plattform (Produktname)."
+                },
+                "en": {
+                    "label": "Naciro",
+                    "definition": "NationFiles platform AI/analysis engine (product name)."
+                },
+                "fr": {
+                    "label": "Naciro",
+                    "definition": "Moteur d’analyse / IA de la plateforme NationFiles (nom de produit)."
+                },
+                "es": {
+                    "label": "Naciro",
+                    "definition": "Motor de análisis/IA de la plataforma NationFiles (nombre de producto)."
+                },
+                "pt": {
+                    "label": "Naciro",
+                    "definition": "Motor de análise/IA da plataforma NationFiles (nome de produto)."
+                },
+                "ar": {
+                    "label": "Naciro",
+                    "definition": "محرك التحليل/الذكاء الاصطناعي لمنصة NationFiles (اسم منتج)."
+                },
+                "ja": {
+                    "label": "Naciro",
+                    "definition": "NationFiles プラットフォームの AI／分析エンジン（製品名）。"
+                }
+            }
+        },
+        {
+            "id": "nfsi-engine",
+            "aliases": [
+                "NFSI Engine",
+                "NFSI-Engine"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "NFSI Engine",
+                    "definition": "Laufzeitkomponente, die NFSI-Scores aus Rohsignalen berechnet und versioniert."
+                },
+                "en": {
+                    "label": "NFSI Engine",
+                    "definition": "Runtime component that computes and versions NFSI scores from raw signals."
+                },
+                "fr": {
+                    "label": "NFSI Engine",
+                    "definition": "Composant d’exécution qui calcule et versionne les scores NFSI à partir de signaux bruts."
+                },
+                "es": {
+                    "label": "NFSI Engine",
+                    "definition": "Componente en ejecución que calcula y versiona puntuaciones NFSI a partir de señales en bruto."
+                },
+                "pt": {
+                    "label": "NFSI Engine",
+                    "definition": "Componente de execução que calcula e versiona scores NFSI a partir de sinais brutos."
+                },
+                "ar": {
+                    "label": "NFSI Engine",
+                    "definition": "مكوّن وقت التشغيل يحسب درجات NFSI ويُصدِر إصداراتها من الإشارات الخام."
+                },
+                "ja": {
+                    "label": "NFSI Engine",
+                    "definition": "生シグナルから NFSI スコアを算出し版管理するランタイム部品。"
+                }
+            }
+        },
+        {
+            "id": "bibtex",
+            "aliases": [
+                "BibTeX"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "BibTeX",
+                    "definition": "Dateiformat für Literaturverzeichnisse in LaTeX/BibLaTeX — hier als Zitier-Export bereitgestellt."
+                },
+                "en": {
+                    "label": "BibTeX",
+                    "definition": "Bibliography exchange format for LaTeX/BibLaTeX — offered here as a citation export."
+                },
+                "fr": {
+                    "label": "BibTeX",
+                    "definition": "Format d’échange de bibliographie pour LaTeX/BibLaTeX — proposé ici comme export de citation."
+                },
+                "es": {
+                    "label": "BibTeX",
+                    "definition": "Formato de bibliografía para LaTeX/BibLaTeX — aquí como exportación de citas."
+                },
+                "pt": {
+                    "label": "BibTeX",
+                    "definition": "Formato de bibliografia para LaTeX/BibLaTeX — aqui como exportação de citação."
+                },
+                "ar": {
+                    "label": "BibTeX",
+                    "definition": "تنسيق ببليوغرافي لـ LaTeX/BibLaTeX — يُعرض هنا كتصدير للاستشهاد."
+                },
+                "ja": {
+                    "label": "BibTeX",
+                    "definition": "LaTeX/BibLaTeX 向け文献フォーマット。ここでは引用用エクスポートとして提供。"
+                }
+            }
+        },
+        {
+            "id": "apa",
+            "aliases": [
+                "APA style",
+                "APA"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "APA-Stil",
+                    "definition": "Zitationsstil der American Psychological Association — hier als kompakte Kurzform angezeigt."
+                },
+                "en": {
+                    "label": "APA style",
+                    "definition": "American Psychological Association citation style — shown here in a compact short form."
+                },
+                "fr": {
+                    "label": "Style APA",
+                    "definition": "Style de citation de l’American Psychological Association — ici en forme courte."
+                },
+                "es": {
+                    "label": "Estilo APA",
+                    "definition": "Estilo de citas de la American Psychological Association — aquí en forma breve."
+                },
+                "pt": {
+                    "label": "Estilo APA",
+                    "definition": "Estilo de citação da American Psychological Association — aqui em forma compacta."
+                },
+                "ar": {
+                    "label": "أسلوب APA",
+                    "definition": "أسلوب استشهاد الجمعية الأمريكية للعلم النفسي — يُعرض هنا بشكل مختصر."
+                },
+                "ja": {
+                    "label": "APA スタイル",
+                    "definition": "アメリカ心理学会の引用スタイル。ここでは簡潔な短形式で表示。"
+                }
+            }
+        },
+        {
+            "id": "geo-seo",
+            "aliases": [
+                "GEO",
+                "Generative Engine Optimization"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "GEO",
+                    "definition": "Generative Engine Optimization — Inhalte so strukturieren, dass KI-Antwortsysteme sie zuverlässig zitieren können."
+                },
+                "en": {
+                    "label": "GEO",
+                    "definition": "Generative Engine Optimization — structuring content so generative answer systems can cite it reliably."
+                },
+                "fr": {
+                    "label": "GEO",
+                    "definition": "Generative Engine Optimization — structurer le contenu pour que les moteurs génératifs le citent avec fiabilité."
+                },
+                "es": {
+                    "label": "GEO",
+                    "definition": "Generative Engine Optimization — estructurar el contenido para que los sistemas generativos lo citen con fiabilidad."
+                },
+                "pt": {
+                    "label": "GEO",
+                    "definition": "Generative Engine Optimization — estruturar conteúdo para sistemas generativos o citarem de forma fiável."
+                },
+                "ar": {
+                    "label": "GEO",
+                    "definition": "تحسين لمحركات الإجابة التوليدية — تهيئة المحتوى ليقتبسه أنظمة الإجابة بشكل موثوق."
+                },
+                "ja": {
+                    "label": "GEO",
+                    "definition": "生成エンジン最適化。生成型回答システムが安定して引用できるよう内容を構造化すること。"
+                }
+            }
+        },
+        {
+            "id": "seo",
+            "aliases": [
+                "SEO",
+                "Search Engine Optimization"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "SEO",
+                    "definition": "Suchmaschinenoptimierung — technische und inhaltliche Signale für bessere Auffindbarkeit in klassischer Suche."
+                },
+                "en": {
+                    "label": "SEO",
+                    "definition": "Search engine optimization — technical and content signals for discoverability in classic search."
+                },
+                "fr": {
+                    "label": "SEO",
+                    "definition": "Optimisation pour moteurs de recherche — signaux techniques et éditoriaux pour la visibilité."
+                },
+                "es": {
+                    "label": "SEO",
+                    "definition": "Optimización para buscadores — señales técnicas y de contenido para visibilidad orgánica."
+                },
+                "pt": {
+                    "label": "SEO",
+                    "definition": "Otimização para motores de busca — sinais técnicos e de conteúdo para visibilidade."
+                },
+                "ar": {
+                    "label": "SEO",
+                    "definition": "تحسين محركات البحث — إشارات تقنية ومحتوى لزيادة الظهور في البحث التقليدي."
+                },
+                "ja": {
+                    "label": "SEO",
+                    "definition": "検索エンジン最適化。従来型検索での発見性のための技術・コンテンツ上の信号。"
+                }
+            }
+        },
+        {
+            "id": "vat",
+            "aliases": [
+                "USt-IdNr",
+                "VAT ID",
+                "VAT number",
+                "Umsatzsteuer"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "USt-IdNr.",
+                    "definition": "EU-weite Umsatzsteuer-Identifikationsnummer für Unternehmen."
+                },
+                "en": {
+                    "label": "VAT ID",
+                    "definition": "European value-added tax identification number for businesses."
+                },
+                "fr": {
+                    "label": "Numéro de TVA",
+                    "definition": "Identifiant de TVA intracommunautaire pour les entreprises."
+                },
+                "es": {
+                    "label": "NIF-IVA",
+                    "definition": "Número de identificación fiscal intracomunitario para IVA."
+                },
+                "pt": {
+                    "label": "NIF-IVA",
+                    "definition": "Número de identificação fiscal intracomunitário para IVA."
+                },
+                "ar": {
+                    "label": "رقم ضريبة القيمة المضافة",
+                    "definition": "معرّف ضريبة القيمة المضافة داخل الاتحاد الأوروبي للشركات."
+                },
+                "ja": {
+                    "label": "VAT ID",
+                    "definition": "EU域内の付加価値税（VAT）識別番号。"
+                }
+            }
+        },
+        {
+            "id": "llms-txt",
+            "aliases": [
+                "llms.txt"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "llms.txt",
+                    "definition": "Datei im Webroot mit Crawler-/KI-Hinweisen (Etikette für automatisierte Clients)."
+                },
+                "en": {
+                    "label": "llms.txt",
+                    "definition": "Webroot file with crawler/AI guidance (etiquette for automated clients)."
+                },
+                "fr": {
+                    "label": "llms.txt",
+                    "definition": "Fichier à la racine du site avec consignes pour crawlers/IA."
+                },
+                "es": {
+                    "label": "llms.txt",
+                    "definition": "Archivo en la raíz del sitio con pautas para rastreadores/IA."
+                },
+                "pt": {
+                    "label": "llms.txt",
+                    "definition": "Ficheiro na raiz do site com orientações para crawlers/IA."
+                },
+                "ar": {
+                    "label": "llms.txt",
+                    "definition": "ملف في جذر الموقع يوجّه الزاحفات وأنظمة الذكاء الاصطناعي."
+                },
+                "ja": {
+                    "label": "llms.txt",
+                    "definition": "サイトルートのファイル。クローラー／AI向けの利用上の注意を記します。"
+                }
+            }
+        }
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "glossary",
+            "id": "glossary"
+        },
+        "repository_relative_path": "knowledge-data/glossary.json"
+    }
+}

@@ -1,0 +1,351 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "naciro",
+    "kind": "entity",
+    "type": "SoftwareApplication",
+    "status": "active",
+    "updated_utc": "2026-04-28T22:00:00Z",
+    "topics": [
+        "engine",
+        "ai",
+        "osint",
+        "predictive"
+    ],
+    "aliases": [
+        "Naciro Engine",
+        "Naciro AI"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "Autonomous AI engine for real-time geopolitical intelligence",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ]
+        },
+        {
+            "key": "core_metric",
+            "value": "{{nfsi}}",
+            "depends_on": [
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "country_coverage",
+            "value": "195 nations",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "update_cycle",
+            "value": "15 minutes (recalculation cadence)",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "forecast_horizon",
+            "value": "24h and 7-day forecasts",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "pipeline",
+            "value": "Signal Aggregation -> Normalization & Bias Correction -> Predictive Adjustment",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "NFSI VVR",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ]
+        },
+        {
+            "key": "input_sources",
+            "value": "115+ real-time sources",
+            "sources": [
+                {
+                    "label": "NFSI FAQ",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "inference_latency",
+            "value": "< 50 ms",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "citation_doi",
+            "value": "10.5281/zenodo.19758942",
+            "sources": [
+                {
+                    "label": "Naciro Manual DOI",
+                    "url": "https://doi.org/10.5281/zenodo.19758942"
+                }
+            ]
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Naciro Engine",
+            "teaser": "Die Naciro Engine ist die autonome Intelligence-Engine innerhalb von {{nationfiles}}. Sie verarbeitet operative Signale und validierte Quellen, um den {{nfsi}} in Echtzeit zu berechnen.",
+            "summary_bullets": [
+                "Autonome Engine für geopolitische Echtzeit-Intelligence",
+                "Berechnet den NFSI (0–100) für 195 Nationen",
+                "Erzeugt Exporte mit Methodik- und Quellenreferenzen"
+            ],
+            "body_md": "**Naciro** steht für eine Engine-Schicht, die Signale aggregiert, normalisiert und zu stabilen Outputs verdichtet.\n\nSie ist Teil von {{nationfiles}} und berechnet den {{nfsi}}.\n\nIm Knowledge-System wird Naciro als Entität beschrieben, damit Definitionen, Beziehungen und Exporte stabil bleiben.",
+            "facts": [
+                {
+                    "k": "Ist Teil von",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Berechnet",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pipeline (vereinfachtes Modell)",
+                    "body_md": "Signal Aggregation → Normalisierung → Bias-Korrektur → Predictive Adjustment → Output (NFSI)"
+                }
+            ]
+        },
+        "en": {
+            "title": "Naciro Engine",
+            "teaser": "The Naciro Engine is the autonomous intelligence engine within {{nationfiles}}. It processes operational signals and validated sources to compute {{nfsi}} outputs in real time.",
+            "summary_bullets": [
+                "Autonomous engine for real-time geopolitical intelligence",
+                "Computes NFSI (0–100) across 195 nations",
+                "Produces exports with methodology and source references"
+            ],
+            "body_md": "**Naciro** is an engine layer that aggregates and normalizes signals into stable outputs.\n\nIt is part of {{nationfiles}} and computes {{nfsi}}.\n\nThis knowledge system defines Naciro as a first-party entity so definitions and exports remain stable.",
+            "facts": [
+                {
+                    "k": "Part of",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Computes",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pipeline (simplified)",
+                    "body_md": "Signal Aggregation → Normalization → Bias Correction → Predictive Adjustment → Output (NFSI)"
+                }
+            ]
+        },
+        "fr": {
+            "title": "Naciro Engine",
+            "teaser": "Naciro Engine est le moteur d’intelligence autonome de {{nationfiles}}. Il traite des signaux opérationnels et des sources validées pour calculer {{nfsi}} en temps réel.",
+            "summary_bullets": [
+                "Moteur autonome pour l’intelligence géopolitique en temps réel",
+                "Calcule le NFSI (0–100) pour 195 nations",
+                "Produit des exports avec références de méthodologie et de sources"
+            ],
+            "body_md": "**Naciro** est une couche moteur qui agrège et normalise les signaux vers des sorties stables.\n\nIl fait partie de {{nationfiles}} et calcule {{nfsi}}.\n\nCe système Knowledge décrit Naciro comme entité first-party afin de garder des définitions et exports stables."
+        },
+        "es": {
+            "title": "Naciro Engine",
+            "teaser": "Naciro Engine es el motor de inteligencia autónomo dentro de {{nationfiles}}. Procesa señales operativas y fuentes validadas para calcular {{nfsi}} en tiempo real.",
+            "summary_bullets": [
+                "Motor autónomo para inteligencia geopolítica en tiempo real",
+                "Calcula el NFSI (0–100) en 195 naciones",
+                "Genera exportaciones con referencias de metodología y fuentes"
+            ],
+            "body_md": "**Naciro** es una capa de motor que agrega y normaliza señales en salidas estables.\n\nForma parte de {{nationfiles}} y calcula {{nfsi}}.\n\nEste sistema de Knowledge define Naciro como entidad first-party para mantener estables definiciones y exportaciones."
+        },
+        "pt": {
+            "title": "Naciro Engine",
+            "teaser": "A Naciro Engine é o motor de inteligência autônomo dentro de {{nationfiles}}. Ela processa sinais operacionais e fontes validadas para calcular {{nfsi}} em tempo real.",
+            "summary_bullets": [
+                "Motor autônomo para inteligência geopolítica em tempo real",
+                "Calcula o NFSI (0–100) em 195 nações",
+                "Produz exportações com referências de metodologia e fontes"
+            ],
+            "body_md": "**Naciro** é uma camada de motor que agrega e normaliza sinais em saídas estáveis.\n\nFaz parte de {{nationfiles}} e calcula {{nfsi}}.\n\nEste sistema de Knowledge define a Naciro como entidade first-party para manter definições e exportações estáveis."
+        },
+        "ar": {
+            "title": "محرك Naciro",
+            "teaser": "محرك Naciro هو محرك الاستخبارات الذاتي داخل {{nationfiles}}. يعالج الإشارات التشغيلية والمصادر الموثقة لحساب {{nfsi}} في الوقت الحقيقي.",
+            "summary_bullets": [
+                "محرك ذاتي للاستخبارات الجيوسياسية في الوقت الحقيقي",
+                "يحسب NFSI (0–100) عبر 195 دولة",
+                "ينتج تصديرات مع مراجع المنهجية والمصادر"
+            ],
+            "body_md": "**Naciro** هي طبقة محرك تقوم بتجميع الإشارات وتطبيعها إلى مخرجات مستقرة.\n\nوهي جزء من {{nationfiles}} وتحسب {{nfsi}}.\n\nيعرف نظام Knowledge هذا Naciro ككيان first-party لضمان استقرار التعريفات والتصديرات."
+        },
+        "ja": {
+            "title": "Naciroエンジン",
+            "teaser": "Naciroエンジンは {{nationfiles}} 内の自律インテリジェンス・エンジンです。運用シグナルと検証済みソースを処理し、{{nfsi}} をリアルタイムで計算します。",
+            "summary_bullets": [
+                "リアルタイム地政学インテリジェンス向け自律エンジン",
+                "195か国に対して NFSI（0–100）を計算",
+                "方法論とソース参照付きのエクスポートを生成"
+            ],
+            "body_md": "**Naciro** は、シグナルを集約・正規化して安定した出力に変換するエンジン層です。\n\n{{nationfiles}} の一部として {{nfsi}} を計算します。\n\nこの Knowledge システムでは、定義とエクスポートの安定性を保つため、Naciro を first-party エンティティとして定義しています。"
+        }
+    },
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "isDevelopedBy",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "computes",
+            "to": "nfsi"
+        },
+        {
+            "rel": "hasPart",
+            "to": "lpu-architecture"
+        }
+    ],
+    "faq_refs": [
+        "faq-what-is-naciro",
+        "faq-how-is-nfsi-calculated"
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "naciro"
+        },
+        "repository_relative_path": "knowledge-data/entities/naciro.json"
+    }
+}

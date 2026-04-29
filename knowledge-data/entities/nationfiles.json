@@ -1,0 +1,354 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "nationfiles",
+    "kind": "entity",
+    "type": "WebSite",
+    "status": "active",
+    "updated_utc": "2026-04-28T22:00:00Z",
+    "topics": [
+        "system",
+        "platform",
+        "geopolitics",
+        "exports"
+    ],
+    "aliases": [
+        "NationFiles Platform",
+        "NationFiles System"
+    ],
+    "attributes": [
+        {
+            "key": "website",
+            "value": "https://nationfiles.com",
+            "sources": [
+                {
+                    "label": "Home",
+                    "url": "https://nationfiles.com/en/"
+                }
+            ]
+        },
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ]
+        },
+        {
+            "key": "system_engine",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "core_metric",
+            "value": "{{nfsi}}",
+            "depends_on": [
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "country_coverage",
+            "value": "195 nations",
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "update_cycle",
+            "value": "15 minutes",
+            "depends_on": [
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "language_prefixes",
+            "value": "de, en, fr, es, pt, ar, ja",
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ]
+        },
+        {
+            "key": "key_outputs",
+            "value": "Country dashboards, NFSI index, 24h/7-day outlooks, machine-readable exports",
+            "depends_on": [
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ]
+        },
+        {
+            "key": "knowledge_hub",
+            "value": "https://nationfiles.com/en/knowledge/",
+            "sources": [
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ]
+        },
+        {
+            "key": "source_registry",
+            "value": "https://nationfiles.com/en/legal/sources/",
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ]
+        },
+        {
+            "key": "ai_policy",
+            "value": "https://nationfiles.com/en/ai-guidelines/",
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ]
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "NationFiles",
+            "teaser": "NationFiles ist das geopolitische Intelligence-System, das Ereignisse und Signale in maschinenlesbare Länderprofile (Nationfiles) strukturiert und den NFSI als Echtzeit-Output veröffentlicht.",
+            "summary_bullets": [
+                "System/Plattform für Echtzeit-Geopolitik und Risiko-Signale",
+                "Publiziert den NationFiles Stability Index (NFSI)",
+                "Verknüpft Methodik, Quellenregister und Exporte pro Entität"
+            ],
+            "body_md": "NationFiles ist das **Ökosystem**.\n\nDie **{{naciro}}** berechnet als Engine den **{{nfsi}}**.\n\nDieses Knowledge-Portal definiert Entitäten und Beziehungen als maschinenlesbare Quelle.",
+            "facts": [
+                {
+                    "k": "Engine",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Index",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum ein eigener Knowledge Graph?",
+                    "body_md": "Damit Begriffe, Beziehungen und Exporte **stabil** und **unlöschbar** in deiner Kontrolle bleiben – unabhängig von externen Wikis."
+                }
+            ]
+        },
+        "en": {
+            "title": "NationFiles",
+            "teaser": "NationFiles is the geopolitical intelligence system that structures events and signals into machine-readable country profiles and publishes NFSI outputs in real time.",
+            "summary_bullets": [
+                "System/platform for real-time geopolitics and risk signals",
+                "Publishes the NationFiles Stability Index (NFSI)",
+                "Links methodology, source registry, and exports per entity"
+            ],
+            "body_md": "NationFiles is the **ecosystem**.\n\nThe **{{naciro}}** computes the **{{nfsi}}**.\n\nThis knowledge portal defines entities and relationships as a machine-readable source.",
+            "facts": [
+                {
+                    "k": "Engine",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Index",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why a first-party knowledge graph?",
+                    "body_md": "To keep definitions, relationships, and exports **stable** and fully controlled — independent from third-party wikis."
+                }
+            ]
+        },
+        "fr": {
+            "title": "NationFiles",
+            "teaser": "NationFiles est le système d’intelligence géopolitique qui structure des événements et signaux en profils pays lisibles par machine et publie le NFSI en temps réel.",
+            "summary_bullets": [
+                "Système/plateforme pour la géopolitique en temps réel et les signaux de risque",
+                "Publie le NationFiles Stability Index (NFSI)",
+                "Relie la méthodologie, le registre des sources et les exports par entité"
+            ],
+            "body_md": "NationFiles est l’**écosystème**.\n\nLe moteur **{{naciro}}** calcule le **{{nfsi}}**.\n\nCe portail Knowledge définit les entités et relations comme source lisible par machine."
+        },
+        "es": {
+            "title": "NationFiles",
+            "teaser": "NationFiles es el sistema de inteligencia geopolítica que estructura eventos y señales en perfiles de país legibles por máquina y publica el NFSI en tiempo real.",
+            "summary_bullets": [
+                "Sistema/plataforma para geopolítica en tiempo real y señales de riesgo",
+                "Publica el NationFiles Stability Index (NFSI)",
+                "Conecta metodología, registro de fuentes y exportaciones por entidad"
+            ],
+            "body_md": "NationFiles es el **ecosistema**.\n\nEl motor **{{naciro}}** calcula el **{{nfsi}}**.\n\nEste portal de Knowledge define entidades y relaciones como fuente legible por máquina."
+        },
+        "pt": {
+            "title": "NationFiles",
+            "teaser": "A NationFiles é o sistema de inteligência geopolítica que estrutura eventos e sinais em perfis de país legíveis por máquina e publica o NFSI em tempo real.",
+            "summary_bullets": [
+                "Sistema/plataforma para geopolítica em tempo real e sinais de risco",
+                "Publica o NationFiles Stability Index (NFSI)",
+                "Conecta metodologia, registro de fontes e exportações por entidade"
+            ],
+            "body_md": "NationFiles é o **ecossistema**.\n\nO motor **{{naciro}}** calcula o **{{nfsi}}**.\n\nEste portal de Knowledge define entidades e relações como fonte legível por máquina."
+        },
+        "ar": {
+            "title": "NationFiles",
+            "teaser": "NationFiles هو نظام استخبارات جيوسياسية يهيكل الأحداث والإشارات إلى ملفات دول قابلة للقراءة آلياً وينشر NFSI كمخرج فوري.",
+            "summary_bullets": [
+                "نظام/منصة للجيوسياسة اللحظية وإشارات المخاطر",
+                "ينشر NationFiles Stability Index (NFSI)",
+                "يربط المنهجية وسجل المصادر والتصديرات لكل كيان"
+            ],
+            "body_md": "تمثل NationFiles **المنظومة**.\n\nيقوم محرك **{{naciro}}** بحساب **{{nfsi}}**.\n\nتعرّف بوابة Knowledge هذه الكيانات والعلاقات كمصدر قابل للقراءة آلياً."
+        },
+        "ja": {
+            "title": "NationFiles",
+            "teaser": "NationFiles は、イベントとシグナルを機械可読な国別プロファイルに構造化し、NFSI をリアルタイムで公開する地政学インテリジェンス・システムです。",
+            "summary_bullets": [
+                "リアルタイム地政学とリスクシグナルのためのシステム/プラットフォーム",
+                "NationFiles Stability Index (NFSI) を公開",
+                "方法論・ソースレジストリ・エンティティ別エクスポートを連携"
+            ],
+            "body_md": "NationFiles は**エコシステム**です。\n\nエンジン **{{naciro}}** が **{{nfsi}}** を計算します。\n\nこの Knowledge ポータルは、エンティティと関係を機械可読な一次ソースとして定義します。"
+        }
+    },
+    "relations": [
+        {
+            "rel": "isOperatedBy",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "hasPart",
+            "to": "naciro"
+        },
+        {
+            "rel": "hasPart",
+            "to": "nfsi"
+        },
+        {
+            "rel": "hasPart",
+            "to": "lpu-architecture"
+        }
+    ],
+    "faq_refs": [
+        "faq-what-is-nationfiles",
+        "faq-what-is-naciro",
+        "faq-how-is-nfsi-calculated"
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "nationfiles"
+        },
+        "repository_relative_path": "knowledge-data/entities/nationfiles.json"
+    }
+}

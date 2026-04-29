@@ -1,0 +1,112 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "faq-how-is-nfsi-calculated",
+    "kind": "faq",
+    "status": "active",
+    "updated_utc": "2026-04-28T11:45:00Z",
+    "entity_refs": [
+        "nfsi",
+        "naciro"
+    ],
+    "i18n": {
+        "de": {
+            "q": "Wie wird der NFSI berechnet?",
+            "a_short": "Der NFSI entsteht aus einer mehrstufigen Pipeline (Aggregation → Normalisierung → Bias-Korrektur → Predictive Adjustment) und wird durch die Naciro Engine periodisch neu berechnet.",
+            "a_long_md": "Die Berechnung folgt einer nachvollziehbaren Pipeline:\n\n1) Signal Aggregation\n2) Normalisierung\n3) Bias-Korrektur\n4) Predictive Adjustment\n\nDie Engine ist: {{naciro}}. Der Output ist: {{nfsi}}."
+        },
+        "en": {
+            "q": "How is NFSI calculated?",
+            "a_short": "NFSI is produced by a multi-stage pipeline (aggregation → normalization → bias correction → predictive adjustment) and recalculated periodically by the Naciro Engine.",
+            "a_long_md": "The computation follows a traceable pipeline:\n\n1) Signal Aggregation\n2) Normalization\n3) Bias Correction\n4) Predictive Adjustment\n\nEngine: {{naciro}}. Output: {{nfsi}}."
+        },
+        "fr": {
+            "q": "Comment le NFSI est-il calculé ?",
+            "a_short": "Le NFSI est produit par un pipeline multi-étapes (agrégation → normalisation → correction du biais → ajustement prédictif) puis recalculé périodiquement par Naciro Engine.",
+            "a_long_md": "Le calcul suit un pipeline traçable :\n\n1) Agrégation des signaux\n2) Normalisation\n3) Correction du biais\n4) Ajustement prédictif\n\nMoteur : {{naciro}}. Sortie : {{nfsi}}."
+        },
+        "es": {
+            "q": "¿Cómo se calcula el NFSI?",
+            "a_short": "El NFSI se produce mediante una canalización de varias etapas (agregación → normalización → corrección de sesgo → ajuste predictivo) y se recalcula periódicamente por Naciro Engine.",
+            "a_long_md": "El cálculo sigue una canalización trazable:\n\n1) Agregación de señales\n2) Normalización\n3) Corrección de sesgo\n4) Ajuste predictivo\n\nMotor: {{naciro}}. Salida: {{nfsi}}."
+        },
+        "pt": {
+            "q": "Como o NFSI é calculado?",
+            "a_short": "O NFSI é produzido por um pipeline de múltiplas etapas (agregação → normalização → correção de viés → ajuste preditivo) e recalculado periodicamente pela Naciro Engine.",
+            "a_long_md": "O cálculo segue um pipeline rastreável:\n\n1) Agregação de sinais\n2) Normalização\n3) Correção de viés\n4) Ajuste preditivo\n\nMotor: {{naciro}}. Saída: {{nfsi}}."
+        },
+        "ar": {
+            "q": "كيف يتم حساب NFSI؟",
+            "a_short": "يتم إنتاج NFSI عبر خط معالجة متعدد المراحل (تجميع → تطبيع → تصحيح الانحياز → ضبط تنبؤي) ويُعاد حسابه دورياً بواسطة Naciro Engine.",
+            "a_long_md": "يتبع الحساب خط معالجة قابل للتتبع:\n\n1) تجميع الإشارات\n2) التطبيع\n3) تصحيح الانحياز\n4) الضبط التنبؤي\n\nالمحرك: {{naciro}}. المخرجات: {{nfsi}}."
+        },
+        "ja": {
+            "q": "NFSIはどのように計算されますか？",
+            "a_short": "NFSI は、多段パイプライン（集約 → 正規化 → バイアス補正 → 予測調整）で生成され、Naciroエンジンにより定期的に再計算されます。",
+            "a_long_md": "計算は追跡可能なパイプラインに従います：\n\n1) シグナル集約\n2) 正規化\n3) バイアス補正\n4) 予測調整\n\nエンジン: {{naciro}}。出力: {{nfsi}}。"
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "faq",
+            "id": "faq-how-is-nfsi-calculated"
+        },
+        "repository_relative_path": "knowledge-data/faqs/faq-how-is-nfsi-calculated.json"
+    }
+}

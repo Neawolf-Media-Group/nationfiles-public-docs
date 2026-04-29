@@ -1,0 +1,370 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "neawolf-media-group",
+    "kind": "entity",
+    "type": "Organization",
+    "status": "active",
+    "updated_utc": "2026-04-28T22:00:00Z",
+    "topics": [
+        "organization",
+        "publisher",
+        "governance"
+    ],
+    "aliases": [
+        "Neawolf",
+        "Neawolf Media"
+    ],
+    "attributes": [
+        {
+            "key": "legal_form",
+            "value": "Sole proprietorship (Einzelunternehmen)",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "founded_date",
+            "value": "2025-06-01",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "project_started_date",
+            "value": "2026-01-22 (NationFiles launch)",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "responsible_owner",
+            "value": "Sven Schmidt",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                },
+                {
+                    "label": "Company About",
+                    "url": "https://nationfiles.com/en/company/about/"
+                }
+            ]
+        },
+        {
+            "key": "headquarters",
+            "value": "Reinhardstr. 1b, 52078 Aachen, Germany",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "jurisdiction",
+            "value": "District Court of Aachen (Amtsgericht Aachen)",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "primary_contact",
+            "value": "info@nationfiles.com",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "vat_id",
+            "value": "DE323880906",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "label_code",
+            "value": "LC 101196",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "gs1",
+            "value": "42700048635",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "eori",
+            "value": "DE12345678901",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "bg_membership",
+            "value": "BG ETEM (ID: 738207165880001)",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "operator",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ]
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "citation_doi",
+            "value": "10.5281/zenodo.19758942",
+            "sources": [
+                {
+                    "label": "Naciro Manual DOI",
+                    "url": "https://doi.org/10.5281/zenodo.19758942"
+                }
+            ]
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Neawolf Media Group",
+            "teaser": "Neawolf Media Group ist die publizierende Organisation hinter NationFiles und den dazugehörigen Knowledge-, Dataset- und Methodik-Exports.",
+            "summary_bullets": [
+                "Organisation & Publisher der NationFiles-Plattform",
+                "Institutionelle Governance und Quellenregister",
+                "Veröffentlicht Exporte und Forschung über DOI/ORCID-verknüpfte Referenzen"
+            ],
+            "body_md": "Neawolf Media Group betreibt und publiziert **NationFiles** als institutionelle Intelligence-Plattform.\n\nDer Fokus liegt auf **auditierbaren Datenpfaden**, dokumentierter Methodik und reproduzierbaren Exporten.\n\nSiehe auch: {{nationfiles}}.",
+            "facts": [
+                {
+                    "k": "Rolle",
+                    "v": "Publisher / Betreiber"
+                },
+                {
+                    "k": "Plattform",
+                    "v": "{{nationfiles}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Governance",
+                    "body_md": "NationFiles wird als Organisation mit dokumentierter Methodik und Quellenregister betrieben. Ziel ist nicht Meinung, sondern **prüfbare Fakten**."
+                }
+            ]
+        },
+        "en": {
+            "title": "Neawolf Media Group",
+            "teaser": "Neawolf Media Group is the publishing organization behind NationFiles and its knowledge, dataset, and methodology exports.",
+            "summary_bullets": [
+                "Organization & publisher of the NationFiles platform",
+                "Institutional governance and source registry",
+                "Publishes exports and research via DOI/ORCID-linked references"
+            ],
+            "body_md": "Neawolf Media Group operates and publishes **NationFiles** as an institutional intelligence platform.\n\nThe focus is on **auditable data lineage**, documented methodology, and reproducible exports.\n\nSee also: {{nationfiles}}.",
+            "facts": [
+                {
+                    "k": "Role",
+                    "v": "Publisher / operator"
+                },
+                {
+                    "k": "Platform",
+                    "v": "{{nationfiles}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Governance",
+                    "body_md": "NationFiles is operated with documented methodology and a source registry. The goal is **auditable facts**, not opinions."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Neawolf Media Group",
+            "teaser": "Neawolf Media Group est l’organisation éditrice derrière NationFiles et ses exports knowledge, dataset et méthodologie.",
+            "summary_bullets": [
+                "Organisation et éditeur de la plateforme NationFiles",
+                "Gouvernance institutionnelle et registre des sources",
+                "Publie des exports et des recherches via des références liées DOI/ORCID"
+            ],
+            "body_md": "Neawolf Media Group exploite et publie **NationFiles** comme plateforme institutionnelle d’intelligence.\n\nL’accent est mis sur une **traçabilité des données vérifiable**, une méthodologie documentée et des exports reproductibles.\n\nVoir aussi : {{nationfiles}}."
+        },
+        "es": {
+            "title": "Neawolf Media Group",
+            "teaser": "Neawolf Media Group es la organización editorial detrás de NationFiles y de sus exportaciones de conocimiento, datasets y metodología.",
+            "summary_bullets": [
+                "Organización y editor de la plataforma NationFiles",
+                "Gobernanza institucional y registro de fuentes",
+                "Publica exportaciones e investigación mediante referencias vinculadas a DOI/ORCID"
+            ],
+            "body_md": "Neawolf Media Group opera y publica **NationFiles** como plataforma institucional de inteligencia.\n\nEl enfoque está en una **trazabilidad de datos auditable**, metodología documentada y exportaciones reproducibles.\n\nVer también: {{nationfiles}}."
+        },
+        "pt": {
+            "title": "Neawolf Media Group",
+            "teaser": "A Neawolf Media Group é a organização publicadora por trás da NationFiles e de suas exportações de conhecimento, datasets e metodologia.",
+            "summary_bullets": [
+                "Organização e publicadora da plataforma NationFiles",
+                "Governança institucional e registro de fontes",
+                "Publica exportações e pesquisa via referências vinculadas a DOI/ORCID"
+            ],
+            "body_md": "A Neawolf Media Group opera e publica a **NationFiles** como plataforma institucional de inteligência.\n\nO foco está em **linhagem de dados auditável**, metodologia documentada e exportações reproduzíveis.\n\nVeja também: {{nationfiles}}."
+        },
+        "ar": {
+            "title": "Neawolf Media Group",
+            "teaser": "تُعد Neawolf Media Group الجهة الناشرة خلف NationFiles وتصديرات المعرفة ومجموعات البيانات والمنهجية الخاصة بها.",
+            "summary_bullets": [
+                "المؤسسة والناشر لمنصة NationFiles",
+                "حوكمة مؤسسية وسجل مصادر",
+                "تنشر التصديرات والأبحاث عبر مراجع مرتبطة بـ DOI/ORCID"
+            ],
+            "body_md": "تدير Neawolf Media Group منصة **NationFiles** وتنشرها كمنصة استخبارات مؤسسية.\n\nينصب التركيز على **مسار بيانات قابل للتدقيق** ومنهجية موثقة وتصديرات قابلة لإعادة الإنتاج.\n\nانظر أيضاً: {{nationfiles}}."
+        },
+        "ja": {
+            "title": "Neawolf Media Group",
+            "teaser": "Neawolf Media Group は、NationFiles とその Knowledge・Dataset・Methodology エクスポートを公開する組織です。",
+            "summary_bullets": [
+                "NationFiles プラットフォームの組織・発行主体",
+                "制度的ガバナンスとソースレジストリ",
+                "DOI/ORCID 連携参照を通じてエクスポートと研究を公開"
+            ],
+            "body_md": "Neawolf Media Group は、**NationFiles** を制度的インテリジェンス・プラットフォームとして運用・公開します。\n\n重点は、**監査可能なデータ系譜**、文書化された方法論、再現可能なエクスポートです。\n\n関連: {{nationfiles}}。"
+        }
+    },
+    "relations": [
+        {
+            "rel": "operates",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "publishes",
+            "to": "nfsi"
+        },
+        {
+            "rel": "develops",
+            "to": "naciro"
+        },
+        {
+            "rel": "develops",
+            "to": "lpu-architecture"
+        }
+    ],
+    "faq_refs": [
+        "faq-what-is-nationfiles",
+        "faq-what-is-naciro",
+        "faq-what-is-nfsi"
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "neawolf-media-group"
+        },
+        "repository_relative_path": "knowledge-data/entities/neawolf-media-group.json"
+    }
+}

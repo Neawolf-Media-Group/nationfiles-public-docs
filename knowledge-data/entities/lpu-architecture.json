@@ -1,0 +1,272 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "lpu-architecture",
+    "kind": "entity",
+    "type": "CreativeWork",
+    "status": "active",
+    "updated_utc": "2026-04-28T22:10:00Z",
+    "topics": [
+        "hardware",
+        "inference",
+        "architecture",
+        "performance"
+    ],
+    "aliases": [
+        "LPU",
+        "Large Processing Unit",
+        "LPU Stack"
+    ],
+    "attributes": [
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company About",
+                    "url": "https://nationfiles.com/en/company/about/"
+                }
+            ]
+        },
+        {
+            "key": "system_engine",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ]
+        },
+        {
+            "key": "inference_latency",
+            "value": "< 50 ms",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ]
+        },
+        {
+            "key": "model_type",
+            "value": "Dedicated inference hardware fabric for deterministic processing",
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "LPU Publication",
+                    "url": "https://doi.org/10.5281/zenodo.19774594"
+                }
+            ]
+        },
+        {
+            "key": "core_metric",
+            "value": "Provides compute layer for {{nfsi}} calculation",
+            "depends_on": [
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "citation_doi",
+            "value": "10.5281/zenodo.19774594",
+            "sources": [
+                {
+                    "label": "LPU Architecture DOI",
+                    "url": "https://doi.org/10.5281/zenodo.19774594"
+                }
+            ]
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "LPU Architecture",
+            "teaser": "Die LPU Architecture beschreibt die dedizierte Inferenz-Hardwarebasis der Naciro Engine innerhalb des NationFiles-Systems.",
+            "summary_bullets": [
+                "Hardware-Layer für deterministische Inferenz",
+                "Unterstützt niedrige Latenzen in Echtzeit-Pipelines",
+                "Technische Grundlage für Naciro- und NFSI-Berechnungen"
+            ],
+            "body_md": "Die **LPU Architecture** ist die Compute-Schicht unterhalb von {{naciro}}.\n\nSie stellt die dedizierte Hardware-Basis bereit, damit Signale stabil und reproduzierbar verarbeitet werden.\n\nIm Gesamtsystem ist sie Teil der Hierarchie zwischen {{naciro}} und {{nfsi}}."
+        },
+        "en": {
+            "title": "LPU Architecture",
+            "teaser": "The LPU Architecture is the dedicated inference hardware layer used by the Naciro Engine inside the NationFiles system.",
+            "summary_bullets": [
+                "Hardware layer for deterministic inference",
+                "Supports low-latency real-time pipelines",
+                "Technical foundation for Naciro and NFSI computation"
+            ],
+            "body_md": "The **LPU Architecture** is the compute layer beneath {{naciro}}.\n\nIt provides dedicated hardware so signals are processed with stable and reproducible behavior.\n\nWithin the full stack, it sits between {{naciro}} and {{nfsi}}."
+        },
+        "fr": {
+            "title": "Architecture LPU",
+            "teaser": "L’architecture LPU est la couche materielle d’inference dediee utilisee par Naciro dans le systeme NationFiles.",
+            "summary_bullets": [
+                "Couche materielle pour une inference deterministe",
+                "Prend en charge des pipelines temps reel a faible latence",
+                "Base technique pour les calculs Naciro et NFSI"
+            ],
+            "body_md": "L’**architecture LPU** est la couche de calcul sous {{naciro}}.\n\nElle fournit une base materielle dediee pour un traitement stable et reproductible des signaux.\n\nDans la pile globale, elle se situe entre {{naciro}} et {{nfsi}}."
+        },
+        "es": {
+            "title": "Arquitectura LPU",
+            "teaser": "La arquitectura LPU es la capa de hardware de inferencia dedicada utilizada por Naciro dentro del sistema NationFiles.",
+            "summary_bullets": [
+                "Capa de hardware para inferencia determinista",
+                "Soporta pipelines en tiempo real de baja latencia",
+                "Base tecnica para calculos de Naciro y NFSI"
+            ],
+            "body_md": "La **arquitectura LPU** es la capa de computo por debajo de {{naciro}}.\n\nProporciona hardware dedicado para procesar senales de forma estable y reproducible.\n\nEn la pila completa, se ubica entre {{naciro}} y {{nfsi}}."
+        },
+        "pt": {
+            "title": "Arquitetura LPU",
+            "teaser": "A arquitetura LPU e a camada de hardware de inferencia dedicada usada pela Naciro no sistema NationFiles.",
+            "summary_bullets": [
+                "Camada de hardware para inferencia deterministica",
+                "Suporta pipelines em tempo real com baixa latencia",
+                "Base tecnica para calculos da Naciro e do NFSI"
+            ],
+            "body_md": "A **arquitetura LPU** e a camada de computacao abaixo de {{naciro}}.\n\nEla fornece hardware dedicado para processamento estavel e reproduzivel dos sinais.\n\nNa pilha completa, fica entre {{naciro}} e {{nfsi}}."
+        },
+        "ar": {
+            "title": "بنية LPU",
+            "teaser": "تمثل بنية LPU طبقة العتاد المخصصة للاستدلال التي يستخدمها محرك Naciro ضمن نظام NationFiles.",
+            "summary_bullets": [
+                "طبقة عتاد للاستدلال الحتمي",
+                "تدعم خطوط معالجة فورية بزمن تاخير منخفض",
+                "اساس تقني لحسابات Naciro و NFSI"
+            ],
+            "body_md": "تعد **بنية LPU** طبقة الحوسبة الموجودة اسفل {{naciro}}.\n\nوهي توفر عتادا مخصصا لمعالجة الاشارات بشكل ثابت وقابل لاعادة الانتاج.\n\nضمن المكدس الكامل، تقع بين {{naciro}} و {{nfsi}}."
+        },
+        "ja": {
+            "title": "LPUアーキテクチャ",
+            "teaser": "LPUアーキテクチャは、NationFilesシステム内でNaciroが利用する専用推論ハードウェア層です。",
+            "summary_bullets": [
+                "決定論的推論のためのハードウェア層",
+                "低レイテンシのリアルタイムパイプラインを支える",
+                "NaciroおよびNFSI計算の技術基盤"
+            ],
+            "body_md": "**LPUアーキテクチャ**は {{naciro}} の下位にある計算層です。\n\n信号を安定かつ再現可能に処理するための専用ハードウェア基盤を提供します。\n\n全体スタックでは {{naciro}} と {{nfsi}} の間に位置します。"
+        }
+    },
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "naciro"
+        },
+        {
+            "rel": "isDevelopedBy",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfiles"
+        }
+    ],
+    "faq_refs": [],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "lpu-architecture"
+        },
+        "repository_relative_path": "knowledge-data/entities/lpu-architecture.json"
+    }
+}

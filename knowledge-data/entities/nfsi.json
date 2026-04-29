@@ -1,0 +1,352 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "nfsi",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-28T22:00:00Z",
+    "topics": [
+        "index",
+        "stability",
+        "risk",
+        "dataset"
+    ],
+    "aliases": [
+        "NationFiles Stability Index",
+        "NFSI"
+    ],
+    "attributes": [
+        {
+            "key": "score_scale",
+            "value": "0-100",
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "score_bands",
+            "value": "A (81-100), B (61-80), C (41-60), D (21-40), E (0-20)",
+            "sources": [
+                {
+                    "label": "NFSI FAQ",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "country_coverage",
+            "value": "195 nations",
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "NFSI VVR",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ]
+        },
+        {
+            "key": "update_cycle",
+            "value": "Every 15 minutes",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI FAQ",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "computed_by",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ]
+        },
+        {
+            "key": "input_sources",
+            "value": "115+ real-time sources; indicator framework documented in VVR",
+            "sources": [
+                {
+                    "label": "NFSI FAQ",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "NFSI VVR",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ]
+        },
+        {
+            "key": "pipeline",
+            "value": "Layer 1 indicator scoring -> Layer 2 aggregation -> Layer 3 weighted final score -> Layer 4 inertia smoothing",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI VVR",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ]
+        },
+        {
+            "key": "forecast_horizon",
+            "value": "7-day forecast layer",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI VVR",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ]
+        },
+        {
+            "key": "core_metric",
+            "value": "Operational geopolitical stability and risk score",
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ]
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ]
+        },
+        {
+            "key": "citation_doi",
+            "value": "10.5281/zenodo.19758890",
+            "sources": [
+                {
+                    "label": "NFSI Research DOI",
+                    "url": "https://doi.org/10.5281/zenodo.19758890"
+                }
+            ]
+        }
+    ],
+    "dynamic_slots": {
+        "global_current": {
+            "resolver": "nfsi.global_current",
+            "ttl_seconds": 900,
+            "export": true
+        }
+    },
+    "i18n": {
+        "de": {
+            "title": "NationFiles Stability Index (NFSI)",
+            "teaser": "Der NFSI ist ein quantitativer Stabilitäts-Score (0–100). Er wird von der {{naciro}} berechnet und als Echtzeit-Output über {{nationfiles}} veröffentlicht.",
+            "summary_bullets": [
+                "Skala 0–100 zur Einordnung geopolitischer Stabilität",
+                "Echtzeit-Output: berechnet durch Naciro",
+                "Verknüpft mit Methodik- und Quellenreferenzen"
+            ],
+            "body_md": "Der **NFSI** ist ein standardisierter Output-Index.\n\nEr wird von {{naciro}} berechnet und im Kontext von {{nationfiles}} bereitgestellt.\n\nAuf Knowledge-Seiten kann der aktuelle Wert dynamisch eingebunden werden (Slot: `global_current`).",
+            "facts": [
+                {
+                    "k": "Berechnet durch",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Publiziert über",
+                    "v": "{{nationfiles}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Score-Bereiche (Kurzform)",
+                    "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
+                }
+            ]
+        },
+        "en": {
+            "title": "NationFiles Stability Index (NFSI)",
+            "teaser": "NFSI is a quantitative stability score (0–100). It is computed by {{naciro}} and published as a real-time output via {{nationfiles}}.",
+            "summary_bullets": [
+                "0–100 scale to classify geopolitical stability",
+                "Real-time output computed by Naciro",
+                "Linked to methodology and source references"
+            ],
+            "body_md": "**NFSI** is a standardized output index.\n\nIt is computed by {{naciro}} and published within {{nationfiles}}.\n\nKnowledge pages can embed the current value dynamically (slot: `global_current`).",
+            "facts": [
+                {
+                    "k": "Computed by",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Published via",
+                    "v": "{{nationfiles}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Score bands (short)",
+                    "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
+                }
+            ]
+        },
+        "fr": {
+            "title": "Indice de stabilité NationFiles (NFSI)",
+            "teaser": "Le NFSI est un score quantitatif de stabilité (0–100). Il est calculé par {{naciro}} et publié en temps réel via {{nationfiles}}.",
+            "summary_bullets": [
+                "Échelle 0–100 pour classer la stabilité géopolitique",
+                "Sortie en temps réel calculée par Naciro",
+                "Lié à la méthodologie et aux références de sources"
+            ],
+            "body_md": "**NFSI** est un indice de sortie standardisé.\n\nIl est calculé par {{naciro}} et publié dans {{nationfiles}}.\n\nLes pages Knowledge peuvent intégrer dynamiquement la valeur actuelle (slot: `global_current`)."
+        },
+        "es": {
+            "title": "Índice de Estabilidad NationFiles (NFSI)",
+            "teaser": "El NFSI es una puntuación cuantitativa de estabilidad (0–100). Lo calcula {{naciro}} y se publica en tiempo real vía {{nationfiles}}.",
+            "summary_bullets": [
+                "Escala 0–100 para clasificar la estabilidad geopolítica",
+                "Salida en tiempo real calculada por Naciro",
+                "Vinculado a metodología y referencias de fuentes"
+            ],
+            "body_md": "**NFSI** es un índice de salida estandarizado.\n\nLo calcula {{naciro}} y se publica en {{nationfiles}}.\n\nLas páginas de Knowledge pueden integrar dinámicamente el valor actual (slot: `global_current`)."
+        },
+        "pt": {
+            "title": "Índice de Estabilidade NationFiles (NFSI)",
+            "teaser": "O NFSI é uma pontuação quantitativa de estabilidade (0–100). É calculado por {{naciro}} e publicado em tempo real via {{nationfiles}}.",
+            "summary_bullets": [
+                "Escala 0–100 para classificar a estabilidade geopolítica",
+                "Saída em tempo real calculada pela Naciro",
+                "Vinculado a metodologia e referências de fontes"
+            ],
+            "body_md": "**NFSI** é um índice de saída padronizado.\n\nEle é calculado por {{naciro}} e publicado em {{nationfiles}}.\n\nAs páginas de Knowledge podem incorporar dinamicamente o valor atual (slot: `global_current`)."
+        },
+        "ar": {
+            "title": "مؤشر الاستقرار NationFiles (NFSI)",
+            "teaser": "NFSI هو درجة استقرار كمية (0–100). يتم حسابه بواسطة {{naciro}} ونشره كمخرج فوري عبر {{nationfiles}}.",
+            "summary_bullets": [
+                "مقياس 0–100 لتصنيف الاستقرار الجيوسياسي",
+                "مخرج فوري يتم حسابه بواسطة Naciro",
+                "مرتبط بالمنهجية ومراجع المصادر"
+            ],
+            "body_md": "**NFSI** هو مؤشر مخرجات موحد.\n\nيتم حسابه بواسطة {{naciro}} ونشره ضمن {{nationfiles}}.\n\nيمكن لصفحات Knowledge تضمين القيمة الحالية بشكل ديناميكي (slot: `global_current`)."
+        },
+        "ja": {
+            "title": "NationFiles Stability Index (NFSI)",
+            "teaser": "NFSI は定量的な安定性スコア（0–100）です。{{naciro}} が計算し、{{nationfiles}} を通じてリアルタイム公開されます。",
+            "summary_bullets": [
+                "地政学的安定性を分類する 0–100 スケール",
+                "Naciro が計算するリアルタイム出力",
+                "方法論とソース参照に連携"
+            ],
+            "body_md": "**NFSI** は標準化された出力インデックスです。\n\n{{naciro}} により計算され、{{nationfiles}} 内で公開されます。\n\nKnowledge ページでは現在値を動的に埋め込めます（slot: `global_current`）。"
+        }
+    },
+    "relations": [
+        {
+            "rel": "isCalculatedBy",
+            "to": "naciro"
+        },
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        }
+    ],
+    "faq_refs": [
+        "faq-what-is-nfsi",
+        "faq-how-is-nfsi-calculated"
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "nfsi"
+        },
+        "repository_relative_path": "knowledge-data/entities/nfsi.json"
+    }
+}

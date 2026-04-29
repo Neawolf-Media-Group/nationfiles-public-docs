@@ -1,0 +1,306 @@
+{
+    "schema_version": "nfkg-repo-index-1.0",
+    "purpose": "Machine-readable repository map for crawlers, chatbots, and search engines mirroring NationFiles knowledge-data.",
+    "official_statement_en": "This repository contains the official, machine-readable knowledge-graph data for NationFiles and the Naciro AI Engine. All data is provided in JSON/JSON-LD format for AI-discovery and research purposes.",
+    "repository_root": "knowledge-data",
+    "bundle_snapshot_utc": "2026-04-29T00:54:57+00:00",
+    "distribution_updated_utc": "2026-04-28T00:00:00Z",
+    "locales_supported": [
+        "de",
+        "en",
+        "fr",
+        "es",
+        "pt",
+        "ar",
+        "ja"
+    ],
+    "canonical_live_exports": {
+        "description": "Aggregated index from the running site (language in path); mirrors static repo files.",
+        "index_json": "https://nationfiles.com/en/knowledge/export/index.json",
+        "graph_jsonld": "https://nationfiles.com/en/knowledge/export/graph.jsonld",
+        "cdn_note": "Replace language prefix en with de|fr|es|pt|ar|ja as needed."
+    },
+    "directories": [
+        {
+            "path": "knowledge-data/entities",
+            "role": "Knowledge graph entity definitions (JSON)",
+            "file_glob": "*.json",
+            "count": 6
+        },
+        {
+            "path": "knowledge-data/faqs",
+            "role": "FAQ entries (JSON)",
+            "file_glob": "*.json",
+            "count": 4
+        },
+        {
+            "path": "knowledge-data/md",
+            "role": "Optional long-form Markdown per entity + locale",
+            "subfolders": [
+                "core-hierarchy",
+                "lpu-architecture",
+                "naciro",
+                "nationfiles",
+                "neawolf-media-group",
+                "nfsi"
+            ]
+        },
+        {
+            "path": "knowledge-data/tools",
+            "role": "Maintenance scripts (inject distribution metadata)"
+        }
+    ],
+    "root_files": [
+        "README.md",
+        "distribution.json",
+        "glossary.json",
+        "index.json"
+    ],
+    "entities": [
+        {
+            "id": "core-hierarchy",
+            "schema_org_type": "TechArticle",
+            "relative_path": "knowledge-data/entities/core-hierarchy.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/core-hierarchy/",
+                "de": "https://nationfiles.com/de/knowledge/entity/core-hierarchy/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/core-hierarchy.jsonld/"
+        },
+        {
+            "id": "lpu-architecture",
+            "schema_org_type": "CreativeWork",
+            "relative_path": "knowledge-data/entities/lpu-architecture.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/lpu-architecture/",
+                "de": "https://nationfiles.com/de/knowledge/entity/lpu-architecture/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/lpu-architecture.jsonld/"
+        },
+        {
+            "id": "naciro",
+            "schema_org_type": "SoftwareApplication",
+            "relative_path": "knowledge-data/entities/naciro.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/naciro/",
+                "de": "https://nationfiles.com/de/knowledge/entity/naciro/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/naciro.jsonld/"
+        },
+        {
+            "id": "nationfiles",
+            "schema_org_type": "WebSite",
+            "relative_path": "knowledge-data/entities/nationfiles.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/nationfiles/",
+                "de": "https://nationfiles.com/de/knowledge/entity/nationfiles/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/nationfiles.jsonld/"
+        },
+        {
+            "id": "neawolf-media-group",
+            "schema_org_type": "Organization",
+            "relative_path": "knowledge-data/entities/neawolf-media-group.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/neawolf-media-group/",
+                "de": "https://nationfiles.com/de/knowledge/entity/neawolf-media-group/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/neawolf-media-group.jsonld/"
+        },
+        {
+            "id": "nfsi",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/nfsi.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/nfsi/",
+                "de": "https://nationfiles.com/de/knowledge/entity/nfsi/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/nfsi.jsonld/"
+        }
+    ],
+    "faqs": [
+        {
+            "id": "faq-how-is-nfsi-calculated",
+            "relative_path": "knowledge-data/faqs/faq-how-is-nfsi-calculated.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/faq/faq-how-is-nfsi-calculated/",
+                "de": "https://nationfiles.com/de/knowledge/faq/faq-how-is-nfsi-calculated/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/faq/faq-how-is-nfsi-calculated.jsonld/"
+        },
+        {
+            "id": "faq-what-is-naciro",
+            "relative_path": "knowledge-data/faqs/faq-what-is-naciro.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/faq/faq-what-is-naciro/",
+                "de": "https://nationfiles.com/de/knowledge/faq/faq-what-is-naciro/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/faq/faq-what-is-naciro.jsonld/"
+        },
+        {
+            "id": "faq-what-is-nationfiles",
+            "relative_path": "knowledge-data/faqs/faq-what-is-nationfiles.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/faq/faq-what-is-nationfiles/",
+                "de": "https://nationfiles.com/de/knowledge/faq/faq-what-is-nationfiles/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/faq/faq-what-is-nationfiles.jsonld/"
+        },
+        {
+            "id": "faq-what-is-nfsi",
+            "relative_path": "knowledge-data/faqs/faq-what-is-nfsi.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/faq/faq-what-is-nfsi/",
+                "de": "https://nationfiles.com/de/knowledge/faq/faq-what-is-nfsi/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/faq/faq-what-is-nfsi.jsonld/"
+        }
+    ],
+    "glossary": {
+        "relative_path": "knowledge-data/glossary.json",
+        "term_count": 25
+    },
+    "markdown_entities": [
+        {
+            "entity_id": "core-hierarchy",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "lpu-architecture",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "naciro",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "nationfiles",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "neawolf-media-group",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "nfsi",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        }
+    ],
+    "documentation": {
+        "readme": "knowledge-data/README.md",
+        "technical_context": "knowledge-data/.CONTEXT.md",
+        "distribution_legal": "knowledge-data/distribution.json"
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "repo_index",
+            "id": "index"
+        },
+        "repository_relative_path": "knowledge-data/index.json"
+    }
+}
