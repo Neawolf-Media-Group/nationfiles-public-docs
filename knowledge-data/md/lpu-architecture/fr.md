@@ -8,29 +8,29 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/lpu-architecture/fr.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/lpu-architecture/"
+nf_canonical_html_url: "https://nationfiles.com/fr/knowledge/entity/lpu-architecture/"
 nf_markdown_lang_file: "fr"
 ---
-# Architecture LPU
+# LPU Architecture — socle de calcul pour l’inférence temps réel
 
-## Rôle
+## Ce que désigne la LPU dans ce produit
 
-**LPU Architecture** désigne la **couche matérielle d’inférence dédiée** sous le moteur Naciro : exigences de **déterminisme et faible latence** pour les chemins de signaux alimentant les charges NFSI. Le type **`CreativeWork`** et le DOI encadrent la fiche comme **document d’architecture**, pas comme fiche produit dynamique.
+**LPU Architecture** nomme la **couche d’inférence haute performance** sous le moteur Naciro : elle décrit comment NationFiles assure une exécution **déterministe et à faible latence** pour les chemins qui alimentent **NFSI**, textes de dashboard et analyses géopolitiques **temps réel**. Là où des jobs cloud généralistes seraient imprévisibles, cette couche vise une **base de calcul planifiable** pour des scores et brèves **stables et reproductibles**.
 
-## Latence
+La documentation publique cite **< 50 ms** de latence d’inférence dans le setup de référence — **objectif d’ingénierie**, pas jauge sur cette page.
 
-`inference_latency` : **< 50 ms** (objectif documenté, pas mesure live).
+## Ce qu’elle apporte
 
-## DOI
+- **Débit:** scorer à haute fréquence pays et signaux sans que l’analytique devienne le goulot.
+- **Déterminisme:** résultats comparables dans le temps — indispensable pour un index institutionnel.
+- **Couplage Naciro:** la LPU est le **substrat matériel/architecture** ; Naciro reste la **logique** ; le NFSI le **score visible**.
 
-**10.5281/zenodo.19774594** — source primaire pour le détail technique.
+## Référence recherche
 
-## Contexte
+DOI **10.5281/zenodo.19774594**.
 
-Moteur `naciro`, métrique `nfsi`, diffusion via `nationfiles`.
-
-## Références
+## Sources
 
 - [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
 - [Méthodologie NFSI](https://nationfiles.com/en/company/nfsi/)
-- [DOI](https://doi.org/10.5281/zenodo.19774594)
+- [DOI LPU](https://doi.org/10.5281/zenodo.19774594)

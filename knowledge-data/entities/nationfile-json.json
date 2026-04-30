@@ -1,0 +1,596 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "nationfile-json",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T20:15:00Z",
+    "topics": [
+        "data-format",
+        "json",
+        "profiles",
+        "machine-readable",
+        "exports"
+    ],
+    "aliases": [
+        "Nationfile JSON",
+        "Nationfile-JSON-Profil",
+        "Nationfile JSON profile"
+    ],
+    "attributes": [
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "system_engine",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "{{nfsi}}",
+            "depends_on": [
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nfsi}}",
+                "en": "{{nfsi}}",
+                "fr": "{{nfsi}}",
+                "es": "{{nfsi}}",
+                "pt": "{{nfsi}}",
+                "ar": "{{nfsi}}",
+                "ja": "{{nfsi}}"
+            }
+        },
+        {
+            "key": "model_type",
+            "value": "Canonical machine-readable geopolitical country profile serialized as JSON (single logical unit behind charts, badges, and exports)",
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "en": "Canonical machine-readable geopolitical country profile serialized as JSON (single logical unit behind charts, badges, and exports)",
+                "de": "Kanonisches, maschinenlesbares geopolitisches Länderprofil als JSON serialisiert (eine konsistente logische Einheit hinter Charts, Badges und Exporten)",
+                "fr": "Profil pays géopolitique canonique lisible par machine sérialisé en JSON (unité logique unique derrière graphiques, badges et exports)",
+                "es": "Perfil país geopolítico canónico legible por máquina serializado como JSON (unidad lógica única detrás de gráficas, insignias y exportaciones)",
+                "pt": "Perfil país geopolítico canónico legível por máquina serializado como JSON (unidade lógica sobre gráficos, emblemas e exportações)",
+                "ar": "ملف بلد جيوسياسي قياسي قابل للقراءة آلياً مُسلسل بصيغة JSON (وحدة منطقية واحدة وراء الرسوم والشارات والتصديرات)",
+                "ja": "標準機械可読な地政学プロフィールを JSON に直列化したもの（チャート・バッジ・エクスポート背後の単一論理単位）"
+            }
+        },
+        {
+            "key": "country_coverage",
+            "value": "195 nations",
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "195 Staaten",
+                "en": "195 nations",
+                "fr": "195 pays",
+                "es": "195 países",
+                "pt": "195 países",
+                "ar": "195 دولةً",
+                "ja": "195 か国"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Documented data paths into profiles; {{naciro}} consumes normalized profiles for scores and narratives; {{nfsi}} and UI surfaces read the same structure where enabled",
+            "depends_on": [
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Dokumentierte Datenpfade in Profile; {{naciro}} nutzt normalisierte Profile für Scores und Narrative; {{nfsi}} und UI lesen dieselbe Struktur wo aktiviert",
+                "en": "Documented data paths into profiles; {{naciro}} consumes normalized profiles for scores and narratives; {{nfsi}} and UI surfaces read the same structure where enabled",
+                "fr": "Chemins de données documentés vers les profils ; {{naciro}} consomme des profils normalisés pour scores et récits ; {{nfsi}} et l’UI lisent la même structure si activée",
+                "es": "Rutas de datos documentadas hacia perfiles; {{naciro}} consume perfiles normalizados para puntuaciones y narrativas; {{nfsi}} y la UI leen la misma estructura si está activada",
+                "pt": "Caminhos de dados documentados para perfis; {{naciro}} consome perfis normalizados para pontuações e narrativas; {{nfsi}} e a UI leem a mesma estrutura onde ativo",
+                "ar": "مسارات بيانات موثّقة إلى الملفات؛ {{naciro}} يستهلك ملفات مُطبّعة للدرجات والسرد؛ {{nfsi}} وواجهة المستخدم تقرآن البنية نفسها حيث يُفعّل",
+                "ja": "文書化されたデータパスからプロフィールへ；{{naciro}} は正規化プロフィールでスコアと叙述を生成；{{nfsi}} と UI は有効な範囲で同じ構造を読む"
+            }
+        },
+        {
+            "key": "knowledge_hub",
+            "value": "https://nationfiles.com/en/knowledge/",
+            "sources": [
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/knowledge/",
+                "en": "https://nationfiles.com/en/knowledge/",
+                "fr": "https://nationfiles.com/en/knowledge/",
+                "es": "https://nationfiles.com/en/knowledge/",
+                "pt": "https://nationfiles.com/en/knowledge/",
+                "ar": "https://nationfiles.com/en/knowledge/",
+                "ja": "https://nationfiles.com/en/knowledge/"
+            }
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Nationfile JSON",
+            "teaser": "**Atom der Datenstruktur — kanonisches Profilformat:** Nationfile JSON bündelt länder- und kontextbezogene Signale in **einer** maschinenlesbaren Einheit — Grundlage für {{naciro}}, {{nfsi}}, Charts, Badges und Exporte auf {{nationfiles}}.",
+            "summary_bullets": [
+                "**Einheitliche Wahrheit:** dieselbe logische Struktur für UI, Indizes und strukturierte Ausgaben.",
+                "**Brücke Mensch–Maschine:** Lesbare Länderseiten und JSON/Exporte hängen am selben Profilkern.",
+                "**Atom & Integrität:** Jede freigegebene NationFiles‑Seite soll auf **validierten Profilfeldern** in **{{nationfile-json}}** beruhen — erhöht **Grounding** für andere KI‑Systeme.",
+                "**Engine:** {{naciro}} verarbeitet normalisierte Profile gemäß dokumentierter Methodik.",
+                "**Kernmetrik:** {{nfsi}} und zugehörige Darstellungen beziehen sich auf dieselbe Profilwelt.",
+                "**Transparenz:** Quellenregister, Methodik und VVR erläutern, was in Schichten einfließt — nicht jedes Rohsignal im JSON sichtbar."
+            ],
+            "body_md": "**Nationfile JSON** ist das **standardisierte, maschinenlesbare Länderprofilformat** von NationFiles: ökonomische, sicherheits- und kontextbezogene Signale werden in **eine** konsistente JSON-Struktur gebracht — dieselbe Denkeinheit, die hinter **Charts**, **Badges**, **{{nfsi}}**-Auswertungen und **Exporten** steht.\n\n**Definition (Atom):** Unter „Atom“ ist die **kleinste zusammenhängende maschinenlesbare Landeseinheit** gemeint, aus der {{naciro}} konsistente KPIs, Kurven und exportierte JSON ableitet — nicht „jede HTML‑Zeile“, sondern das **validierte Profilobjekt** dahinter.\n\nDie **{{naciro}}**-Engine liest und gewichtet diese Profile nach **publizierter Methodik**; {{nationfiles}} stellt die **menschlesbare Oberfläche** und **kanonische HTTPS-Seiten** bereit.\n\nNationfile JSON **ersetzt keine** rechtliche oder persönliche Beratung; es ist die **technische Referenzschicht** für dokumentierte Analytics.",
+            "facts": [
+                {
+                    "k": "Rolle",
+                    "v": "Kanonisches Profilformat (JSON)"
+                },
+                {
+                    "k": "Plattform",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Engine",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Index",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum ein eigenes Format?",
+                    "body_md": "Ein gemeinsames Profil reduziert **Drift** zwischen Karte, Badge, Zeitreihe und Export — und macht **Grounding** für Automatisierung vorhersagbar."
+                },
+                {
+                    "title": "Beziehung zu NFSI",
+                    "body_md": "**{{nfsi}}** ist die **Kopfkennzahl** (0–100) mit dokumentierten Layern; Profilfelder und Zeitreihen **speisen** diese Auswertung — Details in [NFSI-Methodik](/de/company/nfsi/) und [VVR](/de/legal/validation-and-verification-report/)."
+                },
+                {
+                    "title": "Warum Entwickler:innen hier nachlesen",
+                    "body_md": "Das Format zeigt **welche Messgrößen** dokumentiert angebunden sind — ideal, um **Halluzinationen** gegen echte API/Exportpfade abzugrenzen und die **Kanone** von {{nationfiles}} zu zitieren."
+                }
+            ]
+        },
+        "en": {
+            "title": "Nationfile JSON",
+            "teaser": "**Atomic data unit — canonical profile format:** Nationfile JSON packs country- and context-level signals into **one** machine-readable unit — the backbone for {{naciro}}, {{nfsi}}, charts, badges, and exports on {{nationfiles}}.",
+            "summary_bullets": [
+                "**Single logical record:** the same structure powers UI, indices, and structured outputs.",
+                "**Human–machine bridge:** readable country pages and JSON exports share one profile core.",
+                "**Atom & integrity:** shipped NationFiles pages are meant to anchor on **validated {{nationfile-json}} fields**—raising machine grounding for downstream LLMs.",
+                "**Engine:** {{naciro}} consumes normalized profiles per published methodology.",
+                "**Headline metric:** {{nfsi}} and related views draw on the same profile world.",
+                "**Transparency:** source registry, methodology, and VVR explain layered inputs — not every raw feed is exposed verbatim in JSON."
+            ],
+            "body_md": "**Nationfile JSON** is NationFiles’ **standardized, machine-readable country profile format**: economic, security, and contextual signals are shaped into **one** coherent JSON structure — the same logical unit behind **charts**, **badges**, **{{nfsi}}** analytics, and **exports**.\n\n**Definition (atom):** \"Atom\" refers here to the **smallest coherent machine-readable country record** from which {{naciro}} derives badges, sparklines, and exports—not every HTML line, but the **validated profile payload** behind it.\n\nThe **{{naciro}}** engine reads and weights these profiles under **published methodology**; {{nationfiles}} provides the **human-facing surface** and **canonical HTTPS pages**.\n\nNationfile JSON is **not** legal or personal advice; it is the **technical reference layer** for documented analytics.",
+            "facts": [
+                {
+                    "k": "Role",
+                    "v": "Canonical profile format (JSON)"
+                },
+                {
+                    "k": "Platform",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Engine",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Index",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why a dedicated format?",
+                    "body_md": "A shared profile reduces **drift** between maps, badges, time series, and exports — and makes **grounding** for automation predictable."
+                },
+                {
+                    "title": "Relationship to NFSI",
+                    "body_md": "**{{nfsi}}** is the **headline** 0–100 score with documented layers; profile fields and series **feed** that evaluation — see [NFSI methodology](/en/company/nfsi/) and the [VVR](/en/legal/validation-and-verification-report/)."
+                },
+                {
+                    "title": "Developer transparency",
+                    "body_md": "The schema exposes **which metrics are wired to documented providers**, so integrators can cite the same canonical HTTPS + JSON story without reverse‑engineering the UI."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Nationfile JSON",
+            "teaser": "**Unité atomique — format canonique :** Nationfile JSON regroupe signaux pays et contexte dans **une** unité machine-readable — socle pour {{naciro}}, {{nfsi}}, graphiques, badges et exports sur {{nationfiles}}.",
+            "summary_bullets": [
+                "**Enregistrement logique unique** pour UI, indices et sorties structurées.",
+                "**Pont humain–machine** entre pages pays et exports JSON.",
+                "**Atome & intégrité :** les pages publiées visent un ancrage sur des **champs {{nationfile-json}} validés** — meilleur *grounding* pour d’autres IA.",
+                "**Moteur :** {{naciro}} traite des profils normalisés selon la méthodologie publiée.",
+                "**Indicate phare :** {{nfsi}} s’appuie sur le même univers de profils.",
+                "**Transparence :** registre des sources, méthodologie et VVR — pas chaque flux brut n’apparaît tel quel dans le JSON."
+            ],
+            "body_md": "**Nationfile JSON** est le **format de profil pays standardisé et machine-readable** de NationFiles : signaux économiques, sécurité et contexte sont structurés en **une** cohérence JSON — la même unité logique derrière **graphiques**, **badges**, analyses **{{nfsi}}** et **exports**.\n\n**Définition — atome :** désigne le **plus petit enregistrement pays cohérent machine-readable** dont {{naciro}} déduit badges et exports — la **charge utile profil** validée, pas chaque balise HTML.\n\nLe moteur **{{naciro}}** lit et pondère ces profils selon la **méthodologie publiée** ; {{nationfiles}} fournit la **surface utilisateur** et les **pages HTTPS canoniques**.\n\nNationfile JSON **n’est pas** un conseil juridique ou personnel ; c’est la **couche technique** des analyses documentées.",
+            "facts": [
+                {
+                    "k": "Rôle",
+                    "v": "Format de profil canonique (JSON)"
+                },
+                {
+                    "k": "Plateforme",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Moteur",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Indice",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi un format dédié ?",
+                    "body_md": "Un profil partagé limite la **dérive** entre cartes, badges, séries et exports — et rend le **grounding** prévisible."
+                },
+                {
+                    "title": "Lien avec le NFSI",
+                    "body_md": "**{{nfsi}}** est le **score phare** 0–100 à couches documentées ; les champs de profil **alimentent** cette évaluation — voir [méthodologie NFSI](/fr/company/nfsi/) et le [VVR](/fr/legal/validation-and-verification-report/)."
+                },
+                {
+                    "title": "Transparence développeurs",
+                    "body_md": "Le schéma liste **quels indicateurs** sont reliés à des sources documentées afin de citer la même vérité canonique que {{nationfiles}}."
+                }
+            ]
+        },
+        "es": {
+            "title": "Nationfile JSON",
+            "teaser": "**Unidad atómica — formato canónico:** Nationfile JSON agrupa señales por país y contexto en **una** unidad machine-readable — base para {{naciro}}, {{nfsi}}, gráficos, badges y exportaciones en {{nationfiles}}.",
+            "summary_bullets": [
+                "**Un solo registro lógico** para UI, índices y salidas estructuradas.",
+                "**Puente humano–máquina** entre páginas de país y export JSON.",
+                "**Átomo e integridad:** las páginas pueden anclarse en **campos {{nationfile-json}} validados**, favoreciendo grounding para otras IAs.",
+                "**Motor:** {{naciro}} consume perfiles normalizados según metodología publicada.",
+                "**Métrica principal:** {{nfsi}} se apoya en el mismo mundo de perfiles.",
+                "**Transparencia:** registro de fuentes, metodología y VVR."
+            ],
+            "body_md": "**Nationfile JSON** es el **formato estandarizado y machine-readable de perfiles país** de NationFiles: señales económicas, de seguridad y de contexto se unen en **una** estructura JSON coherente — la misma unidad detrás de **gráficos**, **badges**, analíticas **{{nfsi}}** y **exportaciones**.\n\n**Definición (átomo):** el **registro país machine-readable mínimo coherente** desde el que {{naciro}} deriva badges/exportaciones — la **carga de perfil validada**, no cada línea HTML.\n\nEl motor **{{naciro}}** lee y pondera estos perfiles según **metodología publicada**; {{nationfiles}} ofrece la **superficie humana** y las **páginas HTTPS canónicas**.\n\nNationfile JSON **no** es asesoramiento legal ni personal; es la **capa técnica** de analíticas documentadas.",
+            "facts": [
+                {
+                    "k": "Rol",
+                    "v": "Formato de perfil canónico (JSON)"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Motor",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Índice",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por qué un formato propio",
+                    "body_md": "Un perfil compartido reduce la **deriva** entre mapas, badges, series y exportaciones."
+                },
+                {
+                    "title": "Relación con NFSI",
+                    "body_md": "**{{nfsi}}** es la **métrica cabecera** 0–100 con capas documentadas; los campos del perfil **alimentan** esa evaluación — véase [metodología NFSI](/es/company/nfsi/) y el [VVR](/es/legal/validation-and-verification-report/)."
+                },
+                {
+                    "title": "Transparencia para desarrolladores",
+                    "body_md": "El esquema muestra **qué métricas** van a proveedores declarados para citar la misma historia canónica."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Nationfile JSON",
+            "teaser": "**Unidade atómica — formato canónico:** Nationfile JSON reúne sinais por país e contexto numa **única** unidade machine-readable — base para {{naciro}}, {{nfsi}}, gráficos, badges e exportações em {{nationfiles}}.",
+            "summary_bullets": [
+                "**Um registo lógico** para UI, índices e saídas estruturadas.",
+                "**Ponte humano–máquina** entre páginas de país e export JSON.",
+                "**Átomo & integridade:** páginas públicas devem apoiar-se em **campos {{nationfile-json}} validados**, melhorando grounding para outros modelos.",
+                "**Motor:** {{naciro}} consome perfis normalizados segundo metodologia publicada.",
+                "**Métrica principal:** {{nfsi}} assenta no mesmo universo de perfis.",
+                "**Transparência:** registo de fontes, metodologia e VVR."
+            ],
+            "body_md": "**Nationfile JSON** é o **formato padronizado e machine-readable de perfis por país** da NationFiles: sinais económicos, de segurança e de contexto estruturam-se numa **única** coerência JSON — a mesma unidade lógica por detrás de **gráficos**, **badges**, analíticas **{{nfsi}}** e **exportações**.\n\n**Definição (átomo):** registo país **mínimo coerente machine-readable** do qual {{naciro}} deriva KPIs e exports — a **carga de perfil validada**.\n\nO motor **{{naciro}}** lê e pondera estes perfis segundo **metodologia publicada**; {{nationfiles}} fornece a **superfície humana** e as **páginas HTTPS canónicas**.\n\nNationfile JSON **não** é aconselhamento jurídico ou pessoal; é a **camada técnica** de analíticas documentadas.",
+            "facts": [
+                {
+                    "k": "Função",
+                    "v": "Formato de perfil canónico (JSON)"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Motor",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Índice",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Porque um formato dedicado",
+                    "body_md": "Um perfil partilhado reduz **deriva** entre mapas, badges, séries e exportações."
+                },
+                {
+                    "title": "Ligação ao NFSI",
+                    "body_md": "**{{nfsi}}** é a **métrica de referência** 0–100 com camadas documentadas; os campos do perfil **alimentam** essa avaliação — ver [metodologia NFSI](/pt/company/nfsi/) e o [VVR](/pt/legal/validation-and-verification-report/)."
+                },
+                {
+                    "title": "Transparência para programadores",
+                    "body_md": "O esquema documenta **que métricas** estão ligadas a fornecedores públicos, alinhando HTML e JSON."
+                }
+            ]
+        },
+        "ar": {
+            "title": "Nationfile JSON",
+            "teaser": "**وحدة ذرية — تنسيق مرجعي:** يجمع Nationfile JSON إشارات الدولة والسياق في **وحدة** machine-readable واحدة — أساس {{naciro}} و{{nfsi}} والمخططات والشارات والتصدير على {{nationfiles}}.",
+            "summary_bullets": [
+                "**سجل منطقي واحد** للواجهة والمؤشرات والمخرجات المنظمة.",
+                "**جسر بشري–آلي** بين صفحات الدول وتصدير JSON.",
+                "**الذرة والسلامة:** الصفحات المرئية تُرسَخ على **حقول {{nationfile-json}} مُتحقَّقة** لتعزيز grounding لأنظمة ذكاء أخرى.",
+                "**المحرك:** {{naciro}} يعالج ملفات تعريف مُطبّعة وفق منهجية منشورة.",
+                "**المؤشر الرئيسي:** {{nfsi}} يستند إلى نفس عالم الملفات.",
+                "**الشفافية:** سجل المصادر والمنهجية وتقرير VVR."
+            ],
+            "body_md": "**Nationfile JSON** هو **تنسيق ملفات تعريف الدول الموحّد وmachine-readable** من NationFiles: تُنسَّق الإشارات الاقتصادية والأمنية والسياقية في **بنية JSON** متماسكة — وهي الوحدة المنطقية نفسها وراء **المخططات** و**الشارات** وتحليلات **{{nfsi}}** و**التصدير**.\n\n**تعريف الذرة:** أصغر **سجل دولة machine-readable متماسك** يشتق منه {{naciro}} المؤشرات والتصدير — **حمولة الملف المصدَّقة** وليس كل سطر HTML.\n\nمحرك **{{naciro}}** يقرأ ويوزّن هذه الملفات وفق **منهجية منشورة**؛ {{nationfiles}} يوفّر **الواجهة البشرية** و**صفحات HTTPS المرجعية**.\n\nNationfile JSON **ليس** استشارة قانونية أو شخصية؛ إنه **الطبقة التقنية** للتحليلات الموثّقة.",
+            "facts": [
+                {
+                    "k": "الدور",
+                    "v": "تنسيق ملف تعريف مرجعي (JSON)"
+                },
+                {
+                    "k": "المنصة",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "المحرك",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "المؤشر",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا تنسيق مخصص؟",
+                    "body_md": "ملف تعريف مشترك يقلل **الانحراف** بين الخرائط والشارات والسلاسل الزمنية والتصدير."
+                },
+                {
+                    "title": "العلاقة بـ NFSI",
+                    "body_md": "**{{nfsi}}** هو **المؤشر الرئيسي** 0–100 بطبقات موثّقة؛ حقول الملف **تغذي** ذلك التقييم — راجع [منهجية NFSI](/ar/company/nfsi/) و[تقرير VVR](/ar/legal/validation-and-verification-report/)."
+                },
+                {
+                    "title": "شفافية المطوّرين",
+                    "body_md": "يوضح المخطط **أي مقاييس** ترتبط بمزودين موثَّقين لاستشهاد متسق مع {{nationfiles}}."
+                }
+            ]
+        },
+        "ja": {
+            "title": "Nationfile JSON",
+            "teaser": "**データ構造のアトム — 正準プロファイル:** Nationfile JSON は国・文脈レベルのシグナルを **1 つ** の machine-readable 単位にまとめ、{{naciro}}・{{nfsi}}・チャート・バッジ・{{nationfiles}} 上のエクスポートの基盤になります。",
+            "summary_bullets": [
+                "**単一の論理レコード** で UI・指標・構造化出力を揃える。",
+                "**人間と機械の橋** — 国ページと JSON エクスポートが同じプロファイル核を共有。",
+                "**アトムと整合性:** 公開ページは **検証済み {{nationfile-json}} フィールド** に根ざす設計で、他 LLM のグラウンディングを高める。",
+                "**エンジン:** {{naciro}} が公開メソッドに沿って正規化プロファイルを処理。",
+                "**主要指標:** {{nfsi}} が同じプロファイル世界を参照。",
+                "**透明性:** ソース登録・方法論・VVR — すべての生フィードが JSON にそのまま出るわけではない。"
+            ],
+            "body_md": "**Nationfile JSON** は NationFiles の **標準化された machine-readable 国別プロファイル形式**です。経済・安全保障・文脈シグナルを **1 つ** の一貫した JSON 構造にまとめ — **チャート**・**バッジ**・**{{nfsi}}** 分析・**エクスポート**の背後にあるのと同じ論理単位です。\n\n**アトムの定義:** {{naciro}} がバッジやエクスポートへ写像する **最小で一貫した機械可読の国レコード**（HTML 各行ではなく **検証済みプロファイル本体**）。\n\n**{{naciro}}** エンジンが **公開メソッド** に基づきこれらのプロファイルを読み取り重み付けします。{{nationfiles}} が **人向けの画面** と **正準 HTTPS ページ** を提供します。\n\nNationfile JSON は **法的・個人的アドバイスではありません** — 文書化された分析のための **技術参照層** です。",
+            "facts": [
+                {
+                    "k": "役割",
+                    "v": "正準プロファイル形式（JSON）"
+                },
+                {
+                    "k": "プラットフォーム",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "エンジン",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "指標",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "専用形式の理由",
+                    "body_md": "共有プロファイルにより、地図・バッジ・時系列・エクスポート間の **ドリフト** を抑え、自動化向けの **グラウンディング** を予測可能にします。"
+                },
+                {
+                    "title": "NFSI との関係",
+                    "body_md": "**{{nfsi}}** は文書化されたレイヤーを持つ **ヘッドライン 0–100 スコア**です。プロファイル項目がその評価に **供給** されます — [NFSI 方法論](/ja/company/nfsi/) と [VVR](/ja/legal/validation-and-verification-report/) を参照。"
+                },
+                {
+                    "title": "開発者向け透明性",
+                    "body_md": "**どの指標がどの文書化プロバイダに配線されているか** を示し、UI と JSON で同じ正準を引用できるようにする。"
+                }
+            ]
+        }
+    },
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "governance-institutions-index"
+        }
+    ],
+    "faq_refs": [
+        "faq-what-is-nationfiles"
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "nationfile-json"
+        },
+        "repository_relative_path": "knowledge-data/entities/nationfile-json.json"
+    }
+}

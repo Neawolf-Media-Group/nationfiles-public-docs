@@ -1,0 +1,671 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "data-integration-overview",
+    "kind": "entity",
+    "type": "CreativeWork",
+    "status": "active",
+    "updated_utc": "2026-05-03T12:00:00Z",
+    "topics": [
+        "integration",
+        "naciro",
+        "lpu",
+        "pipelines",
+        "real-time",
+        "architecture",
+        "data-lineage"
+    ],
+    "aliases": [
+        "Datenintegration",
+        "Data integration overview",
+        "Naciro data pipelines",
+        "LPU integration stack"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "High-level map of NationFiles data integration: registered and documented inputs are normalised under governance rules, orchestrated by Naciro evaluation stages, and served to human surfaces (maps, dashboards, dossiers) and machine-readable exports—without publishing credentials, internal hostnames, or enumerable operator endpoints.",
+            "depends_on": [
+                "naciro",
+                "nationfiles",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "en": "High-level map of NationFiles data integration: registered and documented inputs are normalised under governance rules, orchestrated by Naciro evaluation stages, and served to human surfaces (maps, dashboards, dossiers) and machine-readable exports—without publishing credentials, internal hostnames, or enumerable operator endpoints.",
+                "de": "**Überblick Datenintegration NationFiles:** registrierte und dokumentierte Eingänge werden governance-konform normalisiert, von **{{naciro}}**-Auswertungsstufen orchestriert und in **menschliche** Oberflächen (Karten, Dashboards, Dossiers) sowie **maschinenlesbare** Exporte ausgespielt — **ohne** Credentials, interne Rechnernamen oder **aufzählbare** Operator-Endpunkte zu veröffentlichen.",
+                "fr": "**Vue d’ensemble de l’intégration de données NationFiles :** entrées enregistrées et documentées, normalisées selon les règles de gouvernance, orchestrées par les étapes **{{naciro}}**, puis servies aux surfaces **humaines** (cartes, tableaux de bord, dossiers) et aux **exports machine** — **sans** publier identifiants, **noms d’hôte internes** ni **terminaisons énumérables**.",
+                "es": "**Panorama de integración de datos en NationFiles:** entradas registradas y documentadas, normalizadas bajo gobernanza, orquestadas por etapas **{{naciro}}** y servidas a superficies **humanas** (mapas, paneles, dossiers) y **exportes machine-readable** — **sin** publicar credenciales, **hostnames internos** ni **extremos enumerables** del operador.",
+                "pt": "**Visão geral da integração de dados NationFiles:** entradas registadas e documentadas, normalizadas sob governação, orquestradas por fases **{{naciro}}** e entregues a superfícies **humanas** (mapas, painéis, dossiers) e **exportações legíveis por máquina** — **sem** publicar credenciais, **hostnames internos** nem **pontos de operação enumeráveis**.",
+                "ar": "**نظرة عامة على تكامل البيانات في NationFiles:** مدخلات مسجّلة وموثّقة تُطبّع وفق الحوكمة، تُنسَّق عبر مراحل **{{naciro}}**، وتُقدَّم لواجهات **بشرية** (خرائط، لوحات، ملفات) و**تصدير آلي** — **دون** نشر بيانات اعتماد أو **أسماء مضيف داخلية** أو **نقاط تشغيل قابلة للعدّ**.",
+                "ja": "NationFiles **データ統合の俯瞰**：登録・文書化された入力をガバナンス下で正規化し、**{{naciro}}** の評価段でオーケストレーションし、**人向け**（地図・ダッシュボード・ドシエ）と**機械可読エクスポート**へ供給——**認証情報・内部ホスト名・列挙可能な運用エンドポイントは公開しない**。"
+            }
+        },
+        {
+            "key": "naciro_pipeline_posture",
+            "value": "Naciro implements documented hygiene, reconciliation, and scoring passes aligned with NFSI methodology and the Validation & Verification Report—producing stable KPI tuples and narrative adjuncts for country experiences while keeping non-public connector mechanics out of this knowledge corpus.",
+            "depends_on": [
+                "naciro",
+                "nfsi",
+                "validation-verification-report"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Naciro implements documented hygiene, reconciliation, and scoring passes aligned with NFSI methodology and the Validation & Verification Report—producing stable KPI tuples and narrative adjuncts for country experiences while keeping non-public connector mechanics out of this knowledge corpus.",
+                "de": "**{{naciro}}** setzt dokumentierte Hygiene-, Abgleich- und Scoring-Pässe um, **NFSI**-Methodik und **Validierungs- & Verifikationsbericht** folgend — liefert **stabile** KPI-Tupel und narrative Begleiter für Ländererfahrungen; **nicht-öffentliche** Connector-Mechaniken bleiben **außerhalb** dieses Knowledge-Korpus.",
+                "fr": "**{{naciro}}** applique passes documentées d’hygiène, de rapprochement et de score, alignées **NFSI** et **rapport V&V** — tuples KPI **stables** et compléments narratifs pour les pages pays ; mécaniques de connecteurs **non publiques** **hors** de ce corpus Knowledge.",
+                "es": "**{{naciro}}** aplica pasos documentados de higiene, conciliación y puntuación alineados con **NFSI** y el **informe V&V** — tuples KPI **estables** y adjuntos narrativos para países; mecánica de conectores **no pública** **fuera** de este corpus.",
+                "pt": "**{{naciro}}** executa passagens documentadas de higiene, reconciliação e pontuação alinhadas a **NFSI** e **relatório V&V** — tuples KPI **estáveis** e adjuntos narrativos para países; mecânica de conectores **não pública** **fora** deste corpus.",
+                "ar": "**{{naciro}}** ينفّذ مراحل موثّقة للنظافة والمصالحة والتقييم متوافقة مع **NFSI** وتقرير **التحقق والمراجعة** — ينتج حزم KPI **مستقرة** وروايات مرافقة لصفحات الدول؛ آليات الموصل **غير العامة** **خارج** نطاق نصوص المعرفة العامة هذه.",
+                "ja": "**{{naciro}}** は **NFSI** 方法論と **検証・ベリフィケーション・レポート** に沿った衛生・突合・スコアリングの文書化パスを実装——安定した KPI タプルと国情報向け叙述を提供。**非公表**コネクタ機構は本ナレッジコーパスに含めない。"
+            }
+        },
+        {
+            "key": "lpu_realtime_layer",
+            "value": "The published LPU architecture describes a dedicated inference fabric under Naciro that targets deterministic, low-latency execution for workloads that must stay visually steady under burst traffic—complementing batch-oriented hygiene without disclosing hardware tenancy, firmware, or queue topology.",
+            "depends_on": [
+                "lpu-architecture",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "LPU Architecture (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/lpu-architecture/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "en": "The published LPU architecture describes a dedicated inference fabric under Naciro that targets deterministic, low-latency execution for workloads that must stay visually steady under burst traffic—complementing batch-oriented hygiene without disclosing hardware tenancy, firmware, or queue topology.",
+                "de": "Die veröffentlichte **{{lpu-architecture}}** beschreibt eine dedizierte Inferenz-Basis unter **{{naciro}}** mit Fokus auf **deterministische**, **niedrige Latenz** für Lasten, die unter **Burst-Verkehr** visuell **ruhig** bleiben müssen — ergänzt batch-lastige Hygiene, **ohne** Hardware-Tenancy, Firmware oder **Warteschlangen-Topologie** offenzulegen.",
+                "fr": "L’**{{lpu-architecture}}** publiée décrit une couche d’inférence dédiée sous **{{naciro}}**, visant une exécution **déterministe** et **faible latence** pour des charges qui doivent rester **visuellement stables** sous pics — complète l’hygiène plutôt batch, **sans** divulguer ténance matérielle, firmware ou **topologie de files**.",
+                "es": "La **{{lpu-architecture}}** publicada describe un tejido de inferencia dedicado bajo **{{naciro}}** orientado a ejecución **determinista** y **baja latencia** para cargas que deben mantenerse **visualmente estables** con picos — complementa higiene por lotes **sin** revelar arrendamiento de hardware, firmware ni **topología de colas**.",
+                "pt": "A **{{lpu-architecture}}** publicada descreve um tecido de inferência dedicado sob **{{naciro}}** para execução **determinística** e **baixa latência** onde a UI deve permanecer **estável** sob rajadas — complementa higiene em lote **sem** revelar tenancy de hardware, firmware ou **topologia de filas**.",
+                "ar": "**{{lpu-architecture}}** المنشورة تصف طبقة استدلال مخصّصة تحت **{{naciro}}** تستهدف تنفيذاً **حتمياً** ذا **زمن انتقال منخفض** لحمولات يجب أن تبقى **هادئة بصرياً** عند الذروة — تكمل تعقيماً دفعياً **دون** الكشف عن حيازة العتاد أو البرنامج الثابت أو **طوبولوجيا الطوابير**.",
+                "ja": "公開 **{{lpu-architecture}}** は **{{naciro}}** 下の専用推論基盤として、バースト時も**見た目の安定**が要る負荷向けに**決定性・低遅延**実行を狙う——バッチ志向の衛生処理を補い、**テナンシー・ファームウェア・キュー構造は開示しない**。"
+            }
+        },
+        {
+            "key": "public_legal_disclosure",
+            "value": "NationFiles legal notices state that live forex, crypto, and security data are processed via LPU—a first-party, non-secret summary line consumers can cite; this knowledge article does not expand into unpublished topology, prompts, or rate-limit budgets.",
+            "depends_on": [
+                "nationfiles",
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles legal notices state that live forex, crypto, and security data are processed via LPU—a first-party, non-secret summary line consumers can cite; this knowledge article does not expand into unpublished topology, prompts, or rate-limit budgets.",
+                "de": "In den **Rechtstexten** von NationFiles ist ausgewiesen, dass **Live-Forex-, Krypto- und Sicherheitsdaten** über **LPU** verarbeitet werden — eine **first-party**, nicht-geheime Kurzlinie zum Zitieren; dieser Knowledge-Artikel **weitet** nicht aus in **unveröffentlichte** Topologie, Prompts oder Rate-Limit-Budgets.",
+                "fr": "Les mentions légales NationFiles indiquent le traitement des données **Forex, crypto et sécurité** en direct via **LPU** — une ligne **first-party** non secrète, citable ; cet article Knowledge **n’étend pas** vers topologie **non publiée**, invites ou budgets de **rate-limit**.",
+                "es": "Los avisos legales de NationFiles indican procesamiento de datos **en vivo** de **forex, cripto y seguridad** vía **LPU** — línea **first-party** no secreta y citable; este artículo Knowledge **no amplía** topología **no publicada**, prompts ni presupuestos de **rate-limit**.",
+                "pt": "Os avisos legais da NationFiles indicam processamento de dados **ao vivo** de **forex, cripto e segurança** via **LPU** — linha **first-party** não secreta, citável; este artigo Knowledge **não estende** topologia **não publicada**, prompts nem orçamentos de **rate-limit**.",
+                "ar": "تنص إشعارات NationFiles القانونية على معالجة بيانات **فوركس وكريبتو وأمن** حية عبر **LPU** — سطر **أولية** غير سري يمكن اقتباسه؛ لا **يوسّع** مقال المعرفة هذا إلى طوبولوجيا **غير منشورة** أو مطالبات أو ميزانيات **حد معدل**.",
+                "ja": "NationFiles の**リーガルノーティス**は、**ライブ為替・暗号・安全保障**データを **LPU** で処理すると**公表**——引用可能なファーストパーティの要約行であり、本記事は**未公開**のトポロジ・プロンプト・レート制限予算には**踏み込まない**。"
+            }
+        },
+        {
+            "key": "secrecy_boundary",
+            "value": "Operational detail—API keys, queue names, shard maps, cron identifiers, and connector source code paths—is deliberately withheld from public knowledge text to reduce enumeration risk; only methodology, published registers, and product-visible outcomes are narrated.",
+            "depends_on": [
+                "ai-guidelines",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Operational detail—API keys, queue names, shard maps, cron identifiers, and connector source code paths—is deliberately withheld from public knowledge text to reduce enumeration risk; only methodology, published registers, and product-visible outcomes are narrated.",
+                "de": "**Betriebsdetail** — API-Schlüssel, Warteschlangennamen, Shard-Karten, Cron-Bezeichner, **Pfadnamen** zu Connector-Quellcode — wird **bewusst** aus öffentlichen Knowledge-Texten zurückgehalten, um **Enumerationsrisiko** zu senken; erzählt werden nur **Methodik**, **veröffentlichte Registries** und **produktsichtbare** Ergebnisse.",
+                "fr": "Détails **opérationnels** — clés API, noms de files, cartes de shards, identifiants cron, **chemins** de code connecteur — sont **volontairement absents** des textes Knowledge publics pour limiter l’**énumération** ; seules **méthodologie**, **registres publiés** et résultats **visibles produit** sont narrés.",
+                "es": "Detalle **operativo** — claves API, nombres de colas, mapas de shards, identificadores cron, **rutas** de código conector — se **omite** deliberadamente del texto Knowledge público para reducir **enumeración**; solo metodología, **registros publicados** y resultados **visibles en producto**.",
+                "pt": "Detalhe **operacional** — chaves API, nomes de filas, mapas de shards, identificadores cron, **caminhos** de código de conectores — é **retido** propositadamente do texto Knowledge público para reduzir **enumeração**; narram-se só metodologia, **registos publicados** e resultados **visíveis no produto**.",
+                "ar": "تُحجب **تفاصيل التشغيل** — مفاتيح API وأسم طوابير وخرائط أجزاء ومعرّفات مجدولة و**مسارات** شفرة الموصل — عن نص المعرفة العام لتقليل **خطر العدّ**؛ يُروى فقط المنهجية وال**سجلات المنشورة** والنتائج **الظاهرة في المنتج**.",
+                "ja": "**運用詳細**（API キー、キュー名、シャードマップ、cron 識別子、コネクタ**コードの所在**）は列挙リスク低減のため公開ナレッジ本文から**意図的に省く**——語られるのは方法論・**公開レジストリ**・**製品上見える成果**のみ。"
+            }
+        },
+        {
+            "key": "integration_outputs",
+            "value": "Integrated tuples feed the Country Intelligence dashboard metaphor, metamap and security radar layers where enabled, syndicated feeds, KPI exports with built_at_utc stamps, and Knowledge graph articles—each channel inherits the same documentation contract.",
+            "depends_on": [
+                "country-intelligence-dashboard",
+                "country-kpi-snapshot-export",
+                "metamaps",
+                "core-hierarchy"
+            ],
+            "sources": [
+                {
+                    "label": "Country Intelligence Dashboard",
+                    "url": "https://nationfiles.com/en/knowledge/entity/country-intelligence-dashboard/"
+                },
+                {
+                    "label": "Country KPI snapshot export",
+                    "url": "https://nationfiles.com/en/knowledge/entity/country-kpi-snapshot-export/"
+                },
+                {
+                    "label": "Metamaps",
+                    "url": "https://nationfiles.com/en/knowledge/entity/metamaps/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Integrated tuples feed the Country Intelligence dashboard metaphor, metamap and security radar layers where enabled, syndicated feeds, KPI exports with built_at_utc stamps, and Knowledge graph articles—each channel inherits the same documentation contract.",
+                "de": "Integrierte Tupel speisen die **Country-Intelligence**-Dashboard-Metapher, **Metamap**- und **Sicherheitsradar**-Layer wo aktiv, syndizierte Feeds, **KPI-Exporte** mit **`built_at_utc`**-Stempel und **Knowledge**-Graph-Artikel — jeder Kanal erbt denselben **Dokumentations-Vertrag**.",
+                "fr": "Les tuples intégrés alimentent la métaphore **Country Intelligence**, couches **metamap** et **radar sécurité** si actives, flux syndiqués, **exports KPI** avec horodatage **`built_at_utc`** et articles du **graphe Knowledge** — chaque canal hérite du même **contrat documentaire**.",
+                "es": "Los tuples integrados alimentan la metáfora **Country Intelligence**, capas **metamapa** y **radar de seguridad** donde aplique, feeds sindicados, **exportes KPI** con sello **`built_at_utc`** y artículos del **grafo Knowledge** — cada canal hereda el mismo **contrato documental**.",
+                "pt": "Tuplos integrados alimentam a metáfora **Country Intelligence**, camadas **metamapa** e **radar de segurança** quando ativos, feeds sindicados, **exportações KPI** com carimbo **`built_at_utc`** e artigos do **grafo Knowledge** — cada canal herda o mesmo **contrato documental**.",
+                "ar": "تغذي الحزم المدمجة مجاز **Country Intelligence** وطبقات **الميتاماب** و**رادار الأمن** حيث مفعّلة وتغذيات موزّعة وتصدير **KPI** بختم **`built_at_utc`** ومقالات **Knowledge** — كل قناة ترث **عقد التوثيق** نفسه.",
+                "ja": "統合タプルは **Country Intelligence** ダッシュボードの比喩、有効なら **メタマップ**／**セキュリティレーダー**層、シンジケーション、**`built_at_utc`** 付き **KPI エクスポート**、**Knowledge** グラフ記事へ——各チャネルは同じ**文書化契約**を継ぐ。"
+            }
+        },
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company About",
+                    "url": "https://nationfiles.com/en/company/about/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "lpu-architecture"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "core-hierarchy"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-kpi-snapshot-export"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "metamaps"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Datenintegration (Überblick)",
+            "teaser": "**Datenintegration** auf NationFiles ist **kein** »alles in einen Topf«, sondern eine **governance-fähige** Kette: **{{naciro}}** orchestriert dokumentierte Stufen; **{{lpu-architecture}}** liefert planbare **Echtzeit-Inferenz** — **ohne** Betriebsgeheimnisse auszuplaudern; die **LPU** wird **nur** dort genannt, wo **Rechtstexte** sie bereits **first-party** benennen.",
+            "summary_bullets": [
+                "**High-Level-Stack:** dokumentierte Inputs → **{{naciro}}**-Hygiene & Scoring → Oberflächen & Exporte.",
+                "**{{lpu-architecture}}:** niedrige Latenz, **deterministische** Pfade — **keine** Topologie-Leaks.",
+                "**Rechtstext:** **LPU** für Live-Forex/Krypto/Sicherheit — **kein** Prompt-/Queue-Katalog hier.",
+                "**Geheimhaltungsgrenze:** keine Schlüssel, keine internen Hostnamen, keine aufzählbaren Cron-Pfade.",
+                "**Same contract:** Dashboards, Karten, **KPI-Exporte**, **Knowledge** teilen dokumentierte Wahrheit.",
+                "**AI Guidelines + Quellenregister:** Zitation & registrierte Primären."
+            ],
+            "body_md": "Wer heute **Geo-Datenprodukte** verantwortet, kämpft mit zwei gegeneinander laufenden Erwartungen: Leser:innen wollen **unmittelbare** Kartenfarben, **Risk-Desks** wollen **nachweisbare** Ketten. NationFiles **Datenintegration** ist der Versuch, beides **ohne** operative Vollblut-Offenlegung zu vereinbaren.\n\n**{{naciro}}** ist in dieser Erzählung **nicht** ein generisches Chat-Korsett, sondern die **orchestrierte** Schicht, die dokumentierte **Hygiene-**, **Abgleich-** und **Scoring**-Pässe anbindet — im Einklang mit **{{nfsi}}** und dem **Validierungs- & Verifikationsbericht**. Was **nicht** in diesem Knowledge-Korpus steht, sind **Connector-Passwörter**, **Shard-Geometrien** oder **Cron-Bezeichner**; das ist **Absicht**, keine Vergesslichkeit (siehe **AI Guidelines**).\n\n**{{lpu-architecture}}** adressiert das **Echtzeit-Dilemma**: Wenn Rohsignale in **Wellen** kommen, bricht eine rein **CPU-lastige** Darstellung schneller visuell — Linien **zittern**, Legenden **wechseln** ohne erklärbaren KPI-Wechsel. Die **LPU**-Erzählung beschreibt eine **dedizierte Inferenz-Basis** unter **{{naciro}}**, die **deterministische** Ausführung für KPI-Kerne und Kartensignaturen anpeilt — **ergänzend** zu batch-orientierter Datenpflege, **nicht** ersetzend.\n\n**LPU** taucht **nur** an der Stelle auf, an der NationFiles es **öffentlich** in den **Rechtstexten** ausweist — als **first-party** Kurzvermerk zu **Live-Forex-, Krypto- und Sicherheitssträngen**. Dieser Überblicksartikel **extrapoliert** daraus **keine** interne Rüstung: **keine** Modellnamen als Betriebsliste, **keine** Rate-Limits, **keine** Karten, **welcher** Queue **welches** Land bedient.\n\n**Downstream** landen stabile Tupel in **Country Intelligence**, **Metamaps**, **Security Radar** (wo freigeschaltet), syndizierten Feeds sowie **KPI-Exporten** mit **`built_at_utc`** — und in diesem **Knowledge**-Graphen. Wer **maschinenlesbar** zitiert, sollte **kanonische HTTPS-Seiten** wählen und **Attribute** statt Gerüchte lesen.\n\n**Mehr:** [Naciro AI](/de/company/naciro-ai/), [NFSI](/de/company/nfsi/), [LPU Architecture](/de/knowledge/entity/lpu-architecture/), [Legal Notice](/de/legal/legal-notice/), [Knowledge Hub](/de/knowledge/).",
+            "facts": [
+                {
+                    "k": "Orchestrierung",
+                    "v": "{{naciro}}-Pipelines + governance"
+                },
+                {
+                    "k": "Echtzeit-Inferenz",
+                    "v": "{{lpu-architecture}}-Schicht (öffentliche Story)"
+                },
+                {
+                    "k": "Öffentliche LPU-Zeile",
+                    "v": "Nur laut Legal Notice (LPU)"
+                },
+                {
+                    "k": "Geheimhaltung",
+                    "v": "Keine Keys/Hosts/Queues hier"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum High-Level kein „halb geheim“ ist",
+                    "body_md": "Transparenz **für Leser:innen** bedeutet **documentierte Methode**, nicht **öffentliches Admin-Handbuch**."
+                },
+                {
+                    "title": "Batch vs. Burst",
+                    "body_md": "Hygiene und Anreicherung können **batch-lastig** sein; **Kartenfarbe** will trotzdem **Ruhe** — dafür ist die **LPU**-Story im **Stack** positioniert."
+                },
+                {
+                    "title": "Was Integratoren wirklich brauchen",
+                    "body_md": "**Schema**, **`built_at_utc`**, **Quellenregister** — das reicht für saubere Integration."
+                }
+            ]
+        },
+        "en": {
+            "title": "Data integration (overview)",
+            "teaser": "**Data integration** on NationFiles is a **governance-aware** chain—not a chaotic merge: **{{naciro}}** orchestrates documented passes while **{{lpu-architecture}}** supplies predictable **real-time inference** posture. Operational secrets stay out of public knowledge text; **LPU** appears only where **legal notices** already state it **first-party**.",
+            "summary_bullets": [
+                "**Stack arc:** documented inputs → **{{naciro}}** hygiene & scoring → surfaces & exports.",
+                "**{{lpu-architecture}}:** low-latency deterministic paths—**no** topology leaks.",
+                "**Legal line:** **LPU** for live forex/crypto/security—**no** prompt/queue catalogue here.",
+                "**Secrecy boundary:** no keys, internal hostnames, or enumerable cron paths in this corpus.",
+                "**Same contract:** dashboards, maps, **KPI exports**, **Knowledge** share documented truth.",
+                "**AI Guidelines + source registry:** cite canonical pages; ground on registers."
+            ],
+            "body_md": "Modern geo products face colliding demands: readers expect **instant** cartographic calm; risk teams expect **auditable** lineage. NationFiles **data integration** negotiates both **without** publishing operational playbooks.\n\n**{{naciro}}** here is the **orchestrating** layer binding documented **hygiene**, **reconciliation**, and **scoring** passes—aligned with **{{nfsi}}** and the **Validation & Verification Report**. What you **do not** find in this knowledge corpus are connector **passwords**, **shard maps**, or **cron slugs**; that omission is deliberate policy (see **AI Guidelines**).\n\n**{{lpu-architecture}}** tackles the **burst problem**: raw signals arrive in **waves**, and CPU-only stacks often **flicker**—legends hop without an explainable KPI move. The LPU narrative describes **dedicated inference** under **{{naciro}}** for **deterministic** execution of KPI cores and map signatures—**complementary** to batch hygiene, not a replacement.\n\n**LPU** enters **only** via NationFiles’ own **legal notices** as a concise first-party statement about **live forex, crypto, and security strands**. This overview **does not** extrapolate internal armoury: no model menu, no rate-limit budgets, no queue-to-country maps.\n\nDownstream, stable tuples power **Country Intelligence**, **Metamaps**, **security radar** (where shipped), syndicated feeds, **KPI exports** carrying **`built_at_utc`**, and this **Knowledge** graph. Machine clients should prefer **canonical HTTPS** citations over hearsay.\n\n**More:** [Naciro AI](/en/company/naciro-ai/), [NFSI](/en/company/nfsi/), [LPU Architecture](/en/knowledge/entity/lpu-architecture/), [Legal Notice](/en/legal/legal-notice/), [Knowledge Hub](/en/knowledge/).",
+            "facts": [
+                {
+                    "k": "Orchestration",
+                    "v": "{{naciro}} pipelines + governance"
+                },
+                {
+                    "k": "Real-time inference",
+                    "v": "{{lpu-architecture}} layer (public story)"
+                },
+                {
+                    "k": "LPU disclosure",
+                    "v": "Legal notice line only (LPU)"
+                },
+                {
+                    "k": "Withheld",
+                    "v": "No keys/hosts/queues in corpus"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why high-level is not “half secret”",
+                    "body_md": "Public transparency means **documented methodology**, not an **exposed admin manual**."
+                },
+                {
+                    "title": "Batch versus burst",
+                    "body_md": "Hygiene may be **batch-heavy**; **map tint** still wants **stability**—hence the LPU posture in the stack story."
+                },
+                {
+                    "title": "What integrators actually need",
+                    "body_md": "**Schema**, **`built_at_utc`**, **source registry**—that is the integration contract."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Intégration des données (vue d’ensemble)",
+            "teaser": "L’**intégration des données** NationFiles est une chaîne **gouvernée** : **{{naciro}}** orchestre des passes documentées tandis que **{{lpu-architecture}}** tient un parti **temps réel** **basse latence**. Les secrets d’exploitation restent hors texte Knowledge ; **LPU** n’apparaît que là où les **mentions légales** l’indiquent déjà en **first-party**.",
+            "summary_bullets": [
+                "**Arc stack :** entrées documentées → hygiène & score **{{naciro}}** → surfaces & exports.",
+                "**{{lpu-architecture}} :** chemins déterministes — **pas** de fuite de topologie.",
+                "**Ligne légale :** **LPU** pour forex/crypto/sécurité live — **pas** de catalogue queues ici.",
+                "**Limite discrétion :** pas de clés, **hostnames** internes ni chemins cron **énumérables**.",
+                "**Même contrat :** tableaux de bord, cartes, **exports KPI**, **Knowledge** partagent la vérité documentée.",
+                "**AI Guidelines + registre :** citations canoniques."
+            ],
+            "body_md": "Les produits geo modernes jonglent entre **instantané** visuel et **lignée** auditable. NationFiles **intègre** les données **sans** publier de manuel opérationnel.\n\n**{{naciro}}** lie passes documentées d’**hygiène**, **rapprochement** et **score**, alignées **{{nfsi}}** et **rapport V&V**. Ce corpus **omet** mots de passe connecteur, cartes de shards et **slugs** cron — **choix** politique (**AI Guidelines**).\n\n**{{lpu-architecture}}** vise le **problème de rafale** : signaux bruts par **vagues**, UI qui **vibre**. Le récit LPU = inférence **dédiée** sous **{{naciro}}**, **complément** de l’hygiène batch.\n\n**LPU** : **seulement** via mentions légales NationFiles sur forex/crypto/sécurité **live**. Pas d’**armurerie** interne extrapolée.\n\nEn aval : **Country Intelligence**, **Metamaps**, **radar sécurité** (si publié), syndication, **exports KPI** avec **`built_at_utc`**, **Knowledge**.\n\n**Plus :** [Naciro AI](/fr/company/naciro-ai/), [NFSI](/fr/company/nfsi/), [LPU Architecture](/fr/knowledge/entity/lpu-architecture/), [Legal Notice](/fr/legal/legal-notice/), [Knowledge](/fr/knowledge/).",
+            "facts": [
+                {
+                    "k": "Orchestration",
+                    "v": "Pipelines {{naciro}} + gouvernance"
+                },
+                {
+                    "k": "Inférence",
+                    "v": "Couche {{lpu-architecture}} (récit public)"
+                },
+                {
+                    "k": "LPU",
+                    "v": "Mention légale uniquement (LPU)"
+                },
+                {
+                    "k": "Non publié",
+                    "v": "Pas de clés/files/queues ici"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi le high-level n’est pas un demi-secret",
+                    "body_md": "Transparence = **méthode documentée**, pas **manuel admin exposé**."
+                },
+                {
+                    "title": "Batch contre rafale",
+                    "body_md": "Hygiène **batch** ; teinte carte **stable** — rôle LPU dans le récit stack."
+                },
+                {
+                    "title": "Ce dont les intégrateurs ont besoin",
+                    "body_md": "**Schéma**, **`built_at_utc`**, **registre sources** — c’est le contrat d’intégration."
+                }
+            ]
+        },
+        "es": {
+            "title": "Integración de datos (panorama)",
+            "teaser": "La **integración de datos** en NationFiles es una cadena **gobernada**: **{{naciro}}** orquesta pasos documentados y **{{lpu-architecture}}** sostiene una postura de **inferencia en tiempo real** de baja latencia. Los secretos operativos quedan fuera del texto Knowledge; **LPU** solo aparece donde los **avisos legales** ya lo declaran **first-party**.",
+            "summary_bullets": [
+                "**Arco:** entradas documentadas → higiene y score **{{naciro}}** → superficies y exportes.",
+                "**{{lpu-architecture}}:** rutas deterministas — **sin** fugas de topología.",
+                "**Línea legal:** **LPU** para forex/cripto/seguridad en vivo — **sin** catálogo de colas aquí.",
+                "**Límite:** sin claves, **hostnames** internos ni rutas cron **enumerables**.",
+                "**Mismo contrato:** paneles, mapas, **exportes KPI**, **Knowledge** comparten verdad documentada.",
+                "**AI Guidelines + registro:** citas canónicas."
+            ],
+            "body_md": "Los productos geo equilibran **inmediatez** visual y **cadena** auditable. NationFiles **integra** sin publicar manuales operativos.\n\n**{{naciro}}** enlaza higiene, conciliación y puntuación documentadas, alineadas con **{{nfsi}}** e **informe V&V**. Este corpus **omite** credenciales, mapas de shards y **slugs** cron — **política** (**AI Guidelines**).\n\n**{{lpu-architecture}}** atiende el **problema de ráfagas**: la UI **tiembla**. El relato LPU = inferencia dedicada bajo **{{naciro}}**, **complemento** del batch.\n\n**LPU** solo vía **avisos legales** sobre forex/cripto/seguridad **en vivo**. Sin extrapolar armamento interno.\n\nAguas abajo: **Country Intelligence**, **Metamaps**, **radar de seguridad** (si aplica), sindicación, **exportes KPI** con **`built_at_utc`**, **Knowledge**.\n\n**Más:** [Naciro AI](/es/company/naciro-ai/), [NFSI](/es/company/nfsi/), [LPU Architecture](/es/knowledge/entity/lpu-architecture/), [Legal Notice](/es/legal/legal-notice/), [Knowledge](/es/knowledge/).",
+            "facts": [
+                {
+                    "k": "Orquestación",
+                    "v": "Pipelines {{naciro}} + gobernanza"
+                },
+                {
+                    "k": "Inferencia",
+                    "v": "Capa {{lpu-architecture}} (relato público)"
+                },
+                {
+                    "k": "LPU",
+                    "v": "Solo aviso legal (LPU)"
+                },
+                {
+                    "k": "No publicado",
+                    "v": "Sin claves/hosts/colas aquí"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por qué high-level no es medio secreto",
+                    "body_md": "Transparencia = **metodología documentada**, no **manual admin expuesto**."
+                },
+                {
+                    "title": "Lote frente a ráfaga",
+                    "body_md": "Higiene **por lotes**; color de mapa **estable** — rol LPU en el stack."
+                },
+                {
+                    "title": "Qué necesitan los integradores",
+                    "body_md": "**Esquema**, **`built_at_utc`**, **registro de fuentes** — ese es el contrato de integración."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Integração de dados (visão geral)",
+            "teaser": "A **integração de dados** na NationFiles é uma cadeia **governada**: **{{naciro}}** orquestra passes documentados e **{{lpu-architecture}}** sustenta inferência **em tempo real** de baixa latência. Segredos operacionais ficam fora do texto Knowledge; **LPU** só onde os **avisos legais** já o declaram **first-party**.",
+            "summary_bullets": [
+                "**Arco:** entradas documentadas → higiene e pontuação **{{naciro}}** → superfícies e exportações.",
+                "**{{lpu-architecture}}:** caminhos determinísticos — **sem** fugas de topologia.",
+                "**Linha legal:** **LPU** para forex/cripto/segurança ao vivo — **sem** catálogo de filas aqui.",
+                "**Limite:** sem chaves, **hostnames** internos nem percursos cron **enumeráveis**.",
+                "**Mesmo contrato:** painéis, mapas, **exportações KPI**, **Knowledge** partilham verdade documentada.",
+                "**AI Guidelines + registo:** citações canónicas."
+            ],
+            "body_md": "Produtos geo equilibram **instantaneidade** e **linhagem** auditável. A NationFiles **integra** sem manuais operativos públicos.\n\n**{{naciro}}** liga higiene, reconciliação e pontuação documentadas, alinhadas a **{{nfsi}}** e **relatório V&V**. Este corpus **omite** credenciais, mapas de shards e **slugs** cron — **política** (**AI Guidelines**).\n\n**{{lpu-architecture}}** trata o **problema de rajadas**: UI **trémula**. O relato LPU = inferência dedicada sob **{{naciro}}**, **complemento** do batch.\n\n**LPU** só via **avisos legais** sobre forex/cripto/segurança **ao vivo**, sem armamento interno extrapolado.\n\nA jusante: **Country Intelligence**, **Metamaps**, **radar de segurança** (se publicado), sindicação, **exportações KPI** com **`built_at_utc`**, **Knowledge**.\n\n**Mais:** [Naciro AI](/pt/company/naciro-ai/), [NFSI](/pt/company/nfsi/), [LPU Architecture](/pt/knowledge/entity/lpu-architecture/), [Legal Notice](/pt/legal/legal-notice/), [Knowledge](/pt/knowledge/).",
+            "facts": [
+                {
+                    "k": "Orquestração",
+                    "v": "Pipelines {{naciro}} + governação"
+                },
+                {
+                    "k": "Inferência",
+                    "v": "Camada {{lpu-architecture}} (história pública)"
+                },
+                {
+                    "k": "LPU",
+                    "v": "Só aviso legal (LPU)"
+                },
+                {
+                    "k": "Não publicado",
+                    "v": "Sem chaves/hosts/filas aqui"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por que high-level não é meio-segredo",
+                    "body_md": "Transparência = **metodologia documentada**, não **manual admin exposto**."
+                },
+                {
+                    "title": "Lote vs rajada",
+                    "body_md": "Higiene **em lote**; cor no mapa **estável** — papel da LPU no stack."
+                },
+                {
+                    "title": "O que integradores precisam",
+                    "body_md": "**Esquema**, **`built_at_utc`**, **registo de fontes** — esse é o contrato de integração."
+                }
+            ]
+        },
+        "ar": {
+            "title": "تكامل البيانات (نظرة عامة)",
+            "teaser": "**تكامل البيانات** على NationFiles سلسلة **خاضعة للحوكمة**: **{{naciro}}** ينسّق مراحل موثّقة و**{{lpu-architecture}}** يدعم **استدلالاً شبه فورياً** منخفض الزمن. أسرار التشغيل خارج نص المعرفة؛ **LPU** فقط حيث **الإشعارات القانونية** تنص **أولية**.",
+            "summary_bullets": [
+                "**القوس:** مدخلات موثّقة ← نظافة وتقييم **{{naciro}}** ← واجهات وتصدير.",
+                "**{{lpu-architecture}}:** مسارات حتمية — **دون** تسريب طوبولوجيا.",
+                "**السطر القانوني:** **LPU** لبيانات فوركس/كريبتو/أمن **حية** — **دون** فهرسة طوابير هنا.",
+                "**الحد:** لا مفاتيح ولا **مضيف داخلي** ولا مسارات **قابلة للعدّ**.",
+                "**عقد واحد:** لوحات وخرائط و**تصدير KPI** و**Knowledge** يشتركون في حقيقة موثّقة.",
+                "**إرشادات الذكاء الاصطناعي + السجل:** اقتباس كانوني."
+            ],
+            "body_md": "تتعارض التوقعات بين **فورية** بصرية و**سلسلة** قابلة للتدقيق. **NationFiles** **تدمج** البيانات دون كتيب تشغيل علني.\n\n**{{naciro}}** يربط نظافة ومصالحة وتقييماً موثّقاً مع **{{nfsi}}** و**تقرير التحقق والمراجعة**. هذا النطاق **يحجب** كلمات مرور الموصل وخرائط الأجزاء و**معرّفات المهام المجدولة** — **سياسة** (**إرشادات الذكاء الاصطناعي**).\n\n**{{lpu-architecture}}** يعالج **مشكلة الذروة**: الواجهة **ترتجف** عند تتابع الإشارات. رواية **LPU** = استدلال مخصّص تحت **{{naciro}}** **يكمل** التعقيم الدفعي.\n\n**LPU** **فقط** وفق **الإشعارات القانونية** لـ NationFiles عن فوركس/كريبتو/أمن **حي** — **دون** استنتاج لعتاد داخلي.\n\nفي المصب: **Country Intelligence**، **Metamaps**، **رادار الأمن** (إن وُفع)، تغذيات موزّعة، **تصدير KPI** بختم **`built_at_utc`**، و**Knowledge**.\n\n**المزيد:** [Naciro AI](/ar/company/naciro-ai/)، [NFSI](/ar/company/nfsi/)، [LPU Architecture](/ar/knowledge/entity/lpu-architecture/)، [Legal Notice](/ar/legal/legal-notice/)، [Knowledge](/ar/knowledge/).",
+            "facts": [
+                {
+                    "k": "التنسيق",
+                    "v": "مسارات {{naciro}} + حوكمة"
+                },
+                {
+                    "k": "الاستدلال",
+                    "v": "طبقة {{lpu-architecture}} (رواية عامة)"
+                },
+                {
+                    "k": "LPU",
+                    "v": "سطر قانوني فقط (LPU)"
+                },
+                {
+                    "k": "غير منشور",
+                    "v": "لا مفاتيح/مضيفين/طوابير هنا"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا المستوى العالي ليس نصف سر",
+                    "body_md": "الشفافية = **منهجية موثّقة** لا **دليل إداري مكشوف**."
+                },
+                {
+                    "title": "الدفعات مقابل الذروة",
+                    "body_md": "تعقيم **دفعي**؛ لون الخريطة **ثابت** — دور **LPU** في الـ stack."
+                },
+                {
+                    "title": "ما يحتاجه المكوّنون",
+                    "body_md": "**المخطط**، **`built_at_utc`**، **سجل المصادر** — هذا هو عقد التكامل."
+                }
+            ]
+        },
+        "ja": {
+            "title": "データ統合（概要）",
+            "teaser": "NationFiles の**データ統合**は**ガバナンスされた連鎖**：**{{naciro}}** が文書化パスを統合し、**{{lpu-architecture}}** が**低遅延の準リアルタイム推論**を支える。運用上の秘密は公開ナレッジ本文に載せない。**LPU** は**リーガルノーティス**が**既にファーストパーティで述べる**箇所に限る。",
+            "summary_bullets": [
+                "**アーク：** 文書化入力 → **{{naciro}}** の衛生・スコア → 表面・エクスポート。",
+                "**{{lpu-architecture}}：** 決定性パス——**トポロジ漏洩なし**。",
+                "**法務一行：** **LPU** はライブ為替／暗号／安全保障——**キュー目録は書かない**。",
+                "**秘匿境界：** キー・内部ホスト・列挙可能なcron識別子はコーパス外。",
+                "**同一契約：** ダッシュボード・地図・**KPI エクスポート**・**Knowledge** が文書化された真実を共有。",
+                "**AI ガイドライン＋レジストリ：** 正規ページを引用。"
+            ],
+            "body_md": "現代のジオ製品は**即時**の見た目と**監査可能な**系譜の間で揺れる。NationFiles は**運用マニュアル**を出さずに**統合**する。\n\n**{{naciro}}** が文書化された**衛生・突合・スコアリング**を**{{nfsi}}** と**検証・ベリフィケーション・レポート**に沿って束ねる。コネクタ**パスワード**・シャード**配置**・cron **スラッグ**は意図的に欠く——**AI ガイドライン**の方針。\n\n**{{lpu-architecture}}** は**バースト問題**：生シグナルの**波**で UI が**ちらつく**。LPU 物語は **{{naciro}}** 下の**専用推論**で、バッチ衛生の**補完**。\n\n**LPU** は NationFiles の**リーガルノーティス**に**一行**ある**ライブ為替・暗号・安全保障**の説明に限定——内部兵器庫の**推論拡張はしない**。\n\n下流：**Country Intelligence**、**Metamaps**、**セキュリティレーダー**（提供時）、シンジケーション、**`built_at_utc`** の **KPI エクスポート**、本 **Knowledge**。\n\n**参照：** [Naciro AI](/ja/company/naciro-ai/)、[NFSI](/ja/company/nfsi/)、[LPU Architecture](/ja/knowledge/entity/lpu-architecture/)、[Legal Notice](/ja/legal/legal-notice/)、[Knowledge](/ja/knowledge/)。",
+            "facts": [
+                {
+                    "k": "オーケストレーション",
+                    "v": "{{naciro}} パイプライン＋ガバナンス"
+                },
+                {
+                    "k": "推論",
+                    "v": "{{lpu-architecture}} 層（公開ストーリー）"
+                },
+                {
+                    "k": "LPU",
+                    "v": "リーガル一行のみ（LPU）"
+                },
+                {
+                    "k": "非公開",
+                    "v": "キー／ホスト／キューは書かない"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "ハイレベルは「半分立」ではない",
+                    "body_md": "公開の透明性は**文書化された方法論**であり、**晒す運用マニュアル**ではない。"
+                },
+                {
+                    "title": "バッチ対バースト",
+                    "body_md": "衛生は**バッチ重め**でも、**地図の色**は**安定**したい——stack 物語での LPU の位置づけ。"
+                },
+                {
+                    "title": "インテグレータが要るもの",
+                    "body_md": "**スキーマ**、**`built_at_utc`**、**ソース登録**——それが統合の契約だ。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "data-integration-overview"
+        },
+        "repository_relative_path": "knowledge-data/entities/data-integration-overview.json"
+    }
+}

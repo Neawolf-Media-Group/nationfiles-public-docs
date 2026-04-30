@@ -1,0 +1,601 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "security-radar",
+    "kind": "entity",
+    "type": "SoftwareApplication",
+    "status": "active",
+    "updated_utc": "2026-04-30T18:00:00Z",
+    "topics": [
+        "security",
+        "heatmap",
+        "enforcement",
+        "geopolitics",
+        "briefing",
+        "real-time"
+    ],
+    "aliases": [
+        "Security Radar",
+        "Sicherheitsradar",
+        "NationFiles Security Radar"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "Real-time security situational layer: heatmapped signal density with channel separation between criminal-enforcement traces and political-strategic or conflict narratives where the public methodology documents the distinction.",
+            "depends_on": [
+                "naciro",
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Global security radar",
+                    "url": "https://nationfiles.com/en/security/security-radar/security-radar/"
+                },
+                {
+                    "label": "Security maps hub",
+                    "url": "https://nationfiles.com/en/map/security/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Echtzeit-Sicherheitslage-Schicht: Heatmap-Dichte mit kanalgetrennter Lesart — strafrelevante/justiz- und behördennahe Spuren vs. politisch-strategische oder Konflikt-Narrative, soweit die öffentliche Methodik die Trennung dokumentiert.",
+                "en": "Real-time security situational layer: heatmapped signal density with channel separation between criminal-enforcement traces and political-strategic or conflict narratives where the public methodology documents the distinction.",
+                "fr": "Couche situationnelle sécurité temps réel : densité heatmap avec séparation des canaux — traces répressives/policères vs. récits politico-stratégiques ou de conflit, dans la mesure où la méthodologie publique le documente.",
+                "es": "Capa situacional de seguridad en tiempo real: densidad tipo heatmap con separación de canales — huellas penales/policiales vs. narrativas político-estratégicas o de conflicto cuando la metodología pública lo documenta.",
+                "pt": "Camada situacional de segurança em tempo real: densidade em heatmap com separação de canais — rastos penais/policiais vs. narrativas político-estratégicas ou de conflito quando a metodologia pública o documenta.",
+                "ar": "طبقة أمنية وضعية لحظية: كثافة خريطة حرارية مع فصل قنوات بين آثار إنفاذ جنائي/أمني وسرديات صراع أو استراتيجية سياسية حيث توثق المنهجية العلنية الفارق.",
+                "ja": "リアルタイムの安全保障向け状況レイヤー：公開手法で区別が定義される範囲で、刑事・執行系の痕跡と政治・戦略・紛争系の物語線を分けたヒートマップ的シグナル密度。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Geographically anchored surfaces that show where enforcement-relevant disclosures and authority-linked notices concentrate versus where political-strategic or conflict-typed narratives register — so criminal risk readouts are not blurred into geopolitical overlays.",
+            "depends_on": [
+                "nationfile-json",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Government wanted-persons hub",
+                    "url": "https://nationfiles.com/en/security/government-feeds/wanted-persons/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Geografisch verankerte Flächen: wo sich behördenrelevante Meldungen und justiz-/fahndungsnahe öffentliche Hinweise verdichten — getrennt von politisch-strategischen oder konflikttypisierten Narrativen, damit kriminelle Risikoablesungen nicht mit geopolitischen Overlays verschwimmen.",
+                "en": "Geographically anchored surfaces that show where enforcement-relevant disclosures and authority-linked notices concentrate versus where political-strategic or conflict-typed narratives register — so criminal risk readouts are not blurred into geopolitical overlays.",
+                "fr": "Surfaces géo-ancrées montrant où se concentrent les divulgations pertinentes pour l’ordre public et les avis liés aux autorités, par rapport aux narratifs politico-stratégiques ou typés conflit — pour ne pas confondre lecture criminelle et calque géopolitique.",
+                "es": "Superficies geo-ancladas donde se concentran divulgaciones pertinentes para el orden público y avisos vinculados a autoridades frente a narrativas político-estratégicas o tipificadas como conflicto — para no mezclar lectura de riesgo criminal con capas geopolíticas.",
+                "pt": "Superfícies geo-ancoradas com concentração de divulgações relevantes para a ordem pública e avisos ligados a autoridades vs. narrativas político-estratégicas ou tipificadas como conflito — evitindo confundir leitura criminal com sobreposição geopolítica.",
+                "ar": "أسطح مرتبطة جغرافياً تُظهر تكدس الإفصاحات ذات الصلة بالإنفاذ والإشعارات المرتبطة بالسلطات مقابل السرديات ذات الطابع الاستراتيجي السياسي أو النزاع — حتى لا تختلط قراءة المخاطر الجنائية مع طبقات جيوسياسية.",
+                "ja": "地理に固定した面：執行・当局系の開示や公告がどこで密集するかと、政治・戦略型や紛争型の物語がどこで現れるかを対比し、犯罪リスクの読みを地政のオーバーレイと混ぜない。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Ingest of published INTERPOL/FBI-aligned public strands and locally wired authority bulletins; normalization with recency weighting; heatmap tessellation; persistent tagging that keeps criminal-enforcement lanes apart from political-strategic or armed-conflict lanes in the displayed densities.",
+            "depends_on": [
+                "naciro",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Global security radar",
+                    "url": "https://nationfiles.com/en/security/security-radar/security-radar/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Ingestion veröffentlichter, an INTERPOL/FBI-öffentliche Kanäle anschlussfähiger Stränge sowie lokal angebundener Behördenmeldungen; Normalisierung mit Aktualitätsgewichtung; Heatmap-Raster; dauerhafte Tagging-Logik, die strafrechtlich-/justiznahe Spuren in der Dichte von politisch-strategischen oder bewaffneten Konfliktspuren trennt.",
+                "en": "Ingest of published INTERPOL/FBI-aligned public strands and locally wired authority bulletins; normalization with recency weighting; heatmap tessellation; persistent tagging that keeps criminal-enforcement lanes apart from political-strategic or armed-conflict lanes in the displayed densities.",
+                "fr": "Ingestion de fils publics alignés sur INTERPOL/FBI et de bulletins d’autorités raccordés localement ; normalisation avec pondération de fraîcheur ; tessellation heatmap ; étiquetage persistant séparant les voies répressives des voies politico-stratégiques ou de conflit armé dans les densités affichées.",
+                "es": "Ingesta de hilos públicos alineados con superficies públicas INTERPOL/FBI y boletines locales cableados; normalización con peso de actualidad; teselado heatmap; etiquetado persistente que separa carriles penales/policía de carriles político-estratégicos o de conflicto armado en las densidades.",
+                "pt": "Ingestão de fios públicos alinhados a superfícies INTERPOL/FBI e boletins locais ligados; normalização com peso de recência; tesselação em heatmap; marcação persistente que separa faixas penais/policiais de faixas político-estratégicas ou de conflito armado nas densidades.",
+                "ar": "استيعاب خيوط علنية منسجمة مع قنوات INTERPOL/FBI العامة وتعميمات سلطوية موصولة محلياً؛ تطبيع مع أوزان حداثة؛ تجزئة خريطة حرارية؛ وسوم دائمة تفصل مسارات إنفاذ جنائي عن مسارات صراع سياسي-استراتيجي أو مسلح في الكثافات المعروضة.",
+                "ja": "公開の INTERPOL／FBI 系ストランドと地域当局バレッティンの取り込み；鮮度重み付けで正規化；ヒートマップのテセレーション；表示密度で刑事・執行レーンと政治・戦略・武力紛争レーンを分け続けるタグ付け。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Curated lanes for INTERPOL- and FBI-class public releases (where NationFiles mirrors or links them), plus optional local authority and bulletin feeds that NationFiles wires per jurisdiction — composed into radar and map surfaces rather than raw third-party replay.",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Government wanted-persons hub",
+                    "url": "https://nationfiles.com/en/security/government-feeds/wanted-persons/"
+                },
+                {
+                    "label": "Security maps hub",
+                    "url": "https://nationfiles.com/en/map/security/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Kuratierte Zuführungen für INTERPOL- und FBI-nah öffentliche Veröffentlichungen (wo NationFiles spiegelt oder verlinkt) plus optional lokale Behörden-/Bulletin-Feeds je Zuständigkeit — zusammengesetzt zu Radar- und Kartenflächen statt Roh-Wiedergabe Dritter.",
+                "en": "Curated lanes for INTERPOL- and FBI-class public releases (where NationFiles mirrors or links them), plus optional local authority and bulletin feeds that NationFiles wires per jurisdiction — composed into radar and map surfaces rather than raw third-party replay.",
+                "fr": "Voies curatées pour publications publiques de type INTERPOL/FBI (miroir ou liens NationFiles), plus fils d’autorités/bulletins locaux quand ils sont raccordés — assemblés en radars et cartes plutôt qu’en rejeu brut tiers.",
+                "es": "Carriles curados para comunicados públicos tipo INTERPOL/FBI (donde NationFiles refleja o enlaza) más feeds locales de autoridad/boletín cableados por jurisdicción — compuestos en radar y mapas, no reproducción cruda de terceros.",
+                "pt": "Canais curados para comunicados públicos tipo INTERPOL/FBI (espelho ou ligação NationFiles) mais feeds locais de autoridade/boletim por jurisdição — compostos em radar/mapas, não repetição bruta de terceiros.",
+                "ar": "مسارات مُنتقاة لإصدارات علنية من فئة INTERPOL وFBI حيث تعكس NationFiles أو تربط، مع تغذيات سلطوية/نشرات محلية اختيارية حسب الولاية — مُجمّعة في رادار وخرائط لا إعادة عرض خام لطرف ثالث.",
+                "ja": "NationFiles が反映またはリンクする INTERPOL／FBI 系の公開リリース用のキュレーション済みレーンに、管轄ごとに接続する地方当局・公報フィードを任意で追加 — 第三者の生再送ではなくレーダーと地図面に合成。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Per-country security radar entries, a global security radar, heatmap-style density reads, and cross-links to the government wanted-persons hub within the security maps hub navigation model.",
+            "depends_on": [
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Global security radar",
+                    "url": "https://nationfiles.com/en/security/security-radar/security-radar/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Länderbezogene Security-Radar-Einträge, globales Sicherheitsradar, heatmapartige Dichte-Lesarten und Querverweise zum Behörden-Hub „gesuchte Personen“ innerhalb des Navigationsmodells des Sicherheits-Kartenhubs.",
+                "en": "Per-country security radar entries, a global security radar, heatmap-style density reads, and cross-links to the government wanted-persons hub within the security maps hub navigation model.",
+                "fr": "Entrées radar sécurité par pays, radar sécurité mondial, lectures de densité type heatmap et liens croisés vers le hub « personnes recherchées » dans le modèle de navigation du hub cartes Sécurité.",
+                "es": "Entradas radar seguridad por país, radar global, lecturas de densidad tipo heatmap y enlaces al centro de personas buscadas dentro del modelo de navegación del hub de mapas de seguridad.",
+                "pt": "Entradas radar por país, radar global de segurança, leituras de densidade estilo heatmap e ligações ao hub de procurados no modelo de navegação do hub de mapas de segurança.",
+                "ar": "إدخالات رادار أمن لكل دولة، ورادار عالمي، وقراءات كثافة بأسلوب خريطة حرارية، وروابط متقاطعة إلى مركز الأشخاص المطلوبين ضمن نموذج تنقّل مركز خرائط الأمن.",
+                "ja": "国ごとのセキュリティレーダー項目、グローバルレーダー、ヒートマップ型の密度読み、セキュリティ地図ハブのナビゲーション内での政府 Wanted Persons ハブへのクロスリンク。"
+            }
+        },
+        {
+            "key": "computed_by",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "poweredBy",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "alignsWith",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "complements",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nature-vertical"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Sicherheitsradar (Security Radar)",
+            "teaser": "NationFiles’ **Echtzeit-Lage** für Sicherheit: öffentliche **INTERPOL-/FBI-nahe** Stränge und **Behördenmeldungen**, zu **Heatmap-Dichte** verdichtet — mit klarer Abgrenzung **kriminell/justiziell** vs. **politisch-strategisch**.",
+            "summary_bullets": [
+                "**Lage statt Rohfeed:** Signale werden geografisch verankert und für Lesbarkeit gewichtet — nicht als ungefilterter Dritt-Feed.",
+                "**Heatmap-Logik:** Zellen sammeln **Aktualität** und **Quellenklasse**; dichtere Flächen markieren Konzentration öffentlicher Sicherheits-/Fahndungsnaher Hinweise.",
+                "**Kriminell vs. politisch:** Fahndungs- und Ordnungsstränge laufen **getrennt** von Konflikt-/Strategie-Narrativen, wo die Methodik das erlaubt.",
+                "**Einbindung:** Sichtbar u. a. im **{{country-intelligence-dashboard}}** und entlang des **Sicherheits-Kartenhubs**.",
+                "**Compute:** Orchestriert durch **{{naciro}}**, dargestellt durch **{{nationfiles}}**.",
+                "**Kein Ersatz für Behörden:** Keine operativen Weisungen; Lesarten bleiben an **veröffentlichten** Quellen orientiert."
+            ],
+            "body_md": "Das **Sicherheitsradar** fasst **öffentlich zugängliche** Sicherheits- und Ordnungssignale — darunter an **INTERPOL**- und **FBI**-klassische Veröffentlichungen anschließbare nationale oder globale Stränge sowie **lokal angebundene Behördenbulletins** — in eine **radar- und kartenfähige** Darstellung.\n\n**Heatmaps** verdichten diese Signale zu **räumlichen Dichteprofilen** mit **Recency-Gewichtung**: neuere, klar gemappte Meldungen ziehen stärker als veraltete Einträge; die **Quellenklasse** bleibt sichtbar genug, damit Nutzer nicht fälschlich Medienstimmung mit Behördenhinweisen vermischen.\n\n**Kriminelle / justizielle Risiken** (z. B. Fahndungs- und Vollzugsspur) werden von **politisch-strategischen oder bewaffneten Konflikt**-Narrativen getrennt geführt, **soweit** die NationFiles-Methodik das publikationsseitig begründen kann — damit **organisierte Kriminalität** nicht mit **außenpolitischem Wettstreit** in derselben Farbskala verschwimmt.\n\nTechnisch orchestriert **{{naciro}}** Ingest und Gewichtung; **{{nationfiles}}** zeigt globale und länderbezogene Radaranmutzungen, verzahnt mit **{{nationfile-json}}** und dem **Länder-Dashboard**.",
+            "facts": [
+                {
+                    "k": "Heatmap",
+                    "v": "Geografische Dichte mit Aktualitäts- und Quellenklasse-Gewichtung."
+                },
+                {
+                    "k": "Trennung",
+                    "v": "Justiz-/Fahndung vs. politisch-strategische oder Konflikt-Lesarten."
+                },
+                {
+                    "k": "Ingest",
+                    "v": "INTERPOL-/FBI-nahe öffentliche Stränge plus Behörden-Feeds wo verdrahtet."
+                },
+                {
+                    "k": "UX-Verortung",
+                    "v": "Security-Radar global; Country-Kontext auch im Dashboard."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Wie die Heatmap liestbar bleibt",
+                    "body_md": "Statt einzelner Pins interpretiert die Oberfläche **Konzentrationen**: mehrere unabhängige Meldungen derselben **Quellenfamilie** und **Region** erhöhen die **Sichtbarkeit der Zelle**; isolierte Aussagen ohne geografische Verortung bleiben **absichtlich schwächer** gewichtet, damit Panorama nicht zur Zufallsstreuung verkommt."
+                },
+                {
+                    "title": "Kriminell vs. politisch — warum zwei optische Logiken",
+                    "body_md": "Ein **Fahndungshinweis** oder **Bulletin** adressiert typischerweise **Rechtsdurchsetzung**; eine **Konflikt- oder Strategie**-Schicht beschreibt **Spannungsfelder zwischen Staaten oder bewaffneten Parteien**. Im Radarteil werden diese **Kanäle** getrennt ausgewiesen, damit Leser **Sicherheitslage** nicht mit **Außenpolitik** verwechseln — beides kann korreliert sein, ist aber **kein identischer Risikotyp**."
+                }
+            ]
+        },
+        "en": {
+            "title": "Security Radar",
+            "teaser": "NationFiles’ **real-time security posture** layer: **INTERPOL-/FBI-class** public strands and **local authority bulletins**, folded into **heatmap density** with explicit **criminal-enforcement** vs **political-strategic** separation.",
+            "summary_bullets": [
+                "**Situational, not a raw replay:** Signals are geo-anchored and weighted for readability — not unfiltered third-party dumps.",
+                "**Heatmap logic:** Cells aggregate **recency** and **source class**; denser regions highlight concentrations of public enforcement- and notice-grade material.",
+                "**Criminal vs. political:** Wanted/enforcement lanes stay **distinct** from conflict/strategy narratives wherever methodology allows.",
+                "**Placement:** Surfaces inside **{{country-intelligence-dashboard}}** and along the **security maps hub**.",
+                "**Compute:** **{{naciro}}** orchestrates ingest/weighting; **{{nationfiles}}** renders the UX.",
+                "**Not operational guidance:** Not a substitute for government instructions; reads track **published** sources only."
+            ],
+            "body_md": "**Security Radar** compiles **public** security and order signals — including strands that align with published **INTERPOL** and **FBI** public releases plus **locally wired authority bulletins** — into a **radar + map** experience.\n\n**Heatmaps** compress those signals into **spatial density profiles** with **recency weighting**: newer, well-mapped items matter more than stale one-offs; **source class** remains interpretable so readers do not confuse media sentiment with enforcement notices.\n\n**Criminal / justice-relevant** traces (e.g., wanted-person workflows) are routed separately from **political-strategic** or **armed-conflict** narratives **when** NationFiles’ public methodology can justify the split — so **organized crime overlays** do not melt into **geopolitics** on the same legend.\n\n**{{naciro}}** orchestrates ingest and scoring; **{{nationfiles}}** delivers global and per-country radar surfaces aligned with **{{nationfile-json}}** and the **Country Intelligence Dashboard**.",
+            "facts": [
+                {
+                    "k": "Heatmap",
+                    "v": "Geo density with recency and source-class weighting."
+                },
+                {
+                    "k": "Separation",
+                    "v": "Enforcement/wanted vs. political-strategic/conflict reads."
+                },
+                {
+                    "k": "Ingest",
+                    "v": "INTERPOL/FBI-class public strands plus authority feeds when wired."
+                },
+                {
+                    "k": "Placement",
+                    "v": "Global radar; country context also inside the dashboard."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "How the heatmap stays legible",
+                    "body_md": "Rather than privileging isolated pins, the layer reads **concentrations**: multiple independent notices from the same **source family** and **region** raise a cell’s salience; one-off claims without geo fit stay **down-weighted** so the panorama does not devolve into noise."
+                },
+                {
+                    "title": "Criminal vs. political — why two channels",
+                    "body_md": "A **wanted notice** or **law-enforcement bulletin** usually encodes **justice throughput**; a **conflict or grand-strategy** storyline encodes **state-on-state or armed-party tension**. The radar keeps those **lanes** separate so situational security is not mistaken for foreign-policy drama — they may correlate but are **not the same risk class**."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Radar sécurité (Security Radar)",
+            "teaser": "Couche **temps réel** NationFiles : fils publics **type INTERPOL/FBI** et **bulletins d’autorités**, condensés en **densité heatmap** avec séparation **répression/justice** vs **politique stratégique**.",
+            "summary_bullets": [
+                "**Situationnel, pas replay brut :** signaux géo-ancrés et pondérés — pas de dump tiers brut.",
+                "**Heatmap :** les mailles agrègent **fraîcheur** et **classe de source** ; les zones denses marquent des concentrations d’avis relevant de l’ordre public.",
+                "**Criminel vs politique :** fils recherche/enquête **distincts** des récits conflit/stratégie lorsque la méthodologie le permet.",
+                "**Placement :** visible dans **{{country-intelligence-dashboard}}** et le **hub cartes Sécurité**.",
+                "**Calcul :** **{{naciro}}** orchestre ; **{{nationfiles}}** affiche.",
+                "**Pas d’instruction opérationnelle :** lecture ancrée sur sources **publiées**."
+            ],
+            "body_md": "Le **radar sécurité** agrège des signaux d’ordre public **accessibles publiquement** — dont des fils compatibles avec des publications **INTERPOL** et **FBI** et des **bulletins locaux raccordés** — dans une expérience **radar + cartes**.\n\nLes **heatmaps** forment des **profils de densité spatiale** avec **pondération de fraîcheur** ; la **classe de source** reste lisible pour éviter de confondre **sentiment médias** et **avis d’autorité**.\n\nLes traces **pénales / police-judiciaire** sont isolées des narratifs **politico-stratégiques** ou de **conflit armé** **quand** la méthodologie publique le justifie — afin de ne pas fusionner **criminalité organisée** et **géopolitique** sur la même légende.\n\n**{{naciro}}** orchestre l’ingestion et le score ; **{{nationfiles}}** rend les vues globales et par pays, alignées sur **{{nationfile-json}}** et le **tableau d’intelligence pays**.",
+            "facts": [
+                {
+                    "k": "Heatmap",
+                    "v": "Densité géographique ; poids fraîcheur et classe de source."
+                },
+                {
+                    "k": "Séparation",
+                    "v": "Répression/avis vs récit stratégique/conflit."
+                },
+                {
+                    "k": "Ingestion",
+                    "v": "Fils publics INTERPOL/FBI + bulletins locaux câblés."
+                },
+                {
+                    "k": "Emplacement",
+                    "v": "Radar mondial ; contexte pays dans le dashboard."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Lisibilité de la heatmap",
+                    "body_md": "La couche privilégie les **concentrations** : plusieurs avis indépendants de la même **famille de sources** et de la même **région** augmentent le contraste d’une maille ; les affirmations ponctuelles sans ancrage géo sont **atténuées** pour limiter le bruit."
+                },
+                {
+                    "title": "Criminel vs politique",
+                    "body_md": "Un **avis de recherche** encode plutôt le **traitement pénal** ; un **récit de conflit** encode une **tension inter-État ou armée**. Le radar sépare ces **voies** pour ne pas confondre **sûreté située** et **diplomatie médiatisée** — corrélations possibles, **classes de risque différentes**."
+                }
+            ]
+        },
+        "es": {
+            "title": "Radar de seguridad (Security Radar)",
+            "teaser": "Capa **en tiempo real** en NationFiles: hilos públicos **tipo INTERPOL/FBI** y **boletines de autoridades**, compactados en **densidad tipo heatmap** con separación **penal/fuerzas del orden** frente a **político-estratégico**.",
+            "summary_bullets": [
+                "**Situacional, no replay crudo:** señales geo-ancladas y ponderadas.",
+                "**Heatmap:** celdas agregan **recencia** y **clase de fuente**; zonas densas marcan concentración de avisos de orden público.",
+                "**Criminal vs político:** carriles de búsqueda/cumplimiento **apartados** de narrativas de conflicto/estrategia cuando la metodología lo permite.",
+                "**Ubicación:** visible en **{{country-intelligence-dashboard}}** y el **centro de mapas de seguridad**.",
+                "**Cómputo:** **{{naciro}}** orquesta; **{{nationfiles}}** muestra la UX.",
+                "**No es orientación operativa:** basado en fuentes **públicas**."
+            ],
+            "body_md": "El **radar de seguridad** reúne señales de orden público **accesibles públicamente** —incluidos hilos alineados con publicaciones **INTERPOL** y **FBI** y **boletines locales cableados**— en una experiencia **radar + mapas**.\n\nLas **heatmaps** forman **perfiles de densidad espacial** con **ponderación de recencia**; la **clase de fuente** sigue siendo legible para no confundir **sentimiento mediático** con **aviso de autoridad**.\n\nLas huellas **penales / policiales** se separan de narrativas **político-estratégicas** o de **conflicto armado** **cuando** la metodología pública lo sostiene — para no fusionar **crimen organizado** y **geopolítica** en la misma leyenda.\n\n**{{naciro}}** orquesta ingesta y puntuación; **{{nationfiles}}** ofrece vistas globales y por país alineadas con **{{nationfile-json}}** y el **panel de inteligencia por país**.",
+            "facts": [
+                {
+                    "k": "Heatmap",
+                    "v": "Densidad geográfica con recencia y clase de fuente."
+                },
+                {
+                    "k": "Separación",
+                    "v": "Cumplimiento/búsqueda vs narrativa estratégica/conflicto."
+                },
+                {
+                    "k": "Ingesta",
+                    "v": "Hilos públicos INTERPOL/FBI + boletines locales."
+                },
+                {
+                    "k": "Ubicación",
+                    "v": "Radar global; contexto país en el dashboard."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Legibilidad del mapa de calor",
+                    "body_md": "La capa privilegia **concentraciones**: varios avisos independientes de la misma **familia de fuentes** y **región** aumentan el contraste; afirmaciones puntuales sin encaje geo se **atenuan** para limitar ruido."
+                },
+                {
+                    "title": "Criminal vs político",
+                    "body_md": "Un **aviso de búsqueda** refleja sobre todo **justicia**; un **relato de conflicto** refleja **tensión interestatal o armada**. El radar mantiene **carriles** separados para no confundir **seguridad situacional** y **geopolítica mediática**."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Radar de segurança (Security Radar)",
+            "teaser": "Camada **em tempo real** na NationFiles: fios públicos **tipo INTERPOL/FBI** e **boletins de autoridade**, condensados em **densidade heatmap** com separação **penal/forças de ordem** vs **político-estratégico**.",
+            "summary_bullets": [
+                "**Situacional:** sinais geo-ancorados e ponderados — sem retransmissão bruta de terceiros.",
+                "**Heatmap:** células agregam **recência** e **classe de fonte**; zonas densas marcam concentração de avisos relevantes para a ordem pública.",
+                "**Criminal vs político:** faixas de procurados/cumprimento **à parte** de narrativas de conflito/estratégia quando a metodologia o permite.",
+                "**Onde aparece:** **{{country-intelligence-dashboard}}** e **hub de mapas de segurança**.",
+                "**Computação:** **{{naciro}}** orquestra; **{{nationfiles}}** renderiza.",
+                "**Não é orientação operativa:** apenas fontes **publicadas**."
+            ],
+            "body_md": "O **radar de segurança** junta sinais de ordem pública **públicos** — incluindo fios alinhados a comunicados **INTERPOL** e **FBI** e **boletins locais ligados** — numa experiência **radar + mapas**.\n\n**Heatmaps** formam **perfis de densidade espacial** com **peso de recência**; a **classe de fonte** permanece legível para não confundir **sentimento mediático** com **aviso de autoridade**.\n\nRastos **penais / policiais** ficam separados de narrativas **político-estratégicas** ou de **conflito armado** **quando** a metodologia pública sustenta a divisão — evitindo fundir **crime organizado** e **geopolítica** na mesma legenda.\n\n**{{naciro}}** orquestra ingestão e pontuação; **{{nationfiles}}** mostra vistas globais e por país alinhadas a **{{nationfile-json}}** e ao **painel de inteligência por país**.",
+            "facts": [
+                {
+                    "k": "Heatmap",
+                    "v": "Densidade geográfica com recência e classe de fonte."
+                },
+                {
+                    "k": "Separação",
+                    "v": "Cumprimento/procurados vs narrativa estratégica/conflito."
+                },
+                {
+                    "k": "Ingestão",
+                    "v": "Fios públicos INTERPOL/FBI + boletins locais."
+                },
+                {
+                    "k": "Onde",
+                    "v": "Radar global; contexto país no dashboard."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Legibilidade do heatmap",
+                    "body_md": "A camada privilegia **concentrações**: vários avisos independentes da mesma **família de fonte** e **região** aumentam o contraste; afirmações pontuais sem fit geo são **atenuadas** para reduzir ruído."
+                },
+                {
+                    "title": "Criminal vs político",
+                    "body_md": "Um **alerta de procurados** reflete sobretudo **justiça**; um **relato de conflito** reflete **tensão interestatal ou armada**. O radar mantém **faixas** separadas para não confundir **segurança situacional** com **geopolítica mediática**."
+                }
+            ]
+        },
+        "ar": {
+            "title": "رادار الأمن (Security Radar)",
+            "teaser": "طبقة **لحظية** على NationFiles: خيوط علنية **بنسق INTERPOL/FBI** وتعميمات **سلطوية محلية**، مضغوطة إلى **كثافة خريطة حرارية** مع فصل **إنفاذ جنائي** عن **استراتيجية سياسية**.",
+            "summary_bullets": [
+                "**موقفي لا إعادة عرض خام:** إشارات مرتبطة جغرافياً وموزونة.",
+                "**الخريطة الحرارية:** الخلايا تجمع **الحداثة** و**صنف المصدر**؛ المناطق الكثيفة تعكس تركز إفصاحات ذات صلة بالنظام العام.",
+                "**جنائي مقابل سياسي:** مسارات مطلوبين/تنفيذ **منفصلة** عن سرديات صراع/استراتيجية حيث تسمح المنهجية.",
+                "**الموضع:** داخل **{{country-intelligence-dashboard}}** و**مركز خرائط الأمن**.",
+                "**الحوسبة:** **{{naciro}}** ينسّق؛ **{{nationfiles}}** يعرض.",
+                "**ليس توجيهاً تشغيلياً:** اعتماد على مصادر **منشورة** فقط."
+            ],
+            "body_md": "**رادار الأمن** يجمع إشارات أمن ونظام عام **علنية** — بما فيها خيوط تنسجم مع إصدارات **INTERPOL** و**FBI** العامة وتعميمات **محلية موصولة** — في تجربة **رادار وخرائط**.\n\n**خرائط الحرارة** تكوّن **ملامح كثافة مكانية** مع **أوزان حداثة**؛ يبقى **صنف المصدر** مقروءاً حتى لا يختلط **مشاعر الإعلام** ب**إشعار سلطوي**.\n\nآثار **عدالة/إنفاذ** تُدار على حدة عن سرديات **استراتيجية سياسية** أو **صراع مسلح** **عندما** تبرر المنهجية العلنية ذلك — فلا تذوب **جريمة منظمة** في **جيوسياسة** ضمن نفس المفتاح.\n\n**{{naciro}}** ينسّق الاستيعاب والتسجيل؛ **{{nationfiles}}** يقدّم مناظير عالمية وفي المستوى الوطني متوافقة مع **{{nationfile-json}}** و**لوحة استخبارات الدولة**.",
+            "facts": [
+                {
+                    "k": "خريطة حرارية",
+                    "v": "كثافة جغرافية مع حداثة وصنف مصدر."
+                },
+                {
+                    "k": "فصل",
+                    "v": "تنفيذ/مطلوبون مقابل استراتيجية/صراع."
+                },
+                {
+                    "k": "استيعاب",
+                    "v": "خيوط INTERPOL/FBI علنية + تعميمات محلية."
+                },
+                {
+                    "k": "الموضع",
+                    "v": "رادار عالمي؛ سياق الدولة في اللوحة."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "قراءة الخريطة الحرارية",
+                    "body_md": "الطبقة تفضّل **التكدس**: عدة إشعارات مستقلة من نفس **عائلة المصدر** و**المنطقة** ترفع وضوح الخلية؛ ادعاءات معزولة بلا إسناد مكاني تُخفّف **وعمداً** لتقليل الضجيج."
+                },
+                {
+                    "title": "جنائي مقابل سياسي",
+                    "body_md": "**نشرة مطلوب** تميل إلى **مسار عدالة**؛ **سرد صراع** يعبّر عن **توتر بين دول أو أطراف مسلحة**. الرادار يفصل **المسارات** حتى لا تُخلط **الأمن الموقفي** ب**الدراما الجيوسياسية**."
+                }
+            ]
+        },
+        "ja": {
+            "title": "セキュリティ・レーダー（Security Radar）",
+            "teaser": "NationFiles の**リアルタイムな安全保障向け状況**：**INTERPOL／FBI 系の公開**ストランドと**当局バレッティン**を**ヒートマップ密度**に折りたたみ、**刑事・執行**と**政治・戦略**を明示的に分離。",
+            "summary_bullets": [
+                "**状況把握であって生転送ではない**：地理に固定し重み付けしたシグナル。",
+                "**ヒートマップ**：セルは**鮮度**と**ソース種別**を集約；濃い領域は公共の執行・公告系の集中。",
+                "**犯罪と政治**：手配・執行レーンと紛争／戦略ナラティブは手法が許すところで**分離**。",
+                "**配置**：**{{country-intelligence-dashboard}}** と**セキュリティ地図ハブ**沿い。",
+                "**計算**：**{{naciro}}** がオーケストレーション、**{{nationfiles}}** が UI。",
+                "**業務指示ではない**：**公開**ソースに依拠。"
+            ],
+            "body_md": "**セキュリティ・レーダー**は、公開の安全保障・秩序シグナル — **INTERPOL** や **FBI** の公開リリースに沿うストランドや**地域で接続した当局公報** — を**レーダー＋地図**体験にまとめます。\n\n**ヒートマップ**は**空間的な密度プロファイル**に圧縮し、**鮮度重み**を付けます。**ソース種別**は読み分け可能なままにし、メディアのセンチメントと執行公告を混同させません。\n\n**刑事／司法執行**の痕跡と**政治・戦略**または**武力紛争**の物語線は、NationFiles の公開手法が正当化できる場合に**別レーン**に保ち、**組織犯罪の塗り**と**地政の塗り**が同一凡例に溶けないようにします。\n\n**{{naciro}}** が取り込みとスコアリングを司り、**{{nationfiles}}** が **{{nationfile-json}}** と**国情報ダッシュボード**に沿ったグローバル／各国のレーダー面を提供します。",
+            "facts": [
+                {
+                    "k": "ヒートマップ",
+                    "v": "鮮度とソース種別を含む地理的密度。"
+                },
+                {
+                    "k": "分離",
+                    "v": "執行／手配と政治・戦略／紛争の読み分け。"
+                },
+                {
+                    "k": "インジェスト",
+                    "v": "INTERPOL／FBI 系公開ストランド＋接続済み当局フィード。"
+                },
+                {
+                    "k": "配置",
+                    "v": "グローバルレーダー；国文脈はダッシュボードにも。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "ヒートマップの読みやすさ",
+                    "body_md": "孤立ピンより**集中**を優先します。同じ**ソース系**かつ**地域**からの複数の独立した公告がセルの視認性を上げ、地理的に合わない一発情報は**意図的に下げ**ノイズ化を防ぎます。"
+                },
+                {
+                    "title": "刑事と政治を分ける理由",
+                    "body_md": "**手配・公告**は多くの場合**司法スループット**を符号化し、**紛争・大戦略**の筋は**国家間・武装当事者間の緊張**を符号化します。レーダーは**レーン**を分け、状況の安全保障を外交ドラマと取り違えないようにします。相関はあっても**リスク・クラスは同一ではありません**。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "security-radar"
+        },
+        "repository_relative_path": "knowledge-data/entities/security-radar.json"
+    }
+}

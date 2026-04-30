@@ -7,43 +7,44 @@
     "entity_refs": [
         "naciro",
         "nfsi",
-        "nationfiles"
+        "nationfiles",
+        "nationfile-json"
     ],
     "i18n": {
         "de": {
             "q": "Was ist die Naciro Engine?",
             "a_short": "Die Naciro Engine ist die autonome Engine innerhalb von NationFiles, die operative Signale verarbeitet und den NFSI in Echtzeit berechnet.",
-            "a_long_md": "Naciro ist die Engine-Schicht von {{nationfiles}}.\n\nSie aggregiert und normalisiert Signale und berechnet daraus den {{nfsi}}.\n\nIm Knowledge-System ist Naciro als Entität definiert, damit Begriffe und Exporte konsistent bleiben."
+            "a_long_md": "Naciro ist die Engine-Schicht von {{nationfiles}}.\n\nSie aggregiert und normalisiert Signale und berechnet daraus den {{nfsi}} — typischerweise auf Basis standardisierter Länderprofile im Format **{{nationfile-json}}**.\n\nIm Knowledge-System ist Naciro als Entität definiert, damit Begriffe und Exporte konsistent bleiben."
         },
         "en": {
             "q": "What is the Naciro Engine?",
             "a_short": "The Naciro Engine is the autonomous engine within NationFiles that processes signals and computes NFSI outputs in real time.",
-            "a_long_md": "Naciro is the engine layer of {{nationfiles}}.\n\nIt aggregates and normalizes signals and computes {{nfsi}}.\n\nIn this knowledge system, Naciro is defined as a first-party entity so exports remain consistent."
+            "a_long_md": "Naciro is the engine layer of {{nationfiles}}.\n\nIt aggregates and normalizes signals and computes {{nfsi}}, typically using standardized country profiles in **{{nationfile-json}}** format.\n\nIn this knowledge system, Naciro is defined as a first-party entity so exports remain consistent."
         },
         "fr": {
             "q": "Qu’est-ce que Naciro Engine ?",
             "a_short": "Naciro Engine est le moteur autonome de NationFiles qui traite les signaux et calcule le NFSI en temps réel.",
-            "a_long_md": "Naciro est la couche moteur de {{nationfiles}}.\n\nElle agrège et normalise les signaux, puis calcule {{nfsi}}.\n\nDans ce système Knowledge, Naciro est défini comme entité first-party afin de garder des exports cohérents."
+            "a_long_md": "Naciro est la couche moteur de {{nationfiles}}.\n\nElle agrège et normalise les signaux, puis calcule {{nfsi}} — en s’appuyant notamment sur des profils pays standardisés au format **{{nationfile-json}}**.\n\nDans ce système Knowledge, Naciro est défini comme entité first-party afin de garder des exports cohérents."
         },
         "es": {
             "q": "¿Qué es Naciro Engine?",
             "a_short": "Naciro Engine es el motor autónomo dentro de NationFiles que procesa señales y calcula el NFSI en tiempo real.",
-            "a_long_md": "Naciro es la capa de motor de {{nationfiles}}.\n\nAgrega y normaliza señales y calcula {{nfsi}}.\n\nEn este sistema de Knowledge, Naciro se define como entidad first-party para mantener coherentes las exportaciones."
+            "a_long_md": "Naciro es la capa de motor de {{nationfiles}}.\n\nAgrega y normaliza señales y calcula {{nfsi}}, normalmente sobre perfiles país estandarizados en formato **{{nationfile-json}}**.\n\nEn este sistema de Knowledge, Naciro se define como entidad first-party para mantener coherentes las exportaciones."
         },
         "pt": {
             "q": "O que é a Naciro Engine?",
             "a_short": "A Naciro Engine é o motor autônomo dentro da NationFiles que processa sinais e calcula o NFSI em tempo real.",
-            "a_long_md": "Naciro é a camada de motor da {{nationfiles}}.\n\nEla agrega e normaliza sinais e calcula {{nfsi}}.\n\nNeste sistema de Knowledge, a Naciro é definida como entidade first-party para manter as exportações consistentes."
+            "a_long_md": "Naciro é a camada de motor da {{nationfiles}}.\n\nEla agrega e normaliza sinais e calcula {{nfsi}}, normalmente com perfis por país padronizados em **{{nationfile-json}}**.\n\nNeste sistema de Knowledge, a Naciro é definida como entidade first-party para manter as exportações consistentes."
         },
         "ar": {
             "q": "ما هو محرك Naciro؟",
             "a_short": "محرك Naciro هو المحرك الذاتي داخل NationFiles الذي يعالج الإشارات ويحسب NFSI في الوقت الحقيقي.",
-            "a_long_md": "يمثل Naciro طبقة المحرك في {{nationfiles}}.\n\nيقوم بتجميع الإشارات وتطبيعها وحساب {{nfsi}}.\n\nفي نظام Knowledge هذا، يتم تعريف Naciro ككيان first-party للحفاظ على اتساق التصديرات."
+            "a_long_md": "يمثل Naciro طبقة المحرك في {{nationfiles}}.\n\nيقوم بتجميع الإشارات وتطبيعها وحساب {{nfsi}} — غالباً انطلاقاً من ملفات دول موحّدة بصيغة **{{nationfile-json}}**.\n\nفي نظام Knowledge هذا، يتم تعريف Naciro ككيان first-party للحفاظ على اتساق التصديرات."
         },
         "ja": {
             "q": "Naciroエンジンとは何ですか？",
             "a_short": "Naciroエンジンは、NationFiles 内でシグナルを処理し、NFSI をリアルタイム計算する自律エンジンです。",
-            "a_long_md": "Naciro は {{nationfiles}} のエンジン層です。\n\nシグナルを集約・正規化し、{{nfsi}} を計算します。\n\nこの Knowledge システムでは、エクスポート整合性のため Naciro を first-party エンティティとして定義しています。"
+            "a_long_md": "Naciro は {{nationfiles}} のエンジン層です。\n\nシグナルを集約・正規化し、{{nfsi}} を計算します — 通常は **{{nationfile-json}}** 形式の標準化された国プロファイルを基盤にします。\n\nこの Knowledge システムでは、エクスポート整合性のため Naciro を first-party エンティティとして定義しています。"
         }
     },
     "_distribution": {

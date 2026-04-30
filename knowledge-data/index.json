@@ -3,7 +3,7 @@
     "purpose": "Machine-readable repository map for crawlers, chatbots, and search engines mirroring NationFiles knowledge-data.",
     "official_statement_en": "This repository contains the official, machine-readable knowledge-graph data for NationFiles and the Naciro AI Engine. All data is provided in JSON/JSON-LD format for AI-discovery and research purposes.",
     "repository_root": "knowledge-data",
-    "bundle_snapshot_utc": "2026-04-29T00:54:57+00:00",
+    "bundle_snapshot_utc": "2026-04-30T12:30:41+00:00",
     "distribution_updated_utc": "2026-04-28T00:00:00Z",
     "locales_supported": [
         "de",
@@ -25,7 +25,7 @@
             "path": "knowledge-data/entities",
             "role": "Knowledge graph entity definitions (JSON)",
             "file_glob": "*.json",
-            "count": 6
+            "count": 27
         },
         {
             "path": "knowledge-data/faqs",
@@ -37,12 +37,28 @@
             "path": "knowledge-data/md",
             "role": "Optional long-form Markdown per entity + locale",
             "subfolders": [
+                "ai-guidelines",
                 "core-hierarchy",
+                "country-compare",
+                "country-kpi-snapshot-export",
+                "data-integration-overview",
+                "economy-vertical",
+                "expat-metamaps-cluster",
+                "knowledge-hub-nfkg",
+                "legal-sources-registry",
                 "lpu-architecture",
+                "metamaps",
                 "naciro",
                 "nationfiles",
+                "nature-vertical",
                 "neawolf-media-group",
-                "nfsi"
+                "nfsi",
+                "publications-corpus",
+                "publications-hub",
+                "purchasing-calculator",
+                "status-reports",
+                "validation-verification-report",
+                "whitepaper-algorithmic-geopolitics-nfsi"
             ]
         },
         {
@@ -58,6 +74,16 @@
     ],
     "entities": [
         {
+            "id": "ai-guidelines",
+            "schema_org_type": "CreativeWork",
+            "relative_path": "knowledge-data/entities/ai-guidelines.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/ai-guidelines/",
+                "de": "https://nationfiles.com/de/knowledge/entity/ai-guidelines/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/ai-guidelines.jsonld/"
+        },
+        {
             "id": "core-hierarchy",
             "schema_org_type": "TechArticle",
             "relative_path": "knowledge-data/entities/core-hierarchy.json",
@@ -66,6 +92,96 @@
                 "de": "https://nationfiles.com/de/knowledge/entity/core-hierarchy/"
             },
             "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/core-hierarchy.jsonld/"
+        },
+        {
+            "id": "country-compare",
+            "schema_org_type": "SoftwareApplication",
+            "relative_path": "knowledge-data/entities/country-compare.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/country-compare/",
+                "de": "https://nationfiles.com/de/knowledge/entity/country-compare/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/country-compare.jsonld/"
+        },
+        {
+            "id": "country-intelligence-dashboard",
+            "schema_org_type": "SoftwareApplication",
+            "relative_path": "knowledge-data/entities/country-intelligence-dashboard.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/country-intelligence-dashboard/",
+                "de": "https://nationfiles.com/de/knowledge/entity/country-intelligence-dashboard/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/country-intelligence-dashboard.jsonld/"
+        },
+        {
+            "id": "country-kpi-snapshot-export",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/country-kpi-snapshot-export.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/country-kpi-snapshot-export/",
+                "de": "https://nationfiles.com/de/knowledge/entity/country-kpi-snapshot-export/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/country-kpi-snapshot-export.jsonld/"
+        },
+        {
+            "id": "data-integration-overview",
+            "schema_org_type": "CreativeWork",
+            "relative_path": "knowledge-data/entities/data-integration-overview.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/data-integration-overview/",
+                "de": "https://nationfiles.com/de/knowledge/entity/data-integration-overview/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/data-integration-overview.jsonld/"
+        },
+        {
+            "id": "economy-vertical",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/economy-vertical.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/economy-vertical/",
+                "de": "https://nationfiles.com/de/knowledge/entity/economy-vertical/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/economy-vertical.jsonld/"
+        },
+        {
+            "id": "expat-metamaps-cluster",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/expat-metamaps-cluster.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/expat-metamaps-cluster/",
+                "de": "https://nationfiles.com/de/knowledge/entity/expat-metamaps-cluster/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/expat-metamaps-cluster.jsonld/"
+        },
+        {
+            "id": "governance-institutions-index",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/governance-institutions-index.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/governance-institutions-index/",
+                "de": "https://nationfiles.com/de/knowledge/entity/governance-institutions-index/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/governance-institutions-index.jsonld/"
+        },
+        {
+            "id": "knowledge-hub-nfkg",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/knowledge-hub-nfkg.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/knowledge-hub-nfkg/",
+                "de": "https://nationfiles.com/de/knowledge/entity/knowledge-hub-nfkg/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/knowledge-hub-nfkg.jsonld/"
+        },
+        {
+            "id": "legal-sources-registry",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/legal-sources-registry.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/legal-sources-registry/",
+                "de": "https://nationfiles.com/de/knowledge/entity/legal-sources-registry/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/legal-sources-registry.jsonld/"
         },
         {
             "id": "lpu-architecture",
@@ -78,6 +194,16 @@
             "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/lpu-architecture.jsonld/"
         },
         {
+            "id": "metamaps",
+            "schema_org_type": "SoftwareApplication",
+            "relative_path": "knowledge-data/entities/metamaps.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/metamaps/",
+                "de": "https://nationfiles.com/de/knowledge/entity/metamaps/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/metamaps.jsonld/"
+        },
+        {
             "id": "naciro",
             "schema_org_type": "SoftwareApplication",
             "relative_path": "knowledge-data/entities/naciro.json",
@@ -88,6 +214,16 @@
             "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/naciro.jsonld/"
         },
         {
+            "id": "nationfile-json",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/nationfile-json.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/nationfile-json/",
+                "de": "https://nationfiles.com/de/knowledge/entity/nationfile-json/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/nationfile-json.jsonld/"
+        },
+        {
             "id": "nationfiles",
             "schema_org_type": "WebSite",
             "relative_path": "knowledge-data/entities/nationfiles.json",
@@ -96,6 +232,16 @@
                 "de": "https://nationfiles.com/de/knowledge/entity/nationfiles/"
             },
             "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/nationfiles.jsonld/"
+        },
+        {
+            "id": "nature-vertical",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/nature-vertical.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/nature-vertical/",
+                "de": "https://nationfiles.com/de/knowledge/entity/nature-vertical/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/nature-vertical.jsonld/"
         },
         {
             "id": "neawolf-media-group",
@@ -116,6 +262,86 @@
                 "de": "https://nationfiles.com/de/knowledge/entity/nfsi/"
             },
             "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/nfsi.jsonld/"
+        },
+        {
+            "id": "publications-corpus",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/publications-corpus.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/publications-corpus/",
+                "de": "https://nationfiles.com/de/knowledge/entity/publications-corpus/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/publications-corpus.jsonld/"
+        },
+        {
+            "id": "publications-hub",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/publications-hub.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/publications-hub/",
+                "de": "https://nationfiles.com/de/knowledge/entity/publications-hub/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/publications-hub.jsonld/"
+        },
+        {
+            "id": "purchasing-calculator",
+            "schema_org_type": "SoftwareApplication",
+            "relative_path": "knowledge-data/entities/purchasing-calculator.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/purchasing-calculator/",
+                "de": "https://nationfiles.com/de/knowledge/entity/purchasing-calculator/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/purchasing-calculator.jsonld/"
+        },
+        {
+            "id": "purchasing-power-index",
+            "schema_org_type": "Dataset",
+            "relative_path": "knowledge-data/entities/purchasing-power-index.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/",
+                "de": "https://nationfiles.com/de/knowledge/entity/purchasing-power-index/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/purchasing-power-index.jsonld/"
+        },
+        {
+            "id": "security-radar",
+            "schema_org_type": "SoftwareApplication",
+            "relative_path": "knowledge-data/entities/security-radar.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/security-radar/",
+                "de": "https://nationfiles.com/de/knowledge/entity/security-radar/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/security-radar.jsonld/"
+        },
+        {
+            "id": "status-reports",
+            "schema_org_type": "Article",
+            "relative_path": "knowledge-data/entities/status-reports.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/status-reports/",
+                "de": "https://nationfiles.com/de/knowledge/entity/status-reports/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/status-reports.jsonld/"
+        },
+        {
+            "id": "validation-verification-report",
+            "schema_org_type": "TechArticle",
+            "relative_path": "knowledge-data/entities/validation-verification-report.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/validation-verification-report/",
+                "de": "https://nationfiles.com/de/knowledge/entity/validation-verification-report/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/validation-verification-report.jsonld/"
+        },
+        {
+            "id": "whitepaper-algorithmic-geopolitics-nfsi",
+            "schema_org_type": "ScholarlyArticle",
+            "relative_path": "knowledge-data/entities/whitepaper-algorithmic-geopolitics-nfsi.json",
+            "canonical_html_urls": {
+                "en": "https://nationfiles.com/en/knowledge/entity/whitepaper-algorithmic-geopolitics-nfsi/",
+                "de": "https://nationfiles.com/de/knowledge/entity/whitepaper-algorithmic-geopolitics-nfsi/"
+            },
+            "export_urls_json_ld_en": "https://cdn.nationfiles.com/en/knowledge/export/entity/whitepaper-algorithmic-geopolitics-nfsi.jsonld/"
         }
     ],
     "faqs": [
@@ -158,9 +384,21 @@
     ],
     "glossary": {
         "relative_path": "knowledge-data/glossary.json",
-        "term_count": 25
+        "term_count": 34
     },
     "markdown_entities": [
+        {
+            "entity_id": "ai-guidelines",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
         {
             "entity_id": "core-hierarchy",
             "markdown_locales": [
@@ -174,7 +412,103 @@
             ]
         },
         {
+            "entity_id": "country-compare",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "country-kpi-snapshot-export",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "data-integration-overview",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "economy-vertical",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "expat-metamaps-cluster",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "knowledge-hub-nfkg",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "legal-sources-registry",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
             "entity_id": "lpu-architecture",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "metamaps",
             "markdown_locales": [
                 "ar",
                 "de",
@@ -210,6 +544,18 @@
             ]
         },
         {
+            "entity_id": "nature-vertical",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
             "entity_id": "neawolf-media-group",
             "markdown_locales": [
                 "ar",
@@ -223,6 +569,78 @@
         },
         {
             "entity_id": "nfsi",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "publications-corpus",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "publications-hub",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "purchasing-calculator",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "status-reports",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "validation-verification-report",
+            "markdown_locales": [
+                "ar",
+                "de",
+                "en",
+                "es",
+                "fr",
+                "ja",
+                "pt"
+            ]
+        },
+        {
+            "entity_id": "whitepaper-algorithmic-geopolitics-nfsi",
             "markdown_locales": [
                 "ar",
                 "de",

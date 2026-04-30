@@ -8,37 +8,42 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/neawolf-media-group/pt.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/neawolf-media-group/"
+nf_canonical_html_url: "https://nationfiles.com/pt/knowledge/entity/neawolf-media-group/"
 nf_markdown_lang_file: "pt"
 ---
 # Neawolf Media Group
 
-## Função
+## Papel no produto
 
-A **Neawolf Media Group** é a **organização juridicamente identificada** por trás da NationFiles. No grafo, representa **governança de editora**: aviso legal, identificadores fiscais e vínculo aos produtos digitais (NationFiles, Naciro Engine, LPU Architecture, NFSI).
+A Neawolf Media Group é a **editora e operadora** da **NationFiles** — a plataforma de **inteligência geopolítica** (análise por país, mapas, NFSI, motor Naciro). «Neawolf» indica **quem explora** esta pipeline de análise e dados — não só um domínio.
 
-Dados legais autoritativos estão no **legal notice**; esta página aponta para a URL canônica sem replicar o imprint integral.
+## Quem está por detrás — sem retórica vazia
 
-## Relações (extrato)
+A **Neawolf Media Group** é uma **empresa unipessoal alemã** sediada em **Aachen** (Reinhardstr. 1b). **Sven Schmidt** é a pessoa indicada como responsável no aviso legal. O negócio regista-se **a meados de 2025**; a plataforma pública **NationFiles** entrou em linha **no início de 2026**. Quando lê «Neawolf», deve conseguir identificar uma **morada**, uma **pessoa responsável** e **informação legal completa** nas páginas correspondentes — não uma firma-fachada nem um projecto de dados anónimo.
 
-| Relação | Destino | Significado |
-|---------|---------|-------------|
-| `operates` | NationFiles | Operação do site multilíngue |
-| `develops` | Naciro Engine, LPU Architecture | Responsabilidade de desenvolvimento documentada |
-| `publishes` | NFSI | Publicação do indicador descrito como dataset |
+## Missão numa frase
 
-As arestas são **papéis**, não alegações sobre quadro de pessoal ou segredo algorítmico.
+A Neawolf publica e opera a **NationFiles**: uma plataforma de informação e análise geopolítica com dossiers por país, mapas, o **NationFiles Stability Index (NFSI)** e outros indicadores rastreáveis. O objectivo é **orientar** leitores, jornalistas, investigadores e utilizadores institucionais — não entretenimento com feeds brutos, mas avaliações **estruturadas e documentadas**, ligadas a fontes e páginas metodológicas.
 
-## Licença
+## O que pertence ao mesmo conjunto — explicado de forma directa
 
-Exportações seguem **CC BY-ND 4.0** conforme páginas legais. DOIs aparecem em `citation_doi` quando houver artefatos de pesquisa.
+A mesma família de produtos inclui o **motor Naciro** (camada de análise e cálculo que alimenta entre outros o NFSI), a **arquitectura LPU** tal como documentada publicamente e o próprio **NFSI** como pontuação publicada 0–100. Esta página resume **papéis**; o detalhe técnico está nos artigos knowledge correspondentes e nas páginas legais e de metodologia.
 
-## Fora de escopo
+## Responsabilidade e liderança
 
-Sem marketing de liderança, sem KPI financeiro dinâmico, sem dados pessoais além do About/legal público.
+Nos materiais públicos, **Sven Schmidt** lidera o **trabalho técnico e arquitectónico** de **Naciro** e **NationFiles**; como **Sven Neawolf** também é visível noutros domínios (incluindo música). Para entender a plataforma, importa a combinação anunciada de **formação reconhecida em TI** e experiência em ambientes **críticos em termos de erros e segurança**. Referências científicas (**ORCID**) e **DOI Zenodo** na página Company.
 
-## Referências
+## Transparência em vez de «caixa negra»
 
-- [Legal Notice](https://nationfiles.com/pt/legal/legal-notice/)
-- [Company About](https://nationfiles.com/en/company/about/)
+A NationFiles funciona com **metodologia documentada**, **registo de fontes** e o **relatório Validation & Verification (VVR)**. Textos curtos e exportações neste knowledge estão sob **CC BY‑ND 4.0** onde as páginas legais o indicarem. Uso automatizado e citação: **`llms.txt`**. NIF-IVA e restantes identificadores: **Legal Notice / aviso legal**.
+
+## Contacto e ligações
+
+- Geral: **info@nationfiles.com**
+- IA e licenciamento: **ai-questions@nationfiles.com**
+- Privacidade: **privacy@nationfiles.com**
+
+- [Aviso legal](https://nationfiles.com/pt/legal/legal-notice/)
+- [Empresa — Sobre nós](https://nationfiles.com/pt/company/about/)
+- [Knowledge Hub](https://nationfiles.com/pt/knowledge/)
 - [llms.txt](https://nationfiles.com/llms.txt)

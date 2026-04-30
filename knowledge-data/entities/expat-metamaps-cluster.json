@@ -1,0 +1,1269 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "expat-metamaps-cluster",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T08:34:29Z",
+    "topics": [
+        "expat-metamaps-cluster",
+        "relocation",
+        "expatriates",
+        "quality-of-life",
+        "metamaps",
+        "purchasing-power",
+        "ppi",
+        "megacities",
+        "nuclear-power",
+        "security-maps",
+        "international-mobility"
+    ],
+    "aliases": [
+        "Expat Cluster",
+        "Expat-Cluster",
+        "Cluster expatriés",
+        "Cluster expatriados",
+        "Expat metamap cluster",
+        "Relocation cluster NationFiles",
+        "Meta-Karten Expat Kaufkraft",
+        "Metamaps und Kaufkraft Umzug",
+        "عنقود المغتربين",
+        "駐在員メタマップ"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles expatriate metamap cluster: a curated reading path in the knowledge graph—not a standalone relocation score—that asks households and employers to view megacity and nuclear-siting metamaps from {{metamaps}} alongside the {{purchasing-power-index}} macro bundle and, when cash flows are modeled, {{purchasing-calculator}}, before committing to a country. Crime and enforcement-sensitive geography follows the channel rules documented for {{security-radar}}; the cluster states only that spatial risk reading and purchasing-power reading belong in the same decision, not merged into one opaque number.",
+            "depends_on": [
+                "metamaps",
+                "purchasing-power-index",
+                "purchasing-calculator",
+                "security-radar",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Meta maps hub",
+                    "url": "https://nationfiles.com/en/map/metamap/"
+                },
+                {
+                    "label": "Purchasing Power Index (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                },
+                {
+                    "label": "Purchasing calculator (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-calculator/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/de/map/metamap/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/de/knowledge/entity/purchasing-power-index/"
+                    },
+                    {
+                        "label": "Purchasing calculator (Knowledge)",
+                        "url": "https://nationfiles.com/de/knowledge/entity/purchasing-calculator/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/en/map/metamap/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                    },
+                    {
+                        "label": "Purchasing calculator (Knowledge)",
+                        "url": "https://nationfiles.com/en/knowledge/entity/purchasing-calculator/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/fr/map/metamap/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/fr/knowledge/entity/purchasing-power-index/"
+                    },
+                    {
+                        "label": "Purchasing calculator (Knowledge)",
+                        "url": "https://nationfiles.com/fr/knowledge/entity/purchasing-calculator/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/es/map/metamap/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/es/knowledge/entity/purchasing-power-index/"
+                    },
+                    {
+                        "label": "Purchasing calculator (Knowledge)",
+                        "url": "https://nationfiles.com/es/knowledge/entity/purchasing-calculator/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/pt/map/metamap/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/pt/knowledge/entity/purchasing-power-index/"
+                    },
+                    {
+                        "label": "Purchasing calculator (Knowledge)",
+                        "url": "https://nationfiles.com/pt/knowledge/entity/purchasing-calculator/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/ar/map/metamap/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/ar/knowledge/entity/purchasing-power-index/"
+                    },
+                    {
+                        "label": "Purchasing calculator (Knowledge)",
+                        "url": "https://nationfiles.com/ar/knowledge/entity/purchasing-calculator/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/ja/map/metamap/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/ja/knowledge/entity/purchasing-power-index/"
+                    },
+                    {
+                        "label": "Purchasing calculator (Knowledge)",
+                        "url": "https://nationfiles.com/ja/knowledge/entity/purchasing-calculator/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "NationFiles expatriate metamap cluster: a curated reading path in the knowledge graph—not a standalone relocation score—that asks households and employers to view megacity and nuclear-siting metamaps from {{metamaps}} alongside the {{purchasing-power-index}} macro bundle and, when cash flows are modeled, {{purchasing-calculator}}, before committing to a country. Crime and enforcement-sensitive geography follows the channel rules documented for {{security-radar}}; the cluster states only that spatial risk reading and purchasing-power reading belong in the same decision, not merged into one opaque number.",
+                "de": "**NationFiles Expat-Cluster:** ein **kuratierter Lesepfad** im Knowledge Graph — **kein** eigenständiger Relocation-Score — der Haushalte und Arbeitgeber dazu **auffordert**, Megacity- und Kernkraft-**Meta-Karten** aus {{metamaps}} **zusammen** mit dem **PPI**‑Makrobündel von {{purchasing-power-index}} und — wenn **Cashflows** modelliert werden — {{purchasing-calculator}} **vor** dem Ländercommit zu lesen. **Kriminalitäts- und Durchsetzungsgeografie** folgt den **Kanalregeln** aus {{security-radar}}; der Cluster **behauptet** nur: **räumliche** Risiko-**Lesart** und **kaufkraftbezogene** Lesart **gehören** in **dieselbe** Entscheidung — **nicht** in **eine** undurchsichtige Einzelzahl.",
+                "fr": "**Cluster expatriés NationFiles :** **parcours de lecture** dans le graphe — **pas** un score autonome de **relocate** — invitant ménages et employeurs à lire les **méta-cartes mégapoles et nucléaire** de {{metamaps}} **avec** le **paquet macro PPI** de {{purchasing-power-index}} et, pour modéliser les **cash-flows**, {{purchasing-calculator}}, **avant** d’engager le pays. La géographie **pénale/enforcement** suit {{security-radar}} ; on affirme seulement que **lecture spatiale** et **pouvoir d’achat** vont dans la **même** réunion — **pas** fusionnées en un **chiffre** opaque.",
+                "es": "**Cluster expatriados NationFiles:** **ruta de lectura** curada en el grafo — **no** una puntuación autónoma de **reubicación** — que pide a hogares y empleadores ver **metamapas** de megaciudades y **nuclear** de {{metamaps}} junto al **macro PPI** de {{purchasing-power-index}} y, al modelar **flujos**, {{purchasing-calculator}}, **antes** de decidir el país. La geografía **penal/ejecución** sigue {{security-radar}}; solo se dice que **mapa** y **poder adquisitivo** comparten **decisión** — **sin** fundirse en un **número** opaco.",
+                "pt": "**Cluster expatriados NationFiles:** **percurso de leitura** no grafo — **não** um score autónomo de **relocação** — pedindo a agregados e empregadores metamapas **megacidades e nuclear** de {{metamaps}} com o **macro PPI** de {{purchasing-power-index}} e, ao modelar **fluxos**, {{purchasing-calculator}}, **antes** de fechar o país. Geografia **penal/execução** segue {{security-radar}}; apenas se afirma que **mapa** e **poder de compra** entram na **mesma** decisão — **sem** fundir num **número** opaco.",
+                "ar": "**عنقود المغتربين NationFiles:** **مسار قراءة** في بيان المعرفة — **ليس** درجة انتقال **مستقلة** — يطلب من الأسر والمشغلين قراءة **ميتامابا** المدن الضخمة والنووي من {{metamaps}} مع **حزمة PPI** من {{purchasing-power-index}} وعند نمذجة **التدفقات** {{purchasing-calculator}} **قبل** الالتزام بالبلد. جغرافيا **الجريم والإنفاذ** تتبع {{security-radar}}؛ يُقال فقط إن **القراءة المكانية** و**قوة الشراء** في **قرار واحد** — **دون** دمج رقم **غامض**.",
+                "ja": "NationFiles **駐在員メタマップ・クラスター**：Knowledge Graph 上の**編集読み**であり**単独の移住スコアではない**。{{metamaps}} の**巨大都市・原発立地**メタマップと {{purchasing-power-index}} の **PPI** マクロ束、**キャッシュフロー**を組む場合は {{purchasing-calculator}} を、国を決める**前**に**並読**させる。**犯罪・執行**寄りの地理は {{security-radar}} の**チャネル規則**に従う；本項が言うのは**空間リスク**の読みと**購買力**の読みが**同じ判断**に入るべきで、**秘匿の単一数字**に**潰すな**という一点だけ。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Dual-axis preparation: geographic contrast from stacked metamap layers (urban mass and documented nuclear plant footprints) set against the slow-moving purchasing-power parity bundle behind {{purchasing-power-index}}, with current FX where {{naciro}} surfaces it—read together, never averaged into a single proprietary KPI.",
+            "depends_on": [
+                "metamaps",
+                "purchasing-power-index",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Megacities metamap",
+                    "url": "https://nationfiles.com/en/map/metamap/megacities/"
+                },
+                {
+                    "label": "Nuclear power metamap",
+                    "url": "https://nationfiles.com/en/map/metamap/nuclearpower/"
+                },
+                {
+                    "label": "Purchasing Power Index (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Megacities metamap",
+                        "url": "https://nationfiles.com/de/map/metamap/megacities/"
+                    },
+                    {
+                        "label": "Nuclear power metamap",
+                        "url": "https://nationfiles.com/de/map/metamap/nuclearpower/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/de/knowledge/entity/purchasing-power-index/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Megacities metamap",
+                        "url": "https://nationfiles.com/en/map/metamap/megacities/"
+                    },
+                    {
+                        "label": "Nuclear power metamap",
+                        "url": "https://nationfiles.com/en/map/metamap/nuclearpower/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Megacities metamap",
+                        "url": "https://nationfiles.com/fr/map/metamap/megacities/"
+                    },
+                    {
+                        "label": "Nuclear power metamap",
+                        "url": "https://nationfiles.com/fr/map/metamap/nuclearpower/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/fr/knowledge/entity/purchasing-power-index/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Megacities metamap",
+                        "url": "https://nationfiles.com/es/map/metamap/megacities/"
+                    },
+                    {
+                        "label": "Nuclear power metamap",
+                        "url": "https://nationfiles.com/es/map/metamap/nuclearpower/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/es/knowledge/entity/purchasing-power-index/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Megacities metamap",
+                        "url": "https://nationfiles.com/pt/map/metamap/megacities/"
+                    },
+                    {
+                        "label": "Nuclear power metamap",
+                        "url": "https://nationfiles.com/pt/map/metamap/nuclearpower/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/pt/knowledge/entity/purchasing-power-index/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Megacities metamap",
+                        "url": "https://nationfiles.com/ar/map/metamap/megacities/"
+                    },
+                    {
+                        "label": "Nuclear power metamap",
+                        "url": "https://nationfiles.com/ar/map/metamap/nuclearpower/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/ar/knowledge/entity/purchasing-power-index/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Megacities metamap",
+                        "url": "https://nationfiles.com/ja/map/metamap/megacities/"
+                    },
+                    {
+                        "label": "Nuclear power metamap",
+                        "url": "https://nationfiles.com/ja/map/metamap/nuclearpower/"
+                    },
+                    {
+                        "label": "Purchasing Power Index (Knowledge)",
+                        "url": "https://nationfiles.com/ja/knowledge/entity/purchasing-power-index/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "Dual-axis preparation: geographic contrast from stacked metamap layers (urban mass and documented nuclear plant footprints) set against the slow-moving purchasing-power parity bundle behind {{purchasing-power-index}}, with current FX where {{naciro}} surfaces it—read together, never averaged into a single proprietary KPI.",
+                "de": "**Zwei-Achsen-Vorbereitung:** **geografischer** Kontrast aus gestapelten **Meta-Karten** (urbane Masse und **dokumentierte** Kernkraft-Standorte) **gegenüber** dem **langsam** wandernden KKP-Makrobündel hinter {{purchasing-power-index}}, dazu **aktuelle** FX wo **{{naciro}}** sie ausgibt — **zusammen** lesen, **nie** zu **einem** proprietären **Ein-KPI** **gemittelt**.",
+                "fr": "Préparation **à deux axes** : contraste géographique via **méta-cartes** empilées (masse urbaine et **sites nucléaires** documentés) confronté au **lent** paquet **PPA** derrière {{purchasing-power-index}}, avec **FX** actuel quand **{{naciro}}** l’affiche — lecture **conjuguée**, **jamais** moyennée en un **KPI** propriétaire **unique**.",
+                "es": "Preparación **dual**: contraste geográfico en **metamapas** (masa urbana y **nuclear** documentada) frente al macro **PPA** **lento** de {{purchasing-power-index}}, con **FX** actual donde **{{naciro}}** lo muestra — **lectura conjunta**, **nunca** promediada en un **KPI** opaco.",
+                "pt": "Preparação **dual**: contraste geográfico em **metamapas** (massa urbana e **nuclear** documentada) face ao macro **PPC** **lento** de {{purchasing-power-index}}, com **FX** atual onde **{{naciro}}** expõe — **leitura conjunta**, **nunca** média num **KPI** opaco.",
+                "ar": "إعداد **ثنائي المحور**: تباين جغرافي من طبقات **ميتاماب** مكدّسة (كتلة حضرية و**نووي** موثّق) مقابل حزمة **تعادل شراء** **البطيئة** خلف {{purchasing-power-index}}، مع **صرف** حي حيث يعرضه **{{naciro}}** — قراءة **معًا**، **لا** تُدمج في **مؤشر شركة واحد**.",
+                "ja": "**二軸**の下準備：{{metamaps}} の積層（都市の厚みと**記録上**の原発立地）の**地理的コントラスト**を、{{purchasing-power-index}} 背後の**ゆっくり動く** PPP 束と対に読む。**{{naciro}}** が出す**直近 FX**も**別物**として併読し、**1 つの社内 KPI** に**平均**しない。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Start from the countries hub for the candidate ISO, enable megacity and nuclear metamap layers to read proximity and infrastructure siting, consult security-map methodology where crime matters, then open the PPI fields wired on the profile and optionally run {{purchasing-calculator}} with explicit local cost lines.",
+            "depends_on": [
+                "metamaps",
+                "purchasing-power-index",
+                "purchasing-calculator",
+                "security-radar",
+                "country-intelligence-dashboard"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                },
+                {
+                    "label": "Security maps hub",
+                    "url": "https://nationfiles.com/en/map/security/"
+                },
+                {
+                    "label": "Meta maps hub",
+                    "url": "https://nationfiles.com/en/map/metamap/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Countries Hub",
+                        "url": "https://nationfiles.com/de/countries/"
+                    },
+                    {
+                        "label": "Security maps hub",
+                        "url": "https://nationfiles.com/de/map/security/"
+                    },
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/de/map/metamap/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Countries Hub",
+                        "url": "https://nationfiles.com/en/countries/"
+                    },
+                    {
+                        "label": "Security maps hub",
+                        "url": "https://nationfiles.com/en/map/security/"
+                    },
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/en/map/metamap/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Countries Hub",
+                        "url": "https://nationfiles.com/fr/countries/"
+                    },
+                    {
+                        "label": "Security maps hub",
+                        "url": "https://nationfiles.com/fr/map/security/"
+                    },
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/fr/map/metamap/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Countries Hub",
+                        "url": "https://nationfiles.com/es/countries/"
+                    },
+                    {
+                        "label": "Security maps hub",
+                        "url": "https://nationfiles.com/es/map/security/"
+                    },
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/es/map/metamap/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Countries Hub",
+                        "url": "https://nationfiles.com/pt/countries/"
+                    },
+                    {
+                        "label": "Security maps hub",
+                        "url": "https://nationfiles.com/pt/map/security/"
+                    },
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/pt/map/metamap/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Countries Hub",
+                        "url": "https://nationfiles.com/ar/countries/"
+                    },
+                    {
+                        "label": "Security maps hub",
+                        "url": "https://nationfiles.com/ar/map/security/"
+                    },
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/ar/map/metamap/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Countries Hub",
+                        "url": "https://nationfiles.com/ja/countries/"
+                    },
+                    {
+                        "label": "Security maps hub",
+                        "url": "https://nationfiles.com/ja/map/security/"
+                    },
+                    {
+                        "label": "Meta maps hub",
+                        "url": "https://nationfiles.com/ja/map/metamap/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "Start from the countries hub for the candidate ISO, enable megacity and nuclear metamap layers to read proximity and infrastructure siting, consult security-map methodology where crime matters, then open the PPI fields wired on the profile and optionally run {{purchasing-calculator}} with explicit local cost lines.",
+                "de": "Vom **Countries-Hub** zur **ISO** des Kandidaten, **Megacity-** und **Kernkraft-**Meta-Karten einschalten um **Nähe** und **Infrastruktur**-Siting zu lesen, wo **Kriminalität** zählt die **Sicherheits-Karten-Methodik** konsultieren, danach die **PPI-Felder** des **Profils** öffnen und optional {{purchasing-calculator}} mit **expliziten** lokalen **Kostenzeilen** fahren.",
+                "fr": "Partir du **hub pays** pour l’ISO candidate, activer méta-cartes **mégapoles** et **nucléaire** pour lire **proximité** et **implantation**, consulter la méthodo **cartes sécurité** si la **criminalité** compte, ouvrir enfin les champs **PPI** du profil et lancer si besoin {{purchasing-calculator}} avec **lignes de coût locales explicites**.",
+                "es": "Desde el **hub de países** con la ISO candidata, activar metamapas **megaciudades** y **nuclear** para leer **proximidad** e **infraestructura**, consultar metodología de **mapas seguridad** si importa la **delincuencia**, abrir campos **PPI** del perfil y, opcionalmente, {{purchasing-calculator}} con **líneas de coste locales explícitas**.",
+                "pt": "A partir do **hub países** com a ISO candidata, ligar metamapas **megacidades** e **nuclear** para ler **proximidade** e **infraestrutura**, consultar metodologia dos **mapas segurança** se **crime** importa, abrir campos **PPI** do perfil e opcionalmente {{purchasing-calculator}} com **linhas de custo locais explícitas**.",
+                "ar": "من **مركز الدول** لمرشح ISO، تفعيل ميتامابا **المدن الضخمة** و**النووي** لقراءة **القرب** و**تموضع البنية**، مراجعة منهجية **خرائط الأمن** حيث تهم **الجريمة**، ثم فتح حقول **PPI** في الملف وتشغيل {{purchasing-calculator}} اختياريًا ب**بنود تكلفة محلية صريحة**.",
+                "ja": "候補 **ISO** で国ハブから入り、**巨大都市**と**原発**メタマップで**近接・立地**を読む。**犯罪**が論点ならセキュリティ地図の**手法**を参照し、プロフィールの **PPI** 配線を開く。必要なら**明示**した現地コスト行で {{purchasing-calculator}} を回す。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Published metamap routes under {{metamaps}}, {{purchasing-power-index}} connector documentation, {{security-radar}} channel separation for enforcement- versus strategy-shaped maps, {{country-intelligence-dashboard}} layouts when NFSI and security widgets share an ISO page, {{naciro}} FX aggregation described on company pages, and {{nationfile-json}} exports for ISO-aligned bundles.",
+            "depends_on": [
+                "metamaps",
+                "purchasing-power-index",
+                "security-radar",
+                "country-intelligence-dashboard",
+                "naciro",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Nationfile JSON (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/nationfile-json/"
+                },
+                {
+                    "label": "Knowledge hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Naciro AI",
+                        "url": "https://nationfiles.com/de/company/naciro-ai/"
+                    },
+                    {
+                        "label": "Nationfile JSON (Knowledge)",
+                        "url": "https://nationfiles.com/de/knowledge/entity/nationfile-json/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/de/knowledge/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Naciro AI",
+                        "url": "https://nationfiles.com/en/company/naciro-ai/"
+                    },
+                    {
+                        "label": "Nationfile JSON (Knowledge)",
+                        "url": "https://nationfiles.com/en/knowledge/entity/nationfile-json/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/en/knowledge/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Naciro AI",
+                        "url": "https://nationfiles.com/fr/company/naciro-ai/"
+                    },
+                    {
+                        "label": "Nationfile JSON (Knowledge)",
+                        "url": "https://nationfiles.com/fr/knowledge/entity/nationfile-json/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/fr/knowledge/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Naciro AI",
+                        "url": "https://nationfiles.com/es/company/naciro-ai/"
+                    },
+                    {
+                        "label": "Nationfile JSON (Knowledge)",
+                        "url": "https://nationfiles.com/es/knowledge/entity/nationfile-json/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/es/knowledge/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Naciro AI",
+                        "url": "https://nationfiles.com/pt/company/naciro-ai/"
+                    },
+                    {
+                        "label": "Nationfile JSON (Knowledge)",
+                        "url": "https://nationfiles.com/pt/knowledge/entity/nationfile-json/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/pt/knowledge/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Naciro AI",
+                        "url": "https://nationfiles.com/ar/company/naciro-ai/"
+                    },
+                    {
+                        "label": "Nationfile JSON (Knowledge)",
+                        "url": "https://nationfiles.com/ar/knowledge/entity/nationfile-json/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/ar/knowledge/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Naciro AI",
+                        "url": "https://nationfiles.com/ja/company/naciro-ai/"
+                    },
+                    {
+                        "label": "Nationfile JSON (Knowledge)",
+                        "url": "https://nationfiles.com/ja/knowledge/entity/nationfile-json/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/ja/knowledge/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "Published metamap routes under {{metamaps}}, {{purchasing-power-index}} connector documentation, {{security-radar}} channel separation for enforcement- versus strategy-shaped maps, {{country-intelligence-dashboard}} layouts when NFSI and security widgets share an ISO page, {{naciro}} FX aggregation described on company pages, and {{nationfile-json}} exports for ISO-aligned bundles.",
+                "de": "Veröffentlichte **Metamap-Routen** unter {{metamaps}}, **Connector-Dokumentation** zu {{purchasing-power-index}}, **Kanal-Trennung** bei {{security-radar}} für **Ermittlungs-** vs. **strategische** Karten, **Layouts** von {{country-intelligence-dashboard}} wenn {{nfsi}}- und Sicherheits-Widgets eine **ISO-Seite** teilen, **FX-Aggregation** von **{{naciro}}** laut **Company**-Texten, **Exporte** {{nationfile-json}} für **ISO**-alignierte Bündel.",
+                "fr": "Routes **metamap** publiées sous {{metamaps}}, documentation **connecteurs** {{purchasing-power-index}}, **séparation de canaux** {{security-radar}} pour cartes **répression** vs. **stratégie**, grilles {{country-intelligence-dashboard}} lorsque widgets {{nfsi}} et sécurité **partagent** une page ISO, agrégation **FX** via **{{naciro}}** selon pages **entreprise**, exports {{nationfile-json}} pour **paquets ISO**.",
+                "es": "Rutas **metamapa** bajo {{metamaps}}, documentación de **conectores** {{purchasing-power-index}}, **separación de canales** {{security-radar}} para mapas **ejecución** vs. **estrategia**, maquetaciones {{country-intelligence-dashboard}} cuando widgets **{{nfsi}}** y seguridad **comparten** página ISO, agregación **FX** de **{{naciro}}** en textos **empresa**, exportaciones {{nationfile-json}} alineadas **ISO**.",
+                "pt": "Rotas **metamapa** publicadas em {{metamaps}}, documentação **conectores** {{purchasing-power-index}}, **separação de canais** {{security-radar}} para mapas **execução** vs. **estratégia**, layouts {{country-intelligence-dashboard}} quando widgets **{{nfsi}}** e segurança **partilham** página ISO, agregação **FX** via **{{naciro}}** em páginas **empresa**, exportações {{nationfile-json}} alinhadas **ISO**.",
+                "ar": "مسارات **ميتاماب** منشورة تحت {{metamaps}}، وثائق **موصلات** {{purchasing-power-index}}، **فصل قنوات** {{security-radar}} لخرائط **إنفاذ** مقابل **استراتيجية**، تخطيطات {{country-intelligence-dashboard}} عند اشتراك عناصر **{{nfsi}}** وأمن في **صفحة ISO**، تجميع **FX** عبر **{{naciro}}** كما في نصوص **الشركة**، تصديرات {{nationfile-json}} بمحاذاة **ISO**.",
+                "ja": "{{metamaps}} 上の公開メタマップ経路、{{purchasing-power-index}} のコネクタ文書、{{security-radar}} の**執行系／戦略系**地図のチャネル分離、{{country-intelligence-dashboard}} で **{{nfsi}}** とセキュリティが**同一 ISO**を分かち合うレイアウト、**{{naciro}}** の **FX** 集約（会社ページ記述）、**ISO** 整合の {{nationfile-json}} エクスポート。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "A relocation checklist mindset: map-visible questions about urban concentration and documented nuclear proximity, registry-backed security reading where the methodology allows, and PPI-plus-FX-aware cost framing—outputs stay illustrative; users must add legal, tax, and benefits detail themselves.",
+            "depends_on": [
+                "purchasing-power-index",
+                "metamaps",
+                "ai-guidelines"
+            ],
+            "sources": [
+                {
+                    "label": "Country Intelligence Dashboard (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/country-intelligence-dashboard/"
+                },
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Country Intelligence Dashboard (Knowledge)",
+                        "url": "https://nationfiles.com/de/knowledge/entity/country-intelligence-dashboard/"
+                    },
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/de/ai-guidelines/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Country Intelligence Dashboard (Knowledge)",
+                        "url": "https://nationfiles.com/en/knowledge/entity/country-intelligence-dashboard/"
+                    },
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/en/ai-guidelines/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Country Intelligence Dashboard (Knowledge)",
+                        "url": "https://nationfiles.com/fr/knowledge/entity/country-intelligence-dashboard/"
+                    },
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/fr/ai-guidelines/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Country Intelligence Dashboard (Knowledge)",
+                        "url": "https://nationfiles.com/es/knowledge/entity/country-intelligence-dashboard/"
+                    },
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/es/ai-guidelines/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Country Intelligence Dashboard (Knowledge)",
+                        "url": "https://nationfiles.com/pt/knowledge/entity/country-intelligence-dashboard/"
+                    },
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/pt/ai-guidelines/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Country Intelligence Dashboard (Knowledge)",
+                        "url": "https://nationfiles.com/ar/knowledge/entity/country-intelligence-dashboard/"
+                    },
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/ar/ai-guidelines/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Country Intelligence Dashboard (Knowledge)",
+                        "url": "https://nationfiles.com/ja/knowledge/entity/country-intelligence-dashboard/"
+                    },
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/ja/ai-guidelines/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "A relocation checklist mindset: map-visible questions about urban concentration and documented nuclear proximity, registry-backed security reading where the methodology allows, and PPI-plus-FX-aware cost framing—outputs stay illustrative; users must add legal, tax, and benefits detail themselves.",
+                "de": "**Checklisten-Denkweise** für Umzüge: **karten**sichtbare Fragen zu **urbaner** Konzentration und **dokumentierter** Kernkraft-**Nähe**, **registergestützte** Sicherheitslecture **wo** die Methodik es **erlaubt**, und **PPI-plus-FX**-bewusste **Kosten**-Einordnung — Ergebnisse bleiben **illustrativ**; **Rechts-, Steuer- und Benefits-Detail** müssen Nutzer **selbst** ergänzen.",
+                "fr": "Esprit **check-list** : questions **cartographiques** sur concentration urbaine et **proximité nucléaire** documentée, lecture **sécurité** **fichiers** quand la méthodo le **permet**, cadrage **coût** **PPI+FX** — sorties **illustratives** ; détail **juridique, fiscal, avantages** à **ajouter** soi-même.",
+                "es": "Mentalidad **lista de control** : preguntas **cartográficas** sobre concentración urbana y **proximidad nuclear** documentada, lectura **seguridad** **registro** donde la metodología **permite**, marco **coste** **PPI+FX** — salidas **ilustrativas** ; **legal, fiscal, beneficios** a **aportar** por el usuario.",
+                "pt": "Mentalidade **check-list** : perguntas **cartográficas** sobre concentração urbana e **proximidade nuclear** documentada, leitura **segurança** **registo** onde a metodologia **permite**, enquadramento **custo** **PPI+FX** — resultados **ilustrativos** ; **legal, fiscal, benefícios** por **adicionar** pelo utilizador.",
+                "ar": "عقلية **قائمة تحقق**: أسئلة **خرطية** عن التكتل الحضري و**قرب نووي** موثّق، قراءة **أمن** **سجلية** حيث تسمح **المنهجية**، إطار **تكلفة** **PPI+FX** — مخرجات **توضيحية**؛ **قانون وضريبة ومزايا** يضيفها **المستخدم**.",
+                "ja": "**チェックリスト**思考：都市集中と**記録上**の原発**近接**の地図上の問い、方法が許すところの**登録**に基づく安全読み、**PPI+FX** を意識したコスト枠——出力量は**例示**に留まり、**法・税・福利**は利用者が**足す**。"
+            }
+        },
+        {
+            "key": "limitations",
+            "value": "Not immigration, tax, or employer-of-record advice; metamap overlays are not ground-truth field verification; PPI inherits upstream revision schedules from documented providers; automated republication must cite canonical HTTPS pages per {{ai-guidelines}}.",
+            "depends_on": [
+                "ai-guidelines",
+                "purchasing-power-index",
+                "metamaps"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/de/ai-guidelines/"
+                    },
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/de/legal/sources/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/en/ai-guidelines/"
+                    },
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/en/legal/sources/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/fr/ai-guidelines/"
+                    },
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/fr/legal/sources/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/es/ai-guidelines/"
+                    },
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/es/legal/sources/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/pt/ai-guidelines/"
+                    },
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/pt/legal/sources/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/ar/ai-guidelines/"
+                    },
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/ar/legal/sources/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "AI Guidelines",
+                        "url": "https://nationfiles.com/ja/ai-guidelines/"
+                    },
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/ja/legal/sources/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "Not immigration, tax, or employer-of-record advice; metamap overlays are not ground-truth field verification; PPI inherits upstream revision schedules from documented providers; automated republication must cite canonical HTTPS pages per {{ai-guidelines}}.",
+                "de": "**Kein** Migrations-, Steuer- oder **EOR**-Rat; **Metamap**-Overlays sind **keine** Feldverifikation; **PPI** erbt **Revisions**-Rhythmen **dokumentierter** Upstream-Anbieter; **maschinelle** Veröffentlichung: **kanonische** HTTPS-Seiten laut {{ai-guidelines}} **zitieren**.",
+                "fr": "**Pas** conseil immigration, fiscal ni **employer of record** ; overlays **metamap** ≠ vérification terrain ; **PPI** hérite des **cycles de révision** des fournisseurs documentés ; republication auto : pages **HTTPS canoniques** selon {{ai-guidelines}}.",
+                "es": "**No** asesoría migratoria, fiscal ni **EOR**; overlays **metamapa** ≠ verificación en campo ; **PPI** hereda **revisiones** de proveedores documentados ; republicación automática: **HTTPS** canónicos según {{ai-guidelines}}.",
+                "pt": "**Não** aconselhamento imigração, fiscal nem **EOR**; sobreposições **metamapa** ≠ verificação em campo ; **PPI** herda **revisões** de fornecedores documentados ; republicação automática: **HTTPS** canónicos segundo {{ai-guidelines}}.",
+                "ar": "**لا** استشارة هجرة أو ضرائب أو **صاحب عمل قانوني**؛ طبقات **ميتاماب** **ليست** تحققًا ميدانيًا؛ **PPI** يرث **دورات مراجعة** مزوّدين موثّقين؛ إعادة النشر الآلي: صفحات **HTTPS** مرجعية وفق {{ai-guidelines}}.",
+                "ja": "**移民・税・EOR 助長ではない**；メタマップ**オーバーレイは現地実査の代替ではない**；**PPI** は文書化された**上流**の改定サイクルを**引き継ぐ**；自動再掲は {{ai-guidelines}} に従い**正規 HTTPS** を引用する。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/de/knowledge/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/en/knowledge/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/fr/knowledge/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/es/knowledge/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/pt/knowledge/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/ar/knowledge/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/ja/knowledge/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "metamaps"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-calculator"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nature-vertical"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "security-radar"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        }
+    ],
+    "faq_refs": [],
+    "blocks": [
+        {
+            "type": "summary"
+        },
+        {
+            "type": "markdown"
+        },
+        {
+            "type": "attribute_table"
+        },
+        {
+            "type": "fact_table"
+        },
+        {
+            "type": "sections"
+        },
+        {
+            "type": "relations"
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Expat-Cluster (Meta-Karten & Kaufkraft)",
+            "teaser": "**Dieser** Knowledge-**Eintrag** bündelt eine **Lesart** für globale Umzüge: **Meta-Karten** von NationFiles zeigen **städtische Schwergewichte** und **dokumentierte** Kernkraft-Standorte; **parallel** kommt der **PPI**‑Makrorahmen aus {{purchasing-power-index}} (und bei Bedarf {{purchasing-calculator}}) ins Spiel — **ohne** alles in **eine** erfundene Gesamtzahl zu pressen.",
+            "summary_bullets": [
+                "**Ziel:** denselben Umzugsentscheid **räumlich** und **wirtschaftlich** vorbereiten.",
+                "**Karten:** {{metamaps}} — Megacity- und Kernkraft-Schichten nach **öffentlicher** Methodik.",
+                "**Sicherheit:** Kriminalität und Justiznähe über **{{security-radar}}** und Sicherheits-Karten **getrennt** lesen.",
+                "**Kaufkraft:** {{purchasing-power-index}} bzw. Rechner **{{purchasing-calculator}}** mit **offenen** Annahmen.",
+                "**Grenze:** **kein** Visumrat, **keine** Steuerberatung, **keine** Versicherung gegen Fehllesung."
+            ],
+            "body_md": "Wer ins Ausland zieht oder Personal entsendet, braucht selten **nur** eine Zahl. Es braucht einen **Blick auf die Karte**: Wo **ballen** sich Ballungsräume, wie **nah** liegt dokumentierte Kernenergie-Infrastruktur, welche **Sicherheits**- und Justizsignale sind für das Zielland **öffentlich** beschrieben? Parallel braucht es den **wirtschaftlichen** Rahmen, den NationFiles mit dem **Purchasing Power Index** auf Länderprofilen sichtbar macht — und, wer Budgets rechnet, den **Kaufkraft-Rechner** mit **bewusst** eingetragenen lokalen Kosten.\n\nDieser Eintrag ist **kein** separates Produkt-Scoreboard. Er **ordnet** die **Meta-Karten** von {{metamaps}} und die **PPI**-Logik von {{purchasing-power-index}} in **eine** Leseroutine, damit Familien und HR denselben Standort **nicht** einmal nur geografisch und einmal nur tabellarisch sehen, sondern **beide** Perspektiven im selben Entscheid treffen. **{{security-radar}}** bleibt der Ort, an dem erklärt wird, wie **Ermittlungs-** und **strategische** Kartenkanäle **getrennt** bleiben — das übernimmt dieser Text **nicht** erneut technisch, verweist aber darauf, wenn es um **Kriminalitäts- und Durchsetzungsgeografie** geht.\n\nWer diese Kette nutzt, sollte **Migrationsrecht**, **Steuern** und **Arbeitgeberpflichten** weiterhin **gesondert** klären — NationFiles liefert **Orientierung** auf der Plattform, **keine** Ersatzberatung.\n\n**Verwandt:** {{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}}, {{country-intelligence-dashboard}}.",
+            "facts": [
+                {
+                    "k": "Kernidee",
+                    "v": "Geografie (Meta-Karten) plus Makrokaufkraft (PPI)"
+                },
+                {
+                    "k": "Sicherheit",
+                    "v": "{{security-radar}} / Sicherheits-Karten"
+                },
+                {
+                    "k": "Werkzeuge",
+                    "v": "{{metamaps}}, {{purchasing-power-index}}, optional {{purchasing-calculator}}"
+                },
+                {
+                    "k": "Risiko",
+                    "v": "Illustrative Lesart — keine Einzel-Zusammenfassungszahl"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum zwei Achsen",
+                    "body_md": "**Standort** ohne **Karte** lässt Nachbarschaftsfragen weg; **Karte** ohne **Kaufkraft** blendet Alltagkosten aus. Der Cluster **fordert beides**."
+                },
+                {
+                    "title": "Kernkraft und Großstädte",
+                    "body_md": "**Megacity-** und **Kernkraft-Metamaps** zeigen **dokumentierte** Standorte im **Satelliten**kontext — **kein** Ersatz für Atomsicherheitsbehörden."
+                },
+                {
+                    "title": "Rechner und PPI",
+                    "body_md": "**PPI** liefert den **langsamen** Makrorahmen; **FX** kann **schneller** schwanken. Der Rechner macht **Annahmen** **sichtbar**, **kein** stilles Mischen."
+                }
+            ]
+        },
+        "en": {
+            "title": "Expat metamap cluster",
+            "teaser": "This knowledge entry describes a **reading path** for global relocations: NationFiles **metamaps** surface **urban mass** and **documented** nuclear plant footprints, while the **PPI** macro bundle from {{purchasing-power-index}} (and, when budgets are modeled, {{purchasing-calculator}}) supplies the cost side — **without** faking a single proprietary “relocation score.”",
+            "summary_bullets": [
+                "**Intent:** prepare the same move **spatially** and **economically**.",
+                "**Maps:** {{metamaps}} megacity and nuclear layers per **published** methodology.",
+                "**Security:** crime and enforcement geography via {{security-radar}} / security maps **on their own terms**.",
+                "**Purchasing power:** {{purchasing-power-index}} and optional {{purchasing-calculator}} with **explicit** inputs.",
+                "**Limits:** **not** visa advice, **not** tax counsel, **not** an opaque KPI."
+            ],
+            "body_md": "Relocation decisions rarely hinge on one table. Families and international HR teams need to see **where** people concentrate, **where** documented nuclear generation sits relative to cities, and **how** security-focused maps explain crime or enforcement channels for a country — topics NationFiles treats in {{metamaps}} and {{security-radar}} documentation. In the same meeting they need the **macro purchasing-power story** NationFiles publishes through {{purchasing-power-index}}, plus the **illustrative** desk math {{purchasing-calculator}} enables when someone types real rent, school fees, or travel assumptions.\n\nThis entity is **not** another leaderboard. It is the editorial instruction, inside the knowledge graph, to **open both lenses** so a destination is neither romanticised on a map nor under-budgeted from spreadsheets alone.\n\nImmigration rules, payroll taxes, and employer-of-record obligations remain **outside** this framing — the cluster says only that **public NationFiles surfaces** should be read together, honestly, before anyone signs.\n\n**See also:** {{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}}, {{country-intelligence-dashboard}}.",
+            "facts": [
+                {
+                    "k": "Idea",
+                    "v": "Metamap geography + PPI macro context"
+                },
+                {
+                    "k": "Security",
+                    "v": "{{security-radar}} / security maps"
+                },
+                {
+                    "k": "Tools",
+                    "v": "{{metamaps}}, {{purchasing-power-index}}, optional {{purchasing-calculator}}"
+                },
+                {
+                    "k": "Caveat",
+                    "v": "Illustrative path — no merged secret index"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Two axes, one decision",
+                    "body_md": "**Map-only** thinking hides everyday costs; **macro-only** thinking hides proximity. The cluster keeps **both** on the table."
+                },
+                {
+                    "title": "Urban corridors and nuclear siting",
+                    "body_md": "**Megacity** and **nuclear** metamaps show **registry-backed** plant locations on **satellite** baselines — **not** a regulator’s safety workbook."
+                },
+                {
+                    "title": "Calculator discipline",
+                    "body_md": "**PPI** tracks the **slow** parity story; **FX** can move **fast**. The calculator **surfaces assumptions** instead of silently blending worlds."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Cluster expatriés (méta-cartes et pouvoir d’achat)",
+            "teaser": "Cette entrée Knowledge propose une **lecture guidée** pour déménagements internationaux : les **méta-cartes** NationFiles montrent la **masse urbaine** et les **empreintes** documentées du **nucléaire**, pendant que le **paquet macro PPI** de {{purchasing-power-index}} (et, pour chiffrer, {{purchasing-calculator}}) porte le volet coût — **sans** inventer un unique « score relocalisation ».",
+            "summary_bullets": [
+                "**But:** préparer le même choix **dans l’espace** et **en macro**.",
+                "**Cartes:** {{metamaps}} mégapoles + nucléaire selon méthodo **publique**.",
+                "**Sécurité:** criminalité via {{security-radar}} / cartes **sécurité**, sur leurs **propres règles**.",
+                "**Pouvoir d’achat:** {{purchasing-power-index}} et {{purchasing-calculator}} avec **hypothèses explicites**.",
+                "**Limites:** **pas** conseil visa ou fiscal, **pas** indice opaque."
+            ],
+            "body_md": "Les expatriations se jugent rarement sur une seule ligne de tableau. Il faut voir **où** la population se concentre, **où** les centrales documentées se situent par rapport aux villes, et **comment** les cartes sécurité exposent les canaux **répressifs** ou **stratégiques** — ce que décrivent {{metamaps}} et la doc {{security-radar}}. Dans le même temps il faut le **macro pouvoir d’achat** publié via {{purchasing-power-index}} et, pour des ordres de grandeur, le **calculateur** {{purchasing-calculator}} lorsque l’on saisit loyer, scolarité ou mobilité.\n\nCette entité **n’est pas** un palmarès supplémentaire : elle **ordonne** la lecture pour éviter qu’on ne regarde **que** la carte ou **que** la table.\n\nL’immigration, la fiscalité et les obligations d’employeur restent **hors champ** ici — on rappelle seulement d’assembler les surfaces publiques NationFiles **de façon transparente**.\n\n**Voir aussi :** {{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}}, {{country-intelligence-dashboard}}.",
+            "facts": [
+                {
+                    "k": "Idée",
+                    "v": "Géographie metamap + contexte macro PPI"
+                },
+                {
+                    "k": "Sécurité",
+                    "v": "{{security-radar}} / cartes sécurité"
+                },
+                {
+                    "k": "Outils",
+                    "v": "{{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}} optionnel"
+                },
+                {
+                    "k": "Limite",
+                    "v": "Lecture illustrative — pas d’indice fusionné"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Deux axes, une décision",
+                    "body_md": "La **carte seule** masque le coût du quotidien ; le **macro seul** masque la proximité. Le cluster **garde les deux** visibles."
+                },
+                {
+                    "title": "Mégapoles et nucléaire",
+                    "body_md": "Les metamaps **mégapoles** et **nucléaire** affichent des sites **enregistrés** sur fond satellite — **pas** un manuel d’autorité nucléaire."
+                },
+                {
+                    "title": "Calculateur",
+                    "body_md": "Le **PPI** porte la dynamique **lente** de parité ; le **FX** peut bouger **vite**. Le calculateur **rend les hypothèses publiques**."
+                }
+            ]
+        },
+        "es": {
+            "title": "Cluster expatriados (metamapas y poder adquisitivo)",
+            "teaser": "Esta entrada Knowledge describe una **ruta de lectura** para relocalizaciones: las **metamapas** muestran **masa urbana** y **emplazamientos** documentados de **nuclear**, mientras el **macro PPI** de {{purchasing-power-index}} (y, al modelar, {{purchasing-calculator}}) cubre el lado económico — **sin** inventar un único « índice de mudanza ».",
+            "summary_bullets": [
+                "**Objetivo:** preparar la misma decisión **en el mapa** y **en macro**.",
+                "**Mapas:** {{metamaps}} megaciudades + nuclear según metodología **pública**.",
+                "**Seguridad:** criminalidad vía {{security-radar}} / mapas de **seguridad**, con sus **reglas**.",
+                "**Poder adquisitivo:** {{purchasing-power-index}} y {{purchasing-calculator}} con **supuestos explícitos**.",
+                "**Límites:** **no** es asesoría migratoria ni fiscal ni un KPI opaco."
+            ],
+            "body_md": "Quien se expatria necesita ver **dónde** se aglomera la población, **dónde** quedan las plantas documentadas frente a las ciudades y **cómo** los mapas de seguridad separan canales **penales** y **estrategia** — {{metamaps}} y {{security-radar}} ya lo documentan. En paralelo hace falta el **macro** de {{purchasing-power-index}} y, para cifrar gasto real, {{purchasing-calculator}} con entradas locales **declaradas**.\n\nLa entidad **no** suma un ranking nuevo: **ordena** la lectura para que nadie decida solo con la cartografía o solo con la tabla.\n\nNormas migratorias, impuestos y obligaciones de empleador siguen **fuera** — aquí solo se exige coherencia entre **superficies públicas**.\n\n**Vea también:** {{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}}, {{country-intelligence-dashboard}}.",
+            "facts": [
+                {
+                    "k": "Idea",
+                    "v": "Geografía metamapa + macro PPI"
+                },
+                {
+                    "k": "Seguridad",
+                    "v": "{{security-radar}} / mapas seguridad"
+                },
+                {
+                    "k": "Herramientas",
+                    "v": "{{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}} opcional"
+                },
+                {
+                    "k": "Tope",
+                    "v": "Ruta ilustrativa — sin fusión opaca"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Dos ejes, una decisión",
+                    "body_md": "Solo **mapa** esconde costes cotidianos; solo **macro** esconde proximidad. El cluster **mantiene ambos**."
+                },
+                {
+                    "title": "Megaciudades y nuclear",
+                    "body_md": "Las metamaps **megaciudades** y **nuclear** muestran emplazamientos **registrados** sobre satélite — **no** un manual de autoridad."
+                },
+                {
+                    "title": "Calculadora",
+                    "body_md": "**PPI** lleva la historia **lenta** de paridad; **FX** puede moverse **rápido**. La calculadora **expone supuestos**."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Cluster expatriados (metamapas e poder de compra)",
+            "teaser": "Esta entrada Knowledge descreve um **percurso de leitura** para relocalizações: **metamapas** mostram **massa urbana** e **implantações** documentadas de **nuclear**, enquanto o **macro PPI** de {{purchasing-power-index}} (e, ao modelar, {{purchasing-calculator}}) cobre o lado económico — **sem** inventar um único « índice de mudança ».",
+            "summary_bullets": [
+                "**Objetivo:** preparar a mesma decisão **no mapa** e **em macro**.",
+                "**Mapas:** {{metamaps}} megacidades + nuclear segundo metodologia **pública**.",
+                "**Segurança:** criminalidade via {{security-radar}} / mapas de **segurança** nas **suas regras**.",
+                "**Poder de compra:** {{purchasing-power-index}} e {{purchasing-calculator}} com **pressupostos explícitos**.",
+                "**Limites:** **não** é aconselhamento migratório nem fiscal nem KPI opaco."
+            ],
+            "body_md": "Quem se expatria precisa de ver **onde** a população se concentra, **onde** ficam centrais documentadas face às cidades e **como** os mapas de segurança separam canais **repressivos** e de **estratégia** — {{metamaps}} e {{security-radar}} já documentam isso. Em paralelo entra o **macro** de {{purchasing-power-index}} e, para números concretos, {{purchasing-calculator}} com custos locais **declarados**.\n\nA entidade **não** acrescenta um ranking: **ordena** a leitura para não decidir só com cartografia ou só com tabela.\n\nImigração, impostos e obrigações de empregador ficam **fora** — pede-se apenas consistência entre **superfícies públicas**.\n\n**Ver também:** {{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}}, {{country-intelligence-dashboard}}.",
+            "facts": [
+                {
+                    "k": "Ideia",
+                    "v": "Geografia metamapa + macro PPI"
+                },
+                {
+                    "k": "Segurança",
+                    "v": "{{security-radar}} / mapas segurança"
+                },
+                {
+                    "k": "Ferramentas",
+                    "v": "{{metamaps}}, {{purchasing-power-index}}, {{purchasing-calculator}} opcional"
+                },
+                {
+                    "k": "Tecto",
+                    "v": "Percurso ilustrativo — sem fusão opaca"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Dois eixos, uma decisão",
+                    "body_md": "Só **mapa** esconde custos diários; só **macro** esconde proximidade. O cluster **mantém ambos**."
+                },
+                {
+                    "title": "Megacidades e nuclear",
+                    "body_md": "Metamapas **megacidades** e **nuclear** mostram locais **registados** sobre satélite — **não** manual de autoridade."
+                },
+                {
+                    "title": "Calculadora",
+                    "body_md": "**PPI** leva a história **lenta** de paridade; **FX** pode mudar **rápido**. A calculadora **expõe pressupostos**."
+                }
+            ]
+        },
+        "ar": {
+            "title": "عنقود المغتربين (الميتامابات وقوة الشراء)",
+            "teaser": "تشرح هذه العقدة في Knowledge **مسار قراءة** للانتقالات الدولية: **ميتامابات** NationFiles تعرض **الكتلة الحضرية** و**مواقع** الطاقة النووية **الموثّقة**، بينما حزمة **PPI** من {{purchasing-power-index}} (وعند النمذجة {{purchasing-calculator}}) تغطي الجانب المالي — **دون** اختلاق « درجة انتقال » واحدة.",
+            "summary_bullets": [
+                "**الغرض:** إعداد **ذات** القرار **مكانيًا** و**كماكرويًا**.",
+                "**الخرائط:** {{metamaps}} مدن ضخمة + نووي حسب منهجية **منشورة**.",
+                "**الأمن:** الجريمة عبر {{security-radar}} / خرائط **الأمن** بقواعدها **الخاصة**.",
+                "**قوة الشراء:** {{purchasing-power-index}} و{{purchasing-calculator}} ب**افتراضات صريحة**.",
+                "**الحدود:** **ليس** استشارة هجرة أو ضرائب و**لا** مؤشرًا مموّهًا."
+            ],
+            "body_md": "من يغترب يحتاج أن يرى **أين** يتركز السكان، **أين** تقع المحطات الموثّقة مقارنة بالمدن، و**كيف** تفصل خرائط الأمن قنوات **الإنفاذ** عن **الاستراتيجية** — {{metamaps}} و{{security-radar}} يوثّقان ذلك. بالتوازٍ يلزم **الماكرو** من {{purchasing-power-index}} وللأرقام التطبيقية {{purchasing-calculator}} بمدخلات محلية **معلنة**.\n\nالعقدة **ليست** ترتيبًا جديدًا: إنها **ترتّب** القراءة كي لا يُقرر بالخريطة وحدها أو بالجدول وحده.\n\nالهجرة والضرائب والتزامات صاحب العمل **خارج** النطاق هنا — المطلوب فقط **اتساق** بين **الأسطح العلنية**.\n\n**انظر أيضًا:** {{metamaps}}، {{purchasing-power-index}}، {{purchasing-calculator}}، {{country-intelligence-dashboard}}.",
+            "facts": [
+                {
+                    "k": "فكرة",
+                    "v": "جغرافيا ميتاماب + سياق PPI"
+                },
+                {
+                    "k": "أمن",
+                    "v": "{{security-radar}} / خرائط الأمن"
+                },
+                {
+                    "k": "أدوات",
+                    "v": "{{metamaps}}، {{purchasing-power-index}}، {{purchasing-calculator}} اختياري"
+                },
+                {
+                    "k": "حد",
+                    "v": "مسار توضيحي — دون دمج مموّه"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "محوران وقرار واحد",
+                    "body_md": "**الخريطة وحدها** تخفي تكاليف اليومية؛ **الماكرو وحده** يخفي القرب. العنقود **يبقي الاثنين**."
+                },
+                {
+                    "title": "مال عملاق ونووي",
+                    "body_md": "ميتامابا **المدن الضخمة** و**النووي** تعرض مواقع **مسجلة** على قمر صناعي — **ليست** دفتر رقابة نووية."
+                },
+                {
+                    "title": "الحاسبة",
+                    "body_md": "**PPI** يحمل قصة **بطيئة** للتعادل؛ **الصرف** قد يتحرك **بسرعة**. الحاسبة **تبرز الافتراضات**."
+                }
+            ]
+        },
+        "ja": {
+            "title": "駐在員向けメタマップ・クラスター（購買力併読）",
+            "teaser": "この Knowledge 項目は **グローバル移住**の**読み方**を示す。**メタマップ**は都市の**集中**と**文書化**された原発立地を示し、{{purchasing-power-index}} の **PPI** マクロ束（必要なら {{purchasing-calculator}}）がコスト側を担う——**ひとつの**「移住スコア」をでっち上げない。",
+            "summary_bullets": [
+                "**狙い:** **同じ**判断を **地図**と**マクロ**の両方で用意する。",
+                "**地図:** {{metamaps}} の巨大都市・原発レイヤー（**公開**手法）。",
+                "**安全:** 犯罪・執行の地理は {{security-radar}}／セキュリティ地図の**区分**に従う。",
+                "**購買力:** {{purchasing-power-index}} と任意の {{purchasing-calculator}}（**明示**入力）。",
+                "**限界:** **ビザ・税務助言ではない**。**不透明**な単一指標でもない。"
+            ],
+            "body_md": "海外赴任は一つの表だけでは決めにくい。**どこに**人口が積もるか、**都市から見て**公開されている原発立地がどう並ぶか、**治安**地図が執行系と戦略系をどう分けるか——{{metamaps}} と {{security-radar}} の説明領域である。同時に **PPI** で示す**遅い**購買力平価の話と、{{naciro}} が載せる**速い**為替の対比が必要で、具体試算は {{purchasing-calculator}} が**仮定を晒す**。\n\n本エンティティは**新ランキング**ではない。**地図だけ／表だけ**の誤読を減らすための Knowledge 上の**読み順**である。\n\n移民法・税制・EOR 等は**別途**——公開サーフェス同士の**食い違い**を減らすことが目的。\n\n**関連:** {{metamaps}}、{{purchasing-power-index}}、{{purchasing-calculator}}、{{country-intelligence-dashboard}}。",
+            "facts": [
+                {
+                    "k": "要点",
+                    "v": "メタマップ地理 + PPI 文脈"
+                },
+                {
+                    "k": "安全",
+                    "v": "{{security-radar}}／セキュリティ地図"
+                },
+                {
+                    "k": "手段",
+                    "v": "{{metamaps}}、{{purchasing-power-index}}、任意で {{purchasing-calculator}}"
+                },
+                {
+                    "k": "注意",
+                    "v": "例示的併読——秘匿単一指標ではない"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "二軸で一つの決定",
+                    "body_md": "**地図のみ**では日常費が見えにくい。**マクロのみ**では近接が見えにくい。クラスタは**両方**を残す。"
+                },
+                {
+                    "title": "巨大都市と原発",
+                    "body_md": "**巨大都市**と**原発**のメタマップは衛星ベースに**登録地点**を載せる——**規制当局の安全手帳**の代替ではない。"
+                },
+                {
+                    "title": "計算機の作法",
+                    "body_md": "**PPI** は**遅い**パリティの話。**為替**は**速く**動く。計算機は**仮定を明示**する。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "expat-metamaps-cluster"
+        },
+        "repository_relative_path": "knowledge-data/entities/expat-metamaps-cluster.json"
+    }
+}

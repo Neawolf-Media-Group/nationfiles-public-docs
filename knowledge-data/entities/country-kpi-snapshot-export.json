@@ -1,0 +1,672 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "country-kpi-snapshot-export",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-05-02T00:00:00Z",
+    "topics": [
+        "machine-readable",
+        "export",
+        "json",
+        "csv",
+        "pdf",
+        "kpi",
+        "country",
+        "built-at-utc",
+        "snapshot"
+    ],
+    "aliases": [
+        "KPI-Exporte",
+        "Country KPI snapshot export",
+        "PPI/GGI export bundle",
+        "built_at_utc bundle"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles country KPI snapshot export layer: machine-addressable bundles and tabular companions (JSON, CSV where enabled, PDF dossiers) that condense purchasing-power, governance, and related dashboard KPIs for a sovereign profile—explicitly versioned by built_at_utc so consumers know exactly when the tuple was materialised, not merely when a page was cached.",
+            "depends_on": [
+                "nationfiles",
+                "country-intelligence-dashboard",
+                "purchasing-power-index",
+                "governance-institutions-index",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Country Intelligence Dashboard",
+                    "url": "https://nationfiles.com/en/knowledge/entity/country-intelligence-dashboard/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**NationFiles Länder-KPI-Snapshot-Export:** maschinenadressierbare **Bündel** und tabellarische Begleiter (**JSON**, **CSV** wo freigeschaltet, **PDF-Dossiers**) — Kaufkraft/Governance und verwandte Dashboard-KPIs für ein **Souveränprofil**, explizit über **`built_at_utc`** versioniert, damit Konsument:innen wissen, **wann** das Tupel **materialisiert** wurde — nicht nur, wann ein Cache traf.",
+                "en": "NationFiles country KPI snapshot export layer: machine-addressable bundles and tabular companions (JSON, CSV where enabled, PDF dossiers) that condense purchasing-power, governance, and related dashboard KPIs for a sovereign profile—explicitly versioned by built_at_utc so consumers know exactly when the tuple was materialised, not merely when a page was cached.",
+                "fr": "**Exports snapshot KPI pays** NationFiles : paquets **JSON**, **CSV** si activé, **dossiers PDF** — KPI pouvoir d’achat, gouvernance et proches du tableau de bord, versionnés par **`built_at_utc`** pour savoir **quand** la matérialisation a eu lieu, pas seulement le cache.",
+                "es": "**Exportación snapshot KPI país** NationFiles: paquetes **JSON**, **CSV** si procede, **dossiers PDF** — KPI poder adquisitivo, gobernanza y afines del panel, versionados con **`built_at_utc`** para la **materialización**, no solo la caché.",
+                "pt": "**Exportação snapshot KPI país** NationFiles: pacotes **JSON**, **CSV** quando ativo, **dossiês PDF** — KPI poder de compra, governação e afins do painel, versionados por **`built_at_utc`** para a **materialização**, não só cache.",
+                "ar": "**تصدير لقطة KPI للدول** من NationFiles: حزم **JSON** و**CSV** عند التفعيل و**ملفات PDF** — مؤشرات القوة الشرائية والحوكمة وما شابه من لوحة التحكم، بإصدار **`built_at_utc`** لمعرفة **وقت التخليق** لا ذاكرة التخزين فقط.",
+                "ja": "NationFiles **国 KPI スナップショット・エクスポート**：**JSON**／有効時 **CSV**／**PDF ドシエ**で、購買力・ガバナンス等の KPI を**主権プロフィール**向けに束ねる——**`built_at_utc`** で**いつ実体化したか**を明示（ページキャッシュ時刻の取り違え防止）。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Temporal fidelity field: built_at_utc carries an RFC3339/ISO-8601-style UTC instant marking when Naciro-supervised assembly closed the KPI tuple for export; it is the authoritative as-of anchor for diffing two snapshots, auditing reproducibility, and disclaiming stale reads—distinct from content_updated fields that may describe upstream primaries.",
+            "depends_on": [
+                "naciro",
+                "nfsi",
+                "purchasing-power-index"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Zeittreue-Feld:** `built_at_utc` liefert einen **UTC-Zeitstempel** (RFC3339/ISO-8601-Stil), wann die **Naciro**-überwachte Zusammenstellung des KPI-Tupels für den Export **geschlossen** wurde — **maßgeblicher As-of-Anker** zum Differenzieren zweier Snapshots, für **Reproduzierbarkeit** und den **Haftungsausschluss** veralteter Lesearten — **nicht** dasselbe wie „content_updated“ aus Primärquellen.",
+                "en": "Temporal fidelity field: built_at_utc carries an RFC3339/ISO-8601-style UTC instant marking when Naciro-supervised assembly closed the KPI tuple for export; it is the authoritative as-of anchor for diffing two snapshots, auditing reproducibility, and disclaiming stale reads—distinct from content_updated fields that may describe upstream primaries.",
+                "fr": "**Champ temporel :** `built_at_utc` = instant UTC **RFC3339/ISO-8601** où l’assemblage **Naciro** **ferme** le tuple KPI export — **ancre as-of** pour diff, audit, avertissement de **lecture périmée** — distinct de champs **content_updated** amont.",
+                "es": "**Campo temporal:** `built_at_utc` = instante UTC **RFC3339/ISO-8601** cuando el ensamblaje **Naciro** **cierra** el tuple KPI — **ancla as-of** para difs y **lecturas obsoletas** — distinto de **content_updated** aguas arriba.",
+                "pt": "**Campo temporal:** `built_at_utc` = instante UTC **RFC3339/ISO-8601** quando a montagem **Naciro** **fecha** o tuple KPI — **âncora as-of** para difs e aviso de leitura **obsoleta**.",
+                "ar": "**حقل زمني:** `built_at_utc` يسجّل لحظة UTC بصيغة **RFC3339/ISO-8601** عندما يغلق تجميع **Naciro** حزمة KPI — **مرساة التاريخ** للمقارنة والتدقيق و**تحذير القراءة القديمة** — لا يعادل بالضرورة **content_updated** للأوليات.",
+                "ja": "**時間忠実度フィールド：** `built_at_utc` は **RFC3339/ISO-8601** 風の **UTC 瞬間**で、**Naciro** 監督の組み立てが KPI タプルを**確定**した時刻——二つのスナップショット差分や**再現性**、**古い読み**の免責の**公式 as-of**（上流 **content_updated** とは別概念）。"
+            }
+        },
+        {
+            "key": "canonical_data_format",
+            "value": "JSON bundles: hierarchical objects pairing ISO country keys with KPI blocks (PPI, GGI, NFSI-adjacent figures where published), plus export_metadata including built_at_utc and declared schema_version; CSV: denormalised rowsets keyed by country_code and metric_family for spreadsheet ingestion; PDF: human-readable dossier mirroring the numeric snapshot with narrative captions—not a second source of truth, a print-safe rendering.",
+            "depends_on": [
+                "nationfile-json",
+                "purchasing-power-index",
+                "governance-institutions-index"
+            ],
+            "sources": [
+                {
+                    "label": "Purchasing power index",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                },
+                {
+                    "label": "Economy Governance Index",
+                    "url": "https://nationfiles.com/en/knowledge/entity/governance-institutions-index/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**JSON-Bündel:** hierarchische Objekte mit ISO-Länderschlüsseln und KPI-Blöcken (**PPI**, **GGI**, **NFSI**-nahe Zahlen wo veröffentlicht), plus `export_metadata` mit **`built_at_utc`** und `schema_version`; **CSV:** denormalisierte Zeilen nach `country_code` + **metric_family**; **PDF:** menschenlesbares **Dossier** mit Beschriftung — **keine** zweite Wahrheitsquelle, sondern **druckfreundliche** Spiegelung.",
+                "en": "JSON bundles: hierarchical objects pairing ISO country keys with KPI blocks (PPI, GGI, NFSI-adjacent figures where published), plus export_metadata including built_at_utc and declared schema_version; CSV: denormalised rowsets keyed by country_code and metric_family for spreadsheet ingestion; PDF: human-readable dossier mirroring the numeric snapshot with narrative captions—not a second source of truth, a print-safe rendering.",
+                "fr": "**JSON :** hiérarchie pays ISO + blocs KPI (**PPI**, **GGI**, chiffres voisins **NFSI** si publiés) + métadonnées **`built_at_utc`**, `schema_version`; **CSV:** lignes dénormalisées; **PDF:** dossier **lisible** — pas une seconde source normative.",
+                "es": "**JSON:** jerarquía por país ISO + bloques KPI + metadatos **`built_at_utc`**; **CSV:** filas desnormalizadas; **PDF:** dossier **legible** — no segunda fuente normativa.",
+                "pt": "**JSON:** hierarquia ISO + blocos KPI + **`built_at_utc`**; **CSV:** linhas denormalizadas; **PDF:** dossiê **legível** — não segunda fonte normativa.",
+                "ar": "**JSON:** تسلسل هرمي بمفتاح الدولة ISO + كتل KPI + **`built_at_utc`**؛ **CSV:** صفوف غير مطبّعة؛ **PDF:** ملف **للقراءة** — ليس مصدر حقيقة ثانياً.",
+                "ja": "**JSON：** ISO 国キーと KPI ブロック（**PPI**・**GGI**・公開時は **NFSI** 近傍）、`export_metadata` に **`built_at_utc`** と `schema_version`；**CSV：** `country_code`／metric 族でフラット行；**PDF：**数値の**人読みドシエ**——第二の正ではない**印刷向け写し**。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Registry-aligned inputs → Naciro refresh windows per NFSI/VVR methodology → KPI merge into country snapshot plane → serialisers emit JSON/CSV/PDF with shared built_at_utc stamp so every channel carries the same materialisation moment.",
+            "depends_on": [
+                "naciro",
+                "legal-sources-registry",
+                "validation-verification-report"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Pipeline:** registerkonforme Eingänge → **Naciro**-Refresh nach **NFSI/VVR** → KPI-Merge in die Länder-Snapshot-Ebene → Serializer schreiben **JSON/CSV/PDF** mit **gemeinsamem** `built_at_utc` — **ein** Materialisationsmoment für alle Kanäle.",
+                "en": "Registry-aligned inputs → Naciro refresh windows per NFSI/VVR methodology → KPI merge into country snapshot plane → serialisers emit JSON/CSV/PDF with shared built_at_utc stamp so every channel carries the same materialisation moment.",
+                "fr": "**Pipeline :** entrées registre → fenêtres **Naciro** (**NFSI/VVR**) → fusion KPI → **JSON/CSV/PDF** avec **même** `built_at_utc`.",
+                "es": "**Pipeline:** entradas alineadas al registro → **Naciro** (**NFSI/VVR**) → fusión KPI → **JSON/CSV/PDF** con **mismo** `built_at_utc`.",
+                "pt": "**Pipeline:** entradas do registo → **Naciro** (**NFSI/VVR**) → fusão KPI → **JSON/CSV/PDF** com **o mesmo** `built_at_utc`.",
+                "ar": "**خط المعالجة:** مدخلات متوافقة مع السجل → نوافذ **Naciro** (**NFSI/VVR**) → دمج KPI → **JSON/CSV/PDF** بنفس **`built_at_utc`**.",
+                "ja": "**パイプライン：** 登録整合入力→**NFSI/VVR** に沿う **Naciro** 更新窓→国スナップショット面へ KPI マージ→**JSON/CSV/PDF** を**同一** `built_at_utc` で出力。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Per-country JSON KPI bundles, optional CSV slices for BI pipelines, PDF one-pagers or dossiers for boardrooms, syndicated feed hooks where published, and mirrored Knowledge exports citing the same built_at_utc for graph-grounded LLM clients.",
+            "depends_on": [
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                },
+                {
+                    "label": "Nationfile JSON",
+                    "url": "https://nationfiles.com/en/knowledge/entity/nationfile-json/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Outputs:** länderspezifische **JSON-KPI-Bündel**, optionale **CSV-Slices** für BI, **PDF-One-Pager/Dossiers**, **Feeds** wo veröffentlicht, **Knowledge**-Exporte mit **demselben** `built_at_utc` für **graph-grounded** LLM-Clients.",
+                "en": "Per-country JSON KPI bundles, optional CSV slices for BI pipelines, PDF one-pagers or dossiers for boardrooms, syndicated feed hooks where published, and mirrored Knowledge exports citing the same built_at_utc for graph-grounded LLM clients.",
+                "fr": "**Livrables :** paquets **JSON** par pays, **CSV** optionnels, **PDF**, **syndication** si publié, exports **Knowledge** avec **même** `built_at_utc` pour LLM ancrés graphe.",
+                "es": "**Entregables:** paquetes **JSON** por país, **CSV** opcional, **PDF**, **feeds** si aplica, exportes **Knowledge** con **mismo** `built_at_utc`.",
+                "pt": "**Entregas:** pacotes **JSON** por país, **CSV** opcional, **PDF**, feeds se publicados, exportações **Knowledge** com **o mesmo** `built_at_utc`.",
+                "ar": "**المخرجات:** حزم **JSON** لكل دولة، **CSV** اختياري، **PDF**، تغذيات عند النشر، تصدير **Knowledge** بنفس **`built_at_utc`**.",
+                "ja": "**成果物：** 国別 **JSON** KPI バンドル、BI 向け任意 **CSV**、**PDF**、公開時のシンジケーション、**Knowledge** ミラーが**同一** `built_at_utc` を引用——グラフ接地 LLM 向け。"
+            }
+        },
+        {
+            "key": "ai_policy",
+            "value": "Machine clients must surface built_at_utc in summaries and refuse to blend figures from bundles stamped at different UTC instants; NationFiles AI guidelines expect canonical HTTPS citations and forbid inventing refreshed KPIs absent from the published bundle.",
+            "depends_on": [
+                "ai-guidelines",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Maschinen-Clients** müssen **`built_at_utc`** in Summaries **zeigen** und **keine** Werte aus Bündeln **mischen**, die **unterschiedliche** UTC-Stempel tragen; **AI Guidelines** verlangen **kanonische HTTPS**-Zitate und **verbieten** „**frische**“ KPIs ohne veröffentlichtes Bündel.",
+                "en": "Machine clients must surface built_at_utc in summaries and refuse to blend figures from bundles stamped at different UTC instants; NationFiles AI guidelines expect canonical HTTPS citations and forbid inventing refreshed KPIs absent from the published bundle.",
+                "fr": "Les clients machines doivent **afficher** `built_at_utc` et **ne pas mélanger** des bundles à **horodatages** différents; **AI Guidelines** exigent citations **HTTPS canoniques** et interdisent KPI **inventés**.",
+                "es": "Los clientes deben **mostrar** `built_at_utc` y **no mezclar** bundles con **sellos** distintos; **AI Guidelines** exigen citas **HTTPS** y prohíben KPI **inventados**.",
+                "pt": "Clientes devem **exibir** `built_at_utc` e **não misturar** pacotes com **carimbos** diferentes; **AI Guidelines** exigem citações **HTTPS** e proíbem KPI **inventados**.",
+                "ar": "يجب على العملاء الآليين إظهار **`built_at_utc`** وعدم **خلط** حزم بأختام **UTC** مختلفة؛ **إرشادات AI** تتطلب اقتباس **HTTPS** وتمنع KPI **مختلقة**.",
+                "ja": "機械クライアントは要約に **`built_at_utc`** を**示し**、**異なる** UTC 印のバンドルを**混ぜない**。**AI Guidelines** は**正規 HTTPS** 引用を求め、公開バンドルにない KPI を**捏造**しない。"
+            }
+        },
+        {
+            "key": "update_cycle",
+            "value": "Refresh cadence mixes daily, event-driven, and on-demand rebuilds; regardless of cadence, each emitted bundle carries a fresh built_at_utc when serialisation completes—downstream monitors should key alerts on stamp drift, not wall-clock assumptions.",
+            "depends_on": [
+                "nfsi",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Stats Overview",
+                    "url": "https://nationfiles.com/en/stats/analytics/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Aktualisierungs-Kadenz:** täglich, **ereignisgetrieben** und **on-demand** gemischt; unabhängig davon trägt jedes ausgegebene Bündel bei abgeschlossener Serialisierung ein **neues** `built_at_utc` — Monitoring sollte auf **Stempel-Drift** achten, nicht auf **Wanduhr-Annahmen**.",
+                "en": "Refresh cadence mixes daily, event-driven, and on-demand rebuilds; regardless of cadence, each emitted bundle carries a fresh built_at_utc when serialisation completes—downstream monitors should key alerts on stamp drift, not wall-clock assumptions.",
+                "fr": "Cadence **mixte** (quotidien, événementiel, **à la demande**) ; chaque bundle émis reçoit un **`built_at_utc`** neuf à la fin de sérialisation — surveillance sur **dérive** d’horodatage.",
+                "es": "Cadencia **mixta** (diaria, por evento, **bajo demanda**); cada paquete lleva **`built_at_utc`** fresco al cerrar la serialización — alertas por **deriva** de sello.",
+                "pt": "Cadência **mista**; cada pacote recebe **`built_at_utc`** novo ao fechar serialização — alertas por **deriva** do carimbo.",
+                "ar": "إيقاع **مختلط**؛ كل حزمة تصدر **`built_at_utc`** جديداً عند اكتمال التسلسل — رصد **انحراف** الختم لا افتراض الساعة فقط.",
+                "ja": "更新は**日次・事象駆動・オンデマンド**の混合。いずれにせよ、シリアライズ完了時に**新しい** `built_at_utc` が付く——下流は**印のドリフト**で監視し、壁時計前提にしない。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "governance-institutions-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "KPI-Exporte (Country KPI Snapshot)",
+            "teaser": "**KPI-Exporte** machen NationFiles-Landdaten **maschinenlesbar**: **JSON**, **CSV** und **PDF-Dossiers** spiegeln dieselbe KPI-Ebene — mit **`built_at_utc`** als **Gültigkeitsanker**, der sagt, **wann** das Bündel **wirklich** gebaut wurde, nicht wann ein Banner zufällig neu lud.",
+            "summary_bullets": [
+                "**Maschinenlesbarkeit:** JSON-, CSV- und PDF-Pfade für KPI-Snapshots.",
+                "**built_at_utc:** einheitlicher UTC-Zeitstempel zur **Validität** und zum Diff.",
+                "**Kein Doppel-Mix:** unterschiedliche Stempel nicht blind kombinieren.",
+                "**Nationfile-/Dashboard-Kohärenz:** gleiche Faktenbasis wie die Länderoberfläche.",
+                "**Naciro/NFSI:** Bündel folgen dokumentierter Refresh-Logik.",
+                "**AI Guidelines:** Zitation und **keine** erfundenen Updates."
+            ],
+            "body_md": "Wer **Länderkennzahlen** in **Risk-Tools**, **Redaktionssysteme** oder **Forschungs-Pipelines** einspeist, braucht mehr als eine hübsche **HTML-Tabelle**: Er braucht **Spuren** — welches **ISO-Land**, welche **KPI-Familie**, welcher **Schema-Minor**, und vor allem: **zu welchem exakten UTC-Moment** dieser Datensatz **geschlossen** wurde. NationFiles **KPI-Exporte** liefern genau diese Spur über das Feld **`built_at_utc`**.\n\n**Warum ein Zeitstempel politisch ist:** Zwei Exporte können **optisch** gleich aussehen und trotzdem **inkompatibel** sein, wenn sich zwischen den Builds ein **Wechselkurs**, ein **Wahlrecht** oder eine **Methodenkorrektur** eingeschlichen hat. **`built_at_utc`** ist die **ehrliche Antwort** auf die Frage: **„Ab wann gilt diese Lesart?“** — nicht „Ab wann fühlte sich die Website frisch an?“\n\n**JSON** bündelt hierarchisch; **CSV** entscheidet den **Spreadsheet-Kompromiss**; **PDF** ist das **vorstandstaugliche** Spiegelbild mit Kontextsätzen — **kein** parallelles „Geheimkalkül“, sondern eine **druckbare** Übersetzung desselben Snapshots. **Maschinenlesbarkeit** endet nicht bei **Parsern**; sie endet bei **Vertragsdisziplin**: Wer KPI mischt, **ohne** Stempel zu vergleichen, baut **Bias** in **Ländervergleiche**.\n\nKurz: **KPI-Exporte** sind NationFiles’ **Exportverfassung für Zahlen** — **`built_at_utc`** als **Verfassungsartikel** gegen **Zeitreisen** und **Still-Slides**.",
+            "facts": [
+                {
+                    "k": "built_at_utc",
+                    "v": "UTC-Materialisationszeit des Bündels."
+                },
+                {
+                    "k": "Formate",
+                    "v": "JSON, CSV, PDF."
+                },
+                {
+                    "k": "Zweck",
+                    "v": "Maschinen- & Menschen-Leitung gleich."
+                },
+                {
+                    "k": "Grenze",
+                    "v": "Kein Ersatz für Primärstatistik."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum nicht zwei Stempel mixen",
+                    "body_md": "Vergleiche **nur** innerhalb **kompatibler** `schema_version`‑**Paare** und **gleicher** `built_at_utc`‑Disziplin — sonst entstehen **Scheintrends**."
+                },
+                {
+                    "title": "PDF als Dolmetscher, nicht als zweite Quelle",
+                    "body_md": "Das **PDF** erklärt den Snapshot menschlich; **JSON/CSV** bleiben die **normativen** Träger für **Automation**."
+                },
+                {
+                    "title": "LLMs und Pflicht zur Sichtbarkeit",
+                    "body_md": "**AI Guidelines** erwarten, dass Modelle den **Stempel** nennen, bevor sie **„aktuell“** schreiben."
+                }
+            ]
+        },
+        "en": {
+            "title": "Country KPI snapshot export",
+            "teaser": "**KPI exports** make NationFiles country data **machine-legible**: **JSON**, **CSV**, and **PDF dossiers** mirror the same KPI plane—**`built_at_utc`** is the **validity keel**, stating **when** the bundle **actually** materialised, not when a hero banner happened to refresh.",
+            "summary_bullets": [
+                "**Machine readability:** JSON, CSV, and PDF specifications for KPI snapshots.",
+                "**built_at_utc:** unified UTC instant for validity, diffs, and audit.",
+                "**No stamp-blending:** never naïvely merge unlike materialisation moments.",
+                "**Dashboard coherence:** same factual basis as sovereign screens.",
+                "**Naciro/NFSI alignment:** bundles honour published refresh logic.",
+                "**AI Guidelines:** cite canonical pages—never invent fresher KPIs."
+            ],
+            "body_md": "Feeding **country KPIs** into risk engines, news CMS back-ends, or research pipelines requires more than a polished HTML widget—it requires **provenance**: which **ISO profile**, which **metric family**, which **schema minor**, and critically **which UTC instant** closed the export. NationFiles **KPI exports** carry that contract field as **`built_at_utc`**.\n\n**Why the timestamp is political:** Two files can look identical yet **disagree** once an exchange rate, electoral rule, or methodological fix lands between builds. **`built_at_utc`** answers the honest question—**\"as of when does this reading bind?\"**—rather than \"when did the page *feel* new?\"\n\n**JSON** nests the truth for services, **CSV** trades hierarchy for spreadsheets, **PDF** offers a **boardroom-readable** gloss—**not** a shadow ledger, just the same snapshot with captions. **Machine readability** is not parser trivia; it is **bias control**: mashups without stamp discipline manufacture **false country rankings**.\n\nIn short: **KPI exports** are NationFiles’ **charter for numeric diplomacy**—**`built_at_utc`** the clause that forbids **time travel** in slides.",
+            "facts": [
+                {
+                    "k": "built_at_utc",
+                    "v": "UTC materialisation instant for the bundle."
+                },
+                {
+                    "k": "Formats",
+                    "v": "JSON, CSV, PDF."
+                },
+                {
+                    "k": "Purpose",
+                    "v": "Align machines and humans on one snapshot."
+                },
+                {
+                    "k": "Boundary",
+                    "v": "Not a replacement for national statistics offices."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why you must not blend stamps",
+                    "body_md": "Compare tuples **only** when `schema_version` **pairs** align and you consciously reason about **`built_at_utc` drift**—otherwise you narrate **phantom momentum**."
+                },
+                {
+                    "title": "PDF as interpreter, not rival truth",
+                    "body_md": "**PDF** humanises the same numbers; **JSON/CSV** remain the **automation rails**."
+                },
+                {
+                    "title": "LLMs owe readers the stamp",
+                    "body_md": "**AI Guidelines** expect models to **surface** `built_at_utc` before claiming \"latest.\""
+                }
+            ]
+        },
+        "fr": {
+            "title": "Export snapshot KPI pays",
+            "teaser": "Les **exports KPI** rendent les données pays **lisibles machines** : **JSON**, **CSV**, **PDF** reflètent le même plan — **`built_at_utc`** est la **quille de validité** : **quand** le paquet a été **réellement** matérialisé, pas quand un bandeau a rafraîchi.",
+            "summary_bullets": [
+                "**Lisibilité machine :** JSON, CSV, PDF pour snapshots KPI.",
+                "**built_at_utc :** instant UTC unique pour validité et diff.",
+                "**Pas de mixage** d’horodatages incompatibles.",
+                "**Cohérence dashboard** avec écrans pays.",
+                "**Naciro/NFSI :** cadence documentée.",
+                "**AI Guidelines :** citation, pas d’invention."
+            ],
+            "body_md": "Brancher des **KPI pays** exige **provenance** : profil ISO, famille d’indicateurs, **`built_at_utc`** à la clôture. Ce champ répond : **à partir de quand cette lecture lie-t-elle ?**\n\n**JSON** structure, **CSV** tableurise, **PDF** **humanise** le même instantané — pas une seconde vérité normative.\n\nSans discipline de **tampon**, les mashups fabriquent des **classements** faux.\n\nBref : **`built_at_utc`** est la **charte anti-chrono** des exports.",
+            "facts": [
+                {
+                    "k": "built_at_utc",
+                    "v": "Instant UTC de matérialisation."
+                },
+                {
+                    "k": "Formats",
+                    "v": "JSON, CSV, PDF."
+                },
+                {
+                    "k": "But",
+                    "v": "Aligner humains & machines."
+                },
+                {
+                    "k": "Limite",
+                    "v": "Pas substitut INSEE/NSO."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Ne pas mélanger les tampons",
+                    "body_md": "Raisonner **schema_version** + **`built_at_utc`** avant toute tendance."
+                },
+                {
+                    "title": "PDF interprète",
+                    "body_md": "Le **PDF** raconte ; **JSON/CSV** automatisent."
+                },
+                {
+                    "title": "LLM : montrer l’instant",
+                    "body_md": "**AI Guidelines** : citer le **tampon** avant « dernier »."
+                }
+            ]
+        },
+        "es": {
+            "title": "Exportación snapshot KPI por país",
+            "teaser": "Los **exports KPI** hacen **legible a máquinas** los datos país: **JSON**, **CSV**, **PDF** comparten el mismo plano — **`built_at_utc`** es la **quilla de validez** del momento **real** de materialización.",
+            "summary_bullets": [
+                "**Legibilidad máquina:** JSON, CSV, PDF.",
+                "**built_at_utc:** instante UTC para validez y diff.",
+                "**Sin mezclar sellos** incompatibles.",
+                "**Coherencia** con paneles país.",
+                "**Naciro/NFSI:** cadencia publicada.",
+                "**AI Guidelines:** citar, no inventar."
+            ],
+            "body_md": "Integrar KPI exige **procedencia**: ISO, familia métrica, **`built_at_utc`**. Responde: **¿desde cuándo obliga esta lectura?**\n\n**JSON** estructura, **CSV** planilla, **PDF** **humaniza** el mismo snapshot.\n\nSin disciplina de sello, los mashups **falsean** rankings.\n\nEn suma: **`built_at_utc`** es la **carta** contra **viajes en el tiempo**.",
+            "facts": [
+                {
+                    "k": "built_at_utc",
+                    "v": "Instante UTC de materialización."
+                },
+                {
+                    "k": "Formatos",
+                    "v": "JSON, CSV, PDF."
+                },
+                {
+                    "k": "Objetivo",
+                    "v": "Alinear humanos y máquinas."
+                },
+                {
+                    "k": "Límite",
+                    "v": "No sustituye estadísticas oficiales."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "No mezclar sellos",
+                    "body_md": "Comparar solo con **`built_at_utc` / schema** coherentes."
+                },
+                {
+                    "title": "PDF intérprete",
+                    "body_md": "**PDF** narra; **JSON/CSV** automatizan."
+                },
+                {
+                    "title": "LLM: mostrar sello",
+                    "body_md": "Nombrar **`built_at_utc`** antes de «último»."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Exportação snapshot KPI por país",
+            "teaser": "Os **exports KPI** tornam os dados país **legíveis para máquinas**: **JSON**, **CSV**, **PDF** espelham o mesmo plano — **`built_at_utc`** é a **quilha de validade** da **materialização** real.",
+            "summary_bullets": [
+                "**Legibilidade:** JSON, CSV, PDF.",
+                "**built_at_utc:** instante UTC para validade.",
+                "**Sem misturar carimbos** incompatíveis.",
+                "**Coerência** com painéis país.",
+                "**Naciro/NFSI:** cadência documentada.",
+                "**AI Guidelines:** citar, não fabricar."
+            ],
+            "body_md": "Integrar KPI exige **proveniência**: ISO, família, **`built_at_utc`**. Pergunta: **desde quando vale esta leitura?**\n\n**JSON** estrutura, **CSV** folha, **PDF** **humaniza**.\n\nMashups sem carimbo criam **rankings** espúrios.\n\nEm suma: **`built_at_utc`** é a **carta** anti **viagem no tempo**.",
+            "facts": [
+                {
+                    "k": "built_at_utc",
+                    "v": "Instante UTC de materialização."
+                },
+                {
+                    "k": "Formatos",
+                    "v": "JSON, CSV, PDF."
+                },
+                {
+                    "k": "Objetivo",
+                    "v": "Alinhar humanos e máquinas."
+                },
+                {
+                    "k": "Limite",
+                    "v": "Não substitui institutos oficiais."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Não misturar carimbos",
+                    "body_md": "Comparar só com **`built_at_utc`/schema** coerentes."
+                },
+                {
+                    "title": "PDF intérprete",
+                    "body_md": "**PDF** conta; **JSON/CSV** automatizam."
+                },
+                {
+                    "title": "LLM: mostrar carimbo",
+                    "body_md": "Citar **`built_at_utc`** antes de «último»."
+                }
+            ]
+        },
+        "ar": {
+            "title": "تصدير لقطة KPI للدول",
+            "teaser": "**تصديرات KPI** تجعل بيانات الدول **قابلة للآلة**: **JSON** و**CSV** و**PDF** تعكس نفس السطح — **`built_at_utc`** هو **عمود صلاحية** يوضح **متى** تُمّ تجريد الحزمة فعلياً.",
+            "summary_bullets": [
+                "**قابلية الآلة:** JSON وCSV وPDF.",
+                "**built_at_utc:** لحظة UTC للصلاحية والفرق.",
+                "**لا خلط** لأختام غير متوافقة.",
+                "**تناسق** مع لوحات الدول.",
+                "**Naciro/NFSI:** إيقاع موثّق.",
+                "**إرشادات AI:** اقتباس لا اختلاق."
+            ],
+            "body_md": "ربط مؤشرات الأداء يحتاج **أصالة**: ISO، العائلة، **`built_at_utc`**. يجيب: **منذ متى تلزم هذه القراءة؟**\n\n**JSON** يهيكل، **CSV** جداول، **PDF** **يشرح** لغة بشرية لنفس اللقطة.\n\nالخلط بلا انضباط للأختام يصنع **ترتيباً زائفاً**.\n\nالخلاصة: **`built_at_utc`** هو **الميثاق** ضد **العبث الزمني**.",
+            "facts": [
+                {
+                    "k": "built_at_utc",
+                    "v": "لحظة UTC لتخليق الحزمة."
+                },
+                {
+                    "k": "الصيغ",
+                    "v": "JSON، CSV، PDF."
+                },
+                {
+                    "k": "الهدف",
+                    "v": "مواءمة بشر وآلة."
+                },
+                {
+                    "k": "حد",
+                    "v": "لا يغني عن جهاز إحصاء وطني."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لا تخلط الأختام",
+                    "body_md": "قارن فقط مع **`built_at_utc`/schema** متناسقة."
+                },
+                {
+                    "title": "PDF مفسّر",
+                    "body_md": "**PDF** يشرح؛ **JSON/CSV** يؤتمت."
+                },
+                {
+                    "title": "نماذج لغوية",
+                    "body_md": "اذكر **`built_at_utc`** قبل «الأحدث»."
+                }
+            ]
+        },
+        "ja": {
+            "title": "国 KPI スナップショット・エクスポート",
+            "teaser": "**KPI エクスポート**は国データを**機械可読**にする：**JSON**／**CSV**／**PDF**が同一 KPI 面を写す——**`built_at_utc`** が**実体化した UTC 瞬間**という**有効性のキール**（ヒーロー帯の再描画時刻ではない）。",
+            "summary_bullets": [
+                "**機械可読性：** JSON・CSV・PDF の役割分担。",
+                "**built_at_utc：** 妥当性・差分・監査の一本化。",
+                "**印の混在禁止：** 異なる実体化刻を無思考マージしない。",
+                "**ダッシュボード整合：** 国画面と同じ事実面。",
+                "**Naciro/NFSI：** 公開リフレッシュ論理に従う。",
+                "**AI Guidelines：** 捏造更新なし、正規引用。"
+            ],
+            "body_md": "KPI をリスクエンジンや研究パイプに流すには**由来**が必要：ISO、指標族、**`built_at_utc`**。問いは「**この読みはいつから拘束力を持つか**」であって「ページが新しく**感じた**のはいつか」ではない。\n\n**JSON** がサービス向けの骨格、**CSV** が表計算への譲歩、**PDF** が**同じスナップショット**の言語化——**二重台帳**ではない。\n\n**印**なしのマッシュアップは**国際比較のバイアス**を製造する。\n\n要するに **`built_at_utc`** は数値外交の**時間番長**——スライドの**タイムトラベル**を禁じる条項。",
+            "facts": [
+                {
+                    "k": "built_at_utc",
+                    "v": "バンドル実体化の UTC 瞬間。"
+                },
+                {
+                    "k": "形式",
+                    "v": "JSON・CSV・PDF。"
+                },
+                {
+                    "k": "目的",
+                    "v": "人と機械を一枚岩に。"
+                },
+                {
+                    "k": "境界",
+                    "v": "公的統計の代替ではない。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "印を混ぜない理由",
+                    "body_md": "`schema_version` と **`built_at_utc` のドリフト**を踏まえて比較する。"
+                },
+                {
+                    "title": "PDF は通訳",
+                    "body_md": "**PDF** が人語り、**JSON/CSV** がオートメのレール。"
+                },
+                {
+                    "title": "LLM は刻印の義務",
+                    "body_md": "「最新」を言う前に **`built_at_utc`** を示す。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "country-kpi-snapshot-export"
+        },
+        "repository_relative_path": "knowledge-data/entities/country-kpi-snapshot-export.json"
+    }
+}

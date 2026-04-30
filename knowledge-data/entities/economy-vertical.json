@@ -1,0 +1,672 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "economy-vertical",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T22:45:00Z",
+    "topics": [
+        "economy",
+        "market-analysis",
+        "fiscal-policy",
+        "trade-stability",
+        "macro",
+        "recovery-scenarios",
+        "ppi",
+        "ggi",
+        "exports"
+    ],
+    "aliases": [
+        "Wirtschaftssparte",
+        "Economy vertical",
+        "Verticale économique",
+        "Vertical económica",
+        "Economie vertical",
+        "Economia verticale",
+        "NationFiles economy",
+        "nationale Marktanalyse",
+        "macro compare",
+        "Handelsstabilität",
+        "経済領域",
+        "市場分析",
+        "المحور الاقتصادي",
+        "تحليل السوق"
+    ],
+    "attributes": [
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Economy hub",
+                    "url": "https://nationfiles.com/en/economy/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "model_type",
+            "value": "The NationFiles economy vertical is the editorial and data-facing frame that explains how fiscal-policy headlines, external-sector indicators, and post-shock recovery comparability are presented alongside the public {{purchasing-power-index}} bundle and {{governance-institutions-index}} scores. It is not a secret macro engine: each figure traces to documented upstream series or to separate methodology pages. {{nfsi}} adds a stability headline where the same country surface includes it; {{naciro}} supplies near-daily FX cross-reads next to PPP-based lines so readers can separate price and income comparability from currency volatility.",
+            "depends_on": [
+                "purchasing-power-index",
+                "governance-institutions-index",
+                "nfsi",
+                "naciro",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Economy hub",
+                    "url": "https://nationfiles.com/en/economy/"
+                },
+                {
+                    "label": "Knowledge graph",
+                    "url": "https://nationfiles.com/en/knowledge/graph/"
+                }
+            ],
+            "value_i18n": {
+                "en": "The NationFiles economy vertical is the editorial and data-facing frame that explains how fiscal-policy headlines, external-sector indicators, and post-shock recovery comparability are presented alongside the public {{purchasing-power-index}} bundle and {{governance-institutions-index}} scores. It is not a secret macro engine: each figure traces to documented upstream series or to separate methodology pages. {{nfsi}} adds a stability headline where the same country surface includes it; {{naciro}} supplies near-daily FX cross-reads next to PPP-based lines so readers can separate price and income comparability from currency volatility.",
+                "de": "Die **Wirtschaftssparte** auf NationFiles ist der **redaktionelle** und **datennahe** Rahmen dafür, wie **Fiskalpolitik**, **Außenwirtschaft** und **Erholungsvergleiche** nach Krisen **zusammen mit** dem öffentlichen {{purchasing-power-index}}-Bündel und den {{governance-institutions-index}}-Scores **eingeordnet** werden. Es handelt sich **nicht** um einen **undokumentierten** Makro‑Motor: Zahlen lassen sich auf **benannte** Serien oder **eigene** Methodenseiten zurückführen. {{nfsi}} liefert dort eine **Stabilitäts**-Headline, wo dieselbe Oberfläche sie vorsieht; {{naciro}} bündelt **FX**-Querinfos **neben** KKP‑Linien, damit Leser:innen **Preis‑/Einkommensvergleich** und **Wechselkursvolatilität** unterscheiden können.",
+                "fr": "La **verticale économique** NationFiles est le **cadre rédactionnel** et **données** qui explique comment **politique budgétaire**, **secteur extérieur** et **comparaisons de rebond** après choc sont **lues** avec le bundle public {{purchasing-power-index}} et les scores {{governance-institutions-index}}. Ce n’est **pas** un moteur macro **caché** : chaque série renvoie à des indicateurs **documentés** ou à des pages de méthode. {{nfsi}} ajoute un **titre** de **stabilité** lorsque la même surface pays l’affiche ; {{naciro}} agrège des **FX** en **lecture croisée** aux lignes PPA pour distinguer **comparabilité revenu/prix** et **volatilité**.",
+                "es": "La **vertical económica** NationFiles es el **marco editorial y de datos** que ordena **política fiscal**, **sector externo** y **comparación de recuperación** junto al paquete {{purchasing-power-index}} y las puntuaciones {{governance-institutions-index}}. **No** es un motor macro **oculto**: cada cifra remite a **series** documentadas o a páginas metodológicas. {{nfsi}} suma un titular de **estabilidad** donde la misma ficha país lo muestra; {{naciro}} ofrece **FX** en **lectura cruzada** con líneas PPA para separar **comparabilidad ingreso/precio** y **volatilidad** cambiaria.",
+                "pt": "A **vertical económica** NationFiles é a **moldura editorial e de dados** que explica como **política fiscal**, **setor externo** e **comparação de recuperação** pós‑choque aparecem com o pacote {{purchasing-power-index}} e as pontuações {{governance-institutions-index}}. **Não** é um motor macro **opaco**: cada valor liga a **séries** documentadas ou páginas de metodologia. {{nfsi}} acrescenta o **headline** de estabilidade quando a mesma superfície nacional o prevê; {{naciro}} agrega **FX** em **leitura cruzada** às linhas PPC para separar **comparabilidade preço/renda** e **volatilidade**.",
+                "ar": "**المحور الاقتصادي** على NationFiles هو **الإطار التحريري** و**المرتبط بالبيانات** الذي يشرح كيف تُعرض **السياسة المالية** ومؤشرات **القطاع الخارجي** ومقارنات **التعافي بعد الصدمة** إلى جانب حزمة {{purchasing-power-index}} ودرجات {{governance-institutions-index}}. ليس **محركًا ماكروًا سريًا**: كل رقم يرتبط **بتسلسلات** موثّقة أو بصفحات منهجية. {{nfsi}} يضيف **عنوان استقرار** حيث تُظهر نفس الواجهة ذلك؛ {{naciro}} يجمع **قراءات صرفية** بجانب خطوط **تعادل القوة الشرائية** لفصل **مقارنة الدخل/الأسعار** عن **تقلبات** العملة.",
+                "ja": "NationFiles の**経済領域**は、**財政**・**対外部門**・**ショック後の回復比較**を、公開の {{purchasing-power-index}} バンドルと {{governance-institutions-index}} スコアと並べて読むための**編集・データ上の枠**である。**隠れた**マクロ・エンジンではなく、数値は**文書化された**系列か別の方法論ページに遡る。{{nfsi}} は同一の国情報面で**安定性**見出しを付け足す場合がある。{{naciro}} は **PPP** 系列の横に**ほぼ日次**の **FX** クロスリードを置き、**購買力・所得比較**と**為替の変動**を分けて読めるようにする。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Curated KPI rows from the published metric registry flow into country dashboards, compare views, and exports; governance fields documented in {{governance-institutions-index}} and PPP macro lines from {{purchasing-power-index}} share the same ISO-scoped surfaces when the product enables them. {{naciro}} refreshes FX quotations for contextual read-across without replacing World Bank PPI inputs.",
+            "depends_on": [
+                "purchasing-power-index",
+                "governance-institutions-index",
+                "naciro",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Countries hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                },
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Curated KPI rows from the published metric registry flow into country dashboards, compare views, and exports; governance fields documented in {{governance-institutions-index}} and PPP macro lines from {{purchasing-power-index}} share the same ISO-scoped surfaces when the product enables them. {{naciro}} refreshes FX quotations for contextual read-across without replacing World Bank PPI inputs.",
+                "de": "Aus der veröffentlichten Kennzahlen-Registry kuratierte **KPI-Zeilen** gelangen in Länder-Dashboards, **Vergleichsansichten** und **Exporte**; **Governance**-Felder aus {{governance-institutions-index}} und **KKP**-Makrolinien aus {{purchasing-power-index}} teilen sich dieselben **ISO**-Oberflächen, wenn das Produkt es erlaubt. {{naciro}} aktualisiert **FX**-Notierungen für **Kontextquerlesarten**, **ohne** die World-Bank-PPI-Eingaben zu ersetzen.",
+                "fr": "Les lignes KPI **curatées** du registre public alimentent tableaux pays, **comparaisons** et **exports** ; les champs **gouvernance** ({{governance-institutions-index}}) et les lignes macro **PPA** ({{purchasing-power-index}}) partagent les mêmes surfaces **ISO** si le produit l’active. {{naciro}} rafraîchit les **FX** pour lecture croisée **sans** remplacer les entrées PPI Banque mondiale.",
+                "es": "Filas KPI **curadas** del registro público alimentan paneles país, **comparativas** y **exportaciones**; campos de **gobernanza** ({{governance-institutions-index}}) y líneas macro **PPA** ({{purchasing-power-index}}) comparten superficies **ISO** si el producto lo habilita. {{naciro}} **renueva** **FX** para lectura cruzada **sin** sustituir insumos PPI del Banco Mundial.",
+                "pt": "Linhas KPI **curadas** do registo público alimentam painéis país, **comparativos** e **exportações**; campos de **governação** ({{governance-institutions-index}}) e linhas macro **PPC** ({{purchasing-power-index}}) partilham superfícies **ISO** se o produto permitir. {{naciro}} **atualiza** **FX** para leitura cruzada **sem** substituir insumos PPI do Banco Mundial.",
+                "ar": "صفوف **مؤشرات KPI** المنتقاة من السجل العام تتدفّق إلى لوحات الدول و**المقارنات** و**التصدير**؛ حقول **الحوكمة** من {{governance-institutions-index}} وخطوط **PPP** من {{purchasing-power-index}} تشترك في أسطح **ISO** عند تفعيل المنتج. {{naciro}} **يحدّث** أسعار **FX** لقراءة متقاطعة **دون** استبدال مدخلات PPI للبنك الدولي.",
+                "ja": "公開指標レジストリ由来の**キュレート** KPI 行が国ダッシュボード・**比較**・**エクスポート**へ流れる。{{governance-institutions-index}} の**ガバナンス**列と {{purchasing-power-index}} の **PPP** マクロ行は、製品が許すとき同一の **ISO** 面を共有する。{{naciro}} は世界銀行 **PPI** 入力を置き換えず、**文脈横読み**用に **FX** を更新する。"
+            }
+        },
+        {
+            "key": "forecast_horizon",
+            "value": "NationFiles does not ship one undisclosed global macro forecast model inside the knowledge dataset. Forward-looking copy inherits horizons from upstream release calendars referenced by {{purchasing-power-index}}, from timestamps on export bundles described in {{country-kpi-snapshot-export}}, and from on-screen disclaimers—readers should treat recovery narratives as comparative framing over published indicators, not as a single proprietary scenario path.",
+            "depends_on": [
+                "purchasing-power-index",
+                "country-kpi-snapshot-export"
+            ],
+            "sources": [
+                {
+                    "label": "AI guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles does not ship one undisclosed global macro forecast model inside the knowledge dataset. Forward-looking copy inherits horizons from upstream release calendars referenced by {{purchasing-power-index}}, from timestamps on export bundles described in {{country-kpi-snapshot-export}}, and from on-screen disclaimers—readers should treat recovery narratives as comparative framing over published indicators, not as a single proprietary scenario path.",
+                "de": "NationFiles liefert **kein** einzelnes, **undokumentiertes** globales Makro‑Prognosemodell im Knowledge‑Datensatz. **Vorausschauende** Formulierungen **beziehen** ihren Horizont aus **Upstream**-Veröffentlichungszyklen (siehe {{purchasing-power-index}}), aus **Zeitstempeln** in Export‑Bündeln ({{country-kpi-snapshot-export}}) und aus **UI**‑Hinweisen — **Erzählungen** zur Erholung sind **Vergleichsrahmen** über bekannte Indikatoren, **kein** einzelner **proprietärer** Szenario‑Pfad.",
+                "fr": "NationFiles **n’embarque** pas un unique modèle macro-prospectif **non documenté** dans le jeu Knowledge. Les textes **prospectifs** tirent leur horizon des **calendriers** amont (voir {{purchasing-power-index}}), des **horodatages** d’exports ({{country-kpi-snapshot-export}}) et des **mentions** UI — les récits de **rebond** sont un **cadrage comparatif** sur indicateurs publiés, **pas** une trajectoire de scénario **propriétaire** unique.",
+                "es": "NationFiles **no** incluye un único modelo macro prospectivo **no divulgado** en el dataset Knowledge. Los textos **hacia adelante** toman horizonte de **calendarios** aguas arriba ({{purchasing-power-index}}), **sellos** de export ({{country-kpi-snapshot-export}}) y **avisos** en UI — las narrativas de **recuperación** son **marco comparativo** sobre indicadores publicados, **no** un **único** camino de escenario **propietario**.",
+                "pt": "NationFiles **não** embute um modelo macro prospectivo **oculto** único no dataset Knowledge. Textos **prospetivos** herdam horizonte de **calendários** a montante ({{purchasing-power-index}}), **carimbos** de exportação ({{country-kpi-snapshot-export}}) e **avisos** na UI — narrativas de **recuperação** são **enquadramento comparativo** sobre indicadores públicos, **não** um **único** percurso de cenário **proprietário**.",
+                "ar": "لا تُضمّن NationFiles في بيان المعرفة **نموذجًا ماكرويًا** توقعيًا **غير مشاع** كمجموعة واحدة. النصوص **آفاقية** تستمد أفقها من **تقاويم** المصدر (انظر {{purchasing-power-index}}) و**أختام** تصدير ({{country-kpi-snapshot-export}}) وتنبيهات **الواجهة** — سرد **التعافي** هو **إطار مقارن** فوق مؤشرات منشورة، **لا** مسار **سيناريو** واحد **خاص**.",
+                "ja": "NationFiles はナレッジデータセットに **未公開の** 単一グローバル・マクロ予測モデルを**同梱しない**。**先**を見る表現は {{purchasing-power-index}} が参照する**上流**リリース周期、{{country-kpi-snapshot-export}} に述べるエクスポート束の**タイムスタンプ**、画面上の**注意書き**から地平を引き継ぐ。回復の語りは公開指標上の**比較の枠**であり、**一つの**独自シナリオ経路ではない。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Open macro indicators documented for PPI (for example World Bank series referenced in the PPI entity), governance inputs declared in {{governance-institutions-index}}, FX aggregates curated by {{naciro}} for side-by-side reading, and methodological citations gathered in the public legal source registry—each layer stays explicit about what it does and does not assert.",
+            "depends_on": [
+                "purchasing-power-index",
+                "governance-institutions-index",
+                "naciro",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Open macro indicators documented for PPI (for example World Bank series referenced in the PPI entity), governance inputs declared in {{governance-institutions-index}}, FX aggregates curated by {{naciro}} for side-by-side reading, and methodological citations gathered in the public legal source registry—each layer stays explicit about what it does and does not assert.",
+                "de": "Offene Makroindikatoren für **PPI** (z. B. World-Bank-Serien laut PPI‑Entität), in {{governance-institutions-index}} erklärte **Governance**‑Eingaben, von {{naciro}} kuratierte **FX**‑Aggregate für **Querlektüre** und im öffentlichen **Quellenregister** gesammelte Methodenzitate — jede Schicht sagt **explizit**, was sie **behauptet** und was **nicht**.",
+                "fr": "Indicateurs macro ouverts documentés pour **PPI** (ex. séries Banque mondiale selon l’entité PPI), entrées **gouvernance** déclarées dans {{governance-institutions-index}}, agrégats **FX** curatés par {{naciro}} pour lecture parallèle, citations méthodologiques du **registre** public — chaque couche **précise** ce qu’elle **affirme** ou **non**.",
+                "es": "Indicadores macro abiertos documentados para **PPI** (p. ej. series Banco Mundial en la entidad PPI), insumos de **gobernanza** en {{governance-institutions-index}}, agregados **FX** curados por {{naciro}} para lectura paralela, citas metodológicas del **registro** público — cada capa **explicita** qué **sí** y qué **no** afirma.",
+                "pt": "Indicadores macro abertos para **PPI** (p. ex. séries Banco Mundial na entidade), insumos de **governação** em {{governance-institutions-index}}, agregados **FX** curados por {{naciro}} para leitura paralela, citações metodológicas do **registo** público — cada camada **explicita** o que **afirma** ou **não**.",
+                "ar": "مؤشرات ماكرو مفتوحة موثّقة لـ**PPI** (مثل سلسلة البنك الدولي وفق كيان PPI)، مدخلات **الحوكمة** في {{governance-institutions-index}}، تجميعات **FX** عبر {{naciro}} للقراءة الموازية، واستشهادات منهجية في **سجل** المصادر العامة — كل طبقة **توضّح** ما **تدّعيه** وما **لا**.",
+                "ja": "**PPI** 向けに文書化されたオープン・マクロ指標（PPI エンティティの世界銀行系列など）、{{governance-institutions-index}} の**ガバナンス**入力、並読用に {{naciro}} が整える **FX** 集約、公開**ソース登録**の方法論引用——各層が**何を主張し何を主張しないか**を明示する。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Country KPI tables, governance-and-economy copy blocks, calculator surfaces where {{purchasing-calculator}} is enabled, and export packages described in {{country-kpi-snapshot-export}}; each bundle exposes refresh cues when the product requires them.",
+            "depends_on": [
+                "purchasing-calculator",
+                "country-kpi-snapshot-export",
+                "governance-institutions-index"
+            ],
+            "sources": [
+                {
+                    "label": "Countries hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Country KPI tables, governance-and-economy copy blocks, calculator surfaces where {{purchasing-calculator}} is enabled, and export packages described in {{country-kpi-snapshot-export}}; each bundle exposes refresh cues when the product requires them.",
+                "de": "Länder-**KPI**-Tabellen, **Governance**- und **Wirtschafts**-Textblöcke, **Rechner**-Oberflächen wo {{purchasing-calculator}} freigeschaltet ist, und **Export**-Pakete nach {{country-kpi-snapshot-export}} — jedes Bündel nennt **Aktualisierungshinweise**, wo das Produkt es verlangt.",
+                "fr": "Tableaux KPI pays, blocs texte **gouvernance/économie**, surfaces **calculateur** si {{purchasing-calculator}} est actif, paquets **export** selon {{country-kpi-snapshot-export}} — chaque lot **signale** la fraîcheur quand le produit l’exige.",
+                "es": "Tablas KPI país, bloques **gobernanza/economía**, **calculadora** si {{purchasing-calculator}} está activo, paquetes **export** según {{country-kpi-snapshot-export}} — cada paquete **indica** actualización si el producto lo exige.",
+                "pt": "Tabelas KPI país, blocos **governação/economia**, **calculadora** se {{purchasing-calculator}} ativo, pacotes **export** conforme {{country-kpi-snapshot-export}} — cada pacote **mostra** frescor quando o produto exige.",
+                "ar": "جداول KPI للدول، مقاطع نص **حوكمة/اقتصاد**، واجهات **حاسبة** عند تفعيل {{purchasing-calculator}}، وحزم **تصدير** وفق {{country-kpi-snapshot-export}} — كل حزمة **تبيّن** إشارات التحديث عند اشتراط المنتج.",
+                "ja": "国別 **KPI** 表、**ガバナンス／経済**の文言ブロック、{{purchasing-calculator}} が有効なときの**計算**面、{{country-kpi-snapshot-export}} に沿う**エクスポート**束。製品が求めるとき**更新**の手がかりを示す。"
+            }
+        },
+        {
+            "key": "knowledge_hub",
+            "value": "https://nationfiles.com/en/knowledge/",
+            "sources": [
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/knowledge/",
+                "en": "https://nationfiles.com/en/knowledge/",
+                "fr": "https://nationfiles.com/en/knowledge/",
+                "es": "https://nationfiles.com/en/knowledge/",
+                "pt": "https://nationfiles.com/en/knowledge/",
+                "ar": "https://nationfiles.com/en/knowledge/",
+                "ja": "https://nationfiles.com/en/knowledge/"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "governance-institutions-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-calculator"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "knowledge-hub-nfkg"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-kpi-snapshot-export"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        }
+    ],
+    "faq_refs": [],
+    "blocks": [
+        {
+            "type": "summary"
+        },
+        {
+            "type": "markdown"
+        },
+        {
+            "type": "attribute_table"
+        },
+        {
+            "type": "fact_table"
+        },
+        {
+            "type": "sections"
+        },
+        {
+            "type": "relations"
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Wirtschaftssparte",
+            "teaser": "Die **Wirtschaftssparte** fasst zusammen, wie NationFiles **Makrovergleiche**, **Institutionen** und **Stabilität** auf Länderseiten bündelt — **ohne** ein undokumentiertes Prognosemodell zu behaupten.",
+            "summary_bullets": [
+                "**Scope:** Fiskal- und Außenwirtschaftskontext neben {{purchasing-power-index}} und {{governance-institutions-index}}.",
+                "**Kein Geheimrezept:** Zahlen verweisen auf dokumentierte Serien oder Methodeseiten der jeweiligen Kennzahl.",
+                "**Lesen:** {{naciro}} liefert **FX**-Kontext neben **KKP**-Linien; {{nfsi}} ergänzt Stabilität, wo vorgesehen.",
+                "**Erwartungshaltung:** Erholungsvergleiche nutzen **veröffentlichte** Indikatoren — keine proprietäre Szenario-Garantie.",
+                "**Einstieg:** [Economy-Hub](/de/economy/), [Knowledge](/de/knowledge/)."
+            ],
+            "body_md": "Wer auf NationFiles **Wirtschaft** recherchiert, landet schnell bei Tabellen, in denen **Einkommen**, **Preise** und **Institutionen** nebeneinander stehen. Die **Wirtschaftssparte** beschreibt **redaktionell**, wie diese Teile **zusammengehören** — nicht zum Marketing, sondern damit klar ist, **was** die Plattform darstellt und **was nicht**.\n\n**Fiskalpolitik** erscheint hier nicht als einzelner „hebel“, sondern als **Kontext**: Wo öffentliche Serien Schuldenquote, Inflation oder Arbeitsmarkt abbilden, helfen sie Leser:innen, Länder **vergleichbar** zu diskutieren. Fehlt eine Serie auf einer Oberfläche, ist das **kein** Beweis für Geheimhaltung — oft entscheidet **Coverage** der dokumentierten Quelle.\n\n**Handelsstabilität** meint in diesem Rahmen vor allem die **Lesart** von Reserven, Offenheit und **Wechselkursvolatilität** neben **KKP**-Vergleichen. {{naciro}} stellt dazu **häufig erneuerte** FX-Informationen bereit; sie **ersetzen** weder die **World-Bank**-Logik des {{purchasing-power-index}} noch makroökonomische **Interpretation** durch Behörden.\n\n**Prognosen** und **Erholungspfaden** nach Krisen tauchen in Zeitungen oft als **eine** zentrale Zahl auf. NationFiles hält dagegen **Transparenz**: **Voraus**schauende Texte und Export-Stempel beziehen sich auf **Bekanntes** (Refresh-Zyklen, Methoden, rechtliche Quellenverweise). Wer ein **einziges** internes Grobmodell erwartet, wird es in den öffentlichen Knowledge-Daten **nicht** finden — Absicht, keine Lücke.\n\n**Weiterlesen:** {{purchasing-power-index}}, {{governance-institutions-index}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Rolle",
+                    "v": "Marktanalyse-Rahmen auf NationFiles"
+                },
+                {
+                    "k": "Kernpfeiler",
+                    "v": "PPI-Bündel, GGI, optional NFSI"
+                },
+                {
+                    "k": "FX-Kontext",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Prognose",
+                    "v": "Kein undokumentiertes Globalmodell im NFKG"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum der Rahmen öffentlich beschrieben wird",
+                    "body_md": "Journalist:innen und Analyst:innen sollen **Quellen** und **Grenzen** erkennen — nicht nur **grafische** Dashboards. Die Entität **economy-vertical** dient genau diesem **Zweck**."
+                },
+                {
+                    "title": "Typische Fehlinterpretationen vermeiden",
+                    "body_md": "**KKP** ist **nicht** dasselbe wie **Tageswechselkurs**. **GGI** misst **Institutionen**, nicht dieselbe Größe wie **Armutsquote**. Die Sparte benennt diese **Unterschiede**."
+                },
+                {
+                    "title": "Wo die Daten live einsteigen",
+                    "body_md": "Länder- und **Economy**-Routen auf **nationfiles.com** verlinken auf dieselben **HTTPS**-Quellen, die im **Legal-Register** und in den Methoden-Entitäten genannt werden."
+                }
+            ]
+        },
+        "en": {
+            "title": "Economy vertical",
+            "teaser": "The **economy vertical** is how NationFiles groups **macro comparability**, **institutional scores**, and **stability** context on country surfaces—**without** claiming a hidden forecast engine.",
+            "summary_bullets": [
+                "**Scope:** fiscal and external-sector context next to {{purchasing-power-index}} and {{governance-institutions-index}}.",
+                "**No black box:** figures point to documented series or per-indicator methodology pages.",
+                "**Reading across:** {{naciro}} places **FX** context beside **PPP** lines; {{nfsi}} adds stability where the UI includes it.",
+                "**Expectations:** recovery comparison draws on **published** indicators—not a proprietary scenario guarantee.",
+                "**Start here:** [Economy hub](/en/economy/), [Knowledge](/en/knowledge/)."
+            ],
+            "body_md": "When readers open NationFiles for **economy** work, they usually want **comparable** numbers: income in **purchasing-power** terms, **inflation**, **reserves**, sometimes **governance** grades. The **economy vertical** is the editorial contract that explains how those tiles sit on the same **country** page—not a slogan about “AI predictions,” but a map of **what is wired to what**.\n\n**Fiscal policy** shows up as **headline context** where public series exist: debt paths, tax coverage, labour market lines documented alongside the **PPI** bundle. If a number is absent, the usual explanation is **source scope**, not mystery.\n\n**Trade stability** here means reading **external-sector** indicators together with **near-daily FX** from {{naciro}} so people do not confuse **PPP income ranks** with **spot-rate** drama. Neither layer replaces **official** national accounts interpretation.\n\n**Forecast models** and post-crisis **recovery** arcs are sensitive topics. NationFiles keeps forward-looking wording tied to **release calendars**, **snapshots**, and **disclaimers** referenced in the PPI and export documentation—**not** a private macro path baked into the knowledge graph.\n\n**Read next:** {{purchasing-power-index}}, {{governance-institutions-index}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Role",
+                    "v": "Market-analysis frame on NationFiles"
+                },
+                {
+                    "k": "Pillars",
+                    "v": "PPI bundle, GGI, optional NFSI"
+                },
+                {
+                    "k": "FX layer",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Forecast stance",
+                    "v": "No undisclosed global model in NFKG"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why the frame is documented",
+                    "body_md": "Machine clients and humans need the same **ground rules** about comparability. This entity states them in plain language."
+                },
+                {
+                    "title": "Common mix-ups to avoid",
+                    "body_md": "**PPP GDP** is not **today’s FX quote**. **GGI** is institutional quality, not a poverty line. Naming the difference prevents bad citations."
+                },
+                {
+                    "title": "Where live routes land",
+                    "body_md": "**Economy** and **country** URLs on nationfiles.com remain anchored to the **HTTPS** citations recorded in the **source registry** and methodology entities."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Verticale Économie",
+            "teaser": "La **verticale économique** regroupe sur NationFiles **comparaisons macro**, **scores institutionnels** et **stabilité** — **sans** prétendre disposer d’un moteur de prévision occulte.",
+            "summary_bullets": [
+                "**Périmètre:** cadre budgétaire et **secteur extérieur** avec {{purchasing-power-index}} et {{governance-institutions-index}}.",
+                "**Pas de boîte noire:** chaque série renvoie à des indicateurs **documentés** ou à une page méthode.",
+                "**Lecture croisée:** {{naciro}} donne le **FX** à côté des lignes **PPA** ; {{nfsi}} ajoute la stabilité si l’UI l’affiche.",
+                "**Attente:** la reprise se lit sur des indicateurs **publiés**, pas sur une trajectoire propriétaire garantie.",
+                "**Entrées:** [Économie](/fr/economy/), [Knowledge](/fr/knowledge/)."
+            ],
+            "body_md": "Sur NationFiles, la rubrique **économie** sert surtout à **comparer** des pays avec des lignes **PPA**, d’**inflation**, parfois de **gouvernance**. La **verticale économique** en explique l’**assemblage** : ce que la page **affiche**, ce qu’elle **n’invente** pas.\n\nLa **politique budgétaire** apparaît là où des séries publiques existent (dette, fiscalité, marché du travail) **à côté** du bundle **PPI**. Une valeur absente reflète souvent un **périmètre** de donnée, pas une censure.\n\n**Stabilité des échanges** signifie ici **lire** réserves, ouverture et **FX** (via {{naciro}}) **sans confondre** rangs de revenu **PPA** et volatilité **au comptant**.\n\nLes **modèles prospectifs** et les récits de **reprise** sont cadrés par des **calendriers** amont, des **horodatages** d’export et des mentions d’**interface**, comme le documentent les entités **PPI** et **export** — pas par un scénario macro **secret** dans le graphe.\n\n**Suite:** {{purchasing-power-index}}, {{governance-institutions-index}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Rôle",
+                    "v": "Cadre d’analyse de marché NationFiles"
+                },
+                {
+                    "k": "Piliers",
+                    "v": "Bundle PPI, GGI, NFSI optionnel"
+                },
+                {
+                    "k": "Couche FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Prévision",
+                    "v": "Pas de modèle global caché dans le NFKG"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi c’est documenté",
+                    "body_md": "Humains et machines partagent les **mêmes règles** de comparabilité ; cette page les énonce clairement."
+                },
+                {
+                    "title": "Confusions fréquentes",
+                    "body_md": "Le **PIB PPA** n’est pas la **cotation FX** du jour. Le **GGI** mesure les **institutions**, pas la pauvreté au même titre qu’un indice social unique."
+                },
+                {
+                    "title": "Routes publiques",
+                    "body_md": "Les URLs **économie** et **pays** restent alignées sur les **HTTPS** cités au **registre** des sources."
+                }
+            ]
+        },
+        "es": {
+            "title": "Vertical económica",
+            "teaser": "La **vertical económica** es el marco en NationFiles para **macrocomparación**, **gobernanza** y **estabilidad** — **sin** afirmar un motor de pronósticos oculto.",
+            "summary_bullets": [
+                "**Alcance:** fiscal y **sector externo** junto a {{purchasing-power-index}} y {{governance-institutions-index}}.",
+                "**Sin caja negra:** cada cifra enlaza series **documentadas** o páginas metodológicas.",
+                "**Lectura cruzada:** {{naciro}} aporta **FX** junto a líneas **PPA**; {{nfsi}} añade estabilidad si la UI lo muestra.",
+                "**Expectativa:** la recuperación se apoya en indicadores **publicados**, no en una trayectoria propietaria.",
+                "**Entrada:** [Economía](/es/economy/), [Knowledge](/es/knowledge/)."
+            ],
+            "body_md": "Quien usa NationFiles para **economía** suele buscar cuadros **comparables**: ingresos en **paridad de poder adquisitivo**, **inflación**, **gobernanza**. La **vertical económica** explica cómo esos bloques conviven en la misma ficha país.\n\nLa **política fiscal** aparece como **contexto** donde hay series públicas coherentes con el paquete **PPI**. Si falta un dato, lo habitual es **cobertura** de fuente, no secreto.\n\n**Estabilidad comercial** aquí significa leer **reservas**, apertura y **FX** ({{naciro}}) sin confundir **ránking PPA** con el tipo **spot**.\n\n**Modelos de pronóstico** y narrativas de **recuperación** se atan a calendarios de publicación, **sellos** de exportación y avisos de interfaz descritos en las entidades **PPI** y de exportación — no a un escenario macro **oculto**.\n\n**Seguir:** {{purchasing-power-index}}, {{governance-institutions-index}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Función",
+                    "v": "Marco de análisis de mercado en NationFiles"
+                },
+                {
+                    "k": "Pilares",
+                    "v": "Paquete PPI, GGI, NFSI opcional"
+                },
+                {
+                    "k": "Capa FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Pronóstico",
+                    "v": "Sin modelo global no divulgado en NFKG"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por qué está documentado",
+                    "body_md": "Reglas **compartidas** para humanos y sistemas automatizados; esta página las resume."
+                },
+                {
+                    "title": "Errores habituales",
+                    "body_md": "El **PIB PPA** no es la **cotización FX** diaria. El **GGI** mide **instituciones**, no un índice social único equivalente."
+                },
+                {
+                    "title": "Rutas públicas",
+                    "body_md": "Las URLs de **economía** y **país** siguen los **HTTPS** del **registro** de fuentes."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Vertical económica",
+            "teaser": "A **vertical económica** agrupa em NationFiles **macrocomparação**, **governação** e **estabilidade** — **sem** reivindicar um motor de previsão oculto.",
+            "summary_bullets": [
+                "**Âmbito:** política fiscal e **setor externo** com {{purchasing-power-index}} e {{governance-institutions-index}}.",
+                "**Sem caixa negra:** cada valor liga a **séries** documentadas ou páginas metodológicas.",
+                "**Leitura cruzada:** {{naciro}} traz **FX** junto das linhas **PPC**; {{nfsi}} acrescenta estabilidade quando a UI o mostra.",
+                "**Expectativa:** recuperação assenta em indicadores **publicados**, não num percurso proprietário garantido.",
+                "**Entrada:** [Economia](/pt/economy/), [Knowledge](/pt/knowledge/)."
+            ],
+            "body_md": "Quem consulta NationFiles para **economia** procura normalmente tabelas **comparáveis**: rendimento em **paridade de poder de compra**, **inflação**, **governação**. A **vertical económica** descreve como esses blocos partilham a mesma **superfície** país.\n\nA **política fiscal** surge como **contexto** onde existem séries públicas alinhadas com o pacote **PPI**. Um número em falta reflecte sobretudo **cobertura**, não opacidade.\n\n**Estabilidade comercial** significa ler **reservas**, abertura e **FX** via {{naciro}} **sem confundir** **rankings PPC** com volatilidade à **vista**.\n\n**Modelos de previsão** e narrativas de **recuperação** ficam vinculados a calendários a montante, **carimbos** de exportação e avisos de interface nas entidades **PPI** e de exportação — não a um cenário macro **confidencial** no grafo.\n\n**Continuar:** {{purchasing-power-index}}, {{governance-institutions-index}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Papel",
+                    "v": "Quadro de análise de mercado na NationFiles"
+                },
+                {
+                    "k": "Pilares",
+                    "v": "Pacote PPI, GGI, NFSI opcional"
+                },
+                {
+                    "k": "Camada FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Previsão",
+                    "v": "Sem modelo global não divulgado no NFKG"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Porque está documentado",
+                    "body_md": "Regras **partilhadas** para leitores e clientes máquina; esta página condensa o essencial."
+                },
+                {
+                    "title": "Confusões frequentes",
+                    "body_md": "**PIB PPC** não é a **cotação FX** do dia. O **GGI** mede **instituições**, não um índice social único equivalente."
+                },
+                {
+                    "title": "Rotas públicas",
+                    "body_md": "URLs de **economia** e **país** mantêm **HTTPS** do **registo** de fontes."
+                }
+            ]
+        },
+        "ar": {
+            "title": "المحور الاقتصادي",
+            "teaser": "**المحور الاقتصادي** على NationFiles يجمع **مقارنة ماكرو** و**مؤسسات** و**استقرارًا** — **دون** ادّعاء محرك توقّع مخفي.",
+            "summary_bullets": [
+                "**النطاق:** السياسة المالية والقطاع الخارجي مع {{purchasing-power-index}} و{{governance-institutions-index}}.",
+                "**لا صندوق أسود:** كل رقم يربط بتسلسلات **موثّقة** أو صفحات منهجية.",
+                "**قراءة متقاطعة:** {{naciro}} يوفّر **FX** بجانب خطوط **PPP**؛ {{nfsi}} يضيف الاستقرار حيث تظهر الواجهة ذلك.",
+                "**توقّع:** التعافي يُبنى على مؤشرات **منشورة** لا على مسار **خاص** مضمون.",
+                "**مدخل:** [الاقتصاد](/ar/economy/)، [Knowledge](/ar/knowledge/)."
+            ],
+            "body_md": "من يبحث في NationFiles عن **اقتصاد** الدول يريد غالبًا جداول **قابلة للمقارنة**: الدخل بتعادل **القوة الشرائية**، **التضخم**، أحيانًا **الحوكمة**. **المحور الاقتصادي** يشرح كيف تتلاقى هذه الكتل في **صفحة** الدولة نفسها.\n\n**السياسة المالية** تظهر حيث تتوفر سلسلات عامة ضمن حزمة **PPI**. غياب رقمٍ يعكس غالبًا **نطاق** المصدر لا **إخفاءً**.\n\n**استقرار التجارة** هنا يعني قراءة **الاحتياطيات** والانفتاح و**FX** (عبر {{naciro}}) **دون خلط** ترتيب دخل **PPP** بتقلب **سعر لحظي**.\n\n**نماذج التنبؤ** وروايات **التعافي** ترتبط بتقاويم إصدار و**أختام** تصدير وتنبيهات واجهة موثقة في كيانات **PPI** والتصدير — لا بمسار ماكرو **سري** في بيان المعرفة.\n\n**متابعة:** {{purchasing-power-index}}، {{governance-institutions-index}}، {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "الوظيفة",
+                    "v": "إطار تحليل السوق على NationFiles"
+                },
+                {
+                    "k": "ركائز",
+                    "v": "حزمة PPI وGGI وNFSI اختياري"
+                },
+                {
+                    "k": "طبقة FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "التنبؤ",
+                    "v": "لا نموذج عالمي سري في NFKG"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا يُوثَّق الإطار",
+                    "body_md": "قواعد **مشتركة** للبشر وللوكلاء الآليين؛ هذه الصفحة تلخّصها بجمل مباشرة."
+                },
+                {
+                    "title": "أخطاء شائعة",
+                    "body_md": "**ناتج تعادل القوة الشرائية** ليس **سعر صرف اليوم**. **GGI** يقيس **المؤسسات** لا مؤشر فقر وحيد بنفس المعنى."
+                },
+                {
+                    "title": "المسارات العلنية",
+                    "body_md": "روابط **الاقتصاد** و**الدول** تبقى متماثلة مع **HTTPS** في **سجل** المصادر."
+                }
+            ]
+        },
+        "ja": {
+            "title": "経済領域",
+            "teaser": "NationFiles の**経済領域**は、国ページ上で**マクロ比較**・**制度スコア**・**安定性**文脈を束ねる枠であり、**隠れた**予測エンジンなどと**誤認**されないように説明する。",
+            "summary_bullets": [
+                "**範囲:** 財政・対外部門の文脈を {{purchasing-power-index}} と {{governance-institutions-index}} の横に置く。",
+                "**ブラックボックスではない:** 数値は**文書化された**系列か各指標の方法ページに結ばれる。",
+                "**横読み:** {{naciro}} が **PPP** 系列の隣に **FX** を置く。{{nfsi}} は UI に載る場合に**安定性**見出しを足す。",
+                "**期待値:** 回復の話は**公開**指標に依存し、**一社**のシナリオ保証ではない。",
+                "**入口:** [経済](/ja/economy/)、[Knowledge](/ja/knowledge/)。"
+            ],
+            "body_md": "NationFiles で**経済**を調べる利用者は、**購買力平価**ベースの所得、**インフレ**、必要なら**ガバナンス**を**横並び**で読みたいことが多い。**経済領域**は、その**並べ方**と**限界**を文章で示す。ダッシュボードの見栄えではなく、**何が何に接続されているか**が焦点だ。\n\n**財政政策**は、公開系列が **PPI** バンドルと**整合**する限りで**見出し**になる。数が無い多くの場合、理由は**ソースの範囲**だ。\n\n**貿易の安定性**とはここでは、**準備金**・**開放度**・{{naciro}} の **FX** を、**PPP ランキング**と**その日の**為替の動揺と**取り違えない**ように読むことだ。\n\n**予測モデル**や危機後**回復**の語りは、**PPI** やエクスポートの説明が参照する**リリース周期**や**スナップショット**、画面上の**注意**に**紐づく**。ナレッジ・グラフに**秘匿**マクロ経路が埋め込まれているわけではない。\n\n**関連:** {{purchasing-power-index}}、{{governance-institutions-index}}、{{knowledge-hub-nfkg}}。",
+            "facts": [
+                {
+                    "k": "役割",
+                    "v": "NationFiles 上の市場分析フレーム"
+                },
+                {
+                    "k": "柱",
+                    "v": "PPI バンドル、GGI、任意で NFSI"
+                },
+                {
+                    "k": "FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "予測",
+                    "v": "NFKG に未公開グローバルモデルはない"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "なぜ文書化するか",
+                    "body_md": "人と機械が**同じ比較ルール**を共有できるようにするための短い**契約**ページである。"
+                },
+                {
+                    "title": "よくある取り違え",
+                    "body_md": "**PPP GDP** は**当日の**為替レートではない。**GGI** は**制度**の指標で、貧困指数と**一対一**ではない。"
+                },
+                {
+                    "title": "公開ルート",
+                    "body_md": "**経済**・**国**の URL は、**ソース登録**に載る **HTTPS** 引用と**揃える**前提である。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "economy-vertical"
+        },
+        "repository_relative_path": "knowledge-data/entities/economy-vertical.json"
+    }
+}

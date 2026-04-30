@@ -8,34 +8,36 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/naciro/de.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/naciro/"
+nf_canonical_html_url: "https://nationfiles.com/de/knowledge/entity/naciro/"
 nf_markdown_lang_file: "de"
 ---
-# Naciro Engine
+# Naciro Engine — die Auswertungs-KI hinter der geopolitischen Analyse
 
-## Funktion
+## Was Naciro **ist**
 
-Die **Naciro Engine** ist im Knowledge Graph als **SoftwareApplication** modelliert: logische und inferenzbezogene Schicht, die **Signale** aus dem dokumentierten Quellenraum in **normalisierte Zwischenzustände** und **skalare Ausgaben** (v. a. den NFSI) überführt. Sie ist bewusst **nicht** als generischer Chatbot beschrieben, sondern als **Engine mit definierter Pipeline** (siehe Attribut `pipeline` und VVR).
+Die **Naciro Engine** ist die **zentrale KI-gestützte Auswertungsmaschine** von NationFiles. Sie nimmt **hochfrequente Rohsignale** aus dem angeschlossenen Datenkosmos auf — Wirtschafts- und Marktfeeds, sicherheitsrelevante und nachrichtenbasierte Ströme, strukturierte Indikatoren aus dem DataSourceConnector — und wandelt sie in **normierte, vergleichbare Zwischenergebnisse** um. Daraus entstehen u. a. der **NationFiles Stability Index (NFSI)**, Lage- und Dashboard-Texte sowie — je nach Produktkonfiguration — **kurzfristige Prognose- und Szenariofenster** (Predictive Layer, z. B. 24h / 7-Tage-Einordnung im dokumentierten Umfang).
 
-## Datenfluss (logisch)
+Kurz: Naciro ist **nicht** „die Website“, sondern das **Brain**, das Rohlärm in **messbare geopolitische Signale** verwandelt, die NationFiles visualisiert und erklärt.
 
-1. **Aufnahme** validierter und Echtzeit‑Quellen (Anzahl `115+` als dokumentiertes Aggregat, nicht als Live‑Zähler auf dieser Seite).
-2. **Aggregation & Normalisierung** gemäß Methodik‑Layer (Details im **Validation & Verification Report**).
-3. **Bias‑Korrektur / Predictive Adjustment** wie im VVR referenziert.
-4. **Output**: Welt‑ und Länderscores NFSI; Aktualisierungsrhythmus laut Attribut `update_cycle` (15‑Minuten‑Takt als dokumentierte Vorgabe).
+**Ein-/Ausgabe auf Datenebene:** Naciro arbeitet mit **{{nationfile-json}}**-Profilen und dokumentierten Konnektoren — dieselbe Struktur, die HTML, Karten und Exporte verbindet.
 
-## Grenzen der Darstellung
+## Was Naciro **konkret tut**
 
-Diese Knowledge‑Seite enthält **keine Live‑Telemetrie** der Engine (CPU, GPU‑Auslastung, Queue‑Längen). Sie verweist auf **öffentliche Methodik** und **rechtliche Dokumente**.
+1. **Signalaggregation:** Einbindung und zeitliche Verdichtung vieler öffentlicher und dokumentierter Quellen (Planungsgröße im dreistelligen Quellenbereich — Details in der öffentlichen Methodik).
+2. **Normalisierung & Gewichtung:** Abgleich auf gemeinsame Skalen und Layer (vgl. NFSI Layer 1–3), damit Länder und Zeitreihen **vergleichbar** bleiben.
+3. **Bias-Korrektur / methodische Anpassungen:** Wo dokumentiert, Korrektur systematischer Verzerrungen — beschrieben im **Validation & Verification Report (VVR)**.
+4. **Ausgaben:** Welt- und Länderscores (**NFSI**), Trend- und Mood-Texte für Dashboards, optional Forecast-Komponenten gemäß Methodenseiten.
 
-## Graph‑Relationen
+## Rhythmus und Rolle auf NationFiles
 
-- `computes` → `nfsi`
-- `published_via` → `nationfiles`
-- `operator` über Attribute auf `neawolf-media-group`
+Die Engine läuft auf einem **regelmäßigen Aktualisierungszyklus** (öffentlich als Planungsvorgabe beschrieben). Sie versorgt die **Live-Oberfläche** von NationFiles mit den Zahlen und Kurzinterpretationen, die Nutzer auf Länderseiten und im Welt-Dashboard sehen — nicht „einmal im Jahr“, sondern als **laufendes Lagebild**.
 
-## Referenzen
+## Abgrenzung
 
-- [Naciro AI (Company)](https://nationfiles.com/en/company/naciro-ai/)
-- [NFSI Methodik](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
+Naciro **prognostiziert keine Einzelereignisse im Mikro-Takt**; sie liefert **strukturierte Indikatoren** und dokumentierte Unsicherheiten. Primärquellen (Behörden, vor Ort) ersetzt sie nicht.
+
+## Quellen
+
+- [Naciro AI (Unternehmensseite)](https://nationfiles.com/en/company/naciro-ai/)
+- [NFSI-Methodik](https://nationfiles.com/en/company/nfsi/)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)

@@ -1,0 +1,694 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "validation-verification-report",
+    "kind": "entity",
+    "type": "TechArticle",
+    "status": "active",
+    "updated_utc": "2026-04-30T22:00:00Z",
+    "topics": [
+        "trust",
+        "e-e-a-t",
+        "compliance",
+        "data-integrity",
+        "nfsi",
+        "audit",
+        "transparency"
+    ],
+    "aliases": [
+        "VVR",
+        "NFSI VVR",
+        "Validation and Verification Report",
+        "Validierungs- und Verifizierungsbericht"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "First-party NationFiles assurance document: public Validation & Verification Report (VVR) that narrates data lineage from registered sources through hygiene rules to Naciro-governed evaluation layers underpinning NFSI.",
+            "depends_on": [
+                "nationfiles",
+                "nfsi",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                },
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "First-Party-Vertrauensdokument von NationFiles: der öffentliche **Validation & Verification Report (VVR)** — er erzählt die Datenlinie von Registereinträgen über Bereinigungsregeln bis zu **Naciro**-geführten Bewertungsschichten, auf denen **NFSI** fußt.",
+                "en": "First-party NationFiles assurance document: public Validation & Verification Report (VVR) that narrates data lineage from registered sources through hygiene rules to Naciro-governed evaluation layers underpinning NFSI.",
+                "fr": "Document d’assurance first-party NationFiles : le **Validation & Verification Report (VVR)** public raconte la lignée des données — registres, règles d’hygiène, couches d’évaluation **Naciro** qui sous‑tendent le **NFSI**.",
+                "es": "Documento de garantía first-party de NationFiles: el **Validation & Verification Report (VVR)** público narra el linaje — registros, reglas de higiene, capas de evaluación **Naciro** que sustentan **NFSI**.",
+                "pt": "Documento de garantia first-party da NationFiles: o **Validation & Verification Report (VVR)** público narra a linhagem — registos, regras de higiene, camadas de avaliação **Naciro** que sustentam o **NFSI**.",
+                "ar": "وثيقة ضمان أولية من NationFiles: **تقرير التحقق والمصادقة (VVR)** العلني يسرد سلسلة البيانات من السجل عبر قواعد التنظيف إلى طبقات تقييم **Naciro** التي تدعم **NFSI**.",
+                "ja": "NationFiles の first-party 保証文書：**Validation & Verification Report（VVR）** が、登録ソース→クリーニング→**Naciro** 評価層という **NFSI** を支える系譜を公開する。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Traceability density: how completely published inputs map to cleansing rules, Naciro scoring stages, and the NFSI headline—supporting Experience, Expertise, Authoritativeness, and Trust (E-E-A-T) for partners and quality reviewers.",
+            "depends_on": [
+                "nfsi",
+                "naciro",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Nachverfolgbarkeitsdichte:** wie vollständig publizierte Eingänge auf Bereinigungsregeln, **Naciro**-Bewertungsstufen und den NFSI-Kopfwert abbilden — Grundlage für **E‑E‑A‑T** (Experience, Expertise, Authoritativeness, Trust) in Partner‑Due‑Diligence und **Publisher‑Qualitätsreviews** (z. B. monetarisierungsnahe Richtlinien).",
+                "en": "Traceability density: how completely published inputs map to cleansing rules, Naciro scoring stages, and the NFSI headline—supporting Experience, Expertise, Authoritativeness, and Trust (E-E-A-T) for partners and quality reviewers.",
+                "fr": "**Densité de traçabilité** : correspondance publiée entrées → règles d’hygiène → étapes **Naciro** → titre NFSI — socle **E‑E‑A‑T** pour partenaires et revues qualité (y compris exigences liées à la monétisation).",
+                "es": "**Densidad de trazabilidad:** correspondencia publicada entradas → higiene → fases **Naciro** → titular NFSI — soporte **E‑E‑A‑T** para partners y revisiones de calidad editoriales.",
+                "pt": "**Densidade de rastreio:** mapeamento público entradas → higiene → fases **Naciro** → headline NFSI — suporte **E‑E‑A‑T** para parceiros e revisões de qualidade.",
+                "ar": "**كثافة التتبع:** مدى اكتمال ربط المدخلات المنشورة بقواعد التنظيف ومراحل **Naciro** وعنوان NFSI — دعم **E‑E‑A‑T** للشركاء ومراجعي الجودة.",
+                "ja": "**トレーサビリティの厚み：** 公開入力→クリーニング→**Naciro** 段階→NFSI 見出しの対応の明確さ。**E‑E‑A‑T** とパートナー・品質審査（収益化ポリシー文脈を含む）を支える。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Registry citation → documented cleansing and bias-handling posture → Layer 1–4 Naciro evaluation as described in VVR/NFSI methodology → inertia-aware headline publication on NationFiles with synchronized exports.",
+            "depends_on": [
+                "naciro",
+                "nfsi",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Pipeline:** Registernennung → dokumentierte Bereinigungs-/Bias-Handhabung → Layer 1–4 **Naciro**-Evaluation laut VVR/NFSI-Methodik → Trägheitsbewusste Veröffentlichung des Kopfwerts auf NationFiles mit synchronisierten Exporten.",
+                "en": "Registry citation → documented cleansing and bias-handling posture → Layer 1–4 Naciro evaluation as described in VVR/NFSI methodology → inertia-aware headline publication on NationFiles with synchronized exports.",
+                "fr": "**Pipeline :** citation registre → hygiène/biais documentés → couches 1–4 **Naciro** (VVR/méthodo NFSI) → publication headline avec inertie + exports synchronisés.",
+                "es": "**Pipeline:** cita de registro → higiene/sesgo documentados → capas 1–4 **Naciro** (VVR/NFSI) → publicación con inercia y exportes sincronizados.",
+                "pt": "**Pipeline:** registo → higiene/vies documentados → camadas 1–4 **Naciro** (VVR/NFSI) → headline com inércia + exports alinhados.",
+                "ar": "**خط المعالجة:** إشارة السجل → تطهير/انحياز موثّق → طبقات 1–4 **Naciro** (VVR/NFSI) → نشر العنوان مع القصور الحركي وتصدير متزامن.",
+                "ja": "**パイプライン：** レジストリ引用→文書化された整形・バイアス対応→VVR/NFSI に沿う Layer 1–4 の **Naciro** 評価→慣性を踏まえた見出し公開と同期エクスポート。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Legal sources register, connector families named in methodology, documented near-real-time strands consumed by Naciro, and cross-referenced NFSI/VVR pages—no opaque third-party assertion graphs as primaries.",
+            "depends_on": [
+                "nationfiles",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Source registry",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Eingaben:** Quellenregister, in der Methodik benannte Connector-Familien, dokumentierte nah-Echtzeit-Stränge für **Naciro**, plus NFSI/VVR Querseiten — **keine** undurchsichtigen Dritt-Assertions-Graphen als Primärinstanz.",
+                "en": "Legal sources register, connector families named in methodology, documented near-real-time strands consumed by Naciro, and cross-referenced NFSI/VVR pages—no opaque third-party assertion graphs as primaries.",
+                "fr": "**Entrées :** registre legal, familles de connecteurs citées, flux quasi temps réel documentés pour **Naciro**, pages NFSI/VVR croisées — pas de graphe d’assertions tiers opaque comme primaire.",
+                "es": "**Entradas:** registro legal, familias de conectores citadas, hilos casi tiempo real documentados para **Naciro**, páginas NFSI/VVR cruzadas.",
+                "pt": "**Entradas:** registo legal, famílias de conectores citadas, fios quase tempo real documentados para **Naciro**, páginas NFSI/VVR cruzadas.",
+                "ar": "**مدخلات:** السجل القانوني وعائلات الموصلات المذكورة والخيوط شبه اللحظية الموثقة لـ **Naciro** وصفحات NFSI/VVR المتقاطعة.",
+                "ja": "**入力：** 法的ソース登録、方法論で明示されたコネクタ系、**Naciro** が取り込む文書化された準リアルタイム系、NFSI/VVR 横断ページ。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Canonical VVR HTML/PDF narrative, DOI-stable academic anchor, Knowledge entity exports, and audit-ready wording for B2B data consumers reviewing NationFiles methodology and Naciro evaluation boundaries.",
+            "depends_on": [
+                "nationfiles",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                },
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Outputs:** kanonische VVR-HTML/PDF-Erzählung, **DOI**-verankerte akademische Zitation, Knowledge-Exporte, audi­tierfähige Formulierungen für **B2B**-Datenkonsumenten, die Methodik und **Naciro**-Grenzen prüfen.",
+                "en": "Canonical VVR HTML/PDF narrative, DOI-stable academic anchor, Knowledge entity exports, and audit-ready wording for B2B data consumers reviewing NationFiles methodology and Naciro evaluation boundaries.",
+                "fr": "**Livrables :** récit VVR HTML/PDF canonique, ancrage DOI, exports Knowledge, formulations audit‑ready pour clients B2B qui examinent méthodo et périmètre **Naciro**.",
+                "es": "**Entregables:** narrativa VVR canónica, ancla DOI, exportes Knowledge, redacción auditable para clientes B2B.",
+                "pt": "**Entregas:** narrativa VVR canónica, âncora DOI, exportações Knowledge, texto auditável para B2B.",
+                "ar": "**المخرجات:** رواية VVR الرسمية، مرساة DOI، تصدير Knowledge، صياغة جاهزة للمراجعة لعملاء B2B.",
+                "ja": "**成果物：** 正規の VVR ナラティブ、**DOI** 固定、Knowledge エクスポート、方法論と **Naciro** 境界を審査する B2B 向け監査対応文言。"
+            }
+        },
+        {
+            "key": "ai_policy",
+            "value": "Cross-linked AI & data usage policy clarifies automated access, citation expectations, and licensing posture—supporting transparent machine-readable publication alongside human-readable VVR assurances.",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "Verknüpfte **KI- und Datenrichtlinie**: automatisierter Zugriff, Zitationserwartungen, Lizenzhaltung — unterstützt **maschinenlesbare** Publikation parallel zu menschenlesbarem VVR‑Vertrauen.",
+                "en": "Cross-linked AI & data usage policy clarifies automated access, citation expectations, and licensing posture—supporting transparent machine-readable publication alongside human-readable VVR assurances.",
+                "fr": "Politique IA & données croisée : accès automatisé, citation, licence — publication machine‑readable transparente + garanties VVR humaines.",
+                "es": "Política de IA y datos enlazada: acceso automático, citación, licencia — transparencia machine‑readable y VVR legible.",
+                "pt": "Política IA & dados cruzada: acesso automático, citação, licença — transparência machine‑readable com VVR humano.",
+                "ar": "سياسة الذكاء الاصطناعي والبيانات: وصول آلي، اقتباس، ترخيص — شفافية قابلة للآلة مع ضمانات VVR.",
+                "ja": "AI・データ利用ポリシー：自動アクセス、引用期待、ライセンス姿勢——人が読む VVR と機械可読な透明性を両立。"
+            }
+        },
+        {
+            "key": "computed_by",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "citation_doi",
+            "value": "10.5281/zenodo.19783682",
+            "depends_on": [
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Validation and Verification Report (DOI)",
+                    "url": "https://doi.org/10.5281/zenodo.19783682"
+                }
+            ],
+            "value_i18n": {
+                "de": "10.5281/zenodo.19783682",
+                "en": "10.5281/zenodo.19783682",
+                "fr": "10.5281/zenodo.19783682",
+                "es": "10.5281/zenodo.19783682",
+                "pt": "10.5281/zenodo.19783682",
+                "ar": "10.5281/zenodo.19783682",
+                "ja": "10.5281/zenodo.19783682"
+            }
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "core-hierarchy"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "status-reports"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "publications-corpus"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "VVR Report (Validation & Verification Report)",
+            "teaser": "Der **VVR** ist NationFiles’ **Vertrauensanker**: dokumentiert **Datenintegrität** von **Quelle → Bereinigung → Naciro-Evaluation** — E‑E‑A‑T‑stark für **B2B‑Compliance**, Due Diligence und **Publisher‑Qualität** (z. B. Richtlinien zu transparenter Methodik bei Monetarisierung).",
+            "summary_bullets": [
+                "**Primär first-party:** kein anonymes „Black-Box“-LOD — sondern veröffentlichte Register, Methodik und VVR.",
+                "**Pipeline sichtbar:** Layer 1–4‑Logik, die mit NFSI‑Dokumentation und Engine‑Orchestrierung **{{naciro}}** übereinstimmt.",
+                "**E‑E‑A‑T:** Experience/Expertise/Authoritativeness/Trust für Institutionen, die Herkunft und Grenzen prüfen müssen.",
+                "**B2B‑Tauglich:** Prüfpfade für Data Governance, Beschaffung, Audit.",
+                "**Monetarisierung & Qualität:** konsistente Methodenseiten unterstützen **Transparenzpflichten** vieler Werbe‑ und Qualitätsprogramme — ohne Primärquellen zu ersetzen.",
+                "**DOI & Export:** akademisch zitierfähig; Knowledge‑Graph spiegelt dieselben Kanten."
+            ],
+            "body_md": "In einer Zeit, in der **jede Datenaktie** politisch und wirtschaftlich interpretiert wird, reicht ein schicker KPI nicht — es braucht **eine erzählte Pipeline**. Der **Validation & Verification Report (VVR)** auf NationFiles ist genau diese Pipeline in **öffentlicher Prosa**: Woher kommen die Signale? Welche **Bereinigungs- und Bias-Regeln** greifen? Wie übersetzt **{{naciro}}** die dokumentierten Layer 1–4 in den **NFSI**‑Kopfwert — inklusive **Trägheit** und Aktualisierungshygiene?\n\nFür **E‑E‑A‑T** — jenes Raster, mit dem Bewertungs‑ und Qualitätssysteme heute **Expertise, Autorität und Vertrauen** prüfen — ist diese Erzählung kein Beiwerk: Wer Inhalte monetarisiert oder Daten einkauft, muss zeigen, dass **Methodik und Quelle** zusammenpassen. Der VVR liefert die **Compliance‑Brücke**: von Registerzitat über dokumentierte Connector‑Familien bis zur **Engine‑Evaluation**. Er ersetzt keine behördliche Freigabe — er macht aber sichtbar, **was NationFiles öffentlich verspricht** und **wo die Grenzen** liegen.\n\n**B2B‑Teams** nutzen das für **Due Diligence**, für **Datenverträge** und für **interne Auditoren**. **Redaktionen** gewinnen eine **zitierfähige** Referenz (u. a. **DOI**), die **von der Journalismus‑Seite** und **von der Daten‑Seite** gelesen werden kann. Kurz: Der VVR ist das **Trust‑Kapitel** im NationFiles‑Handbuch — der Teil, der behauptet, **Integrität sei kein Marketingbegriff**, sondern ein nachvollziehbarer Prozess.",
+            "facts": [
+                {
+                    "k": "Zweck",
+                    "v": "Öffentlich dokumentierte Integritätspfad für NFSI/Naciro."
+                },
+                {
+                    "k": "E-E-A-T",
+                    "v": "Nachvollziehbarkeit statt nur Headline-Glanz."
+                },
+                {
+                    "k": "B2B",
+                    "v": "Audit- und Beschaffungsargumente mit Primärlink."
+                },
+                {
+                    "k": "DOI",
+                    "v": "Zitieranker parallel zur Website."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Quelle → Bereinigung → Evaluation",
+                    "body_md": "Jede Stufe adressiert **Transparenz**: Welche Registry, welche Hygieneregel, welche **Naciro**‑Schicht produziert welche Zwischenentscheidung? Ohne diese Kette bleibt jeder Score **unverteidigt** gegenüber kritischen Stakeholdern."
+                },
+                {
+                    "title": "Warum das Monetarisierungs‑Ökosystem interessiert",
+                    "body_md": "Programmatische Werbung und **Publisher‑Qualitäts**programme verlangen oft nach **nachweisbaren Policy‑ und Methodenseiten**. Der VVR sitzt **upstream**: Er beschreibt Integrität **bevor** eine Anzeige geschaltet wird — ein **Governance‑Asset**, kein Ad‑Creative."
+                },
+                {
+                    "title": "Was der VVR nicht verspricht",
+                    "body_md": "Keine Garantie einzelner Marktereignisse, keine stillschweigende **Staatsbilligung**, kein Ersatz für regulatorische Zulassungen. Er dokumentiert den **öffentlichen** Verarbeitungspfad von NationFiles."
+                }
+            ]
+        },
+        "en": {
+            "title": "VVR Report (Validation & Verification Report)",
+            "teaser": "The **VVR** is NationFiles’ **trust spine**: it documents **data integrity** end to end—**source → cleansing → Naciro evaluation**—reinforcing **E-E-A-T** for **B2B compliance**, diligence, and **publisher quality** reviews (including transparency expectations common to monetisation policies).",
+            "summary_bullets": [
+                "**First-party by design:** published registry, methodology, and VVR—no anonymous third-party assertion graph as primary.",
+                "**Pipeline spelled out:** Layers 1–4 logic aligned with NFSI docs and **{{naciro}}** orchestration.",
+                "**E-E-A-T friendly:** explicit Experience, Expertise, Authoritativeness, Trust signals for institutional buyers.",
+                "**B2B ready:** procurement, data governance, and audit teams get citation-grade narrative plus DOI.",
+                "**Monetisation context:** transparent methodology pages support policy reviews without pretending to be primary legal advice.",
+                "**Exports mirror edges:** Knowledge JSON/JSON-LD repeats the same relations for machines."
+            ],
+            "body_md": "Every headline number invites a skeptical question: **prove the lineage**. The NationFiles **Validation & Verification Report (VVR)** answers in deliberately plain language: which **registered sources** feed the documented connector families, which **cleansing and bias-handling** rules apply, and how **{{naciro}}** executes the published Layer 1–4 evaluation path before the **NFSI** headline—and inertia-aware smoothing—reaches readers and API consumers.\n\nFor **E-E-A-T**—the rubric modern quality systems use to judge **expertise, authority, and trustworthiness**—that chain is non-negotiable. Institutions cannot defend a proprietary “black box” score at scale; they need a **narrative auditors can walk**. The VVR is that walkthrough: readable by journalists, quotable by academics (thanks to the **DOI** anchor), and actionable by **B2B** buyers who must map data vendors to internal controls.\n\nThe same transparency posture matters to **publisher monetisation** workflows: programmes that police **thin content** or opaque methodology often look upstream for **documentation depth**. The VVR is **upstream documentation**—a governance artifact, not an ad unit. It does not replace regulatory filings; it shows **what NationFiles publicly commits to** and **where methodological boundaries sit**.\n\nIn short, the VVR is NationFiles arguing—with receipts—that **integrity is operational**, not decorative.",
+            "facts": [
+                {
+                    "k": "Purpose",
+                    "v": "Public audit narrative for NFSI/Naciro lineage."
+                },
+                {
+                    "k": "E-E-A-T",
+                    "v": "Traceable expertise + authority signals."
+                },
+                {
+                    "k": "B2B",
+                    "v": "Due diligence + governance citations."
+                },
+                {
+                    "k": "DOI",
+                    "v": "Persistent academic identifier."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Source → cleanse → evaluate",
+                    "body_md": "Each hop is documented so **risk officers** can follow the same path engineers take: registry citation, connector family, hygiene rule, **Naciro** layer output, headline publication cadence."
+                },
+                {
+                    "title": "Why monetisation teams glance at methodology",
+                    "body_md": "**Programmatic** and **publisher quality** reviews frequently ask for transparent methodology pages before renewals. The VVR complements those asks with **process transparency**—not a substitute for counsel."
+                },
+                {
+                    "title": "What the VVR refuses to claim",
+                    "body_md": "No oracle on discrete market spikes, no silent governmental endorsement, no replacement for sovereign primaries—only **published** processing commitments."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Rapport VVR (Validation & Verification Report)",
+            "teaser": "Le **VVR** est la **colonne vertébrale de confiance** NationFiles : **source → hygiène → évaluation Naciro**, au service de **l’E‑E‑A‑T**, des audits **B2B** et des revues **qualité éditeur** liées à la transparence méthodologique.",
+            "summary_bullets": [
+                "**First-party** : registre et méthodo publics.",
+                "**Pipeline documentée** : couches 1–4 alignées **{{naciro}}** / NFSI.",
+                "**E‑E‑A‑T** : expertise et traçabilité pour acheteurs institutionnels.",
+                "**B2B** : diligence et gouvernance données.",
+                "**Monétisation** : pages méthode solides **en amont** des exigences publicitaires.",
+                "**DOI + exports** : même graphe pour machines."
+            ],
+            "body_md": "Le **VVR** raconte, en prose accessible, comment les signaux documentés traversent **hygiène**, **biais** et **évaluation {{naciro}}** avant le score **NFSI**. C’est l’argument **E‑E‑A‑T** tangible : pas de boîte noire mystérieuse, mais une ligne du temps publique. Les équipes **B2B** s’en servent pour due diligence ; les rédactions pour citations ; les programmes **qualité** pour vérifier la profondeur méthodologique **avant** toute monétisation.\n\nLe VVR ne remplace pas un avis régulateur : il **cadre** ce que NationFiles affiche publiquement — limites comprises.",
+            "facts": [
+                {
+                    "k": "Rôle",
+                    "v": "Traçabilité publique NFSI/Naciro."
+                },
+                {
+                    "k": "E-E-A-T",
+                    "v": "Autorité via documentation."
+                },
+                {
+                    "k": "B2B",
+                    "v": "Audit et achats data."
+                },
+                {
+                    "k": "DOI",
+                    "v": "Ancrage académique."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "De la source à l’évaluation",
+                    "body_md": "Chaque étape est nommée : registres, familles de connecteurs, couches **Naciro**, inertie du headline."
+                },
+                {
+                    "title": "Monétisation & transparence",
+                    "body_md": "Les exigences publicitaires modernes récompensent les **pages méthode** solides ; le VVR en est une."
+                },
+                {
+                    "title": "Limites assumées",
+                    "body_md": "Pas de prévision d’événement isolé, pas de validation étatique implicite."
+                }
+            ]
+        },
+        "es": {
+            "title": "Informe VVR (Validation & Verification Report)",
+            "teaser": "El **VVR** es la **columna de confianza** de NationFiles: **fuente → higiene → evaluación Naciro** para **E‑E‑A‑T**, **cumplimiento B2B** y revisiones de **calidad editorial** en monetización.",
+            "summary_bullets": [
+                "**First-party:** registro y metodología publicados.",
+                "**Pipeline:** capas 1–4 y **{{naciro}}** alineadas con NFSI.",
+                "**E‑E‑A‑T** para compradores institucionales.",
+                "**B2B:** due diligence y gobernanza.",
+                "**Monetización:** método transparente **aguas arriba**.",
+                "**DOI y exports** para máquinas y humanos."
+            ],
+            "body_md": "El **VVR** narra la cadena pública hasta el **NFSI**: registros citados, reglas de higiene, evaluación **Naciro** y suavizado documentado. Apoya **E‑E‑A‑T** sin vender certidumbre imposible. Equipos **B2B** obtienen narrativa auditable; editores obtienen **DOI** citables.\n\nNo sustituye dictámenes regulatorios: **marca** lo que NationFiles explica abiertamente.",
+            "facts": [
+                {
+                    "k": "Función",
+                    "v": "Linaje auditable NFSI/Naciro."
+                },
+                {
+                    "k": "E-E-A-T",
+                    "v": "Autoridad documentada."
+                },
+                {
+                    "k": "B2B",
+                    "v": "Due diligence."
+                },
+                {
+                    "k": "DOI",
+                    "v": "Ancla persistente."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Fuente → higiene → evaluación",
+                    "body_md": "Pasos nombrados y enlazados con metodología NFSI."
+                },
+                {
+                    "title": "Monetización",
+                    "body_md": "Programas de calidad suelen exigir **método legible**; el VVR cumple ese rol."
+                },
+                {
+                    "title": "Límites",
+                    "body_md": "Sin predicción milagrosa ni aval estatal."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Relatório VVR (Validation & Verification Report)",
+            "teaser": "O **VVR** é a **espinha dorsal de confiança** da NationFiles: **fonte → higiene → avaliação Naciro** para **E‑E‑A‑T**, **compliance B2B** e revisões de **qualidade de editor**.",
+            "summary_bullets": [
+                "**First-party** com registo público.",
+                "**Pipeline** camadas 1–4 e **{{naciro}}**.",
+                "**E‑E‑A‑T** para compradores.",
+                "**B2B** due diligence.",
+                "**Monetização** exige método transparente.",
+                "**DOI + exports**."
+            ],
+            "body_md": "O **VVR** descreve a cadeia até ao **NFSI**: citações de registo, regras de limpeza, avaliação **Naciro** e inércia documentada. Fortalece **E‑E‑A‑T** sem prometer certezas inexistentes — apoia equipas **B2B** e citação académica (**DOI**).\n\nNão substitui parecer regulador: apenas **formaliza** compromissos públicos da NationFiles.",
+            "facts": [
+                {
+                    "k": "Papel",
+                    "v": "Rastreio público NFSI/Naciro."
+                },
+                {
+                    "k": "E-E-A-T",
+                    "v": "Autoridade documental."
+                },
+                {
+                    "k": "B2B",
+                    "v": "Auditoria e compras."
+                },
+                {
+                    "k": "DOI",
+                    "v": "Âncora académica."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Fonte → higiene → avaliação",
+                    "body_md": "Cada salto é nomeado e alinhado com a metodologia."
+                },
+                {
+                    "title": "Monetização",
+                    "body_md": "Políticas recompensam páginas de método claras; o VVR cumpre."
+                },
+                {
+                    "title": "Limites",
+                    "body_md": "Sem previsão infalível ou aval estatal."
+                }
+            ]
+        },
+        "ar": {
+            "title": "تقرير VVR (Validation & Verification Report)",
+            "teaser": "**VVR** هو **عمود الثقة** في NationFiles: **مصدر → تنظيف → تقييم Naciro** لدعم **E‑E‑A‑T** و**الامتثال B2B** ومراجعات **جودة النشر**.",
+            "summary_bullets": [
+                "**أولية المنصة** مع سجل علني.",
+                "**سلسلة معالجة** طبقات 1–4 و**{{naciro}}**.",
+                "**E‑E‑A‑T** للمشترين المؤسسيين.",
+                "**B2B** العناية الواجبة.",
+                "**الربحية** تتطلب صفحات منهجية شفافة.",
+                "**DOI وتصديرات**."
+            ],
+            "body_md": "**VVR** يروي بالعربية الواضحة مسار الإشارات إلى **NFSI**: مرجعية السجل، قواعد التنظيف، تقييم **Naciro** والقصور الحركي الموثّق. يعزز **E‑E‑A‑T** دون ادعاء تنبؤي. فرق **B2B** تحصل على سرد قابل للمراجعة؛ الأكاديميون على **DOI**.\n\nلا يغني عن رأي تنظيمي: يحدد **ما تعلنه NationFiles علناً**.",
+            "facts": [
+                {
+                    "k": "الوظيفة",
+                    "v": "سلسلة تدقيق علنية لـ NFSI/Naciro."
+                },
+                {
+                    "k": "E-E-A-T",
+                    "v": "سلطة عبر التوثيق."
+                },
+                {
+                    "k": "B2B",
+                    "v": "عناية وشراء بيانات."
+                },
+                {
+                    "k": "DOI",
+                    "v": "مرساة أكاديمية."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "مصدر → تنظيف → تقييم",
+                    "body_md": "كل خطوة مسمّاة ومترابطة بالمنهجية."
+                },
+                {
+                    "title": "الربحية والشفافية",
+                    "body_md": "برامج الجودة تطلب صفحات methodology؛ يؤدي VVR هذا الدور."
+                },
+                {
+                    "title": "الحدود",
+                    "body_md": "لا تنبؤ بلا دليل ولا تأييد حكومي ضمني."
+                }
+            ]
+        },
+        "ja": {
+            "title": "VVR レポート（Validation & Verification Report）",
+            "teaser": "**VVR** は NationFiles の**信頼の背骨**：**ソース→クリーニング→Naciro 評価**を記し、**E‑E‑A‑T**、**B2B コンプライアンス**、**パブリッシャー品質**レビュー（透明な方法論ページ期待）を支える。",
+            "summary_bullets": [
+                "**ファーストパーティ**の公開レジストリと方法論。",
+                "Layer 1–4 と **{{naciro}}** を整合。",
+                "**E‑E‑A‑T** に資する追跡可能性。",
+                "**B2B** デューデリ。",
+                "**マネタイズ**：方法論の深さを上流で担保。",
+                "**DOI** とエクスポート。"
+            ],
+            "body_md": "**VVR** は **NFSI** に至る公開パイプラインを散文で説く：レジストリ引用、ハイジーン、**Naciro** の層、慣性。 **E‑E‑A‑T** を飾りではなく**作業手順**として示す。**B2B** は監査可能な物語を、学術は **DOI** を得る。\n\n規制判断の代替ではない——NationFiles が**公開で約束する境界**を示す。",
+            "facts": [
+                {
+                    "k": "役割",
+                    "v": "NFSI/Naciro の検証可能な系譜。"
+                },
+                {
+                    "k": "E-E-A-T",
+                    "v": "文書化された権威。"
+                },
+                {
+                    "k": "B2B",
+                    "v": "デューデリと統治。"
+                },
+                {
+                    "k": "DOI",
+                    "v": "持続的引用。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "ソース→整形→評価",
+                    "body_md": "各段が方法論と一致するよう明示。"
+                },
+                {
+                    "title": "マネタイズ文脈",
+                    "body_md": "品質・ポリシーは方法論ページを見る；VVR が上流の裏付け。"
+                },
+                {
+                    "title": "約束しないこと",
+                    "body_md": "単発イベントの神託や黙示の政府保証はない。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "validation-verification-report"
+        },
+        "repository_relative_path": "knowledge-data/entities/validation-verification-report.json"
+    }
+}

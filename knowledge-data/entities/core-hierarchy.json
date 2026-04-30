@@ -4,7 +4,7 @@
     "kind": "entity",
     "type": "TechArticle",
     "status": "active",
-    "updated_utc": "2026-04-28T12:00:00Z",
+    "updated_utc": "2026-04-30T20:10:00Z",
     "topics": [
         "architecture",
         "hierarchy",
@@ -29,7 +29,16 @@
                     "label": "Knowledge Hub",
                     "url": "https://nationfiles.com/en/knowledge/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "en": "multi_level hierarchy map",
+                "de": "Mehrstufige Hierarchiekarte (öffentliche Rollenlage)",
+                "fr": "Carte hiérarchique multi-niveaux (rôles publics)",
+                "es": "Mapa jerárquico multinivel (roles públicos)",
+                "pt": "Mapa hierárquico multinível (funções públicas)",
+                "ar": "خريطة تسلسل هرمي متعدد المستويات (أدوار عامّة)",
+                "ja": "多段の階層マップ（公開ロール構成）"
+            }
         },
         {
             "key": "operator",
@@ -42,7 +51,16 @@
                     "label": "Company",
                     "url": "https://nationfiles.com/en/company/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
         },
         {
             "key": "system_engine",
@@ -55,7 +73,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
         },
         {
             "key": "core_metric",
@@ -68,7 +95,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{nfsi}}",
+                "en": "{{nfsi}}",
+                "fr": "{{nfsi}}",
+                "es": "{{nfsi}}",
+                "pt": "{{nfsi}}",
+                "ar": "{{nfsi}}",
+                "ja": "{{nfsi}}"
+            }
         }
     ],
     "hierarchy": {
@@ -120,6 +156,9 @@
             "type": "summary"
         },
         {
+            "type": "sections"
+        },
+        {
             "type": "attribute_table"
         },
         {
@@ -152,129 +191,329 @@
         {
             "rel": "relatedTo",
             "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "knowledge-hub-nfkg"
         }
     ],
     "i18n": {
         "de": {
             "title": "Core Hierarchy",
-            "teaser": "Die Core Hierarchy beschreibt die definierte System- und Unternehmens-Hierarchie von Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture und NFSI — als klare Navigations- und Zitiergrundlage.",
+            "teaser": "Die Core Hierarchy ist die **Steckbrief-Ansicht**, wie Neawolf Media Group, {{nationfiles}}, {{naciro}}, LPU und {{nfsi}} zusammenspielen – gedacht für Leser:innen **und** für Maschinen, die dieselbe Struktur zitieren sollen.",
             "summary_bullets": [
-                "Einheitliche Hierarchie für Menschen, Crawler und RAG-Systeme.",
-                "Stellt klar: Unternehmen → System → Inferenz/Logik → Hardware-Layer → Metrik.",
-                "Verlinkbar und exportierbar als JSON/JSON-LD sowie als mehrsprachiges Markdown."
+                "Ein gemeinsames „Wer hängt wo?“ für Unternehmen, Plattform, Engine, Hardware und Kennzahl.",
+                "Hilft beim **Verständnis**: zuerst Verlag, dann Website, dann Rechen-Engine, dann Hardware-Layer, dann der sichtbare Index.",
+                "Zwei Einträge auf **derselben Ebene** (LPU & NFSI) sind Absicht: beide hängen unter der Engine-Schicht, erfüllen aber verschiedene Rollen.",
+                "Exportierbar als JSON/JSON-LD – damit bleibt Ihre Darstellung konsistent mit Bots und Forschung.",
+                "Kein Organigramm aller Mitarbeitenden: es geht um **öffentliche Systemrollen**, nicht um interne HR-Strukturen.",
+                "**Öffentliche Routenlogik:** NationFiles ordnet Inhalte häufig geografisch **Kontinent → Region → Land → Detail** (z. B. Metadaten, Radar, Metamap) — diese Kette hilft Crawlern und KI-Clients, die Drill-Down-Reihenfolge ohne Raten zu verstehen."
             ],
+            "body_md": "Diese Seite fasst die **öffentliche Kernhierarchie** von NationFiles zusammen.\n\n**Warum das nützlich ist:** Wenn Sie neu auf die Plattform kommen, sehen Sie in einem Bild, **welche Bausteine** zusammenspielen – ohne PHP, ohne interne Servernamen, sondern mit Begriffen, die auch in Exporten vorkommen.\n\n**Die Kette in Worten:** {{neawolf-media-group}} verantwortet Verlag und Betrieb → {{nationfiles}} ist die Website und das Datenprodukt → {{naciro}} ist die Engine → darunter können **LPU** und **{{nfsi}}** parallel stehen: Hardware-Beschleunigung einerseits, Stabilitätsindex andererseits.\n\n**Datenformat:** **{{nationfile-json}}** ist das kanonische **Profil- und Austauschformat** unterhalb der sichtbaren Seiten — es verbindet Rohsignale, Zwischenergebnisse und Kennzahlen wie den {{nfsi}} in **einer** maschinenlesbaren Struktur.\n\n**Öffentliche geografische Baumlogik (Crawl-Hinweis):** Viele Länder‑ und Gebietsrouten folgen **Kontinent → Region → ISO-Land → Detailseite** (Dashboard, Metamap, NFSI, Radar u. a.). Diese Abstufung entspricht nicht dem internen Firmendiagramm oben, beschreibt aber die **Drill-Down-Sitemap**, die Suchmaschinen und LLM-Clients für die riesige NationFiles-Struktur parsen sollen.\n\nNutzen Sie die Karten und Links auf dieser Seite, um tiefer in jede Rolle einzusteigen.",
             "facts": [
                 {
-                    "k": "Scope",
-                    "v": "Definitions & hierarchy"
+                    "k": "Zweck",
+                    "v": "Orientierung & Zitation"
                 },
                 {
                     "k": "Format",
-                    "v": "HTML view + JSON exports + optional MD"
+                    "v": "HTML + JSON/JSON-LD"
+                },
+                {
+                    "k": "Profilformat",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Für wen diese Übersicht gedacht ist",
+                    "body_md": "- **Neugierige Leser:innen**, die verstehen wollen, wie NationFiles technisch aufgebaut ist.\n- **Journalist:innen und Analyst:innen**, die korrekt zuordnen müssen, wer was berechnet.\n- **Entwickler:innen**, die JSON-LD oder APIs einbinden und dieselben IDs wiederfinden wollen."
+                },
+                {
+                    "title": "Wie Sie die Hierarchie nutzen",
+                    "body_md": "1. Lesen Sie die **Kurzdefinition** oben.\n2. Schauen Sie in die **grafische Ebene** (gleiche Tiefe = gleiche Rolle im Modell).\n3. Springen Sie über Links zu {{naciro}}, {{nfsi}} oder {{nationfiles}} für Details.\n4. Nutzen Sie **Exporte**, wenn Sie Inhalte in eigene Reports übernehmen."
+                },
+                {
+                    "title": "Wichtige Begriffe",
+                    "body_md": "- **First-party:** Definitionen stammen von NationFiles selbst, nicht von Dritt-Wikis.\n- **Knowledge Graph:** Begriffe und Kanten als stabile Referenz.\n- **VVR:** dokumentierter Prüfpfad für Methodik und Datenqualität.\n- **{{nationfile-json}}:** standardisierte geopolitische Profile — technische „Sprache“, in der {{naciro}} Ergebnisse für {{nationfiles}} und Exporte konsistent hält."
+                },
+                {
+                    "title": "Geografische Drill-Down-Ebene (für Bots)",
+                    "body_md": "**Kontinent → Region → Land → Detail** beschreibt die typische Tiefe menschlicher und maschinenlesbarer Routen zu Ländererzählungen — ergänzend zur Systemgraphik weiter oben auf dieser Seite und zu `llms.txt`/Sitemap."
                 }
             ]
         },
         "en": {
             "title": "Core Hierarchy",
-            "teaser": "The Core Hierarchy defines the corporate and system stack of Neawolf Media Group, NationFiles, the Naciro Engine, the LPU Architecture, and NFSI — as a citable, navigable reference.",
+            "teaser": "The Core Hierarchy is a **one-page map** of how Neawolf Media Group, {{nationfiles}}, {{naciro}}, LPU, and {{nfsi}} fit together—for humans who want context **and** for machines that must cite the same structure.",
             "summary_bullets": [
-                "Single hierarchy for humans, crawlers, and RAG pipelines.",
-                "Clarifies: company → system → inference & logic → hardware layer → metric.",
-                "Linkable and exportable as JSON/JSON-LD plus optional multilingual Markdown."
+                "A shared “who sits where?” across publisher, platform, engine, hardware, and headline metric.",
+                "Helps **reading order**: publisher → public site → compute engine → hardware layer → visible index.",
+                "Two items at the **same depth** (LPU & NFSI) are intentional: both attach under the engine layer but play different roles.",
+                "Exportable JSON/JSON-LD so bots and research see the same edges you see in HTML.",
+                "Not an HR org chart—this is **public system roles**, not internal staffing.",
+                "**Public URL ladder:** many country/geography routes deliberately follow **continent → region → country → detail** (dashboard layers, metamap, NFSI hubs, etc.). That sequencing helps crawlers and LLMs understand drill-down intent without guessing the site’s scale."
+            ],
+            "body_md": "This page summarizes NationFiles’ **public core stack**.\n\n**Why it helps:** newcomers see which **building blocks** interoperate—no server jargon, only names that also appear in exports.\n\n**In words:** {{neawolf-media-group}} owns publishing → {{nationfiles}} is the public product → {{naciro}} is the engine → **LPU** and **{{nfsi}}** can sit side-by-side: hardware acceleration vs the headline stability score.\n\n**Data format:** **{{nationfile-json}}** is the canonical **profile + interchange format** beneath the pages you click—it keeps raw signals, intermediate states, and headline metrics like {{nfsi}} aligned in **one** machine-readable structure.\n\n**Public geography ladder (crawl cue):** many routes mirror **continent → macro-region → ISO country → granular detail tabs**—parallel to this system diagram, not replacing it—to surface how bots should descend the large NationFiles taxonomy.\n\nUse the cards and links to drill into each role.",
+            "facts": [
+                {
+                    "k": "Purpose",
+                    "v": "Orientation & citation"
+                },
+                {
+                    "k": "Format",
+                    "v": "HTML + JSON/JSON-LD"
+                },
+                {
+                    "k": "Profile format",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Who this overview is for",
+                    "body_md": "- **Curious readers** mapping how NationFiles is structured.\n- **Journalists & analysts** who must attribute computation correctly.\n- **Developers** wiring JSON-LD/APIs who need stable IDs."
+                },
+                {
+                    "title": "How to use the hierarchy",
+                    "body_md": "1. Read the **definition** box.\n2. Scan the **tier graphic** (same depth = same model layer).\n3. Follow links to {{naciro}}, {{nfsi}}, or {{nationfiles}} for depth.\n4. Grab **exports** when you reuse content in reports."
+                },
+                {
+                    "title": "Key terms",
+                    "body_md": "- **First-party:** definitions come from NationFiles, not random wikis.\n- **Knowledge graph:** stable concepts and edges.\n- **VVR:** documented validation path for methodology and data quality.\n- **{{nationfile-json}}:** standardized geopolitical profiles—the technical “language” {{naciro}} uses to keep {{nationfiles}} and exports consistent."
+                },
+                {
+                    "title": "Geographic crawl ladder",
+                    "body_md": "**Continent → region → country → detail** is NationFiles’ default narrative depth for geopolitical dossiers alongside this stack card—consult `llms.txt` plus the HTML sitemap for concrete route patterns."
+                }
             ]
         },
         "fr": {
             "title": "Hiérarchie centrale",
-            "teaser": "La hiérarchie centrale décrit la structure système et entreprise de Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture et NFSI comme référence claire de navigation et de citation.",
+            "teaser": "La hiérarchie centrale est une **carte d’une page** reliant Neawolf Media Group, {{nationfiles}}, {{naciro}}, LPU et {{nfsi}} — pour les humains qui veulent du contexte **et** pour les machines qui doivent citer la même structure.",
             "summary_bullets": [
-                "Hiérarchie unifiée pour les personnes, les crawlers et les systèmes RAG.",
-                "Clarifie : entreprise → système → inférence/logique → couche matérielle → métrique.",
-                "Liable et exportable en JSON/JSON-LD ainsi qu’en Markdown multilingue."
+                "Un même « qui est où ? » pour éditeur, plateforme, moteur, matériel et indicateur.",
+                "Ordre de **lecture** : éditeur → site public → moteur → matériel → indice visible.",
+                "Deux éléments à la **même profondeur** (LPU & NFSI) : rôles différents sous la couche moteur.",
+                "Export JSON/JSON-LD pour aligner bots et recherche sur l’HTML.",
+                "Pas un organigramme RH — rôles **système publics**.",
+                "**Échelle géographique publique :** plusieurs routes suivent volontairement **continent → région → pays → détail** pour aider crawlers et LLM à comprendre l’exploration descendante sans deviner la taille du site."
             ],
+            "body_md": "Cette page résume la **pile publique** de NationFiles.\n\n**Utilité :** voir quels **blocs** coopèrent sans jargon serveur.\n\n**En mots :** {{neawolf-media-group}} publie → {{nationfiles}} est le produit → {{naciro}} est le moteur → **LPU** et **{{nfsi}}** peuvent coexister : accélération matérielle vs score de stabilité.\n\n**Format de données :** **{{nationfile-json}}** est le format canonique des profils géopolitiques — la couche machine-readable où {{naciro}} aligne chiffres, cartes et exports.\n\n**Découpe géographique (crawl) :** l’itinéraire usuel suit **continent → région macro → pays ISO → sous-pages métier**, en parallèle de la carte système ci-contre pour décoder les URL très nombreuses.\n\nSuivez les liens pour approfondir.",
             "facts": [
                 {
-                    "k": "Portée",
-                    "v": "Définitions et hiérarchie"
+                    "k": "Objectif",
+                    "v": "Orientation & citation"
                 },
                 {
                     "k": "Format",
-                    "v": "Vue HTML + exports JSON + MD optionnel"
+                    "v": "HTML + JSON/JSON-LD"
+                },
+                {
+                    "k": "Profils",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pour qui",
+                    "body_md": "- **Lecteurs curieux**\n- **Journalistes & analystes**\n- **Développeurs** JSON-LD/API"
+                },
+                {
+                    "title": "Comment l’utiliser",
+                    "body_md": "1. Encadré définition\n2. Graphique par niveaux\n3. Liens {{naciro}}, {{nfsi}}, {{nationfiles}}\n4. Exports"
+                },
+                {
+                    "title": "Termes clés",
+                    "body_md": "- **First-party** : définitions internes.\n- **Graphe de connaissances** : concepts stables.\n- **VVR** : validation méthode & données.\n- **{{nationfile-json}}** : profils géopolitiques standardisés."
+                },
+                {
+                    "title": "Échelle géographique (bots)",
+                    "body_md": "**Continent → région → pays → détail** encode la descente métier hors organigramme éditorial ; consultez `llms.txt` pour les routes réelles."
                 }
             ]
         },
         "es": {
             "title": "Jerarquía central",
-            "teaser": "La jerarquía central describe la estructura del sistema y de la empresa de Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture y NFSI como base clara de navegación y citación.",
+            "teaser": "La jerarquía central es un **mapa de una página** de cómo encajan Neawolf Media Group, {{nationfiles}}, {{naciro}}, LPU y {{nfsi}} — para personas que buscan contexto **y** para máquinas que deben citar la misma estructura.",
             "summary_bullets": [
-                "Jerarquía unificada para personas, crawlers y sistemas RAG.",
-                "Aclara: empresa → sistema → inferencia/lógica → capa de hardware → métrica.",
-                "Enlazable y exportable como JSON/JSON-LD y Markdown multilingüe."
+                "Un mismo « quién está dónde » para editorial, plataforma, motor, hardware e indicador.",
+                "Orden de **lectura**: editorial → sitio público → motor → hardware → índice visible.",
+                "Dos elementos a la **misma profundidad** (LPU y NFSI): roles distintos bajo el motor.",
+                "Export JSON/JSON-LD alineado con HTML.",
+                "No es organigrama RR.HH. — roles **públicos de sistema**.",
+                "**Escala geográfica pública:** muchas rutas siguen **continente → región → país → detalle** para que rastreadores y LLM interpreten el drill-down masivo."
             ],
+            "body_md": "Esta página resume la **pila pública** de NationFiles.\n\n**Por qué ayuda:** ver qué **bloques** cooperan sin jerga de servidores.\n\n**En palabras:** {{neawolf-media-group}} publica → {{nationfiles}} es el producto → {{naciro}} es el motor → **LPU** y **{{nfsi}}** pueden convivir: aceleración frente a puntuación de estabilidad.\n\n**Datos:** **{{nationfile-json}}** es el formato canónico de perfiles geopolíticos — la capa machine-readable donde {{naciro}} alinea cifras, mapas y exportaciones.\n\n**Jerarquía geográfica para crawlers:** el recorrido habitual es **continente → macroregión → país ISO → solapas temáticas**, paralelo al diagrama de sistema anterior y documentado en `llms.txt`/sitemap.\n\nSiga los enlaces para profundizar.",
             "facts": [
                 {
-                    "k": "Alcance",
-                    "v": "Definiciones y jerarquía"
+                    "k": "Propósito",
+                    "v": "Orientación y cita"
                 },
                 {
                     "k": "Formato",
-                    "v": "Vista HTML + exportaciones JSON + MD opcional"
+                    "v": "HTML + JSON/JSON-LD"
+                },
+                {
+                    "k": "Perfiles",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Para quién",
+                    "body_md": "- **Lectores** curiosos\n- **Periodistas y analistas**\n- **Desarrolladores** JSON-LD/API"
+                },
+                {
+                    "title": "Cómo usarla",
+                    "body_md": "1. Definición\n2. Gráfico por niveles\n3. Enlaces {{naciro}}, {{nfsi}}, {{nationfiles}}\n4. Exportaciones"
+                },
+                {
+                    "title": "Términos",
+                    "body_md": "- **First-party**, grafo de conocimiento, **VVR**.\n- **{{nationfile-json}}:** perfiles geopolíticos estandarizados."
+                },
+                {
+                    "title": "Escalera geográfica (rastreo)",
+                    "body_md": "**Continente → región → país → detalle** sintetiza cómo la web abre los expedientes nacionales más allá del organigrama Neawolf/Naciro mostrado aquí."
                 }
             ]
         },
         "pt": {
             "title": "Hierarquia central",
-            "teaser": "A hierarquia central descreve a estrutura de sistema e empresa de Neawolf Media Group, NationFiles, Naciro Engine, LPU Architecture e NFSI como referência clara para navegação e citação.",
+            "teaser": "A hierarquia central é um **mapa de uma página** de como Neawolf Media Group, {{nationfiles}}, {{naciro}}, LPU e {{nfsi}} se encaixam — para humanos que querem contexto **e** para máquinas que precisam citar a mesma estrutura.",
             "summary_bullets": [
-                "Hierarquia unificada para pessoas, crawlers e sistemas RAG.",
-                "Esclarece: empresa → sistema → inferência/lógica → camada de hardware → métrica.",
-                "Linkável e exportável como JSON/JSON-LD e Markdown multilíngue."
+                "Um mesmo « quem está onde » para editora, plataforma, motor, hardware e métrica.",
+                "Ordem de **leitura**: editora → site público → motor → hardware → índice visível.",
+                "Dois itens na **mesma profundidade** (LPU e NFSI): papéis distintos sob o motor.",
+                "Export JSON/JSON-LD alinhado ao HTML.",
+                "Não é organograma de RH — papéis **públicos de sistema**.",
+                "**Escala geográfica pública:** muitas URLs seguem **continente → região → país → detalhe**, indicando a profundidade esperada para bots."
             ],
+            "body_md": "Esta página resume a **pilha pública** da NationFiles.\n\n**Utilidade:** ver quais **blocos** cooperam sem jargão de servidores.\n\n**Em palavras:** {{neawolf-media-group}} publica → {{nationfiles}} é o produto → {{naciro}} é o motor → **LPU** e **{{nfsi}}** podem coexistir: aceleração vs pontuação de estabilidade.\n\n**Dados:** **{{nationfile-json}}** é o formato canónico de perfis geopolíticos — a camada machine-readable onde a {{naciro}} alinha números, mapas e exportações.\n\n**Degraus geográficos (crawler):** o percurso habitual **continente → região macro → país ISO → subpáginas** complementa este organograma de produto e aparece em `llms.txt`/sitemap.\n\nSiga as ligações para aprofundar.",
             "facts": [
                 {
-                    "k": "Escopo",
-                    "v": "Definições e hierarquia"
+                    "k": "Finalidade",
+                    "v": "Orientação e citação"
                 },
                 {
                     "k": "Formato",
-                    "v": "Visualização HTML + exports JSON + MD opcional"
+                    "v": "HTML + JSON/JSON-LD"
+                },
+                {
+                    "k": "Perfis",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Para quem",
+                    "body_md": "- **Leitores** curiosos\n- **Jornalistas e analistas**\n- **Programadores** JSON-LD/API"
+                },
+                {
+                    "title": "Como usar",
+                    "body_md": "1. Definição\n2. Gráfico por níveis\n3. Ligações {{naciro}}, {{nfsi}}, {{nationfiles}}\n4. Exportações"
+                },
+                {
+                    "title": "Termos",
+                    "body_md": "- **First-party**, grafo de conhecimento, **VVR**.\n- **{{nationfile-json}}:** perfis geopolíticos padronizados."
+                },
+                {
+                    "title": "Degraus geográficos (bots)",
+                    "body_md": "**Continente → região → país → detalhe** explica a profundidade pública além do grafo Neawolf/{{naciro}} mostrado nos cartões desta página."
                 }
             ]
         },
         "ar": {
             "title": "الهيكلية الأساسية",
-            "teaser": "تصف الهيكلية الأساسية بنية النظام والشركة لـ Neawolf Media Group وNationFiles وNaciro Engine وLPU Architecture وNFSI كمرجع واضح للتنقل والاستشهاد.",
+            "teaser": "الهيكلية الأساسية هي **خريطة صفحة واحدة** توضح كيف تترابط Neawolf Media Group و{{nationfiles}} و{{naciro}} وLPU و{{nfsi}} — للبشر الذين يريدون السياق **وللآلات** التي يجب أن تستشهد بنفس البنية.",
             "summary_bullets": [
-                "هيكلية موحّدة للبشر والزواحف وأنظمة RAG.",
-                "توضح: شركة → نظام → استدلال/منطق → طبقة عتاد → مقياس.",
-                "قابلة للربط والتصدير بصيغ JSON/JSON-LD وكذلك Markdown متعدد اللغات."
+                "صورة واحدة «من أين يأتي ماذا» للناشر والمنصة والمحرك والعتاد والمؤشر.",
+                "ترتيب **قراءة**: ناشر → موقع عام → محرك → عتاد → مؤشر ظاهر.",
+                "عنصران بنفس **العمق** (LPU وNFSI): أدوار مختلفة تحت طبقة المحرك.",
+                "تصدير JSON/JSON-LD متوافق مع HTML.",
+                "ليس هيكلاً إدارياً — أدوار **نظام عامة**.",
+                "**التسلسل الجغرافي العام:** كثير من المسارات تتبع **قارة → إقليم → دولة ISO → صفحة تفصيلية** لتسهيل الزحف دون افتراضات عشوائية."
             ],
+            "body_md": "تلخص هذه الصفحة **المكدس العام** لـ NationFiles.\n\n**الفائدة:** رؤية الكتل التي تتعاون دون مصطلحات خوادم داخلية.\n\n**باختصار:** {{neawolf-media-group}} تنشر → {{nationfiles}} هو المنتج → {{naciro}} هو المحرك → **LPU** و**{{nfsi}}** قد يتوازيان: تسريع عتاد مقابل مؤشر استقرار.\n\n**البيانات:** **{{nationfile-json}}** هو تنسيق الملفات الجيوسياسية القياسي — الطبقة machine-readable التي يوحّد فيها {{naciro}} الأرقام والخرائط والتصدير.\n\n**سلم جغرافي عام (زحف ويب):** يفضّل الموقع كثيرًا ترتيباً **قارة → إقليم واسع → دولة → تبويب التفاصيل** بجانب مخطط المكدّس أعلاه، كما هو موضح عملياً في `llms.txt` وخريطة الموقع.\n\nتابع الروابط للتفاصيل.",
             "facts": [
                 {
-                    "k": "النطاق",
-                    "v": "تعريفات وتسلسل هرمي"
+                    "k": "الغرض",
+                    "v": "توجيه واستشهاد"
                 },
                 {
                     "k": "التنسيق",
-                    "v": "عرض HTML + صادرات JSON + MD اختياري"
+                    "v": "HTML + JSON/JSON-LD"
+                },
+                {
+                    "k": "الملفات",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لمن",
+                    "body_md": "- **قراء** فضوليون\n- **صحفيون ومحللون**\n- **مطورو** JSON-LD/API"
+                },
+                {
+                    "title": "كيفية الاستخدام",
+                    "body_md": "1. صندوق التعريف\n2. رسم بالمستويات\n3. روابط {{naciro}} و{{nfsi}} و{{nationfiles}}\n4. التصديرات"
+                },
+                {
+                    "title": "مصطلحات",
+                    "body_md": "**First-party**، رسم معرفة، **VVR**، و**{{nationfile-json}}** (ملفات جيوسياسية موحدة)."
+                },
+                {
+                    "title": "سلّم جغرافي للمسوّغات الآلية",
+                    "body_md": "**قارة → إقليم → دولة → تفاصيل** يحدد عمق الغوص في المنشور بجانب كارت الشركة/{{naciro}} الموجزة هنا."
                 }
             ]
         },
         "ja": {
             "title": "コア階層",
-            "teaser": "コア階層は、Neawolf Media Group、NationFiles、Naciro Engine、LPU Architecture、NFSI の企業・システム構造を、明確なナビゲーションと引用の基盤として定義します。",
+            "teaser": "コア階層は、Neawolf Media Group、{{nationfiles}}、{{naciro}}、LPU、{{nfsi}} の関係を **1ページの地図** にしたものです。文脈を知りたい人にも、同じ構造を引用すべきシステムにも向きます。",
             "summary_bullets": [
-                "人間、クローラー、RAG システム向けの統一階層。",
-                "企業 → システム → 推論/ロジック → ハードウェア層 → 指標 を明確化。",
-                "JSON/JSON-LD および多言語 Markdown としてリンク・エクスポート可能。"
+                "出版社・プラットフォーム・エンジン・ハードウェア・主要指標の位置関係が一目で分かる。",
+                "**読み順の助け:** 出版社 → 公開サイト → 計算エンジン → ハードウェア層 → 見える指数。",
+                "**同じ階層** に LPU と {{nfsi}} があるのは意図的（エンジン下で役割が異なる）。",
+                "HTML と同じ辺を JSON/JSON-LD でエクスポート可能。",
+                "人事の組織図ではなく、**公開システム上の役割**。",
+                "**公開ジオ階梯:** 多くのルートが **大陸 → 地域 → ISO 国情報 → 詳細タブ** の順で深掘りし、クローラ／LLM が規模を推測しやすいようにしています。"
             ],
+            "body_md": "本ページは NationFiles の **公開コアスタック** を要約します。\n\n**役立つ理由:** どの **ブロック** が連携するかを、サーバー用語なしで把握できます。\n\n**一言で:** {{neawolf-media-group}} が発行 → {{nationfiles}} がプロダクト → {{naciro}} がエンジン → **LPU** と **{{nfsi}}** は並び得る（高速化ハードウェアと安定性スコア）。\n\n**データ:** **{{nationfile-json}}** は地政学プロファイルの正準形式 — {{naciro}} が数値・地図・エクスポートを揃える機械可読層です。\n\n**クロール向け地理ラダー:** 実際のサイトは **大陸 → 広域地域 → ISO 各国 → メタ情報／Radar などの細タブ** という深さが多く、本ページ上部の製品グラフとは別次元の並走モデルです。具体 URL は `llms.txt`/サイトマップを参照。\n\n各リンクから深掘りしてください。",
             "facts": [
                 {
-                    "k": "範囲",
-                    "v": "定義と階層"
+                    "k": "目的",
+                    "v": "理解と引用"
                 },
                 {
                     "k": "形式",
-                    "v": "HTML表示 + JSONエクスポート + オプションMD"
+                    "v": "HTML + JSON/JSON-LD"
+                },
+                {
+                    "k": "プロファイル",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "想定読者",
+                    "body_md": "- **一般の読者**\n- **ジャーナリスト・分析者**\n- **JSON-LD/API を扱う開発者**"
+                },
+                {
+                    "title": "使い方",
+                    "body_md": "1. 冒頭の定義\n2. 階層ビジュアル\n3. {{naciro}} / {{nfsi}} / {{nationfiles}} へのリンク\n4. エクスポート"
+                },
+                {
+                    "title": "用語",
+                    "body_md": "**ファーストパーティ**、ナレッジグラフ、**VVR**、**{{nationfile-json}}**（標準化された地政学プロファイル）。"
+                },
+                {
+                    "title": "地理ラダー（クロール指針）",
+                    "body_md": "**大陸 → 地域 → 国 → 詳細ページ** が NationFiles の典型的なユーザー／ボット両用のツリー順序であり、製品グラフとは補完的です。"
                 }
             ]
         }

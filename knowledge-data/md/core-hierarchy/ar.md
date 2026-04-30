@@ -8,44 +8,33 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/core-hierarchy/ar.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/core-hierarchy/"
+nf_canonical_html_url: "https://nationfiles.com/ar/knowledge/entity/core-hierarchy/"
 nf_markdown_lang_file: "ar"
 ---
-# الهيكلية الأساسية
+# Core Hierarchy — بناء منصة الاستخبارات الجيوسياسية
 
-## الغرض
+## ما فائدة هذا المخطط
 
-**الهيكلية الأساسية** هي التمثيل المرجعي لِ**هيكل المؤسسة والنظام** في NationFiles. توحّد المفردات بين واجهة HTML والتصديرات (JSON و JSON-LD) وملفات Markdown الاختيارية. الهدف ليس تسلسلًا ترويجيًا بل **سلسلة قابلة للاقتباس**: من الجهة الناشرة قانونيًا حتى المقياس الكمي.
+**Core Hierarchy** تصف **كيف يتراص نظام NationFiles** من حيث الأدوار والمسؤولية — لا صورة تسويقية بل **سلسلة**: من ينشر، أين السطح العام، أين تعمل ذكاء التحليل، أين يُولَد المؤشر، أي طبقة حساب تحته.
 
-## المستويات
+## المستويات — ماذا تفعل كل طبقة
 
-| المستوى | الكيان (معرّف Knowledge) | الدور (مختصر) |
-|---------|---------------------------|----------------|
-| 1 | `neawolf-media-group` | مؤسسة / ناشر |
-| 2 | `nationfiles` | النظام / الموقع |
-| 3 | `naciro` | محرك الاستدلال والمنطق |
-| 4أ | `lpu-architecture` | طبقة عتاد / تنفيذ |
-| 4ب | `nfsi` | مؤشر إحصائي (0–100)، مجموعة بيانات |
+| مستوى | الكيان | دور في المنتج |
+|-------|--------|----------------|
+| 1 | **Neawolf Media Group** | **الناشر / المشغّل** — بيانات النشر والمسؤولية؛ تمول وتقود NationFiles. |
+| 2 | **NationFiles** | **سطح الاستخبارات الجيوسياسية** — الويب، تحليل الدول، الخرائط، اللوحات، واجهات API حسب المنتج. |
+| 3 | **Naciro Engine** | **ذكاء التحليل** — يضغط الإشارات إلى NFSI ونصوص ومكونات تنبؤ حسب المنهجية. |
+| 4a | **LPU Architecture** | **أساس حساب الاستدلال** — تنفيذ حتمي وسريع لمسارات Naciro. |
+| 4b | **NFSI** | **درجة الاستقرار / المخاطر الجيوسياسية** — مخرج كمي للمسار (0–100). |
 
-قد تتقاسم عدة كيانات المستوى نفسه عند فصل **محرك المنطق** و**مخرجات المقياس**.
+**ملاحظة:** المحرك والمؤشر في **نفس المستوى** لأن **منطق الحساب** و**النتيجة الظاهرة** أمران مختلفان.
 
-## فصل العقد
+## ما ليست عليه هذه التسلسل
 
-- **المسؤولية**: كيان قانوني، منصة، برنامج، مقياس.
-- **الاقتباس**: مصادر متميزة (الإشعار القانوني، `llms.txt`، المنهجية، VVR، DOI).
-- **الدقة التقنية**: مخرجات NFSI تمر عبر مسار معالجة؛ الهيكل يعكس **الأدوار** لا شجرة بنية فردية بالضرورة.
+ليست طوبولوجيا شبكة ولا مخططاً للموظفين. ترتب **أدوار المنتج** للقراء والشركاء الذين يريدون معرفة **من أين تأتي الأرقام والتحليلات**.
 
-## الروابط
-
-تربط `relations` (مثل `relatedTo` وروابط نطاقية) الكيانات؛ يعاد إسقاطها في JSON-LD إلى `hasPart` / `isPartOf` أو `makesOffer` عند التوافق مع Schema.org.
-
-## القراءة الآلية
-
-معرّفات ثابتة، `generated_at_utc`، عناوين URL موحّدة، سمات مهيكلة؛ الحقل `hierarchy.levels` يغذي عرض «المستويات» و`ItemList` في JSON-LD.
-
-## مراجع
+## مصادر
 
 - [llms.txt](https://nationfiles.com/llms.txt)
-- [Legal Notice](https://nationfiles.com/en/legal/legal-notice/)
+- [الإشعار القانوني](https://nationfiles.com/ar/legal/legal-notice/)
 - [منهجية NFSI](https://nationfiles.com/en/company/nfsi/)
-- [تقرير VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)

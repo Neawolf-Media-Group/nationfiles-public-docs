@@ -1,0 +1,678 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "legal-sources-registry",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T23:30:00Z",
+    "topics": [
+        "osint",
+        "transparency",
+        "sources",
+        "government-data",
+        "citations",
+        "provenance"
+    ],
+    "aliases": [
+        "Legal Sources Registry",
+        "Quellenregister",
+        "NationFiles Legal Sources",
+        "Registre des sources légales"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles Legal Sources Registry: a first-party, citation-forward catalogue that names primary sovereign feeds, official portals, and authoritative government databases underpinning OSINT-grade transparency—designed so readers can verify claims without relying on opaque third-party assertion graphs.",
+            "depends_on": [
+                "nationfiles",
+                "nfsi",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**NationFiles Legal Sources Registry:** ein **first-party**, zitationsfreundliches Verzeichnis, das **primäre staatliche Feeds**, Behördenportale und maßgebliche **Regierungsdatenbanken** benennt — für **OSINT-taugliche** Transparenz, ohne undurchsichtige Dritt-Assertions-Graphen als Primairebene.",
+                "en": "NationFiles Legal Sources Registry: a first-party, citation-forward catalogue that names primary sovereign feeds, official portals, and authoritative government databases underpinning OSINT-grade transparency—designed so readers can verify claims without relying on opaque third-party assertion graphs.",
+                "fr": "**Legal Sources Registry** NationFiles : catalogue **first-party** orienté **citation**, nommant **feeds souverains** primaires, portails officiels et bases gouvernementales faisant autorité — pour une transparence digne de l’**OSINT**, sans graphe d’assertions opaques comme primaire.",
+                "es": "**Registro Legal de Fuentes** de NationFiles: catálogo **first-party** pensado para **cita**, que nombra **feeds soberanos** primarios, portales oficiales y bases gubernamentales **autorizadas** — transparencia **OSINT** sin grafos de terceros opacos como primario.",
+                "pt": "**Registo Legal de Fontes** NationFiles: catálogo **first-party** para **citação**, que nomeia **feeds soberanos** primários, portais oficiais e bases governamentais **autoritativas** — transparência **OSINT** sem grafos opacos de terceiros como primário.",
+                "ar": "**سجل المصادر القانونية** لـ NationFiles: فهرس **first-party** موجّه لل**اقتباس**، يُسمّي **التغذيات السيادية** الأولية والبوابات الرسمية وقواعد البيانات الحكومية **المرجعية** — شفافية بمستوى **OSINT** دون اعتماد على رسوم ادعاءات طرف ثالث كمصدر أول.",
+                "ja": "NationFiles **Legal Sources Registry**：**一次の政府系フィード**、公式ポータル、権威ある**政府データベース**を列挙する **first-party** の**引用前提**カタログ。**OSINT**水準の透明性向けに、不透明な第三者グラフを一次にしない。"
+            }
+        },
+        {
+            "key": "source_registry",
+            "value": "Structured disclosure of where NationFiles expects citations to land: ministry bulletins, national statistical releases, regulator notices, formal diplomatic channels, and other primaries expressly named—plus explicit notes on independence from vendor-only narratives.",
+            "depends_on": [
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Strukturierte Offenlegung**, wo NationFiles **Zitate** haben will: Ministeriumsmitteilungen, **Amtliche Statistik**, Regulator-Mitteilungen, formelle **diplomatische Kanäle** und andere **benannte Primäre** — plus klare Hinweise zur **Unabhängigkeit** von reinen Vendor-Narrativen.",
+                "en": "Structured disclosure of where NationFiles expects citations to land: ministry bulletins, national statistical releases, regulator notices, formal diplomatic channels, and other primaries expressly named—plus explicit notes on independence from vendor-only narratives.",
+                "fr": "**Divulgation structurée** des points d’**ancrage citation** : circulaires ministérielles, **statistique nationale**, avis des régulateurs, canaux diplomatiques formels, autres **primaires nommées** — et mises au clair sur l’**indépendance** vis‑à‑vis des seuls récits fournisseurs.",
+                "es": "**Divulgación estructurada** de dónde deben **aterrizar** las citas: boletines ministeriales, **estadística nacional**, avisos de reguladores, canales diplomáticos formales y otros **primarios nombrados** — con notas sobre **independencia** frente a narrativas solo de proveedor.",
+                "pt": "**Divulgação estruturada** dos âncoras de **citação**: boletins ministeriais, **estatística nacional**, avisos de reguladores, canais diplomáticos formais e **primários nomeados** — e notas sobre **independência** de narrativas só de fornecedor.",
+                "ar": "**كشف منظم** عن أين يتوقع NationFiles أن تستقر **الاقتباسات**: نشرات وزارية، **إحصاء وطني**، إشعارات جهات التنظيم، قنوات دبلوماسية رسمية، و**أوليات مسماة** صراحةً — مع توضيح **الاستقلال** عن سرديات الشركات فقط.",
+                "ja": "**引用の着地**を NationFiles が明示：省庁リリース、**国家統計**、規制当局通知、正式な外交チャネル、その他**名指しのプライマリ**——ベンダー語りだけからの**独立性**にも言及。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Citability index in practice: share of registry entries that resolve to sovereign or official HTTPS endpoints with stable identifiers; independence posture scored by how often primaries—not reshared social snippets—are the cited root.",
+            "depends_on": [
+                "nfsi",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                },
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Zitations-/Citability-Fokus:** Anteil der Registereinträge mit **souveränen oder offiziellen HTTPS-Endpunkten** und stabilen Identifikatoren; **Unabhängigkeits-Posture** daran gemessen, wie oft **Primäre** — nicht reshared Social-Snippets — die **Wurzelzitation** bilden.",
+                "en": "Citability index in practice: share of registry entries that resolve to sovereign or official HTTPS endpoints with stable identifiers; independence posture scored by how often primaries—not reshared social snippets—are the cited root.",
+                "fr": "**Indice de citabilité** : part des entrées pointant vers des **HTTPS souverains/officiels** avec identifiants stables; **posture d’indépendance** selon la fréquence où les **primaires** — pas les extraits sociaux relayés — sont la **racine** citée.",
+                "es": "**Citabilidad práctica:** parte de entradas que resuelven a **HTTPS soberano u oficial** con identificadores estables; **independencia** según cuán a menudo los **primarios**—no retazos sociales—son la **raíz** citada.",
+                "pt": "**Citabilidade:** quota de entradas com **HTTPS soberano/oficial** e identificadores estáveis; **independência** pela frequência de **primários** — não excertos sociais — como **raiz** citada.",
+                "ar": "**قابلية الاقتباس:** نسبة السجلات التي تنتهي إلى **HTTPS سيادي/رسمي** مع معرّفات مستقرة؛ **استقلالية المصدر** بمدى كون **الأوليات** — لا مقتطفات اجتماعية — هي **جذر** الاقتباس.",
+                "ja": "**引用適性**：エントリのうち**主権・公式 HTTPS** と安定IDに辿り着く割合。**独立性**は**一次**が引用の根か（SNSの再掲ではないか）で見る。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Registry rows intentionally privilege government-origin strands: official RSS/Atom where published, national gazettes, customs and trade registers where relevant, and security or travel-advisory primaries only when methodology explicitly allows cross-reading—never substituted for journalism or counsel.",
+            "depends_on": [
+                "nationfiles",
+                "security-radar"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Registereinträge **priorisieren** staatliche Herkunft: **offizielle RSS/Atom** wo veröffentlicht, **Amtsblätter**, Zoll-/Handelsregister wo relevant, Sicherheits- oder **Reisewarnungs-Primäre** nur bei **explizit erlaubter** Kreuzlesung — **kein** Ersatz für Journalismus oder Rechtsberatung.",
+                "en": "Registry rows intentionally privilege government-origin strands: official RSS/Atom where published, national gazettes, customs and trade registers where relevant, and security or travel-advisory primaries only when methodology explicitly allows cross-reading—never substituted for journalism or counsel.",
+                "fr": "Le registre **priorise** l’origine publique : **RSS/Atom officiels**, journaux officiels, registres douaniers/commerciaux pertinents, **primaires** sécurité/conseils aux voyageurs seulement si la méthodo autorise le **croisement** — jamais substitut du journalisme ni d’un avis juridique.",
+                "es": "El registro **privilegia** origen gubernamental: **RSS/Atom oficiales**, diarios oficiales, registros aduaneros/comerciales; **primarios** de seguridad o **avisos de viaje** solo si la metodología permite **cruce** — **no** sustituye periodismo ni asesoría legal.",
+                "pt": "O registo **privilegia** origem pública: **RSS/Atom oficiais**, diários oficiais, registos aduaneiros/comerciais; **primários** de segurança ou **avisos de viagem** só quando a metodologia permite **cruzamento** — **não** substitui jornalismo ou aconselhamento jurídico.",
+                "ar": "السجل **يفضّل** الأصول الحكومية: **RSS/Atom** الرسمية حيث تُنشر، الجرائد الرسمية، السجلات الجمركية/التجارية؛ **أوليات** أمن أو **إرشادات سفر** فقط عندما تسمح المنهجية بال**تقاطع** — **لا** تحل محل الصحافة أو الاستشارة القانونية.",
+                "ja": "行は**政府起源**を優先：公開されている**公式 RSS/Atom**、官報、税関・商業登録。安全・**渡航警告**のプライマリは**方法論が十字読みを明示**したときのみ。**報道や法的助言の代替ではない**。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Registry citation → hygiene and connector-family alignment documented in NFSI/VVR → Naciro ingestion windows → published NationFiles narratives and JSON exports that preserve the same primary URLs readers can click.",
+            "depends_on": [
+                "naciro",
+                "nfsi",
+                "validation-verification-report"
+            ],
+            "sources": [
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Pipeline:** Registerzitat → in NFSI/VVR dokumentierte **Hygiene/Connector-Familien** → **Naciro**-Ingestionsfenster → veröffentlichte NationFiles-Narrative und **JSON-Exporte**, die dieselben **Primär-URLs** tragen, die Leser:innen anklicken können.",
+                "en": "Registry citation → hygiene and connector-family alignment documented in NFSI/VVR → Naciro ingestion windows → published NationFiles narratives and JSON exports that preserve the same primary URLs readers can click.",
+                "fr": "**Pipeline :** entrée registre → hygiène et familles de connecteurs (NFSI/VVR) → fenêtres d’ingestion **Naciro** → récits NationFiles et **exports JSON** conservant les **URL primaires** cliquables.",
+                "es": "**Pipeline:** cita del registro → higiene/familias conectoras en NFSI/VVR → ventanas de ingesta **Naciro** → narrativas y **exportes JSON** con las mismas **URL primarias** clicables.",
+                "pt": "**Pipeline:** citação do registo → higiene/conectores em NFSI/VVR → janelas de ingestão **Naciro** → narrativas e **exportações JSON** com **URLs primárias** clicáveis.",
+                "ar": "**خط المعالجة:** اقتباس السجل → التطهير وعائلات الموصلات في NFSI/VVR → نوافذ استيعاب **Naciro** → سرد و**JSON** تحافظ على **عناوين أولية** قابلة للنقر.",
+                "ja": "**パイプライン：** 登録引用→NFSI/VVR の整形・コネクタ整合→**Naciro** 取り込み→公開ナラティブと **JSON** が**読者が辿れる同じプライマリ URL** を保持。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Human-readable legal sources pages per release cadence, synchronized Knowledge entity exports, machine-readable indexes referenced from llms.txt policy, and cross-links to VVR for assurance wording.",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Outputs:** menschenlesbare **Legal-Sources**-Seiten zum Release-Rhythmus, synchronisierte **Knowledge**-Exporte, in **llms.txt** referenzierte **maschinenlesbare** Hinweise, **Querverweise** zum VVR für Assurance-Formulierungen.",
+                "en": "Human-readable legal sources pages per release cadence, synchronized Knowledge entity exports, machine-readable indexes referenced from llms.txt policy, and cross-links to VVR for assurance wording.",
+                "fr": "**Livrables :** pages **Legal Sources** lisibles selon la cadence, exports **Knowledge** synchronisés, index **machine-readable** évoqués dans **llms.txt**, liens croisés **VVR** pour le texte d’assurance.",
+                "es": "**Entregables:** páginas **Legal Sources** legibles por cadencia, exportes **Knowledge** sincronizados, índices **machine-readable** citados en **llms.txt**, enlaces **VVR** para el texto de garantía.",
+                "pt": "**Entregas:** páginas **Legal Sources** legíveis por cadência, exportações **Knowledge** alinhadas, índices **machine-readable** em **llms.txt**, ligações **VVR** para linguagem de garantia.",
+                "ar": "**المخرجات:** صفحات **المصادر القانونية** للقراء، تصدير **Knowledge** متزامن، فهارس **machine-readable** في **llms.txt**، روابط **VVR** لنصوص الضمان.",
+                "ja": "**成果物：** リリース周期に沿う**人向け** Legal Sources ページ、同期 **Knowledge** エクスポート、**llms.txt** で触れる**機械可読**インデックス、保証文言への **VVR** クロスリンク。"
+            }
+        },
+        {
+            "key": "update_cycle",
+            "value": "Rolling maintenance: registry entries are revised when sovereign primaries change endpoints, certificates, or publication patterns; major NFSI methodology releases trigger explicit re-validation notes—not silent drift.",
+            "depends_on": [
+                "nfsi",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Rollierende Pflege:** Einträge werden angepasst, wenn **Primäre** Endpunkte, Zertifikate oder Publikationsmuster wechseln; größere **NFSI**-Methodik-Releases triggern **explizite Re-Validierungs**-Hinweise — **kein** stilles Driften.",
+                "en": "Rolling maintenance: registry entries are revised when sovereign primaries change endpoints, certificates, or publication patterns; major NFSI methodology releases trigger explicit re-validation notes—not silent drift.",
+                "fr": "**Maintenance continue :** mises à jour quand les **primaires** changent d’endpoint, certificat ou rythme ; releases **NFSI** majeures → notes de **re-validation** explicites — pas de dérive silencieuse.",
+                "es": "**Mantenimiento continuo:** revisiones cuando los **primarios** cambian endpoint, certificado o patrón; releases **NFSI** mayores → notas de **revalidación** explícitas — sin deriva silenciosa.",
+                "pt": "**Manutenção contínua:** revisões quando **primários** mudam endpoint, certificado ou cadência; releases **NFSI** maiores → notas de **revalidação** explícitas — sem deriva silenciosa.",
+                "ar": "**صيانة مستمرة:** تحديث عند تغيّر **الأوليات** للعناوين أو الشهادات أو أنماط النشر؛ إصدارات **NFSI** الكبرى تستدعي **إعادة تحقق** مذكورة — لا انحراف صامت.",
+                "ja": "**継続更新：** プライマリの**エンドポイント／証明書／公開パターン**変更で改訂。**NFSI** メジャー版では**再検証の明示**——静かなドリフトは避ける。"
+            }
+        },
+        {
+            "key": "ai_policy",
+            "value": "Automated crawlers must honour robots.txt and canonical HTTPS citation norms described in NationFiles AI guidelines; the registry is a deliberate companion to machine-readable policy, not a waiver of database rights.",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Automatisierte Crawler** befolgen **robots.txt** und kanonische **HTTPS-Zitations**normen aus den **AI Guidelines**; das Register begleitet die **maschinenlesbare** Policy — **kein** Verzicht auf Datenbankrechte.",
+                "en": "Automated crawlers must honour robots.txt and canonical HTTPS citation norms described in NationFiles AI guidelines; the registry is a deliberate companion to machine-readable policy, not a waiver of database rights.",
+                "fr": "Les **crawlers** doivent respecter **robots.txt** et les normes de citation **HTTPS** des **AI Guidelines** ; le registre accompagne la politique **machine-readable** — **sans** renonciation aux droits sur bases de données.",
+                "es": "Los **rastreadores** deben respetar **robots.txt** y las normas de citación **HTTPS** de **AI Guidelines**; el registro acompaña la política **machine-readable** — **sin** renuncia a derechos de base de datos.",
+                "pt": "**Rastreadores** devem honrar **robots.txt** e citação **HTTPS** das **AI Guidelines**; o registo acompanha política **machine-readable** — sem renúncia a direitos de base de dados.",
+                "ar": "يجب على **الزاحفات** احترام **robots.txt** ومعايير الاقتباس **HTTPS** في **إرشادات AI**؛ السجل يكمّل السياسة **machine-readable** — **دون** التنازل عن حقوق قواعد البيانات.",
+                "ja": "**クローラ**は **robots.txt** と **AI Guidelines** の **HTTPS 引用**規範に従う。登録は**機械可読ポリシー**の補遺——**データベース権の放棄ではない**。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                },
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "core-hierarchy"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Quellenregister (Legal Sources Registry)",
+            "teaser": "Das **Quellenregister** ist NationFiles’ **OSINT-Transparenz-Layer**: es **benennt primäre Regierungs-Feeds und Datenbanken**, macht **Zitation** zum Standard und hält **Quellenunabhängigkeit** vom Drittanbieter-Rauschen fern — die **öffentliche** Wurzel für **NFSI**, **{{naciro}}** und journalistische Prüfbarkeit.",
+            "summary_bullets": [
+                "**First-party:** kein anonymes Vendor-LOD — **staatliche** und **behördliche** Primäre explizit.",
+                "**OSINT-tauglich:** Leser:innen und Redaktionen können **HTTPS-Primäre** nachverfolgen.",
+                "**Zitationsfähigkeit:** stabile Erwähnung im Einklang mit **VVR** und Methodik.",
+                "**Unabhängigkeit:** klare Distanz zu **reinen** Social-Reposts als Beweis-Ersatz.",
+                "**Rechtlicher Rahmen:** begleitet **AI Guidelines** und **llms.txt** — **kein** Freibrief für Scraping jenseits der Regeln.",
+                "**Knowledge-Export:** dieselben Kanten im Graph wie auf der Legal-Seite."
+            ],
+            "body_md": "Wer heute **open-source** recherchiert, stößt schnell auf zwei Versuchungen: alles aus einem **Aggregatorendienst** zu ziehen — oder jeden **Social-Post** als Primär zu behandeln. NationFiles’ **Legal Sources Registry** (**Quellenregister**) ist die bewusste Gegenposition: ein **veröffentlichtes Verzeichnis**, das sagt, **wohin** Zitate gehen sollen, wenn Behauptungen über Staaten, Märkte oder Sicherheitslagen **überprüfbar** bleiben sollen.\n\nIm Kern listet das Register **regierungsnahe Primärstränge**: Ministeriums-Feeds, **amtliche Statistik**, Regulator-Mitteilungen, formelle diplomatische Kanäle und — dort, wo die Methodik es erlaubt — **explizit kreuzlesbare** Sicherheits- oder **Reisewarnungs**-Primäre. Es ersetzt weder **Auswärtigen Dienst** noch **Anwaltskanzlei**; es **entschärft** aber das häufigste OSINT-Risiko: die **verdeckte** Ersetzung von Primärquellen durch **zweite** oder **dritte** Hand.\n\n**Zitationsfähigkeit** ist hier kein Buzzword. Jede Zeile ist darauf angelegt, dass Lese- und **Review-Workflows** dieselbe **HTTPS-Wurzel** öffnen können, die auch **{{naciro}}** und **NFSI**-Pipelines in **VVR**-Dokumentation beschrieben sehen. **Unabhängigkeit** heißt in diesem Kontext: Primäre stammen — wo möglich — aus **öffentlicher** Souveränität, nicht aus geschlossenen Vendor-Graphen.\n\nDas Quellenregister ist damit **Governance-Prosa** im Kleid eines Katalogs: transparent begrenzt, **methodisch** an **Validation & Verification Report** und **NFSI-Methodik** gekoppelt, und für **Publisher-** sowie **B2B-**Prüfungen lesbar, die fragen: **Welche Primäre erlaubt ihr öffentlich — und welche nicht?**",
+            "facts": [
+                {
+                    "k": "Zweck",
+                    "v": "OSINT-Transparenz & zitierfähige Primäre."
+                },
+                {
+                    "k": "Primäre",
+                    "v": "Staatliche Feeds, Behörden-DBs, Amtsblätter."
+                },
+                {
+                    "k": "VVR/NFSI",
+                    "v": "Gekoppelte Integritäts-Erzählung."
+                },
+                {
+                    "k": "Grenze",
+                    "v": "Kein Ersatz für Primärjournalismus vor Ort."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Primäre vor Aggregatoren",
+                    "body_md": "Das Register **enthält** URLs und Bezeichnungen, die **Regierungs- oder Behördenherkunft** signalisieren — damit Zitate nicht in anonyme APIs **versickern**."
+                },
+                {
+                    "title": "OSINT ohne Trickbetrug",
+                    "body_md": "**Cross-Maps** oder **Security-Radar**-Inhalte werden **nur** dort gekoppelt, wo die Methodik **Kreuzlesung** erlaubt — nie als heimlicher Ersatz für **humanitäre** oder **militärische** Primäre."
+                },
+                {
+                    "title": "Unabhängigkeit formulieren",
+                    "body_md": "NationFiles sagt **ausdrücklich**, dass **Vendor-only**-Narrative oder **Social-Reposts** nicht die **Wurzel** der öffentlichen Beweiskette sind."
+                }
+            ]
+        },
+        "en": {
+            "title": "Legal Sources Registry",
+            "teaser": "The **Legal Sources Registry** is NationFiles’ **OSINT transparency spine**: it **names primary government feeds and databases**, privileges **citability**, and keeps **source independence** out of vendor-only shadows—linking public primaries to **NFSI**, **{{naciro}}**, and reviewer-grade accountability.",
+            "summary_bullets": [
+                "**First-party catalogue:** sovereign and departmental primaries called out explicitly—not a black-box vendor graph.",
+                "**OSINT-grade:** readers can chase the same **HTTPS roots** editors cite.",
+                "**Citability:** wording aligned with **VVR** and published methodology.",
+                "**Independence:** social re-shares are not treated as self-sufficient proof.",
+                "**Policy companion:** AI guidelines and **llms.txt** describe machine-readable expectations—**not** a scraping carte blanche.",
+                "**Knowledge exports:** graph edges mirror the public legal page."
+            ],
+            "body_md": "Modern OSINT often collapses into two bad habits: pulling everything through a **proprietary aggregator**, or mistaking **viral social clips** for sovereign primaries. NationFiles’ **Legal Sources Registry** is the deliberate counterweight—a **published inventory** that states **where citations should land** when claims about states, markets, or security situations must remain **checkable**.\n\nThe registry foregrounds **government-origin strands**: ministry bulletins, **national statistical** releases, regulator notices, formal diplomatic channels, and—only where methodology explicitly permits—**cross-readable** security or **travel-advisory** primaries. It does not replace **field reporting** or **legal counsel**; it does address the common risk that **second-hand** vendor packaging silently becomes the **root** of public argument.\n\n**Citability** is operational, not rhetorical. Rows are shaped so reviewers—human or institutional—can open the **same HTTPS endpoints** referenced by **{{naciro}}** ingestion rules and described alongside **NFSI** in the **Validation & Verification Report**. **Independence**, here, means privileging **openly attributable** sovereign endpoints over closed assertion marketplaces.\n\nThink of the registry as **governance prose disguised as a catalogue**: bounded, method-bound, explicitly tied to **VVR** narratives, and legible to **publisher-quality** and **B2B** teams asking the only question that matters in noisy markets—which **primaries** do you allow to anchor public claims, and which do you refuse?",
+            "facts": [
+                {
+                    "k": "Purpose",
+                    "v": "OSINT transparency & citeable primaries."
+                },
+                {
+                    "k": "Primaries",
+                    "v": "Government feeds, official DBs, gazettes."
+                },
+                {
+                    "k": "VVR/NFSI",
+                    "v": "Shared integrity storyline."
+                },
+                {
+                    "k": "Boundary",
+                    "v": "Not a substitute for on-site primaries."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Primaries before aggregators",
+                    "body_md": "Entries retain **sovereign or departmental** URLs so citations never dissolve into unnamed APIs."
+                },
+                {
+                    "title": "OSINT without sleight-of-hand",
+                    "body_md": "**Security** or map cross-reads appear **only** when methodology authorizes juxtaposition—never as a covert replacement for humanitarian or defence primaries."
+                },
+                {
+                    "title": "Stating independence",
+                    "body_md": "NationFiles is explicit that **vendor-only** narratives or **social reshares** are not the evidentiary root of public chains."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Registre des sources légales (Legal Sources)",
+            "teaser": "Le **registre des sources** incarne la **transparence OSINT** de NationFiles : il **nomme les flux et bases gouvernementaux primaires**, rend la **citation** opératoire et préserve l’**indépendance** face aux seuls agrégateurs — socle public pour **NFSI**, **{{naciro}}** et les revues qualité.",
+            "summary_bullets": [
+                "**First-party :** primaires **souveraines** explicitement — pas de graphe fournisseur opaque.",
+                "**OSINT :** les lecteurs retrouvent les **HTTPS primaires** citées.",
+                "**Citabilité :** alignement avec **VVR** et méthodologie publiée.",
+                "**Indépendance :** les **reshares** sociaux ne font pas loi.",
+                "**Politique :** complément aux **AI Guidelines** et **llms.txt** — pas d’autorisation de moissonnage illimité.",
+                "**Exports Knowledge** : mêmes relations que la page légale."
+            ],
+            "body_md": "L’**OSINT** dérape souvent vers l’**agrégateur propriétaire** ou le **clip social** pris pour primaire. Le **Legal Sources Registry** de NationFiles est la **réponse assumée** : un **catalogue public** qui dit **où** doivent s’ancrer les citations lorsqu’il faut **vérifier** État, marché ou sécurité.\n\nLe registre met en avant les **strates d’origine publique** : circulaires ministérielles, **statistique nationale**, avis des régulateurs, canaux diplomatiques formels, et — seulement si la méthodo l’autorise — **primaires** sécurité ou **conseils aux voyageurs** en **lecture croisée** explicite. Cela ne remplace ni le **reportage** ni le **conseil juridique** ; cela réduit le risque que l’**emballage** de second rang devienne la **racine** de l’argument public.\n\nLa **citabilité** est concrète : mêmes **HTTPS** que les règles d’ingestion de **{{naciro}}** et la narration **NFSI** du **VVR**. L’**indépendance**, ici, signifie privilégier des **points d’attache souverains ouverts** plutôt que des places marchandes d’assertions fermées.\n\nEn somme : **gouvernance en forme de catalogue**, bornée, liée au **VVR** — lisible par rédactions et acheteurs **B2B** qui exigent : **quelles primaires** publiques autorisez-vous, et lesquelles refusez-vous ?",
+            "facts": [
+                {
+                    "k": "Rôle",
+                    "v": "Transparence OSINT & primaires citables."
+                },
+                {
+                    "k": "Primaires",
+                    "v": "Flux étatiques, bases officielles, JO."
+                },
+                {
+                    "k": "VVR/NFSI",
+                    "v": "Même récit d’intégrité."
+                },
+                {
+                    "k": "Limite",
+                    "v": "Pas de substitution au terrain souverain."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Primaires avant agrégateurs",
+                    "body_md": "Les lignes conservent des **URL souveraines/départementales** pour éviter que la citation ne se dissout dans des API anonymes."
+                },
+                {
+                    "title": "OSINT sans trompe-l’œil",
+                    "body_md": "Croisement **sécurité** ou cartes **uniquement** si la méthodo le permet — pas de remplacement camouflé des primaires humanitaires/défense."
+                },
+                {
+                    "title": "Indépendance énoncée",
+                    "body_md": "NationFiles précise que **narratifs fournisseur-seuls** ou **reshares** ne sont pas la racine probatoire publique."
+                }
+            ]
+        },
+        "es": {
+            "title": "Registro legal de fuentes (Legal Sources)",
+            "teaser": "El **registro legal de fuentes** es el **capa OSINT** de NationFiles: **nombra feeds y bases gubernamentales primarios**, prioriza la **citación** y defiende la **independencia** frente a agregadores opacos — base pública para **NFSI**, **{{naciro}}** y revisores.",
+            "summary_bullets": [
+                "**First-party:** primarios **soberanos** explícitos — no grafo cerrado.",
+                "**OSINT:** mismas raíces **HTTPS** rastreables.",
+                "**Citabilidad:** alineado con **VVR** y metodología.",
+                "**Independencia:** **reshares** sociales no bastan.",
+                "**Política:** complementa **AI Guidelines** y **llms.txt** — no es scraping libre.",
+                "**Exports Knowledge:** mismo grafo que la página legal."
+            ],
+            "body_md": "El OSINT suele caer en el **agregador propietario** o en el **clip viral** como falso primario. El **Legal Sources Registry** de NationFiles es el **contrapeso**: inventario **público** que fija **dónde** deben anclarse las citas cuando hay que **verificar** Estado, mercado o seguridad.\n\nPrioriza **hilos de origen gubernamental**: boletines ministeriales, **estadística nacional**, avisos regulatorios, canales diplomáticos formales y —solo si la metodología lo permite— primarios de **seguridad** o **avisos de viaje** con **cruce** explícito. No sustituye **reportaje** ni **asesoría legal**; sí reduce el riesgo de que el **empaquetado** de segunda mano sea la **raíz** del debate público.\n\nLa **citación** es operativa: mismos **HTTPS** que las reglas de ingesta de **{{naciro}}** y la narrativa **NFSI** del **VVR**. La **independencia** privilegia **endpoints soberanos abiertos** frente a mercados cerrados de afirmaciones.\n\nEn resumen: **gobernanza con forma de catálogo**, acotada y ligada al **VVR** — legible para redacciones y compradores **B2B** que preguntan: **¿qué primarios** públicos permitís?",
+            "facts": [
+                {
+                    "k": "Propósito",
+                    "v": "Transparencia OSINT y primarios citables."
+                },
+                {
+                    "k": "Primarios",
+                    "v": "Feeds estatales, bases oficiales, gazettes."
+                },
+                {
+                    "k": "VVR/NFSI",
+                    "v": "Relato de integridad compartido."
+                },
+                {
+                    "k": "Límite",
+                    "v": "No sustituye el trabajo de campo primario."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Primarios antes que agregadores",
+                    "body_md": "Las filas mantienen **URL soberanas** para que **la cita no se pierda** en APIs anónimas."
+                },
+                {
+                    "title": "OSINT sin trampas",
+                    "body_md": "Cruce con **seguridad** o mapas **solo** si la metodología lo autoriza."
+                },
+                {
+                    "title": "Independencia explícita",
+                    "body_md": "NationFiles deja claro que **relatos solo-proveedor** o **reshares** no son la raíz probatoria."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Registo legal de fontes (Legal Sources)",
+            "teaser": "O **registo legal de fontes** é a **camada OSINT** da NationFiles: **nomeia feeds e bases governamentais primários**, torna a **citação** operacional e preserva a **independência** face a agregadores opacos — base pública para **NFSI**, **{{naciro}}** e revisores.",
+            "summary_bullets": [
+                "**First-party:** primários **soberanos** explícitos — não um grafo fechado.",
+                "**OSINT:** mesmas raízes **HTTPS** verificáveis.",
+                "**Citabilidade:** alinhado com **VVR** e metodologia.",
+                "**Independência:** **reshares** sociais não bastam.",
+                "**Política:** complementa **AI Guidelines** e **llms.txt** — não é scraping livre.",
+                "**Exports Knowledge:** mesmo grafo que a página legal."
+            ],
+            "body_md": "O OSINT escorrega para **agregadores proprietários** ou **clips virais** como falsos primários. O **Legal Sources Registry** da NationFiles é o **contrapeso**: inventário **público** que diz **onde** as citações devem **ancorar** quando é preciso **verificar** Estado, mercado ou segurança.\n\nPrioriza **fios de origem governamental**: boletins ministeriais, **estatística nacional**, avisos de reguladores, canais diplomáticos formais e —só se a metodologia permitir— primários de **segurança** ou **avisos de viagem** com **cruzamento** explícito. Não substitui **reportagem** nem **conselho jurídico**; reduz o risco de o **reempacotamento** se tornar a **raiz** do argumento público.\n\nA **citação** é operacional: os mesmos **HTTPS** das regras de ingestão de **{{naciro}}** e da narrativa **NFSI** no **VVR**. A **independência** privilegia **endpoints soberanos abertos** a mercados fechados de afirmações.\n\nEm suma: **governação em forma de catálogo**, delimitada e ligada ao **VVR** — legível para redações e compradores **B2B** que perguntam: **que primários** públicos permitem?",
+            "facts": [
+                {
+                    "k": "Finalidade",
+                    "v": "Transparência OSINT e primários citáveis."
+                },
+                {
+                    "k": "Primários",
+                    "v": "Feeds estatais, bases oficiais, gazettes."
+                },
+                {
+                    "k": "VVR/NFSI",
+                    "v": "Mesma narrativa de integridade."
+                },
+                {
+                    "k": "Limite",
+                    "v": "Não substitui trabalho de campo primário."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Primários antes de agregadores",
+                    "body_md": "As linhas mantêm **URL soberanas** para que a **citação não se dissolva** em APIs anónimas."
+                },
+                {
+                    "title": "OSINT sem ilusionismo",
+                    "body_md": "Cruzamento com **segurança** ou mapas **só** se a metodologia autorizar."
+                },
+                {
+                    "title": "Independência declarada",
+                    "body_md": "A NationFiles deixa claro que **narrativas só-fornecedor** ou **reshares** não são a raiz probatória."
+                }
+            ]
+        },
+        "ar": {
+            "title": "سجل المصادر القانونية (Legal Sources Registry)",
+            "teaser": "**سجل المصادر القانونية** طبقة **شفافية OSINT** في NationFiles: يُسمّي **التغذيات وقواعد البيانات الحكومية الأولية**، يجعل **الاقتباس** عمليًا، ويحافظ على **استقلالية المصدر** بعيدًا عن المُجمِّعات المعتمة — أساس عام لـ **NFSI** و**{{naciro}}** والمراجعين.",
+            "summary_bullets": [
+                "**First-party:** أوليات **سيادية** مسمّاة — لا رسماً بيانياً مغلقاً.",
+                "**OSINT:** نفس جذور **HTTPS** القابلة للتتبع.",
+                "**قابلية الاقتباس:** متوافق مع **VVR** والمنهجية.",
+                "**الاستقلال:** **إعادات نشر** اجتماعية لا تكفي.",
+                "**السياسة:** يكمل **إرشادات AI** و**llms.txt** — ليس إذن جمعًا بلا قيود.",
+                "**تصدير Knowledge:** نفس حواف الرسم البياني."
+            ],
+            "body_md": "غالبًا ما ينزلق OSINT إلى **مُجمِّع ملكي** أو **مقطع فيروسي** يُخطأ تفسيره كأولي. **Legal Sources Registry** من NationFiles هو **الموازنة الصريحة**: **فهرس علني** يحدد **أين** يجب أن تستقر **الاقتباسات** عند الحاجة إلى **التحقق** من الدولة أو السوق أو الأمن.\n\nيُقدّم **خيوط أصل حكومية**: نشرات وزارية، **إحصاء وطني**، إشارات جهات التنظيم، قنوات دبلوماسية رسمية، و—فقط عندما تسمح المنهجية—أوليات **أمن** أو **إرشادات سفر** مع **تقاطع** مذكور. لا يغني عن **الصحافة الميدانية** أو **الاستشارة القانونية**؛ يقلل خطر أن يصبح **إعادة التغليف** **جذر** الحجة العامة.\n\n**الاقتباس** عملي: نفس **HTTPS** التي تشير إليها قواعد استيعاب **{{naciro}}** وسرد **NFSI** في **VVR**. **الاستقلال** يعني تفضيل **نقاط سيادية مفتوحة النسب** على أسواق ادعاءات مغلقة.\n\nباختصار:**حوكمة على شكل كتالوج**، محدودة ومربوطة بـ **VVR** — يقرؤها المحررون ومشترو **B2B** الذين يسألون: **أي أوليات** عامة تسمحون بها؟",
+            "facts": [
+                {
+                    "k": "الغرض",
+                    "v": "شفافية OSINT وأوليات قابلة للاقتباس."
+                },
+                {
+                    "k": "الأوليات",
+                    "v": "تغذيات حكومية، قواعد رسمية، جرائد رسمية."
+                },
+                {
+                    "k": "VVR/NFSI",
+                    "v": "نفس سردية النزاهة."
+                },
+                {
+                    "k": "الحد",
+                    "v": "لا يغني عن أوليات ميدانية."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "أوليات قبل المُجمِّعات",
+                    "body_md": "الصفوف تحافظ على **عناوين سيادية** حتى لا **تذوب** الاقتباسات في واجهات مجهولة."
+                },
+                {
+                    "title": "OSINT بلا خداع",
+                    "body_md": "التقاطع مع **الأمن** أو الخرائط **فقط** عندما تسمح المنهجية ذلك."
+                },
+                {
+                    "title": "استقلالية مُعلَنة",
+                    "body_md": "توضح NationFiles أن **سرديات الشركات وحدها** أو **إعادات النشر** ليست جذر الإثبات العلني."
+                }
+            ]
+        },
+        "ja": {
+            "title": "法的ソース登録（Legal Sources Registry）",
+            "teaser": "**Legal Sources Registry** は NationFiles の **OSINT 透明性の背骨**。**政府系プライマリのフィードとデータベース**を列挙し、**引用可能性**を前面に、ベンダー独占の影から **独立性**を守る——**NFSI** や **{{naciro}}**、レビュー文化への公開の土台。",
+            "summary_bullets": [
+                "**First-party：** 主権・官公庁由来のプライマリを明示——ブラックボックスのベンダーグラフではない。",
+                "**OSINT：**編集部が引用する**同一の HTTPS ルート**を読者も追える。",
+                "**引用性：** **VVR**・公開方法論と整合。",
+                "**独立性：** SNS の再掲だけを**根拠の根**にしない。",
+                "**ポリシー：** **AI Guidelines** / **llms.txt** と整合する補遺——**無制限スクレイピング**の免罪符ではない。",
+                "**Knowledge エクスポート：** リーガルページと同じグラフ辺。"
+            ],
+            "body_md": "OSINT は **プロプライエタリの集約基盤**に吸い込まれたり、**バイラル映像**がプライマリのふりをしたりしがちだ。NationFiles の **Legal Sources Registry** は、その**明白なカウンターパート**——国・市場・安全について主張を**検証可能**に保つべきとき、**引用が着地すべき場所**を示す**公開カタログ**だ。\n\n**政府起源の系**を前面に：省庁リリース、**国家統計**、規制当局通知、正式外交チャネル、そして（**方法論が明示的に許す場合に限り**）**安全**や**渡航勧告**のプライマリとの**クロスリード**。現地報道や**法的助言の代替**ではないが、**二次包装**が議論の**根**になりうるリスクを抑える。\n\n**引用**はスローガンではなく運用：**{{naciro}}** の取り込み規則や **VVR** に沿う **NFSI** の語りと**同じ HTTPS** を共有する。**独立性**とは、閉じたアサーションマーケットより**帰属可能な主権エンドポイント**を優先すること。\n\n要するに**カタログの形をしたガバナンス**：境界と方法論があり、**VVR** に接続され、**品質レビュー**や **B2B** が「**どのプライマリを公開の根に認めるか**」と問える本文だ。",
+            "facts": [
+                {
+                    "k": "目的",
+                    "v": "OSINT の透明性と引用可能なプライマリ。"
+                },
+                {
+                    "k": "プライマリ",
+                    "v": "政府フィード、公式 DB、官報。"
+                },
+                {
+                    "k": "VVR/NFSI",
+                    "v": "整合性の語りを共有。"
+                },
+                {
+                    "k": "境界",
+                    "v": "現地プライマリ取材の代替ではない。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "集約よりプライマリ",
+                    "body_md": "行は**主権・府省由来の URL** を残し、引用が無名 API に**溶ける**のを避ける。"
+                },
+                {
+                    "title": "小手先のない OSINT",
+                    "body_md": "**安全**や地図との併読は**方法論が架橋を明示**したときに限る。"
+                },
+                {
+                    "title": "独立性の宣言",
+                    "body_md": "**ベンダー語りだけ**や **SNS 再掲**を証拠連鎖の根にしないと NationFiles は明言する。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "legal-sources-registry"
+        },
+        "repository_relative_path": "knowledge-data/entities/legal-sources-registry.json"
+    }
+}

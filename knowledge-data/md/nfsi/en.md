@@ -11,43 +11,34 @@ nf_repository_relative_path: "knowledge-data/md/nfsi/en.md"
 nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/nfsi/"
 nf_markdown_lang_file: "en"
 ---
-# NationFiles Stability Index (NFSI)
+# NationFiles Stability Index (NFSI) — geopolitical stability & risk score
 
-## Definition
+## What the NFSI **is**
 
-The **NFSI** is a **quantitative index on a 0–100 scale** summarizing geopolitical stability / documented risk posture as an aggregate signal. Modeled as a **`Dataset`** to stress that it is a **time‑series style metric** with a stated computation pipeline—not a prose country brief.
+The **NationFiles Stability Index (NFSI)** is NationFiles’ **headline quantitative indicator** for geopolitical analysis. For each covered country (and as a world aggregate) it compresses **stability versus documented risk** into **one score from 0 to 100**. Analysts, journalists, and researchers use it as a **fast orientation metric** — a “speedometer” for the documented situation, not a long-form narrative report.
 
-## Bands
+The index is built from **multiple layers** (Layer 1–3 in the methodology): raw indicators → aggregation → weighted outcome → optional smoothing. Inputs and weights are disclosed in the **Validation & Verification Report** and the NFSI methodology pages so the score stays **auditable**.
 
-Per attribute `score_bands`:
+## What the NFSI is **for**
 
-| Band | Range |
-|------|--------|
-| A | 81–100 |
-| B | 61–80 |
-| C | 41–60 |
-| D | 21–40 |
-| E | 0–20 |
+- **Cross-country comparison:** one shared scale across sovereign states in scope — suited to rankings, heat maps, and time series.
+- **Monitoring / early awareness:** score shifts flag structural deterioration or improvement **before** qualitative-only workflows catch up.
+- **Shared language:** category bands **A–E** and colour logic give teams a **common numeric vocabulary**.
 
-Band assignment follows the layered methodology in the **VVR** and methodology pages.
+## Scale and bands (brief)
 
-## Pipeline (high level)
+Band assignment follows documented thresholds (the platform uses **>** rules at 20/40/60/80) and the site colour system — see methodology for the authoritative table.
 
-Attribute `pipeline`: Layer 1 indicators → Layer 2 aggregation → Layer 3 weighted final score → Layer 4 inertia smoothing. Numerical detail lives in the **VVR**, not this summary card.
+## What the NFSI is **not**
 
-## Coverage and cadence
+Not an oracle for single headlines; not a substitute for diplomatic originals; **not investment advice**. It compresses documented indicators — it does not replace a full country study.
 
-- **Countries**: 195 (`country_coverage`).
-- **Cadence**: 15‑minute recalculation per `update_cycle` (documented policy).
-- **Live slot**: When enabled, `global_current` may surface the latest **world aggregate** via server resolver `get_last_score_values()`; static JSON exports remain point‑in‑time snapshots.
+## Licence and citation
 
-## License & DOI
+Public use as stated on legal pages (CC BY-ND 4.0); **DOI** for academic reference (Zenodo).
 
-`license`: **CC BY‑ND 4.0** (see Legal Notice linkage).  
-`citation_doi`: **10.5281/zenodo.19758890**.
-
-## References
+## Sources
 
 - [NFSI methodology](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
-- [DOI record](https://doi.org/10.5281/zenodo.19758890)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)
+- [DOI](https://doi.org/10.5281/zenodo.19783682)

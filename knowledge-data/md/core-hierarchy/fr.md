@@ -8,44 +8,33 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/core-hierarchy/fr.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/core-hierarchy/"
+nf_canonical_html_url: "https://nationfiles.com/fr/knowledge/entity/core-hierarchy/"
 nf_markdown_lang_file: "fr"
 ---
-# Hiérarchie centrale
+# Core Hierarchy — structure de la plateforme d’intelligence géopolitique
 
-## Objectif
+## À quoi sert ce schéma
 
-La **hiérarchie centrale** est la vue canonique de la **structure organisationnelle et système** de NationFiles. Elle aligne la terminologie entre l’interface HTML, les exports (JSON, JSON‑LD) et le Markdown optionnel. Il ne s’agit pas d’un organigramme marketing mais d’une **chaîne citable** : de l’éditeur juridique jusqu’à la métrique quantitative.
+La **Core Hierarchy** décrit **comment le système NationFiles s’emboîte** en termes de rôles et de responsabilité — pas une image marketing, mais une **chaîne** : qui publie, où se trouve la surface publique, où tourne l’IA d’analyse, où naît l’indicateur, quelle couche de calcul est en dessous.
 
-## Niveaux
+## Les niveaux — ce que chaque élément **fait**
 
-| Niveau | Entité (ID Knowledge) | Rôle (bref) |
-|--------|------------------------|-------------|
-| 1 | `neawolf-media-group` | Organisation éditrice |
-| 2 | `nationfiles` | Système / site |
-| 3 | `naciro` | Moteur d’inférence et logique |
-| 4a | `lpu-architecture` | Couche matérielle / exécution |
-| 4b | `nfsi` | Indicateur statistique (0–100), jeu de données |
+| Niveau | Entité | Rôle produit |
+|--------|--------|--------------|
+| 1 | **Neawolf Media Group** | **Éditeur / opérateur** — mention légale et responsabilité ; finance et pilote NationFiles. |
+| 2 | **NationFiles** | **Surface d’intelligence géopolitique** — site, analyse pays, cartes, tableaux de bord, vues API selon produit. |
+| 3 | **Naciro Engine** | **IA d’analyse** — condense les signaux bruts en NFSI, textes, composantes prévisionnelles selon méthode. |
+| 4a | **LPU Architecture** | **Base de calcul d’inférence** — exécution déterministe et rapide pour les chemins Naciro. |
+| 4b | **NFSI** | **Score stabilité / risque géopolitique** — sortie quantitative de la pipeline (0–100). |
 
-Plusieurs entités peuvent partager un même niveau lorsque la **logique moteur** et la **métrique de sortie** sont distinguées.
+**Note :** moteur et index sont **au même niveau** parce que **logique de calcul** et **résultat visible** sont deux choses distinctes.
 
-## Séparation des nœuds
+## Ce que cette hiérarchie **n’est pas**
 
-- **Responsabilité** : entité légale, plateforme, logiciel, métrique.
-- **Citation** : sources distinctes (mentions légales, `llms.txt`, méthodologie, VVR, DOI).
-- **Exactitude technique** : la NFSI naît d’un pipeline ; la hiérarchie reflète des **rôles**.
+Pas une topologie réseau ; pas un organigramme RH. Elle ordonne les **rôles produit** pour lecteurs et partenaires qui veulent savoir **d’où viennent chiffres et analyses**.
 
-## Liens du graphe
-
-Les composants sont reliés par `relations` (`relatedTo`, relations métier). Les exports JSON‑LD projettent certaines arêtes vers `hasPart` / `isPartOf` ou `makesOffer` selon Schema.org.
-
-## Lisibilité machine
-
-Identifiants stables, horodatage `generated_at_utc`, URL canoniques, attributs structurés ; `hierarchy.levels` alimente le bloc visuel et `ItemList` en JSON‑LD.
-
-## Références
+## Sources
 
 - [llms.txt](https://nationfiles.com/llms.txt)
-- [Legal Notice](https://nationfiles.com/en/legal/legal-notice/)
+- [Mentions légales](https://nationfiles.com/fr/legal/legal-notice/)
 - [Méthodologie NFSI](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)

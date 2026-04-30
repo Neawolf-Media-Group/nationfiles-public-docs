@@ -1,0 +1,666 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "metamaps",
+    "kind": "entity",
+    "type": "SoftwareApplication",
+    "status": "active",
+    "updated_utc": "2026-04-30T20:00:00Z",
+    "topics": [
+        "metamaps",
+        "spatial-intelligence",
+        "maps",
+        "megacities",
+        "infrastructure-risk",
+        "visual-analysis"
+    ],
+    "aliases": [
+        "Meta maps",
+        "NationFiles Meta Maps",
+        "Meta-Karten"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles spatial intelligence layer: thematic map experiences that stack demographic–urban, energy–infrastructure, and publicly documented geopolitical tension lenses so readers compare geographic concentration before opening long tables.",
+            "depends_on": [
+                "nationfiles",
+                "nationfile-json",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Meta maps hub",
+                    "url": "https://nationfiles.com/en/map/metamap/"
+                },
+                {
+                    "label": "Maps hub",
+                    "url": "https://nationfiles.com/en/map/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Räumliche Intelligenz-Schicht auf NationFiles: thematische Karten-Erlebnisse, die demographic–urbane, energie–infrastrukturelle und öffentlich dokumentierte geopolitische Spannungslinsen stapeln — damit Konzentrationen zuerst **geografisch** lesbar werden, bevor Tabellen dominiert.",
+                "en": "NationFiles spatial intelligence layer: thematic map experiences that stack demographic–urban, energy–infrastructure, and publicly documented geopolitical tension lenses so readers compare geographic concentration before opening long tables.",
+                "fr": "Couche d’intelligence spatiale NationFiles : cartes thématiques qui superposent urbanisation démographique, infrastructures énergétiques et lentilles documentées de tensions géopolitiques — la concentration se lit d’abord **géographiquement**, pas seulement en table.",
+                "es": "Capa de inteligencia espacial NationFiles: mapas temáticos que apilan crecimiento urbano, infraestructura nuclear y tensiones geopolíticas publicadas — la lectura empieza en la **geografía**, no en la tabla aislada.",
+                "pt": "Camada de inteligência espacial NationFiles: mapas temáticos sobrepostos (urbano-demográfico, energia–infraestrutura, tensões geopolíticas documentadas) para ler concentração **no mapa** antes da tabela.",
+                "ar": "طبقة ذكاء مكاني من NationFiles: خرائط موضوعية تتراص طبقات النمو الحضري والبنية التحتية للطاقة والتوترات الجيوسياسية الموثّقة — تُقرأ الكثافة **جغرافياً** قبل الغوص في الجداول.",
+                "ja": "NationFiles の空間インテリジェンス層：都市・人口、電源・インフラ、公開文書に沿った地政緊張のレンズを重ねた主題地図体験。長い表より先に**地理的な集中**を比較できる。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Layer-weighted geographic signal — where megacity corridors, nuclear plant footprints, federated region anchors, and documented high-tension belts visibly diverge from blank territory; contrast is the metric readers see, not a single scalar.",
+            "depends_on": [
+                "nationfile-json",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Megacities metamap",
+                    "url": "https://nationfiles.com/en/map/metamap/megacities/"
+                },
+                {
+                    "label": "Nuclear power metamap",
+                    "url": "https://nationfiles.com/en/map/metamap/nuclearpower/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Schichtgewichtetes geografisches Signal — wo Megacity-Korridore, Kernkraft-Standortbänder, administrative Gliederungen und dokumentierte Hochspannungs-Gürtel **sichtbar** von leerer Fläche abweichen; der Kontrast auf der Karte ist die Kennzahl, nicht ein Einzel-Score.",
+                "en": "Layer-weighted geographic signal — where megacity corridors, nuclear plant footprints, federated region anchors, and documented high-tension belts visibly diverge from blank territory; contrast is the metric readers see, not a single scalar.",
+                "fr": "Signal géographique pondéré par couches — corridors de mégapoles, emprises nucléaires, divisions fédérales et ceintures de tension documentée se **détachent** du vide cartographique ; la métrique, c’est le contraste visuel, pas un score unique.",
+                "es": "Señal geográfica por capas — corredores de megaciudades, plantas nucleares, regiones administrativas y franjas de tensión documentada **saltan** frente al territorio vacío; la métrica es el contraste en el mapa.",
+                "pt": "Sinal geográfico por camadas — corredores de megacidades, usinas nucleares, divisões administrativas e faixas de tensão documentada **destacam-se** do vazio cartográfico; a métrica é o contraste visual.",
+                "ar": "إشارة جغرافية مرجحة بالطبقات — ممرات المدن الضخمة ومواقع الطاقة النووية والتقسيمات الإدارية وأحزمة التوتر الموثّقة **تنفصل بصرياً** عن المساحات الخالية؛ المقياس هو التباين البصري لا رقم واحد.",
+                "ja": "レイヤー加重の地理シグナル——巨大都市帯、原発の立地、行政区画、文書化された緊張帯が「空白」との**視覚的差**で立ち上がる；単一スカラーではなく対比が読みの核。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Geocode trusted registers per theme, harmonise legends, clamp overlays to satellite baselines on country metamap pages, and emit consistent markers so storytelling stays legible at glance-scale.",
+            "depends_on": [
+                "naciro",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Meta maps hub",
+                    "url": "https://nationfiles.com/en/map/metamap/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Vertrauenswürdige Register **pro Thema** georeferenzieren, Legenden harmonisieren, Overlays auf Satellitengrundlagen der Länder-Meta-Karten koppeln — Marker bleiben konsistent, damit Geschichten im **Blickmaßstab** lesbar bleiben.",
+                "en": "Geocode trusted registers per theme, harmonise legends, clamp overlays to satellite baselines on country metamap pages, and emit consistent markers so storytelling stays legible at glance-scale.",
+                "fr": "Géocoder des référentiels par thème, harmoniser les légendes, caler les couches sur les bases satellite des pays — marqueurs uniformes pour garder la lecture **au premier coup d’œil**.",
+                "es": "Geocodificar registros por tema, armonizar leyendas, anclar capas al satélite en metamapas país — marcadores coherentes para lectura **de un vistazo**.",
+                "pt": "Geocodificar registos por tema, harmonizar legendas, fixar sobreposições ao satélite nas metamapas por país — marcadores uniformes para leitura **rápida**.",
+                "ar": "ترميز جغرافي لسجلات موثوقة لكل موضوع، مواءمة مفاتيح الخرائط، ربط الطبقات بأساسات الأقمار للصفحات الوطنية — علامات متسقة لقراءة **بلمحة**.",
+                "ja": "テーマごとに整備されたレジスタをジオコーディングし凡例を揃え、国別メタマップの衛星ベースにオーバーレイを固定。一瞥で読める**統一マーカー**で物語性を保つ。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Curated national registers for megacity tiers, nuclear generation sites, federated geographies, and companion context from NationFiles security maps where methodology documents conflict-aware spatial reading.",
+            "depends_on": [
+                "nationfiles",
+                "security-radar"
+            ],
+            "sources": [
+                {
+                    "label": "Security maps hub",
+                    "url": "https://nationfiles.com/en/map/security/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Kuratierte nationale Register für Megacity-Stufen, Kernkraft-Standorte, föderale Geografien — ergänzt durch Kontext aus dem **Sicherheits-Kartenhub**, sobald die Methodik lagebewusstes räumliches Lesen dokumentiert.",
+                "en": "Curated national registers for megacity tiers, nuclear generation sites, federated geographies, and companion context from NationFiles security maps where methodology documents conflict-aware spatial reading.",
+                "fr": "Registres nationaux curatés (mégapoles, nucléaire, fédérations) complétés par le **hub cartes Sécurité** lorsque la méthodologie décrit une lecture spatiale sensible aux conflits.",
+                "es": "Registros nacionales curados (megaciudades, nuclear, regiones) más contexto del **centro de mapas de seguridad** cuando la metodología documenta lectura espacial de conflictos.",
+                "pt": "Registos nacionais curados (megacidades, nuclear, geografias federadas) com contexto do **hub de mapas de segurança** quando a metodologia cobre leitura espacial de tensão.",
+                "ar": "سجلات وطنية مُنتقاة لطبقات المدن الضخمة والمواقع النووية والتقسيمات الفدرالية، مع سياق من **مركز خرائط الأمن** حيث توثق المنهجية قراءة مكانية واعية للنزاع.",
+                "ja": "巨大都市区分・原発・連邦型行政区画など各国レジストリをキュレーションし、手法が**紛争文脈の空間読み**を定義する範囲でセキュリティ地図ハブと併読。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Per-country metamap stacks, global metamap thematic pages (megacities growth, nuclear power), and satellite-forward layouts juxtaposed against tabular profiles on {{nationfiles}}.",
+            "depends_on": [
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Meta maps hub",
+                    "url": "https://nationfiles.com/en/map/metamap/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Länderbezogene Meta-Karten-Stapel, globale **Themen**-Einstiege (Megacity-Wachstum, Kernkraft) und satellitenbetonte Layouts **neben** tabellarischen Profilen auf {{nationfiles}}.",
+                "en": "Per-country metamap stacks, global metamap thematic pages (megacities growth, nuclear power), and satellite-forward layouts juxtaposed against tabular profiles on {{nationfiles}}.",
+                "fr": "Stacks metamap par pays, pages thématiques mondiales (mégapoles, nucléaire) et mises en page satellite **face aux** profils tabulaires sur {{nationfiles}}.",
+                "es": "Metamapas por país, páginas temáticas globales (megaciudades, nuclear) y diseños satelitales **junto a** perfiles tabulares en {{nationfiles}}.",
+                "pt": "Metamapas por país, páginas temáticas globais (megacidades, nuclear) e layout satélite **ao lado de** perfis tabulares em {{nationfiles}}.",
+                "ar": "مجموعات ميتاماب لكل دولة وصفحات موضوعية عالمية (مدن ضخمة، نووي) وتخطيط بصري يعتمد الأقمار **بجانب** الجداول على {{nationfiles}}.",
+                "ja": "国ごとのメタマップの積層、グローバルな主題ページ（巨大都市・原発）、衛星寄りレイアウトを {{nationfiles}} の**表形式プロファイル**と並置。"
+            }
+        },
+        {
+            "key": "computed_by",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "alignsWith",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "security-radar"
+        },
+        {
+            "rel": "poweredBy",
+            "to": "naciro"
+        },
+        {
+            "rel": "complements",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nature-vertical"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "expat-metamaps-cluster"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Meta-Karten (NationFiles Meta Maps)",
+            "teaser": "**Räumliche Intelligenz statt Datenfriedhof:** NationFiles **Meta-Karten** stapeln **Megacity-Wachstum**, **Kernkraft-Infrastruktur** und **Konflikt- bzw. Spannungskontext**, wo ihn die dokumentierte Methodik trägt — als **visuelle Risikoanalyse**, bevor Tabellen die Lesart diktieren.",
+            "summary_bullets": [
+                "**Warum Karten?** Konzentration, Nachbarschaft und leere Räume fallen im Satelliten-Overlay schneller auf als in Zeile 400 einer CSV.",
+                "**Megacity-Schicht:** urbane Schwergewichte und Wachstumskorridore als geografische Erzählung, nicht nur Ranglisten.",
+                "**Kernkraft-Schicht:** dokumentierte Kraftwerksstandorte im Kontext von Grenzen und Ballungsräumen.",
+                "**Spannungs-Linse:** ergänzend zu Sicherheits-Kartenlogik — politisch-militärische Lesarten bleiben von rein städtisch-energetischen Layern getrennt, soweit die Methodik das vorsieht.",
+                "**Motor & Bühne:** Berechnung und Orchestrierung über **{{naciro}}**, Darstellung über **{{nationfiles}}**, verzahnt mit **{{nationfile-json}}**.",
+                "**Kein Orakel:** Meta-Karten verdichten dokumentierte Signale — sie ersetzen weder Behördenoriginale noch diplomatische Primärquellen."
+            ],
+            "body_md": "Wenn Analysten von **räumlicher Intelligenz** sprechen, meinen sie selten bloß „eine Karte irgendwo im Footer“. Sie meinen: **Zuerst** das Muster auf der Erdoberfläche, **dann** die Zeile in der Tabelle. NationFiles **Meta-Karten** sind genau diese Leseebene: ein **Stack aus thematischen Layern**, die sich auf Satellitengrundlagen legen und damit **Städtewachstum**, **kritische Infrastruktur** — hier im dokumentierten Fokus etwa **Kernenergie** — sowie, wo die öffentliche Methodik es zulässt, **Konflikt- und Spannungskontext** sichtbar machen, ohne Literatur und Lagebericht zu ersetzen.\n\nDer journalistische Kern ist der **Kontrast**: Wo Ballungsräume **auf engen geografischen Raum** zusammenfallen, wo Atomkraftwerke **in Relation zu Millionenstädten** stehen, wo föderale Gliederungen **politische Zentrifugalkräfte** erklären — dort entsteht eine **visuelle Risikoanalyse**, die Tabellen allein selten liefern. Tabellen präzisieren, Karten **argumentieren mit Entfernung und Nachbarschaft**. NationFiles hält diese Balance ein: Zahlen und Exporte bleiben über **{{nationfile-json}}** nachziehbar, während Meta-Karten **Entscheidungs- und Redaktionsteams** eine gemeinsame „Landkarte des Problems“ geben.\n\n**Megacity-Wachstum** erscheint nicht als Schlagzeile, sondern als **Breite eines Korridors**; **Kernkraft** nicht als abstrakte Technologiefolge, sondern als **Punkt/Lage im Siedlungsgeflecht**; **Konflikt- oder Krisenbezug** — dort, wo die dokumentierte Pipeline ihn abbildet — als **räumlich gebündelte Lesart**, die bewusst **nicht** mit rein energetischen Layern verwechselt wird. Technisch orchestriert **{{naciro}}** die Aufbereitung; **{{nationfiles}}** liefert die Oberfläche. Gemeinsam mit **{{security-radar}}** und dem **Sicherheits-Kartenhub** ergibt sich ein **Geschichte-in-Raum**, das journalistisch haltbar bleibt, solange Primärquellen und Methodikseiten die Tonlage vorgeben.",
+            "facts": [
+                {
+                    "k": "Lesart",
+                    "v": "Kontrast und Nachbarschaft vor reiner Tabellenarbeit."
+                },
+                {
+                    "k": "Schichten",
+                    "v": "Megacity, Kernkraft, Verwaltungsgeografie; plus dokumentierter Spannungskontext."
+                },
+                {
+                    "k": "Integration",
+                    "v": "Profilstory via {{nationfile-json}}; Sicherheitskontext ergänzend."
+                },
+                {
+                    "k": "Publikation",
+                    "v": "{{naciro}} berechnet, {{nationfiles}} zeigt."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Layer-Stack (Leserichtung)",
+                    "body_md": "Meta-Karten **stapeln** Schichten auf Satellitengrundlagen; **3** steht oben für kontextreiche Themen, **1** für die Basiskarte.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 200 196\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGmm\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#e2e8f0\"/></linearGradient></defs><rect x=\"18\" y=\"8\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"37\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">3</text><line x1=\"100\" y1=\"56\" x2=\"100\" y2=\"66\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,76 94,66 106,66\" fill=\"#1a365d\"/><rect x=\"18\" y=\"78\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">2</text><line x1=\"100\" y1=\"126\" x2=\"100\" y2=\"136\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,146 94,136 106,136\" fill=\"#1a365d\"/><rect x=\"18\" y=\"148\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"177\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">1</text></svg></div>\n\n| # | Rolle |\n| --- | --- |\n| 3 | Thematische Linse (z. B. Megacity, Kernkraft, dokumentierter Spannungskontext) |\n| 2 | Nationale / regionale Einblendungen, Legenden |\n| 1 | Satelliten- oder Basisgrundlage — wie auf den Methodeseiten beschrieben |"
+                },
+                {
+                    "title": "Visuelle Risikoanalyse vs. Tabellenmonopol",
+                    "body_md": "Tabellen **excel**lieren in Präzision — Karten in **Priorisierung**. Meta-Karten sind das redaktionelle Gegengewicht: Sie zeigen, welche Orte **gleichzeitig** in mehreren Risikologiken vorkommen. Wer nur sortiert, verfehlt Nachbarschaft; wer nur mappt, verliert Zahlgenauigkeit. NationFiles verbindet beides über nachvollziehbare Profile."
+                },
+                {
+                    "title": "Megacity, Atomkraft, Konfliktzonen — drei Taktungen",
+                    "body_md": "**Megacities** erzählen demografische Schwere.**Kernkraft-Infrastruktur** setzt Energie- und Sicherheitsfragen in unmittelbare Nähe zu Siedlung.**Konfliktbezogene räumliche Lesarten** — nur wo Methodik und Quellen es tragen — liefern den geopolitischen Zoom, der **nicht** mit Stadtplanerlogik verwechselt wird."
+                },
+                {
+                    "title": "Was Meta-Karten nicht leisten wollen",
+                    "body_md": "Keine Echtzeit-Befehlskarte, kein Ersatz für Auswärtige Amtsberichte, keine verdeckte Prognose. Die Karten verdichten **veröffentlichte** Register und kontrollierte Layer — transparent genug, um **Korrektur und Fact-Checking** zu erlauben."
+                }
+            ]
+        },
+        "en": {
+            "title": "Meta Maps (NationFiles)",
+            "teaser": "**Spatial intelligence, not spreadsheet fog:** NationFiles **Meta Maps** layer **megacity growth**, **nuclear baseload infrastructure**, and **documented conflict-tension context** where methodology allows — a **visual risk read** before tables colonise the narrative.",
+            "summary_bullets": [
+                "**Why maps win:** proximity, empty space, and corridor width show up instantly on a basemap — not at row 900 of a CSV.",
+                "**Megacities layer:** urban mass and growth arcs as geography-first storytelling.",
+                "**Nuclear layer:** generation assets plotted against borders and urban gravity.",
+                "**Tension lens:** spatial security context stays fenced from purely urban–energy reads when methodology demands separation.",
+                "**Stack:** orchestrated by **{{naciro}}**, rendered on **{{nationfiles}}**, anchored in **{{nationfile-json}}**.",
+                "**No crystal ball:** maps compress documented signals — they never replace sovereign primaries."
+            ],
+            "body_md": "Editors and analysts rarely disagree that **tables tell the truth line-by-line**; they argue about **which truth you see first**. Meta Maps make the **surface truth** geographic: how **megacity** corridors stack against administrative seams, how **nuclear** sites sit relative to population heat, and — where NationFiles’ public methodology explicitly supports it — how **high-tension** or conflict-adjacent context should be read **as its own lens**, not smuggled into unrelated layers.\n\nThe product goal is **contrast-as-cognition**. When two risk stories occupy neighbouring pixels, the eye catches friction that a sortable grid hides. Meta Maps are NationFiles’ **spatial editor’s notebook** — fast orientation, then drill-down via **{{nationfile-json}}** exports and country dashboards. **{{naciro}}** prepares geometries, weights, and refresh discipline; **{{nationfiles}}** presents the reader-facing choreography.\n\nThis is deliberately **journalistic cartography**: layers admit their assumptions, legends stay explicit, and companion security insight routes through the same **maps hub** vocabulary as **{{security-radar}}** where cross-reading helps. Meta Maps are not a substitute for defence communiqués or humanitarian situation reports — they **compress documented structure** so audiences know **where** to read next.",
+            "facts": [
+                {
+                    "k": "Read priority",
+                    "v": "Geography before grid; legend-honest overlays."
+                },
+                {
+                    "k": "Layers",
+                    "v": "Megacities growth, nuclear footprints, federation tiles, tension context (method-bound)."
+                },
+                {
+                    "k": "Stack",
+                    "v": "{{naciro}} compute + {{nationfiles}} UX + {{nationfile-json}} facts."
+                },
+                {
+                    "k": "Boundary",
+                    "v": "Visual analysis, not sovereign directive."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Layer stack (reading order)",
+                    "body_md": "Metamaps **stack** lenses over basemaps; **3** is the top thematic lens, **1** is the foundation layer.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 200 196\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGmm\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#e2e8f0\"/></linearGradient></defs><rect x=\"18\" y=\"8\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"37\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">3</text><line x1=\"100\" y1=\"56\" x2=\"100\" y2=\"66\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,76 94,66 106,66\" fill=\"#1a365d\"/><rect x=\"18\" y=\"78\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">2</text><line x1=\"100\" y1=\"126\" x2=\"100\" y2=\"136\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,146 94,136 106,136\" fill=\"#1a365d\"/><rect x=\"18\" y=\"148\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"177\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">1</text></svg></div>\n\n| # | Role |\n| --- | --- |\n| 3 | Thematic lens (e.g. megacities, nuclear siting, documented tension context) |\n| 2 | National/regional overlays & legends |\n| 1 | Satellite/basemap foundation—as published on methodology pages |"
+                },
+                {
+                    "title": "Visual risk analysis beats table-only workflows",
+                    "body_md": "Tables optimise **sorting**; maps optimise **juxtaposition**. Meta Maps exist so teams notice when two narratives share turf — megacity expansion kissing an infra footprint, administrative schisms hugging strategic geography. The visual is the first paragraph; the spreadsheet is the appendix."
+                },
+                {
+                    "title": "Megacities, nuclear, conflict-adjacent belts",
+                    "body_md": "**Megacities** highlight demographic gravity.**Nuclear power** highlights baseload vulnerability and planning contention.**Conflict or crisis belts** appear only when methodology certifies that spatial framing — separating civic-energy stories from geopolitical heat."
+                },
+                {
+                    "title": "Hard limits (on purpose)",
+                    "body_md": "No classified overlays, no sensational shading, no promise of predictive combat analytics. Meta Maps inherit the same **documentation-bound** ethos as NFSI explainers: show the geometry explicit sources allow."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Méta-cartes (NationFiles)",
+            "teaser": "**Intelligence spatiale:** les **méta-cartes** NationFiles superposent **croissance des mégapoles**, **noyau nucléaire** et **tension géopolitique documentée** — **lecture visuelle du risque** avant la dictature du tableur.",
+            "summary_bullets": [
+                "**Carte d’abord:** proximité et vides apparents mieux qu’à la ligne 800 d’un fichier.",
+                "**Mégapoles:** corridors urbains racontés spatialement.",
+                "**Nucléaire:** sites d’production replacés face aux villes et frontières.",
+                "**Lentille tension:** séparée des couches ville–énergie quand la méthodologie l’exige.",
+                "**{{naciro}} / {{nationfiles}} / {{nationfile-json}}** poursuite factuelle.",
+                "**Pas de boule de cristal** — signaux publics seulement."
+            ],
+            "body_md": "Les rédactions savent que **les tableurs finissent par tout prouver** — mais qu’ils **masquent les voisinages**. Les méta-cartes NationFiles remettent **la géographie au premier plan** : un empilement de couches qui montre où la démographie **serre**, où le nucléaire **côtoie** des millions d’habitants, et, lorsque la méthode publique l’autorise, comment **lire** les ceintures de tension sans les confondre avec de simples couches d’urbanisme ou d’énergie.\n\nL’ambition journalistique est claire : **faire voir le contraste**. Quand deux histoires de risque partagent la même tuile, l’œil capte une friction qu’un tri ne révèle pas. **{{naciro}}** gère harmonisation, marqueurs et discipline de rafraîchissement ; **{{nationfiles}}** livre la lecture calibrée pour le public, en lien avec **{{nationfile-json}}** pour la précision chiffrée.\n\nCes cartes ne remplacent pas les dépêches diplomatiques ni les rapports humanitaires : elles **cadrage** l’espace accessible afin que le lecteur sache **où** poursuivre la lecture — souvent avec les hubs sécurité liés à **{{security-radar}}** lorsque le contexte l’impose.",
+            "facts": [
+                {
+                    "k": "Lecture",
+                    "v": "Contraste spatial avant tri tabulaire."
+                },
+                {
+                    "k": "Couches",
+                    "v": "Mégapoles, nucléaire, fédérations, tension (si documentée)."
+                },
+                {
+                    "k": "Chaîne",
+                    "v": "{{naciro}} / {{nationfiles}} / {{nationfile-json}}."
+                },
+                {
+                    "k": "Limite",
+                    "v": "Pas de consigne opérationnelle."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pile de couches (sens de lecture)",
+                    "body_md": "Les meta-cartes **empilent** des couches; **3** est la lentille thématique supérieure, **1** le fond.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 200 196\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGmm\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#e2e8f0\"/></linearGradient></defs><rect x=\"18\" y=\"8\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"37\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">3</text><line x1=\"100\" y1=\"56\" x2=\"100\" y2=\"66\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,76 94,66 106,66\" fill=\"#1a365d\"/><rect x=\"18\" y=\"78\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">2</text><line x1=\"100\" y1=\"126\" x2=\"100\" y2=\"136\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,146 94,136 106,136\" fill=\"#1a365d\"/><rect x=\"18\" y=\"148\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"177\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">1</text></svg></div>\n\n| # | Rôle |\n| --- | --- |\n| 3 | Lentille thématique (mégapoles, nucléaire, contexte documenté) |\n| 2 | Superpositions nationales/régionales & légendes |\n| 1 | Fond satellite/basemap — selon pages méthode |"
+                },
+                {
+                    "title": "Risque visuel vs table pure",
+                    "body_md": "Le tableur classe ; la carte **rapproche**. Les méta-cartes servent quand la proximité physique est un argument éditorial — corridors de population, infrastructures sensibles, fractures administratives."
+                },
+                {
+                    "title": "Trois focales",
+                    "body_md": "**Mégapoles** pour la démo.**Nucléaire** pour l’ancrage énergétique/sûreté.**Zones de tension** lorsque la méthodologie impose une lentille distincte des lectures purement civiles."
+                },
+                {
+                    "title": "Transparence méthodologique",
+                    "body_md": "Pas de superposition spectaculaire sans source publique. La légende et les pages méthode encadrent ce que la carte affiche."
+                }
+            ]
+        },
+        "es": {
+            "title": "Metamapas (NationFiles)",
+            "teaser": "**Inteligencia espacial:** NationFiles apila **megaciudades**, **nuclear** y **tensión documentada** — **análisis visual de riesgo** frente al dominio de la tabla.",
+            "summary_bullets": [
+                "**Mapa primero:** proximidad visible sin desplazarse por mil filas.",
+                "**Megaciudades:** corredores urbanos leídos en superficie.",
+                "**Nuclear:** plantas frente a fronteras y centros urbanos.",
+                "**Tensión:** capa separada de ciudad–energía cuando la metodología lo exige.",
+                "**{{naciro}} + {{nationfiles}} + {{nationfile-json}}**.",
+                "**Sin profecías** — solo señales documentadas."
+            ],
+            "body_md": "Las redacciones viven entre **la fila exacta** y **el párrafo que explica por qué importa**. Los metamapas NationFiles empujan la **geografía al lede**: capas de **crecimiento urbano masivo**, **infraestructura nuclear** publicada y, cuando la metodología lo sostiene, **contexto de tensión o conflicto** como lente aparte — no mezclada con lecturas meramente municipales o energéticas.\n\nEl tono periodístico busca **contraste visible**: dos narrativas de riesgo en el mismo territorio saltan a la vista. **{{naciro}}** prepara consistencia y marcadores; **{{nationfiles}}** ofrece la experiencia, en sincronía con perfiles **{{nationfile-json}}**. El lector obtiene **orientación espacial** y sabe cuándo saltar al **hub de mapas de seguridad** o a **{{security-radar}}** si el contexto lo reclama.\n\nNo sustituimos documentos soberanos: **condensamos** registros públicos para situar la historia **en el mapa**, con límites explícitos.",
+            "facts": [
+                {
+                    "k": "Enfoque",
+                    "v": "Riesgo visual antes que tabla aislada."
+                },
+                {
+                    "k": "Capas",
+                    "v": "Megaciudades, nuclear, administraciones, tensión si aplica."
+                },
+                {
+                    "k": "Cadena",
+                    "v": "{{naciro}}, {{nationfiles}}, {{nationfile-json}}."
+                },
+                {
+                    "k": "Deberes",
+                    "v": "Sin órdenes operativas; fuentes públicas."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pila de capas",
+                    "body_md": "Las metamapas **apilan** capas; **3** es la lente temática superior, **1** la base.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 200 196\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGmm\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#e2e8f0\"/></linearGradient></defs><rect x=\"18\" y=\"8\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"37\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">3</text><line x1=\"100\" y1=\"56\" x2=\"100\" y2=\"66\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,76 94,66 106,66\" fill=\"#1a365d\"/><rect x=\"18\" y=\"78\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">2</text><line x1=\"100\" y1=\"126\" x2=\"100\" y2=\"136\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,146 94,136 106,136\" fill=\"#1a365d\"/><rect x=\"18\" y=\"148\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"177\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">1</text></svg></div>\n\n| # | Rol |\n| --- | --- |\n| 3 | Lente temática (megaciudades, nuclear, contexto documentado) |\n| 2 | Superposiciones país/región y leyendas |\n| 1 | Fundamento satélite/basemap — según páginas de método |"
+                },
+                {
+                    "title": "Análisis visual frente al hiper-tabular",
+                    "body_md": "Ordenar filas ayuda a auditar; **superponer capas** ayuda a priorizar. Los metamapas atienden a quien debe decidir **dónde mirar** primero."
+                },
+                {
+                    "title": "Tres agendas cartográficas",
+                    "body_md": "**Megaciudades** (demografía), **nuclear** (energía/safety), **zonas de conflicto o tensión** solo con metodología que autorice la mezcla espacial."
+                },
+                {
+                    "title": "Límites redaccionales",
+                    "body_md": "Sombras llamativas sin fuente están fuera de escena. Lo publicado y lo metodológico marcan el borde."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Metamapas (NationFiles)",
+            "teaser": "**Inteligência espacial:** metamapas empilham **megacidades**, **nuclear** e **tensão documentada** — **risco em imagem** antes da planilha mandar no ritmo.",
+            "summary_bullets": [
+                "**Mapa na manchete:** proximidade e vácuos geográficos saltam aos olhos.",
+                "**Megacidades:** corredores como narrativa espacial.",
+                "**Nuclear:** usinas reposicionadas frente a cidades e linhas de fronteira.",
+                "**Tensão:** camada própria, separada de cidade–energia quando exigido.",
+                "**{{naciro}}**, **{{nationfiles}}**, **{{nationfile-json}}** em simultâneo.",
+                "**Sem adivinhação** — sinais públicos."
+            ],
+            "body_md": "Redações precisam do **número certo** e da **história certa**. Os metamapas NationFiles colocam a **geografia no título**: camadas sobre **megalópolos**, **ativos nucleares** registados e, quando a metodologia o permite, **contexto de tensão** com legenda própria — para não confundir ritmo urbano com leitura geopolítica.\n\nA lógica é jornalística: **mostrar contraste**. Dois riscos no mesmo território tornam-se visíveis num segundo. **{{naciro}}** mantém marcadores e cadência; **{{nationfiles}}** entrega a leitura pública, alinhada a **{{nationfile-json}}**. O público percebe **onde** aprofundar, eventualmente com **{{security-radar}}** quando a cobertura de segurança completar o quadro.\n\nNão substituímos comunicados oficiais — **organizamos** o que é público para leitura responsável.",
+            "facts": [
+                {
+                    "k": "Prioridade",
+                    "v": "Contraste geográfico antes da planilha."
+                },
+                {
+                    "k": "Camadas",
+                    "v": "Megacidades, nuclear, divisões, tensão documentada."
+                },
+                {
+                    "k": "Stack",
+                    "v": "{{naciro}} + {{nationfiles}} + {{nationfile-json}}."
+                },
+                {
+                    "k": "Regra",
+                    "v": "Sem instruções operacionais ocultas."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pilha de camadas",
+                    "body_md": "As metamapas **empilham** camadas; **3** é a lente temática superior, **1** a base.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 200 196\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGmm\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#e2e8f0\"/></linearGradient></defs><rect x=\"18\" y=\"8\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"37\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">3</text><line x1=\"100\" y1=\"56\" x2=\"100\" y2=\"66\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,76 94,66 106,66\" fill=\"#1a365d\"/><rect x=\"18\" y=\"78\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">2</text><line x1=\"100\" y1=\"126\" x2=\"100\" y2=\"136\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,146 94,136 106,136\" fill=\"#1a365d\"/><rect x=\"18\" y=\"148\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"177\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">1</text></svg></div>\n\n| # | Papel |\n| --- | --- |\n| 3 | Lente temática (megacidades, nuclear, contexto documentado) |\n| 2 | Sobreposições país/região e legendas |\n| 1 | Fundo satélite/basemap — conforme páginas de método |"
+                },
+                {
+                    "title": "Risco visual vs. tabelas puras",
+                    "body_md": "Planilhas ordenam; mapas **revelam vizinhança**. Metamapas ajudam editores a decidir **qual história espacial** abrir primeiro."
+                },
+                {
+                    "title": "Três camadas-editoriais",
+                    "body_md": "**Megacidades**, **nuclear**, **faixas de tensão** (com autoria metodológica) — cada uma com legenda que impede misturar narrativas incompatíveis."
+                },
+                {
+                    "title": "Fronteira ética",
+                    "body_md": "Sem dramatização cartográfica sem fonte. A transparência metodológica é parte do salto de linha."
+                }
+            ]
+        },
+        "ar": {
+            "title": "الميتامابات (NationFiles)",
+            "teaser": "**ذكاء مكاني:** ترتّب NationFiles طبقات **المدن العملاقة** وال**طاقة النووية** وال**سياق الجيوسياسي الموثّق** — **قراءة بصرية للمخاطر** قبل أن تُحتكر الجداول السردية.",
+            "summary_bullets": [
+                "**الخريطة أولاً:** المجاورة والفراغ يظهران بسرعة بصرياً.",
+                "**العملاقات الحضرية:** ممرات نمو تُروى جغرافياً.",
+                "**النووي:** مواقع التوليد مقابل الحدود والكثافة السكنية.",
+                "**التوتر:** طبقة منفصلة عن طبقة المدينة–الطاقة حين تفرض المنهجية ذلك.",
+                "**{{naciro}}** و**{{nationfiles}}** و**{{nationfile-json}}**.",
+                "**لا تنبؤات سرية** — إشارات منشورة فقط."
+            ],
+            "body_md": "يحتاج العمل الصحفي إلى **رقم دقيق** و**قصة واضحة المكان**. **الميتامابات** على NationFiles تضع **الجغرافيا في المقدمة**: طبقات للتمدد الحضاري الضخم، وللبنية النووية المثبتة في السجلات العامة، وللسياق المرتبط بالتوتر أو النزاع — **حيث تسمح المنهجية المنشورة** بذلك — دون دمجها عرضاً مع قراءات بلدية أو طاقة بحتة.\n\nالمنطق **صحفي بصري**: عندما يتقاطع خطران في نفس المساحة، يلتقط البصر ما يخفيه الترتيب الجدولي فقط. **{{naciro}}** يضبط التوحيد والعلامات؛ **{{nationfiles}}** يقدّم التجربة، متصلاً بملفات **{{nationfile-json}}**. ويمكن إكمال الصورة بقراءات **{{security-radar}}** عندما تفرض السياقات الأمنية ذلك.\n\nلا تغني الميتامابات عن الوثائق السيادية؛ إنها **تضغط** ما هو علني ليعرف المتلقي **أين يتابع** القراءة بمسؤولية.",
+            "facts": [
+                {
+                    "k": "القراءة",
+                    "v": "التباين الجغرافي قبل فرز الجداول."
+                },
+                {
+                    "k": "الطبقات",
+                    "v": "مدن ضخمة، نووي، تقسيمات، توتر موثّق."
+                },
+                {
+                    "k": "السلسلة",
+                    "v": "{{naciro}} + {{nationfiles}} + {{nationfile-json}}."
+                },
+                {
+                    "k": "الحد",
+                    "v": "ليس توجيهاً عملياتياً."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "كدس الطبقات",
+                    "body_md": "تُكدّس **الميتاماب** الطبقات؛ **3** هي العدسة الموضوعية العليا و**1** الأساس.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 200 196\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGmm\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#e2e8f0\"/></linearGradient></defs><rect x=\"18\" y=\"8\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"37\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">3</text><line x1=\"100\" y1=\"56\" x2=\"100\" y2=\"66\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,76 94,66 106,66\" fill=\"#1a365d\"/><rect x=\"18\" y=\"78\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">2</text><line x1=\"100\" y1=\"126\" x2=\"100\" y2=\"136\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,146 94,136 106,136\" fill=\"#1a365d\"/><rect x=\"18\" y=\"148\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"177\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">1</text></svg></div>\n\n| # | الدور |\n| --- | --- |\n| 3 | عدسة موضوعية (مدن ضخمة، نووي، سياق موثّق) |\n| 2 | طبقات وطنية/إقليمية وأساطير |\n| 1 | قمر صناعي/خريطة أساس — وفق صفحات المنهجية |"
+                },
+                {
+                    "title": "تحليل بصري مقابل إدمان الجداول",
+                    "body_md": "الجداول تُحكم التدقيق؛ **الخرائط تكشف الجوار**. الميتامابات تساعد الفريق على اختيار **أي قصة مكانية** تُفتتح أولاً."
+                },
+                {
+                    "title": "ثلاث عناوين جغرافية",
+                    "body_md": "**نمو المدن الضخمة**، **النووي**، **أحزمة التوتر** عندما تفرض المنهجية فصلاً واضحاً بين القراءات المدنية والجيوسياسية."
+                },
+                {
+                    "title": "حدود شفافة",
+                    "body_md": "بلا تلوين مثير بلا مصدر. المنهجية المنشورة تحدد ما يُعرض."
+                }
+            ]
+        },
+        "ja": {
+            "title": "メタマップ（NationFiles）",
+            "teaser": "**空間インテリジェンス：** **巨大都市の伸び**、**原発インフラ**、**文書化された緊張・紛争文脈**（手法が許す範囲）を重ね、表に先立つ**視覚的リスク読み**を提供します。",
+            "summary_bullets": [
+                "**地図が先：** 近接と「空白」はベースマップで一瞬で分かる。",
+                "**巨大都市レイヤー：** 人口重心と成長の廊下を地理で語る。",
+                "**原発レイヤー：** 境界・都市の重力と並べて読む。",
+                "**緊張レーン：** 都市・エネルギー読みと混ぜない分離が手法上必要な場合に限定。",
+                "**{{naciro}}** が整備、**{{nationfiles}}** が提示、**{{nationfile-json}}** が裏取り。",
+                "**予言ではない** — 公開シグナルの圧縮に留まる。"
+            ],
+            "body_md": "ニュースルームでは **行の精度** と **見出しの地理** がいつも綱引きになります。NationFiles の **メタマップ** は、**見出しを地理に寄せる** UI です。衛星ベースの上に、**メガシティ階層**、公開レジストリに基づく **原子力立地**、そして手法が明文化されているときだけ載る **緊張・紛争の空間レンズ** を重ね — 都市計画や電源の話と **別物語として混線** しないよう線引きします。\n\n狙いは **対比による理解** です。隣接ピルで二つのリスクが重なると、目が先に止まります。**{{naciro}}** がジオメトリと更新律を守り、**{{nationfiles}}** が読者向けの視線誘導を担い、**{{nationfile-json}}** が数字の裏付けを保持します。**{{security-radar}}** やセキュリティ地図ハブと並読できる枠組みにして、**どこを深掘りすべきか** を示します。\n\n公式の外交・防災一次資料の代わりにはなりません。**公開データで何がどこに重なるか** を編集可能な形で見せる — それがメタマップの役割です。",
+            "facts": [
+                {
+                    "k": "読み順",
+                    "v": "地理的対比が表より先。"
+                },
+                {
+                    "k": "レイヤー",
+                    "v": "巨大都市、原発、行政区画、手法上の緊張文脈。"
+                },
+                {
+                    "k": "連携",
+                    "v": "{{naciro}}・{{nationfiles}}・{{nationfile-json}}。"
+                },
+                {
+                    "k": "境界",
+                    "v": "作戦地図ではなく公開根拠の可視化。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "レイヤー・スタック",
+                    "body_md": "メタマップはレイヤーを**重ねる**構成です。**3** が最上の主題レンズ、**1** がベースです。\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 200 196\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGmm\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#e2e8f0\"/></linearGradient></defs><rect x=\"18\" y=\"8\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"37\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">3</text><line x1=\"100\" y1=\"56\" x2=\"100\" y2=\"66\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,76 94,66 106,66\" fill=\"#1a365d\"/><rect x=\"18\" y=\"78\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"107\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">2</text><line x1=\"100\" y1=\"126\" x2=\"100\" y2=\"136\" stroke=\"#1a365d\" stroke-width=\"2\"/><polygon points=\"100,146 94,136 106,136\" fill=\"#1a365d\"/><rect x=\"18\" y=\"148\" width=\"164\" height=\"48\" rx=\"10\" fill=\"url(#nfkgGmm)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"100\" y=\"177\" text-anchor=\"middle\" font-family=\"system-ui,sans-serif\" font-size=\"18\" font-weight=\"800\" fill=\"#1a365d\">1</text></svg></div>\n\n| # | 役割 |\n| --- | --- |\n| 3 | 主題レンズ（巨大都市・原発立地・文書化された緊張文脈など） |\n| 2 | 国・地域オーバーレイと凡例 |\n| 1 | 衛星/ベースマップ — 手法ページの説明どおり |"
+                },
+                {
+                    "title": "視覚的リスク分析が表独占を崩すとき",
+                    "body_md": "表は **検証** に強く、地図は **比較** に強い。メタマップは「最初に見るべき重なり」を編集判断として抜き出す。"
+                },
+                {
+                    "title": "三つの焦点",
+                    "body_md": "**巨大都市**で人口の磁場、**原発**でインフラと都市の距離感、**緊張・紛争**は手法が分離を命じる場合に限り別レーンで。"
+                },
+                {
+                    "title": "誇張しないカートグラフィ",
+                    "body_md": "ソースと手法ページが許さない陰影は載せない。公開範囲がトーンを決める。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "metamaps"
+        },
+        "repository_relative_path": "knowledge-data/entities/metamaps.json"
+    }
+}

@@ -1,0 +1,676 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "governance-institutions-index",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T23:00:00Z",
+    "topics": [
+        "governance",
+        "wgi",
+        "world-bank",
+        "country-profiles",
+        "exports",
+        "ggi"
+    ],
+    "aliases": [
+        "GGI",
+        "Governance & Institutions Index",
+        "Governance Institutions Index",
+        "Worldwide Governance Indicators",
+        "WGI composite"
+    ],
+    "attributes": [
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "score_scale",
+            "value": "0–100 (composite headline on dashboards and in PPI/GGI snapshot bundles)",
+            "depends_on": [
+                "purchasing-power-index"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "0–100 (Komposit-Kopfzeile auf Dashboards und in PPI/GGI-Snapshot-Bündeln)",
+                "en": "0–100 (composite headline on dashboards and in PPI/GGI snapshot bundles)",
+                "fr": "0–100 (headline composite sur dashboards et bundles snapshot PPI/GGI)",
+                "es": "0–100 (encabezado compuesto en paneles y paquetes snapshot PPI/GGI)",
+                "pt": "0–100 (headline compósito em dashboards e pacotes snapshot PPI/GGI)",
+                "ar": "0–100 (عنوان مركّب على لوحات المعلومات وحزم لقطات PPI/GGI)",
+                "ja": "0–100（ダッシュボードおよび PPI/GGI スナップショットバンドルの複合ヘッドライン）"
+            }
+        },
+        {
+            "key": "model_type",
+            "value": "NationFiles governance bundle anchored in documented Worldwide Governance-style dimensions and rolled into one comparable composite headline (GGI): measures institutional quality separately from GDP-style macro — not a substitute for {{nfsi}} or for official statistics.",
+            "depends_on": [
+                "nfsi",
+                "purchasing-power-index"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles governance bundle anchored in documented Worldwide Governance-style dimensions and rolled into one comparable composite headline (GGI): measures institutional quality separately from GDP-style macro — not a substitute for {{nfsi}} or for official statistics.",
+                "de": "NationFiles‑Governance‑Paket mit dokumentierten Worldwide‑Governance‑ähnlichen Dimensionen in einem vergleichbaren Komposit‑Headline‑Wert (GGI): institutionelle Qualität gesondert gegenüber GDP‑nah Makro — kein Ersatz für {{nfsi}} oder für amtliche Basisstatistik.",
+                "fr": "Bloc gouvernance NationFiles ancré sur des dimensions façon Worldwide Governance publiées, agrégées en headline composite comparable (GGI) mesurant la qualité institutionnelle à part du macro façon PIB — sans remplacer le {{nfsi}} ni les séries officielles.",
+                "es": "Paquete gobernanza NationFiles ligado a dimensiones estilo Worldwide Governance documentadas, sintetizadas en un encabezado compuesto comparable (GGI) que captura instituciones al margen del macro‑PIB típico — no sustituto formal de {{nfsi}} ni estadística oficial.",
+                "pt": "Pacote governance NationFiles ancorado em dimensões públicas façon Worldwide Governance, condensadas num headline compósito (GGI) que mede qualidade institucional em separado da macro façon PIB — não substitui {{nfsi}} nem obriga série oficial obrigatória.",
+                "ar": "حزمة حكمية NationFiles قائمة على أبعاد منطقيّة وفق مجموعة Worldwide Governance الموثَّقة، ومجمّعة في عنوان مركَّب واحد (GGI) يقيس جودة المؤسّسات خارج حكاية الماكرو شبيهة الدخل المحلي الخام — وليس بديلاً عن {{nfsi}} لا عن سلسلة إحصائية معتمدة رسمًا.",
+                "ja": "Worldwide Governance 系次元をNationFiles側で統合した単一総合ヘッドライン（GGI）としての統治／制度パッケージであり、GDP型マクロとは別質問であり、{{nfsi}} と公式統計への代替とはならない。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Displayed KPIs map to documented upstream World Bank governance series; mappings are tracked in NationFiles’ public-facing metric registry so country pages, PPI/GGI snapshot tables, PDF/JSON bundles, and world-median overlays stay aligned.",
+            "depends_on": [
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Angezeigte KPIs entsprechen dokumentierten World-Bank-Governance-Serien; Zuordnungen sind in der öffentlichen Kennzahlen-Registry nachverfolgbar, damit Länderseiten, PPI/GGI-Snapshot-Tabellen, PDF/JSON-Bündel und Welt-Median-Overlays konsistent bleiben.",
+                "en": "Displayed KPIs map to documented upstream World Bank governance series; mappings are tracked in NationFiles’ public-facing metric registry so country pages, PPI/GGI snapshot tables, PDF/JSON bundles, and world-median overlays stay aligned.",
+                "fr": "Les KPI affichées correspondent aux séries gouvernance Banque mondiale documentées ; les correspondances sont suivies dans le registre public NationFiles pour aligner pages pays, tables snapshot PPI/GGI, bundles et overlays médiane monde.",
+                "es": "Las KPI se mapean a series de gobernanza del Banco Mundial documentadas; los mapeos se rastrean en el registro público NationFiles para alinear páginas país, tablas snapshot PPI/GGI y bundles.",
+                "pt": "As KPI mapeiam séries de governança do Banco Mundial documentadas; mapeamentos seguem o registo público NationFiles para páginas país, tabelas snapshot PPI/GGI e pacotes.",
+                "ar": "تطابق مؤشرات KPI المعروضة مع سلاسل حوكمة البنك الدولي الموثّقة؛ التعيينات في السجل العام لـ NationFiles لضبط صفحات الدول وجداول اللقطات وحزم JSON/PDF.",
+                "ja": "表示 KPI は文書化された世界銀行ガバナンス系列に対応し、マッピングは NationFiles の公開指標レジストリで追跡され、国ページ・PPI/GGI スナップショット・バンドル・世界中位オーバーレイを整合させる。"
+            }
+        },
+        {
+            "key": "country_coverage",
+            "value": "Alongside PPI in country KPI snapshots and economy governance views (effective coverage follows datasource availability)",
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "Neben PPI in Länder-KPI-Snapshots und Economy-Governance-Ansichten (effektive Abdeckung folgt Datenquellenverfügbarkeit)",
+                "en": "Alongside PPI in country KPI snapshots and economy governance views (effective coverage follows datasource availability)",
+                "fr": "Aux côtés du PPI dans snapshots KPI et vues gouvernance économie (couverture effective selon sources)",
+                "es": "Junto al PPI en snapshots KPI y vistas de gobernanza (cobertura según fuentes)",
+                "pt": "Junto ao PPI em snapshots KPI e vistas de governança (cobertura segundo fontes)",
+                "ar": "إلى جانب PPI في لقطات KPI وعروض الحوكمة الاقتصادية (التغطية الفعلية تتبع مصادر البيانات)",
+                "ja": "国 KPI スナップショットおよび経済ガバナンス表示で PPI と併用（実効範囲はデータソースに従う）"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Primarily Worldwide Governance Indicators ecosystem (six dimensions summarized on provider pages — voice and accountability, political stability/absence of violence, government effectiveness, regulatory quality, rule of law, control of corruption) plus NationFiles normalization into the published composite.",
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Primär Worldwide-Governance-Ökosystem (sechs in Anbieterdokumentation zusammengefasste Dimensionen — u. a. Stimme/Rechenschaft, Stabilität/Gewaltfreiheit, Regierungshandeln, Regulierungsqualität, Rechtsstaat, Korruptionskontrolle) plus NationFiles-Normalisierung zum veröffentlichten Komposit.",
+                "en": "Primarily Worldwide Governance Indicators ecosystem (six dimensions summarized on provider pages — voice and accountability, political stability/absence of violence, government effectiveness, regulatory quality, rule of law, control of corruption) plus NationFiles normalization into the published composite.",
+                "fr": "Écosystème WGI (six dimensions sur les pages fournisseur) plus normalisation NationFiles dans le composite publié.",
+                "es": "Ecosistema WGI (seis dimensiones en páginas del proveedor) más normalización NationFiles al compuesto publicado.",
+                "pt": "Ecossistema WGI (seis dimensões nas páginas do provedor) mais normalização NationFiles no compósito publicado.",
+                "ar": "منظومة مؤشرات الحوكمة العالمية (ستة أبعاد وفق صفحات المزود) مع تطبيع NationFiles إلى المركّب المنشور.",
+                "ja": "Worldwide Governance 系の六次元（提供者ページの要約）に NationFiles の正規化を加え、公開複合指標にまとめる。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Country KPI snapshots, economy governance charts/exports where enabled and PPI/GGI JSON bundles (`built_at_utc` timestamps as documented in onboard FAQ copy)",
+            "depends_on": [
+                "purchasing-power-index",
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Economy Governance Index",
+                    "url": "https://nationfiles.com/en/economy/governance/governanceindex/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Länder-KPI-Snapshots, Economy-Governance-Charts/Exporte wo freigeschaltet und PPI/GGI-JSON-Bündel (Zeitstempel built_at_utc wie in Onboarding-FAQ)",
+                "en": "Country KPI snapshots, economy governance charts/exports where enabled and PPI/GGI JSON bundles (`built_at_utc` timestamps as documented in onboard FAQ copy)",
+                "fr": "Snapshots KPI pays, graphiques/exports gouvernance économie si activés, bundles JSON PPI/GGI (horodatages built_at_utc selon FAQ)",
+                "es": "Snapshots KPI, gráficos/exportaciones de gobernanza si activados, bundles JSON PPI/GGI (built_at_utc según FAQ)",
+                "pt": "Snapshots KPI, gráficos/exportações de governação se ativos, pacotes JSON PPI/GGI (built_at_utc conforme FAQ)",
+                "ar": "لقطات KPI ورسوم/تصدير الحوكمة الاقتصادية عند التفعيل وحزم JSON لـ PPI/GGI مع built_at_utc",
+                "ja": "国 KPI スナップショット、有効なら経済ガバナンス図表／エクスポート、PPI/GGI JSON バンドル（built_at_utc は FAQ 記載どおり）"
+            }
+        },
+        {
+            "key": "knowledge_hub",
+            "value": "https://nationfiles.com/en/knowledge/",
+            "sources": [
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/knowledge/",
+                "en": "https://nationfiles.com/en/knowledge/",
+                "fr": "https://nationfiles.com/en/knowledge/",
+                "es": "https://nationfiles.com/en/knowledge/",
+                "pt": "https://nationfiles.com/en/knowledge/",
+                "ar": "https://nationfiles.com/en/knowledge/",
+                "ja": "https://nationfiles.com/en/knowledge/"
+            }
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Governance & Institutions Index (GGI)",
+            "teaser": "**Zweite Säule im Kennzahlen-Snapshot:** Der GGI verdichtet **dokumentierte** Governance-Signale (World‑Bank‑WGI‑Logik — Stimme/Rechenschaft, Stabilität, Regierungshandeln, Regulierung, Rechtsstaat, Korruptionskontrolle) zu **einem vergleichbaren Komposit‑Score (0–100)**. **{{purchasing-power-index}}** liefert daneben klassische Makrolage; **{{nfsi}}** bleibt die **getrennte** Stabilitäts‑Headline der Plattform.",
+            "summary_bullets": [
+                "**Institutionelle ‚Ruhe‘ vs Breaking News:** GGI bildet **relativ träge**/periodisch revidierte **Staats‑, Rechts‑ und Kontrollstabilität** (WGI‑Logik) — gewollter Kontrast zur **aktuelleren** dokumentierten Lagebilanz durch **{{nfsi}}**, die FX/News‑Last trägt.",
+                "**Governance ≠ BIP:** GGI bildet Institutionen‑ und Governance‑Breite ab — ergänzend zu Kaufkraft/Makro im **{{purchasing-power-index}}**, ohne dieselbe Aussage zu verdoppeln.",
+                "**Mit NFSI kombinieren, nicht verwechseln:** **{{nfsi}}** verdichtet die dokumentierte geopolitische Lage‑/Risiko‑Messung auf der Plattform; GGI beschreibt **andere Primärarbeit** klassischer Governance‑Dimensionen.",
+                "**Nutzen für Leser‑ und KI‑Kontexte:** Tabellen‑ und Exportlogik oft **gemeinsame** PPI/GGI‑Erzählung mit Welt‑Medianbezug und Zeitstempel im Bundle.",
+                "**Quellenfirst:** Tiefe Definitionen beim Anbieter (World Bank) und im NationFiles‑Quellenregister nachlesen.",
+                "**Keine Anlage‑ oder Rechtsberatung:** Orientierung durch öffentliche Dritt‑Daten kuratiert dargestellt."
+            ],
+            "body_md": "Der **Governance & Institutions Index (GGI)** auf NationFiles ist die **Gebündel‑Antwort auf die zweite Hauptfrage** neben klassischer Makrolage auf der Länderspitze: *Wie steht es dokumentiert um Rechtsstaatlichkeit, Regierungs‑ und Regulatorikqualität, Stimmen/Rechenschaft und ähnliche Governance‑Kernthemen?* Dafür normalisiert die Plattform etablierte **World‑Bank‑„Worldwide Governance“‑Dimensionen** (in der Produktkopie häufig **WGI** genannt) in **ein** auf **Landeseiten, KPI‑Snapshot und Exportpfade konsistent ausgespieltes** Komposit‑Niveau (0–100).\n\n**NFSI‑Graph (präzise):** Governance‑/WGI‑Datenpfade, aus denen das GGI komponiert wird, liegen im **gleichen dokumentierten Connector‑Set**, das **{{naciro}}** beim **täglichen** **{{nfsi}}**‑Turnus dort anbindet, wo VVR/NFSI‑Methodik Governance‑ und Bank‑Stränge ausweisen. Das **GGI‑Komposit** bleibt eine **getrennte institutionelle Lesart**, kein austauschbarer NFSI‑Layer‑Name.\n\n**Kontrastiert mit „Schlagzeilen‑Stabilität“:** Anders als der **volatiler reagierende** **{{nfsi}}‑Mischkopf**, der dokumentierte Forex‑, News‑/Sentiment‑ und Sicherheitsschichten sehr häufig bewegt, dokumentiert das GGI‑Paket vor allem eine **„statischere“ Institutionenbasis** Gesetzmäßigkeit und Verwaltungsverlässlichkeit als **Ausgleichsansatz** beim Lesen aktueller Krisenüberlagerungen.\n\n**Warum nicht „einfach BIP oder Inflation lesen“?** Makrozahlen beschreiben **Größe, Preise, Arbeitsmarkt** sehr gut — sie sagen jedoch **wenig Direktes** darüber aus, wie **verlässlich** Institutionen dokumentiert wahrgenommen werden. GGI soll genau diese Lücke im **menschen‑ und maschinenlesbaren Überblick** schließen, **nebeneinander** mit **{{purchasing-power-index}}** und ohne **{{nfsi}}** zu kopieren oder zu verdrängen.\n\n**Wie mit dem KPI‑Snapshot zusammenspielen?** Viele nationale Oberflächen ziehen **PPI‑ und GGI‑Felder** in **gemeinsamen** Snapshot‑Bundles; Serverseitige **Zeitmarken** (z. B. `built_at_utc`) dokumentieren den Paket‑Stand wie in den FAQs beschrieben. Ersetzt wird damit **weder** die volle PPI‑Ökonomisch‑Übersicht **noch** etwa Security‑Radar‑ oder Reisehinweisfunktionen — es ist eine **fokussierte Vergleichsprojektion** vordefinierter Indikatoren inklusive Welt‑Median‑Kontext, wo angezeigt.\n\n**Grenzen:** Werte sind **as‑of‑ und revisierungsabhängig** je Datengeber; Aggregation in ein Komposit verkürzt bewusst Komplexität. NationFiles ist **nicht** Ersatz für Primärrecht, Statistikämter oder die ausführlichen Methodenseiten der Bank.",
+            "facts": [
+                {
+                    "k": "Domäne",
+                    "v": "Institutionelle Governance & Kontrollgroßen"
+                },
+                {
+                    "k": "Plattform",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Profiling",
+                    "v": "{{nationfile-json}} / KPI-Bundles"
+                },
+                {
+                    "k": "Makro-Ergänzung",
+                    "v": "{{purchasing-power-index}}"
+                },
+                {
+                    "k": "Stabilität",
+                    "v": "{{nfsi}} (separater Index)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Rolle gegenüber PPI und NFSI",
+                    "body_md": "**GGI** = Governance‑Komposit.**{{purchasing-power-index}}** liefert Kaufkraft/Makrolage.**{{nfsi}}** den eigenständigen Stabilitäts‑Score — alle drei können nebeneinander sinnvoll sein, keine ersetzt die andere."
+                },
+                {
+                    "title": "Typische Datenfamilie",
+                    "body_md": "Sechs etablierte Governance‑Kerndimensionen (Stimmen/Accountability bis Korruptionskontrolle — jeweils im Anbieterhandbuch definiert) fließen in die normalisierte **GGI‑Zahl** über ein NationFiles‑konsistent abgestimmtes Rechen‑Layout."
+                },
+                {
+                    "title": "Typische Nutzer‑Falle",
+                    "body_md": "**Höheres GGI** bedeutet nicht automatisch geringeres Konflikt‑ oder geopolitisches Risiko; dafür **{{nfsi}}** und eigene Risikoanalyse nutzen. **Hohes GGI + schwaches Makro** ist möglich — und umgekehrt."
+                },
+                {
+                    "title": "Nachvollziehbarkeit",
+                    "body_md": "Die öffentliche **Kennzahlen‑Registry** der Anwendung hält Reihen‑ und Mapping‑Fingerabdrücke fest — damit Web, Snapshot‑Tabellen und Exporte **dieselben** Felder referenzieren."
+                }
+            ]
+        },
+        "en": {
+            "title": "Governance & Institutions Index (GGI)",
+            "teaser": "**Second pillar in the KPI snapshot:** GGI rolls **documented** governance signals—World‑Bank‑style Worldwide Governance pillars (voice, stability, effectiveness, regulation, rule of law, corruption control)—into **one comparable composite headline (0–100).** **{{purchasing-power-index}}** supplies mainstream macro beside it; **{{nfsi}}** stays the platform’s **separate** geopolitical stability score.",
+            "summary_bullets": [
+                "**Static institutions vs kinetic headlines:** GGI conveys **slow‑moving statutory and institutional resilience** drawn from Worldwide Governance‑style benchmarks—an intentional counter‑read beside **{{nfsi}}**, which compresses nearer‑real‑time strands (FX/news/safety mix).",
+                "**Governance is not GDP:** GGI exposes institutional breadth—adjacent to the **{{purchasing-power-index}}** macro pack without duplicating the same story.",
+                "**Pair with NFSI, do not confuse:** **{{nfsi}}** summarizes NationFiles’ documented stability/risk read; GGI tackles **distinct** classical governance inputs.",
+                "**Reader & LLM value:** PPI/GGI snapshots, PDF/JSON exports, and FAQs share one timestamped-bundle narrative plus world‑median juxtaposition where shown.",
+                "**Source‑first:** read World Bank methodological notes and NationFiles legal source registry for precision.",
+                "**Not advisory:** illustrative public indicators only—not investment or legal counsel."
+            ],
+            "body_md": "The **Governance & Institutions Index (GGI)** on NationFiles is the **paired lens** beside conventional macro cards: *Against documented benchmarks, how strong are voice and accountability, government effectiveness, regulatory quality, rule of law and corruption controls?* Answers come from curated **Worldwide Governance Indicator (WGI)** inputs that the platform converts into **one reproducible composite (0–100)** aligned across **profiles, KPI snapshots and exports**, together with companion **{{purchasing-power-index}}** blocks.\n\n**NFSI graph note:** Governance/WGI ingestion paths surfaced in GGI participate in the **same documented connector matrix** **{{naciro}}** evaluates when recomputing **{{nfsi}}**, wherever the VVR ties institution-level pulls into the daily stability stack. **GGI’s composite** still answers a **distinct governance question**—it does not alias a specific published NFSI layer identifier.\n\n**Against volatile news overlays:** Whereas **{{nfsi}}** updates on a richer diet of Forex, headline sentiment‑bearing feeds, and security context, **GGI deliberately foregrounds comparatively static pillars** statutes, judiciary predictability and administrative quality so analysts can juxtapose institutional depth with hourly narrative risk swings.\n\n**Why beside macro?** Purchasing‑power‑centric metrics illuminate **economic scale and labour market slack**, yet they rarely summarise **institutional trust or regulatory predictability.** GGI gives human readers and grounding models separate handles for „state capacity / rule quality“ without pretending to supersede **{{nfsi}}**, which encodes geopolitical‑layer documentation on NationFiles.\n\n**Bundles & timestamps:** PPI/GGI country bundles often isolate the two pillar columns and attach **UTC build stamps** explained in onboarding FAQ prose so automated consumers know the package vintage. Snapshot views remain **narrow by design**: they intentionally do not replace exhaustive economy boards or the security radar—they deliver a reproducible KPI slice comparable to globally published medians when those rows appear.\n\n**Limits:** values inherit provider revision cycles and survey noise inherent to perceptions data; composites compress multiplicity. NationFiles continues to cite upstream definitions—never superseding official filings or forensic legal review.",
+            "facts": [
+                {
+                    "k": "Domain",
+                    "v": "Institutions & governance quality"
+                },
+                {
+                    "k": "Platform",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Delivery",
+                    "v": "{{nationfile-json}} & KPI bundles"
+                },
+                {
+                    "k": "Macro counterpart",
+                    "v": "{{purchasing-power-index}}"
+                },
+                {
+                    "k": "Stability counterpart",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "How GGI complements PPI & NFSI",
+                    "body_md": "**GGI** distils governance dimensions.**{{purchasing-power-index}}** keeps GDP PPP and macro companions.**{{nfsi}}** remains the geopolitical headline—stack them for fuller context, infer none from another automatically."
+                },
+                {
+                    "title": "Typical pillar families",
+                    "body_md": "Six Worldwide Governance pillar families—from voice & accountability through control of corruption—feed aggregation after NationFiles QA on series alignment and versioning."
+                },
+                {
+                    "title": "Common misreads",
+                    "body_md": "High composite governance does **not** guarantee low geopolitical stress; correlate with **{{nfsi}}**. Strong PPI with weak governance (or reciprocal) combinations happen—read both columns deliberately."
+                },
+                {
+                    "title": "Traceability",
+                    "body_md": "Each rendered metric binds to tracked upstream identifiers in NationFiles’ public metric registry across UI surfaces and exports."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Governance & Institutions Index (GGI)",
+            "teaser": "**Deuxième pilier du snapshot KPI :** le **GGI** agrège des signaux **documentés** de gouvernance (logique Banque mondiale / WGI) en **composite comparable (0–100).** **{{purchasing-power-index}}** fournit la macro classique voisine. **{{nfsi}}** conserve le **score séparé** de stabilité géopolitique.",
+            "summary_bullets": [
+                "**Stabilité ‚institutionnelle‘ vs flux d’actus:** le GGI reflète des qualités juridiques WGI peu volatiles, utile contre‑point lorsque **{{nfsi}}** capte vite Forex/sentiment/sécurité.",
+                "**La gouvernance n’est pas le PIB:** le GGI capte institution et régulation au‑delà de la macro synthétisée par le PPI.",
+                "**Ne pas confondre avec le NFSI:** **{{nfsi}}** résume la lecture stabilité/risque spécifique à NationFiles.",
+                "**Valeur lecture + IA:** même logique de bundle PPI/GGI avec horodatage et médiane monde lorsque disponible.",
+                "**Sources avant tout:** consulter la Banque mondiale et le registre légal NationFiles.",
+                "**Pas un conseil patrimonial/juridique.**"
+            ],
+            "body_md": "Le **GGI** sur NationFiles est le **cadrage institutionnel** face au pack macro PPI : il traduit dimensions WGI suivies dans la documentation officielle Banque mondiale en **composite unique harmonisé 0–100** pour cartes pays, snapshots KPI et exports, **toujours** distinct de **{{nfsi}}**. Associé au **{{purchasing-power-index}}**, il clarifie *capacité d’État versus taille macroéconomique*.\n\n**Couplage NFSI (précis) :** les trajectoires WGI/alimentations gouvernance utilisées pour le GGI appartiennent au **graphe documenté** que **{{naciro}}** mobilise aussi pour les recalculs **{{nfsi}}** lorsque VVR/méthodologie les relient explicitement. Le **composite GGI** reste une **lenteur institutionnelle** parallèle — pas une colonne interchangeable du score NFSI.\n\n**Poids des institutions vs turbulence médiatico‑macro:** **{{nfsi}}** reflète vite des familles Forex, des tonalités médias et du contexte sécurité agrégées — le GGI, lui, incarne davantage une **stabilité légale lente** contrebalançant ces variations « minute par minute ».\n\n**Bundles:** les FAQs pays décrivent l’instantané PPI/GGI partagé avec marque temps `built_at_utc`; la vue restreinte ne remplace pas l’ensemble des tableaux économiques ni les radars sécurité.\n\n**Limites:** données révisées, sensibles aux méthodes d’échantillonnage; la NationFiles agrège mais ne remplace ni les publications primaires ni le conseil spécialisé.",
+            "facts": [
+                {
+                    "k": "Domaine",
+                    "v": "Qualité institutionnelle / gouvernance"
+                },
+                {
+                    "k": "Plateforme",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Diffusion",
+                    "v": "{{nationfile-json}} & snapshots"
+                },
+                {
+                    "k": "Contrepartie macro",
+                    "v": "{{purchasing-power-index}}"
+                },
+                {
+                    "k": "Stabilité",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Lecture conjointe",
+                    "body_md": "Comparer lignes PPI et GGI; croiser ensuite **{{nfsi}}** pour risque géopolitique documenté séparément."
+                },
+                {
+                    "title": "Piliers suivis",
+                    "body_md": "Six familles WGI bien publiées (voix‑transparence, stabilité, efficacité publique, qualité réglementaire, État de droit, lutte anticorruption) — définitions officielles sur le site Banque mondiale."
+                },
+                {
+                    "title": "Pieges fréquent",
+                    "body_md": "**Score élevé** ≠ absence de crises externes; éviter substitutions automatiques NFSI/GGI/PPI."
+                },
+                {
+                    "title": "Traçabilité",
+                    "body_md": "Identifiants série remontés via le registre public de métriques NationFiles reliant UI et exports."
+                }
+            ]
+        },
+        "es": {
+            "title": "Governance & Institutions Index (GGI)",
+            "teaser": "**Segundo pilar del snapshot KPI:** el **GGI** condensa dimensiones documentadas tipo WGI/Banco Mundial en un **composite 0–100** comparable. **{{purchasing-power-index}}** cubre macro clásica al lado. **{{nfsi}}** sigue como **indicador aparte** de estabilidad.",
+            "summary_bullets": [
+                "**Estabilidad institucional lenta:** el GGI sintetiza leyes/control WGI relativamente tranquilos como contrapeso cuando **{{nfsi}}** reacciona a FX + noticias + seguridad en cadencia más rápida.",
+                "**Gobernanza no es solo PBI:** complementa PPI sin repetir tamaño económico puro.",
+                "**No confundir con NFSI:** **{{nfsi}}** sintetiza riesgo/estabilidad documentada geopolítico.",
+                "**Valor para humanos + LLMs:** mismo bundle PPI/GGI con sellos de tiempo y mediana mundial donde aplique.",
+                "**Consulte fuentes originales y el registro legal NationFiles.**",
+                "**Sin asesoría financiera/legal.**"
+            ],
+            "body_md": "**GGI** en NationFiles muestra cómo lucen instituciones y controles anticorrupción documentados mediante agregaciones WGI reproducibles.**{{purchasing-power-index}}** trata magro económico; **{{nfsi}}** aborda tensión geopolítica: son preguntas distintas y deben combinarse conscientemente.\n\n**Relación con NFSI (precisa):** las rutas WGI/gobierno que alimentan el GGI figuran en el **mismo mapa documentado de conectores** que **{{naciro}}** recorre al recalcular **{{nfsi}}** donde VVR/metodología lo indica. El **índice GGI** sigue siendo una **pregunta institucional separada**, no un sinónimo literal de ningún componente NFSI publicado.\n\n**Contraste editorial:** mientras **{{nfsi}}** integra rápidamente tramos cambiarios, sentimiento noticioso y seguridad, el GGI muestra sobre todo una **estabilidad institucional „estática“** (leyes/calidad regulatoria previa a la coyuntura) como contrapeso cuando las rotativas están calientes.\n\n**Snapshots combinados:** el FAQ del hub país menciona timestamps `built_at_utc`; la página parcial complementa—not sustituye—tableros completos PPI/GGI ni el radar seguridad.\n\n**Limitaciones:** valores sometidos a revisión estadística permanezcan referencia—not dictamen oficial.",
+            "facts": [
+                {
+                    "k": "Dominio",
+                    "v": "Gobernanza e instituciones"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Distribución",
+                    "v": "{{nationfile-json}} y snapshots KPI"
+                },
+                {
+                    "k": "Complemento macro",
+                    "v": "{{purchasing-power-index}}"
+                },
+                {
+                    "k": "Estabilidad",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Lecturas cruzadas",
+                    "body_md": "Contraste PPI vs GGI y luego valore **{{nfsi}}** para riesgos que no están en el composite de gobernanza."
+                },
+                {
+                    "title": "Familias de indicadores",
+                    "body_md": "Seis ejes Worldwide Governance están publicados amplia documentación oficial del Banco Mundial."
+                },
+                {
+                    "title": "Malentendidos",
+                    "body_md": "Índices altos pueden coexistir con choques geopolíticos; no extrapole automatismos desde un número."
+                },
+                {
+                    "title": "Traza técnica",
+                    "body_md": "Enlaces de métricas en el registry público alinean web, tabla snapshot y exports."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Governance & Institutions Index (GGI)",
+            "teaser": "**Segundo pilar no snapshot KPI:** o **GGI** agrega sinais **documentados** de governança (lógica WGI/Banco Mundial) num **compósito comparável (0–100).** **{{purchasing-power-index}}** traz macro clássica ao lado. **{{nfsi}}** mantém‑se como pontuação **separada** de estabilidade.",
+            "summary_bullets": [
+                "**Base institucional lenta versus manchetes rápidos:** GGI preserva estruturas legais WGI relativamente tranquilas quando **{{nfsi}}** sintetiza FX + notícias + segurança em cadência alta.",
+                "**Governança ≠ PIB macro:** cobre instituições paralelamente ao bundle PPI.",
+                "**Não confundir NFSI:** **{{nfsi}}** sintetiza risco geopolítico documentado próprio.",
+                "**Utilidade síntese + IA:** mesmo bundle PPI/GGI com marca temporal e mediana mundial onde existir.",
+                "**Fontes primeiro:** registos WGI + legal sources NationFiles.",
+                "**Não é aconselhamento.**"
+            ],
+            "body_md": "O **GGI** sintetiza seis vetores públicos Worldwide Governance revisados pelo Banco Mundial até um nível nacional **0–100** coerente com cartões‑país, snapshots e exports. **{{purchasing-power-index}}** preserva KPI clássicos; **{{nfsi}}** trata uma linha distinta de risco e estabilidade documentada pela plataforma.\n\n**Ligação NFSI:** pipelines WGI/governação que formam o GGI partilham o **grafo público de conectores** que **{{naciro}}** consulta nos ciclos **{{nfsi}}** sempre que VVR/metodologia o descrevem. O **GGI agregado** continua como **leitura institucional própria**, não substituto nominado de uma camada NFSI.\n\n**Contraste deliberate:** NFSI mobiliza rápido pistas FX/notícias/segurança; **GGI** devolve sobretudo a **„estática“ estabilidade legal‑institucional** recomendável para equilibrar leituras de volatilidade mediática contemporânea.\n\nConforme o FAQ do hub do país, os bundles PPI/GGI partilham marca temporal—**`built_at_utc`** registra o instante da construção do pacote em UTC; a vista‑snapshot não substitui quadros PPI/GGI completos nem um radar de segurança integral.\n\n**Limitações:** revisões das séries e sensibilidades de medidas perceptivas—**não substitui** estatísticas oficiais soberanas.",
+            "facts": [
+                {
+                    "k": "Domínio",
+                    "v": "Qualidade institucional / governança"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Distribuição",
+                    "v": "{{nationfile-json}} / snapshots KPI"
+                },
+                {
+                    "k": "Complemento macro",
+                    "v": "{{purchasing-power-index}}"
+                },
+                {
+                    "k": "Estabilidade",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Leituras combinadas",
+                    "body_md": "Use GGI+PPI lado a lado; aplique **{{nfsi}}** para stress geopolítico adicional onde necessário."
+                },
+                {
+                    "title": "Famílias típicas",
+                    "body_md": "Voice, estabilidade política, eficácia regulatória Estado de Direito anticorrupção—definições WB."
+                },
+                {
+                    "title": "Mal entendidos",
+                    "body_md": "Elevado GGI não elimina cenários geopolíticos adversos; triangule contextos externos."
+                },
+                {
+                    "title": "Rastreabilidade",
+                    "body_md": "Registry métricas liga dashboards e artefactos JSON/PDF aos mesmos identificadores."
+                }
+            ]
+        },
+        "ar": {
+            "title": "مؤشر الحوكمة والمؤسسات (GGI)",
+            "teaser": "**الركيزة الثانية في لقطة مؤشرات الأداء:** يجمع **GGI** إشارات **موثقة** للحوكمة في إطار مؤشرات الحوكمة العالمية للبنك الدولي في **نتيجة مركبة قابلة للمقارنة (0–100).** **{{purchasing-power-index}}** يقدّم المعطيات الاقتصادية الكلاسيكية بجانبه، ويبقى **{{nfsi}}** مؤشر **منفصل** للاستقرار الجيوسياسي المنشور على المنصّة.",
+            "summary_bullets": [
+                "**ثبات مؤَسَّسي أبطأ مقابل عنوان إخباري:** يبرز **GGI** قوانين ومؤسسات WGI نسبياً بطيئة التحديث كوزن مقابل سرعة تكامل **{{nfsi}}** لـ FX والأخبار والأمن.",
+                "**الحوكمة ليست ناتجاً محلياً:** الإطار المعتمد لمؤسسات والحكم يكمِّل حزمة **{{purchasing-power-index}}** لا يكرّر القصة ذاتها.",
+                "**لا خلطًا مع NFSI:** **{{nfsi}}** يلخص قياس الاستقرار/المخاطر الجيوسياسية كما توثّقه المنصّة؛ **GGI** يركّز أبعاد حوكمية مختلفة المصدر الأولي.",
+                "**قيمة للقارئ ونماذج الذكاء الاصطناعي:** نفس رواية الحزمتين PPI/GGI مع طابع وقت عالمي ووسيط عالم حيث يعرض المنشور ذلك.",
+                "**الرجوع إلى المصدر التأسيسي وملف المصادر القانوني.**",
+                "**ليس مشورًا استثماريًا أو قانونيًا.**"
+            ],
+            "body_md": "**مؤشر الحوكمة والمؤسسات** على NationFiles مصمّم لتقديم بطاقات تشرح بدقة أيّ أبعاد حوكمية أساس موثَّقة تُقيَّم اليوم وفق مجموعة ستة مجالات لمؤشرات الحوكمة العالمية قبل تحويلها إلى **قياس واحد موحّد (100–0)** متسق بين البطاقة الوطنية ولقطات مؤشرات الأداء والتصدير بجانب **{{purchasing-power-index}}**.\n\n**مواءمة مع NFSI:** مسارات الحوكمة/WGI التي يُبنى منها GGI تقع ضمن **نفس مصفوفة الموصلات** التي يعتمدها **{{naciro}}** لإعادة حساب **{{nfsi}}** حيث تربطها VVR/المنهجية. **مركب GGI** يظل **سؤالاً مؤسسياً مستقلاً** وليس اسماً بديلاً لطبقة NFSI.\n\n**مقابل التذبذب الإعلامي الوقتي:** حيث يضغط **{{nfsi}}** بسرعة تيارات أسعار عملات وأخبار/مشاعر وأمن ضمن مهلة قصيرة، يقدّم **GGI** **استقراراً مؤَسَّسِياً نسبياً ثابتاً** (قواعد وإجراءات) لتفادي قراءات أحادية مرتبطة بعناوين لحظية فقط.\n\nتحمل حزماً مشتركة طابع `built_at_utc` وفق الأسئلة الشائعة دون أن تكون اللقطة الضيّقة بديلاً عن كلّ لوحة اقتصاد موسّعة أو رادارات أمن المنشور؛ يبقى الاعتماد على مراجع المصدر ومعلني البيانات.\n\n**الحدود:** تتأثر الأساس بالمراجعات وبطبيعة بيانات الاستطلاع والتقييم؛ التجميع في رقم واحد خطاب تبسيطي ملتزم بالشفافية المرجعية.",
+            "facts": [
+                {
+                    "k": "المجال",
+                    "v": "جودة الحوكمة والمؤسسات"
+                },
+                {
+                    "k": "المنصة",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "التسليم",
+                    "v": "{{nationfile-json}} وحزم مؤشرات الأداء"
+                },
+                {
+                    "k": "الجانب الكلي",
+                    "v": "{{purchasing-power-index}}"
+                },
+                {
+                    "k": "الاستقرار",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "القراءة مع PPI و NFSI",
+                    "body_md": "اقرأ **GGI** لجودة القواعد، **{{purchasing-power-index}}** للسياق الاقتصادي، ثم أنظر **{{nfsi}}** لضغط المخاطر الجيوسياسية حيث ينطبق ذلك."
+                },
+                {
+                    "title": "عائلات المؤشرات",
+                    "body_md": "ستة مجالات لمؤشرات الحوكمة العالمية وفق الوثائق الرسمية للبنك الدولي—من الصوت والمساءلة إلى مكافحة الفساد."
+                },
+                {
+                    "title": "سوء الفهم الشائع",
+                    "body_md": "ارتفاع المركبة لا يعني انعدام مخاطر جيوستراتيجية؛ تجنَّب خلط الآليات مختلفة الأسئلة."
+                },
+                {
+                    "title": "التعقّب",
+                    "body_md": "سجل المقاييس الموثوق في المنشور العام يربط الواجهة والجدول وبيانات التصدير بنفس المعرِّف المنطقي."
+                }
+            ]
+        },
+        "ja": {
+            "title": "Governance & Institutions Index（GGI）",
+            "teaser": "**KPIスナップショットの第2支柱:** **GGI** は世界銀行系 **WGI（Worldwide Governance Indicators）** の文書化された各次元を **0–100 の比較可能な総合ヘッドライン** に統合します。 **{{purchasing-power-index}}** がマクロ側、**{{nfsi}}** は **別立て** の地政学安定性スコアのままです。",
+            "summary_bullets": [
+                "**制度のゆっくりした安定 vs 速報ニュース:** GGI は WGI に基づく法制度・統治スナップショット（更新は比較的遅め）であり、FX／ニュース・セキュリティへ素早く反応する **{{nfsi}}** と意図的に両輪になります。",
+                "**ガバナンスは GDP ではない:** 制度化・統治の広がりを **{{purchasing-power-index}}** のマクロとは別レイヤーで示し、同じ問いかけを重ねません。",
+                "**{{nfsi}} と併読し同一視しない:** **{{nfsi}}** が NationFiles 上で文書化した安定／リスク要約であり、GGI は **異なるクラシック統治入力**への回答です。",
+                "**読者と LLM 向け価値:** PPI／GGI はスナップショット／PDF／JSON／FAQ で時刻スタンプのバンドル物語や世界中央値との対置（記載がある場合）を共有します。",
+                "**原資料ファースト:** 世界銀行の手法と NationFiles のソース登録を参照。",
+                "**助言ではない:** 公的指標の要約のみ—投資・法務コンサルの代替ではありません。"
+            ],
+            "body_md": "NationFiles の **Governance & Institutions Index（GGI）** は、国カードおよび KPI 抽出ビューで **制度の質・統治次元** を一つの **総合値（0–100スケール）** で把握しやすくするデータセットです。世界銀行の Worldwide Governance Indicators（WGI）系の公開系列を基に、発言と説明責任や腐敗統制など六次元までを検証済みの集約ルールで合成します。**{{purchasing-power-index}}** と **別の論点（制度・統治 vs 標準マクロ）** に答えます。**{{nfsi}}** は別系統の安定性ヘッドラインのままです。\n\n**NFSI グラフ上の位置づけ:** GGI を構成する WGI/ガバナンス系の取り込み経路は、**VVR／NFSI 方法論**が明示する範囲で **{{naciro}}** が **{{nfsi}}** を再計算する際に参照する **文書化コネクタ行列**に含まれます。**GGI 総合値**は依然として **制度の遅い読み**であり、公開 NFSI レイヤ名の **置換エイリアス**ではありません。\n\n**速報レイヤとの役割分担:** **{{nfsi}}** が為替やニュース情緒、安全保障系ストリームを短い周期で圧縮する一方で、GGI は比較的 **じっくり更新される法制度ガバナンス** を並べ、「騒がしいニュースだけ」での国リスク評価を避けるための反発重りになります。\n\n**バンドルと時刻:** 国ダッシュボードのFAQで説明するとおり PPI/GGI 共通 JSON は `built_at_utc` で算出時刻を示すことがあります。カード型の狭いビューはフル PPI/GGI 経済ボードやセキュリティ・レーダー全体の代替ではありません。**制限:** 統計改定や調査系データの特性上、総合ひと桁は簡約表現にすぎず、公式統計や法務判断の代替になりません。",
+            "facts": [
+                {
+                    "k": "領域",
+                    "v": "制度・ガバナンス品質"
+                },
+                {
+                    "k": "プラットフォーム",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "提供形態",
+                    "v": "{{nationfile-json}} / KPIバンドル"
+                },
+                {
+                    "k": "マクロ補助",
+                    "v": "{{purchasing-power-index}}"
+                },
+                {
+                    "k": "安定性側",
+                    "v": "{{nfsi}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "PPI / NFSI との関係",
+                    "body_md": "**GGI**で制度側、**{{purchasing-power-index}}**でマクロ側、必要に応じて **{{nfsi}}** で地政学的文脈を段階的に読んでください。"
+                },
+                {
+                    "title": "指標クラスター",
+                    "body_md": "発言可能性・説明責任性、政治的安定・非暴力性、統治効率性、規制の質、法の支配、腐敗統制など、世界銀行の WGI で定義された六次元。"
+                },
+                {
+                    "title": "誤読の典型",
+                    "body_md": "GGI が高くても地政ストレスがゼロとは限らず、GDP 順位とも単純連動しません。"
+                },
+                {
+                    "title": "トレーサビリティ",
+                    "body_md": "公開メトリクスレジストリにより UI・テーブル・エクスポートが同一論理キーを共有します。"
+                }
+            ]
+        }
+    },
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "complements",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "complements",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "economy-vertical"
+        }
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "governance-institutions-index"
+        },
+        "repository_relative_path": "knowledge-data/entities/governance-institutions-index.json"
+    }
+}

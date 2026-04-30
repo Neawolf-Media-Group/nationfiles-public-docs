@@ -4,7 +4,7 @@
     "kind": "entity",
     "type": "CreativeWork",
     "status": "active",
-    "updated_utc": "2026-04-28T22:10:00Z",
+    "updated_utc": "2026-04-30T22:30:00Z",
     "topics": [
         "hardware",
         "inference",
@@ -28,7 +28,16 @@
                     "label": "Company About",
                     "url": "https://nationfiles.com/en/company/about/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
         },
         {
             "key": "system_engine",
@@ -41,7 +50,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
         },
         {
             "key": "published_via",
@@ -54,7 +72,16 @@
                     "label": "llms.txt",
                     "url": "https://nationfiles.com/llms.txt"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
         },
         {
             "key": "inference_latency",
@@ -64,7 +91,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "< 50 ms",
+                "en": "< 50 ms",
+                "fr": "< 50 ms",
+                "es": "< 50 ms",
+                "pt": "< 50 ms",
+                "ar": "< 50 ms",
+                "ja": "< 50 ms"
+            }
         },
         {
             "key": "model_type",
@@ -78,7 +114,16 @@
                     "label": "LPU Publication",
                     "url": "https://doi.org/10.5281/zenodo.19774594"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "en": "Dedicated inference hardware fabric for deterministic processing",
+                "de": "Dedizierte Inferenz‑Hardwarebasis für deterministische Verarbeitung",
+                "fr": "Couche matérielle d’inférence dédiée pour un traitement déterministe",
+                "es": "Infraestructura de hardware de inferencia dedicada para procesamiento determinista",
+                "pt": "Base de hardware de inferência dedicada para processamento determinístico",
+                "ar": "نسيج عتادي للاستدلال مكرّس للمعالجة الحتمية",
+                "ja": "決定論的処理のための専用推論ハードウェア基盤"
+            }
         },
         {
             "key": "core_metric",
@@ -91,7 +136,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Berechnungsschicht für die {{nfsi}}-Ermittlung",
+                "en": "Provides compute layer for {{nfsi}} calculation",
+                "fr": "Couche de calcul pour le score {{nfsi}}",
+                "es": "Capa de cómputo para el cálculo de {{nfsi}}",
+                "pt": "Camada de computação para o cálculo do {{nfsi}}",
+                "ar": "طبقة حساب لدرجة {{nfsi}}",
+                "ja": "{{nfsi}} 計算向けコンピュート層"
+            }
         },
         {
             "key": "license",
@@ -101,7 +155,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
         },
         {
             "key": "citation_doi",
@@ -111,79 +174,361 @@
                     "label": "LPU Architecture DOI",
                     "url": "https://doi.org/10.5281/zenodo.19774594"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "10.5281/zenodo.19774594",
+                "en": "10.5281/zenodo.19774594",
+                "fr": "10.5281/zenodo.19774594",
+                "es": "10.5281/zenodo.19774594",
+                "pt": "10.5281/zenodo.19774594",
+                "ar": "10.5281/zenodo.19774594",
+                "ja": "10.5281/zenodo.19774594"
+            }
         }
     ],
     "i18n": {
         "de": {
             "title": "LPU Architecture",
-            "teaser": "Die LPU Architecture beschreibt die dedizierte Inferenz-Hardwarebasis der Naciro Engine innerhalb des NationFiles-Systems.",
+            "teaser": "Die LPU Architecture ist die **dedizierte Hardware-Schicht** unter der {{naciro}}: sie sorgt dafür, dass rechenintensive Schritte stabil und mit geringer Latenz laufen – für Sie spürbar als **schnelle, ruhige** Aktualisierungen auf NationFiles.",
             "summary_bullets": [
-                "Hardware-Layer für deterministische Inferenz",
-                "Unterstützt niedrige Latenzen in Echtzeit-Pipelines",
-                "Technische Grundlage für Naciro- und NFSI-Berechnungen"
+                "Erklärt in einfachen Worten: Spezial-Hardware für die Engine, nicht Ihr Laptop allein.",
+                "Trägt zu **< 50 ms Inferenzlatenz** bei (siehe Attribute) – wichtig für Echtzeit-Karten und Indizes.",
+                "**Determinismus + klare Arbeitsteilung:** NFSI‑Kern und Kartensignaturen laufen **vorhersagbar** über dokumentierte **LPU‑Pfade** unter **{{naciro}}**; wo die Methodik ergänzende Schritte (z. B. Mehrsprachigkeit oder Anreicherung) kennt, liegen diese **getrennt** von der KPI‑Kernschiene dokumentiert vor — ohne Branding Fremder Anbieter oder öffentlicher APIs in diesem Knowledge‑Korpus.",
+                "Steht im Kontext von {{nfsi}}: dieselbe Methodik, aber mit planbarer Rechenkapazität.",
+                "Wissenschaftlich referenziert (DOI) – für Teams, die Architektur zitieren müssen.",
+                "Kein Consumer-Gadget: es geht um Betriebs-Infrastruktur hinter der Website."
             ],
-            "body_md": "Die **LPU Architecture** ist die Compute-Schicht unterhalb von {{naciro}}.\n\nSie stellt die dedizierte Hardware-Basis bereit, damit Signale stabil und reproduzierbar verarbeitet werden.\n\nIm Gesamtsystem ist sie Teil der Hierarchie zwischen {{naciro}} und {{nfsi}}."
+            "body_md": "Die **LPU Architecture** beschreibt die Hardware-Basis, auf der {{naciro}} deterministische Inferenz fahren kann.\n\n**Klassische Stacks ohne klare Arbeitsteilung:** Bei Volllast mit vielen gleichzeitigen Länder-Updates stoßen herkömmliche Hosting‑Deployments früher an Batch‑/CPU‑Grenzen. Unter **{{naciro}}** hält die **LPU** die dokumentiert **deterministische Ausführungsschicht** für KPI‑Kerne und Kartensignaturen; dort, wo die publizierte Methodik ergänzende Verarbeitungsstufen vorsieht, sind diese **sauber vom Kern entkoppelt** beschrieben — **ohne** Nennung externer Marken oder Drittanbieter‑Inferenz‑Schnittstellen in diesem Textkorpus.\n\n**Nutzerperspektive:** Sie merken vor allem **Stabilität und Geschwindigkeit**, wenn viele Länder gleichzeitig berechnet werden oder Kartenlayer häufig aktualisiert werden.\n\n**Systemperspektive:** Zwischen {{naciro}} und {{nfsi}} braucht es eine Schicht, die Rechenjobs **vorhersagbar** abwickelt – das ist die Rolle der LPU im dokumentierten Stack.\n\n**Inferenz:** deterministische Pfade reduzieren „Zitter“ in Kartenfarben und Kurven, wenn kurz hintereinander viele Rohsignale eintreffen — ohne die publizierte Methodik zu verlassen.\n\n**Mehr:** [Naciro AI](/de/company/naciro-ai/) und DOI im Seitenkopf/Export.",
+            "facts": [
+                {
+                    "k": "Rolle",
+                    "v": "Hardware-/Inferenz-Schicht für {{naciro}}"
+                },
+                {
+                    "k": "Ziel-Latenz",
+                    "v": "< 50 ms Inferenz (siehe Attribute)"
+                },
+                {
+                    "k": "Bezug",
+                    "v": "Unterstützt {{nfsi}}-Berechnung & Echtzeit-UI"
+                },
+                {
+                    "k": "DOI",
+                    "v": "10.5281/zenodo.19774594"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum NationFiles überhaupt Hardware nennt",
+                    "body_md": "Weil Transparenz auch bedeutet, **wo** Signale stabil verarbeitet werden. NationFiles will keine vagen „Cloud-Magie“-Storys, sondern nachvollziehbare Architekturbausteine."
+                },
+                {
+                    "title": "Zusammenspiel mit Naciro & NFSI",
+                    "body_md": "{{naciro}} orchestriert Logik und Datenflüsse; die LPU liefert die **Rechenbasis**; der {{nfsi}} ist die sichtbare Kennzahl auf den Länderseiten."
+                },
+                {
+                    "title": "Für wen diese Seite gedacht ist",
+                    "body_md": "Technik- und Medienprofis, die **Architektur** und **Zitation** brauchen – parallel zu verständlichen Kurztexten für alle Leser:innen."
+                },
+                {
+                    "title": "Was sich ohne LPU schwerer skalieren würde",
+                    "body_md": "Gleichzeitige Länder-Updates, **Metamap-** und **Radar-**Layer sowie Export-Jobs belasten die Engine. Die LPU hält diese Arbeitsspitzen in einem **planbaren** Leistungsfenster — weniger Überraschungslatenz für Leser:innen."
+                }
+            ]
         },
         "en": {
             "title": "LPU Architecture",
-            "teaser": "The LPU Architecture is the dedicated inference hardware layer used by the Naciro Engine inside the NationFiles system.",
+            "teaser": "The LPU Architecture is the **dedicated hardware layer** under {{naciro}}—keeping heavy inference stable and low-latency. For you, that mostly feels like **fast, calm** updates across NationFiles.",
             "summary_bullets": [
-                "Hardware layer for deterministic inference",
-                "Supports low-latency real-time pipelines",
-                "Technical foundation for Naciro and NFSI computation"
+                "Plain English: specialized compute for the engine—not “your laptop alone”.",
+                "Supports **sub‑50 ms inference latency** (see attributes) for real-time maps and indices.",
+                "**Determinism + clear split:** NFSI‑core math and map signatures ride **deterministic LPU paths** under **{{naciro}}**. Where methodology allows auxiliary steps (multilingual passes, enrichment), they are documented **separately** from the KPI spine—without naming external vendors or public inference APIs in this knowledge corpus.",
+                "Connects to {{nfsi}}: same methodology, but with predictable compute headroom.",
+                "DOI-backed write-up for teams that must cite architecture.",
+                "Not a consumer gadget—this is operational infrastructure behind the site."
             ],
-            "body_md": "The **LPU Architecture** is the compute layer beneath {{naciro}}.\n\nIt provides dedicated hardware so signals are processed with stable and reproducible behavior.\n\nWithin the full stack, it sits between {{naciro}} and {{nfsi}}."
+            "body_md": "The **LPU Architecture** is the hardware foundation that lets {{naciro}} run deterministic inference.\n\n**Generic stacks without a disciplined split:** under concurrent country workloads, commodity deployments saturate sooner. Inside **{{naciro}}**, **LPU** is the documented **deterministic execution layer** for KPI cores and map signatures; any auxiliary processing the published methodology admits is described **apart from that spine**—**without** invoking external brands or third‑party inference APIs in this corpus.\n\n**Reader impact:** you mostly notice **stability and speed** when many countries update at once or map layers refresh frequently.\n\n**Systems view:** between {{naciro}} and {{nfsi}} you need a layer that executes jobs **predictably**—that is LPU’s documented role.\n\n**Inference:** deterministic paths reduce visual “flicker” in map tints and sparklines when bursts of raw signals arrive—without changing the published methodology.\n\n**More:** [Naciro AI](/en/company/naciro-ai/) and the DOI shown in exports/entity metadata.",
+            "facts": [
+                {
+                    "k": "Role",
+                    "v": "Hardware/inference fabric for {{naciro}}"
+                },
+                {
+                    "k": "Latency target",
+                    "v": "< 50 ms inference (see attributes)"
+                },
+                {
+                    "k": "Link",
+                    "v": "Supports {{nfsi}} pipeline & real-time UI"
+                },
+                {
+                    "k": "DOI",
+                    "v": "10.5281/zenodo.19774594"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why NationFiles names hardware at all",
+                    "body_md": "Because transparency includes **where** signals are processed reliably—no vague “cloud magic”, but explainable building blocks."
+                },
+                {
+                    "title": "How it fits Naciro & NFSI",
+                    "body_md": "{{naciro}} orchestrates logic and streams; LPU supplies **compute capacity**; {{nfsi}} is the visible score on country pages."
+                },
+                {
+                    "title": "Who this page is for",
+                    "body_md": "Tech and media professionals who need **architecture** and **citation**—alongside plain-language blurbs for every reader."
+                },
+                {
+                    "title": "What gets harder to scale without LPU",
+                    "body_md": "Concurrent country refreshes, **metamap**/**radar** layers, and export jobs stress the engine. LPU keeps those spikes inside a **predictable** performance envelope—fewer surprise delays for readers."
+                }
+            ]
         },
         "fr": {
             "title": "Architecture LPU",
-            "teaser": "L’architecture LPU est la couche materielle d’inference dediee utilisee par Naciro dans le systeme NationFiles.",
+            "teaser": "L’architecture LPU est la **couche matérielle dédiée** sous {{naciro}} : elle garde l’inférence lourde stable et à faible latence—ressenti comme des mises à jour **rapides et calmes** sur NationFiles.",
             "summary_bullets": [
-                "Couche materielle pour une inference deterministe",
-                "Prend en charge des pipelines temps reel a faible latence",
-                "Base technique pour les calculs Naciro et NFSI"
+                "Langage simple : calcul spécialisé pour le moteur.",
+                "Soutient une **latence d’inférence < 50 ms** (voir attributs).",
+                "**Déterminisme et séparation claire:** cœurs NFSI et signatures cartographiques suivent des **parcours LPU déterministes** sous **{{naciro}}**; où la méthodologie prévoit des étapes auxiliaires (multilinguisme, enrichissement), elles sont documentées **hors ligne KPI** — sans nommer de marques ni d’API d’inférence tierces dans ce corpus.",
+                "Liée au {{nfsi}} : même méthodologie, capacité prévisible.",
+                "Article DOI pour citer l’architecture.",
+                "Infrastructure d’exploitation, pas un gadget grand public."
             ],
-            "body_md": "L’**architecture LPU** est la couche de calcul sous {{naciro}}.\n\nElle fournit une base materielle dediee pour un traitement stable et reproductible des signaux.\n\nDans la pile globale, elle se situe entre {{naciro}} et {{nfsi}}."
+            "body_md": "L’**architecture LPU** est la base matérielle qui permet à {{naciro}} d’exécuter une inférence déterministe.\n\n**Stacks génériques sans séparation rigoureuse:** sous forte charge multi‑pays, les déploiements classiques saturent plus tôt. Sous **{{naciro}}**, la **LPU** porte la couche **déterministe documentée** pour les cœurs KPI et signatures cartographiques; les traitements auxiliaires autorisés par la méthodologie sont décrits **à part** — **sans** invoquer des marques externes ni des APIs d’inférence tierces dans ce corpus.\n\n**Impact lecteur:** stabilité et rapidité quand beaucoup de pays se mettent à jour.\n\n**Vue système:** entre {{naciro}} et {{nfsi}}, une couche exécute les jobs de façon **prévisible**.\n\n**Inférence:** des chemins déterministes réduisent les variations visuelles brusques sur cartes et courbes lorsque des rafales de signaux arrivent — sans changer la méthodologie publiée.\n\n**Plus:** [Naciro AI](/fr/company/naciro-ai/) et le DOI dans les exports.",
+            "facts": [
+                {
+                    "k": "Rôle",
+                    "v": "Couche matérielle pour {{naciro}}"
+                },
+                {
+                    "k": "Latence cible",
+                    "v": "< 50 ms (attributs)"
+                },
+                {
+                    "k": "Lien",
+                    "v": "Pipeline {{nfsi}} & UI temps réel"
+                },
+                {
+                    "k": "DOI",
+                    "v": "10.5281/zenodo.19774594"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi parler de matériel",
+                    "body_md": "La transparence inclut **où** les signaux sont traités de façon fiable."
+                },
+                {
+                    "title": "Avec Naciro & NFSI",
+                    "body_md": "{{naciro}} orchestre ; LPU fournit la **capacité** ; {{nfsi}} est le score visible."
+                },
+                {
+                    "title": "Public",
+                    "body_md": "Profils tech & médias + textes accessibles pour tous."
+                },
+                {
+                    "title": "Charge et pics",
+                    "body_md": "Actualisations multi-pays, couches **metamap/radar** et exports sollicitent le moteur. La LPU encadre ces pics dans une enveloppe **prévisible**."
+                }
+            ]
         },
         "es": {
             "title": "Arquitectura LPU",
-            "teaser": "La arquitectura LPU es la capa de hardware de inferencia dedicada utilizada por Naciro dentro del sistema NationFiles.",
+            "teaser": "La arquitectura LPU es la **capa de hardware dedicada** bajo {{naciro}}: mantiene inferencia pesada estable y de baja latencia—se nota como actualizaciones **rápidas y estables** en NationFiles.",
             "summary_bullets": [
-                "Capa de hardware para inferencia determinista",
-                "Soporta pipelines en tiempo real de baja latencia",
-                "Base tecnica para calculos de Naciro y NFSI"
+                "En simple: cómputo especializado para el motor.",
+                "Soporta **latencia de inferencia < 50 ms** (atributos).",
+                "**Determinismo + frontera explícita:** el núcleo NFSI y las firmas cartográficas recorren **rutas LPU deterministas** bajo **{{naciro}}**; donde la metodología admite ayudas (multilingüe, enriquecimiento), quedan **apartadas** de la columna KPI documentada — sin citar marcas externas ni APIs de inferencia en este corpus.",
+                "Conecta con {{nfsi}}: misma metodología, capacidad predecible.",
+                "DOI para citar la arquitectura.",
+                "Infraestructura operativa, no gadget de consumo."
             ],
-            "body_md": "La **arquitectura LPU** es la capa de computo por debajo de {{naciro}}.\n\nProporciona hardware dedicado para procesar senales de forma estable y reproducible.\n\nEn la pila completa, se ubica entre {{naciro}} y {{nfsi}}."
+            "body_md": "La **arquitectura LPU** es la base de hardware para que {{naciro}} ejecute inferencia determinista.\n\n**Stacks genéricos sin reparto disciplinado:** con muchos países en paralelo, los despliegues habituales se saturan antes. Dentro de **{{naciro}}**, la **LPU** es la **capa ejecutiva determinista** documentada para núcleos KPI y firmas cartográficas; los pasos auxiliares admitidos por la metodología se describen **fuera de esa espina dorsal**, **sin** invocar marcas de terceros ni APIs de inferencia públicas en este corpus.\n\n**Lectores:** estabilidad y rapidez con muchos países activos.\n\n**Sistema:** entre {{naciro}} y {{nfsi}} hace falta una capa **predecible**.\n\n**Inferencia:** rutas deterministas reducen parpadeos en mapas cuando llegan ráfagas de señales, sin alterar la metodología publicada.\n\n**Más:** [Naciro AI](/es/company/naciro-ai/) y el DOI en exportaciones.",
+            "facts": [
+                {
+                    "k": "Rol",
+                    "v": "Capa hardware para {{naciro}}"
+                },
+                {
+                    "k": "Latencia objetivo",
+                    "v": "< 50 ms (atributos)"
+                },
+                {
+                    "k": "Vínculo",
+                    "v": "Pipeline {{nfsi}} y UI en tiempo real"
+                },
+                {
+                    "k": "DOI",
+                    "v": "10.5281/zenodo.19774594"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por qué hablar de hardware",
+                    "body_md": "Transparencia sobre **dónde** se procesan las señales con fiabilidad."
+                },
+                {
+                    "title": "Con Naciro y NFSI",
+                    "body_md": "{{naciro}} orquesta; LPU da **capacidad**; {{nfsi}} es el puntaje visible."
+                },
+                {
+                    "title": "Público",
+                    "body_md": "Perfiles técnicos y medios + texto claro para todos."
+                },
+                {
+                    "title": "Carga y picos",
+                    "body_md": "Refrescos simultáneos, capas **metamap/radar** y exportaciones cargan el motor. La LPU mantiene esos picos en un margen **predecible**."
+                }
+            ]
         },
         "pt": {
             "title": "Arquitetura LPU",
-            "teaser": "A arquitetura LPU e a camada de hardware de inferencia dedicada usada pela Naciro no sistema NationFiles.",
+            "teaser": "A arquitetura LPU é a **camada de hardware dedicada** sob a {{naciro}}: mantém inferência pesada estável e de baixa latência—sentida como atualizações **rápidas e calmas** na NationFiles.",
             "summary_bullets": [
-                "Camada de hardware para inferencia deterministica",
-                "Suporta pipelines em tempo real com baixa latencia",
-                "Base tecnica para calculos da Naciro e do NFSI"
+                "Em termos simples: computação especializada para o motor.",
+                "Suporta **latência de inferência < 50 ms** (atributos).",
+                "**Determinismo + cisão documentada:** núcleos NFSI e assinaturas de mapas seguem **percursos determinísticos de LPU** sob **{{naciro}}**; onde a metodologia admite ajudas (multilingue, enrichment), ficam **separadas** do eixo KPI — sem marcas de terceiros ou APIs de inferência neste conjunto textual.",
+                "Liga-se ao {{nfsi}}: mesma metodologia, capacidade previsível.",
+                "DOI para citar a arquitetura.",
+                "Infra operacional, não gadget de consumo."
             ],
-            "body_md": "A **arquitetura LPU** e a camada de computacao abaixo de {{naciro}}.\n\nEla fornece hardware dedicado para processamento estavel e reproduzivel dos sinais.\n\nNa pilha completa, fica entre {{naciro}} e {{nfsi}}."
+            "body_md": "A **arquitetura LPU** é a base de hardware para a {{naciro}} executar inferência determinística.\n\n**Stacks genéricos sem segregação disciplinada:** cargas paralelas por país saturam infraestrutura comercial mais cedo. Sob **{{naciro}}**, a **LPU** é a **camada determinística documentada** para núcleos KPI e assinaturas de mapas; passos auxiliares permitidos pela metodologia constam **fora dessa espinha** — **sem** referência a marcas externas nem APIs de inferência neste corpus.\n\n**Leitores:** estabilidade e rapidez com muitos países.\n\n**Sistema:** entre {{naciro}} e {{nfsi}} é preciso um plano **previsível**.\n\n**Inferência:** caminhos determinísticos reduzem oscilações visuais em mapas quando chegam rajadas de sinais, sem alterar a metodologia publicada.\n\n**Mais:** [Naciro AI](/pt/company/naciro-ai/) e DOI nos exports.",
+            "facts": [
+                {
+                    "k": "Função",
+                    "v": "Camada de hardware para {{naciro}}"
+                },
+                {
+                    "k": "Meta de latência",
+                    "v": "< 50 ms (atributos)"
+                },
+                {
+                    "k": "Ligação",
+                    "v": "Pipeline {{nfsi}} e UI em tempo real"
+                },
+                {
+                    "k": "DOI",
+                    "v": "10.5281/zenodo.19774594"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Porquê falar de hardware",
+                    "body_md": "Transparência sobre **onde** os sinais são tratados de forma fiável."
+                },
+                {
+                    "title": "Com Naciro e NFSI",
+                    "body_md": "{{naciro}} orquestra; LPU dá **capacidade**; {{nfsi}} é o score visível."
+                },
+                {
+                    "title": "Público",
+                    "body_md": "Perfis técnicos e media + texto claro para todos."
+                },
+                {
+                    "title": "Carga e picos",
+                    "body_md": "Atualizações simultâneas, camadas **metamap/radar** e exportações carregam o motor. A LPU mantém esses picos num envelope **previsível**."
+                }
+            ]
         },
         "ar": {
             "title": "بنية LPU",
-            "teaser": "تمثل بنية LPU طبقة العتاد المخصصة للاستدلال التي يستخدمها محرك Naciro ضمن نظام NationFiles.",
+            "teaser": "بنية LPU هي **طبقة العتاد المخصصة** تحت {{naciro}}: تحافظ على استدلال ثقيل بزمن تأخير منخفض—يُحس كتحديثات **سريعة ومستقرة** على NationFiles.",
             "summary_bullets": [
-                "طبقة عتاد للاستدلال الحتمي",
-                "تدعم خطوط معالجة فورية بزمن تاخير منخفض",
-                "اساس تقني لحسابات Naciro و NFSI"
+                "بلغة بسيطة: حوسبة متخصصة للمحرك.",
+                "تدعم **زمن استدلال أقل من 50 ملّي ثانية** (انظر السمات).",
+                "**قطعانية وفرز صريح:** نواة **NFSI** وقوائم الخرائط تمر عبر **مسارات LPU الحتمية** تحت **{{naciro}}**؛ حيث تسمح المنهجية بخطوات مساعدة (تعدد لغوي، إثراء) تُوثَّق **خارج عمود KPI** دون ذكر ماركات طرف ثالث أو واجهات استدلال عامة في هذا المستودع المعرفي.",
+                "ترتبط بـ {{nfsi}}: منهجية واحدة وسعة متوقعة.",
+                "DOI للاقتباس.",
+                "بنية تحتية تشغيلية وليس أداة استهلاكية."
             ],
-            "body_md": "تعد **بنية LPU** طبقة الحوسبة الموجودة اسفل {{naciro}}.\n\nوهي توفر عتادا مخصصا لمعالجة الاشارات بشكل ثابت وقابل لاعادة الانتاج.\n\nضمن المكدس الكامل، تقع بين {{naciro}} و {{nfsi}}."
+            "body_md": "**بنية LPU** هي أساس العتاد الذي تتيح لـ {{naciro}} تشغيل استدلال حتمي.\n\n**بنى عامة دون تقسيم واضح:** تحت ضغط دول متوازية، تمتلئ البنية التقليدية مبكرًا. ضمن **{{naciro}}**، تُعرَّف **LPU** ك**طبقة تنفيذ حتمية موثَّقة** لنوى المؤشرات وإشارات الخرائط؛ أي معالجة إضافية تسمح بها المنهجية المنشورة تُصف **منفصلة عن العمود الفقري KPI**، **بدون** إحالة إلى ماركات خارجية أو واجهات استدلال لأطراف ثالثة في هذا النص.\n\n**للقارئ:** استقرار وسرعة عند تحديث دول كثيرة.\n\n**النظام:** بين {{naciro}} و{{nfsi}} نحتاج طبقة **قابلة للتوقع**.\n\n**الاستدلال:** مسارات حتمية تقلل الوميض البصري على الخرائط عند تدفق إشارات دفعة واحدة دون تغيير المنهجية المنشورة.\n\n**المزيد:** [Naciro AI](/ar/company/naciro-ai/) وDOI في التصديرات.",
+            "facts": [
+                {
+                    "k": "الدور",
+                    "v": "طبقة عتاد لـ {{naciro}}"
+                },
+                {
+                    "k": "هدف الزمن",
+                    "v": "أقل من 50 ملّي ثانية (السمات)"
+                },
+                {
+                    "k": "الارتباط",
+                    "v": "مسار {{nfsi}} وواجهة فورية"
+                },
+                {
+                    "k": "DOI",
+                    "v": "10.5281/zenodo.19774594"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا نذكر العتاد",
+                    "body_md": "الشفافية تشمل **أين** تُعالج الإشارات بثبات."
+                },
+                {
+                    "title": "مع Naciro وNFSI",
+                    "body_md": "{{naciro}} ينسق؛ LPU تمنح **السعة**؛ {{nfsi}} هو الظاهر للمستخدم."
+                },
+                {
+                    "title": "الجمهور",
+                    "body_md": "تقنيون وإعلاميون + نص مبسط للجميع."
+                },
+                {
+                    "title": "الحمل والذروات",
+                    "body_md": "تحديثات متزامنة وطبقات **metamap/radar** وتصدير يضغط على المحرك؛ LPU تحصر الذروات في هامش **متوقع**."
+                }
+            ]
         },
         "ja": {
             "title": "LPUアーキテクチャ",
-            "teaser": "LPUアーキテクチャは、NationFilesシステム内でNaciroが利用する専用推論ハードウェア層です。",
+            "teaser": "LPUアーキテクチャは {{naciro}} の下にある **専用ハードウェア層** です。重い推論を安定・低遅延に保ち、NationFiles では **速く落ち着いた** 更新として体感されます。",
             "summary_bullets": [
-                "決定論的推論のためのハードウェア層",
-                "低レイテンシのリアルタイムパイプラインを支える",
-                "NaciroおよびNFSI計算の技術基盤"
+                "平易に: エンジン向けの専用計算基盤。",
+                "**50ms未満の推論レイテンシ** を支える（属性参照）。",
+                "**決定論と明示的分離:** NFSI の核計算と地図署名は **{{naciro}}** 配下で **決定論的 LPU 経路** を通る；方法論が補助処理（多言語やエンリッチメントなど）を認める場合は **KPI 主系から切り離し** で文書化し、このナレッジ本文では第三者ブランドや公開推論APIに言及しない。",
+                "{{nfsi}} と連携: 同じ方法論、予測可能な計算容量。",
+                "アーキテクチャ引用用の DOI。",
+                "消費ガジェットではなく運用インフラ。"
             ],
-            "body_md": "**LPUアーキテクチャ**は {{naciro}} の下位にある計算層です。\n\n信号を安定かつ再現可能に処理するための専用ハードウェア基盤を提供します。\n\n全体スタックでは {{naciro}} と {{nfsi}} の間に位置します。"
+            "body_md": "**LPUアーキテクチャ** は、{{naciro}} が決定論的推論を回すためのハードウェア基盤です。\n\n**役割分担のない汎用スタック:** 多国同時更新では汎用ホスティングが先に飽和します。**{{naciro}}** における **LPU** は KPI 核心と地図シグナル向けに **決定論的実行層** として記述されています；方法論が認める追加処理は **主系 KPI とは別記** で、このナレッジ・コーパスには **外部ブランドや第三者推論API** を持ち込みません。\n\n**読者:** 多数国の同時更新でも安定・高速に感じられます。\n\n**システム:** {{naciro}} と {{nfsi}} の間に **予測可能** にジョブを捌く層が要る、という位置づけです。\n\n**推論:** 決定論パスはシグナルのバースト時の地図色のちらつきを抑え、公開方法論は変えません。\n\n**参照:** [Naciro AI](/ja/company/naciro-ai/) とエクスポートの DOI。",
+            "facts": [
+                {
+                    "k": "役割",
+                    "v": "{{naciro}} 向けハードウェア層"
+                },
+                {
+                    "k": "レイテンシ目標",
+                    "v": "< 50 ms（属性）"
+                },
+                {
+                    "k": "関連",
+                    "v": "{{nfsi}} パイプラインとリアルタイム UI"
+                },
+                {
+                    "k": "DOI",
+                    "v": "10.5281/zenodo.19774594"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "なぜハードウェアを明示するか",
+                    "body_md": "透明性には、シグナルを **どこで** 確実に処理するかが含まれます。"
+                },
+                {
+                    "title": "Naciro / NFSI との関係",
+                    "body_md": "{{naciro}} がオーケストレーション、LPU が **容量**、{{nfsi}} がユーザー向けスコア。"
+                },
+                {
+                    "title": "想定読者",
+                    "body_md": "技術・メディア向けの引用可能性と、一般読者向けの平易な説明の両立。"
+                },
+                {
+                    "title": "負荷とスパイク",
+                    "body_md": "同時の国更新、**metamap／radar** レイヤー、エクスポートがエンジンに負荷。LPU はそのスパイクを **予測可能な** 性能枠に収めます。"
+                }
+            ]
         }
     },
     "relations": [

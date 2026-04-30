@@ -1,0 +1,664 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "ai-guidelines",
+    "kind": "entity",
+    "type": "CreativeWork",
+    "status": "active",
+    "updated_utc": "2026-05-01T00:00:00Z",
+    "topics": [
+        "ai",
+        "policy",
+        "bots",
+        "llms",
+        "ethics",
+        "bias",
+        "transparency",
+        "naciro",
+        "nfsi"
+    ],
+    "aliases": [
+        "AI Guidelines",
+        "KI-Richtlinien",
+        "NationFiles AI Policy",
+        "LLM usage policy",
+        "Directives IA NationFiles"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles AI & data usage policy layer: canonical human-readable contract governing how automated clients—including LLM crawlers—may interact with Naciro-facing surfaces, consume llms.txt pointers, honour robots.txt, and cite sovereign dashboards without substituting NationFiles judgment for independent counsel.",
+            "depends_on": [
+                "nationfiles",
+                "naciro",
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "**NationFiles KI- und Datenrichtlinien-Schicht:** kanonischer, menschenlesbarer **Rahmen** für automatisierte Clients — inkl. **LLM-Crawlern** — zur Interaktion mit **Naciro**-nahen Oberflächen, Nutzung von **llms.txt**-Hinweisen, Einhaltung von **robots.txt** und **Zitation** souveräner Dashboards — **ohne** NationFiles als Ersatz für **unabhängige** Rechts- oder Risikoberatung.",
+                "en": "NationFiles AI & data usage policy layer: canonical human-readable contract governing how automated clients—including LLM crawlers—may interact with Naciro-facing surfaces, consume llms.txt pointers, honour robots.txt, and cite sovereign dashboards without substituting NationFiles judgment for independent counsel.",
+                "fr": "**Couche de politique IA & données** NationFiles : contrat **lisible** encadrant clients automatisés — y compris **crawl LLM** — interaction avec surfaces **Naciro**, **llms.txt**, **robots.txt**, citations **HTTPS** — **sans** substituer à un **conseil** indépendant.",
+                "es": "**Capa de política IA y datos** NationFiles: contrato **legible** para clientes automáticos —incl. **rastreadores LLM**— con superficies **Naciro**, **llms.txt**, **robots.txt**, citas canónicas — **sin** sustituir **asesoramiento** independiente.",
+                "pt": "**Camada de política IA & dados** NationFiles: contrato **legível** para clientes automáticos —incl. **crawlers LLM**— com superfícies **Naciro**, **llms.txt**, **robots.txt**, citações canónicas — **sem** substituir **aconselhamento** independente.",
+                "ar": "**طبقة سياسة الذكاء الاصطناعي والبيانات** لـ NationFiles: عقد **بشري القراءة** يحكم تفاعل العملاء الآليين — بما فيها **زحف نماذج اللغة** — مع أسطح **Naciro** و**llms.txt** و**robots.txt** واقتباس **HTTPS** — **دون** أن تحل محل **استشارة** مستقلة.",
+                "ja": "NationFiles の **AI・データ利用ポリシー層**：**Naciro** 周辺面、**llms.txt**、**robots.txt**、**正規 HTTPS 引用**を扱う自動クライアント（**LLM クローラ**含む）のための、人が読む**規約**——**独立した**法・リスク助言の**代替ではない**。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Bias-resilience posture for country-facing outputs: methodology must not treat social novelty, single-vendor scoreboards, or unverifiable assertion graphs as sufficient grounds to stereotype a nation; NFSI and Naciro documentation are the cross-check—not an oracle on national character.",
+            "depends_on": [
+                "nfsi",
+                "naciro",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Bias-Resilienz** für **länderbezogene** Outputs: Methodik darf **Social-Noise**, Ein-Anbieter-**Scoreboards** oder **unverifizierbare** Assertions-Graphen **nicht** als ausreichend behandeln, um Staaten **zu karikieren**; **NFSI**/**Naciro**-Doku ist **Querprüfung** — kein Orakel über „**Nationalcharakter**“.",
+                "en": "Bias-resilience posture for country-facing outputs: methodology must not treat social novelty, single-vendor scoreboards, or unverifiable assertion graphs as sufficient grounds to stereotype a nation; NFSI and Naciro documentation are the cross-check—not an oracle on national character.",
+                "fr": "**Résilience au biais** pour sorties **pays** : la méthodo ne doit pas faire du **bruit social**, d’un **classement** unique fournisseur ou d’un **graphe** non vérifiable une base pour **stéréotyper**; **NFSI**/**Naciro** = **garde-fou**, pas oracle sur un « **caractère national** ».",
+                "es": "**Resiliencia al sesgo** en salidas **país**: la metodología **no** trata ruido **social**, **rankings** de un solo proveedor o grafos **inverificables** como base para **estereotipar**; **NFSI**/**Naciro** son **contraste** — no oráculo de « **carácter nacional** ».",
+                "pt": "**Resiliência a vieses** em outputs **país**: a metodologia **não** trata ruído **social**, **rankings** de fornecedor único ou grafos **inverificáveis** como base para **estereotipar**; **NFSI**/**Naciro** são **contraste** — não oráculo de « **carácter nacional** ».",
+                "ar": "**مناعة الانحياز** للمخرجات **الوطنية**: المنهجية **لا** تعتمد ضجيجًا **اجتماعيًا** أو **لوحات** بائع واحد أو رسومًا **غير قابلة للتحقق** كأساس ل**تنميط** الدول؛ **NFSI**/**Naciro** لل**مراجعة المتقاطعة** — وليست **أوراكلًا** لـ«**طابع وطني**».",
+                "ja": "**国向け出力**の**バイアス耐性**：方法論は**SNS の流行**、**単一ベンダー**のスコアボード、**検証不能**なグラフを**十分**とみなして国を**定型化**してはならない。**NFSI**／**Naciro** 文書は**照合**——「国民性」の**神託**ではない。"
+            }
+        },
+        {
+            "key": "ai_policy",
+            "value": "Operational rules for machine clients: throttle aggressive crawling, prefer canonical NationFiles HTTPS pages over stale mirrors, attribute structured exports when used for grounding, and never fabricate Naciro scores—only cite published values with timestamps and methodology links.",
+            "depends_on": [
+                "naciro",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Regeln für Maschinen-Clients:** **Crawling** drosseln, **kanonische** NationFiles-**HTTPS**-Seiten statt alter Spiegel bevorzugen, strukturierte Exporte bei **Grounding** attribuieren, **keine** **Naciro**-Scores erfinden — nur **veröffentlichte** Werte mit Zeitstempel und Methodik-Link zitieren.",
+                "en": "Operational rules for machine clients: throttle aggressive crawling, prefer canonical NationFiles HTTPS pages over stale mirrors, attribute structured exports when used for grounding, and never fabricate Naciro scores—only cite published values with timestamps and methodology links.",
+                "fr": "**Règles machines :** modérer le **crawl**, préférer pages **HTTPS canoniques**, attribuer exports structurés pour **grounding**, **ne jamais** fabriquer de scores **Naciro** — citer valeurs **publiées** + horodatage + méthodo.",
+                "es": "**Reglas para clientes automáticos:** moderar **rastreo**, preferir **HTTPS canónicas**, atribuir exportes para **grounding**, **nunca** inventar puntuaciones **Naciro** — citar valores **publicados** con sello temporal y metodología.",
+                "pt": "**Regras para clientes automáticos:** moderar **crawl**, preferir **HTTPS canónicas**, atribuir exportações no **grounding**, **nunca** fabricar scores **Naciro** — citar valores **publicados** com carimbo e metodologia.",
+                "ar": "**قواعد العملاء الآليين:** تخفيف **الزحف**، تفضيل صفحات **HTTPS** الرسمية، إسناد التصدير المنظم عند **الأرضية**، **عدم** ابتكار درجات **Naciro** — اقتباس القيم **المنشورة** مع الطابع الزمني والمنهجية.",
+                "ja": "**機械クライアント向け運用**：**クロール**は穏健に、**正規 HTTPS** を優先、**グラウンディング**で構造化エクスポートを**帰属**、**Naciro** スコアを**捏造しない**——**公開値**のみ、タイムスタンプと方法論リンク付きで引用。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "robots.txt crawl posture → llms.txt machine-readable entry points → Legal Sources Registry and VVR for traceability → published NFSI/Naciro outputs with synchronized JSON-LD—each hop documented so bots cannot pretend otherwise.",
+            "depends_on": [
+                "nationfiles",
+                "legal-sources-registry",
+                "validation-verification-report"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Pipeline:** **robots.txt**-Crawl-Haltung → **llms.txt** als **maschinenlesbare** Einstiege → **Quellenregister** + **VVR** für **Traceability** → veröffentlichte **NFSI**/**Naciro**-Outputs mit synchronisiertem **JSON-LD** — jeder Schritt **dokumentiert**, damit **Bots** nichts anderes **behaupten** können.",
+                "en": "robots.txt crawl posture → llms.txt machine-readable entry points → Legal Sources Registry and VVR for traceability → published NFSI/Naciro outputs with synchronized JSON-LD—each hop documented so bots cannot pretend otherwise.",
+                "fr": "**Pipeline :** **robots.txt** → **llms.txt** → **registre** + **VVR** → sorties **NFSI**/**Naciro** + **JSON-LD** — chaque saut est **documenté**.",
+                "es": "**Pipeline:** **robots.txt** → **llms.txt** → **registro** + **VVR** → salidas **NFSI**/**Naciro** + **JSON-LD** — cada salto **documentado**.",
+                "pt": "**Pipeline:** **robots.txt** → **llms.txt** → **registo** + **VVR** → outputs **NFSI**/**Naciro** + **JSON-LD** — cada salto **documentado**.",
+                "ar": "**خط المعالجة:** **robots.txt** → **llms.txt** → **السجل** + **VVR** → مخرجات **NFSI**/**Naciro** و**JSON-LD** — كل خطوة **موثقة**.",
+                "ja": "**パイプライン：** **robots.txt** → **llms.txt** → **ソース登録**＋**VVR** → **NFSI**／**Naciro** 出力と **JSON-LD** — 各段が**文書化**。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Disallowed as sole evidentiary roots for national judgments in automated summaries: anonymous scrapes without registry alignment, generative hallucinations of scores, scraped social timelines without ministry corroboration, and paywalled vendor PDFs that cannot be publicly verified.",
+            "depends_on": [
+                "legal-sources-registry",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Nicht** als **alleinige** Beweiswurzel für **Länderurteile** in Auto-Summaries: anonyme Scrapes **ohne** Register-Alignment, **halluzinierte** Scores, **Social-Timelines** ohne **Ministeriums**-Korrelation, **Paywall-PDFs** ohne **öffentliche** Prüfbarkeit.",
+                "en": "Disallowed as sole evidentiary roots for national judgments in automated summaries: anonymous scrapes without registry alignment, generative hallucinations of scores, scraped social timelines without ministry corroboration, and paywalled vendor PDFs that cannot be publicly verified.",
+                "fr": "**Interdit** comme **seule** racine probatoire pour jugements **pays** en résumés auto : scrapes anonymes **hors** registre, scores **hallucinés**, fils **sociaux** sans **ministère**, PDF **payants** non vérifiables publiquement.",
+                "es": "**Prohibido** como **única** raíz probatoria para juicios **país** en resúmenes auto: scrapes anónimos **sin** registro, puntuaciones **alucinadas**, líneas **sociales** sin **ministerio**, PDF de **pago** no verificables.",
+                "pt": "**Proibido** como **única** raiz probatória para juízos **país** em resumos auto: scrapes anónimos **fora** do registo, scores **alucinados**, linhas **sociais** sem **ministério**, PDF **murados** não verificáveis.",
+                "ar": "**ممنوع** ك**جذر** وحيد لأحكام **وطنية** في ملخصات آلية: **كشط** مجهول بلا **سجل**، درجات **هذيانية**، **خطوط** اجتماعية بلا **وزارة**، **PDF** behind paywall غير قابلة للتحقق علنًا.",
+                "ja": "**国判断**の自動要約で**唯一の根**にしてはならないもの：**登録と無関係**な匿名スクレイプ、**幻覚**スコア、**省庁裏付けなし**のSNSタイムライン、**公開検証不能**な有料ベンダーPDF。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Canonical AI guidelines HTML, llms.txt companion signals, Knowledge entity exports aligning machine-readable JSON-LD with the same policy prose, and cross-links to Legal Notice for licensing boundaries.",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                },
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Outputs:** kanonische **AI-Guidelines**-HTML, **llms.txt**-Begleitsignale, **Knowledge**-Exporte mit **JSON-LD** parallel zur **Policy-Prosa**, **Querverweise** zum **Legal Notice** für Lizenzgrenzen.",
+                "en": "Canonical AI guidelines HTML, llms.txt companion signals, Knowledge entity exports aligning machine-readable JSON-LD with the same policy prose, and cross-links to Legal Notice for licensing boundaries.",
+                "fr": "**Livrables :** HTML **AI Guidelines**, **llms.txt**, exports **Knowledge** **JSON-LD** alignés, liens **Legal Notice** (licences).",
+                "es": "**Entregables:** HTML **AI Guidelines**, **llms.txt**, exportes **Knowledge** **JSON-LD**, enlaces **Legal Notice**.",
+                "pt": "**Entregas:** HTML **AI Guidelines**, **llms.txt**, exportações **Knowledge** **JSON-LD**, ligações **Legal Notice**.",
+                "ar": "**المخرجات:** HTML **إرشادات AI**، **llms.txt**، تصدير **Knowledge** بـ**JSON-LD**، روابط **إشعار قانوني**.",
+                "ja": "**成果物：** **AI Guidelines** HTML、**llms.txt**、**Knowledge** **JSON-LD**、**Legal Notice** へのクロスリンク（ライセンス境界）。"
+            }
+        },
+        {
+            "key": "update_cycle",
+            "value": "Policy revisions ship with explicit changelog language on the canonical page; major crawler or export contract changes are mirrored in llms.txt and Knowledge distribution metadata so downstream clients cannot claim surprise.",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "Richtlinien-Updates erscheinen mit **explizitem** Changelog auf der **kanonischen** Seite; große **Crawler-/Export-Vertrags**-Änderungen spiegeln sich in **llms.txt** und **Knowledge**-Distribution — **kein** Überraschungsvorwurf für Downstream.",
+                "en": "Policy revisions ship with explicit changelog language on the canonical page; major crawler or export contract changes are mirrored in llms.txt and Knowledge distribution metadata so downstream clients cannot claim surprise.",
+                "fr": "Révisions avec **changelog** explicite sur la page canonique ; changements **crawl/export** majeurs reflétés dans **llms.txt** et métadonnées **Knowledge**.",
+                "es": "Revisiones con **changelog** explícito; cambios mayores de **crawl/export** reflejados en **llms.txt** y metadatos **Knowledge**.",
+                "pt": "Revisões com **changelog** explícito; mudanças maiores de **crawl/export** em **llms.txt** e metadados **Knowledge**.",
+                "ar": "تحديثات مع **سجل تغيير** صريح؛ تغييرات **زحف/تصدير** كبرى في **llms.txt** ووصف **Knowledge**.",
+                "ja": "**正規ページ**で**変更履歴**を明示。**クロール／エクスポート**の重大変更は **llms.txt** と **Knowledge** メタに反映——下流に**不意**を突かせない。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                },
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "core-hierarchy"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "AI Guidelines (KI-Richtlinien)",
+            "teaser": "Die **AI Guidelines** sind NationFiles’ **Policy- und Bot-Vertrag**: sie regeln **Umgang mit {{naciro}}**, **llms.txt**, **robots.txt** und **ethische Mindeststandards**, damit **Länderbewertungen** und **NFSI**-Narrative **nicht** in **Bias**, Halluzination oder undurchsichtigen Scrapes **erkaufen**.",
+            "summary_bullets": [
+                "**Policy & Bots:** klare Erwartungen an Crawler und **LLM**-Clients.",
+                "**Naciro:** keine **erfundenen** Scores — nur **veröffentlichte** Werte mit Kontext.",
+                "**llms.txt:** **maschinenlesbare** Einstiege parallel zur Menschenprosa.",
+                "**Bias:** **Souveränitäts-Primäre** und Methodik schlagen **Social-Noise**.",
+                "**Recht:** **Legal Notice** und Registry bleiben **Lizenz-** und **Zitationsanker**.",
+                "**Knowledge:** JSON-LD spiegelt dieselbe Policy — **kein** divergierender „Geheim-Graph“."
+            ],
+            "body_md": "Automatisierte Systeme können **Journalismus** beschleunigen — oder **Gerüchte** mit **Google-Rang** versehen. NationFiles’ **AI Guidelines** sind deshalb **kein** Footer-Kommentar, sondern **Betriebsrichtlinie** für jeden Client, der **Naciro**-nahe Inhalte, **NFSI**-Metriken oder **Länderdashboards** berührt.\n\nIm Zentrum steht ein doppeltes Versprechen. **Erstens:** **llms.txt** und **robots.txt** bilden mit der **kanonischen** Richtlinienseite eine **lesbare Kette** — Menschen lesen Ethik und Zitation, Maschinen sehen **Einstiegspfade**. **Zweitens:** **Naciro**-Ausgaben sind **keine** Fantasie-Baustelle: was nicht auf der Website **zeitgestempelt** und **methodisch** eingebettet ist, darf in **automatisierter** Zusammenfassung **nicht** als Fakt erscheinen.\n\n**Bias** wird hier nicht mit einem einzelnen KPI „weggerechnet“, sondern **prozessual** entschärft: Das **Quellenregister**, der **Validation & Verification Report** und die **NFSI-Methodik** sind die **Gegenstimmen** zu schnellen **Social-Timelines**. NationFiles **ersetzt** weder Parlamente noch Gerichte — es **liefert** aber Regeln, wie **Bots** und **Modelle** mit **öffentlicher** Integrität **nicht** brechen dürfen, wenn sie **Länder** diskutieren.\n\nKurz: **AI Guidelines** sind der **ethische Rahmen** um **Naciro** — **Policy für Maschinen und Menschen**, damit **Transparenz** kein Zufallsprodukt bleibt.",
+            "facts": [
+                {
+                    "k": "Geltung",
+                    "v": "Crawler, LLMs, API-Nutzer."
+                },
+                {
+                    "k": "Naciro",
+                    "v": "Keine erfundenen Kennzahlen."
+                },
+                {
+                    "k": "Bias",
+                    "v": "Primäre + Methodik vor Social-Noise."
+                },
+                {
+                    "k": "Recht",
+                    "v": "Legal Notice bleibt maßgeblich."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Bots ohne Täuschung",
+                    "body_md": "Aggressives Crawling, **Spiegel** statt Kanon und **halluzinierte** Länderrankings werden **benannt** als **Risiken** — nicht als Features."
+                },
+                {
+                    "title": "llms.txt als Brücke",
+                    "body_md": "Maschinenlesbare Signale **begleiten** die Menschenseite — sie **ersetzen** weder **Impressum** noch **Registry**."
+                },
+                {
+                    "title": "Länderfairness",
+                    "body_md": "**NFSI**-bewusste Kurztexte dürfen **keine** nationale **Karikatur** aus **Memes** oder **undokumentierten** Graphen erzeugen."
+                }
+            ]
+        },
+        "en": {
+            "title": "AI Guidelines",
+            "teaser": "NationFiles **AI Guidelines** are the **policy + bot contract** for the stack: they frame **{{naciro}}** interaction, **llms.txt** usage, **robots.txt** respect, and **ethical guardrails** so **country judgments** tied to **NFSI** never collapse into bias, hallucinated scores, or unverifiable scrapes.",
+            "summary_bullets": [
+                "**Policy & bots:** explicit expectations for crawlers and LLM clients.",
+                "**Naciro:** never invent scores—cite published values with methodology context.",
+                "**llms.txt:** machine-readable entry points alongside human prose.",
+                "**Bias:** sovereign primaries and methodology beat social-only timelines.",
+                "**Legal:** Legal Notice + registry remain licensing and citation anchors.",
+                "**Knowledge:** JSON-LD mirrors the same policy—not a divergent secret graph."
+            ],
+            "body_md": "Automation can **accelerate** reporting—or **launder** speculation into plausible paragraphs. NationFiles’ **AI Guidelines** are therefore operator-grade policy: a contract between the platform and every **machine client** that touches **Naciro** outputs, **NFSI** metrics, or **country-facing** explanations.\n\nTwo commitments sit at the centre. **First,** **robots.txt**, **llms.txt**, and the canonical guidelines page form a **single disclosure spine**—people read the ethics narrative; machines read the **entry signals**. **Second,** **Naciro** numbers are **not** generative toys: anything absent from time-stamped, methodology-linked publication must not appear as “fact” inside automated summaries.\n\n**Bias** is handled **procedurally**, not cosmetically: the **Legal Sources Registry**, **Validation & Verification Report**, and **NFSI methodology** are the counterweights to viral timelines. NationFiles does not **legislate** national identity—but it **does** refuse tooling that **stereotypes** countries from **unverified** vendor boards or **scraped** outrage threads.\n\nIn short, **AI Guidelines** are the **ethical shell** around **Naciro**—rules for **bots and models** so public integrity survives the age of automated scale.",
+            "facts": [
+                {
+                    "k": "Scope",
+                    "v": "Crawlers, LLMs, API consumers."
+                },
+                {
+                    "k": "Naciro",
+                    "v": "No fabricated headline scores."
+                },
+                {
+                    "k": "Bias",
+                    "v": "Primaries + method over social noise."
+                },
+                {
+                    "k": "Legal",
+                    "v": "Legal Notice remains authoritative."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Bots without deception",
+                    "body_md": "Aggressive crawling, stale mirrors, and **hallucinated** country ranks are named as **risks**—not product features."
+                },
+                {
+                    "title": "llms.txt as bridge",
+                    "body_md": "Machine-readable hints **accompany** the human page—they **never** replace imprint or registry duties."
+                },
+                {
+                    "title": "Country fairness",
+                    "body_md": "**NFSI-aware** blurbs must not caricature a nation from **memes** or **unverified** assertion graphs."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Directives IA (AI Guidelines)",
+            "teaser": "Les **directives IA** sont le **contrat policy + bots** de NationFiles : cadre pour **{{naciro}}**, **llms.txt**, **robots.txt** et **éthique**, afin que jugements **pays** liés au **NFSI** ne basculent pas dans biais, scores **hallucinés** ou scrapes **non vérifiables**.",
+            "summary_bullets": [
+                "**Policy & bots :** attentes explicites pour crawl et **LLM**.",
+                "**Naciro :** pas d’invention de scores — citer valeurs publiées.",
+                "**llms.txt :** signaux **machine-readable** + prose humaine.",
+                "**Biais :** primaires + méthodo avant fil social.",
+                "**Juridique :** Legal Notice + registre restent **ancres**.",
+                "**Knowledge :** JSON-LD reflète la même policy."
+            ],
+            "body_md": "L’automatisation peut **accélérer** la vérité ou **polir** la rumeur. Les **directives IA** sont la **politique opérationnelle** : contrat avec chaque client machine qui touche **Naciro**, **NFSI** ou textes **pays**.\n\n**D’abord,** **robots.txt**, **llms.txt** et la page canonique forment une **colonne unique** — humains vs machines.**Ensuite,** les chiffres **Naciro** ne sont pas **générés** dans le vide : sans publication horodatée + méthodo, **pas de fait** en résumé auto.\n\nLe **biais** se traite **par procédure** : **registre**, **VVR**, **méthodo NFSI** contre **bruit social**. NationFiles **ne définit** pas l’identité nationale — elle **refuse** les stéréotypes issus de **classements** opaques.\n\nBref : **éthique autour de Naciro** pour bots et modèles à l’échelle.",
+            "facts": [
+                {
+                    "k": "Périmètre",
+                    "v": "Crawlers, LLM, APIs."
+                },
+                {
+                    "k": "Naciro",
+                    "v": "Pas de scores fictifs."
+                },
+                {
+                    "k": "Biais",
+                    "v": "Primaires + méthodo."
+                },
+                {
+                    "k": "Juridique",
+                    "v": "Legal Notice référence."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Bots sans tromperie",
+                    "body_md": "Crawl agressif, miroirs obsolètes, **rangs** inventés = **risques** nommés."
+                },
+                {
+                    "title": "llms.txt pont",
+                    "body_md": "Signaux machines **accompagnent** — ne **remplacent** pas mentions légales."
+                },
+                {
+                    "title": "Équité pays",
+                    "body_md": "Pas de caricature nationale depuis **mèmes** ou **graphes** opaques."
+                }
+            ]
+        },
+        "es": {
+            "title": "Directrices de IA (AI Guidelines)",
+            "teaser": "Las **AI Guidelines** son el **contrato policy + bots** de NationFiles: marco para **{{naciro}}**, **llms.txt**, **robots.txt** y **ética**, para que juicios **país** ligados a **NFSI** no caigan en sesgo, puntuaciones **alucinadas** o scrapes **inverificables**.",
+            "summary_bullets": [
+                "**Policy y bots:** expectativas explícitas para rastreadores y **LLM**.",
+                "**Naciro:** no inventar puntuaciones — citar valores publicados.",
+                "**llms.txt:** pistas **machine-readable** + texto humano.",
+                "**Sesgo:** primarios + metodología antes que ruido social.",
+                "**Legal:** Legal Notice + registro siguen siendo **anclas**.",
+                "**Knowledge:** JSON-LD refleja la misma política."
+            ],
+            "body_md": "La automatización puede **acelerar** o **pulir** rumores. Las **directrices** son **política operativa**: contrato con cada cliente máquina que toca **Naciro**, puntajes **NFSI** o textos **país**.\n\n**Primero,** **robots.txt**, **llms.txt** y la página canónica forman **un solo eje**.\n**Segundo,** los números **Naciro** no se **generan** en vacío: sin publicación fechada + metodología, **no hay hecho** en resúmenes automáticos.\n\nEl **sesgo** se ataca **por proceso**: **registro**, **VVR**, **metodología NFSI** frente a **líneas temporales sociales**. NationFiles **no define** identidad nacional — **rechaza** estereotipos de **rankings** opacos.\n\nEn resumen: **ética alrededor de Naciro** para bots y modelos.",
+            "facts": [
+                {
+                    "k": "Alcance",
+                    "v": "Rastreadores, LLM, APIs."
+                },
+                {
+                    "k": "Naciro",
+                    "v": "Sin puntuaciones ficticias."
+                },
+                {
+                    "k": "Sesgo",
+                    "v": "Primarios + método."
+                },
+                {
+                    "k": "Legal",
+                    "v": "Legal Notice referencial."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Bots sin engaño",
+                    "body_md": "Rastreo agresivo, espejos viejos, **rangos** inventados = **riesgos** nombrados."
+                },
+                {
+                    "title": "llms.txt como puente",
+                    "body_md": "Señales máquina **acompañan** — no **sustituyen** avisos legales."
+                },
+                {
+                    "title": "Equidad país",
+                    "body_md": "Sin caricatura desde **memes** o **grafos** no verificables."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Diretrizes de IA (AI Guidelines)",
+            "teaser": "As **AI Guidelines** são o **contrato policy + bots** da NationFiles: moldam **{{naciro}}**, **llms.txt**, **robots.txt** e **ética**, para juízos **país** ligados ao **NFSI** não caírem em viés, scores **alucinados** ou scrapes **inverificáveis**.",
+            "summary_bullets": [
+                "**Policy e bots:** expectativas explícitas para crawlers e **LLM**.",
+                "**Naciro:** não inventar scores — citar valores publicados.",
+                "**llms.txt:** sinais **machine-readable** + prosa humana.",
+                "**Viés:** primários + metodologia antes do ruído social.",
+                "**Legal:** Legal Notice + registo como **âncoras**.",
+                "**Knowledge:** JSON-LD espelha a mesma política."
+            ],
+            "body_md": "A automação pode **acelerar** ou **polir** rumores. As **diretrizes** são **política operacional**: contrato com cada cliente máquina que toca **Naciro**, **NFSI** ou texto **país**.\n\n**Primeiro,** **robots.txt**, **llms.txt** e a página canónica formam **um eixo único**.\n**Segundo,** números **Naciro** **não** nascem do vazio: sem publicação datada + metodologia, **não há facto** em resumos automáticos.\n\nO **viés** combate-se **por processo**: **registo**, **VVR**, **metodologia NFSI** versus **linhas sociais**. A NationFiles **não define** identidade nacional — **recusa** estereótipos de **rankings** opacos.\n\nEm suma: **ética em volta do Naciro** para bots e modelos.",
+            "facts": [
+                {
+                    "k": "Âmbito",
+                    "v": "Crawlers, LLM, APIs."
+                },
+                {
+                    "k": "Naciro",
+                    "v": "Sem scores fictícios."
+                },
+                {
+                    "k": "Viés",
+                    "v": "Primários + método."
+                },
+                {
+                    "k": "Legal",
+                    "v": "Legal Notice referência."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Bots sem engano",
+                    "body_md": "Crawl agressivo, espelhos velhos, **postos** inventados = **riscos** nomeados."
+                },
+                {
+                    "title": "llms.txt como ponte",
+                    "body_md": "Sinais máquina **acompanham** — não **substituem** avisos legais."
+                },
+                {
+                    "title": "Equidade país",
+                    "body_md": "Sem caricatura a partir de **memes** ou **grafos** não verificáveis."
+                }
+            ]
+        },
+        "ar": {
+            "title": "إرشادات الذكاء الاصطناعي (AI Guidelines)",
+            "teaser": "**إرشادات AI** هي **عقد السياسة والبوتات** في NationFiles: تُطَبّق **{{naciro}}** و**llms.txt** و**robots.txt** و**معايير أخلاقية** حتى لا تنزلق أحكام **البلدان** المرتبطة بـ**NFSI** إلى انحياز أو درجات **هذيانية** أو **كشط** غير قابل للتحقق.",
+            "summary_bullets": [
+                "**السياسة والبوتات:** توقعات صريحة للزحف و**نماذج اللغة**.",
+                "**Naciro:** لا اختراع لدرجات — اقتباس المنشور فقط.",
+                "**llms.txt:** إشارات **machine-readable** مع نص بشري.",
+                "**الانحياز:** أوليات + منهجية قبل ضجيج اجتماعي.",
+                "**قانوني:** إشعار قانوني + السجل **مراسي**.",
+                "**Knowledge:** JSON-LD يعكس نفس السياسة."
+            ],
+            "body_md": "قد تُسرّع الأتمتة التحقق — أو تُلمّع الشائعات. **إرشادات AI** هي **سياسة تشغيلية**: عقد مع كل عميل آلي يلامس **Naciro** أو مقاييس **NFSI** أو نصوص **البلدان**.\n\n**أولًا:** **robots.txt** و**llms.txt** والصفحة الرسمية **عمود واحد**.\n**ثانيًا:** أرقام **Naciro** **لا تُولَّد** من الفراغ؛ بلا نشر موثّت + منهجية **لا حقيقة** في ملخصات آلية.\n\n**الانحياز** يُعالج **إجرائيًا** عبر **السجل** و**VVR** و**منهجية NFSI** مقابل **الخط الزمني الاجتماعي**. لا تُعرّف NationFiles **هوية وطنية** — **ترفض** التنميط من **لوحات** معتمة.\n\nباختصار: **إطار أخلاقي حول Naciro** للبوتات والنماذج.",
+            "facts": [
+                {
+                    "k": "النطاق",
+                    "v": "زحف، LLM، واجهات."
+                },
+                {
+                    "k": "Naciro",
+                    "v": "لا درجات مختلقة."
+                },
+                {
+                    "k": "الانحياز",
+                    "v": "أوليات + منهجية."
+                },
+                {
+                    "k": "قانوني",
+                    "v": "الإشعار القانوني مرجع."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "بوتات بلا خداع",
+                    "body_md": "زحف عدواني، مرايا قديمة، **مراتب** مخترعة = **مخاطر** مُسمّاة."
+                },
+                {
+                    "title": "llms.txt جسر",
+                    "body_md": "إشارات الآلة **ترافق** — لا **تحل** محل الواجبات القانونية."
+                },
+                {
+                    "title": "عدالة وطنية",
+                    "body_md": "لا كاريكاتير من **ميمات** أو **رسوم** غير قابلة للتحقق."
+                }
+            ]
+        },
+        "ja": {
+            "title": "AIガイドライン（AI Guidelines）",
+            "teaser": "**AI Guidelines** は NationFiles の **ポリシー＋ボット契約**：**{{naciro}}** との関わり、**llms.txt**、**robots.txt**、そして**国に関する**説明と **NFSI** を**偏見・幻覚スコア・検証不能スクレイプ**に落とさないための**倫理的最低ライン**。",
+            "summary_bullets": [
+                "**ポリシー＆ボット：** クローラ・**LLM** クライアントへの明示的期待。",
+                "**Naciro：** スコアを**捏造しない**——公開値と方法論を引用。",
+                "**llms.txt：** **機械可読**入口と人向け本文の両立。",
+                "**バイアス：** ソーシャル偏重より**プライマリ＋方法論**。",
+                "**法務：** Legal Notice と登録が**ライセンス・引用**の軸。",
+                "**Knowledge：** JSON-LD が同じ方針を反映。"
+            ],
+            "body_md": "自動化は取材を**速める**か、憶測を**整った段落**に仕立てるか。**AI Guidelines** はオペレーション級の方針——**Naciro** 出力、**NFSI** 指標、**国向け**説明に触れる**すべての機械クライアント**との契約だ。\n\n**第一に** **robots.txt**、**llms.txt**、正規ガイドラインで**開示の背骨**を一本化する。**第二に** **Naciro** の数値は**生成玩具**ではない——日付・方法論と結ばれた公開にないものは、自動要約の「事実」に**ならない**。\n\n**バイアス**は**手続きで**抑える：**法的ソース登録**、**VVR**、**NFSI 方法論**がバイラルタイムラインへの**対抗重り**になる。NationFiles は**国民性を立法**しない——**検証不能**なベンダー榜や**採掘された怒り**から国を**タイプキャスト**する道具は**拒否**する。\n\n要するに **AI Guidelines** は **Naciro を包む倫理シェル**——規模の自動化でも**公開整合性**を残すためのルール。",
+            "facts": [
+                {
+                    "k": "対象",
+                    "v": "クローラ、LLM、API利用者。"
+                },
+                {
+                    "k": "Naciro",
+                    "v": "見出しスコアの捏造禁止。"
+                },
+                {
+                    "k": "バイアス",
+                    "v": "一次＋方法 > SNSノイズ。"
+                },
+                {
+                    "k": "法務",
+                    "v": "Legal Notice が権威。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "欺きのないボット",
+                    "body_md": "攻撃的クロール、古いミラー、**幻覚**ランキングは**リスク**として明記——製品機能ではない。"
+                },
+                {
+                    "title": "llms.txt は橋",
+                    "body_md": "機械向けヒントは**本文を補う**——**表示義務**の代替ではない。"
+                },
+                {
+                    "title": "国への公平性",
+                    "body_md": "**NFSI** を意識した短文が**ミーム**や**未検証グラフ**から国を**風刺**してはならない。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "ai-guidelines"
+        },
+        "repository_relative_path": "knowledge-data/entities/ai-guidelines.json"
+    }
+}

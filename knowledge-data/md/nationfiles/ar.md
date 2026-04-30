@@ -8,35 +8,43 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/nationfiles/ar.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/nationfiles/"
+nf_canonical_html_url: "https://nationfiles.com/ar/knowledge/entity/nationfiles/"
 nf_markdown_lang_file: "ar"
 ---
-# NationFiles (النظام)
+# NationFiles — منصة استخبارات جيوسياسية
 
-## التعريف
+## ما هي NationFiles
 
-**NationFiles** هو **الوجود العام على الويب ونظام المعلومات المجمّع** الذي يقدّم محتوى الدول، تحليلات NFSI، تصديرات المعرفة، ومسارات بلاحقة لغة. نوع Schema.org `WebSite` يعبّر عن نقطة دخول ثابتة و**مسارات محددة** (`/{lang}/…`).
+**NationFiles** **منصة تحليل واستخبارات جيوسياسية**. تعالج **الدول وتدفقات البيانات العالمية** — إشارات اقتصادية وسوقية، معلومات أمنية وميدانية، أخبار ومشاعر — وتحولها إلى **سطح تشغيل واحد** لقراءة العالم: ملفات دول، خرائط ورادار، لوحات معلومات، مؤشرات، وحيث يُفعَّل— ملخصات ونوافذ توقع. الفكرة دمج **عمق مرجعي** مع **مؤشرات تُحدَّث باستمرار**.
 
-## اللغات
+الموقع العام (`/{lang}/…`) هو **المنتج**. خلفه مسارات بيانات موثقة (ومنها DataSourceConnector) ومحرك **Naciro** يغذي النقاط والرسوم والسياق.
 
-البادئات المرجعية: **`de`, `en`, `fr`, `es`, `pt`, `ar`, `ja`**.
+**وحدة البيانات:** ملفات **{{nationfile-json}}** الموحدة (machine-readable) أساس مشترك للمؤشرات والرسوم والتصدير. **الأدوار:** NationFiles = النظام، **Naciro** = المحرك، **NFSI** = المؤشر الرئيسي، **{{nationfile-json}}** = التنسيق القياسي.
 
-## الربط التشغيلي
+## ماذا تقدم المنصة عملياً
 
-- **المشغّل**: `neawolf-media-group`.
-- **المحرك**: `naciro` (`system_engine`).
-- **المقياس**: `nfsi` (`core_metric`).
+- **تحليل الدول:** ملفات منظمة وقابلة للمقارنة للدول والمناطق — متعدد اللغات.
+- **سياق مكاني:** خرائط ورادار لقراءة المخاطر والمؤشرات **جغرافياً**.
+- **استقرار ومخاطر قابلان للقياس:** **NationFiles Stability Index (NFSI)** يختزل مدخلات موثقة في مقياس 0–100؛ المنهجية توضح الطبقات والحدود.
+- **بيانات مواكبة للوضع:** إعادة حساب دورية وفق جدول موثق — للمحللين والإعلام والمؤسسات.
+- **طبقة تنبؤية (حسب المنتج):** آجال قصيرة (مثل 24 ساعة / 7 أيام) حيث تعرضها المنصة — وليس ضماناً لكل حدث.
 
-## المخرجات (حسب السمات)
+## دور **Naciro** و**NFSI**
 
-لوحات دول، مؤشر NFSI، إشارات متعددة الآفاق، تصديرات آلة — الكيان يصف **أدوار النظام** لا كل واجهة فرعية.
+- **Naciro** هو **محرك التقييم بالذكاء الاصطناعي**: يجمع إشارات المصادر المتصلة، يطبّع ويوزن وفق المنهجية المنشورة؛ يغذي NFSI والتقارير.
+- **NFSI** هو **المؤشر المركزي للاستقرار / المخاطر الجيوسياسية** على مستوى الدولة (ومجمّع عالمي) — مؤشر بقواعد موثقة لا درجة رأي تحريري.
 
-## السياسة
+## ما ليست عليه NationFiles
 
-ملف **`llms.txt`** يحدّ قواعد الزحف في الجذر.
+ليست استثماراً أو سفراً شخصياً؛ ليست جهة حكومية؛ لا تحل محل التقرير الميداني — إنها **منتج بيانات وتحليل** بسلسلة إمداد موثقة للعلن.
 
-## مراجع
+## الشفافية
 
-- [llms.txt](https://nationfiles.com/llms.txt)
-- [Countries](https://nationfiles.com/ar/countries/)
-- [Knowledge](https://nationfiles.com/ar/knowledge/)
+المنهجية (**Validation & Verification Report**)، سجل المصادر، الصفحات القانونية. للأنظمة الآلية: **`llms.txt`**.
+
+## روابط
+
+- [مركز الدول](https://nationfiles.com/en/countries/)
+- [منهجية NFSI](https://nationfiles.com/en/company/nfsi/)
+- [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
+- [مصادر](https://nationfiles.com/en/legal/sources/)

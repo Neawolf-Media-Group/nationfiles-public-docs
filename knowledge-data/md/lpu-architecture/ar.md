@@ -8,29 +8,29 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/lpu-architecture/ar.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/lpu-architecture/"
+nf_canonical_html_url: "https://nationfiles.com/ar/knowledge/entity/lpu-architecture/"
 nf_markdown_lang_file: "ar"
 ---
-# بنية LPU
+# LPU Architecture — أساس حساب لاستدلال اللحظي
 
-## الدور
+## ماذا تعني LPU هنا
 
-**LPU Architecture** هي **طبقة عتاد استدلال مخصّصة** تحت محرك Naciro: **شكل حتمي وزمن انتقال منخفض** لمسارات الإشارات التي تغذي أعباء NFSI. النوع **`CreativeWork`** مع DOI يؤطر الصفحة كـ **وثيقة بنية** لا ورقة منتج فورية.
+**LPU Architecture** تسمّي **طبقة استدلال عالية الأداء** تحت محرك Naciro: تصف كيف توفر NationFiles **تنفيذاً حتمياً منخفض الزمن الكامن** للمسارات التي تغذي **NFSI** ونصوص اللوحات وال**تحليل الجيوسياسي اللحظي**. حيث تكون مهام السحابة العامة غير متوقعة، تهدف هذه الطبقة إلى **قاعدة حساب قابلة للتخطيط** لدرجات وملخصات **ثابتة وقابلة للتكرار**.
 
-## الزمن
+الوثائق العامة تذكر **أقل من 50 مللي ثانية** زمن استدلال في الإعداد المرجعي — **هدف هندسة** لا قياساً في هذه الصفحة.
 
-`inference_latency`: **< 50 ms** (هدف موثّق).
+## ماذا تقدم
 
-## DOI
+- **إنتاجية:** تسجيل عالي التردد دون أن يصبح التحليل عنق الزجاجة.
+- **حتمية:** نتائج قابلة للمقارنة عبر الزمن — أساسي لمؤشر مؤسسي.
+- **الربط بـ Naciro:** LPU هي **أساس الأجهزة/البنية**؛ Naciro هو **المنطق**؛ NFSI **الدرجة الظاهرة**.
 
-**10.5281/zenodo.19774594**.
+## مرجع
 
-## السياق
+DOI **10.5281/zenodo.19774594**.
 
-المحرك `naciro`، المقياس `nfsi`، النشر عبر `nationfiles`.
-
-## مراجع
+## مصادر
 
 - [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
 - [منهجية NFSI](https://nationfiles.com/en/company/nfsi/)
-- [DOI](https://doi.org/10.5281/zenodo.19774594)
+- [DOI LPU](https://doi.org/10.5281/zenodo.19774594)

@@ -8,35 +8,43 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/nationfiles/fr.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/nationfiles/"
+nf_canonical_html_url: "https://nationfiles.com/fr/knowledge/entity/nationfiles/"
 nf_markdown_lang_file: "fr"
 ---
-# NationFiles (système)
+# NationFiles — plateforme d’intelligence géopolitique
 
-## Définition
+## Ce qu’est NationFiles
 
-**NationFiles** est la **présence web publique et le système d’information agrégé** qui diffuse les contenus pays, les analyses NFSI, les exports Knowledge et les routes préfixées par langue. Le type Schema.org `WebSite` marque une entrée stable avec **chemins déterministes** (`/{lang}/…`).
+**NationFiles** est une **plateforme d’analyse et d’intelligence géopolitique**. Elle traite **les pays et les flux de données mondiaux** — signaux économiques et de marché, informations de sécurité et de situation, actualités et sentiment — et les transforme en **surface opérationnelle unique** pour lire le monde : dossiers pays, cartes et radar, tableaux de bord, indicateurs, et — lorsque c’est activé — synthèses et fenêtres prévisionnelles. L’objectif est un hybride entre **profondeur encyclopédique** et **indicateurs régulièrement actualisés**.
 
-## Langues
+Le site public (`/{lang}/…`) est le **produit**. En coulisse, des pipelines documentés (dont via DataSourceConnector) et le moteur **Naciro** alimentent scores, graphiques et contexte.
 
-Préfixes canoniques : **`de`, `en`, `fr`, `es`, `pt`, `ar`, `ja`**. Le maillage hreflang est global dans les gabarits.
+**Unité de données :** les profils standardisés **{{nationfile-json}}** (machine-readables) servent de base commune aux indicateurs, graphiques et exports. **Rôles :** NationFiles = système global, **Naciro** = moteur, **NFSI** = indice principal, **{{nationfile-json}}** = format canonique des profils.
 
-## Liens opérationnels
+## Ce que la plateforme livre concrètement
 
-- **Opérateur** : `neawolf-media-group`.
-- **Moteur** : `naciro` (`system_engine`).
-- **Métrique** : `nfsi` (`core_metric`).
+- **Analyse pays :** profils structurés et comparables pour États et régions — multilingue.
+- **Contexte spatial :** cartes et vues radar pour lire risques et indicateurs **géographiquement**.
+- **Stabilité et risque mesurables :** l’**indice NationFiles Stability Index (NFSI)** résume des entrées documentées sur une échelle 0–100 ; la méthodologie précise les couches et les limites.
+- **Données de situation à jour :** recalcul régulier selon un rythme documenté — pour analystes, médias et institutions.
+- **Couche prédictive (selon l’offre) :** horizons courts (p. ex. 24h / 7 jours) là où le produit les expose — pas une garantie sur chaque événement.
 
-## Produits (selon attributs)
+## Rôle de **Naciro** et du **NFSI**
 
-Tableaux de bord pays, indice NFSI, signaux multi‑horizons, exports machines — la fiche décrit des **rôles système**, pas chaque composant UI.
+- **Naciro** est le **moteur d’évaluation assistée par IA** : agrégation des signaux des sources connectées, normalisation et pondération selon la méthode publiée ; alimentation du NFSI et des reportings.
+- Le **NFSI** est l’**indicateur central de stabilité / risque géopolitique** au niveau pays (et agrégat mondial) — un indice régi par des règles documentées, pas une note éditoriale.
 
-## Politique
+## Ce que NationFiles n’est pas
 
-**`llms.txt`** fixe les règles pour robots à la racine.
+Pas de conseil personnel en investissement ou voyage ; pas un organe étatique ; pas un substitut au reportage de terrain — un **produit données et analyse** avec chaîne documentée vers l’extérieur.
 
-## Références
+## Transparence
 
-- [llms.txt](https://nationfiles.com/llms.txt)
-- [Countries](https://nationfiles.com/fr/countries/)
-- [Knowledge](https://nationfiles.com/fr/knowledge/)
+Méthodologie (**Validation & Verification Report**), registre des sources, pages légales. Pour systèmes automatisés : **`llms.txt`**.
+
+## Pour aller plus loin
+
+- [Hub pays](https://nationfiles.com/en/countries/)
+- [Méthodologie NFSI](https://nationfiles.com/en/company/nfsi/)
+- [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
+- [Sources](https://nationfiles.com/en/legal/sources/)

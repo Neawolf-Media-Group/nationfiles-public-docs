@@ -1,0 +1,631 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "country-compare",
+    "kind": "entity",
+    "type": "SoftwareApplication",
+    "status": "active",
+    "updated_utc": "2026-05-04T12:00:00Z",
+    "topics": [
+        "country-compare",
+        "benchmarking",
+        "nfsi",
+        "gdp",
+        "region",
+        "sentiment",
+        "portfolio",
+        "risk",
+        "export"
+    ],
+    "aliases": [
+        "Ländervergleich",
+        "Country compare",
+        "NationFiles Ländervergleich",
+        "pairwise country benchmark"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles pairwise country-compare surface: aligns publicly documented economic proxies (GDP-class indicators where shown), ISO/UN-style regional grouping, NFSI headline context, and sentiment-bearing news strands when surfaced—built for benchmarking and machine export (CSV/JSON) without offering investment, hedging, or legal advice.",
+            "depends_on": [
+                "nationfiles",
+                "country-intelligence-dashboard",
+                "nfsi",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Country Intelligence Dashboard",
+                    "url": "https://nationfiles.com/en/knowledge/entity/country-intelligence-dashboard/"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles pairwise country-compare surface: aligns publicly documented economic proxies (GDP-class indicators where shown), ISO/UN-style regional grouping, NFSI headline context, and sentiment-bearing news strands when surfaced—built for benchmarking and machine export (CSV/JSON) without offering investment, hedging, or legal advice.",
+                "de": "**Ländervergleich NationFiles (paarweise):** richtet **öffentlich** ausgewiesene ökonomische Proxies (**BIP-nahe** Kennzahlen wo angezeigt), **ISO/UN-artige** Regionenzuordnung, **NFSI**-Kontext und **sentimenttragende** News-Stränge wo sichtbar aus — für **Benchmarking** und **Export** (**CSV/JSON**), **ohne** Anlage-, Hedge- oder **Rechtsberatung**.",
+                "fr": "**Comparateur pays** NationFiles (par paires) : aligne des **proxies économiques** publiés (indicateurs de type PIB lorsqu’affichés), un **groupement régional** façon ONU/ISO, le **contexte NFSI** et des **fils d’actualités** porteurs de sentiment lorsqu’affichés — pour **benchmark** et **export CSV/JSON**, **sans** conseil placement/couverture/juridique.",
+                "es": "**Comparador de países** NationFiles (por pares): alinea **proxis económicos** públicos (indicadores tipo PIB cuando se muestran), **agrupación regional** estilo ISO/ONU, **contexto NFSI** e **hilos de noticias** con sentimiento cuando están visibles — para **benchmark** y **exportación CSV/JSON** **sin** asesoramiento de inversión/cobertura/legal.",
+                "pt": "**Comparador de países** NationFiles (par a par): alinha **proxies económicos** públicos (indicadores tipo PIB quando mostrados), **agrupamento regional** estilo ISO/ONU, **contexto NFSI** e **fios de notícias** com sentimento quando visíveis — para **benchmark** e **exportação CSV/JSON** **sem** aconselhamento de investimento/cobertura/jurídico.",
+                "ar": "**مقارن الدول** NationFiles (ازدواجي): يُوحّد **وكلاء اقتصاديون** مُعلَنوا (مؤشرات شبيهة بالناتج المحلي حيث تُعرض)، **تجميع إقليمي** على نمط ISO/الأمم المتحدة، **سياق NFSI** و**خيوط أخبار** محمّلة بالمشاعر عند الظهور — لـ **المعيارية** و**تصدير CSV/JSON** **دون** استشارة استثمار/تحوّط/قانون.",
+                "ja": "NationFiles **国ペア比較**：**公開**された経済指標（**GDP 系**で画面に出るもの）、**ISO/国連風**の地域枠、**NFSI** の文脈、表示時は**センチメントを伴う**ニュース系——**ベンチマーク**と **CSV/JSON エクスポート**向け。**投資・ヘッジ・法律助言ではない**。"
+            }
+        },
+        {
+            "key": "comparison_dimensions",
+            "value": "Comparable columns combine macro snapshots (GDP-led figures where rendered), geographic region affinity, NFSI banding for stability context, and optional sentiment- or vibe-oriented briefing text derived from curated country news strands—each tied to the same published methodology revision visible on single-country pages.",
+            "depends_on": [
+                "nfsi",
+                "purchasing-power-index",
+                "governance-institutions-index"
+            ],
+            "sources": [
+                {
+                    "label": "Purchasing power index",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                },
+                {
+                    "label": "Economy Governance Index",
+                    "url": "https://nationfiles.com/en/knowledge/entity/governance-institutions-index/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Comparable columns combine macro snapshots (GDP-led figures where rendered), geographic region affinity, NFSI banding for stability context, and optional sentiment- or vibe-oriented briefing text derived from curated country news strands—each tied to the same published methodology revision visible on single-country pages.",
+                "de": "Vergleichsspalten vereinen **Makro-Snapshots** (BIP-geführte Zahlen wo gerendert), **geografische** Regionsnähe, **NFSI**-Bänder für Stabilitätskontext und optional **sentiment-/Vibe-nahe** Briefing-Texte aus kuratierten Länder-News — gebunden an dieselbe **veröffentlichte** Methodik wie auf Einzellandseiten.",
+                "fr": "Colonnes comparables : **snapshots macro** (chiffres « PIB » lorsqu’affichés), **affinité régionale**, **bandes NFSI** pour le contexte de stabilité, textes **sentiment/vibe** issus de fils d’actualités pays — **même révision méthodo** publiée que les pages pays.",
+                "es": "Columnas comparables: **macro** (cifras tipo PIB si se muestran), **afinidad regional**, **bandas NFSI** para estabilidad y textos **sentimiento/vibe** desde noticias curadas — **misma revisión metodológica** que la ficha país.",
+                "pt": "Colunas comparáveis: **macro** (números tipo PIB quando exibidos), **afinidade regional**, **faixas NFSI** para estabilidade e texto **sentimento/vibe** de notícias curadas — **mesma revisão metodológica** da ficha país.",
+                "ar": "أعمدة قابلة للمقارنة: **لقطات ماك** (أرقام ناتج حيث تُعرض)، **قرب إقليمي**، **شرائح NFSI** للاستقرار ونصوص **مشاعر/أجواء** من أخبار مُنتقاة — **نفس الإصدار المنهجي** المنشور كصفحة البلد.",
+                "ja": "比較列：**マクロ**（GDP 系の表示がある場合）、**地域の近さ**、**NFSI** 帯による安定文脈、キュレーション国情報からの**／ムード寄り**短文——**単国ページと同じ**公開方法論リビジョンに紐づく。"
+            }
+        },
+        {
+            "key": "algorithmic_posture",
+            "value": "Users anchor on one country profile and select a comparison partner; the engine renders side-by-side metrics from a shared schema so deltas describe the same cohort rules rather than mixed vintages. Snapshot exports follow the same materialisation discipline as other KPI experiences when stamps are published.",
+            "depends_on": [
+                "naciro",
+                "country-kpi-snapshot-export"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Country KPI snapshot export",
+                    "url": "https://nationfiles.com/en/knowledge/entity/country-kpi-snapshot-export/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Users anchor on one country profile and select a comparison partner; the engine renders side-by-side metrics from a shared schema so deltas describe the same cohort rules rather than mixed vintages. Snapshot exports follow the same materialisation discipline as other KPI experiences when stamps are published.",
+                "de": "Nutzer:innen **verankern** ein Länderprofil und wählen ein **Vergleichsland**; die Engine rendert **nebeneinander** Kennzahlen aus **einem** Schema, sodass Deltas **dieselben Kohortenregeln** meinen — keine **gemischten** Methodik-Vintages. Snapshot-Exporte folgen — wo veröffentlicht — derselben **Materialisierungs**-Disziplin wie andere KPI-Oberflächen.",
+                "fr": "L’utilisateur ancre un pays puis choisit un **partenaire** ; rendu **côte à côte** depuis **un** schéma partagé pour que les écarts reflètent **les mêmes règles**, pas des vintages mélangés. Les exports héritent de la **même discipline de matérialisation** lorsque des horodatages sont publiés.",
+                "es": "Se ancla un país y se elige **pareja**; métricas **lado a lado** desde **un** esquema compartido para que los deltas obedezcan **las mismas reglas**. Exportaciones con la **misma disciplina de materialización** cuando hay sellos.",
+                "pt": "Ancora-se um país e escolhe-se **par**; métricas **lado a lado** de **um** esquema partilhado — deltas com **as mesmas regras**. Exportações seguem a **mesma disciplina de materialização** quando há carimbos.",
+                "ar": "تثبيت دولة واختيار **شريك**؛ عرض **جنباً إلى جنب** من **مخطط** واحد لتعكس الفروق **نفس القواعد**. التصدير بنفس **انضباط التخليق** عند نشر الطوابع.",
+                "ja": "一国を**基準**に比較国を選び、**同一スキーマ**で並列表示——差分は**同じコホート規則**に基づく。エクスポートは他 KPI 面と同様の**マテリアライズ規律**（印がある場合）。"
+            }
+        },
+        {
+            "key": "portfolio_and_risk_posture",
+            "value": "Risk and asset teams use pairwise contrasts to stress-test diversification stories—pairing high-volatility narrative countries against stabilisers in NFSI or governance signals as editorially framed—but NationFiles remains a documentation and situational-benchmarking publisher, not a personalised advisor on offsets or hedges.",
+            "depends_on": [
+                "nfsi",
+                "governance-institutions-index",
+                "ai-guidelines"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "Governance & Institutions Index",
+                    "url": "https://nationfiles.com/en/knowledge/entity/governance-institutions-index/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Risk and asset teams use pairwise contrasts to stress-test diversification stories—pairing high-volatility narrative countries against stabilisers in NFSI or governance signals as editorially framed—but NationFiles remains a documentation and situational-benchmarking publisher, not a personalised advisor on offsets or hedges.",
+                "de": "Risk- und Portfolioteams nutzen **paarweise Kontraste**, um **Diversifikations­erzählungen** zu **stresstesten** — etwa **hochvolatil** erzählte Länder gegen **Stabilisatoren** in NFSI- oder Governance-Signalen (redaktionell eingerahmt). NationFiles bleibt **Dokumentations- und Benchmarking-Herausgeber**, **kein** personalisierter Berater zu **Offsets** oder Hedges.",
+                "fr": "Les équipes risque utilisent les **contrastes par paires** pour **tester** les récits de **diversification** — pays « volatils » vs **stabilisateurs** NFSI/gouvernance (cadre éditorial). NationFiles reste un **éditeur documentaire**, pas un conseiller personnalisé d’**offsets** ou de couverture.",
+                "es": "Los equipos de riesgo usan **pares** para **ensayar** relatos de **diversificación** — narrativas volátiles frente a **estabilizadores** NFSI/gobernanza (marco editorial). NationFiles es **documentación y benchmark**, no asesor personalizado de **compensaciones** o coberturas.",
+                "pt": "Equipas de risco usam **pares** para **stressar** narrativas de **diversificação** — voláteis vs **estabilizadores** NFSI/governação (enquadramento editorial). NationFiles é **documentação e benchmark**, não conselheiro de **offsets** ou coberturas.",
+                "ar": "فرق المخاطر تستخدم **المقارنات الثنائية** لاختبار سرديات **التنويع** — بلدان عالية التقلب مقابل **مستقرين** في إشارات NFSI/الحوكمة (إطار تحريري). NationFiles **نشر توثيق ومعيارية** لا مستشاراً شخصياً لل**تعويضات** أو التحوّط.",
+                "ja": "リスクチームは**ペア比較**で**分散ストーリー**を検証——NFSI／ガバナンス上「安定」側との対比（編集フレーム）。NationFiles は**文書・状況ベンチマーク**の発行者で、**個別のオフセット／ヘッジ助言**はしない。"
+            }
+        },
+        {
+            "key": "export_surface",
+            "value": "The compare experience exposes CSV and JSON export hooks for tabular metrics so analysts can port tables into models or memos while retaining canonical HTTPS URLs back to each country’s live profile and methodology pages.",
+            "depends_on": [
+                "country-kpi-snapshot-export",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Nationfile JSON",
+                    "url": "https://nationfiles.com/en/knowledge/entity/nationfile-json/"
+                },
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "en": "The compare experience exposes CSV and JSON export hooks for tabular metrics so analysts can port tables into models or memos while retaining canonical HTTPS URLs back to each country’s live profile and methodology pages.",
+                "de": "Die Compare-Oberfläche bietet **CSV- und JSON-Export** für tabellarische Metriken, sodass Analyst:innen Tabellen in Modelle oder Memos **übernehmen** können — mit **kanonischen HTTPS**-Rücklinks zu **Live-Profilen** und Methodik-Seiten.",
+                "fr": "L’expérience compare propose **CSV et JSON** pour métriques tabulaires afin d’**importer** dans modèles ou mémos avec **liens HTTPS canoniques** vers profils live et pages méthodo.",
+                "es": "La comparación ofrece **CSV y JSON** para métricas tabulares e **importar** a modelos o notas con **URLs HTTPS canónicas** a perfiles y metodología.",
+                "pt": "A comparação expõe **CSV e JSON** para métricas tabulares, para **importar** a modelos ou memorandos com **URLs HTTPS canónicas** a perfis e metodologia.",
+                "ar": "تجربة المقارنة تعرض **CSV وJSON** للمقاييس الجدولية لنقلها إلى نماذج أو مذكرات مع **روابط HTTPS** كانونية للملفات الحية والمنهجية.",
+                "ja": "比較画面から表形式メトリクスの **CSV／JSON** を取り出せ、**正規 HTTPS** で各国外観と方法論ページへ戻れる。"
+            }
+        },
+        {
+            "key": "computed_by",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "en": "{{naciro}}",
+                "de": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "en": "{{nationfiles}}",
+                "de": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "governance-institutions-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-kpi-snapshot-export"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Ländervergleich",
+            "teaser": "**Ländervergleich** auf NationFiles ist **kein Ranking-Spiel**, sondern **paarweises Benchmarking**: dieselbe Methodik wie auf der Einzellandseite — **BIP-nahe** Kennzahlen wo gezeigt, **Region**, **NFSI**-Kontext und **Stimmung** aus kuratierten News — ideal, um Diversifikations- und Risiko­erzählungen **sachlich** zu prüfen.",
+            "summary_bullets": [
+                "**Paarweise:** Ankerland + Vergleichsland aus derselben Schema-Logik.",
+                "**Dimensionen:** Makro (z. B. BIP wo gerendert), Region, NFSI, optional Sentiment/Vibe.",
+                "**Export:** **CSV/JSON** für Tabellen — Zitation per **HTTPS** nicht vergessen.",
+                "**Portfolio:** Kontraste für **Offset**-Diskussionen — **keine** Anlageberatung.",
+                "**Naciro** + **NFSI:** Rechenkern und Stabilitätskontext wie überall auf NationFiles."
+            ],
+            "body_md": "**Redaktioneller Kontext:** Wer zwischen Staaten entscheidet — ob in einer Nachrichtenredaktion, in einem Family-Office oder in einem Risiko-Committee — braucht mehr als eine puntige Headline. Es braucht **Kanten**, an denen man zwei Länder **fair** nebeneinander legen kann. NationFiles **Ländervergleich** ist genau diese Fläche: Sie bleibt auf dem **öffentlich dokumentierten** Fundament von **NFSI**, **Makro-Snapshots** und — soweit freigeschaltet — **kuratierten** News mit erkennbarer **Stimmung**.\n\n**Algorithmus in Alltagssprache:** Sie wählen ein **Ankerland**. Dann ein **Zweitland**. Die Tabelle zieht beide über **dieselben Spalten**. Wenn sich Werte unterscheiden, soll das an **Inhalt** liegen — nicht daran, dass die eine Seite noch eine alte Methodik-Revision in der Tailbox hatte. Darum hängt der Vergleich an **einheitlicher** Schema-Sicht.\n\n**„Vibe“ ohne Esoterik:** Unter **Vibe** ist hier nichts Mystisches zu verstehen, sondern die **Lesart**, die aus den auf NationFiles sichtbaren **News- und Kontext­strängen** entsteht, wenn sie **ländergebunden** kuratiert sind. Das ist **kein** Ersatz für Tiefgang in Primärquellen — eher **Orientierung** in der Flut.\n\n**Portfolio & Risiko:** Zwei Länder gegenüberzustellen, ersetzt **keine** Stress-Tests in Treasury-Systemen. Aber es **schneidet** Narrative auf: Ist das eine Land wirklich der **Ausgleich** zum anderen — oder teilen sich beide dieselbe **Schockquelle**? Hier hilft **NFSI**-Kontext und — wo veröffentlicht — **Governance**-Signal neben **BIP-nahen** Größen.\n\n**Was NationFiles nicht ist:** **Keine** personalisierte **Anlage-** oder **Hedge-Empfehlung**, **keine** Prognose einzelner Märkte. Nutzen Sie Exporte und **AI Guidelines**, wenn Sie Daten **weiterverarbeiten**.\n\n**Weiterlesen:** [NFSI](/de/company/nfsi/), [Länder-Hub](/de/countries/), [Naciro AI](/de/company/naciro-ai/), [Knowledge](/de/knowledge/).",
+            "facts": [
+                {
+                    "k": "Modus",
+                    "v": "Paarweiser Vergleich"
+                },
+                {
+                    "k": "Typische Spalten",
+                    "v": "Makro, Region, NFSI, News-Kontext"
+                },
+                {
+                    "k": "Export",
+                    "v": "CSV/JSON (Tabellen)"
+                },
+                {
+                    "k": "Grenze",
+                    "v": "Keine Anlageberatung"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Wann der Vergleich reicht — und wann nicht",
+                    "body_md": "Für **Schnelltests** und **Redaktions-Checks** ja; für **Regulatorik** oder **Margin**-Entscheide bitte **eigene** Modelle und **Primärquellen**."
+                },
+                {
+                    "title": "Diversifikation kritisch lesen",
+                    "body_md": "Zwei Länder in **verschiedenen** Kontinenten zu haben, **kollidiert** nicht automatisch mit **Unabhängigkeit** in Risiko­faktoren — der Vergleich macht solche **Blindstellen** sichtbarer."
+                },
+                {
+                    "title": "Export & Zitation",
+                    "body_md": "CSV/JSON ist **Bequemlichkeit**; die **Verbindlichkeit** bleibt bei den **HTTPS-Profilseiten** und der **Methodik**."
+                }
+            ]
+        },
+        "en": {
+            "title": "Country compare",
+            "teaser": "**Country compare** on NationFiles is **pairwise benchmarking**: the same methodology stack you see on single-country pages—**GDP-class** figures where shown, **region**, **NFSI** context, and **sentiment-laced** briefing from curated news—useful to **sanity-check** diversification and **risk-offset** stories without pretending to be a brokerage.",
+            "summary_bullets": [
+                "**Pairwise:** anchor country + partner under one schema.",
+                "**Dimensions:** macro (e.g. GDP where rendered), region, NFSI, optional sentiment/vibe.",
+                "**Exports:** **CSV/JSON** tables—keep **canonical HTTPS** cites.",
+                "**Portfolio:** contrast for **offset** talk—not **investment advice**.",
+                "**Naciro + NFSI:** same backbone as the rest of NationFiles."
+            ],
+            "body_md": "**Editorial angle:** anyone choosing between states—newsroom producers, risk committees, curious readers—needs a **fair bench**, not a taunt ticker. NationFiles **country compare** is that bench: it rests on the **published** **NFSI** story, **macro** snapshots, and, where enabled, **country-tied** news you can actually read.\n\n**How the algorithm reads to humans:** pick an **anchor** profile, pick a **sparring** country, and scan aligned columns. If values diverge, the hope is that divergence is **substantive**, not because one tile lagged a methodology refresh. Shared schema is the dull sentence that saves editors from silent mix-ups.\n\n**“Vibe” as shorthand:** here it means the **tone** emerging from the **curated** media strands NationFiles shows for each country—not mysticism, not a substitute for filing cabinet research.\n\n**Portfolio talk:** lining two countries up is **not** a treasury stress test, but it **defogs** stories about hedges and diversifiers: do you truly have **offset**, or just two flags that **rhyme** on a map? NFSI plus—when surfaced—governance signals sit next to **GDP-ish** size facts to keep the picture honest.\n\n**Hard no:** NationFiles does **not** personalise trades, offsets, or legal opinions. Machine clients should obey **AI guidelines** and cite **HTTPS** anchors.\n\n**Further reading:** [NFSI methodology](/en/company/nfsi/), [Countries hub](/en/countries/), [Naciro AI](/en/company/naciro-ai/), [Knowledge](/en/knowledge/).",
+            "facts": [
+                {
+                    "k": "Mode",
+                    "v": "Pairwise compare"
+                },
+                {
+                    "k": "Typical columns",
+                    "v": "Macro, region, NFSI, news tone"
+                },
+                {
+                    "k": "Export",
+                    "v": "CSV / JSON tables"
+                },
+                {
+                    "k": "Boundary",
+                    "v": "Not investment advice"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "When the tool is enough—and when it is not",
+                    "body_md": "**Great** for quick newsroom checks and travel-risk huddles; **insufficient** for regulated capital calls—bring your own models and primaries."
+                },
+                {
+                    "title": "Reading diversification skeptically",
+                    "body_md": "Geographic spread ≠ **factor** spread; pairwise view helps you spot **hidden correlation** before it hurts."
+                },
+                {
+                    "title": "Exports are convenience, not canon",
+                    "body_md": "Downloaded tables still need the **live profile URLs** and **method pages** attached if you publish downstream."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Comparaison de pays",
+            "teaser": "La **comparaison de pays** NationFiles est un **benchmark par paires** : même socle méthodologique que la fiche pays — indicateurs **PIB** lorsqu’affichés, **région**, **contexte NFSI** et **fil d’actualités** à tonalité lisible — utile pour **tester** diversification et récits d’**offset** sans jouer au courtier.",
+            "summary_bullets": [
+                "**Par paires :** pays ancré + partenaire, même schéma.",
+                "**Dimensions :** macro (PIB si affiché), région, NFSI, sentiment/vibe optionnel.",
+                "**Export :** **CSV/JSON** — citations **HTTPS** obligatoires ailleurs.",
+                "**Portefeuille :** contraste éditorial — **pas** conseil financier.",
+                "**Naciro + NFSI** : même colonne vertébrale que le reste du site."
+            ],
+            "body_md": "**Angle rédactionnel :** choisir entre deux États demande un **banc d’essai** équitable, pas un bandeau clash. La comparaison NationFiles s’appuie sur le **NFSI** documenté, des **macro** visibles et, quand c’est activé, des **actualités** attachées au pays.\n\n**L’algorithme en français simple :** vous **ancrez** un pays, vous choisissez un **adversaire** de bureau, les colonnes s’alignent. Les écarts doivent refléter un **fond**, pas une **révision méthodo** désynchronisée.\n\n**« Vibe » :** la **couleur** qui se lit dans les fils **curatés**, pas une science exacte de sentiment.\n\n**Portefeuille :** utile pour voir si votre **diversification** tient ou si deux drapeaux **partagent** la même fragilité. Ce n’est **pas** un stress-test trésorerie.\n\n**Limites :** pas de conseil juridique ou de **couverture** personnalisée. Voir [NFSI](/fr/company/nfsi/), [Pays](/fr/countries/), [Knowledge](/fr/knowledge/).",
+            "facts": [
+                {
+                    "k": "Mode",
+                    "v": "Comparaison par paires"
+                },
+                {
+                    "k": "Colonnes",
+                    "v": "Macro, région, NFSI, actualités"
+                },
+                {
+                    "k": "Export",
+                    "v": "CSV / JSON"
+                },
+                {
+                    "k": "Limite",
+                    "v": "Pas de conseil placement"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Quand l’outil suffit",
+                    "body_md": "**Briefings** et articles rapides — pas décisions **réglementées** sans modèles internes."
+                },
+                {
+                    "title": "Diversification lucide",
+                    "body_md": "Deux continents sur la carte ne garantissent pas deux **chocs** décorrélés."
+                },
+                {
+                    "title": "Exports",
+                    "body_md": "Les fichiers tabulés restent des **aperçus** ; les **URLs canoniques** portent la traceabilité."
+                }
+            ]
+        },
+        "es": {
+            "title": "Comparación de países",
+            "teaser": "La **comparación de países** de NationFiles es **benchmark por pares**: la misma base metodológica que la ficha país — cifras **tipo PIB** cuando se muestran, **región**, **NFSI** y **noticias** con tono legible — útil para contrastar relatos de **diversificación** y **compensación de riesgo** sin actuar como bróker.",
+            "summary_bullets": [
+                "**Par pares:** país ancla + compañero, mismo esquema.",
+                "**Dimensiones:** macro (PIB si se muestra), región, NFSI, sentimiento/vibe opcional.",
+                "**Exportación:** **CSV/JSON** — citar **HTTPS** al republicar.",
+                "**Cartera:** lectura crítica — **no** asesoramiento financiero.",
+                "**Naciro + NFSI:** mismo núcleo que el resto del sitio."
+            ],
+            "body_md": "**Enfoque editorial:** comparar Estados exige una **mesa limpia**, no sólo titulares. NationFiles alinea **NFSI**, **macro** y — si aplica — **hilos noticiosos** por país.\n\n**Lógica en cristiano:** eliges **ancla** y **contrincante**; las columnas comparten reglas para que el delta sea **honesto**.\n\n**« Vibe »:** la **lectura** que dejan las noticias **curadas**, no oráculo.\n\n**Portafolio:** ayuda a ver si hay **offset** real o solo **parches** geográficos. **No** es un stress test de tesorería.\n\n**Límites:** sin consejos personalizados de cobertura. Más en [NFSI](/es/company/nfsi/), [Países](/es/countries/), [Knowledge](/es/knowledge/).",
+            "facts": [
+                {
+                    "k": "Modo",
+                    "v": "Comparación por pares"
+                },
+                {
+                    "k": "Columnas",
+                    "v": "Macro, región, NFSI, noticias"
+                },
+                {
+                    "k": "Exportación",
+                    "v": "CSV / JSON"
+                },
+                {
+                    "k": "Límite",
+                    "v": "No asesoramiento financiero"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Cuándo basta la herramienta",
+                    "body_md": "**Reportajes** y briefings — no sustituye modelos **regulados** propios."
+                },
+                {
+                    "title": "Diversificación escéptica",
+                    "body_md": "Dos continentes no implican **factores** descorrelacionados."
+                },
+                {
+                    "title": "Exportaciones",
+                    "body_md": "Los archivos son **atajo**; la **trazabilidad** sigue en la URL viva del país."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Comparação de países",
+            "teaser": "A **comparação de países** na NationFiles é **benchmark par a par**: o mesmo alicerce metodológico da ficha país — números **tipo PIB** quando mostrados, **região**, **NFSI** e **notícias** com tom legível — útil para testar narrativas de **diversificação** e **compensação de risco** sem papel de corretor.",
+            "summary_bullets": [
+                "**Par a par:** âncora + parceiro, mesmo esquema.",
+                "**Dimensões:** macro (PIB se exibido), região, NFSI, sentimento/vibe opcional.",
+                "**Exportação:** **CSV/JSON** — citar **HTTPS** ao republicar.",
+                "**Portefólio:** contraste — **não** aconselhamento financeiro.",
+                "**Naciro + NFSI:** núcleo igual ao restante do site."
+            ],
+            "body_md": "**Ângulo editorial:** comparar Estados pede **mesa limpa**, não só manchetes. A NationFiles alinha **NFSI**, **macro** e — quando ativo — **fios de notícias** por país.\n\n**Lógica direta:** escolhe **âncora** e **par**; colunas partilham regras para o delta ser **substantivo**.\n\n**« Vibe »:** a **leitura** que as notícias **curadas** sugerem, sem misticismo.\n\n**Risco:** ajuda a ver **offset** real versus coincidência geográfica. **Não** substitui stress test de tesouraria.\n\n**Limites:** sem conselhos personalizados de cobertura. Ver [NFSI](/pt/company/nfsi/), [Países](/pt/countries/), [Knowledge](/pt/knowledge/).",
+            "facts": [
+                {
+                    "k": "Modo",
+                    "v": "Comparação par a par"
+                },
+                {
+                    "k": "Colunas",
+                    "v": "Macro, região, NFSI, notícias"
+                },
+                {
+                    "k": "Exportação",
+                    "v": "CSV / JSON"
+                },
+                {
+                    "k": "Limite",
+                    "v": "Não é aconselhamento financeiro"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Quando a ferramenta chega",
+                    "body_md": "**Artigos** e reuniões rápidas — **não** decisões reguladas sem modelos internos."
+                },
+                {
+                    "title": "Ler diversificação com desconfiança",
+                    "body_md": "Dois continentes podem partilhar o **mesmo choque** narrativo."
+                },
+                {
+                    "title": "Exportações",
+                    "body_md": "Ficheiros são **praticidade**; a **proveniência** fica nas páginas **HTTPS** vivas."
+                }
+            ]
+        },
+        "ar": {
+            "title": "مقارنة الدول",
+            "teaser": "**مقارنة الدول** على NationFiles هي **معيارية ثنائية**: نفس الأساس المنهجي لصفحة الدولة — أرقام **ناتج** حيث تُعرض، **إقليم**، **سياق NFSI** وأخبار **بنبرة** مقروءة — مفيدة لاختبار تنويع و**تعويض مخاطر** دون ادعاء وساطة استثمار.",
+            "summary_bullets": [
+                "**ثنائي:** دولة مرساة + شريك، **نفس المخطط**.",
+                "**أبعاد:** ماكرو (ناتج إن وُجد)، إقليم، NFSI، مشاعر/جو اختياري.",
+                "**تصدير:** **CSV/JSON** — اقتباس **HTTPS** عند إعادة النشر.",
+                "**محفظة:** نقاش لا **استشارة** مالية.",
+                "**Naciro + NFSI:** نفس العمود الفقري للموقع."
+            ],
+            "body_md": "**زاوية تحريرية:** مقارنة الدول تحتاج **طاولة نظيفة** لا عناوين صاخبة فقط. NationFiles يبني على **NFSI** المنشور و**ماكرو** وأخبار **مرتبطة بالدولة** حيث تُعرض.\n\n**المنطق ببساطة:** تختار **مرساة** و**طرفاً**؛ الأعمدة المشتركة تضمن أن الفروق **جوهرية** لا بسبب تباين إصداري خفي.\n\n**« الأجواء »:** القراءة من **خيوط** إعلامية **منتقاة** لا غيبوبة.\n\n**المحفظة:** تكشف هل التنويع **فعلي** أم تشابه جغرافي فقط. **ليس** اختبار ضغط خزينة.\n\n**الحدود:** لا توجيهات شخصية للتحوّط. راجع [NFSI](/ar/company/nfsi/)، [الدول](/ar/countries/)، [Knowledge](/ar/knowledge/).",
+            "facts": [
+                {
+                    "k": "النمط",
+                    "v": "مقارنة ثنائية"
+                },
+                {
+                    "k": "أعمدة",
+                    "v": "ماكرو، إقليم، NFSI، أخبار"
+                },
+                {
+                    "k": "تصدير",
+                    "v": "CSV / JSON"
+                },
+                {
+                    "k": "حد",
+                    "v": "ليس استشارة استثمار"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "متى تكفي الأداة",
+                    "body_md": "**تقارير** سريعة — لا قرارات **خاضعة للتنظيم** دون نماذجكم."
+                },
+                {
+                    "title": "قراءة التنويع بشك",
+                    "body_md": "قارتان لا تعنيان بالضرورة **صدمتين** مستقلتين."
+                },
+                {
+                    "title": "التصدير",
+                    "body_md": "الجداول **مساعدة**؛ **المسار الرسمي** يبقى روابط **HTTPS** الحية."
+                }
+            ]
+        },
+        "ja": {
+            "title": "国の比較",
+            "teaser": "NationFiles の**国の比較**は**二国間ベンチマーク**。単国ページと**同じ方法論**の上に、表示される**GDP 系**、**地域**、**NFSI** 文脈、キュレーション済みニュースの**雰囲気**を並べる——分散や**リスク相殺**の話を**叩き台**にする道具で、証券会社の役ではありません。",
+            "summary_bullets": [
+                "**ペア：** 基準国＋比較国、**同一スキーマ**。",
+                "**軸：** マクロ（GDP 表示時）、地域、NFSI、任意でセンチメント／空気感。",
+                "**エクスポート：** **CSV/JSON** — 再掲は**正規 HTTPS** を添える。",
+                "**ポートフォリオ：** 対比の材料にとどまり、**投資助言ではない**。",
+                "**Naciro + NFSI：** サイト全体と同じ背骨。"
+            ],
+            "body_md": "**編集目線：** 国と国を並べる作業は、対決見出しより**同じ物差し**が要る。NationFiles の比較は、公開の **NFSI**、画面にある**マクロ**、国情報に紐づく**ニュース**（ある場合）を**一枚の表**に載せる。\n\n**仕組みの言い換え：** **基準国**を開き、**相手国**を選ぶ。列はそろえる。**差**が付く理由はできるだけ**中身**にしたい——片側だけ古い定義、というミスを減らすのが共通スキーマの役目。\n\n**「バイブ」：** ここでは**不思議な感性指数**ではなく、見えている**キュレーション済み**報道ストリームから受ける**空気**の話。**一次調査の代替**ではない。\n\n**分散・相殺：** 二つ並べても**トレジャリーのストレステスト**にはならない。ただ、地図上ちょっと離れていても**同じショック素因**を共有していないか、話の**手触り**を確かめるには役立つ。**NFSI** と、公開されているなら**ガバナンス**系の文脈を、GDP 系の「大きさ」と一緒に見ると議論がぶれにくい。\n\n**断定しないこと：** **個別の売買・ヘッジ・法判断**はしない。自動処理では **AI ガイドライン**と**正規 HTTPS** のページを踏まえてください。\n\n**参照：** [NFSI](/ja/company/nfsi/)、[国一覧](/ja/countries/)、[Knowledge](/ja/knowledge/)。",
+            "facts": [
+                {
+                    "k": "モード",
+                    "v": "二国間比較"
+                },
+                {
+                    "k": "列の例",
+                    "v": "マクロ、地域、NFSI、ニュース"
+                },
+                {
+                    "k": "エクスポート",
+                    "v": "CSV / JSON"
+                },
+                {
+                    "k": "境界",
+                    "v": "投資助言ではない"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "足りるとき／足りないとき",
+                    "body_md": "**速報・企画のたたき台**には向く。**規制ドキュメント**の最終根拠にはしない——社内モデルと一次ソースを。"
+                },
+                {
+                    "title": "分散を疑う",
+                    "body_md": "**違う大陸**でも、**同じ要因**に振り回されることはある。"
+                },
+                {
+                    "title": "エクスポート",
+                    "body_md": "表は**便利**。**出所**は更新された**プロフィール URL** と方法論ページ。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "country-compare"
+        },
+        "repository_relative_path": "knowledge-data/entities/country-compare.json"
+    }
+}

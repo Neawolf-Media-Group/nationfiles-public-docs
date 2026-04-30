@@ -8,37 +8,42 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/neawolf-media-group/fr.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/neawolf-media-group/"
+nf_canonical_html_url: "https://nationfiles.com/fr/knowledge/entity/neawolf-media-group/"
 nf_markdown_lang_file: "fr"
 ---
 # Neawolf Media Group
 
-## Rôle
+## Rôle dans le produit
 
-**Neawolf Media Group** est l’**organisation juridiquement désignée** derrière la plateforme NationFiles. Dans le graphe de connaissances, elle matérialise la **gouvernance éditeur** : mentions légales, identifiants fiscaux et rattachement aux produits numériques (NationFiles, Naciro Engine, LPU Architecture, NFSI).
+La Neawolf Media Group est l’**éditeur et l’opérateur** de **NationFiles** — la plateforme d’**intelligence géopolitique** (analyse pays, cartes, NFSI, moteur Naciro). Lire « Neawolf », c’est comprendre **qui exploite** cette pipeline d’analyse et de données — pas seulement un nom de domaine.
 
-Les données légales autoritaires figurent dans les **mentions légales** ; cette page renvoie vers l’URL canonique sans dupliquer dynamiquement l’impression complète.
+## Qui se cache derrière — sans slogan creux
 
-## Relations (extrait)
+La **Neawolf Media Group** est une **entreprise individuelle allemande** basée à **Aix-la-Chapelle / Aachen** (Reinhardstr. 1b). **Sven Schmidt** est la personne désignée comme responsable au sens des mentions légales. L’activité est enregistrée **à la mi‑2025** ; la plateforme publique **NationFiles** est entrée en ligne **début 2026**. Quand vous lisez « Neawolf », vous devez pouvoir identifier une **adresse**, une **personne responsable** et des **mentions complètes** sur les pages légales — pas une société écran ni une entreprise de données anonyme.
 
-| Relation | Cible | Sens |
-|----------|-------|------|
-| `operates` | NationFiles | Exploitation du site multilingue |
-| `develops` | Naciro Engine, LPU Architecture | Responsabilité de développement documentée |
-| `publishes` | NFSI | Publication de l’indicateur décrit comme jeu de données |
+## Mission en une phrase
 
-Les arêtes expriment des **rôles**, pas des effectifs internes ni des détails d’algorithme propriétaire.
+Neawolf publie et exploite **NationFiles** : une plateforme d’information et d’analyse géopolitique avec dossiers pays, cartes, l’indice **NationFiles Stability Index (NFSI)** et d’autres indicateurs traçables. L’objectif est de **donner des repères** aux lecteurs, journalistes, chercheurs et utilisateurs institutionnels — pas du divertissement brut, mais des analyses **structurées et documentées**, reliées aux sources et aux pages de méthodologie.
 
-## Licence et exports
+## Ce qui fait partie du même ensemble — expliqué simplement
 
-Les exports Knowledge suivent le cadre **CC BY-ND 4.0** indiqué depuis les pages légales lorsque applicable. Les DOI sont portés en attribut `citation_doi` lorsque l’entité est liée à un artefact de recherche.
+La même famille de produits comprend le **moteur Naciro** (couche d’analyse et de calcul qui alimente notamment le NFSI), l’**architecture LPU** telle que documentée publiquement, et le **NFSI** lui-même (score 0–100). Cette page résume les **rôles** ; le détail technique se trouve dans les articles knowledge correspondants et sur les pages méthodologie / légales.
 
-## Hors périmètre
+## Responsabilité et direction
 
-Pas de discours de leadership marché, pas de KPI financiers dynamiques, pas de données personnelles au-delà du périmètre public About / légal.
+Dans les supports publics, **Sven Schmidt** assure la **direction technique et architecturale** de **Naciro** et **NationFiles** ; sous le nom d’artiste **Sven Neawolf**, il est aussi visible dans d’autres domaines (dont la musique). Pour comprendre la plateforme, l’essentiel est la combinaison annoncée d’une **formation IT reconnue** et d’une longue expérience dans des environnements **sensibles aux erreurs et à la sécurité**. Références scientifiques (**ORCID**) et **DOI Zenodo** : voir la page Company et la section recherche.
 
-## Références
+## Transparence plutôt qu’opacité
+
+NationFiles fonctionne avec une **méthodologie documentée**, un **registre de sources** et le **rapport Validation & Verification (VVR)**. Les textes courts et exports de ce knowledge sont en **CC BY‑ND 4.0** là où les pages légales l’indiquent. Utilisation automatisée et citation : **`llms.txt`**. Numéro de TVA, mentions de juridiction et autres identifiants : **Legal Notice / mentions légales**.
+
+## Contact et pour aller plus loin
+
+- Général : **info@nationfiles.com**
+- IA / licence : **ai-questions@nationfiles.com**
+- Vie privée : **privacy@nationfiles.com**
 
 - [Mentions légales](https://nationfiles.com/fr/legal/legal-notice/)
-- [Company About](https://nationfiles.com/en/company/about/)
+- [Entreprise — À propos](https://nationfiles.com/fr/company/about/)
+- [Knowledge Hub](https://nationfiles.com/fr/knowledge/)
 - [llms.txt](https://nationfiles.com/llms.txt)

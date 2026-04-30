@@ -1,0 +1,288 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "whitepaper-algorithmic-geopolitics-nfsi",
+    "kind": "entity",
+    "type": "ScholarlyArticle",
+    "status": "active",
+    "updated_utc": "2026-04-30T12:00:00Z",
+    "topics": [
+        "whitepaper",
+        "methodology",
+        "nfsi",
+        "naciro",
+        "osint",
+        "geopolitics",
+        "governance",
+        "open-science",
+        "pipeline",
+        "stability-index"
+    ],
+    "aliases": [
+        "Algorithmische Geopolitik Whitepaper",
+        "Algorithmic Geopolitics whitepaper",
+        "NFSI methodology paper v1.0",
+        "Whitepaper NFSI Pipeline",
+        "NationFiles Stabilitätspipeline Methodik"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "First-party technical whitepaper (version 1.0, April 2026): full methodology text for the three-stage NationFiles Stability Index pipeline, controller ontologies, validation scenarios, and governance posture — published in all seven NFKG locales as Knowledge long-form Markdown alongside {{nfsi}}, {{naciro}}, and {{nationfiles}} definitions.",
+            "depends_on": [
+                "nationfiles",
+                "nfsi",
+                "naciro",
+                "publications-corpus",
+                "knowledge-hub-nfkg"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge entity (this page)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/whitepaper-algorithmic-geopolitics-nfsi/"
+                },
+                {
+                    "label": "NFSI methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Publications hub",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Publications detail (this whitepaper)",
+                    "url": "https://nationfiles.com/en/publications/algorithmic-geopolitics-methodology/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**First-Party-Technical-Whitepaper** (Version 1.0, April 2026): vollständige Methodik zur **dreistufigen NationFiles-Stabilitätspipeline**, Controller-Ontologien, Validierungsszenarien und Governance — als **Lang-Markdown** in allen sieben NFKG-Sprachen neben den Definitionen von **{{nfsi}}**, **{{naciro}}** und **{{nationfiles}}**.",
+                "en": "First-party technical whitepaper (version 1.0, April 2026): full methodology text for the three-stage NationFiles Stability Index pipeline, controller ontologies, validation scenarios, and governance posture — published in all seven NFKG locales as Knowledge long-form Markdown alongside {{nfsi}}, {{naciro}}, and {{nationfiles}} definitions.",
+                "fr": "**Livre blanc technique first-party** (v1.0, avril 2026) : méthodologie complète de la **pipeline NFSI en trois étages**, ontologies des contrôleurs, scénarios de validation et gouvernance — texte long **Markdown** dans **sept** langues NFKG aux côtés des définitions **{{nfsi}}**, **{{naciro}}** et **{{nationfiles}}**.",
+                "es": "**Libro técnico whitepaper first-party** (v1.0, abril 2026): metodología completa de la **pipeline NFSI en tres etapas**, ontologías de controladores, escenarios de validación y gobernanza — **Markdown** largo en **siete** idiomas NFKG junto a **{{nfsi}}**, **{{naciro}}** y **{{nationfiles}}**.",
+                "pt": "**Whitepaper técnico first-party** (v1.0, abril 2026): metodologia completa da **pipeline NFSI em três estádios**, ontologias de controladores, cenários de validação e governação — **Markdown** longo em **sete** línguas NFKG junto a **{{nfsi}}**, **{{naciro}}** e **{{nationfiles}}**.",
+                "ar": "**ورقة بيضاء تقنية أولية** (الإصدار 1.0، نيسان 2026): منهجية كاملة لـ **مسار NFSI ثلاثي المراحل**، أُنطولوجيا المتحكمات، سيناريوهات التحقق والحوكمة — نص **Markdown** طويل بـ **سبع** لغات NFKG بجانب تعريفات **{{nfsi}}** و**{{naciro}}** و**{{nationfiles}}**.",
+                "ja": "**ファーストパーティ**のテクニカル・ホワイトペーパー（v1.0・2026年4月）：**三段階 NFSI パイプライン**、コントローラーのオントロジー、検証シナリオ、ガバナンスのフルメソッド本文を、**{{nfsi}}**・**{{naciro}}**・**{{nationfiles}}** の定義と並んで **NFKG 7 言語**すべてでナレッジ長文 Markdown として公開。"
+            }
+        },
+        {
+            "key": "document_version",
+            "value": "1.0",
+            "sources": [],
+            "value_i18n": {
+                "de": "1.0",
+                "en": "1.0",
+                "fr": "1.0",
+                "es": "1.0",
+                "pt": "1.0",
+                "ar": "1.0",
+                "ja": "1.0"
+            }
+        },
+        {
+            "key": "license",
+            "value": "CC BY 4.0 (manuscript)",
+            "sources": [
+                {
+                    "label": "Creative Commons BY 4.0",
+                    "url": "https://creativecommons.org/licenses/by/4.0/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**CC BY 4.0** (Manuskript dieses Whitepapers)",
+                "en": "**CC BY 4.0** (this whitepaper manuscript)",
+                "fr": "**CC BY 4.0** (manuscrit de ce livre blanc)",
+                "es": "**CC BY 4.0** (manuscrito de este libro blanco)",
+                "pt": "**CC BY 4.0** (manuscrito deste whitepaper)",
+                "ar": "**CC BY 4.0** (مخطوطة هذه الورقة)",
+                "ja": "**CC BY 4.0**（本ホワイトペーパー原稿）"
+            }
+        },
+        {
+            "key": "authorship",
+            "value": "Sven Neawolf (Schmidt), Neawolf Media Group",
+            "sources": [],
+            "value_i18n": {
+                "de": "Sven Neawolf (Schmidt), Neawolf Media Group",
+                "en": "Sven Neawolf (Schmidt), Neawolf Media Group",
+                "fr": "Sven Neawolf (Schmidt), Neawolf Media Group",
+                "es": "Sven Neawolf (Schmidt), Neawolf Media Group",
+                "pt": "Sven Neawolf (Schmidt), Neawolf Media Group",
+                "ar": "Sven Neawolf (Schmidt)، Neawolf Media Group",
+                "ja": "Sven Neawolf（Schmidt）、Neawolf Media Group"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "publications-corpus"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "knowledge-hub-nfkg"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "lpu-architecture"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Algorithmische Geopolitik: Methodik der KI-gestützten Echtzeit-Stabilitätsindizierung im NationFiles-Framework",
+            "teaser": "**Technical Whitepaper v1.0:** Destillation der internen Monografie in eine **zitierfähige** Methodenargumentation — **dreistufige NFSI-Pipeline**, Darstellungsontologien, Stresstests und Integritätsstrategie; **NFSI** durchgängig als **regelbasiertes, deskriptives Aggregat** (kein Orakel).",
+            "summary_bullets": [
+                "**Stufe 1–3:** Normierung, Tagesaggregation mit Recovery-Logik, gewichtete Endkomposition samt Pseudocode-Skizze.",
+                "**Ontologien:** {{nationfiles}}-Controller projizieren dieselbe relationale Wahrheit für Medien, Analysten und Makro.",
+                "**Validierung:** fiktive Fallstudien (Informations-Shutdown, Sanktionsschock, Datenlücken) als Audit-Rahmen.",
+                "**Governance:** Transparenz vor Eleganz; Global South, Souveränität, indigene Daten-Leitplanken.",
+                "**Lizenz:** Manuskript **CC BY 4.0**; Volltext unten in Markdown (deutsch vollständig)."
+            ]
+        },
+        "en": {
+            "title": "Algorithmic Geopolitics: Methodology of AI-Driven Real-Time Stability Indexing within the NationFiles Framework",
+            "teaser": "**Technical whitepaper v1.0:** Distils the internal monograph into a **citable** methodological argument — **three-stage NFSI pipeline**, presentation ontologies, stress tests, and integrity strategy; **NFSI** is consistently framed as a **rule-based descriptive aggregate** (not an oracle).",
+            "summary_bullets": [
+                "**Stages 1–3:** Normalisation, day aggregation with recovery logic, weighted end composition with pseudocode sketch.",
+                "**Ontologies:** {{nationfiles}} controllers project the same relational truth for media, analysts, and macro readers.",
+                "**Validation:** fictional case studies (information shutdown, sanction shock, data gaps) as an audit frame.",
+                "**Governance:** transparency over elegance; Global South, sovereignty, Indigenous data guardrails.",
+                "**Licence:** manuscript **CC BY 4.0**; full text below in Markdown (English complete)."
+            ]
+        },
+        "fr": {
+            "title": "Géopolitique algorithmique : méthodologie de l'indication en temps quasi réel de la stabilité assistée par l'IA dans le cadre NationFiles",
+            "teaser": "**Livre blanc technique v1.0 :** il distille la monographie interne en argument **citable** — **pipeline NFSI à trois étapes**, ontologies de présentation, tests de contrainte et stratégie d'intégrité ; le **NFSI** y est traité comme un **agrégat descriptif et réglementé** (pas un oracle).",
+            "summary_bullets": [
+                "**Étapes 1–3 :** normalisation, agrégation journalière avec règles de récupération, composition finale pondérée et pseudo-code.",
+                "**Ontologies :** les contrôleurs {{nationfiles}} projettent la même vérité relationnelle pour médias, analystes et macro.",
+                "**Validation :** études fictives (coupure d'information, choc de sanctions, lacunes) comme cadre d'audit.",
+                "**Gouvernance :** la transparence prime sur l'élégance ; Sud global, souveraineté, garde-fous pour données autochtones.",
+                "**Licence :** manuscrit **CC BY 4.0** ; texte intégral en Markdown (français complet)."
+            ]
+        },
+        "es": {
+            "title": "Geopolítica algorítmica: metodología de la indicación en tiempo casi real de la estabilidad con apoyo de IA en el marco NationFiles",
+            "teaser": "**Libro técnico v1.0:** destila la monografía interna en un argumento **citable** — **pipeline NFSI de tres etapas**, ontologías de presentación, pruebas de estrés y estrategia de integridad; el **NFSI** es un **agregado reglado y descriptivo** (no un oráculo).",
+            "summary_bullets": [
+                "**Etapas 1–3:** normalización, agregación diaria con recuperación, composición final ponderada y pseudocódigo.",
+                "**Ontologías:** los controladores {{nationfiles}} proyectan la misma verdad relacional para medios, analistas y macro.",
+                "**Validación:** estudios ficticios (apagón informativo, shock de sanciones, lagunas) como marco de auditoría.",
+                "**Gobernanza:** transparencia sobre elegancia; Sur global, soberanía, salvaguardas de datos indígenas.",
+                "**Licencia:** manuscrito **CC BY 4.0**; texto completo en Markdown (español completo)."
+            ]
+        },
+        "pt": {
+            "title": "Geopolítica algorítmica: metodologia da indicação em tempo quase real da estabilidade com apoio de IA no âmbito NationFiles",
+            "teaser": "**Whitepaper técnico v1.0:** destila a monografia interna num argumento **citável** — **pipeline NFSI em três fases**, ontologias de apresentação, testes de stress e estratégia de integridade; o **NFSI** é um **agregado descritivo baseado em regras** (não um oráculo).",
+            "summary_bullets": [
+                "**Fases 1–3:** normalização, agregação diária com recuperação, composição final ponderada e pseudocódigo.",
+                "**Ontologias:** controladores {{nationfiles}} projetam a mesma verdade relacional para media, analistas e macro.",
+                "**Validação:** estudos fictícios (shutdown informativo, choque de sanções, lacunas) como quadro de auditoria.",
+                "**Governança:** transparência acima da elegância; Sul global, soberania, salvaguardas de dados indígenas.",
+                "**Licença:** manuscrito **CC BY 4.0**; texto integral em Markdown (português completo)."
+            ]
+        },
+        "ar": {
+            "title": "الجيوبوليتيك الخوارزمي: منهجية مؤشرة الاستقرار شبه اللحظي بمساندة الذكاء الاصطناعي في إطار NationFiles",
+            "teaser": "**ورقة تقنية v1.0:** تقطير المونوغراف الداخلي في حجة **قابلة للاقتباس** — **مسار NFSI ثلاثي المراحل**، أُنطولوجيا العرض، اختبارات الضغط واستراتيجية النزاهة؛ **NFSI** مُطابق كـ **تجميع وصفي قائم على قواعد** (وليس Oracle).",
+            "summary_bullets": [
+                "**المراحل 1–3:** تطبيع، تجميع يومي مع استرداد، تركيبة نهائية مرجّحة وشبه شفرة.",
+                "**الأنطولوجيا:** متحكمات {{nationfiles}} تُسقِط نفس الحقيقة العلائقية للإعلام والمحللين والماكرو.",
+                "**التحقق:** دراسات افتراضية (إطفاء معلومات، صدمة عقوبات، فجوات) كإطار تدقيق.",
+                "**الحوكمة:** الشفافية فوق الأناقة؛ الجنوب العالمي، السيادة، ضوابط بيانات السكان الأصليين.",
+                "**الترخيص:** المخطوطة **CC BY 4.0**؛ النص الكامل في Markdown (عربي كامل)."
+            ]
+        },
+        "ja": {
+            "title": "アルゴリズム的ジオポリティクス：NationFiles フレームワークにおける AI 支援の近リアルタイム安定性指標化の方法論",
+            "teaser": "**テクニカル・ホワイトペーパー v1.0：** 内部モノグラフを**引用可能な**方法論的主張に蒸留——**三段階 NFSI パイプライン**、提示オントロジー、ストレステスト、統合性戦略。**NFSI** は一貫して**ルールベースの記述的集約**（オラクルではない）として位置づけます。",
+            "summary_bullets": [
+                "**段階1–3：** 正規化、リカバリ付き日次集約、重み付け最終合成と擬似コードの概略。",
+                "**オントロジー：** {{nationfiles}} コントローラーがメディア・アナリスト・マクロ向けに同一の関係的真実を投影。",
+                "**検証：** 情報シャットダウン、制裁ショック、欠損などの仮想ケーススタディを監査枠組みに。",
+                "**ガバナンス：** 洗練より透明性；グローバル・サウス、主権、先住民データのガードレール。",
+                "**ライセンス：** 原稿 **CC BY 4.0**；全文は下記 Markdown（日本語全文）。"
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "whitepaper-algorithmic-geopolitics-nfsi"
+        },
+        "repository_relative_path": "knowledge-data/entities/whitepaper-algorithmic-geopolitics-nfsi.json"
+    }
+}

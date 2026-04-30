@@ -1,0 +1,605 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "publications-corpus",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T18:00:00Z",
+    "topics": [
+        "publications",
+        "publications-corpus",
+        "whitepapers",
+        "doi",
+        "methodology",
+        "research",
+        "naciro",
+        "nfsi",
+        "academic-rigor"
+    ],
+    "aliases": [
+        "Publikationen",
+        "NationFiles Publikationen",
+        "Publications corpus",
+        "Whitepaper-Sammlung",
+        "DOI publications",
+        "Forschungspublikationen NationFiles"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles publications corpus: a first-party, editorially maintained collection of long-form artifacts—methodology reports, validation memos, and whitepapers—alongside externally citable works that carry DOIs where the publisher registers them. The corpus ties academic-style identifier discipline (persistent DOIs, stable landing pages) to the same operational stack that powers {{nationfiles}} profiles, {{naciro}} evaluation passes, and synchronized exports: readers can follow a citation from a paper to the live metric surface and back without changing definitional scope.",
+            "depends_on": [
+                "nationfiles",
+                "naciro",
+                "nfsi",
+                "validation-verification-report"
+            ],
+            "sources": [
+                {
+                    "label": "Publications",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                },
+                {
+                    "label": "Knowledge hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles publications corpus: a first-party, editorially maintained collection of long-form artifacts—methodology reports, validation memos, and whitepapers—alongside externally citable works that carry DOIs where the publisher registers them. The corpus ties academic-style identifier discipline (persistent DOIs, stable landing pages) to the same operational stack that powers {{nationfiles}} profiles, {{naciro}} evaluation passes, and synchronized exports: readers can follow a citation from a paper to the live metric surface and back without changing definitional scope.",
+                "de": "**NationFiles-Publikationskorpus:** eine **redaktionell** geführte **Erstverleger-Sammlung** langformiger Artefakte — Methodikberichte, Validierungsmemoires und Whitepapers — neben **extern zitierfähigen** Werken mit **DOI**, wo der Verlag sie einträgt. Das Korpus verbindet **akademische** Identifikatoren-Disziplin (**persistente** DOIs, stabile Landingpages) mit **derselben** operativen Kette wie {{nationfiles}}-Profile, {{naciro}}-Auswertungspässe und synchronisierte Exporte: Leser:innen können **von** der Fußnote **zur** sichtbaren Kennzahl und **zurück**, ohne den **Definitionsrahmen** zu wechseln.",
+                "fr": "**Corpus publications NationFiles :** collection **first-party** de textes longs — rapports de méthodologie, mémoires de validation, livres blancs — et d’**œuvres** citables avec **DOI** lorsque l’éditeur l’enregistre. Le corpus relie la **discipline** d’identifiants de type académique (**DOI** persistants, pages d’accueil stables) à la **même** chaîne opérationnelle que les profils {{nationfiles}}, les passes {{naciro}} et les exports synchronisés : de la **note de bas de page** à la **métrique** visible et retour, **sans** élargir arbitrairement la définition.",
+                "es": "**Corpus de publicaciones NationFiles:** colección **first-party** de artefactos largos — informes metodológicos, memorias de validación, libros blancos — y **obras** con **DOI** donde el editor los registra. El corpus une la **disciplina** de identificadores académicos (**DOI** persistentes, páginas estables) a la **misma** cadena operativa que perfiles {{nationfiles}}, pasadas {{naciro}} y exportaciones sincronizadas: de la **cita** al **indicador** en vivo y de regreso **sin** mudar el marco conceptual.",
+                "pt": "**Corpus de publicações NationFiles:** coleção **first-party** de artefactos longos — relatórios metodológicos, memórias de validação, white papers — e **obras** com **DOI** quando o editor as regista. O corpus liga a **disciplina** de identificadores académicos (**DOI** persistentes, páginas estáveis) à **mesma** cadeia operativa de perfis {{nationfiles}}, passes {{naciro}} e exportações sincronizadas: da **nota** ao **indicador** visível e volta **sem** alterar o âmbito definicional.",
+                "ar": "**مجموعة منشورات NationFiles:** تجميعة **أولية** من نصوص طويلة — تقارير منهجية، مذكرات تحقق، أوراق بيضاء — و**أعمال** قابلة للاقتباس مع **DOI** حيث يسجّلها الناشر. تربط المجموعة **انضباط** معرفات على نمط أكاديمي (**DOI** دائمة، صفحات ثابتة) ب**نفس** السلسلة التشغيلية لملفات {{nationfiles}}، وممرات {{naciro}}، والتصدير المتزامن: من **الحاشية** إلى **المؤشر** الظاهر وعائدًا **دون** توسيع نطاق التعريف.",
+                "ja": "NationFiles **出版物コーパス**：方法論レポート・検証メモ・ホワイトペーパーなどの長文一次成果物と、発行者が登録した場合の **DOI** 付き外部引用可能著作を、編集方針のもとで束ねる。**DOI** など**持続的**識別子と安定ランディングを、{{nationfiles}} プロフィール・{{naciro}} 評価パス・同期エクスポートと**同じ**運用スタックに接続する——脚注から**生の**指標へ、定義の枠を**すり替えず**に戻れるようにする。"
+            }
+        },
+        {
+            "key": "doi_and_citation_discipline",
+            "value": "Where a work is registered with a DOI, the corpus treats that identifier as the canonical handle for machines and libraries; NationFiles web surfaces link to publisher landing pages and mirror the same title, authorship, and version intent described in the Knowledge graph entry. Secondary summaries must not override primary abstracts without labeling the derivation.",
+            "depends_on": [
+                "legal-sources-registry",
+                "ai-guidelines"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Where a work is registered with a DOI, the corpus treats that identifier as the canonical handle for machines and libraries; NationFiles web surfaces link to publisher landing pages and mirror the same title, authorship, and version intent described in the Knowledge graph entry. Secondary summaries must not override primary abstracts without labeling the derivation.",
+                "de": "Trägt ein Werk eine **DOI**, gilt diese im Korpus als **kanonischer** Griff für Maschinen und Bibliotheken; NationFiles verlinkt **Verlags**-Landingpages und spiegelt **Titel**, **Autorschaft** und **Versionsabsicht** wie im Knowledge-Graph-Eintrag. **Sekundärzusammenfassungen** dürfen **keine** Primärabstracts **ersetzen**, ohne die **Ableitung** zu kennzeichnen.",
+                "fr": "Lorsqu’un DOI est enregistré, le corpus en fait la **poignée canonique** pour machines et bibliothèques ; NationFiles pointe vers les pages éditeur et reflète **titre**, **paternité** et **intention de version** comme dans l’entrée Knowledge. Les **résumés secondaires** ne remplacent pas l’**abstract primaire** sans signaler la **dérivation**.",
+                "es": "Si hay **DOI**, el corpus lo usa como **manija canónica** para sistemas y bibliotecas; NationFiles enlaza páginas del editor y replica **título**, **autoría** e **intención de versión** como en Knowledge. Los **resúmenes secondarios** no sustituyen el **abstract** primario sin marcar la **derivación**.",
+                "pt": "Com **DOI**, o corpus trata o identificador como **pega canónica** para máquinas e bibliotecas; NationFiles liga páginas do editor e espelha **título**, **autoria** e **intenção de versão** como na entrada Knowledge. **Resumos secundários** não substituem o **resumo** primário sem assinalar a **derivação**.",
+                "ar": "عند تسجيل **DOI** يُعامل المعرف ك**مقبض مرجعي** للآلات والمكتبات؛ تربط NationFiles صفحات الناشر وتعكس **العنوان** و**الإسناد** و**نية الإصدار** كما في إدخال المعرفة. **الملخصات الثانوية** لا **تطوي** الملخص **الأول** دون الإشارة إلى **الاشتقاق**.",
+                "ja": "**DOI** がある作品では、機械とライブラリ向けの**正規ハンドル**として扱う。NationFiles は発行者ランディングへリンクし、Knowledge エントリと同じ**題名・著者・版の意図**を映す。**二次要約**が**一次抄録**を**置き換えない**——**由来**を明示しない限り。"
+            }
+        },
+        {
+            "key": "operational_bridge",
+            "value": "Each corpus item maps to documented connector families, metric registries, or evaluation layers referenced in the Validation & Verification Report and {{nfsi}} methodology so practitioners can justify why an on-screen number matches a paragraph in a numbered section. {{naciro}} is the computation engine described in those papers; {{nationfile-json}} bundles are the machine-readable shapes that inherit the same definitions.",
+            "depends_on": [
+                "naciro",
+                "nfsi",
+                "nationfile-json",
+                "validation-verification-report"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Nationfile JSON (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/nationfile-json/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Each corpus item maps to documented connector families, metric registries, or evaluation layers referenced in the Validation & Verification Report and {{nfsi}} methodology so practitioners can justify why an on-screen number matches a paragraph in a numbered section. {{naciro}} is the computation engine described in those papers; {{nationfile-json}} bundles are the machine-readable shapes that inherit the same definitions.",
+                "de": "Jedes Korpuselement **kartiert** dokumentierte **Connector-Familien**, **Kennzahlen-Registry** oder **Auswertungsschichten**, die im **Validation & Verification Report** und der **{{nfsi}}**-Methodik genannt werden — damit Praktiker:innen begründen können, warum eine **Bildschirmzahl** zu einem **Abschnitt mit Nummer** passt. **{{naciro}}** ist der in diesen Texten beschriebene **Rechenkern**; **{{nationfile-json}}**-Bündel sind die **maschinenlesbaren** Formen mit **dieselben** Definitionen.",
+                "fr": "Chaque élément du corpus **cartographie** familles de connecteurs, registres de métriques ou couches d’évaluation cités dans le **VVR** et la méthodo **{{nfsi}}** afin de **justifier** qu’un chiffre écran renvoie à un **paragraphe numéroté**. **{{naciro}}** est le moteur décrit dans ces textes ; les bundles **{{nationfile-json}}** portent les **formes machine** qui héritent des **mêmes** définitions.",
+                "es": "Cada ítem del corpus **mapea** familias de conectores, registros de métricas o capas de evaluación citadas en el **informe V&V** y la metodología **{{nfsi}}** para **justificar** que un número en pantalla corresponde a un **párrafo** numerado. **{{naciro}}** es el motor descrito; los bundles **{{nationfile-json}}** son las **formas** legibles por máquina con las **mismas** definiciones.",
+                "pt": "Cada item do corpus **mapeia** famílias de conectores, registos de métricas ou camadas de avaliação citadas no **VVR** e na metodologia **{{nfsi}}** para **justificar** que um número no ecrã corresponde a um **parágrafo** numerado. **{{naciro}}** é o motor descrito; bundles **{{nationfile-json}}** são as **formas** legíveis por máquina com as **mesmas** definições.",
+                "ar": "يربط كل بند في المجموعة **عناصر موصولة** موثَّقة أو سجلات مقاييس أو طبقات تقييم من **تقرير التحقق والتحقص** ومنهجية **{{nfsi}}** ليُبرَّر توافق **رقم الشاشة** مع **فقرة مرقّمة**. **{{naciro}}** هو المحرك المُوصَف؛ حزم **{{nationfile-json}}** هي الأشكال **الآلية** التي ترث **نفس** التعريفات.",
+                "ja": "コーパス各項目は **VVR** と **{{nfsi}}** 方法論に出る**コネクタ系統**・指標レジストリ・評価層へ**写像**し、画面上の数が**番号付き節**のどの段落に対応するか**弁明**できるようにする。**{{naciro}}** は論文で述べる計算エンジン、**{{nationfile-json}}** バンドルは**同じ定義**を継ぐ**機械可読**形。"
+            }
+        },
+        {
+            "key": "scope_boundary",
+            "value": "The corpus is not a general-purpose academic search engine; it lists NationFiles-first research outputs plus explicitly mirrored DOI works that materially inform platform methodology. Promotional material without methodological payload lives outside this entity; legal notices and registries remain authoritative for licensing even when papers discuss similar topics.",
+            "depends_on": [
+                "nationfiles",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "Publications",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "en": "The corpus is not a general-purpose academic search engine; it lists NationFiles-first research outputs plus explicitly mirrored DOI works that materially inform platform methodology. Promotional material without methodological payload lives outside this entity; legal notices and registries remain authoritative for licensing even when papers discuss similar topics.",
+                "de": "Das Korpus ist **keine** allgemeine **Literaturrecherche**; es listet **NationFiles-first**-Forschungsoutput plus **explizit** gespiegelte **DOI**-Werke, die die **Plattformmethodik** **inhaltlich** tragen. **Werbung** ohne **Methodiklast** liegt **außerhalb**; **Legal Notice** und Register bleiben für **Lizenz** maßgeblich, auch wenn Arbeiten **ähnliche** Themen berühren.",
+                "fr": "Le corpus **n’est pas** un moteur documentaire général : il recense les sorties **NationFiles d’abord** plus les œuvres **DOI** explicitement miroir qui **informent** la méthodo plateforme. Le **promotionnel** sans charge méthodologique est **hors** entité ; **mentions légales** et registres restent **faits** pour les licences même si les papiers **effleurent** le sujet.",
+                "es": "El corpus **no** es un buscador académico general: lista **output NationFiles primero** y obras **DOI** reflejadas que **informan** la metodología de plataforma. Lo **promocional** sin carga metodológica queda **fuera**; **aviso legal** y registros siguen **autoridad** de licencia aunque los textos **rocen** el tema.",
+                "pt": "O corpus **não** é motor de literatura geral: reúne **output NationFiles primeiro** e obras **DOI** espelhadas que **informam** a metodologia da plataforma. **Promoção** sem carga metodológica fica **fora**; **aviso legal** e registos mantêm **autoridade** de licença mesmo que os textos **tangenciem** o tema.",
+                "ar": "المجموعة **ليست** محرك بحث أكاديمي عامًا؛ تسرد مخرجات **NationFiles أولًا** وأعمال **DOI** المعكوسة صراحةً التي **تغذي** منهجية المنصة. **الدعاية** دون حمولة منهجية **خارج** هذا الكيان؛ تبقى **الإشعارات القانونية** والسجلات **مرجعية** للترخيص حتى لو تناولت الأوراق **موضوعات شابهة**.",
+                "ja": "コーパスは**万能の学術検索**ではない。**NationFiles 先**の研究成果と、**プラットフォーム方法論に実質的に効く** **DOI** 作品を明示的に載せる。**方法論の荷**を持たない宣伝は**この**エンティティ外。**リーガル**とレジストリは、論文が似た話題でも**ライセンス**については**優先**する。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles",
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Publications",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "en": "{{nationfiles}}",
+                "de": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "data-integration-overview"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "core-hierarchy"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "publications-hub"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "knowledge-hub-nfkg"
+        },
+        {
+            "rel": "hasPart",
+            "to": "whitepaper-algorithmic-geopolitics-nfsi"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Publikationen",
+            "teaser": "Das **Publikationskorpus** auf {{nationfiles}} ist die **öffentliche** Brücke zwischen **zitierfähiger** Forschungsdisziplin — **DOI**, Abstracts, klarer **Versionsbezug** — und **Kennzahlen**, die Besucher:innen auf Profilen und Dashboards **tatsächlich** sehen. Es ersetzt weder **Gerichts**-Texte noch ein **Literaturportal** für jedes Fach.",
+            "summary_bullets": [
+                "**Inhalt:** Whitepapers, Methodik- und Validierungstexte, **DOI**-Werke wo ausgewiesen.",
+                "**Brücke:** nummerierte Abschnitte **↔** Connector- und Registry-Logik aus **VVR** / **{{nfsi}}**.",
+                "**Motor:** **{{naciro}}** — wie in den veröffentlichten Schichten beschrieben.",
+                "**Maschinenform:** **{{nationfile-json}}** übernimmt **dieselben** Definitionen.",
+                "**Kein Ersatz:** Lizenz und Register bleiben **maßgeblich**; Korpus **dokumentiert**."
+            ],
+            "body_md": "Forschung, die nur im PDF existiert, und Software, die nur im Browser blinkt, sprechen oft **zwei Sprachen**. NationFiles legt deshalb neben den **ländernah**en Oberflächen ein **Publikationskorpus** an: eine **Sammlung** längerer Texte — Whitepapers, Methodik- und Validierungsarbeiten — plus **ausgewiesene** **DOI**-Literatur, die **inhaltlich** erklärt, **wie** Kennzahlen entstehen und **wo** sie ihre Definition her haben.\n\n**Seriosität** meint hier **kein** Pathos, sondern **Nachvollziehbarkeit**. Wo ein **DOI** existiert, ist er der **Griff**, mit denen Bibliotheken, Archive und Reviewer:innen das Werk wiederfinden. Die Website verlinkt **Verlags**-Landingpages und hält **Titel**, **Autorschaft** und **Versionsabsicht** mit dem Knowledge-Eintrag **kongruent**. Wer das Werk **zusammenfasst**, soll kennzeichnen, dass es **nicht** der Originalabstract ist — sonst mischt sich **Interpretation** unbemerkt mit **Primärquelle**.\n\nDer **operative** Bezug ist **explizit**: Absätze in **Validation & Verification Report** und **{{nfsi}}**-Methodik nennen **Connector-Familien**, **Schichten** und **Registry**-Felder. Das Korpus **kartiert** diese Textstellen auf dieselbe Architektur, die **{{naciro}}** beim Berechnen traversiert und die **{{nationfile-json}}**-Pakete ausgeben. So bleibt die Frage „**steht** die Zahl auf dem Schirm für **diesen** Definitionsstand?“ **beantwortbar**.\n\n**Was draußen bleibt:** Werbebroschüren **ohne** methodischen Kern, beliebige **Fremdzitate** ohne Bezug zur Plattform und **persönliche** Meinung ohne Datenbezug — das gehört **nicht** unter diese Entity. **Legal Notice**, **Quellenregister** und **AI Guidelines** bleiben **Randbedingungen**, auch wenn ein Paper spannend liest.\n\n**Lesepfad:** [Publikationen](/de/publications/), [Knowledge](/de/knowledge/entity/publications-corpus/), [VVR](/de/legal/validation-and-verification-report/), [NFSI-Methodik](/de/company/nfsi/).",
+            "facts": [
+                {
+                    "k": "Gattung",
+                    "v": "First-Party-Forschungskorpus"
+                },
+                {
+                    "k": "Identifier",
+                    "v": "DOI wo registriert"
+                },
+                {
+                    "k": "Operativer Anker",
+                    "v": "{{naciro}} / {{nationfile-json}}"
+                },
+                {
+                    "k": "Grenze",
+                    "v": "Kein All-Subject-Suchmotor"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum DOI und Dashboard zusammen gedacht werden",
+                    "body_md": "Der **DOI** stabilisiert die **Textidentität**; das **Dashboard** stabilisiert die **Zahlenidentität**. Wer sie **trennt**, verliert die **Synchronität** zwischen Fußnote und **built_at_utc** — das Korpus soll **Risse** sichtbar machen, nicht **vertuschen**."
+                },
+                {
+                    "title": "Für Reviewer:innen und Risikoorgane",
+                    "body_md": "Nutzen Sie nummerierte Abschnitte als **Checkliste**: jedes Gewicht, jede Schicht und jede ausgeschlossene Quelle sollte **irgendwo** dokumentiert sein — nicht nur „im Gefühl des Modells“."
+                },
+                {
+                    "title": "Redaktionelle Verantwortung",
+                    "body_md": "**Neawolf Media Group** veröffentlicht als Verlagsmarkt **NationFiles**; hier gilt **Impressum** und **Quellenregister** vor Gerüchteökonomie."
+                }
+            ]
+        },
+        "en": {
+            "title": "Publications",
+            "teaser": "The **publications corpus** on {{nationfiles}} is the public bridge between **citation-grade research**—DOIs, abstracts, explicit version intent—and the **figures** readers actually see on country profiles and dashboards. It is neither a court filing nor a catch-all academic search engine.",
+            "summary_bullets": [
+                "**Contents:** whitepapers, methodology and validation writing, DOI works where registered.",
+                "**Bridge:** numbered sections **↔** connector and registry logic from the VVR and **{{nfsi}}** methodology.",
+                "**Engine:** **{{naciro}}** as described by the published layers.",
+                "**Machine shape:** **{{nationfile-json}}** inherits the **same** definitions.",
+                "**Not a substitute:** licensing and registries stay **authoritative**; the corpus **documents**."
+            ],
+            "body_md": "Research that lives only in a PDF and software that lives only in a browser often speak **different dialects**. NationFiles therefore maintains a **publications corpus** alongside country-facing surfaces: a curated set of long-form pieces—whitepapers, method memos, validation narratives—plus **DOI-bearing** texts that **substantively** explain how headline metrics are produced and **which** definitions apply.\n\n**Rigor** here means **traceability**, not rhetoric. Where a DOI exists, it is the **handle** libraries and reviewers expect. The web layer links publisher landing pages and keeps **title**, **authorship**, and **version intent** consistent with the Knowledge record. Anyone who **compresses** the work into a blurb should label it as **secondary**; otherwise interpretation quietly replaces the **primary** abstract.\n\nThe **operational** link is explicit: the Validation & Verification Report and **{{nfsi}}** methodology cite connector families, evaluation layers, and registry fields. The corpus maps those paragraphs onto the same architecture **{{naciro}}** traverses when recomputing scores and that **{{nationfile-json}}** bundles emit. That keeps the question “does the on-screen number belong to **this** definitional cut?” answerable without hand-waving.\n\n**Out of scope:** glossy collateral without methodological payload, unrelated third-party citations, and untethered opinion. **Legal notices**, the **source registry**, and **AI guidelines** remain binding even when a paper reads well.\n\n**Reading path:** [Publications](/en/publications/), [this Knowledge entry](/en/knowledge/entity/publications-corpus/), [V&V report](/en/legal/validation-and-verification-report/), [NFSI methodology](/en/company/nfsi/).",
+            "facts": [
+                {
+                    "k": "Kind",
+                    "v": "First-party research corpus"
+                },
+                {
+                    "k": "Identifier",
+                    "v": "DOI where registered"
+                },
+                {
+                    "k": "Operational anchors",
+                    "v": "{{naciro}} / {{nationfile-json}}"
+                },
+                {
+                    "k": "Boundary",
+                    "v": "Not a universal literature engine"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why DOIs and dashboards belong in one story",
+                    "body_md": "The **DOI** stabilises textual identity; the **dashboard** stabilises numeric identity. Split them and you lose parity between footnotes and export **timestamps**—the corpus is meant to **surface** those gaps, not hide them."
+                },
+                {
+                    "title": "For peer reviewers and risk officers",
+                    "body_md": "Treat numbered sections as a **checklist**: every weight, every excluded datasource, every layer should be **written down** somewhere—never only in an engineer’s intuition."
+                },
+                {
+                    "title": "Editorial accountability",
+                    "body_md": "**Neawolf Media Group** publishes **NationFiles**; imprint rules and the registry outrank speculation."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Corpus des publications",
+            "teaser": "Le **corpus publications** sur {{nationfiles}} fait le pont entre **recherche citabile** — DOI, résumés, intention de version — et les **chiffres** visibles sur profils et tableaux. Ce n’est **ni** une pièce **judiciaire** ni un moteur documentaire universel.",
+            "summary_bullets": [
+                "**Contenu:** livres blancs, textes méthodo/validation, œuvres **DOI** lorsqu’enregistrées.",
+                "**Pont:** sections numérotées **↔** logique connecteurs/registre **VVR** / méthodo **{{nfsi}}**.",
+                "**Moteur:** **{{naciro}}** tel que décrit.",
+                "**Forme machine:** **{{nationfile-json}}** hérite des **mêmes** définitions.",
+                "**Pas un substitut:** licences et registres restent **faits** ; le corpus **documente**."
+            ],
+            "body_md": "La recherche **PDF-seule** et l’interface **navigateur-seul** parlent souvent deux **jargon**. NationFiles maintient donc un **corpus publications** : textes longs — livres blancs, mémos méthodo, récits de validation — plus littérature **DOI** qui explique **comment** les indicateurs phares sont produits et **quelles** définitions valent.\n\n**Sérieux** veut dire **tracer**, pas slogan. Avec DOI, c’est la **poignée** attendue par bibliothèques et pairs. Le site pointe les pages éditeur et aligne **titre**, **paternité**, **version** avec l’entrée Knowledge. Toute **compression** en accroche doit dire **secondaire** — sinon l’interprétation remplace l’**abstract**.\n\nLe lien **opérationnel** est **nommé** : le **VVR** et la méthodo **{{nfsi}}** citent familles de connecteurs, couches, champs de registre. Le corpus **cartographie** ces paragraphes sur l’architecture que **{{naciro}}** parcourt et que **{{nationfile-json}}** émet. La question « ce chiffre écran appartient-il **à** cette coupe définitionnelle ? » reste **répondable**.\n\n**Hors cadre:** plaquettes sans charge méthodo, citations tierces **sans** ancrage plateforme. **Mentions légales**, **registre**, **directives IA** priment.\n\n**Parcours:** [Publications](/fr/publications/), [entrée Knowledge](/fr/knowledge/entity/publications-corpus/), [VVR](/fr/legal/validation-and-verification-report/), [méthodo NFSI](/fr/company/nfsi/).",
+            "facts": [
+                {
+                    "k": "Nature",
+                    "v": "Corpus recherche first-party"
+                },
+                {
+                    "k": "Identifiant",
+                    "v": "DOI si enregistré"
+                },
+                {
+                    "k": "Ancres opérationnelles",
+                    "v": "{{naciro}} / {{nationfile-json}}"
+                },
+                {
+                    "k": "Limite",
+                    "v": "Pas moteur documentaire global"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi DOI et tableau de bord ensemble",
+                    "body_md": "Le **DOI** fixe l’identité textuelle ; le **dashboard** fixe l’identité numérique. Les **découpler**, c’est risquer **désalignement** notes de bas de page et **horodatages** export."
+                },
+                {
+                    "title": "Pour relecteurs et risk",
+                    "body_md": "Les sections numérotées servent de **liste de contrôle** : chaque poids, chaque exclusion doit être **écrit**."
+                },
+                {
+                    "title": "Responsabilité éditoriale",
+                    "body_md": "**Neawolf Media Group** publie **NationFiles** ; l’**imprint** et le registre l’emportent sur la rumeur."
+                }
+            ]
+        },
+        "es": {
+            "title": "Corpus de publicaciones",
+            "teaser": "El **corpus de publicaciones** en {{nationfiles}} une **investigación citable** — DOI, resúmenes, intención de versión — con las **cifras** que se ven en perfiles y paneles. **No** es escrito **judicial** ni motor documental universal.",
+            "summary_bullets": [
+                "**Contenido:** white papers, texto metodológico/de validación, obras **DOI** registradas.",
+                "**Puente:** secciones numeradas **↔** lógica conectores/registro **VVR** / metodología **{{nfsi}}**.",
+                "**Motor:** **{{naciro}}** según capas publicadas.",
+                "**Forma máquina:** **{{nationfile-json}}** hereda las **mismas** definiciones.",
+                "**No sustituye:** licencias y registros son **autoridad**; el corpus **documenta**."
+            ],
+            "body_md": "Investigación solo **PDF** e interfaz solo **navegador** suelen hablar **dialectos** distintos. NationFiles mantiene un **corpus** al lado de las vistas país: piezas largas — white papers, memorias de método, relatos de validación — más literatura **DOI** que explica **cómo** se fabrican los indicadores y **qué** definiciones mandan.\n\n**Rigor** aquí es **traza**, no eslógan. Con **DOI**, es el **asa** que esperan bibliotecas y revisores. La web enlaza al editor y alinea **título**, **autoría**, **versión** con Knowledge. Quien **resume** debe marcar **secundario** — si no, la interpretación sustituye al **abstract**.\n\nEl vínculo **operativo** está **nombrado**: el **informe V&V** y la metodología **{{nfsi}}** citan familias de conectores, capas, campos de registro. El corpus **mapea** esos párrafos a la arquitectura que **{{naciro}}** recorre y que **{{nationfile-json}}** emite. Así se responde si la cifra en pantalla **pertenece** a este corte definicional.\n\n**Fuera:** folletos sin carga metodológica, citas **desancladas**. **Aviso legal**, **registro**, **directrices IA** mandan.\n\n**Ruta:** [Publicaciones](/es/publications/), [entrada Knowledge](/es/knowledge/entity/publications-corpus/), [VVR](/es/legal/validation-and-verification-report/), [metodología NFSI](/es/company/nfsi/).",
+            "facts": [
+                {
+                    "k": "Tipo",
+                    "v": "Corpus investigación first-party"
+                },
+                {
+                    "k": "Identificador",
+                    "v": "DOI si registrado"
+                },
+                {
+                    "k": "Anclas operativas",
+                    "v": "{{naciro}} / {{nationfile-json}}"
+                },
+                {
+                    "k": "Límite",
+                    "v": "No motor documental universal"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por qué DOI y panel en una sola historia",
+                    "body_md": "El **DOI** fija identidad textual; el **panel** fija identidad numérica. **Separarlos** arriesga desalinear notas y **marcas de tiempo** de exportación."
+                },
+                {
+                    "title": "Para revisores y riesgos",
+                    "body_md": "Las secciones numeradas son **lista de cierre**: cada peso y exclusión debe estar **escrito**."
+                },
+                {
+                    "title": "Responsabilidad editorial",
+                    "body_md": "**Neawolf Media Group** publica **NationFiles**; el **aviso** y el registro ganan a la especulación."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Corpus de publicações",
+            "teaser": "O **corpus de publicações** em {{nationfiles}} liga **investigação citável** — DOI, resumos, intenção de versão — às **cifras** visíveis em perfis e painéis. **Não** é peça **judicial** nem motor documental universal.",
+            "summary_bullets": [
+                "**Conteúdo:** white papers, texto metodológico/de validação, obras **DOI** registadas.",
+                "**Ponte:** secções numeradas **↔** lógica conectores/registo **VVR** / metodologia **{{nfsi}}**.",
+                "**Motor:** **{{naciro}}** conforme camadas publicadas.",
+                "**Forma máquina:** **{{nationfile-json}}** herda as **mesmas** definições.",
+                "**Não substitui:** licenças e registos **mandam**; o corpus **documenta**."
+            ],
+            "body_md": "Investigação só **PDF** e interface só **browser** falam **dialectos** diferentes. A NationFiles mantém um **corpus** junto das vistas país: textos longos — white papers, memórias de método, narrativas de validação — mais literatura **DOI** que explica **como** os indicadores são produzidos e **que** definições prevalecem.\n\n**Rigor** aqui é **rastreabilidade**, não slogan. Com **DOI**, é o **asa** que bibliotecas esperam. A web liga ao editor e alinha **título**, **autoria**, **versão** com Knowledge. Quem **resume** deve marcar **secundário** — senão a interpretação substitui o **resumo**.\n\nA ligação **operacional** está **nomeada**: o **relatório V&V** e a metodologia **{{nfsi}}** citam famílias de conectores, camadas, campos de registo. O corpus **mapeia** esses parágrafos à arquitectura que **{{naciro}}** percorre e que **{{nationfile-json}}** emite. Assim responde se o número no ecrã **pertenece** a este corte definicional.\n\n**Fora:** brochuras sem carga metodológica. **Aviso legal**, **registo**, **diretrizes IA** prevalecem.\n\n**Percurso:** [Publicações](/pt/publications/), [entrada Knowledge](/pt/knowledge/entity/publications-corpus/), [VVR](/pt/legal/validation-and-verification-report/), [metodologia NFSI](/pt/company/nfsi/).",
+            "facts": [
+                {
+                    "k": "Tipo",
+                    "v": "Corpus de investigação first-party"
+                },
+                {
+                    "k": "Identificador",
+                    "v": "DOI se registado"
+                },
+                {
+                    "k": "Âncoras operacionais",
+                    "v": "{{naciro}} / {{nationfile-json}}"
+                },
+                {
+                    "k": "Limite",
+                    "v": "Não motor documental universal"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Porque DOI e painel na mesma história",
+                    "body_md": "O **DOI** fixa identidade textual; o **painel** fixa identidade numérica. **Separá-los** desloca notas de rodapé de **carimbos** de exportação."
+                },
+                {
+                    "title": "Para revisores e risco",
+                    "body_md": "Secções numeradas são **checklist**: cada peso e exclusão tem de estar **escrito**."
+                },
+                {
+                    "title": "Responsabilidade editorial",
+                    "body_md": "**Neawolf Media Group** publica **NationFiles**; **imprint** e registo vencem especulação."
+                }
+            ]
+        },
+        "ar": {
+            "title": "مجموعة المنشورات",
+            "teaser": "**مجموعة المنشورات** على {{nationfiles}} تصل **بحثًا قابلاً للاقتباس** — **DOI**، ملخصات، نية إصدار — بالأرقام الظاهرة في الملفات واللوحات. **ليست** وثيقة **قضائية** ولا محرك توثيق شامل.",
+            "summary_bullets": [
+                "**المحتوى:** أوراق بيضاء، نص منهجي/تحقق، أعمال **DOI** المسجَّلة.",
+                "**الجسر:** فقرات مرقّمة **↔** منطق موصلات/سجل **VVR** ومنهجية **{{nfsi}}**.",
+                "**المحرك:** **{{naciro}}** كما في الطبقات المنشورة.",
+                "**شكل آلة:** **{{nationfile-json}}** يرث **نفس** التعريفات.",
+                "**ليس بديلاً:** التراخيص والسجلات **مرجع**؛ المجموعة **توثّق**."
+            ],
+            "body_md": "بحث **PDF فقط** وواجهة **متصفح فقط** يختلفان أحيانًا في **الألفاظ**. تحتفظ NationFiles بـ**مجموعة منشورات** بجانب عروض الدول: نصوص طويلة — أوراق بيضاء، مذكرات منهج، سرد تحقق — مع أدبيات **DOI** تشرح **كيف** تُنتج المؤشرات الرئيسة و**أي** تعريفات تسري.\n\n**الجدية** هنا **إمكانية التتبع** لا الشعار. مع **DOI** يكون المعرف **المقبض** الذي تتوقعه المكتبات والمحكّمون. الربط بصفحات الناشر وتوافق **العنوان** و**الإسناد** و**نية الإصدار** مع سجل المعرفة. أي **ضغط** في عبارة تسويقية يجب أن يُعلَم **ثانوي** — وإلا استبدلت التفسيرات **الملخص الأول**.\n\nالربط **التشغيلي** **مسمّى**: **تقرير التحقق والتحقص** ومنهجية **{{nfsi}}** يذكران عائلات موصلات وطبقات وسجلات. المجموعة **تطابق** هذه الفقرات على البنية التي يجتازها **{{naciro}}** ويصدّرها **{{nationfile-json}}**. فيمكن الجواب: هل الرقم على الشاشة **لنفس** قطع التعريف؟\n\n**خارج النطاق:** مطبوعات بلا حمولة منهجية. **الإشعار القانوني**، **السجل**، **إرشادات الذكاء الاصطناعي** تبقى **حاكمة**.\n\n**مسار:** [المنشورات](/ar/publications/)، [صفحة المعرفة](/ar/knowledge/entity/publications-corpus/)، [VVR](/ar/legal/validation-and-verification-report/)، [منهجية NFSI](/ar/company/nfsi/).",
+            "facts": [
+                {
+                    "k": "النوع",
+                    "v": "مجموعة بحث first-party"
+                },
+                {
+                    "k": "المعرّف",
+                    "v": "DOI عند التسجيل"
+                },
+                {
+                    "k": "المراسي التشغيلية",
+                    "v": "{{naciro}} / {{nationfile-json}}"
+                },
+                {
+                    "k": "الحد",
+                    "v": "ليس محرك توثيق عالميًا"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا DOI واللوحة في سرد واحد",
+                    "body_md": "**DOI** يثبت الهوية النصية؛ **اللوحة** تثبت الهوية الرقمية. **فصلهما** يخلط الحواشي مع **طوابع** التصدير."
+                },
+                {
+                    "title": "للمحكمين ودوائر المخاطر",
+                    "body_md": "الفقرات المرقّمة **قائمة تحقق**: كل وزن واستبعاد يجب أن يكون **مكتوبًا**."
+                },
+                {
+                    "title": "المسؤولية التحريرية",
+                    "body_md": "**Neawolf Media Group** تنشر **NationFiles**؛ **البيان القانوني** والسجل **فوق** الظنون."
+                }
+            ]
+        },
+        "ja": {
+            "title": "出版物コーパス",
+            "teaser": "{{nationfiles}} の**出版物コーパス**は、**DOI**・抄録・版の意図といった**引用に耐える**研究と、国プロフィールやダッシュボードに**実際に出る**数値をつなぐ**公開の橋**。**裁判書**でも**万能文献検索**でもない。",
+            "summary_bullets": [
+                "**内容:** ホワイトペーパー、方法論／検証テキスト、登録のある **DOI** 著作。",
+                "**橋:** 節番号 **↔** **VVR** と **{{nfsi}}** 方法論のコネクタ／レジストリ論理。",
+                "**エンジン:** 公開された層に述べる **{{naciro}}**。",
+                "**機械形:** **{{nationfile-json}}** が**同じ**定義を継承。",
+                "**代替ではない:** ライセンスとレジストリが**優先**；コーパスは**記述**。"
+            ],
+            "body_md": "PDF に閉じた研究と、ブラザだけのソフトは、しばしば**違う言い方**をする。NationFiles は国情報の横に**出版物コーパス**を置く——ホワイトペーパー、方法メモ、検証の叙述に加え、指標の出所と**効く**定義を**実体的**に説明する **DOI** 文献。\n\nここでの**厳密さ**は**追跡可能性**であってスローガンではない。**DOI** があれば、図書館や査読者が期待する**ハンドル**になる。発行者ランディングへリンクし、Knowledge レコードと**題名・著者・版の意図**を揃える。**要約**は**二次**と明示しないと、解釈が**一次抄録**に**すり替わる**。\n\n**運用**への結びつきは**明示**されている。**検証・検証報告書**と **{{nfsi}}** 方法論はコネクタ系、評価層、レジストリ項目を引用する。コーパスはそれらの段落を、スコア再計算で **{{naciro}}** が辿るアーキテクチャと **{{nationfile-json}}** が出す形に**写像**する。画面の数が**この**定義断面に**属するか**が、手振りなしで答えられる。\n\n**対象外:** 方法論の荷のないパンフ、**つながりのない**第三者引用。**法的事項**・**ソース登録**・**AI ガイドライン**が拘束する。\n\n**読む順序:** [出版物](/ja/publications/)、[本 Knowledge ページ](/ja/knowledge/entity/publications-corpus/)、[VVR](/ja/legal/validation-and-verification-report/)、[NFSI 方法論](/ja/company/nfsi/)。",
+            "facts": [
+                {
+                    "k": "種別",
+                    "v": "First-party 研究コーパス"
+                },
+                {
+                    "k": "識別子",
+                    "v": "登録時は DOI"
+                },
+                {
+                    "k": "運用上の錨",
+                    "v": "{{naciro}} / {{nationfile-json}}"
+                },
+                {
+                    "k": "境界",
+                    "v": "万能の学術検索ではない"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "DOI とダッシュボードを一つの物語にする理由",
+                    "body_md": "**DOI** はテキストの同一性を、**ダッシュボード**は数値の同一性を固定する。**切り離す**と脚注とエクスポート**時刻**の整合が崩れやすい——コーパスはその**綻び**を示すためのものだ。"
+                },
+                {
+                    "title": "査読者・リスク部門向け",
+                    "body_md": "節番号を**チェックリスト**にする。重みも除外も**どこかに**書かれていなければならない——**默った直感**だけでは足りない。"
+                },
+                {
+                    "title": "編集上の責任",
+                    "body_md": "**Neawolf Media Group** が **NationFiles** を発行する。**インプリント**とレジストリが推測に**勝つ**。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "publications-corpus"
+        },
+        "repository_relative_path": "knowledge-data/entities/publications-corpus.json"
+    }
+}

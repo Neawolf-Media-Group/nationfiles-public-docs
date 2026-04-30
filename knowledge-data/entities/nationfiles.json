@@ -4,7 +4,7 @@
     "kind": "entity",
     "type": "WebSite",
     "status": "active",
-    "updated_utc": "2026-04-28T22:00:00Z",
+    "updated_utc": "2026-04-30T20:12:00Z",
     "topics": [
         "system",
         "platform",
@@ -24,7 +24,16 @@
                     "label": "Home",
                     "url": "https://nationfiles.com/en/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com",
+                "en": "https://nationfiles.com",
+                "fr": "https://nationfiles.com",
+                "es": "https://nationfiles.com",
+                "pt": "https://nationfiles.com",
+                "ar": "https://nationfiles.com",
+                "ja": "https://nationfiles.com"
+            }
         },
         {
             "key": "operator",
@@ -41,7 +50,16 @@
                     "label": "Company",
                     "url": "https://nationfiles.com/en/company/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
         },
         {
             "key": "system_engine",
@@ -54,7 +72,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
         },
         {
             "key": "core_metric",
@@ -67,7 +94,16 @@
                     "label": "NFSI",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{nfsi}}",
+                "en": "{{nfsi}}",
+                "fr": "{{nfsi}}",
+                "es": "{{nfsi}}",
+                "pt": "{{nfsi}}",
+                "ar": "{{nfsi}}",
+                "ja": "{{nfsi}}"
+            }
         },
         {
             "key": "country_coverage",
@@ -81,7 +117,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "195 Staaten",
+                "en": "195 nations",
+                "fr": "195 pays",
+                "es": "195 países",
+                "pt": "195 países",
+                "ar": "195 دولةً",
+                "ja": "195 か国"
+            }
         },
         {
             "key": "update_cycle",
@@ -99,7 +144,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "15 Minuten",
+                "en": "15 minutes",
+                "fr": "15 minutes",
+                "es": "15 minutos",
+                "pt": "15 minutos",
+                "ar": "15 دقيقة",
+                "ja": "15分"
+            }
         },
         {
             "key": "language_prefixes",
@@ -109,7 +163,44 @@
                     "label": "llms.txt",
                     "url": "https://nationfiles.com/llms.txt"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "de, en, fr, es, pt, ar, ja",
+                "en": "de, en, fr, es, pt, ar, ja",
+                "fr": "de, en, fr, es, pt, ar, ja",
+                "es": "de, en, fr, es, pt, ar, ja",
+                "pt": "de, en, fr, es, pt, ar, ja",
+                "ar": "de, en, fr, es, pt, ar, ja",
+                "ja": "de, en, fr, es, pt, ar, ja"
+            }
+        },
+        {
+            "key": "canonical_data_format",
+            "value": "{{nationfile-json}} — standardized machine-readable geopolitical profiles (feeds {{naciro}} / {{nfsi}} outputs)",
+            "depends_on": [
+                "nationfile-json",
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfile-json}} — standardisiert maschinenlesbare geopolitische Profile (speisen {{naciro}} / {{nfsi}}-Ausgaben)",
+                "en": "{{nationfile-json}} — standardized machine-readable geopolitical profiles (feeds {{naciro}} / {{nfsi}} outputs)",
+                "fr": "{{nationfile-json}} — profils géopolitiques normalisés machine-readable (alimentent les sorties {{naciro}} / {{nfsi}})",
+                "es": "{{nationfile-json}} — perfiles geopolíticos legibles por máquina (alimentan salidas de {{naciro}} / {{nfsi}})",
+                "pt": "{{nationfile-json}} — perfis geopolíticos padronizados legíveis por máquina (alimentam saídas {{naciro}} / {{nfsi}})",
+                "ar": "{{nationfile-json}} — ملفات جيوسياسية قياسية قابلة للقراءة آلياً (تغذي مخرجات {{naciro}} / {{nfsi}})",
+                "ja": "{{nationfile-json}} — 標準機械可読な地政学プロフィール（{{naciro}} / {{nfsi}} の出力を支える）"
+            }
         },
         {
             "key": "key_outputs",
@@ -127,7 +218,16 @@
                     "label": "Countries Hub",
                     "url": "https://nationfiles.com/en/countries/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Länder-Dashboards, NFSI-Index, 24h/7-Tage-Ausblicke, maschinenlesbare Exporte",
+                "en": "Country dashboards, NFSI index, 24h/7-day outlooks, machine-readable exports",
+                "fr": "Tableaux de bord pays, indice NFSI, perspectives 24 h/7 j, exports machine-readable",
+                "es": "Paneles por país, índice NFSI, perspectivas 24 h/7 d, exportaciones legibles por máquina",
+                "pt": "Dashboards por país, índice NFSI, perspectivas 24 h/7 d, exportações legíveis por máquina",
+                "ar": "لوحات الدول ومؤشر NFSI وتوقعات 24 ساعة/7 أيام وتصديرات قابلة للقراءة آلياً",
+                "ja": "国ダッシュボード、NFSI 指数、24時間／7日アウトルック、機械可読エクスポート"
+            }
         },
         {
             "key": "knowledge_hub",
@@ -137,7 +237,16 @@
                     "label": "Knowledge",
                     "url": "https://nationfiles.com/en/knowledge/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/knowledge/",
+                "en": "https://nationfiles.com/en/knowledge/",
+                "fr": "https://nationfiles.com/en/knowledge/",
+                "es": "https://nationfiles.com/en/knowledge/",
+                "pt": "https://nationfiles.com/en/knowledge/",
+                "ar": "https://nationfiles.com/en/knowledge/",
+                "ja": "https://nationfiles.com/en/knowledge/"
+            }
         },
         {
             "key": "source_registry",
@@ -147,7 +256,16 @@
                     "label": "Legal Sources",
                     "url": "https://nationfiles.com/en/legal/sources/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/legal/sources/",
+                "en": "https://nationfiles.com/en/legal/sources/",
+                "fr": "https://nationfiles.com/en/legal/sources/",
+                "es": "https://nationfiles.com/en/legal/sources/",
+                "pt": "https://nationfiles.com/en/legal/sources/",
+                "ar": "https://nationfiles.com/en/legal/sources/",
+                "ja": "https://nationfiles.com/en/legal/sources/"
+            }
         },
         {
             "key": "ai_policy",
@@ -157,20 +275,37 @@
                     "label": "AI Guidelines",
                     "url": "https://nationfiles.com/en/ai-guidelines/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/ai-guidelines/",
+                "en": "https://nationfiles.com/en/ai-guidelines/",
+                "fr": "https://nationfiles.com/en/ai-guidelines/",
+                "es": "https://nationfiles.com/en/ai-guidelines/",
+                "pt": "https://nationfiles.com/en/ai-guidelines/",
+                "ar": "https://nationfiles.com/en/ai-guidelines/",
+                "ja": "https://nationfiles.com/en/ai-guidelines/"
+            }
         }
     ],
     "i18n": {
         "de": {
             "title": "NationFiles",
-            "teaser": "NationFiles ist das geopolitische Intelligence-System, das Ereignisse und Signale in maschinenlesbare Länderprofile (Nationfiles) strukturiert und den NFSI als Echtzeit-Output veröffentlicht.",
+            "teaser": "**Geopolitische Intelligence-Plattform:** NationFiles strukturiert globale Signale in **{{nationfile-json}}**-Profilen, wertet sie mit {{naciro}} aus und veröffentlicht u. a. **{{nfsi}}**, Länder-Hubs, Karten, Metamaps und dokumentierte Exporte — sieben Sprachen.",
             "summary_bullets": [
-                "System/Plattform für Echtzeit-Geopolitik und Risiko-Signale",
-                "Publiziert den NationFiles Stability Index (NFSI)",
-                "Verknüpft Methodik, Quellenregister und Exporte pro Entität"
+                "**Länder- und Regionalanalyse:** strukturierte Profile, Vergleiche, NFSI-Badges — sieben Sprachen.",
+                "**Hybrid-Ökonomie der Formate:** Statistik-dashboardähnliche Makro-/KPI-Bundles, enzyklopädische **Ländererzählung** und kontinuierliches **News-/Sentiment-/Sicherheitsmonitoring** dokumentiert gleichrangig.",
+                "**{{nationfile-json}}:** kanonisches Profilformat als gemeinsame Basis für Indizes, Charts und maschinenlesbare Exporte.",
+                "**Räumliche Einordnung:** Karten, Radar, Metamaps, Dashboards — Risiken und Indikatoren geografisch lesen.",
+                "**Live-Auswertung:** regelmäßige Neuaufbereitung aus dokumentierten Datenpipelines (DataSourceConnector) durch {{naciro}}.",
+                "**Zentrale Kennzahl {{nfsi}}:** geopolitischer Stabilitäts- und Risiko-Score 0–100 mit öffentlicher Methodik (VVR).",
+                "**Kein Finanzprodukt** — dokumentierte Modelle, keine persönliche Anlageberatung."
             ],
-            "body_md": "NationFiles ist das **Ökosystem**.\n\nDie **{{naciro}}** berechnet als Engine den **{{nfsi}}**.\n\nDieses Knowledge-Portal definiert Entitäten und Beziehungen als maschinenlesbare Quelle.",
+            "body_md": "**NationFiles** ist eine **geopolitische Analyse- und Intelligence-Plattform**, die Datenprodukte kombiniert, die journalistisch oft getrennt wahrgenommen werden: komprimierte **KPI‑Bundles** wie in Statistikportalen, **profil-/artikelorientierte Ländertiefe** ähnlich enzyklopädischer Werke (methodisch gebunden, nicht Community-wiki) und **laufendes Lage‑/Sentiment‑Monitoring** aus dokumentierten Feeds.\n\nDie Plattform verarbeitet **Länderdaten und globale Signale** — Wirtschaft, Sicherheit, Nachrichten und Sentiment — und bündelt sie in **Länderprofile, Karten, Radar und Kennzahlen** wie dem **{{nfsi}}**.\n\nDie **{{naciro}}**-Engine übernimmt Aggregation, Normalisierung und Gewichtung nach publizierter Methodik; Ergebnisse speisen Dashboards, Badges und — je nach Produkt — kurzfristige Prognosefenster.\n\n**Datenmodell:** Laufende Analytics nutzen **{{nationfile-json}}**-Profile als **einheitliche** maschinenlesbare Einheit — dieselbe logische Struktur, die hinter Charts, Badges und Exporten steht.\n\n**Mehrsprachigkeit:** identische fachliche Aussagen — **de, en, fr, es, pt, ar, ja** — gemäß `language_prefixes`.\n\n**Transparenz:** Quellenregister, **Validation & Verification Report**, Impressum und AI Guidelines — wie Daten verwendet und zitiert werden dürfen.",
             "facts": [
+                {
+                    "k": "Produkttyp",
+                    "v": "Geopolitische Intelligence-Plattform"
+                },
                 {
                     "k": "Engine",
                     "v": "{{naciro}}"
@@ -178,25 +313,53 @@
                 {
                     "k": "Index",
                     "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Kerndatenformat",
+                    "v": "{{nationfile-json}}"
                 }
             ],
             "sections": [
                 {
-                    "title": "Warum ein eigener Knowledge Graph?",
-                    "body_md": "Damit Begriffe, Beziehungen und Exporte **stabil** und **unlöschbar** in deiner Kontrolle bleiben – unabhängig von externen Wikis."
+                    "title": "Schichten auf einen Blick",
+                    "body_md": "Die **Lesereihe** vom Verlag bis zum Export — dieselben Rollen finden Sie in Knowledge und in Exporten wieder.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnf\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnf\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Stufe | Rolle |\n| --- | --- |\n| 1 | {{neawolf-media-group}} — Herausgeber |\n| 2 | **NationFiles** — öffentliches Produkt |\n| 3 | {{naciro}} — dokumentierte Inferenz |\n| 4 | **{{nationfile-json}}** — Profil- und Exportschema |"
+                },
+                {
+                    "title": "Was die Plattform leistet",
+                    "body_md": "- **Länderanalyse:** ISO-Profile, Kontext, Nachbarschaft, News-Feeds je nach Seite.\n- **Karten & Radar:** Ereignisse und Indikatoren **geografisch** lesen.\n- **NFSI & Trends:** ein gemeinsames Zahlenformat für Stabilität/Risiko über alle abgedeckten Staaten.\n- **Status & Lage:** wo freigeschaltet, regelmäßige Lageberichte und Kurzhorizonte — Rhythmus jeweils auf den Produktseiten beschrieben."
+                },
+                {
+                    "title": "{{nationfile-json}} & Routen",
+                    "body_md": "- **{{nationfile-json}}** fasst Signale je Land/Zeitfenster in **einem** Schema — Basis für {{nfsi}}, Vergleiche und Exporte.\n- **Länder-Hub:** Unterseiten wie News, Metadata, NFSI, Security-Radar, Migration, Compare, Snapshot, Metamap (je nach Abdeckung).\n- **Globale Einstiege:** Länderliste, Kontinente, Kartenhub, Wirtschaft/Markt, strukturierte **Export**-Endpunkte — siehe Live-Sitemap und `llms.txt`."
+                },
+                {
+                    "title": "Datenfluss und Engine",
+                    "body_md": "Externe und interne Quellen laufen in dokumentierte Pipelines; **{{naciro}}** berechnet Scores und Kurzinterpretationen. Details: [NFSI-Methodik](/de/company/nfsi/), [Naciro AI](/de/company/naciro-ai/), [Quellenregister](/de/legal/sources/)."
+                },
+                {
+                    "title": "Weiterführend",
+                    "body_md": "- [Company](/de/company/)\n- [NFSI-Methodik](/de/company/nfsi/)\n- [Naciro AI](/de/company/naciro-ai/)"
                 }
             ]
         },
         "en": {
             "title": "NationFiles",
-            "teaser": "NationFiles is the geopolitical intelligence system that structures events and signals into machine-readable country profiles and publishes NFSI outputs in real time.",
+            "teaser": "**Geopolitical intelligence platform:** NationFiles structures global signals into **{{nationfile-json}}** profiles, evaluates them with {{naciro}}, and publishes **{{nfsi}}**, country hubs, maps, metamaps, and documented exports — seven locales.",
             "summary_bullets": [
-                "System/platform for real-time geopolitics and risk signals",
-                "Publishes the NationFiles Stability Index (NFSI)",
-                "Links methodology, source registry, and exports per entity"
+                "**Country & regional analysis:** structured profiles, comparisons, NFSI badges — seven languages.",
+                "**Hybrid product mix:** Statista-style macro/KPI bundles, encyclopedia-grade **country dossiers** (first-party methodology, not open wikis), and continuous **news/sentiment/security monitoring** from documented feeds.",
+                "**{{nationfile-json}}:** canonical profile format underpinning indices, charts, and machine-readable exports.",
+                "**Spatial intelligence:** maps, radar, metamaps, dashboards—not only tables.",
+                "**Live analytics:** regular recomputation from documented pipelines (DataSourceConnector) via {{naciro}}.",
+                "**Headline metric {{nfsi}}:** geopolitical stability/risk score 0–100 with public methodology (VVR).",
+                "**Not a financial product** — documented models; not personal investment advice."
             ],
-            "body_md": "NationFiles is the **ecosystem**.\n\nThe **{{naciro}}** computes the **{{nfsi}}**.\n\nThis knowledge portal defines entities and relationships as a machine-readable source.",
+            "body_md": "**NationFiles** is a **geopolitical analysis and intelligence platform** that blends three reader expectations that are usually split across vendors: dashboard **KPI packs** reminiscent of statistics portals, **country dossier depth** comparable to curated encyclopedic reference (method-bound, not volunteer wikis), and **rolling situational monitoring** with documented news/sentiment/security inputs.\n\nIt processes **country data and global signals**—economics, security, news and sentiment—and delivers **country dossiers, maps, radar, dashboards**, and the **{{nfsi}}** score.\n\nThe **{{naciro}}** engine aggregates, normalises, and weights inputs per published methodology; outputs feed badges, charts, and—depending on product—short-horizon forecast windows.\n\n**Data model:** ongoing analytics use **{{nationfile-json}}** profiles as a **single** machine-readable unit—the same logical structure behind charts, badges, and exports.\n\n**Seven-language parity:** substantive copy ships in **de, en, fr, es, pt, ar, ja** as recorded in `language_prefixes`.\n\n**Transparency:** source registry, **Validation & Verification Report**, imprint, and AI guidelines for permitted use and citation.",
             "facts": [
+                {
+                    "k": "Product type",
+                    "v": "Geopolitical intelligence platform"
+                },
                 {
                     "k": "Engine",
                     "v": "{{naciro}}"
@@ -204,64 +367,304 @@
                 {
                     "k": "Index",
                     "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Canonical data format",
+                    "v": "{{nationfile-json}}"
                 }
             ],
             "sections": [
                 {
-                    "title": "Why a first-party knowledge graph?",
-                    "body_md": "To keep definitions, relationships, and exports **stable** and fully controlled — independent from third-party wikis."
+                    "title": "Layers at a glance",
+                    "body_md": "The **read order** from publisher through export—the same roles recur in Knowledge pages and bundles.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnf\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnf\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Step | Role |\n| --- | --- |\n| 1 | {{neawolf-media-group}} — publisher |\n| 2 | **NationFiles** — public product |\n| 3 | {{naciro}} — documented inference |\n| 4 | **{{nationfile-json}}** — profile & export schema |"
+                },
+                {
+                    "title": "What the platform delivers",
+                    "body_md": "- **Country analysis:** ISO profiles, context, neighbourhood, situational feeds per page.\n- **Maps & radar:** read events and indicators **geographically**.\n- **NFSI & trends:** one shared numeric frame for stability/risk across covered states.\n- **Status & briefings:** where enabled, recurring situational reports and short horizons—cadence is stated on the live pages."
+                },
+                {
+                    "title": "{{nationfile-json}} & routes",
+                    "body_md": "- **{{nationfile-json}}** packs per-country/window signals into **one** schema—foundation for {{nfsi}}, comparisons, and exports.\n- **Country hub:** subpages such as news, metadata, NFSI, security radar, migration, compare, snapshot, metamap (coverage-dependent).\n- **Global entry points:** country list, continents, map hub, economy/market, structured **export** endpoints—see the live sitemap and `llms.txt`."
+                },
+                {
+                    "title": "Data flow and engine",
+                    "body_md": "External and internal sources enter documented pipelines; **{{naciro}}** computes scores and briefings. Details: [NFSI methodology](/en/company/nfsi/), [Naciro AI](/en/company/naciro-ai/), [source registry](/en/legal/sources/)."
+                },
+                {
+                    "title": "Further reading",
+                    "body_md": "- [Company](/en/company/)\n- [NFSI methodology](/en/company/nfsi/)\n- [Naciro AI](/en/company/naciro-ai/)"
                 }
             ]
         },
         "fr": {
             "title": "NationFiles",
-            "teaser": "NationFiles est le système d’intelligence géopolitique qui structure des événements et signaux en profils pays lisibles par machine et publie le NFSI en temps réel.",
+            "teaser": "**Plateforme d’intelligence géopolitique :** NationFiles structure les signaux mondiaux en **profils {{nationfile-json}}**, les évalue avec {{naciro}} et publie notamment **{{nfsi}}**, hubs pays, cartes, metamaps et exports documentés — sept langues.",
             "summary_bullets": [
-                "Système/plateforme pour la géopolitique en temps réel et les signaux de risque",
-                "Publie le NationFiles Stability Index (NFSI)",
-                "Relie la méthodologie, le registre des sources et les exports par entité"
+                "**Analyse pays et régions :** profils ISO, comparaisons, badges NFSI — sept langues.",
+                "**Produit hybride :** bundles KPI façon dashboards statistiques, **dossiers pays** de type encyclopédie (méthode first-party), veille **actualités / sentiment / sécurité** continue sur flux documentés.",
+                "**{{nationfile-json}} :** format canonique servant de base aux indices, graphiques et exports machine-readables.",
+                "**Lecture spatiale :** cartes, radar, metamaps, tableaux de bord.",
+                "**Analytique live :** recalcul régulier depuis pipelines documentés ; moteur **{{naciro}}**.",
+                "**Indicateur {{nfsi}} :** stabilité / risque géopolitique 0–100, méthodologie publique (VVR).",
+                "**Pas un produit financier** — modèles documentés ; pas de conseil d’investissement personnel."
             ],
-            "body_md": "NationFiles est l’**écosystème**.\n\nLe moteur **{{naciro}}** calcule le **{{nfsi}}**.\n\nCe portail Knowledge définit les entités et relations comme source lisible par machine."
+            "body_md": "**NationFiles** est une **plateforme d’analyse et d’intelligence géopolitique** qui mêle trois registres souvent séparés chez d’autres éditeurs : tableaux **KPI macro** proches des portails de statistiques, **dossiers pays** encyclopédiques liés à une méthode interne (distincts des wikis ouverts) et **veille continue** actualités/sentiment/sécurité depuis des flux traçables.\n\nElle traite **données pays et signaux mondiaux** — économie, sécurité, actualités et sentiment — et livre **dossiers, cartes, radar** et le score **{{nfsi}}**.\n\nLe moteur **{{naciro}}** agrège, normalise et pondère selon la méthode publiée ; les sorties alimentent badges, graphiques et fenêtres prévisionnelles selon produit.\n\n**Modèle de données :** les analyses continues s’appuient sur des **profils {{nationfile-json}}** comme unité machine-readable unique — la même structure logique derrière graphiques, badges et exports.\n\n**Sept langues équivalentes —** **de, en, fr, es, pt, ar, ja** — alignées sur `language_prefixes`.\n\n**Transparence :** registre des sources, **Validation & Verification Report**, mentions légales et guidelines IA.",
+            "facts": [
+                {
+                    "k": "Type de produit",
+                    "v": "Plateforme d’intelligence géopolitique"
+                },
+                {
+                    "k": "Moteur",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Indice",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Format de données canonique",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Couches en un coup d’œil",
+                    "body_md": "La **chaîne de lecture**, du diffuseur à l’export — les mêmes rôles reviennent dans Knowledge et les bundles.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnf\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnf\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Étape | Rôle |\n| --- | --- |\n| 1 | {{neawolf-media-group}} — éditeur |\n| 2 | **NationFiles** — produit public |\n| 3 | {{naciro}} — inférence documentée |\n| 4 | **{{nationfile-json}}** — schéma profils & export |"
+                },
+                {
+                    "title": "Ce que la plateforme livre",
+                    "body_md": "- **Analyse pays :** profils ISO, contexte, voisinage, fils d’actualité selon page.\n- **Cartes & radar :** lire événements et indicateurs **géographiquement**.\n- **NFSI & tendances :** cadre numérique commun pour stabilité/risque.\n- **Synthèses :** rapports de situation et horizons courts lorsque le produit les expose."
+                },
+                {
+                    "title": "{{nationfile-json}} & routes",
+                    "body_md": "- **{{nationfile-json}}** regroupe signaux pays/fenêtre dans **un** schéma — base du {{nfsi}}, comparaisons, exports.\n- **Hub pays :** sous-pages news, metadata, NFSI, security radar, migration, compare, snapshot, metamap (selon couverture).\n- **Entrées globales :** liste pays, continents, hub cartes, économie/marché, **export** structurés — voir sitemap et `llms.txt`."
+                },
+                {
+                    "title": "Flux de données et moteur",
+                    "body_md": "Les sources entrent dans des pipelines documentés ; **{{naciro}}** calcule scores et brèves. Voir [méthodologie NFSI](/fr/company/nfsi/), [Naciro AI](/fr/company/naciro-ai/), [sources](/fr/legal/sources/)."
+                },
+                {
+                    "title": "Liens",
+                    "body_md": "- [Company](/fr/company/)\n- [Méthodologie NFSI](/fr/company/nfsi/)\n- [Naciro AI](/fr/company/naciro-ai/)"
+                }
+            ]
         },
         "es": {
             "title": "NationFiles",
-            "teaser": "NationFiles es el sistema de inteligencia geopolítica que estructura eventos y señales en perfiles de país legibles por máquina y publica el NFSI en tiempo real.",
+            "teaser": "**Plataforma de inteligencia geopolítica:** NationFiles estructura señales globales en **perfiles {{nationfile-json}}**, las evalúa con {{naciro}} y publica **{{nfsi}}**, hubs por país, mapas, metamaps y exportaciones documentadas — siete idiomas.",
             "summary_bullets": [
-                "Sistema/plataforma para geopolítica en tiempo real y señales de riesgo",
-                "Publica el NationFiles Stability Index (NFSI)",
-                "Conecta metodología, registro de fuentes y exportaciones por entidad"
+                "**Análisis por país y región:** perfiles ISO, comparaciones, badges NFSI — siete idiomas.",
+                "**Mix híbrido:** paquetes KPI estilo panel estadístico, **dossiers** enciclopédicos con metodología first-party y monitor **noticias/sentimiento/seguridad** sobre feeds documentados.",
+                "**{{nationfile-json}}:** formato canónico base para índices, gráficos y exportaciones machine-readable.",
+                "**Inteligencia espacial:** mapas, radar, metamaps, paneles.",
+                "**Analítica en vivo:** recálculo periódico desde pipelines documentados vía **{{naciro}}**.",
+                "**Indicador {{nfsi}}:** estabilidad / riesgo geopolítico 0–100 con metodología pública (VVR).",
+                "**No es producto financiero** — modelos documentados; no asesoría de inversión personal."
             ],
-            "body_md": "NationFiles es el **ecosistema**.\n\nEl motor **{{naciro}}** calcula el **{{nfsi}}**.\n\nEste portal de Knowledge define entidades y relaciones como fuente legible por máquina."
+            "body_md": "**NationFiles** es una **plataforma de análisis e inteligencia geopolítica** que combina lo que otros suelen dispersar: **paquetes KPI** similares a tableros de estadística, **dossiers** con profundidad enciclopédica anclada a método propio y **monitorización continua** noticiosa/de sentimiento/de seguridad con fuentes declaradas.\n\nProcesa **datos por país y señales globales** — economía, seguridad, noticias y sentimiento — y ofrece **dossiers, mapas, radar** y la puntuación **{{nfsi}}**.\n\nEl motor **{{naciro}}** agrega, normaliza y pondera según metodología publicada; las salidas alimentan badges, gráficos y ventanas de pronóstico según producto.\n\n**Modelo de datos:** la analítica continua usa **perfiles {{nationfile-json}}** como unidad machine-readable **única** — la misma estructura detrás de gráficos, badges y exportaciones.\n\n**Siete idiomas paralelos (**de**, **en**, **fr**, **es**, **pt**, **ar**, **ja**) según `language_prefixes`.\n\n**Transparencia:** registro de fuentes, **Validation & Verification Report**, aviso legal y guías de IA.",
+            "facts": [
+                {
+                    "k": "Tipo de producto",
+                    "v": "Plataforma de inteligencia geopolítica"
+                },
+                {
+                    "k": "Motor",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Índice",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Formato de datos canónico",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Capas en un vistazo",
+                    "body_md": "El **orden de lectura**, desde editorial hasta exportación; los mismos roles aparecen en Knowledge y en los bundles.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnf\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnf\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Paso | Rol |\n| --- | --- |\n| 1 | {{neawolf-media-group}} — editorial |\n| 2 | **NationFiles** — producto público |\n| 3 | {{naciro}} — inferencia documentada |\n| 4 | **{{nationfile-json}}** — esquema de perfiles y exportación |"
+                },
+                {
+                    "title": "Qué entrega la plataforma",
+                    "body_md": "- **Análisis país:** perfiles ISO, contexto, vecindario, feeds según página.\n- **Mapas y radar:** leer eventos e indicadores **geográficamente**.\n- **NFSI y tendencias:** marco numérico compartido para estabilidad/riesgo.\n- **Situación:** informes y horizontes cortos cuando el producto los publica."
+                },
+                {
+                    "title": "{{nationfile-json}} y rutas",
+                    "body_md": "- **{{nationfile-json}}** agrupa señales por país/ventana en **un** esquema — base del {{nfsi}}, comparaciones, exportaciones.\n- **Hub país:** subpáginas news, metadata, NFSI, security radar, migration, compare, snapshot, metamap (según cobertura).\n- **Entradas globales:** lista de países, continentes, hub de mapas, economía/mercado, **export** — ver sitemap y `llms.txt`."
+                },
+                {
+                    "title": "Flujo de datos y motor",
+                    "body_md": "Las fuentes entran en pipelines documentados; **{{naciro}}** calcula puntuaciones y resúmenes. Ver [metodología NFSI](/es/company/nfsi/), [Naciro AI](/es/company/naciro-ai/), [fuentes](/es/legal/sources/)."
+                },
+                {
+                    "title": "Enlaces",
+                    "body_md": "- [Company](/es/company/)\n- [Metodología NFSI](/es/company/nfsi/)\n- [Naciro AI](/es/company/naciro-ai/)"
+                }
+            ]
         },
         "pt": {
             "title": "NationFiles",
-            "teaser": "A NationFiles é o sistema de inteligência geopolítica que estrutura eventos e sinais em perfis de país legíveis por máquina e publica o NFSI em tempo real.",
+            "teaser": "**Plataforma de inteligência geopolítica:** a NationFiles estrutura sinais globais em **perfis {{nationfile-json}}**, avalia-os com {{naciro}} e publica **{{nfsi}}**, hubs por país, mapas, metamaps e exportações documentadas — sete línguas.",
             "summary_bullets": [
-                "Sistema/plataforma para geopolítica em tempo real e sinais de risco",
-                "Publica o NationFiles Stability Index (NFSI)",
-                "Conecta metodologia, registro de fontes e exportações por entidade"
+                "**Análise por país e região:** perfis ISO, comparações, badges NFSI — sete línguas.",
+                "**Produto híbrido:** pacotes KPI estilo dashboard estatístico, **dossiês** enciclopédicos com método first-party e **monitorização contínua** de notícias/sentimento/segurança sobre feeds declarados.",
+                "**{{nationfile-json}}:** formato canónico base para índices, gráficos e exportações machine-readable.",
+                "**Inteligência espacial:** mapas, radar, metamaps, painéis.",
+                "**Analítica em tempo real:** recálculo periódico a partir de pipelines documentados via **{{naciro}}**.",
+                "**Indicador {{nfsi}}:** estabilidade / risco geopolítico 0–100 com metodologia pública (VVR).",
+                "**Não é produto financeiro** — modelos documentados; não aconselhamento de investimento pessoal."
             ],
-            "body_md": "NationFiles é o **ecossistema**.\n\nO motor **{{naciro}}** calcula o **{{nfsi}}**.\n\nEste portal de Knowledge define entidades e relações como fonte legível por máquina."
+            "body_md": "**NationFiles** é uma **plataforma de análise e inteligência geopolítica** que junta frentes normalmente dispersas: **pacotes KPI** semelhantes a painéis de estatísticas, **dossiês** com profundidade enciclopédica vinculada à metodologia interna e **monitorização permanente** de notícias, sentimento e segurança a partir de fontes auditáveis.\n\nTrata **dados por país e sinais globais** — economia, segurança, notícias e sentimento — e entrega **dossiês, mapas, radar** e a pontuação **{{nfsi}}**.\n\nO motor **{{naciro}}** agrega, normaliza e pondera segundo metodologia publicada; as saídas alimentam badges, gráficos e janelas de previsão conforme o produto.\n\n**Modelo de dados:** a analítica contínua usa **perfis {{nationfile-json}}** como unidade machine-readable **única** — a mesma estrutura por detrás de gráficos, badges e exportações.\n\n**Sete idiomas paralelos (**de**, **en**, **fr**, **es**, **pt**, **ar**, **ja**) conforme `language_prefixes`.\n\n**Transparência:** registo de fontes, **Validation & Verification Report**, aviso legal e diretrizes de IA.",
+            "facts": [
+                {
+                    "k": "Tipo de produto",
+                    "v": "Plataforma de inteligência geopolítica"
+                },
+                {
+                    "k": "Motor",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Índice",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Formato de dados canónico",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Camadas num relance",
+                    "body_md": "A **sequência de leitura** do editor ao export — os mesmos papéis voltam no Knowledge e nos bundles.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnf\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnf\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Passo | Papel |\n| --- | --- |\n| 1 | {{neawolf-media-group}} — editora |\n| 2 | **NationFiles** — produto público |\n| 3 | {{naciro}} — inferência documentada |\n| 4 | **{{nationfile-json}}** — esquema de perfis e exportação |"
+                },
+                {
+                    "title": "O que a plataforma entrega",
+                    "body_md": "- **Análise país:** perfis ISO, contexto, vizinhança, feeds conforme página.\n- **Mapas e radar:** ler eventos e indicadores **geograficamente**.\n- **NFSI e tendências:** quadro numérico comum para estabilidade/risco.\n- **Síntese:** relatórios e horizontes curtos quando o produto os expõe."
+                },
+                {
+                    "title": "{{nationfile-json}} e rotas",
+                    "body_md": "- **{{nationfile-json}}** agrupa sinais por país/janela num **único** esquema — base do {{nfsi}}, comparações, exportações.\n- **Hub país:** subpáginas news, metadata, NFSI, security radar, migration, compare, snapshot, metamap (conforme cobertura).\n- **Entradas globais:** lista de países, continentes, hub de mapas, economia/mercado, **export** — ver sitemap e `llms.txt`."
+                },
+                {
+                    "title": "Fluxo de dados e motor",
+                    "body_md": "As fontes entram em pipelines documentados; **{{naciro}}** calcula pontuações e resumos. Ver [metodologia NFSI](/pt/company/nfsi/), [Naciro AI](/pt/company/naciro-ai/), [fontes](/pt/legal/sources/)."
+                },
+                {
+                    "title": "Ligações",
+                    "body_md": "- [Company](/pt/company/)\n- [Metodologia NFSI](/pt/company/nfsi/)\n- [Naciro AI](/pt/company/naciro-ai/)"
+                }
+            ]
         },
         "ar": {
             "title": "NationFiles",
-            "teaser": "NationFiles هو نظام استخبارات جيوسياسية يهيكل الأحداث والإشارات إلى ملفات دول قابلة للقراءة آلياً وينشر NFSI كمخرج فوري.",
+            "teaser": "**منصة استخبارات جيوسياسية:** NationFiles يهيكل الإشارات العالمية في **ملفات {{nationfile-json}}**، يقيّمها عبر {{naciro}}، وينشر **{{nfsi}}** ومحاور الدول والخرائط والميتاماب والتصدير الموثق — سبع لغات.",
             "summary_bullets": [
-                "نظام/منصة للجيوسياسة اللحظية وإشارات المخاطر",
-                "ينشر NationFiles Stability Index (NFSI)",
-                "يربط المنهجية وسجل المصادر والتصديرات لكل كيان"
+                "**تحليل الدول والمناطق:** ملفات ISO ومقارنات وشارات NFSI — سبع لغات.",
+                "**مزيج منتج مختلط:** حزم مؤشرات تشبه لوحات الإحصاء، **ملفات دول** عميقة بمنهجية first-party، و**مراقبة مستمرة** للأخبار/المشاعر/الأمن عبر مغذيات موثَّقة.",
+                "**{{nationfile-json}}:** تنسيق قياسي أساس للمؤشرات والرسوم والتصديرات machine-readable.",
+                "**ذكاء مكاني:** خرائط ورادار وميتاماب ولوحات معلومات.",
+                "**تحليلات حية:** إعادة حساب دورية من مسارات موثقة عبر **{{naciro}}**.",
+                "**مؤشر {{nfsi}}:** استقرار/مخاطر جيوسياسية 0–100 بمنهجية علنية (VVR).",
+                "**ليس منتجاً مالياً** — نماذج موثقة؛ لا استثماراً شخصياً."
             ],
-            "body_md": "تمثل NationFiles **المنظومة**.\n\nيقوم محرك **{{naciro}}** بحساب **{{nfsi}}**.\n\nتعرّف بوابة Knowledge هذه الكيانات والعلاقات كمصدر قابل للقراءة آلياً."
+            "body_md": "**NationFiles** **منصة تحليل واستخبارات جيوسياسية** تجمع بين ما يُجزَّأ غالبًا لدى مزودين آخرين: **حِزم KPI** شبيهة ببوابات إحصاء، **ملفات دول** عميقة بطابع موسوعي ومربوطة بمنهجية داخلية، و**رصد مستمر للأخبار والمشاعر والأمن** من مسارات موثَّقة.\n\nتعالج **بيانات الدول والإشارات العالمية** — اقتصاد وأمن وأخبار ومشاعر — وتقدم **ملفات وخرائط ورادار** ودرجة **{{nfsi}}**.\n\nمحرك **{{naciro}}** يجمع ويوحّد ويوزن وفق منهجية منشورة؛ المخرجات تغذي الشارات والرسوم ونوافذ التوقع حسب المنتج.\n\n**نموذج البيانات:** التحليلات المستمرة تعتمد **ملفات {{nationfile-json}}** كوحدة machine-readable **موحدة** — البنية نفسها وراء الرسوم والشارات والتصدير.\n\n**سبع لغات متطابقة فكريًا:** **de**، **en**، **fr**، **es**، **pt**، **ar**، **ja** وفق `language_prefixes`.\n\n**الشفافية:** سجل المصادر، **Validation & Verification Report**، إشعار قانوني وإرشادات الذكاء الاصطناعي.",
+            "facts": [
+                {
+                    "k": "نوع المنتج",
+                    "v": "منصة استخبارات جيوسياسية"
+                },
+                {
+                    "k": "المحرك",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "المؤشر",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "تنسيق البيانات القياسي",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "طبقات في لمحة",
+                    "body_md": "**تسلسل القراءة** من الناشر إلى التصدير — تتكرر الأدوار نفسها في صفحات المعرفة وحزم التصدير.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnf\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnf\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| خطوة | الدور |\n| --- | --- |\n| 1 | {{neawolf-media-group}} — الناشر |\n| 2 | **NationFiles** — المنتج العام |\n| 3 | {{naciro}} — استدلال موثّق |\n| 4 | **{{nationfile-json}}** — مخطط الملفات والتصدير |"
+                },
+                {
+                    "title": "ماذا تقدم المنصة",
+                    "body_md": "- **تحليل الدول:** ملفات ISO وسياق وجوار وتغذيات حسب الصفحة.\n- **خرائط ورادار:** قراءة الأحداث والمؤشرات **جغرافياً**.\n- **NFSI والاتجاهات:** إطار رقمي مشترك للاستقرار/المخاطر.\n- **موجزات:** تقارير موقف وآفاق قصيرة عند تفعيلها في المنتج."
+                },
+                {
+                    "title": "{{nationfile-json}} والمسارات",
+                    "body_md": "- **{{nationfile-json}}** يضم إشارات الدولة/النافذة في **مخطط واحد** — أساس {{nfsi}} والمقارنات والتصدير.\n- **محور الدولة:** صفحات فرعية مثل news وmetadata وNFSI وsecurity radar وmigration وcompare وsnapshot وmetamap (حسب التغطية).\n- **مداخل عالمية:** قائمة الدول والقارات ومركز الخرائط والاقتصاد/السوق و**export** — راجع sitemap و`llms.txt`."
+                },
+                {
+                    "title": "تدفق البيانات والمحرك",
+                    "body_md": "مصادر تدخل مسارات موثقة؛ **{{naciro}}** يحسب الدرجات والملخصات. راجع [منهجية NFSI](/ar/company/nfsi/) و[Naciro AI](/ar/company/naciro-ai/) و[المصادر](/ar/legal/sources/)."
+                },
+                {
+                    "title": "روابط",
+                    "body_md": "- [Company](/ar/company/)\n- [منهجية NFSI](/ar/company/nfsi/)\n- [Naciro AI](/ar/company/naciro-ai/)"
+                }
+            ]
         },
         "ja": {
             "title": "NationFiles",
-            "teaser": "NationFiles は、イベントとシグナルを機械可読な国別プロファイルに構造化し、NFSI をリアルタイムで公開する地政学インテリジェンス・システムです。",
+            "teaser": "**地政学インテリジェンス・プラットフォーム:** NationFiles は世界のシグナルを **{{nationfile-json}}** プロファイル に構造化し、{{naciro}} で評価、**{{nfsi}}**・国ハブ・地図・メタマップ・文書化されたエクスポートを公開 — 7 言語。",
             "summary_bullets": [
-                "リアルタイム地政学とリスクシグナルのためのシステム/プラットフォーム",
-                "NationFiles Stability Index (NFSI) を公開",
-                "方法論・ソースレジストリ・エンティティ別エクスポートを連携"
+                "**国・地域分析:** ISO プロフィール、比較、NFSI バッジ — 7 言語。",
+                "**製品ハイブリッド:** 統計ダッシュボード型 **KPI バンドル**、first-party メソッドに拘束された百科的 **国ドシエ**、および文書化フィード由来の **継続的ニュース/センチメント/安全保障モニター** を一体運用。",
+                "**{{nationfile-json}}:** 指数・チャート・機械可読エクスポートの共通基盤となる正準フォーマット。",
+                "**空間インテリジェンス:** 地図、レーダー、メタマップ、ダッシュボード。",
+                "**ライブ分析:** 文書化パイプラインから定期的に再計算；**{{naciro}}** が計算。",
+                "**指標 {{nfsi}}:** 地政学的安定性／リスク 0–100、公開方法論（VVR）。",
+                "**金融商品ではない** — 文書化モデル；個人投資助言ではない。"
             ],
-            "body_md": "NationFiles は**エコシステム**です。\n\nエンジン **{{naciro}}** が **{{nfsi}}** を計算します。\n\nこの Knowledge ポータルは、エンティティと関係を機械可読な一次ソースとして定義します。"
+            "body_md": "**NationFiles** は **地政学の分析・インテリジェンス・プラットフォーム** で、他社では分割されがちな読みものを統合します: 統計ポータルのような **KPI パック**、オープンウィキではなく社内メソッドに拘束された百科型 **国情報ドシエ**、文書化された経路からの **流動型ニュース/センチメント/安全保障ウォッチ**。\n\n各国データと世界のシグナル — 経済、安全保障、ニュース、センチメント — を処理し、**国ドシエ・地図・レーダー** と **{{nfsi}}** を提供します。\n\n**{{naciro}}** エンジンが公開方法論に従い集約・正規化・重み付け；出力はバッジ、チャート、製品に応じた短期予測ウィンドウに供給されます。\n\n**データモデル:** 継続的な分析は **{{nationfile-json}}** プロファイル を単一の機械可読単位として用います — チャート・バッジ・エクスポートの背後にあるのと同じ論理構造です。\n\n**7言語で実質的同内容:** **de / en / fr / es / pt / ar / ja** （`language_prefixes` と一致）。\n\n**透明性:** ソースレジストリ、**Validation & Verification Report**、法的通知、AI ガイドライン。",
+            "facts": [
+                {
+                    "k": "製品タイプ",
+                    "v": "地政学インテリジェンス・プラットフォーム"
+                },
+                {
+                    "k": "エンジン",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "指数",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "標準データ形式",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "レイヤー構成",
+                    "body_md": "出版社からエクスポートまでの**読み進め方** — Knowledge とバンドルでも同じ役割が繰り返されます。\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnf\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnf\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnf)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnf)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| 段 | 役割 |\n| --- | --- |\n| 1 | {{neawolf-media-group}} — 発行 |\n| 2 | **NationFiles** — 公開プロダクト |\n| 3 | {{naciro}} — 文書化された推論 |\n| 4 | **{{nationfile-json}}** — プロフィールとエクスポートスキーマ |"
+                },
+                {
+                    "title": "プラットフォームが提供するもの",
+                    "body_md": "- **国分析:** ISO プロフィール、文脈、周辺、ページに応じたフィード。\n- **地図・レーダー:** 出来事と指標を**地理的**に読む。\n- **NFSI とトレンド:** 対象国全体で共有の数値枠。\n- **状況・速報:** 製品で有効な場合、定期レポートと短期見通し。"
+                },
+                {
+                    "title": "{{nationfile-json}} とルート",
+                    "body_md": "- **{{nationfile-json}}** は国/ウィンドウごとのシグナルを **一つの** スキーマにまとめ — {{nfsi}}、比較、エクスポートの基盤。\n- **国ハブ:** news、metadata、NFSI、security radar、migration、compare、snapshot、metamap など（カバレッジ依存）。\n- **全体入口:** 国一覧・大陸・地図ハブ・経済/市場・構造化 **export** — sitemap と `llms.txt` を参照。"
+                },
+                {
+                    "title": "データフローとエンジン",
+                    "body_md": "外部・内部ソースは文書化パイプラインへ；**{{naciro}}** がスコアと短い解説を算出。[NFSI 方法論](/ja/company/nfsi/)、[Naciro AI](/ja/company/naciro-ai/)、[ソース](/ja/legal/sources/) を参照。"
+                },
+                {
+                    "title": "関連リンク",
+                    "body_md": "- [Company](/ja/company/)\n- [NFSI 方法論](/ja/company/nfsi/)\n- [Naciro AI](/ja/company/naciro-ai/)"
+                }
+            ]
         }
     },
     "relations": [
@@ -280,6 +683,74 @@
         {
             "rel": "hasPart",
             "to": "lpu-architecture"
+        },
+        {
+            "rel": "hasPart",
+            "to": "status-reports"
+        },
+        {
+            "rel": "hasPart",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "hasPart",
+            "to": "knowledge-hub-nfkg"
+        },
+        {
+            "rel": "hasPart",
+            "to": "country-compare"
+        },
+        {
+            "rel": "hasPart",
+            "to": "country-kpi-snapshot-export"
+        },
+        {
+            "rel": "hasPart",
+            "to": "data-integration-overview"
+        },
+        {
+            "rel": "hasPart",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "hasPart",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "hasPart",
+            "to": "metamaps"
+        },
+        {
+            "rel": "hasPart",
+            "to": "expat-metamaps-cluster"
+        },
+        {
+            "rel": "hasPart",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "hasPart",
+            "to": "publications-corpus"
+        },
+        {
+            "rel": "hasPart",
+            "to": "publications-hub"
+        },
+        {
+            "rel": "hasPart",
+            "to": "purchasing-calculator"
+        },
+        {
+            "rel": "hasPart",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "hasPart",
+            "to": "economy-vertical"
+        },
+        {
+            "rel": "hasPart",
+            "to": "nature-vertical"
         }
     ],
     "faq_refs": [

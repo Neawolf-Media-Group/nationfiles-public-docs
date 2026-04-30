@@ -1,0 +1,595 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "country-intelligence-dashboard",
+    "kind": "entity",
+    "type": "SoftwareApplication",
+    "status": "active",
+    "updated_utc": "2026-04-30T12:00:00Z",
+    "topics": [
+        "dashboard",
+        "briefing",
+        "country-intelligence",
+        "nfsi",
+        "sentiment",
+        "security"
+    ],
+    "aliases": [
+        "Country Intelligence Dashboard",
+        "Länder-Dashboard",
+        "NationFiles Country Dashboard"
+    ],
+    "attributes": [
+        {
+            "key": "core_metric",
+            "value": "Single country-facing UX hub that aligns NFSI headline stability, curated news sentiment strands, and security-context radar for daily situational awareness",
+            "depends_on": [
+                "nfsi",
+                "nationfile-json",
+                "naciro",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Zentraler Länder-UX-Hub: richtet NFSI-Stabilitätskopf, kuratierte News-/Sentiment-Stränge und Security-Radar-Kontext für tägliche Lageorientierung aus",
+                "en": "Single country-facing UX hub that aligns NFSI headline stability, curated news sentiment strands, and security-context radar for daily situational awareness",
+                "fr": "Hub UX pays : aligne la headline NFSI, fils d’actualité/sentiment et radar sécurité pour briefings quotidiens",
+                "es": "Hub UX por país: alinea cabecera NFSI, hilos de noticias/sentimiento y radar seguridad para briefings diarios",
+                "pt": "Hub UX por país: alinha headline NFSI, fios de notícias/sentimento e radar de segurança para briefings",
+                "ar": "مركز تجربة للدولة: ينسّق عنوان NFSI وخيوط الأخبار/المشاعر وسياق رادار الأمن للإحاطة اليومية",
+                "ja": "国向け UX ハブ：NFSI 見出し、キュレーション済みニュース／センチメント、安全保障コンテキストのレーダーを日次の状況把握に揃える"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Unified country briefing surface: NFSI score and bands, sentiment-bearing news overview, security-radar context, plus 24h/7d predictive-layer snapshots",
+            "depends_on": [
+                "nfsi",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Einheitliche Länder-Briefing-Fläche: NFSI-Wert und Bänder, sentimenttragende News-Übersicht, Security-Radar-Kontext plus Predictive-Layer-Snapshots 24h/7d",
+                "en": "Unified country briefing surface: NFSI score and bands, sentiment-bearing news overview, security-radar context, plus 24h/7d predictive-layer snapshots",
+                "fr": "Surface briefing pays : score NFSI et bandes, vue actualités/sentiment, contexte radar sécurité, instantanés predictifs 24 h/7 j",
+                "es": "Superficie briefing país: p-score NFSI y bandas, panorama noticias/sentimiento, radar seguridad e instantáneas predictivas 24 h/7 d",
+                "pt": "Superfície briefing país: pontuação NFSI e faixas, notícias/sentimento, radar segurança e instantâneos 24 h/7 d",
+                "ar": "سطح إحاطة موحّد: درجة NFSI والشرائح ونظرة أخبار بالمشاعر وسياق رادار الأمن ولقطات طبقة تنبؤية 24 ساعة/7 أيام",
+                "ja": "統一国ブリーフ面：NFSI スコアとバンド、センチメントを含むニュース概観、セキュリティレーダー文脈、24時間／7日の予測レイヤースナップショット"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Aggregates documented NFSI inputs where surfaced, curated media strands with sentiment-bearing signals, and security/defence context aligned with the NationFiles security maps hub — composed for one country briefing rather than isolated widgets",
+            "depends_on": [
+                "nfsi",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI FAQ",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Security maps hub",
+                    "url": "https://nationfiles.com/en/map/security/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Bündelt dokumentierte NFSI-Eingaben wo ausgespielt, kuratierte Medienstränge mit sentimenttragenden Signalen sowie sicherheits-/verteidigungsnahen Kontext passend zum Sicherheits-Kartenhub auf NationFiles — für ein Länder-Briefing statt isolierter Widgets",
+                "en": "Aggregates documented NFSI inputs where surfaced, curated media strands with sentiment-bearing signals, and security/defence context aligned with the NationFiles security maps hub — composed for one country briefing rather than isolated widgets",
+                "fr": "Agrège entrées NFSI documentaires, fils médias curatés avec signaux de sentiment et contexte sécurité aligné sur le hub des cartes Sécurité NationFiles — pour un briefing pays cohérent",
+                "es": "Agrega entradas NFSI documentadas, hilos mediáticos curados con sentimiento y contexto seguridad alineado al centro de mapas de seguridad de NationFiles — briefing país único",
+                "pt": "Agrega entradas NFSI documentadas, fios de media curados com sentimento e contexto de segurança alinhado ao hub de mapas de segurança da NationFiles",
+                "ar": "يجمع مدخلات NFSI الموثّقة حيث تُعرض، وخيوط إعلامية مُنتقاة بإشارات مشاعر، وسياق أمني/دفاعي متوافق مع مركز خرائط الأمن على NationFiles — لإحاطة دولة واحدة",
+                "ja": "文書化された NFSI 入力、センチメントを含むキュレーション済みメディアストランド、NationFiles のセキュリティ地図ハブに沿った安全保障／防衛文脈を一つの国ブリーフにまとめる（孤立ウィジェットではない）"
+            }
+        },
+        {
+            "key": "forecast_horizon",
+            "value": "Predictive Layer exposes 24-hour and 7-day briefing horizons for forward-looking situational snapshots (not single-event forecasts)",
+            "depends_on": [
+                "nfsi",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Predictive Layer mit 24-Stunden- und 7-Tage-Briefing-Horizonten für vorausschauende Lage-Snapshots (keine Einzelereignisprognosen)",
+                "en": "Predictive Layer exposes 24-hour and 7-day briefing horizons for forward-looking situational snapshots (not single-event forecasts)",
+                "fr": "Predictive Layer : horizons 24 h et 7 j pour snapshots de briefing (pas prévision d’événement isolé)",
+                "es": "Predictive Layer: horizontes 24 h y 7 d para snapshots de briefing (no predicción de un solo evento)",
+                "pt": "Predictive Layer: horizontes 24 h e 7 d para snapshots de briefing (não previsão pontual)",
+                "ar": "طبقة تنبؤية بآفاق 24 ساعة و7 أيام للقطات إحاطة استباقية (ليست توقع حدث واحد)",
+                "ja": "Predictive Layer が 24 時間と 7 日のブリーフ地平線を示し、前向きの状況スナップショットに使う（単一事象予測ではない）"
+            }
+        },
+        {
+            "key": "computed_by",
+            "value": "{{naciro}}",
+            "depends_on": [
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "canonical_data_format",
+            "value": "Country narratives align with {{nationfile-json}} profile fields, charts, and exports shown on {{nationfiles}}",
+            "depends_on": [
+                "nationfile-json",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Ländererzählungen folgen {{nationfile-json}}-Profilfeldern, Charts und Exporten auf {{nationfiles}}",
+                "en": "Country narratives align with {{nationfile-json}} profile fields, charts, and exports shown on {{nationfiles}}",
+                "fr": "Les récits pays s’alignent sur les champs {{nationfile-json}}, graphiques et exports sur {{nationfiles}}",
+                "es": "Las narrativas país se alinean con campos {{nationfile-json}}, gráficos y exportaciones en {{nationfiles}}",
+                "pt": "Narrativas país alinham campos {{nationfile-json}}, gráficos e exportações em {{nationfiles}}",
+                "ar": "سرد الدول يتوافق مع حقول {{nationfile-json}} والرسوم والتصدير على {{nationfiles}}",
+                "ja": "国の叙述は {{nationfile-json}} のフィールドと {{nationfiles}} のチャート・エクスポートに整合"
+            }
+        },
+        {
+            "key": "license",
+            "value": "CC BY-ND 4.0",
+            "sources": [
+                {
+                    "label": "Legal Notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "hasPart",
+            "to": "metamaps"
+        },
+        {
+            "rel": "hasPart",
+            "to": "security-radar"
+        },
+        {
+            "rel": "surfaces",
+            "to": "nfsi"
+        },
+        {
+            "rel": "alignsWith",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "poweredBy",
+            "to": "naciro"
+        },
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nature-vertical"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Länder-Dashboard (Country Intelligence Dashboard)",
+            "teaser": "Zentraler **UX‑Hub** auf NationFiles: Das Länder‑Dashboard führt **{{nfsi}}**, kuratierte **Nachrichten‑/Sentiment‑Stränge** und **Security‑Radar**‑Kontext in einer Leseebene zusammen — ergänzt durch den **Predictive Layer** mit **24h- und 7‑Tage‑Horizont** für **tägliche Briefings**.",
+            "summary_bullets": [
+                "**Ein Hub statt Insellösungen:** NFSI‑Kopfzahlen, Medien‑/Sentiment‑Einordnung und sicherheitsnaher Kontext erscheinen konsistent pro Land.",
+                "**Predictive Layer:** komprimierte **24h**‑ und **7d**‑Einordnung für Briefings und Lagekarten — ohne Einzelfälle als sichere Prognose zu verkaufen.",
+                "**Datenfähigkeit:** Anbindung an dokumentierte NFSI‑Logik und öffentlich beschriebene Engine‑Orchestrierung (**{{naciro}}**).",
+                "**Profile & Exporte:** Länderbilder bleiben mit **{{nationfile-json}}** und den Anzeigen auf **{{nationfiles}}** kompatibel.",
+                "**Zielgruppe:** Analysten, Redaktionen und entscheidungsorientierte Nutzerinnen — schneller Überblick vor dem Tiefgang.",
+                "**Kein Ersatz für Beratung:** Das Dashboard ersetzt keine Rechts-, Reise- oder Anlageberatung; es strukturiert dokumentierte öffentliche Signale."
+            ],
+            "body_md": "Das **Länder-Dashboard** ist die zentrale **Erlebnisfläche**, wenn Sie ein Land auf NationFiles verstehen wollen: Statt verstreuter Kacheln bündelt es den **{{nfsi}}** als nachvollziehbaren Stabilitäts‑/Risiko‑Kopfwert, eine **Medien- und Sentiment**‑Schicht aus kuratierten Nachrichten‑Strängen sowie den **Security Radar** — also den sicherheits- und strategierelevanten Kontext, der zur **Sicherheits-Kartenhub**-Struktur auf NationFiles passt.\n\nDarüber hinaus liefert der **Predictive Layer** **24‑Stunden- und 7‑Tage‑Horizonte**: kurze, aktualisierungsnahe Einordnungen für **tägliche Briefings**, Lagekarten und Priorisierung — immer im Rahmen der dokumentierten Datenlage und ohne überzogene Einzelaussagen.\n\nTechnisch verbindet **{{naciro}}** diese Schichten; für Nutzer sichtbar werden sie über **{{nationfiles}}**, inhaltlich verankert in den öffentlichen **{{nationfile-json}}**‑Profilen des jeweiligen Landes.",
+            "facts": [
+                {
+                    "k": "Aggregation",
+                    "v": "NFSI, News-/Sentiment-Stränge und Security-Radar in einer Oberfläche."
+                },
+                {
+                    "k": "Predictive Layer",
+                    "v": "24h- und 7-Tage-Horizonte für Briefing-Snapshots."
+                },
+                {
+                    "k": "Orchestrierung",
+                    "v": "Engine-Leistung über {{naciro}}, Darstellung über {{nationfiles}}."
+                },
+                {
+                    "k": "Profile",
+                    "v": "Konsistenz mit {{nationfile-json}} und Länder-Hubs."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum ein Zentral-Hub?",
+                    "body_md": "Länderentscheidungen brauchen **Kohärenz**: derselbe NFSI‑Band, dieselbe Sentiment‑Narration und derselbe Sicherheitskontext — statt widersprüchlicher Mini‑Widgets. Das Dashboard adressiert genau diese Lesarten und macht **GEO‑ und Snippet‑taugliche** Kurzdefinitionen leichter extrahierbar."
+                },
+                {
+                    "title": "Briefings mit Vorlauf",
+                    "body_md": "Der **Predictive Layer** fasst kurzfristige (24h) und wochennahe (7d) Linien zusammen, damit Briefing‑Runden **tagesaktuell** starten können. Wo die öffentliche Methodik Grenzen zieht (z. B. Einzelereignisse), bleibt die Darstellung **dokumentationsnah** — ohne Spekulation."
+                }
+            ]
+        },
+        "en": {
+            "title": "Country Intelligence Dashboard",
+            "teaser": "NationFiles’ central **UX hub** brings **{{nfsi}}**, curated **news sentiment** strands, and **security radar** context into one reading plane — extended by a **Predictive Layer** with **24h and 7-day horizons** for **daily briefings**.",
+            "summary_bullets": [
+                "**One hub:** NFSI headline scores, media/sentiment reads, and security-aligned context stay consistent per country.",
+                "**Predictive Layer:** **24h** and **7d** horizons for briefing snapshots — not overstated single-event prediction.",
+                "**Grounded compute:** Tied to documented NFSI logic and public engine orchestration via **{{naciro}}**.",
+                "**Profiles & exports:** Aligned with **{{nationfile-json}}** and what **{{nationfiles}}** publishes.",
+                "**Who it serves:** Analysts, editors, and decision-grade readers who need orientation before deep dives.",
+                "**Not advisory:** The dashboard does not replace legal, travel, or investment advice; it structures documented public signals."
+            ],
+            "body_md": "The **Country Intelligence Dashboard** is NationFiles’ primary **country experience**: instead of scattered tiles, it unifies the **{{nfsi}}** stability/risk headline, a **news and sentiment** layer built from curated media strands, and **Security Radar** context that matches the NationFiles **security maps hub**.\n\nThe **Predictive Layer** adds **24-hour and 7-day horizons** — compact, refresh-aware reads for **daily briefings**, map-ready prioritisation, and GEO-friendly snippets, always bounded by what the methodology publicly documents.\n\n**{{naciro}}** orchestrates the compute; **{{nationfiles}}** delivers the interface, anchored in each country’s public **{{nationfile-json}}** profile.",
+            "facts": [
+                {
+                    "k": "Aggregation",
+                    "v": "NFSI, news/sentiment strands, and security radar in one surface."
+                },
+                {
+                    "k": "Predictive Layer",
+                    "v": "24h and 7d horizons for briefing snapshots."
+                },
+                {
+                    "k": "Orchestration",
+                    "v": "Engine workloads via {{naciro}}; UX via {{nationfiles}}."
+                },
+                {
+                    "k": "Profiles",
+                    "v": "Consistent with {{nationfile-json}} and country hubs."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why a central hub?",
+                    "body_md": "Country judgement needs **coherence**: the same NFSI band, sentiment storyline, and security lens — not conflicting micro-widgets. The dashboard encodes that editorial pattern and improves **GEO/snippet** extractability."
+                },
+                {
+                    "title": "Briefings with forward context",
+                    "body_md": "The **Predictive Layer** compresses **24h** and **7d** lines so briefing cycles can start **same-day**. Where methodology limits certainty on isolated events, copy stays **documentation-faithful** — no speculation."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Tableau d'intelligence pays (Country Intelligence Dashboard)",
+            "teaser": "**Hub UX** central sur NationFiles : le tableau pays regroupe **{{nfsi}}**, des **fils d’actualité et de sentiment** curatés et le **Security Radar**, complété par une **Predictive Layer** avec **horizons 24 h et 7 j** pour des **briefings quotidiens**.",
+            "summary_bullets": [
+                "**Un seul hub :** scores NFSI, lecture média/sentiment et contexte sécurité cohérents par pays.",
+                "**Predictive Layer :** instantanés **24 h** / **7 j** pour briefings — sans promesse de prévision ponctuelle abusive.",
+                "**Calcul documenté :** aligné sur la logique NFSI et l’orchestration publique via **{{naciro}}**.",
+                "**Profils & exports :** cohérence avec **{{nationfile-json}}** et **{{nationfiles}}**.",
+                "**Public cible :** analystes, rédactions et lecteurs orientés décision.",
+                "**Pas un conseil :** ne remplace pas un avis juridique, voyage ou financier."
+            ],
+            "body_md": "Le **tableau pays** est la **surface d’expérience** principale : il unifie le **{{nfsi}}**, une couche **actualités & sentiment** issue de fils curatés, et le **Security Radar** aligné sur le **hub cartes Sécurité** NationFiles.\n\nLa **Predictive Layer** ajoute des **horizons 24 h et 7 j** pour des **briefings quotidiens** et une hiérarchisation lisible — dans les limites de la méthodologie publique.\n\n**{{naciro}}** orchestre le calcul ; **{{nationfiles}}** affiche l’interface, ancrée dans le profil **{{nationfile-json}}** du pays.",
+            "facts": [
+                {
+                    "k": "Agrégation",
+                    "v": "NFSI, fils sentiment médias et Security Radar dans une vue."
+                },
+                {
+                    "k": "Predictive Layer",
+                    "v": "Horizons 24 h et 7 j pour instantanés de briefing."
+                },
+                {
+                    "k": "Orchestration",
+                    "v": "Moteur {{naciro}}, UX {{nationfiles}}."
+                },
+                {
+                    "k": "Profils",
+                    "v": "Cohérent avec {{nationfile-json}} et hubs pays."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi un hub central ?",
+                    "body_md": "Il faut **cohérence** : même bande NFSI, même narration sentiment, même lecture sécurité — pas de micro-widgets contradictoires. Le hub matérialise ce schéma rédactionnel."
+                },
+                {
+                    "title": "Briefings prospective courte",
+                    "body_md": "La **Predictive Layer** condense les lignes **24 h** et **7 j** pour démarrer un briefing **le jour même**, sans spéculation hors documentation."
+                }
+            ]
+        },
+        "es": {
+            "title": "Panel de inteligencia por país (Country Intelligence Dashboard)",
+            "teaser": "**Hub UX** central en NationFiles: el panel país integra **{{nfsi}}**, hilos **informativos y de sentimiento** curados y el **Security Radar**, más una **Predictive Layer** con **horizontes de 24 h y 7 d** para **briefings diarios**.",
+            "summary_bullets": [
+                "**Un solo hub:** cabecera NFSI, lectura mediática/sentimiento y contexto de seguridad coherentes por país.",
+                "**Predictive Layer:** instantáneas **24 h** / **7 d** para briefings — sin prometer predicción puntual exagerada.",
+                "**Cómputo documentado:** acoplado a la lógica NFSI y a la orquestación pública vía **{{naciro}}**.",
+                "**Perfiles y exportaciones:** alineados con **{{nationfile-json}}** y **{{nationfiles}}**.",
+                "**Para quién:** analistas, redacciones y lectores con enfoque de decisión.",
+                "**No es asesoramiento:** no sustituye asesoría legal, de viajes ni de inversión."
+            ],
+            "body_md": "El **panel de inteligencia por país** es la **superficie principal** para entender un país: unifica el **{{nfsi}}**, la capa de **noticias y sentimiento** con hilos curados y el **Security Radar** acorde al **centro de mapas de seguridad** público de NationFiles.\n\nLa **Predictive Layer** aporta **horizontes de 24 horas y 7 días** para **briefings diarios** y priorización, siempre acotada a lo que la metodología documenta.\n\n**{{naciro}}** orquesta el cómputo; **{{nationfiles}}** entrega la interfaz, anclada en el perfil **{{nationfile-json}}** del país.",
+            "facts": [
+                {
+                    "k": "Agregación",
+                    "v": "NFSI, hilos de sentimiento mediático y Security Radar en una vista."
+                },
+                {
+                    "k": "Predictive Layer",
+                    "v": "Horizontes 24 h y 7 d para instantáneas de briefing."
+                },
+                {
+                    "k": "Orquestación",
+                    "v": "Motor {{naciro}}, UX {{nationfiles}}."
+                },
+                {
+                    "k": "Perfiles",
+                    "v": "Coherentes con {{nationfile-json}} y hubs de país."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "¿Por qué un hub central?",
+                    "body_md": "Se necesita **coherencia**: la misma banda NFSI, la misma narrativa de sentimiento y la misma lectura de seguridad — no micro-widgets contradictorios."
+                },
+                {
+                    "title": "Briefings con horizonte",
+                    "body_md": "La **Predictive Layer** comprime líneas **24 h** y **7 d** para arrancar **el mismo día**, sin especulación fuera de la documentación pública."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Painel de inteligência por país (Country Intelligence Dashboard)",
+            "teaser": "**Hub UX** central na NationFiles: o painel país agrega **{{nfsi}}**, **fios de notícias e sentimento** curados e o **Security Radar**, com **Predictive Layer** em horizontes de **24 h e 7 d** para **briefings diários**.",
+            "summary_bullets": [
+                "**Um só hub:** cabeçalho NFSI, leitura de média/sentimento e contexto de segurança coerentes por país.",
+                "**Predictive Layer:** instantâneos **24 h** / **7 d** para briefings — sem previsão pontual exagerada.",
+                "**Cálculo fundamentado:** alinhado à lógica NFSI e orquestração pública via **{{naciro}}**.",
+                "**Perfis e exportações:** consistentes com **{{nationfile-json}}** e **{{nationfiles}}**.",
+                "**Público:** analistas, redações e leitores focados em decisão.",
+                "**Não é assessoria:** não substitui parecer jurídico, de viagem ou de investimento."
+            ],
+            "body_md": "O **painel de inteligência por país** é a **superfície principal** para ler um país: unifica o **{{nfsi}}**, a camada de **notícias e sentimento** com fios curados e o **Security Radar** alinhado ao **hub de mapas de segurança** da NationFiles.\n\nA **Predictive Layer** acrescenta **horizontes de 24 horas e 7 dias** para **briefings diários** e priorização, dentro do que a metodologia documenta.\n\n**{{naciro}}** orquestra o cálculo; **{{nationfiles}}** entrega a interface, ancorada no perfil **{{nationfile-json}}** do país.",
+            "facts": [
+                {
+                    "k": "Agregação",
+                    "v": "NFSI, fios de sentimento mediático e Security Radar numa vista."
+                },
+                {
+                    "k": "Predictive Layer",
+                    "v": "Horizontes 24 h e 7 d para instantâneos de briefing."
+                },
+                {
+                    "k": "Orquestração",
+                    "v": "Motor {{naciro}}, UX {{nationfiles}}."
+                },
+                {
+                    "k": "Perfis",
+                    "v": "Consistentes com {{nationfile-json}} e hubs de país."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Porquê um hub central?",
+                    "body_md": "É preciso **coerência**: a mesma faixa NFSI, a mesma narrativa de sentimento e a mesma leitura de segurança — não micro-widgets contraditórios."
+                },
+                {
+                    "title": "Briefings com horizonte",
+                    "body_md": "A **Predictive Layer** condensa linhas **24 h** e **7 d** para começar **no mesmo dia**, sem especulação fora da documentação."
+                }
+            ]
+        },
+        "ar": {
+            "title": "لوحة استخبارات الدولة (Country Intelligence Dashboard)",
+            "teaser": "**مركز تجربة** مركزي على NationFiles: يجمع اللوحة **{{nfsi}}** و**خيوط أخبار ومعنى** مُنتقاة وسياق **Security Radar** — مع **Predictive Layer** بآفاق **24 ساعة و7 أيام** لـ**إحاطات يومية**.",
+            "summary_bullets": [
+                "**مركز واحد:** مؤشر NFSI الرئيس وقراءة الإعلام/المعنى وسياق أمني متسق لكل دولة.",
+                "**Predictive Layer:** لقطات **24 ساعة** و**7 أيام** للإحاطة — دون المبالغة في توقع حدث واحد.",
+                "**حساب موثّق:** مرتبط بمنطق NFSI المعلن وتنسيق المحرك عبر **{{naciro}}**.",
+                "**الملفات والتصدير:** متوافقة مع **{{nationfile-json}}** و**{{nationfiles}}**.",
+                "**الجمهور:** محللون ومحررون وقراء يحتاجون صورة قبل التعمق.",
+                "**ليس استشارة:** لا يغني عن استشارة قانونية أو سفر أو استثمار."
+            ],
+            "body_md": "**لوحة استخبارات الدولة** هي **الواجهة الأساسية** لفهم دولة: توحّد **{{nfsi}}** وطبقة **الأخبار والمعنى** من خيوط مُنتقاة وسياق **Security Radar** بما يتوافق مع **مركز خرائط الأمن** على NationFiles.\n\nتضيف **Predictive Layer** آفاق **24 ساعة و7 أيام** لـ**إحاطات يومية** وترتيب أولويات — ضمن حدود المنهجية المنشورة.\n\n**{{naciro}}** ينسّق الحوسبة؛ **{{nationfiles}}** يقدّم الواجهة، مرتبطة بملف **{{nationfile-json}}** العلني للدولة.",
+            "facts": [
+                {
+                    "k": "الدمج",
+                    "v": "NFSI وخيوط معنى إعلامي وSecurity Radar في واجهة واحدة."
+                },
+                {
+                    "k": "Predictive Layer",
+                    "v": "آفاق 24 ساعة و7 أيام للقطات إحاطة."
+                },
+                {
+                    "k": "التنسيق",
+                    "v": "المحرك {{naciro}}؛ التجربة عبر {{nationfiles}}."
+                },
+                {
+                    "k": "الملفات",
+                    "v": "متسقة مع {{nationfile-json}} ومحاور الدول."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا مركز واحد؟",
+                    "body_md": "الحكم على الدولة يحتاج **تماسكاً**: نفس شريط NFSI، ونفس سرد المعنى، ونفس عدسة الأمن — لا عناصر مصغّرة متضاربة."
+                },
+                {
+                    "title": "إحاطات بأفق أمامي",
+                    "body_md": "**Predictive Layer** تلخّص خطوط **24 ساعة** و**7 أيام** لبدء إحاطة **في اليوم نفسه**، دون تخمين خارج الوثائق العلنية."
+                }
+            ]
+        },
+        "ja": {
+            "title": "国情報ダッシュボード（Country Intelligence Dashboard）",
+            "teaser": "NationFiles の中核 **UX ハブ**。**{{nfsi}}**、キュレーションされた **ニュース・センチメント**、**Security Radar** の文脈を一枚に統合し、**日次ブリーフ**向けに **Predictive Layer（24 時間／7 日）** を備えます。",
+            "summary_bullets": [
+                "**単一ハブ:** 国ごとに NFSI、メディア／センチメント読み、安全保障コンテキストを一貫表示。",
+                "**Predictive Layer:** **24h／7d** のブリーフ用スナップショット — 単一事象の過大予測はしない。",
+                "**根拠ある計算:** 公開 NFSI ロジックと **{{naciro}}** によるオーケストレーションに沿う。",
+                "**プロフィールとエクスポート:** **{{nationfile-json}}** と **{{nationfiles}}** の公開表現と整合。",
+                "**想定ユーザー:** アナリスト、編集者、意思決定前の方向づけが必要な読者。",
+                "**助言ではない:** 法律・旅行・投資の助言に代わりません。"
+            ],
+            "body_md": "**国情報ダッシュボード**は、国を読むための **主たる画面** です。**{{nfsi}}** の見出しスコア、キュレーションされた **ニュース／センチメント**、NationFiles の **セキュリティ地図ハブ** に沿った **Security Radar** を、ばらばらのタイルではなく一つの読解面に揃えます。\n\n**Predictive Layer** は **24 時間と 7 日** の地平線で、**日次ブリーフ**や優先順位付けのための短い前向きスナップショットを提供します（公開手法の範囲を超えません）。\n\n計算の連携は **{{naciro}}**、体験の提供は **{{nationfiles}}** が担い、各国の公開 **{{nationfile-json}}** プロフィールに根ざします。",
+            "facts": [
+                {
+                    "k": "統合",
+                    "v": "NFSI、ニュース／センチメント、Security Radar を一枚に。"
+                },
+                {
+                    "k": "Predictive Layer",
+                    "v": "ブリーフ用の 24 時間・7 日スナップショット。"
+                },
+                {
+                    "k": "オーケストレーション",
+                    "v": "エンジンは {{naciro}}、UX は {{nationfiles}}。"
+                },
+                {
+                    "k": "プロフィール",
+                    "v": "{{nationfile-json}} と国ハブと整合。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "なぜ中央ハブか",
+                    "body_md": "国の判断には **一貫性** が要ります。同じ NFSI バンド、同じセンチメントの筋、同じ安全保障の見方 — 矛盾するミニウィジェットではなく、編集方針を画面に落とします。"
+                },
+                {
+                    "title": "前向き地平線つきブリーフ",
+                    "body_md": "**Predictive Layer** が **24 時間** と **7 日** の筋を圧縮し、**当日**からブリーフを回せるようにします。手法が約束しない箇所は推測しません。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "country-intelligence-dashboard"
+        },
+        "repository_relative_path": "knowledge-data/entities/country-intelligence-dashboard.json"
+    }
+}

@@ -11,43 +11,30 @@ nf_repository_relative_path: "knowledge-data/md/core-hierarchy/en.md"
 nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/core-hierarchy/"
 nf_markdown_lang_file: "en"
 ---
-# Core Hierarchy
+# Core Hierarchy — how the geopolitical intelligence stack is built
 
-## Purpose
+## What this picture is for
 
-The **Core Hierarchy** is the canonical map of NationFiles’ **organizational and system stack**. It aligns terminology across the HTML UI, exports (JSON, JSON‑LD), and optional Markdown. It is **not** a marketing ladder but a **citable chain**: from the legally filed publisher through the public system to inference, hardware semantics, and the quantitative metric.
+The **Core Hierarchy** describes **how the NationFiles system stacks together** from accountability and product roles — not a marketing chart, but a **chain of responsibility**: who publishes, where the public intelligence surface lives, where the analytics AI runs, where the headline score is produced, and which compute layer sits underneath.
 
-## Layers at a glance
+## The tiers — what each part **does**
 
-| Level | Entity (Knowledge ID) | Role (short) |
-|------|------------------------|---------------|
-| 1 | `neawolf-media-group` | Owning organization / publisher |
-| 2 | `nationfiles` | System / website |
-| 3 | `naciro` | Inference & logic engine |
-| 4a | `lpu-architecture` | Hardware / execution layer (dedicated inference basis) |
-| 4b | `nfsi` | Statistical score (0–100), dataset |
+| Tier | Entity | Role in the product |
+|------|--------|---------------------|
+| 1 | **Neawolf Media Group** | **Publisher / operator** — imprint and legal accountability; funds and steers NationFiles. |
+| 2 | **NationFiles** | **Geopolitical intelligence surface** — web app, country analysis, maps, dashboards, APIs/views as shipped. |
+| 3 | **Naciro Engine** | **Analytics AI** — condenses raw signals into NFSI, copy, forecast components per methodology. |
+| 4a | **LPU Architecture** | **Inference compute base** — deterministic, fast execution for Naciro paths. |
+| 4b | **NFSI** | **Geopolitical stability & risk score** — quantitative pipeline output (0–100). |
 
-Multiple entities may share the same conceptual level when **engine logic** and **output metric** are modeled separately.
+**Note:** engine and index sit as **peers at the end** because **compute logic** and **visible outcome** are different concerns — like engine and speedometer.
 
-## Why separate nodes instead of one blob
+## What this hierarchy is **not**
 
-- **Accountability**: legal entity vs. platform vs. software vs. metric.
-- **Citation**: each layer has distinct sources (Legal Notice, `llms.txt`, methodology, VVR, DOIs).
-- **Technical fidelity**: NFSI values are produced by a pipeline; the hierarchy reflects **roles**, not necessarily a single-parent infrastructure tree.
+Not a server-room topology; not a staff org chart. It orders **product roles** for readers and partners who need to know **where numbers and analyses originate**.
 
-## Graph edges
-
-Components link via `relations` (`relatedTo`, plus domain relations such as `computes`, `isPartOf`). JSON‑LD exports map selected edges to `hasPart` / `isPartOf` or `makesOffer` where Schema.org permits.
-
-## Machine readability
-
-- Stable **IDs** (kebab-case).
-- Exports include **`generated_at_utc`**, **`canonical_url`**, structured attributes.
-- **`hierarchy.levels`** powers the “Hierarchy levels” block and surfaces as `ItemList` in JSON‑LD.
-
-## Entry references
+## Sources
 
 - [llms.txt](https://nationfiles.com/llms.txt)
 - [Legal Notice](https://nationfiles.com/en/legal/legal-notice/)
 - [NFSI methodology](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)

@@ -7,43 +7,44 @@
     "entity_refs": [
         "nationfiles",
         "naciro",
-        "nfsi"
+        "nfsi",
+        "nationfile-json"
     ],
     "i18n": {
         "de": {
             "q": "Was ist NationFiles?",
             "a_short": "NationFiles ist ein geopolitisches Intelligence-System, das Signale in maschinenlesbare Profile strukturiert und den NFSI als Echtzeit-Output veröffentlicht.",
-            "a_long_md": "NationFiles beschreibt das **Ökosystem**.\n\nDie {{naciro}} berechnet als Engine den {{nfsi}}. Dieses Knowledge-Portal definiert die Begriffe und Beziehungen als erste Quelle."
+            "a_long_md": "NationFiles beschreibt das **Ökosystem**.\n\nDie {{naciro}} berechnet als Engine den {{nfsi}}; die maschinenlesbaren Länderprofile folgen dem kanonischen Format **{{nationfile-json}}**. Dieses Knowledge-Portal definiert die Begriffe und Beziehungen als erste Quelle."
         },
         "en": {
             "q": "What is NationFiles?",
             "a_short": "NationFiles is a geopolitical intelligence system that structures signals into machine-readable profiles and publishes NFSI outputs in real time.",
-            "a_long_md": "NationFiles describes the **ecosystem**.\n\nThe {{naciro}} computes {{nfsi}}. This knowledge portal defines terms and relations as a first-party source."
+            "a_long_md": "NationFiles describes the **ecosystem**.\n\nThe {{naciro}} computes {{nfsi}}; machine-readable country profiles use the canonical **{{nationfile-json}}** format. This knowledge portal defines terms and relations as a first-party source."
         },
         "fr": {
             "q": "Qu’est-ce que NationFiles ?",
             "a_short": "NationFiles est un système d’intelligence géopolitique qui structure des signaux en profils lisibles par machine et publie le NFSI en temps réel.",
-            "a_long_md": "NationFiles décrit l’**écosystème**.\n\n{{naciro}} calcule {{nfsi}}. Ce portail Knowledge définit les termes et relations comme source first-party."
+            "a_long_md": "NationFiles décrit l’**écosystème**.\n\n{{naciro}} calcule {{nfsi}} ; les profils pays machine-readables suivent le format canonique **{{nationfile-json}}**. Ce portail Knowledge définit les termes et relations comme source first-party."
         },
         "es": {
             "q": "¿Qué es NationFiles?",
             "a_short": "NationFiles es un sistema de inteligencia geopolítica que estructura señales en perfiles legibles por máquina y publica el NFSI en tiempo real.",
-            "a_long_md": "NationFiles describe el **ecosistema**.\n\n{{naciro}} calcula {{nfsi}}. Este portal de Knowledge define términos y relaciones como fuente first-party."
+            "a_long_md": "NationFiles describe el **ecosistema**.\n\n{{naciro}} calcula {{nfsi}}; los perfiles país machine-readable usan el formato canónico **{{nationfile-json}}**. Este portal de Knowledge define términos y relaciones como fuente first-party."
         },
         "pt": {
             "q": "O que é NationFiles?",
             "a_short": "NationFiles é um sistema de inteligência geopolítica que estrutura sinais em perfis legíveis por máquina e publica o NFSI em tempo real.",
-            "a_long_md": "NationFiles descreve o **ecossistema**.\n\n{{naciro}} calcula {{nfsi}}. Este portal de Knowledge define termos e relações como fonte first-party."
+            "a_long_md": "NationFiles descreve o **ecossistema**.\n\n{{naciro}} calcula {{nfsi}}; perfis por país machine-readable seguem o formato canónico **{{nationfile-json}}**. Este portal de Knowledge define termos e relações como fonte first-party."
         },
         "ar": {
             "q": "ما هي NationFiles؟",
             "a_short": "NationFiles هو نظام استخبارات جيوسياسية يهيكل الإشارات إلى ملفات قابلة للقراءة آلياً وينشر NFSI في الوقت الحقيقي.",
-            "a_long_md": "تصف NationFiles **المنظومة**.\n\n{{naciro}} يحسب {{nfsi}}. وتعرّف بوابة Knowledge هذه المصطلحات والعلاقات كمصدر first-party."
+            "a_long_md": "تصف NationFiles **المنظومة**.\n\n{{naciro}} يحسب {{nfsi}}؛ ملفات الدول machine-readable تتبع التنسيق المرجعي **{{nationfile-json}}**. وتعرّف بوابة Knowledge هذه المصطلحات والعلاقات كمصدر first-party."
         },
         "ja": {
             "q": "NationFilesとは何ですか？",
             "a_short": "NationFiles は、シグナルを機械可読プロファイルへ構造化し、NFSI をリアルタイムで公開する地政学インテリジェンス・システムです。",
-            "a_long_md": "NationFiles は**エコシステム**を定義します。\n\n{{naciro}} が {{nfsi}} を計算します。この Knowledge ポータルは用語と関係を first-party ソースとして定義します。"
+            "a_long_md": "NationFiles は**エコシステム**を定義します。\n\n{{naciro}} が {{nfsi}} を計算します。機械可読の国プロファイルは正準形式 **{{nationfile-json}}** に従います。この Knowledge ポータルは用語と関係を first-party ソースとして定義します。"
         }
     },
     "_distribution": {

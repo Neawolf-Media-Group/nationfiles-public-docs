@@ -76,6 +76,96 @@
             }
         },
         {
+            "id": "publications-hub",
+            "aliases": [
+                "Medien-Hub",
+                "Medien Hub",
+                "Publications hub",
+                "Media hub",
+                "Hub médias",
+                "Hub de medios",
+                "Hub de media",
+                "المركز الإعلامي",
+                "メディア・ハブ",
+                "メディアハブ"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Medien-Hub (NationFiles)",
+                    "definition": "Kommunikations- und Archivschicht neben dem Publikationskorpus: Pressepfade, auf der Website sichtbare Erklärvideos und kurze offizielle Texte unter denselben faktischen Grenzen wie Exporte und Profile."
+                },
+                "en": {
+                    "label": "Publications hub (media)",
+                    "definition": "Communications-facing layer beside the publications corpus: press paths, on-site explainer video, and short official copy that must stay consistent with published country surfaces and exports."
+                },
+                "fr": {
+                    "label": "Hub médias (NationFiles)",
+                    "definition": "Couche communication à côté du corpus publications : presse, vidéos explicatives sur le site et phrases officielles alignées sur les surfaces pays et exports publiés."
+                },
+                "es": {
+                    "label": "Hub de medios (NationFiles)",
+                    "definition": "Capa de comunicación junto al corpus de publicaciones: prensa, vídeos explicativos en el sitio y textos oficiales breves acordes con perfiles y exportaciones públicas."
+                },
+                "pt": {
+                    "label": "Hub de media (NationFiles)",
+                    "definition": "Camada de comunicação junto do corpus de publicações: imprensa, vídeos explicativos no site e texto oficial curto alinhado com perfis e exportações públicas."
+                },
+                "ar": {
+                    "label": "المركز الإعلامي (NationFiles)",
+                    "definition": "طبقة اتصال بجانب مجموعة المنشورات: مسارات صحافة وفيديو توضيحي على الموقع ونص رسمي موجز يجب أن يوافق الأسطح والتصدير العلني."
+                },
+                "ja": {
+                    "label": "メディア・ハブ（NationFiles）",
+                    "definition": "出版物コーパスに隣接する対外層。プレス経路、サイト上の説明動画、短い公式文を、公開プロフィールやエクスポートと事実上一致させる枠組み。"
+                }
+            }
+        },
+        {
+            "id": "expat-metamaps-cluster",
+            "aliases": [
+                "Expat Cluster",
+                "Expat-Cluster",
+                "Expat metamap cluster",
+                "Cluster expatriés",
+                "Cluster expatriados",
+                "Relocation cluster",
+                "Meta-Karten Kaufkraft Umzug",
+                "PPI Metamaps relocation",
+                "عنقود المغتربين",
+                "駐在員メタマップ"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Expat-Cluster (Meta-Karten & Kaufkraft)",
+                    "definition": "Knowledge-Lesepfad: Meta-Karten (Megacity, Kernkraft) mit PPI-Makrokontext und optional Kaufkraft-Rechner vor einem Umzug zusammen lesen — kein einzelner Relocation-Score."
+                },
+                "en": {
+                    "label": "Expat metamap cluster",
+                    "definition": "Knowledge reading path that pairs metamaps (megacities, nuclear siting) with PPI macro context and optionally the purchasing-power calculator before a move—not one merged relocation score."
+                },
+                "fr": {
+                    "label": "Cluster expatriés (méta-cartes)",
+                    "definition": "Parcours Knowledge : méta-cartes (mégapoles, nucléaire) avec le macro PPI et éventuellement le calculateur — pas un indice relocalisation fusionné."
+                },
+                "es": {
+                    "label": "Cluster expatriados",
+                    "definition": "Ruta Knowledge: metamapas (megaciudades, nuclear) con macro PPI y calculadora opcional — no un índice único de mudanza."
+                },
+                "pt": {
+                    "label": "Cluster expatriados",
+                    "definition": "Percurso Knowledge: metamapas (megacidades, nuclear) com macro PPI e calculadora opcional — não um índice único de relocação."
+                },
+                "ar": {
+                    "label": "عنقود المغتربين (ميتامابات)",
+                    "definition": "مسار في Knowledge يقرن ميتامابا المناطق الضخمة والنووي مع سياق PPI ماكرو وحاسبة اختيارية — دون دمج رقم انتقال واحد."
+                },
+                "ja": {
+                    "label": "駐在員メタマップ・クラスター",
+                    "definition": "巨大都市・原発メタマップと PPI マクロ文脈（任意で購買力計算）を移住前に併読する Knowledge 上の枠——単一の移住スコアではない。"
+                }
+            }
+        },
+        {
             "id": "nfsi",
             "aliases": [
                 "NFSI",
@@ -925,6 +1015,286 @@
                 "ja": {
                     "label": "llms.txt",
                     "definition": "サイトルートのファイル。クローラー／AI向けの利用上の注意を記します。"
+                }
+            }
+        },
+        {
+            "id": "nationfile-json",
+            "aliases": [
+                "Nationfile JSON",
+                "Nationfile-JSON",
+                "Nationfile JSON profile",
+                "Nationfile-JSON-Profil"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Nationfile JSON",
+                    "definition": "Standardisiertes, maschinenlesbares Länderprofilformat auf NationFiles — gemeinsame Basis für Engine, NFSI, Charts und Exporte."
+                },
+                "en": {
+                    "label": "Nationfile JSON",
+                    "definition": "NationFiles’ standardized machine-readable country profile format — shared backbone for the engine, NFSI, charts, and exports."
+                },
+                "fr": {
+                    "label": "Nationfile JSON",
+                    "definition": "Format de profil pays standardisé et machine-readable sur NationFiles — socle commun pour le moteur, le NFSI, les graphiques et les exports."
+                },
+                "es": {
+                    "label": "Nationfile JSON",
+                    "definition": "Formato de perfil país estandarizado y machine-readable en NationFiles — base común para el motor, NFSI, gráficos y exportaciones."
+                },
+                "pt": {
+                    "label": "Nationfile JSON",
+                    "definition": "Formato de perfil por país padronizado e machine-readable na NationFiles — base comum para o motor, NFSI, gráficos e exportações."
+                },
+                "ar": {
+                    "label": "Nationfile JSON",
+                    "definition": "تنسيق ملفات تعريف دول موحّد وmachine-readable على NationFiles — قاعدة مشتركة للمحرك وNFSI والمخططات والتصدير."
+                },
+                "ja": {
+                    "label": "Nationfile JSON",
+                    "definition": "NationFiles の標準化された machine-readable 国別プロファイル形式。エンジン・NFSI・チャート・エクスポートの共通基盤。"
+                }
+            }
+        },
+        {
+            "id": "governance-institutions-index",
+            "aliases": [
+                "GGI",
+                "Governance & Institutions Index",
+                "Governance Institutions Index",
+                "Governance Institutions",
+                "indice governance institutions",
+                "índice de gobernanza e instituciones"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "GGI",
+                    "definition": "Governance & Institutions Index auf NationFiles: World-Bank-/WGI-basierte Governance-Dimensionen als ein kompositabler 0–100-Score; zweite KPI-Snapshot-Säule neben PPI, unabhängig von NFSI."
+                },
+                "en": {
+                    "label": "GGI",
+                    "definition": "Governance & Institutions Index on NationFiles: Worldwide Governance-style pillars rolled into one comparable composite (0–100); second KPI-snapshot pillar alongside PPI, distinct from NFSI."
+                },
+                "fr": {
+                    "label": "GGI",
+                    "definition": "Governance & Institutions Index sur NationFiles : agrégation de dimensions WGI Banque mondiale en composite 0–100 ; second pilier du snapshot KPI à côté du PPI, séparé du NFSI."
+                },
+                "es": {
+                    "label": "GGI",
+                    "definition": "Governance & Institutions Index en NationFiles: dimensiones tipo WGI del Banco Mundial en un composite 0–100; segundo pilar del snapshot KPI junto al PPI; distinto del NFSI."
+                },
+                "pt": {
+                    "label": "GGI",
+                    "definition": "Governance & Institutions Index na NationFiles: dimensões estilo WGI do Banco Mundial num compósito 0–100; segundo pilar do snapshot KPI ao lado do PPI; distinto do NFSI."
+                },
+                "ar": {
+                    "label": "GGI",
+                    "definition": "مؤشر الحوكمة والمؤسسات على NationFiles: أبعاد حوكمية وفق مجموعة المؤشرات العالمية للبنك الدولي، مجمَّعة إلى درجة مركبة 100–0؛ ثاني ركن في لقطات KPI بجانب PPI؛ منفصل عن NFSI."
+                },
+                "ja": {
+                    "label": "GGI",
+                    "definition": "NationFiles における Governance & Institutions Index — WGI 系の次元を総合ヘッドライン（0–100）に統合。PPI と並ぶ KPI スナップショットの第 2 柱で、NFSI とは別。"
+                }
+            }
+        },
+        {
+            "id": "purchasing-power-index",
+            "aliases": [
+                "PPI",
+                "Purchasing Power Index",
+                "Kaufkraftindex",
+                "indice de pouvoir d'achat",
+                "índice de poder adquisitivo",
+                "índice de poder aquisitivo"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "PPI",
+                    "definition": "Purchasing Power Index — auf NationFiles das kuratierte Makrolagepaket (v. a. BIP KKP pro Kopf, Inflation, Arbeitsmarkt, Reserven, MwSt.-Kontext) neben NFSI; kein Ersatz für NFSI oder amtliche Statistik."
+                },
+                "en": {
+                    "label": "PPI",
+                    "definition": "Purchasing Power Index — NationFiles’ curated country macro bundle (notably GDP PPP per capita, inflation, labour, reserves, VAT context) alongside NFSI; not a substitute for NFSI or official statistics."
+                },
+                "fr": {
+                    "label": "PPI",
+                    "definition": "Purchasing Power Index — sur NationFiles, paquet macro pays curaté (notamment PIB PPA/habitant, inflation, emploi, réserves, TVA) à côté du NFSI ; ne remplace ni le NFSI ni les statistiques officielles."
+                },
+                "es": {
+                    "label": "PPI",
+                    "definition": "Purchasing Power Index — en NationFiles, paquete macro curado por país (p. ej. PIB PPA per cápita, inflación, empleo, reservas, IVA) junto a NFSI; no sustituye al NFSI ni a estadísticas oficiales."
+                },
+                "pt": {
+                    "label": "PPI",
+                    "definition": "Purchasing Power Index — na NationFiles, pacote macro curado por país (p.ex. PIB PPC per capita, inflação, emprego, reservas, IVA) junto ao NFSI; não substitui o NFSI nem estatísticas oficiais."
+                },
+                "ar": {
+                    "label": "PPI",
+                    "definition": "مؤشر قوة الشراء — على NationFiles حزمة ماكرو منسّقة للدولة (مثل الناتج بتعادل القوة الشرائية للفرد والتضخم والعمل والاحتياطيات وضريبة القيمة المضافة) بجانب NFSI؛ لا يحل محل NFSI أو الإحصاءات الرسمية."
+                },
+                "ja": {
+                    "label": "PPI",
+                    "definition": "Purchasing Power Index — NationFiles の国別マクロ・バンドル（主に一人当たり GDP PPP、インフレ、雇用、準備金、VAT 文脈）を NFSI と併せて示すもの。NFSI や公式統計の代替ではない。"
+                }
+            }
+        },
+        {
+            "id": "predictive-layer",
+            "aliases": [
+                "Predictive Layer",
+                "prediction layer",
+                "prévisionnel",
+                "capa predictiva"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Predictive Layer",
+                    "definition": "Auf NationFiles die komprimierte Vorlauf-Schicht im Länder-Dashboard mit typischerweise 24-Stunden- und 7-Tage-Horizont für Briefing-Snapshots — keine übertriebene Einzel-Ereignisprognose."
+                },
+                "en": {
+                    "label": "Predictive Layer",
+                    "definition": "On NationFiles, the compressed forward window in the Country Intelligence Dashboard — usually 24-hour and 7-day horizons for briefing snapshots, not overstated single-event prediction."
+                },
+                "fr": {
+                    "label": "Predictive Layer",
+                    "definition": "Sur NationFiles, la couche prospective condensée du tableau pays — horizons 24 h et 7 j pour instantanés de briefing, sans prédiction ponctuelle exagérée."
+                },
+                "es": {
+                    "label": "Predictive Layer",
+                    "definition": "En NationFiles, la capa prospectiva comprimida del panel país — horizontes 24 h y 7 d para instantáneas de briefing, sin predicción puntual exagerada."
+                },
+                "pt": {
+                    "label": "Predictive Layer",
+                    "definition": "Na NationFiles, a camada prospectiva comprimida do painel país — horizontes 24 h e 7 d para instantâneos de briefing, sem previsão pontual exagerada."
+                },
+                "ar": {
+                    "label": "Predictive Layer",
+                    "definition": "على NationFiles: طبقة أفقية مضغوطة في لوحة الدولة — غالباً 24 ساعة و7 أيام للقطات إحاطة، دون تنبؤ مبالغ فيه لحدث واحد."
+                },
+                "ja": {
+                    "label": "Predictive Layer",
+                    "definition": "NationFiles の国情報ダッシュボード上の短い先行地平線層。通常 24 時間と 7 日のブリーフ用スナップショットで、単一事象の過大予測ではない。"
+                }
+            }
+        },
+        {
+            "id": "flora-fauna-live-nf",
+            "aliases": [
+                "Flora & Fauna Live",
+                "Flora Fauna Live",
+                "Flora Live",
+                "Fauna Tracker",
+                "Wildlife Tracker nationfiles"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Flora & Fauna Live",
+                    "definition": "Laut Legal Notice: Umwelt-Monitoring auf Basis ausgewerteter Bildinformationen auf NationFiles — kein Ersatz für behördliche Natur- oder Wetterverfahren."
+                },
+                "en": {
+                    "label": "Flora & Fauna Live",
+                    "definition": "Per legal notice: environmental monitoring using evaluated imagery on NationFiles—not a substitute for statutory nature or meteorological services."
+                },
+                "fr": {
+                    "label": "Flora & Fauna Live",
+                    "definition": "Selon la notice légale : suivi environnemental par imagerie évaluée sur NationFiles — pas un substitut aux services nationaux de nature ou météo."
+                },
+                "es": {
+                    "label": "Flora & Fauna Live",
+                    "definition": "Según el aviso legal: monitoreo ambiental con imagen evaluada en NationFiles — no sustituye servicios oficiales de naturaleza o meteorología."
+                },
+                "pt": {
+                    "label": "Flora & Fauna Live",
+                    "definition": "Segundo o aviso legal: monitorização ambiental com imagem avaliada na NationFiles — não substitui serviços estatutários de natureza ou meteorologia."
+                },
+                "ar": {
+                    "label": "Flora & Fauna Live",
+                    "definition": "وفق الإشعار القانوني: مراقبة بيئية بالصور المُقيَّمة على NationFiles — لا يغني عن خدمات الطبيعة أو الأرصاد الرسمية."
+                },
+                "ja": {
+                    "label": "Flora & Fauna Live",
+                    "definition": "リーガルノーティス上：評価画像に基づく環境モニタリング（NationFiles）— 法定の自然・気象行政の代替ではない。"
+                }
+            }
+        },
+        {
+            "id": "economy-vertical-nf",
+            "aliases": [
+                "Wirtschaftssparte NationFiles",
+                "Economy vertical NationFiles",
+                "Verticale économique NationFiles",
+                "vertical económica NationFiles",
+                "経済領域 NationFiles",
+                "المحور الاقتصادي"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Wirtschaftssparte (NationFiles)",
+                    "definition": "Redaktioneller Rahmen, in dem NationFiles Makrovergleiche, Institutionen und Stabilität auf Länderseiten bündelt — ohne ein undokumentiertes Prognosemodell zu behaupten."
+                },
+                "en": {
+                    "label": "Economy vertical (NationFiles)",
+                    "definition": "Editorial frame for how NationFiles groups macro comparability, institutional scores, and stability on country pages—without claiming a hidden forecast engine."
+                },
+                "fr": {
+                    "label": "Verticale économique (NationFiles)",
+                    "definition": "Cadre rédactionnel qui assemble comparaisons macro, scores institutionnels et stabilité sur les pages pays — sans prétendre disposer d’un moteur de prévision secret."
+                },
+                "es": {
+                    "label": "Vertical económica (NationFiles)",
+                    "definition": "Marco editorial en el que NationFiles agrupa macrocomparación, gobernanza y estabilidad en fichas país — sin afirmar un motor de pronóstico oculto."
+                },
+                "pt": {
+                    "label": "Vertical económica (NationFiles)",
+                    "definition": "Moldura editorial em que a NationFiles junta macrocomparação, governação e estabilidade nas páginas país — sem reivindicar um motor de previsão oculto."
+                },
+                "ar": {
+                    "label": "المحور الاقتصادي (NationFiles)",
+                    "definition": "إطار تحريري يجمع NationFiles بين مقارنة ماكرو والحوكمة والاستقرار في صفحات الدول — دون ادّعاء محرّك توقّع مخفي."
+                },
+                "ja": {
+                    "label": "経済領域（NationFiles）",
+                    "definition": "NationFiles が国ページでマクロ比較・制度・安定性を束ねる編集上の枠であり、隠れた予測エンジンを前提とはしない。"
+                }
+            }
+        },
+        {
+            "id": "security-radar",
+            "aliases": [
+                "Security Radar",
+                "security radar",
+                "radar sécurité",
+                "radar de seguridad"
+            ],
+            "i18n": {
+                "de": {
+                    "label": "Security Radar",
+                    "definition": "Im Länder-Dashboard der sicherheits- und strategierelevante Kontext zu einem Land, ausgerichtet am Sicherheits-Kartenhub auf NationFiles — ergänzend zu NFSI und Medien-Sentiment."
+                },
+                "en": {
+                    "label": "Security Radar",
+                    "definition": "In the Country Intelligence Dashboard, the security- and strategy-relevant lens for a country, aligned with NationFiles’ security maps hub — alongside NFSI and media sentiment."
+                },
+                "fr": {
+                    "label": "Security Radar",
+                    "definition": "Dans le tableau pays, la lecture sécurité et contexte stratégique, alignée sur le hub des cartes Sécurité NationFiles — en complément du NFSI et du sentiment médias."
+                },
+                "es": {
+                    "label": "Security Radar",
+                    "definition": "En el panel país, la lectura de seguridad y contexto estratégico, alineada con el centro de mapas de seguridad de NationFiles — junto al NFSI y al sentimiento mediático."
+                },
+                "pt": {
+                    "label": "Security Radar",
+                    "definition": "No painel país, a leitura de segurança e contexto estratégico, alinhada ao hub de mapas de segurança da NationFiles — junto do NFSI e do sentimento mediático."
+                },
+                "ar": {
+                    "label": "Security Radar",
+                    "definition": "في لوحة الدولة: زاوية الأمن والسياق الاستراتيجي للبلد، متوافقة مع مركز خرائط الأمن على NationFiles — إلى جانب NFSI ومعنى الإعلام."
+                },
+                "ja": {
+                    "label": "Security Radar",
+                    "definition": "国情報ダッシュボードにおける安全保障・戦略文脈の読み。NationFiles のセキュリティ地図ハブに沿い、NFSI やメディア・センチメントと併せて使う。"
                 }
             }
         }

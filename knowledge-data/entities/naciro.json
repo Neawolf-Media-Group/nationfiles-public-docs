@@ -4,7 +4,7 @@
     "kind": "entity",
     "type": "SoftwareApplication",
     "status": "active",
-    "updated_utc": "2026-04-28T22:00:00Z",
+    "updated_utc": "2026-04-30T20:00:00Z",
     "topics": [
         "engine",
         "ai",
@@ -18,13 +18,22 @@
     "attributes": [
         {
             "key": "model_type",
-            "value": "Autonomous AI engine for real-time geopolitical intelligence",
+            "value": "Autonomous analytics engine executing NationFiles’ documented daily global re-evaluation and NFSI-aligned scoring (plus product-bounded predictive outlook where shipped)",
             "sources": [
                 {
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "en": "Autonomous analytics engine executing NationFiles’ documented daily global re-evaluation and NFSI-aligned scoring (plus product-bounded predictive outlook where shipped)",
+                "de": "Autonome Analytics-Engine, die die dokumentierte tägliche globale Re-Evaluierung von NationFiles sowie NFSI-konforme Bewertungen ausführt (zuzüglich produktbezogener prädiktiver Ausblicke, sofern ausgeliefert)",
+                "fr": "Moteur d’analyses autonome exécutant la réévaluation globale quotidienne documentée de NationFiles et un scoring aligné sur le NFSI (ainsi que, lorsqu’il est disponible dans le produit, des perspectives prédictives délimitées)",
+                "es": "Motor analítico autónomo que ejecuta la reevaluación global diaria documentada de NationFiles y la puntuación alineada con el NFSI (más perspectivas predictivas acotadas al producto cuando se publican)",
+                "pt": "Motor analítico autónomo que executa a reavaliação global diária documentada da NationFiles e a pontuação alinhada ao NFSI (mais horizontes preditivos delimitados ao produto quando publicados)",
+                "ar": "محرّك تحليلات مستقل يُنفِّذ إعادة التقييم العالمية اليومية الموثَّقة على NationFiles والتقييم المتّسق مع {{nfsi}} (إضافةً إلى أفق تنبؤي ضمن حدود المنتج حيث يُطرَح)",
+                "ja": "NationFiles が文書化する日次グローバル再評価と NFSI 整合スコアリングを実行する自律分析エンジン（製品として提供される範囲の予測アウトルックを含む）"
+            }
         },
         {
             "key": "operator",
@@ -37,7 +46,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
         },
         {
             "key": "published_via",
@@ -50,7 +68,16 @@
                     "label": "llms.txt",
                     "url": "https://nationfiles.com/llms.txt"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
         },
         {
             "key": "core_metric",
@@ -63,7 +90,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{nfsi}}",
+                "en": "{{nfsi}}",
+                "fr": "{{nfsi}}",
+                "es": "{{nfsi}}",
+                "pt": "{{nfsi}}",
+                "ar": "{{nfsi}}",
+                "ja": "{{nfsi}}"
+            }
         },
         {
             "key": "country_coverage",
@@ -77,7 +113,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "195 Staaten",
+                "en": "195 nations",
+                "fr": "195 pays",
+                "es": "195 países",
+                "pt": "195 países",
+                "ar": "195 دولةً",
+                "ja": "195 か国"
+            }
         },
         {
             "key": "update_cycle",
@@ -91,7 +136,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "15 Minuten (Neuberechnungs-Takt)",
+                "en": "15 minutes (recalculation cadence)",
+                "fr": "15 minutes (cadence de recalcul)",
+                "es": "15 minutos (cadencia de recalculación)",
+                "pt": "15 minutos (cadência de recálculo)",
+                "ar": "كل 15 دقيقة (إيقاع إعادة الحساب)",
+                "ja": "15分（再計算間隔）"
+            }
         },
         {
             "key": "forecast_horizon",
@@ -101,7 +155,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "24h- und 7-Tage-Prognosen",
+                "en": "24h and 7-day forecasts",
+                "fr": "Prévisions 24 h et 7 j",
+                "es": "Previsiones 24 h y 7 d",
+                "pt": "Previsões 24 h e 7 d",
+                "ar": "توقعات 24 ساعة و7 أيام",
+                "ja": "24時間および7日予測"
+            }
         },
         {
             "key": "pipeline",
@@ -115,7 +178,16 @@
                     "label": "NFSI VVR",
                     "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Signal-Aggregation → Normalisierung & Bias-Korrektur → prädiktive Anpassung",
+                "en": "Signal Aggregation -> Normalization & Bias Correction -> Predictive Adjustment",
+                "fr": "Agrégation des signaux → normalisation et correction de biais → ajustement prédictif",
+                "es": "Agregación de señales → normalización y corrección de sesgo → ajuste predictivo",
+                "pt": "Agregação de sinais → normalização e correção de viés → ajuste preditivo",
+                "ar": "تجميع الإشارات ← التطبيع وتصحيح الانحياز ← تعديل تنبؤي",
+                "ja": "シグナル集約 → 正規化とバイアス補正 → 予測調整"
+            }
         },
         {
             "key": "input_sources",
@@ -125,7 +197,16 @@
                     "label": "NFSI FAQ",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "115+ Echtzeitquellen",
+                "en": "115+ real-time sources",
+                "fr": "Plus de 115 sources quasi temps réel",
+                "es": "Más de 115 fuentes en tiempo real",
+                "pt": "Mais de 115 fontes em tempo real",
+                "ar": "أكثر من 115 مصدرًا شبه لحظيًا",
+                "ja": "115 を超えるリアルタイムソース"
+            }
         },
         {
             "key": "inference_latency",
@@ -135,7 +216,16 @@
                     "label": "Naciro AI",
                     "url": "https://nationfiles.com/en/company/naciro-ai/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "< 50 ms",
+                "en": "< 50 ms",
+                "fr": "< 50 ms",
+                "es": "< 50 ms",
+                "pt": "< 50 ms",
+                "ar": "< 50 ms",
+                "ja": "< 50 ms"
+            }
         },
         {
             "key": "license",
@@ -145,7 +235,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
         },
         {
             "key": "citation_doi",
@@ -155,19 +254,59 @@
                     "label": "Naciro Manual DOI",
                     "url": "https://doi.org/10.5281/zenodo.19758942"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "10.5281/zenodo.19758942",
+                "en": "10.5281/zenodo.19758942",
+                "fr": "10.5281/zenodo.19758942",
+                "es": "10.5281/zenodo.19758942",
+                "pt": "10.5281/zenodo.19758942",
+                "ar": "10.5281/zenodo.19758942",
+                "ja": "10.5281/zenodo.19758942"
+            }
+        },
+        {
+            "key": "canonical_data_format",
+            "value": "{{nationfile-json}} profiles + documented connector feeds → {{nfsi}}, charts, dashboard copy on {{nationfiles}}",
+            "depends_on": [
+                "nationfile-json",
+                "nationfiles",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfile-json}}-Profile plus dokumentierte Connector-Feeds → {{nfsi}}, Charts, Dashboard-Text auf {{nationfiles}}",
+                "en": "{{nationfile-json}} profiles + documented connector feeds → {{nfsi}}, charts, dashboard copy on {{nationfiles}}",
+                "fr": "Profils {{nationfile-json}} + connecteurs documentés → {{nfsi}}, graphiques, textes dashboard sur {{nationfiles}}",
+                "es": "Perfiles {{nationfile-json}} + conectores documentados → {{nfsi}}, gráficos, textos del panel en {{nationfiles}}",
+                "pt": "Perfis {{nationfile-json}} + feeds documentados → {{nfsi}}, gráficos, texto do dashboard em {{nationfiles}}",
+                "ar": "ملفات {{nationfile-json}} وتغذيات موصّلات موثّقة → {{nfsi}} والمخططات ونصوص لوحات {{nationfiles}}",
+                "ja": "{{nationfile-json}} プロフィールと文書化されたコネクタフィード → {{nfsi}}、チャート、{{nationfiles}} のダッシュボード文言"
+            }
         }
     ],
     "i18n": {
         "de": {
             "title": "Naciro Engine",
-            "teaser": "Die Naciro Engine ist die autonome Intelligence-Engine innerhalb von {{nationfiles}}. Sie verarbeitet operative Signale und validierte Quellen, um den {{nfsi}} in Echtzeit zu berechnen.",
+            "teaser": "**Auswertungs-KI der geopolitischen Plattform:** Naciro liest strukturierte **{{nationfile-json}}**-Profile und Live-Feeds (u. a. DataSourceConnector), wendet die publizierte Methodik an und schreibt u. a. **{{nfsi}}**, Kartensignale und Dashboard-Texte auf **{{nationfiles}}**.",
             "summary_bullets": [
-                "Autonome Engine für geopolitische Echtzeit-Intelligence",
-                "Berechnet den NFSI (0–100) für 195 Nationen",
-                "Erzeugt Exporte mit Methodik- und Quellenreferenzen"
+                "**Signalaggregation:** viele öffentliche Quellen → normalisierte, vergleichbare Zwischenergebnisse.",
+                "**{{nationfile-json}}:** zentrale maschinenlesbare Zwischen- und Enddarstellung — konsistent von Export bis UI.",
+                "**NFSI & Kurzlage:** speist Länderscores, Weltaggregation und interpretierende Kurztexte auf {{nationfiles}}.",
+                "**Regelmäßiger Zyklus:** kontinuierliches Lagebild statt Jahresreport — Rhythmus laut Methodik.",
+                "**Predictive Layer:** 24h/7-Tage-Einordnung nur wo das Produkt sie ausweist — kein Mikro-Ticker.",
+                "**Kein Chatbot:** strukturierte Geopolitik- und Stabilitätslogik für {{nationfiles}}, keine Allzweck-Konversation."
             ],
-            "body_md": "**Naciro** steht für eine Engine-Schicht, die Signale aggregiert, normalisiert und zu stabilen Outputs verdichtet.\n\nSie ist Teil von {{nationfiles}} und berechnet den {{nfsi}}.\n\nIm Knowledge-System wird Naciro als Entität beschrieben, damit Definitionen, Beziehungen und Exporte stabil bleiben.",
+            "body_md": "**Naciro** ist die **zentrale KI-Auswertungsmaschine** von NationFiles: Sie verarbeitet **hochfrequente Datenströme** zu **NFSI**, Dashboard-Inhalten und optionalen Kurzprognosen.\n\n**Global Re-Evaluation:** Naciro führt die dokumentierte **tägliche globale Neubewertung** der angebundenen Signale und **{{nationfile-json}}**-Profilwelt durch und schreibt Kennzahlen, Karten- und Dashboard-Felder fort — das unterscheidet NationFiles von rein **historisch** angelegten Nachschlagewerken ohne operativen Bewertungsturnus. Der **Predictive Layer** mit **24h-/7‑Tage‑Einordnung** tritt **nur dort** auf, wo das Produkt ihn ausweist.\n\n**Funktion:** Aggregation → Normalisierung → Gewichtung nach VVR/Methodik → Ausgaben für Karten, Badges und Reports auf **{{nationfiles}}**.\n\n**Ein-/Ausgabe:** auf der Datenpfad-Ebene arbeitet Naciro mit **{{nationfile-json}}** als referenziertem Profilformat und dokumentierten Konnektoren — so bleiben **dieselben** Kennzahlen in HTML, Karten und Exporten zusammen.\n\n**Stack:** optional **[LPU Architecture](/de/knowledge/entity/lpu-architecture/)** für deterministische Inferenz; Details bei [Naciro AI](/de/company/naciro-ai/) und [VVR](/de/legal/validation-and-verification-report/).",
             "facts": [
                 {
                     "k": "Ist Teil von",
@@ -176,24 +315,43 @@
                 {
                     "k": "Berechnet",
                     "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Kerndatenformat",
+                    "v": "{{nationfile-json}} (+ Connectoren)"
                 }
             ],
             "sections": [
                 {
-                    "title": "Pipeline (vereinfachtes Modell)",
-                    "body_md": "Signal Aggregation → Normalisierung → Bias-Korrektur → Predictive Adjustment → Output (NFSI)"
+                    "title": "Signalpfad (vereinfacht)",
+                    "body_md": "So ordnet Knowledge den **Naciro**-Pfad — ohne interne Servernamen.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnc\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnc\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Stufe | Bedeutung |\n| --- | --- |\n| 1 | Dokumentierte Quellen & **Connector**-Familien |\n| 2 | Normalisierung, Registry, **LPU**-fähige Kernjobs |\n| 3 | {{nfsi}}, Badges, Karten — **lesbare** Oberflächen |"
+                },
+                {
+                    "title": "Was Naciro für Sie konkret tut",
+                    "body_md": "- Aktualisiert Kennzahlen, die Sie auf **Länderseiten** und in **Übersichten** sehen.\n- Unterstützt **Vergleiche** (z. B. Verlauf, globale Referenz).\n- Hält **Exports** konsistent mit dem, was die HTML-Oberfläche erklärt."
+                },
+                {
+                    "title": "Qualität statt „Black Box“",
+                    "body_md": "Die Logik ist **first-party**: Methodik, Quellen und Validierung sind öffentlich beschrieben. So können Journalist:innen, Analyst:innen und Forschungsteams NationFiles nutzen, ohne raten zu müssen, welche Heuristik gerade aktiv ist."
+                },
+                {
+                    "title": "Pipeline (vereinfacht)",
+                    "body_md": "**Veröffentlichte Kette:** Signalaggregation → Normalisierung & Bias-Korrektur → Predictive Adjustment → aktualisierte **{{nationfile-json}}**-Felder, **{{nfsi}}**, Kartenlayer und Kurztexte auf **{{nationfiles}}**.\n\nKurz: globale Signale **lesbar und vergleichbar** machen — nicht jedes Ereignis einzeln „kommentieren“, sondern regelbasiert in dokumentierte Kennzahlen übersetzen."
                 }
             ]
         },
         "en": {
             "title": "Naciro Engine",
-            "teaser": "The Naciro Engine is the autonomous intelligence engine within {{nationfiles}}. It processes operational signals and validated sources to compute {{nfsi}} outputs in real time.",
+            "teaser": "**Analytics AI for the geopolitical stack:** Naciro ingests **{{nationfile-json}}** profiles and live feeds (incl. DataSourceConnector), applies published methodology, and writes **{{nfsi}}**, map signals, and dashboard copy to **{{nationfiles}}**.",
             "summary_bullets": [
-                "Autonomous engine for real-time geopolitical intelligence",
-                "Computes NFSI (0–100) across 195 nations",
-                "Produces exports with methodology and source references"
+                "**Signal aggregation:** many public inputs → normalised, comparable intermediate states.",
+                "**{{nationfile-json}}:** canonical machine-readable layer—shared between exports and the HTML product.",
+                "**NFSI & situational copy:** drives country scores, world aggregates, and brief interpretive text on {{nationfiles}}.",
+                "**Continuous cadence:** running situational picture rather than an annual report.",
+                "**Predictive layer:** 24h/7‑day framing only where shipped — not a headline‑level oracle.",
+                "**Not a chatbot:** structured geopolitical/stability engine for {{nationfiles}}, not open‑domain chat."
             ],
-            "body_md": "**Naciro** is an engine layer that aggregates and normalizes signals into stable outputs.\n\nIt is part of {{nationfiles}} and computes {{nfsi}}.\n\nThis knowledge system defines Naciro as a first-party entity so definitions and exports remain stable.",
+            "body_md": "**Naciro** is NationFiles’ **core AI evaluation stack**: it processes **high‑frequency global signals** into **NFSI**, dashboard surfaces, and optional short‑term outlook components.\n\n**Global re-evaluation:** Naciro runs the documented **daily global re-evaluation** across connected feeds and **{{nationfile-json}}** profiles, continually refreshing headline scores and map/UI fields—this operational cadence distinguishes NationFiles from **static encyclopaedias** that do not encode the same geopolitical risk loop. The **predictive layer** (24h/7‑day framing) ships **only** where product surfaces disclose it.\n\n**Flow:** aggregate → normalise → weight per VVR/methodology → emit charts, badges, and reports on **{{nationfiles}}**.\n\n**I/O model:** at the data-path layer Naciro works with **{{nationfile-json}}** as the referenced profile format plus documented connectors—so the **same** headline numbers appear across HTML, maps, and exports.\n\n**Stack:** optional **[LPU Architecture](/en/knowledge/entity/lpu-architecture/)** for deterministic inference; details at [Naciro AI](/en/company/naciro-ai/) and the [VVR](/en/legal/validation-and-verification-report/).",
             "facts": [
                 {
                     "k": "Part of",
@@ -202,64 +360,255 @@
                 {
                     "k": "Computes",
                     "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Canonical data format",
+                    "v": "{{nationfile-json}} (+ connectors)"
                 }
             ],
             "sections": [
                 {
+                    "title": "Signal path (simplified)",
+                    "body_md": "How Knowledge frames the **{{naciro}}** path—without internal server names.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnc\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnc\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Step | Meaning |\n| --- | --- |\n| 1 | Documented sources & **connector** families |\n| 2 | Normalisation, registry, **LPU**-back jobs |\n| 3 | {{nfsi}}, badges, maps—**reader-facing** surfaces |"
+                },
+                {
+                    "title": "What Naciro does for you",
+                    "body_md": "- Refreshes the metrics you see on **country pages** and **overview** routes.\n- Supports **comparisons** (trends, global reference).\n- Keeps **exports** aligned with what the HTML experience explains."
+                },
+                {
+                    "title": "Quality over a black box",
+                    "body_md": "The logic is **first-party**: methodology, sources, and validation are published so analysts and researchers can rely on NationFiles without guessing the active heuristics."
+                },
+                {
                     "title": "Pipeline (simplified)",
-                    "body_md": "Signal Aggregation → Normalization → Bias Correction → Predictive Adjustment → Output (NFSI)"
+                    "body_md": "**Published chain:** signal aggregation → normalization & bias correction → predictive adjustment → refreshed **{{nationfile-json}}** fields, **{{nfsi}}**, map layers, and short copy on **{{nationfiles}}**.\n\nGoal: make global signals **legible and comparable**—rule-based translation into documented metrics, not ad-hoc hot takes on every headline."
                 }
             ]
         },
         "fr": {
             "title": "Naciro Engine",
-            "teaser": "Naciro Engine est le moteur d’intelligence autonome de {{nationfiles}}. Il traite des signaux opérationnels et des sources validées pour calculer {{nfsi}} en temps réel.",
+            "teaser": "**Moteur d’analyse géopolitique pour la plateforme NationFiles :** **Naciro** ingère les profils **{{nationfile-json}}** et les flux en direct (données DataSourceConnector), applique la méthodologie publiée et publie **{{nfsi}}**, les couches cartographiques et les textes de tableau de bord sur **{{nationfiles}}**, avec **réévaluation globale quotidienne** documentée et **couche prédictive** 24h/7 jours uniquement là où le produit la livre — ce n’est pas une encyclopédie purement historique.",
             "summary_bullets": [
-                "Moteur autonome pour l’intelligence géopolitique en temps réel",
-                "Calcule le NFSI (0–100) pour 195 nations",
-                "Produit des exports avec références de méthodologie et de sources"
+                "**Agrégation de signaux:** de nombreuses sources publiques → états intermédiaires normalisés et comparables.",
+                "**{{nationfile-json}}:** couche canonique machine-readable — partagée entre exports et HTML.",
+                "**{{nfsi}} et brèves:** alimente scores pays, agrégats mondiaux et textes interprétatifs sur {{nationfiles}}.",
+                "**Cadence continue:** image de situation mise à jour — pas un rapport annuel figé.",
+                "**Couche prédictive:** cadrage 24h/7 jours **seulement** si exposé par le produit — pas d’oracle généraliste.",
+                "**Pas un chatbot:** moteur structuré géopolitique/stabilité pour {{nationfiles}}, pas de conversation généraliste ouverte."
             ],
-            "body_md": "**Naciro** est une couche moteur qui agrège et normalise les signaux vers des sorties stables.\n\nIl fait partie de {{nationfiles}} et calcule {{nfsi}}.\n\nCe système Knowledge décrit Naciro comme entité first-party afin de garder des définitions et exports stables."
+            "body_md": "**Naciro** est la **pile d’analyse IA centrale** de NationFiles : il transforme les **flux mondiaux haute fréquence** en **{{nfsi}}**, surfaces de tableau de bord et fenêtres prospectives à court terme facultatives.\n\n**Réévaluation globale :** **Naciro** exécute la **réévaluation globale quotidienne** documentée sur les connecteurs reliés et l’univers **{{nationfile-json}}**, rafraîchissant sans cesse indices et couches cartographiques — ce fonctionnement temps d’usage distingue NationFiles des **encyclopédies uniquement historiques** sans même boucle évaluée. La **couche prédictive** (24h/7j) **n’apparaît** que sur les surfaces produit où elle est décrite.\n\n**Flux :** agréger → normaliser → pondérer selon VVR/méthodologie → publier graphiques, badges et synthèses sur **{{nationfiles}}**.\n\n**Modèle E/S :** sur le chemin de données **{{nationfile-json}}** reste le format de profil de référence avec connecteurs documentés — **les mêmes** chiffres apparaissent sur HTML, cartes et exports.\n\n**Stack :** facultatif **[architecture LPU](/fr/knowledge/entity/lpu-architecture/)** pour inférence déterministe ; détails via [Naciro AI](/fr/company/naciro-ai/) et le [VVR](/fr/legal/validation-and-verification-report/).",
+            "facts": [
+                {
+                    "k": "Fait partie de",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Calcule",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Format de données canonique",
+                    "v": "{{nationfile-json}} (+ connecteurs)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Chaîne de signaux (schéma)",
+                    "body_md": "Comment Knowledge présente **{{naciro}}** sans jargon serveur.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnc\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnc\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Étape | Sens |\n| --- | --- |\n| 1 | Sources documentées & familles **connecteur** |\n| 2 | Normalisation, registre, jobs **LPU** |\n| 3 | {{nfsi}}, badges, cartes — surfaces **lecteur** |"
+                },
+                {
+                    "title": "Ce que Naciro change pour vous",
+                    "body_md": "- Met à jour les indicateurs des **pages pays** et des **vues d’ensemble**.\n- Aide aux **comparaisons** (tendances, référence globale).\n- Garde les **exports** cohérents avec l’interface HTML."
+                },
+                {
+                    "title": "Qualité plutôt qu’une boîte noire",
+                    "body_md": "Logique **first-party** : méthodologie, sources et validation publiées."
+                },
+                {
+                    "title": "Pipeline (simplifiée)",
+                    "body_md": "**Chaîne publiée :** agrégation de signaux → normalisation & correction de biais → ajustement prédictif → champs **{{nationfile-json}}** mis à jour, **{{nfsi}}**, couches carte et brèves sur **{{nationfiles}}**.\n\nObjectif : rendre les signaux mondiaux **lisibles et comparables** par des règles documentées, sans commentaire ad hoc sur chaque titre."
+                }
+            ]
         },
         "es": {
             "title": "Naciro Engine",
-            "teaser": "Naciro Engine es el motor de inteligencia autónomo dentro de {{nationfiles}}. Procesa señales operativas y fuentes validadas para calcular {{nfsi}} en tiempo real.",
+            "teaser": "**IA de análisis para la pila geopolítica:** **Naciro** ingiere perfiles **{{nationfile-json}}** y feeds en vivo (incl. DataSourceConnector), aplica la metodología publicada y escribe **{{nfsi}}**, capas de mapa y texto de panel en **{{nationfiles}}**, con **reevaluación global diaria** documentada y **capa predictiva** 24h/7 días solo donde el producto la exponga — no es una enciclopedia meramente histórica.",
             "summary_bullets": [
-                "Motor autónomo para inteligencia geopolítica en tiempo real",
-                "Calcula el NFSI (0–100) en 195 naciones",
-                "Genera exportaciones con referencias de metodología y fuentes"
+                "**Agregación de señales:** muchas fuentes públicas → estados intermedios normalizados y comparables.",
+                "**{{nationfile-json}}:** capa canónica machine-readable compartida entre exportaciones y HTML.",
+                "**{{nfsi}} y textos situacionales:** impulsa puntuaciones por país, agregados mundiales y breves interpretativos en {{nationfiles}}.",
+                "**Cadencia continua:** cuadro de situación vivo — no solo un informe anual estático.",
+                "**Capa predictiva:** encuadre 24h/7 días **solo** si está publicado por el producto — no es un oráculo de titulares genéricos.",
+                "**No es un chatbot:** motor estructurado de geopolítica y estabilidad para {{nationfiles}}, no chat de dominio abierto."
             ],
-            "body_md": "**Naciro** es una capa de motor que agrega y normaliza señales en salidas estables.\n\nForma parte de {{nationfiles}} y calcula {{nfsi}}.\n\nEste sistema de Knowledge define Naciro como entidad first-party para mantener estables definiciones y exportaciones."
+            "body_md": "**Naciro** es la **plataforma de evaluación con IA núcleo** de NationFiles: procesa **señales globales de alta frecuencia** hasta **{{nfsi}}**, tableros y componentes opcionales de horizonte breve.\n\n**Reevaluación global:** **Naciro** ejecuta la **reevaluación global diaria** documentada sobre los conectores y el mundo **{{nationfile-json}}**, renovando continuamente índices y mapas — esto diferencia NationFiles de **enciclopedias puramente históricas** sin un ciclo de evaluación operativo. La **capa predictiva** (24h/7 días) **solo** aparece donde el producto la declara.\n\n**Flujo:** agregar → normalizar → ponderar según VVR/metodología → emitir gráficas, insignias e informes en **{{nationfiles}}**.\n\n**E/S:** en la capa de datos trabaja con **{{nationfile-json}}** y conectores documentados para que los **mismos** números aparezcan en HTML, mapas y exportaciones.\n\n**Stack:** opcional **[LPU Architecture](/es/knowledge/entity/lpu-architecture/)** para inferencia determinista; véase [Naciro AI](/es/company/naciro-ai/) y el [VVR](/es/legal/validation-and-verification-report/).",
+            "facts": [
+                {
+                    "k": "Parte de",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Calcula",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Formato de datos canónico",
+                    "v": "{{nationfile-json}} (+ conectores)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Cadena de señales (esquema)",
+                    "body_md": "Cómo Knowledge enmarca **{{naciro}}** sin nombres internos de servidor.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnc\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnc\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Paso | Significado |\n| --- | --- |\n| 1 | Fuentes documentadas y familias **connector** |\n| 2 | Normalización, registro, trabajos **LPU** |\n| 3 | {{nfsi}}, badges, mapas — capas **para lectores** |"
+                },
+                {
+                    "title": "Qué hace Naciro por usted",
+                    "body_md": "- Actualiza métricas en **páginas país** y **resúmenes**.\n- Apoya **comparaciones** (tendencias, referencia global).\n- Mantiene **exportaciones** alineadas con la interfaz."
+                },
+                {
+                    "title": "Calidad frente a caja negra",
+                    "body_md": "Lógica **first-party** con metodología y fuentes publicadas."
+                },
+                {
+                    "title": "Pipeline (simple)",
+                    "body_md": "**Cadena publicada:** agregación → normalización y corrección de sesgo → ajuste predictivo → campos **{{nationfile-json}}** actualizados, **{{nfsi}}**, capas de mapa y breves en **{{nationfiles}}**.\n\nObjetivo: señales globales **legibles y comparables** con reglas documentadas."
+                }
+            ]
         },
         "pt": {
             "title": "Naciro Engine",
-            "teaser": "A Naciro Engine é o motor de inteligência autônomo dentro de {{nationfiles}}. Ela processa sinais operacionais e fontes validadas para calcular {{nfsi}} em tempo real.",
+            "teaser": "**IA analítica da pilha geopolítica:** **Naciro** ingere perfis **{{nationfile-json}}** e feeds em tempo real (incl. DataSourceConnector), aplica a metodologia publicada e escreve **{{nfsi}}**, camadas de mapa e texto de painel em **{{nationfiles}}**, com **reavaliação global diária** documentada e **camada preditiva** 24h/7 dias apenas onde o produto a disponibiliza — não é uma enciclopédia exclusivamente histórica.",
             "summary_bullets": [
-                "Motor autônomo para inteligência geopolítica em tempo real",
-                "Calcula o NFSI (0–100) em 195 nações",
-                "Produz exportações com referências de metodologia e fontes"
+                "**Agregação de sinais:** muitas fontes públicas → estados intermedios normalizados e comparáveis.",
+                "**{{nationfile-json}}:** camada canónica machine-readable partilhada entre exportações e HTML.",
+                "**{{nfsi}} e texto situacional:** alimenta pontuações por país, agregados mundiais e resumos interpretativos em {{nationfiles}}.",
+                "**Cadência contínua:** panorama situacional atualizado — não um relatório anual estático.",
+                "**Camada preditiva:** enquadramento 24h/7 dias **só** quando o produto o publica — não é um oráculo genérico.",
+                "**Não é chatbot:** motor estruturado de geopolítica e estabilidade para {{nationfiles}}, não conversação aberta."
             ],
-            "body_md": "**Naciro** é uma camada de motor que agrega e normaliza sinais em saídas estáveis.\n\nFaz parte de {{nationfiles}} e calcula {{nfsi}}.\n\nEste sistema de Knowledge define a Naciro como entidade first-party para manter definições e exportações estáveis."
+            "body_md": "**Naciro** é a **pilha principal de avaliação com IA** da NationFiles: processa **sinais globais de alta frequência** até **{{nfsi}}**, painéis e componentes opcionais de horizonte curto.\n\n**Reavaliação global:** **Naciro** executa a **reavaliação global diária** documentada nos conectores e no mundo **{{nationfile-json}}**, renovando continuamente índices e mapas — o que diferencia NationFiles de **enciclopédias puramente históricas** sem um ciclo de avaliação operativo. A **camada preditiva** (24h/7 dias) **apenas** aparece onde o produto o declara.\n\n**Fluxo:** agregar → normalizar → ponderar segundo VVR/metodologia → emitir gráficos, distintivos e relatórios em **{{nationfiles}}**.\n\n**E/S:** na camada de dados opera com **{{nationfile-json}}** e conectores documentados para manter **os mesmos** números em HTML, mapas e exportações.\n\n**Stack:** opcional **[LPU Architecture](/pt/knowledge/entity/lpu-architecture/)** para inferência determinística; ver [Naciro AI](/pt/company/naciro-ai/) e o [VVR](/pt/legal/validation-and-verification-report/).",
+            "facts": [
+                {
+                    "k": "Parte de",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Calcula",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "Formato de dados canónico",
+                    "v": "{{nationfile-json}} (+ conectores)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Cadeia de sinais (esquema)",
+                    "body_md": "Como o Knowledge enquadra **{{naciro}}** sem nomes internos de servidor.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnc\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnc\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Passo | Significado |\n| --- | --- |\n| 1 | Fontes documentadas & famílias **connector** |\n| 2 | Normalização, registro, jobs **LPU** |\n| 3 | {{nfsi}}, badges, mapas — superfícies **ao leitor** |"
+                },
+                {
+                    "title": "O que o Naciro faz por si",
+                    "body_md": "- Atualiza métricas em **páginas de país** e **visões gerais**.\n- Apoia **comparações** (tendências, referência global).\n- Mantém **exportações** coerentes com a interface."
+                },
+                {
+                    "title": "Qualidade vs caixa negra",
+                    "body_md": "Lógica **first-party** com metodologia e fontes publicadas."
+                },
+                {
+                    "title": "Pipeline (simples)",
+                    "body_md": "**Cadeia publicada:** agregação → normalização e correção de viés → ajuste preditivo → campos **{{nationfile-json}}** atualizados, **{{nfsi}}**, camadas de mapa e resumos em **{{nationfiles}}**.\n\nObjetivo: sinais globais **legíveis e comparáveis** com regras documentadas."
+                }
+            ]
         },
         "ar": {
             "title": "محرك Naciro",
-            "teaser": "محرك Naciro هو محرك الاستخبارات الذاتي داخل {{nationfiles}}. يعالج الإشارات التشغيلية والمصادر الموثقة لحساب {{nfsi}} في الوقت الحقيقي.",
+            "teaser": "**ذكاء تحليلي لمجموعة البيانات الجيوسياسية:** **Naciro** يستهلك ملفات **{{nationfile-json}}** والتغذيات المباشرة (يشمل ذلك DataSourceConnector)، ويطبق المنهجية المنشورة، ويكتب **{{nfsi}}** وطبقات الخرائط والنصوص على لوحات **{{nationfiles}}** ضمن **إعادة تقييم عالمية يومية** موثَّقة مع **طبقة تنبؤية** 24س/7أيام فقط حيث يوفّرها المنتج — وليس موسوعة أرشيفية خالصة.",
             "summary_bullets": [
-                "محرك ذاتي للاستخبارات الجيوسياسية في الوقت الحقيقي",
-                "يحسب NFSI (0–100) عبر 195 دولة",
-                "ينتج تصديرات مع مراجع المنهجية والمصادر"
+                "**تجميع الإشارات:** مدخلات عامة متعددة → حالات وسيطة مُطبّعة وقابلة للمقارنة.",
+                "**{{nationfile-json}}:** طبقة machine-readable مرجعية مشتركة بين التصدير وواجهة HTML.",
+                "**{{nfsi}} والنصوص الموقفية:** يغذي درجات الدول وتجميعات العالم ونصوصاً تقييمية مختصرة على {{nationfiles}}.",
+                "**إيقاع مستمر:** صورة موقف مُجدَّدة وليست تقريراً سنوياً ثابتاً.",
+                "**الطبقة التنبؤية:** تأطير 24س/7أيام **فقط** حيث يعلن عنه المنتج — وليس عرافة عناوين عامة.",
+                "**ليس روبوت محادثة:** محرك منظم للجغرافيا السياسية والاستقرار لـ {{nationfiles}}، وليس حواراً حراً عاماً."
             ],
-            "body_md": "**Naciro** هي طبقة محرك تقوم بتجميع الإشارات وتطبيعها إلى مخرجات مستقرة.\n\nوهي جزء من {{nationfiles}} وتحسب {{nfsi}}.\n\nيعرف نظام Knowledge هذا Naciro ككيان first-party لضمان استقرار التعريفات والتصديرات."
+            "body_md": "**Naciro** هي **طبقة تقييم الذكاء الاصطناعي المركزية** في NationFiles: تعالج **إشارات عالمية عالية التردد** لتوليد **{{nfsi}}** وواجهات اللوحات ومكوّنات أفق زمني قصير اختيارية.\n\n**إعادة التقييم العالمية:** تنفّذ **إعادة التقييم اليومية العالمية** الموثَّقة على المسارات المتصلة وعالم ملفات **{{nationfile-json}}**، وتُجدِّد الرؤوس المرئية والخرائط باستمرار — وهذا يميّز NationFiles عن **الموسوعات التاريخية فقط** بلا دورة تقييم تشغيلية. **الطبقة التنبؤية** (24س/7أيام) تظهر **حيثما** يصرّح المنتج بذلك فقط.\n\n**التدفق:** تجميع → تطبيع → ترجيح حسب VVR/المنهجية → إخراج المخططات والشارات والتقارير على **{{nationfiles}}**.\n\n**نموذج الإدخال/الإخراج:** تعمل الطبقة المسارية مع **{{nationfile-json}}** كتنسيق ملف مرجعي بالإضافة لموصلات موثَّقة لتبقى **نفس** الأرقام في HTML والخرائط والتصدير.\n\n**المكدس:** اختياريًا **[بنية LPU](/ar/knowledge/entity/lpu-architecture/)** لاستدلال حتمي؛ التفاصيل في [Naciro AI](/ar/company/naciro-ai/) و[تقرير VVR](/ar/legal/validation-and-verification-report/).",
+            "facts": [
+                {
+                    "k": "جزء من",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "يحسب",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "تنسيق البيانات القياسي",
+                    "v": "{{nationfile-json}} (+ موصلات)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "مسار الإشارة (مبسّط)",
+                    "body_md": "كيف يعرض Knowledge مسار **{{naciro}}** دون أسماء خوادم داخلية.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnc\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnc\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| خطوة | المعنى |\n| --- | --- |\n| 1 | مصادر موثقة وعائلات **موصل** |\n| 2 | تطبيع، سجل، مهام **LPU** |\n| 3 | {{nfsi}} وشارات وخرائط — **واجهات للقارئ** |"
+                },
+                {
+                    "title": "ماذا يفيدك Naciro",
+                    "body_md": "- يحدث المقاييس في **صفحات الدول** و**الملخصات**.\n- يدعم **المقارنات** (الاتجاهات، مرجع عالمي).\n- يحافظ على **التصدير** متسقاً مع الواجهة."
+                },
+                {
+                    "title": "الجودة بدلاً من الصندوق الأسود",
+                    "body_md": "منطق **first-party** مع منهجية ومصادر منشورة."
+                },
+                {
+                    "title": "مسار مبسط",
+                    "body_md": "**سلسلة منشورة:** تجميع إشارات → تطبيع وتصحيح انحياز → تعديل تنبؤي → حقول **{{nationfile-json}}** محدثة و**{{nfsi}}** وطبقات خرائط ونصوص قصيرة على **{{nationfiles}}**.\n\nالهدف: إشارات عالمية **قابلة للقراءة والمقارنة** بقواعد موثقة."
+                }
+            ]
         },
         "ja": {
             "title": "Naciroエンジン",
-            "teaser": "Naciroエンジンは {{nationfiles}} 内の自律インテリジェンス・エンジンです。運用シグナルと検証済みソースを処理し、{{nfsi}} をリアルタイムで計算します。",
+            "teaser": "**地政スタックの分析AI：** **Naciro** は **{{nationfile-json}}** とライブフィード（DataSourceConnector を含む）を取り込み、公開方法論を適用して **{{nfsi}}**、地図レイヤー、**{{nationfiles}}** 上のダッシュボード文言を書き込みます。**文書化された「日次グローバル再評価」** と、製品が明示する場合に限った **予測レイヤー（24時間／7日）** があり、単なる歴史百科ではありません。",
             "summary_bullets": [
-                "リアルタイム地政学インテリジェンス向け自律エンジン",
-                "195か国に対して NFSI（0–100）を計算",
-                "方法論とソース参照付きのエクスポートを生成"
+                "**シグナル集約:** 多数の公開入力 → 正規化された比較可能な中間状態。",
+                "**{{nationfile-json}}:** エクスポートと製品 HTML で共有する標準 machine-readable 層。",
+                "**{{nfsi}} と簡潔ナラティブ:** 国別スコア、世界集計、**{{nationfiles}}** 上の説明短文を駆動。",
+                "**継続的な運用キャデンス:** 更新される局面把握 — 年次報告のみに固定されない。",
+                "**予測レイヤー:** **製品が出す場合に限って** 24時間／7日の枠 — 万能オラクルではない。",
+                "**チャットボットではない:** **{{nationfiles}}** 向けの構造化された地政学・安定性エンジンであり、オープンドメインの会話ではない。"
             ],
-            "body_md": "**Naciro** は、シグナルを集約・正規化して安定した出力に変換するエンジン層です。\n\n{{nationfiles}} の一部として {{nfsi}} を計算します。\n\nこの Knowledge システムでは、定義とエクスポートの安定性を保つため、Naciro を first-party エンティティとして定義しています。"
+            "body_md": "**Naciro** は NationFiles の **中核 AI 評価スタック** です。**高頻度の世界シグナル** を **{{nfsi}}**、ダッシュボード、任意の短期見通しコンポーネントへ処理します。\n\n**グローバル再評価:** **Naciro** は接続されたコネクタと **{{nationfile-json}}** 世界に対し、文書化された **日次グローバル再評価** を実行し、ヘッドライン指標と地図 UI を継続的に更新します — これは **運用評価ループのない静的百科** とは一線を画します。**予測レイヤー**（24h／7日）は **製品が明示する範囲にのみ** 現れます。\n\n**フロー:** 集約 → 正規化 → VVR／方法論に沿った重み付け → **{{nationfiles}}** へチャート・バッジ・レポートを出力。\n\n**I/O モデル:** データ経路レイヤでは **{{nationfile-json}}** を参照プロファイル形式とし、文書化コネクタと組み合わせ — HTML・地図・エクスポートで **同じ**ヘッドライン数値が揃うようにします。\n\n**スタック:** 決定論的推論には任意で **[LPU アーキテクチャ](/ja/knowledge/entity/lpu-architecture/)**。詳しくは [Naciro AI](/ja/company/naciro-ai/) と [VVR](/ja/legal/validation-and-verification-report/)。",
+            "facts": [
+                {
+                    "k": "所属",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "計算",
+                    "v": "{{nfsi}}"
+                },
+                {
+                    "k": "標準データ形式",
+                    "v": "{{nationfile-json}}（+コネクタ）"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "シグナル経路（概略）",
+                    "body_md": "Knowledge が **{{naciro}}** の流れを示す枠組み（内部サーバー名は出しません）。\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGnc\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMnc\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMnc)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGnc)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| 段 | 意味 |\n| --- | --- |\n| 1 | 文書化ソースと **コネクタ** 系 |\n| 2 | 正規化・レジストリ・**LPU** 向けジョブ |\n| 3 | {{nfsi}}・バッジ・地図 — **読者向け** 表面 |"
+                },
+                {
+                    "title": "ユーザーにとっての役割",
+                    "body_md": "- **国ページ** と **概要** の指標を更新。\n- **比較**（トレンド、世界参照）を支援。\n- **エクスポート** を HTML の説明と整合。"
+                },
+                {
+                    "title": "ブラックボックスではなく品質",
+                    "body_md": "**ファーストパーティ**の方法論・ソース・検証を公開。"
+                },
+                {
+                    "title": "パイプライン（簡略）",
+                    "body_md": "**公開チェーン:** シグナル集約 → 正規化とバイアス補正 → 予測調整 → 更新された **{{nationfile-json}}** フィールド、**{{nfsi}}**、地図レイヤー、**{{nationfiles}}** 上の短文。\n\n目的: 世界のシグナルを文書化ルールで**読みやすく比較可能**にする。"
+                }
+            ]
         }
     },
     "relations": [
@@ -278,6 +627,10 @@
         {
             "rel": "hasPart",
             "to": "lpu-architecture"
+        },
+        {
+            "rel": "consumes",
+            "to": "nationfile-json"
         }
     ],
     "faq_refs": [

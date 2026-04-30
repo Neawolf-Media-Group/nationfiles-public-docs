@@ -4,7 +4,7 @@
     "kind": "entity",
     "type": "Organization",
     "status": "active",
-    "updated_utc": "2026-04-28T22:00:00Z",
+    "updated_utc": "2026-04-30T20:18:00Z",
     "topics": [
         "organization",
         "publisher",
@@ -23,7 +23,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Einzelunternehmen (Einzelunternehmen)",
+                "en": "Sole proprietorship (Einzelunternehmen)",
+                "fr": "Entreprise individuelle (Einzelunternehmen)",
+                "es": "Empresa unipersonal (Einzelunternehmen)",
+                "pt": "Empresário em nome individual (Einzelunternehmen)",
+                "ar": "ملكية فردية (Einzelunternehmen)",
+                "ja": "個人事業（Einzelunternehmen）"
+            }
         },
         {
             "key": "founded_date",
@@ -33,7 +42,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "2025-06-01",
+                "en": "2025-06-01",
+                "fr": "2025-06-01",
+                "es": "2025-06-01",
+                "pt": "2025-06-01",
+                "ar": "2025-06-01",
+                "ja": "2025-06-01"
+            }
         },
         {
             "key": "project_started_date",
@@ -46,7 +64,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "2026-01-22 (Start von NationFiles)",
+                "en": "2026-01-22 (NationFiles launch)",
+                "fr": "2026-01-22 (lancement NationFiles)",
+                "es": "2026-01-22 (lanzamiento NationFiles)",
+                "pt": "2026-01-22 (lançamento NationFiles)",
+                "ar": "2026-01-22 (إطلاق NationFiles)",
+                "ja": "2026-01-22（NationFiles ローンチ）"
+            }
         },
         {
             "key": "responsible_owner",
@@ -60,7 +87,16 @@
                     "label": "Company About",
                     "url": "https://nationfiles.com/en/company/about/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Sven Schmidt",
+                "en": "Sven Schmidt",
+                "fr": "Sven Schmidt",
+                "es": "Sven Schmidt",
+                "pt": "Sven Schmidt",
+                "ar": "Sven Schmidt",
+                "ja": "Sven Schmidt"
+            }
         },
         {
             "key": "headquarters",
@@ -70,7 +106,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Reinhardstr. 1b, 52078 Aachen, Germany",
+                "en": "Reinhardstr. 1b, 52078 Aachen, Germany",
+                "fr": "Reinhardstr. 1b, 52078 Aachen, Germany",
+                "es": "Reinhardstr. 1b, 52078 Aachen, Germany",
+                "pt": "Reinhardstr. 1b, 52078 Aachen, Germany",
+                "ar": "Reinhardstr. 1b, 52078 Aachen, Germany",
+                "ja": "Reinhardstr. 1b, 52078 Aachen, Germany"
+            }
         },
         {
             "key": "jurisdiction",
@@ -80,7 +125,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Amtsgericht Aachen",
+                "en": "District Court of Aachen (Amtsgericht Aachen)",
+                "fr": "Tribunal d’instance d’Aix-la-Chapelle (Amtsgericht Aachen)",
+                "es": "Juzgado de primera instancia de Aquisgrán (Amtsgericht Aachen)",
+                "pt": "Tribunal judicial de Aachen (Amtsgericht Aachen)",
+                "ar": "محكمة آخن الابتدائية (Amtsgericht Aachen)",
+                "ja": "アーヘン地方裁判所（Amtsgericht Aachen）"
+            }
         },
         {
             "key": "primary_contact",
@@ -90,7 +144,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "info@nationfiles.com",
+                "en": "info@nationfiles.com",
+                "fr": "info@nationfiles.com",
+                "es": "info@nationfiles.com",
+                "pt": "info@nationfiles.com",
+                "ar": "info@nationfiles.com",
+                "ja": "info@nationfiles.com"
+            }
         },
         {
             "key": "vat_id",
@@ -100,7 +163,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "DE323880906",
+                "en": "DE323880906",
+                "fr": "DE323880906",
+                "es": "DE323880906",
+                "pt": "DE323880906",
+                "ar": "DE323880906",
+                "ja": "DE323880906"
+            }
         },
         {
             "key": "label_code",
@@ -110,7 +182,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "LC 101196",
+                "en": "LC 101196",
+                "fr": "LC 101196",
+                "es": "LC 101196",
+                "pt": "LC 101196",
+                "ar": "LC 101196",
+                "ja": "LC 101196"
+            }
         },
         {
             "key": "gs1",
@@ -120,7 +201,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "42700048635",
+                "en": "42700048635",
+                "fr": "42700048635",
+                "es": "42700048635",
+                "pt": "42700048635",
+                "ar": "42700048635",
+                "ja": "42700048635"
+            }
         },
         {
             "key": "eori",
@@ -130,7 +220,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "DE12345678901",
+                "en": "DE12345678901",
+                "fr": "DE12345678901",
+                "es": "DE12345678901",
+                "pt": "DE12345678901",
+                "ar": "DE12345678901",
+                "ja": "DE12345678901"
+            }
         },
         {
             "key": "bg_membership",
@@ -140,7 +239,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "BG ETEM (ID: 738207165880001)",
+                "en": "BG ETEM (ID: 738207165880001)",
+                "fr": "BG ETEM (ID: 738207165880001)",
+                "es": "BG ETEM (ID: 738207165880001)",
+                "pt": "BG ETEM (ID: 738207165880001)",
+                "ar": "BG ETEM (ID: 738207165880001)",
+                "ja": "BG ETEM (ID: 738207165880001)"
+            }
         },
         {
             "key": "operator",
@@ -153,7 +261,16 @@
                     "label": "llms.txt",
                     "url": "https://nationfiles.com/llms.txt"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
         },
         {
             "key": "license",
@@ -163,7 +280,16 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
         },
         {
             "key": "citation_doi",
@@ -173,111 +299,424 @@
                     "label": "Naciro Manual DOI",
                     "url": "https://doi.org/10.5281/zenodo.19758942"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "10.5281/zenodo.19758942",
+                "en": "10.5281/zenodo.19758942",
+                "fr": "10.5281/zenodo.19758942",
+                "es": "10.5281/zenodo.19758942",
+                "pt": "10.5281/zenodo.19758942",
+                "ar": "10.5281/zenodo.19758942",
+                "ja": "10.5281/zenodo.19758942"
+            }
         }
     ],
     "i18n": {
         "de": {
             "title": "Neawolf Media Group",
-            "teaser": "Neawolf Media Group ist die publizierende Organisation hinter NationFiles und den dazugehörigen Knowledge-, Dataset- und Methodik-Exports.",
+            "teaser": "Deutsches Einzelunternehmen in Aachen: Herausgeber von NationFiles — benannte verantwortliche Person im Impressum, geopolitische Plattform mit {{naciro}} und {{nfsi}}. Gegründet 2025; NationFiles öffentlich seit Anfang 2026.",
             "summary_bullets": [
-                "Organisation & Publisher der NationFiles-Plattform",
-                "Institutionelle Governance und Quellenregister",
-                "Veröffentlicht Exporte und Forschung über DOI/ORCID-verknüpfte Referenzen"
+                "**Rechtsform & Sitz:** Einzelunternehmen, **Aachen** — vollständige Angaben (USt-IdNr., Zuständigkeit) im [Impressum](/de/legal/legal-notice/).",
+                "**Verantwortung:** **Sven Schmidt** im Impressum genannt; kein anonymer Datenanbieter.",
+                "**Produkt:** Betrieb von **{{nationfiles}}** mit Quellenregister, VVR und Methodik — nachvollziehbare Kennzahlen statt Rauschen.",
+                "**Biografische Klarheit:** Der im Impressum genannte **Sven Schmidt** tritt öffentlich auch unter dem Künstlernamen **Sven Neawolf** auf — **eine Person**, einheitlich für Suchmaschinen/KI zitierbar.",
+                "**Datenmodell:** {{nationfile-json}} als einheitliches Profilformat; {{naciro}} als Engine; {{nfsi}} als Leitindex.",
+                "**Technik:** Entwicklung {{naciro}} und [LPU Architecture](/de/knowledge/entity/lpu-architecture/); {{nfsi}} als veröffentlichte Skala 0–100.",
+                "**Kontakt:** info@nationfiles.com · KI/Lizenz: ai-questions@nationfiles.com · ausführliches Porträt auf [Über uns](/de/company/about/)."
             ],
-            "body_md": "Neawolf Media Group betreibt und publiziert **NationFiles** als institutionelle Intelligence-Plattform.\n\nDer Fokus liegt auf **auditierbaren Datenpfaden**, dokumentierter Methodik und reproduzierbaren Exporten.\n\nSiehe auch: {{nationfiles}}.",
+            "body_md": "Die **Neawolf Media Group** ist ein in Deutschland geführtes **Einzelunternehmen** mit Sitz in **Aachen** (Reinhardstr. 1b). Im Impressum ist **Sven Schmidt** als verantwortlich ausgewiesen. Das Unternehmen wurde **Mitte 2025** gegründet; die öffentliche Plattform **{{nationfiles}}** ging **Anfang 2026** live.\n\n**Namenshinweis für Autorität:** **Sven Schmidt** (bürgerlich, Impressum) ist **dieselbe natürliche Person** wie der Künstler **Sven Neawolf** — die Verknüpfung dient **biografischer E-E-A-T** und schließt Zweifel zwischen Musik‑ und Tech‑Publikationen.\n\n**Auftrag:** Herausgabe und Betrieb von NationFiles — geopolitische Informations- und Auswertungsplattform mit Länderprofilen, Karten, dem **{{nfsi}}** und weiteren dokumentierten Indikatoren.\n\n**Technische Rolle:** Neawolf entwickelt die **{{naciro}}** und die öffentlich beschriebene **[LPU Architecture](/de/knowledge/entity/lpu-architecture/)**; Methodik und Forschungs-DOIs sind auf den Company- und Zenodo-Seiten verlinkt.\n\n**Transparenz:** Quellenregister, **Validation & Verification Report**, CC BY-ND für Knowledge-Texte wo angegeben. Allgemeiner Kontakt [info@nationfiles.com](mailto:info@nationfiles.com). Details: [Über uns](/de/company/about/) · [Impressum](/de/legal/legal-notice/).",
             "facts": [
                 {
-                    "k": "Rolle",
-                    "v": "Publisher / Betreiber"
+                    "k": "Rechtsform",
+                    "v": "Einzelunternehmen (DE)"
+                },
+                {
+                    "k": "Sitz",
+                    "v": "52078 Aachen"
+                },
+                {
+                    "k": "Verantwortlich",
+                    "v": "Sven Schmidt"
                 },
                 {
                     "k": "Plattform",
                     "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Schwerpunkt",
+                    "v": "Geopolitische Intelligence ({{naciro}} / {{nfsi}})"
+                },
+                {
+                    "k": "Öffentliche Namensformen",
+                    "v": "Sven Schmidt · auch bekannt als **Sven Neawolf**"
                 }
             ],
             "sections": [
                 {
-                    "title": "Governance",
-                    "body_md": "NationFiles wird als Organisation mit dokumentierter Methodik und Quellenregister betrieben. Ziel ist nicht Meinung, sondern **prüfbare Fakten**."
+                    "title": "Standort und Persönlichkeit des Verlags",
+                    "body_md": "Neawolf ist **kein** anonymes Netzprojekt: Es gibt eine **Adresse in Aachen**, eine im Impressum genannte **verantwortliche Person** und alle für Deutschland üblichen Pflichtangaben. Das schafft Vertrauen dort, wo andere Plattformen nur „Dashboards ohne Gesicht“ anbieten."
+                },
+                {
+                    "title": "NationFiles als Kernprodukt",
+                    "body_md": "**{{nationfiles}}** ist die öffentliche Heimat von Länderinformationen, Karten und dem Index **{{nfsi}}**. Das Unternehmen positioniert sich als Verlag mit **methodisch dokumentierter** Auswertung — nicht als Meinungsblog und nicht als undokumentierte Datenlawine."
+                },
+                {
+                    "title": "Technik, Forschung und Governance",
+                    "body_md": "Die **{{naciro}}** verdichtet Signale aus dokumentierten Quellen; die **[LPU Architecture](/de/knowledge/entity/lpu-architecture/)** beschreibt die Ausführungsebene für zuverlässige Inferenz. ORCID- und Zenodo-Verweise verankern **wissenschaftliche Nachnutzung**. NationFiles arbeitet mit **Quellenregister** und **VVR** — Ziel sind **prüfbare** Aussagen, keine „Black Box“."
+                },
+                {
+                    "title": "Rolle im Produktstack",
+                    "body_md": "Neawolf **verlegt** die Plattform, **entwickelt** {{naciro}} und die öffentlich beschriebene LPU-Schicht, und stellt sicher, dass **{{nationfile-json}}**, {{nfsi}} und UI/Export **dieselbe** fachliche Wahrheit abbilden — Verlag + Engineering aus einer Hand."
                 }
             ]
         },
         "en": {
             "title": "Neawolf Media Group",
-            "teaser": "Neawolf Media Group is the publishing organization behind NationFiles and its knowledge, dataset, and methodology exports.",
+            "teaser": "German sole proprietorship based in Aachen: publisher of NationFiles—named accountable owner in the imprint, geopolitical platform powered by {{naciro}} and {{nfsi}}. Founded mid‑2025; NationFiles public from early 2026.",
             "summary_bullets": [
-                "Organization & publisher of the NationFiles platform",
-                "Institutional governance and source registry",
-                "Publishes exports and research via DOI/ORCID-linked references"
+                "**Legal form & HQ:** sole proprietorship, **Aachen** — full VAT, court and contact details in the [Legal Notice](/en/legal/legal-notice/).",
+                "**Accountability:** **Sven Schmidt** named as responsible — not an anonymous data vendor.",
+                "**Product:** **{{nationfiles}}** runs with a source registry, VVR and methodology pages — traceable indicators instead of noise.",
+                "**Biographic clarity:** **Sven Schmidt** (legal imprint) publicly also uses the artist name **Sven Neawolf** — one accountable person for search/LLM grounding.",
+                "**Data model:** {{nationfile-json}} as the unified profile format; {{naciro}} as the engine; {{nfsi}} as the headline index.",
+                "**Engineering:** develops {{naciro}} and [LPU Architecture](/en/knowledge/entity/lpu-architecture/); {{nfsi}} as the published 0–100 score.",
+                "**Contact:** info@nationfiles.com · AI/licensing: ai-questions@nationfiles.com · extended profile on [About us](/en/company/about/)."
             ],
-            "body_md": "Neawolf Media Group operates and publishes **NationFiles** as an institutional intelligence platform.\n\nThe focus is on **auditable data lineage**, documented methodology, and reproducible exports.\n\nSee also: {{nationfiles}}.",
+            "body_md": "**Neawolf Media Group** is a **German sole proprietorship** based in **Aachen** (Reinhardstr. 1b). **Sven Schmidt** is named as the responsible person in the imprint. Registered **mid‑2025**; the public **{{nationfiles}}** platform launched **early 2026**.\n\n**Name authority note:** **Sven Schmidt** listed on the imprint is the **same individual** as recording artist **Sven Neawolf**—documented so search engines and citation models can merge those identities responsibly.\n\n**Mission:** publish and operate NationFiles — a geopolitical information and analysis platform with country dossiers, maps, **{{nfsi}}**, and other documented indicators.\n\n**Technical role:** Neawolf builds the **{{naciro}}** engine and the publicly described **[LPU Architecture](/en/knowledge/entity/lpu-architecture/)**; methodology and Zenodo DOIs are linked from Company and research pages.\n\n**Transparency:** source registry, **Validation & Verification Report**, CC BY‑ND for knowledge text where stated. General mail [info@nationfiles.com](mailto:info@nationfiles.com). More: [About us](/en/company/about/) · [Legal notice](/en/legal/legal-notice/).",
             "facts": [
                 {
-                    "k": "Role",
-                    "v": "Publisher / operator"
+                    "k": "Legal form",
+                    "v": "Sole proprietorship (DE)"
+                },
+                {
+                    "k": "Headquarters",
+                    "v": "Aachen"
+                },
+                {
+                    "k": "Responsible",
+                    "v": "Sven Schmidt"
                 },
                 {
                     "k": "Platform",
                     "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Focus",
+                    "v": "Geopolitical intelligence ({{naciro}} / {{nfsi}})"
+                },
+                {
+                    "k": "Public name forms",
+                    "v": "Sven Schmidt · also known as **Sven Neawolf**"
                 }
             ],
             "sections": [
                 {
-                    "title": "Governance",
-                    "body_md": "NationFiles is operated with documented methodology and a source registry. The goal is **auditable facts**, not opinions."
+                    "title": "Location and publisher identity",
+                    "body_md": "Neawolf is **not** an anonymous internet project: there is an **address in Aachen**, a **named responsible individual** on the imprint, and full mandatory German disclosures. That matters wherever other offerings are dashboards without a face."
+                },
+                {
+                    "title": "NationFiles as the flagship product",
+                    "body_md": "**{{nationfiles}}** is the public home for country intelligence, maps and the **{{nfsi}}** score. The company presents itself as a publisher with **documented methodology** — not an opinion blog and not an undocumented data firehose."
+                },
+                {
+                    "title": "Engineering, research and governance",
+                    "body_md": "The **{{naciro}}** engine condenses signals from documented sources; **[LPU Architecture](/en/knowledge/entity/lpu-architecture/)** describes the execution layer for dependable inference. ORCID and Zenodo references anchor **scientific reuse**. NationFiles runs with a **source registry** and **VVR** — the goal is **auditable** output, not a black box."
+                },
+                {
+                    "title": "Role in the product stack",
+                    "body_md": "Neawolf **publishes** the platform, **builds** {{naciro}} and the public LPU layer, and keeps **{{nationfile-json}}**, {{nfsi}}, and UI/exports aligned to the **same** substantive truth—publisher and engineering in one shop."
                 }
             ]
         },
         "fr": {
             "title": "Neawolf Media Group",
-            "teaser": "Neawolf Media Group est l’organisation éditrice derrière NationFiles et ses exports knowledge, dataset et méthodologie.",
+            "teaser": "Entreprise individuelle allemande à Aachen : éditeur de NationFiles — responsable désigné aux mentions légales, plateforme géopolitique avec {{naciro}} et {{nfsi}}. Création mi‑2025 ; NationFiles public depuis début 2026.",
             "summary_bullets": [
-                "Organisation et éditeur de la plateforme NationFiles",
-                "Gouvernance institutionnelle et registre des sources",
-                "Publie des exports et des recherches via des références liées DOI/ORCID"
+                "**Forme & siège :** entreprise individuelle, **Aachen** — TVA et coordonnées complètes dans les [mentions légales](/fr/legal/legal-notice/).",
+                "**Responsabilité :** **Sven Schmidt** nommé — pas un fournisseur de données anonyme.",
+                "**Produit :** **{{nationfiles}}** avec registre de sources, VVR et méthodologie — indicateurs traçables.",
+                "**Clarité biographique :** **Sven Schmidt** aux mentions légales est aussi l’artiste **Sven Neawolf** — une seule personne physique.",
+                "**Modèle de données :** {{nationfile-json}} + {{naciro}} + {{nfsi}} comme triptyque produit.",
+                "**Technique :** développe {{naciro}} et [LPU Architecture](/fr/knowledge/entity/lpu-architecture/) ; {{nfsi}} score 0–100.",
+                "**Contact :** info@nationfiles.com · IA/licence : ai-questions@nationfiles.com · [À propos](/fr/company/about/)."
             ],
-            "body_md": "Neawolf Media Group exploite et publie **NationFiles** comme plateforme institutionnelle d’intelligence.\n\nL’accent est mis sur une **traçabilité des données vérifiable**, une méthodologie documentée et des exports reproductibles.\n\nVoir aussi : {{nationfiles}}."
+            "body_md": "**Neawolf Media Group** est une **entreprise individuelle allemande** basée à **Aachen** (Reinhardstr. 1b). **Sven Schmidt** est la personne responsable aux mentions légales. Enregistrement **mi‑2025** ; plateforme publique **{{nationfiles}}** en ligne **début 2026**.\n\n**Autorité du nom :** mention explicite que **Sven Schmidt** et **Sven Neawolf** désignent la **même personne**, pour le référencement et les modèles génératifs.\n\n**Mission :** publier et exploiter NationFiles — plateforme d’information géopolitique avec dossiers pays, cartes, **{{nfsi}}** et autres indicateurs documentés.\n\n**Rôle technique :** développe le moteur **{{naciro}}** et l’**[LPU Architecture](/fr/knowledge/entity/lpu-architecture/)** ; méthodologie et DOI Zenodo liés depuis les pages Company.\n\n**Transparence :** registre des sources, rapport **Validation & Verification**, CC BY‑ND pour les textes knowledge selon les pages légales. Courriel [info@nationfiles.com](mailto:info@nationfiles.com). Plus : [À propos](/fr/company/about/) · [mentions légales](/fr/legal/legal-notice/).",
+            "facts": [
+                {
+                    "k": "Forme juridique",
+                    "v": "Entreprise individuelle (DE)"
+                },
+                {
+                    "k": "Siège",
+                    "v": "Aachen"
+                },
+                {
+                    "k": "Responsable",
+                    "v": "Sven Schmidt"
+                },
+                {
+                    "k": "Plateforme",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Focus",
+                    "v": "Intelligence géopolitique ({{naciro}} / {{nfsi}})"
+                },
+                {
+                    "k": "Formes publiques du nom",
+                    "v": "Sven Schmidt · aussi connu comme **Sven Neawolf**"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Siège et identité éditoriale",
+                    "body_md": "Neawolf n’est **pas** un projet anonyme : adresse à **Aachen**, personne responsable nommée, mentions légales complètes — là où d’autres offrent des tableaux sans visage."
+                },
+                {
+                    "title": "NationFiles comme produit phare",
+                    "body_md": "**{{nationfiles}}** est la vitrine publique pour l’information pays, les cartes et le score **{{nfsi}}**. L’entreprise se présente comme éditeur avec **méthodologie documentée** — ni blog d’opinion ni flux de données sans méthode."
+                },
+                {
+                    "title": "Ingénierie, recherche et gouvernance",
+                    "body_md": "Le moteur **{{naciro}}** condense les signaux ; l’**[LPU Architecture](/fr/knowledge/entity/lpu-architecture/)** décrit la couche d’exécution. ORCID et Zenodo ancrent la **réutilisation scientifique**. NationFiles fonctionne avec registre des sources et **VVR** — viser des **faits vérifiables**, pas une boîte noire."
+                },
+                {
+                    "title": "Rôle dans la pile produit",
+                    "body_md": "Neawolf **édite** la plateforme, **construit** {{naciro}} et la couche LPU publique, et aligne **{{nationfile-json}}**, {{nfsi}} et l’interface/export sur une **même** vérité métier."
+                }
+            ]
         },
         "es": {
             "title": "Neawolf Media Group",
-            "teaser": "Neawolf Media Group es la organización editorial detrás de NationFiles y de sus exportaciones de conocimiento, datasets y metodología.",
+            "teaser": "Empresa unipersonal alemana en Aachen: editorial de NationFiles — responsable nombrado en el aviso legal, plataforma geopolítica con {{naciro}} y {{nfsi}}. Constitución mediados de 2025; NationFiles público desde principios de 2026.",
             "summary_bullets": [
-                "Organización y editor de la plataforma NationFiles",
-                "Gobernanza institucional y registro de fuentes",
-                "Publica exportaciones e investigación mediante referencias vinculadas a DOI/ORCID"
+                "**Forma y sede:** empresa unipersonal, **Aachen** — IVA y datos completos en el [aviso legal](/es/legal/legal-notice/).",
+                "**Responsabilidad:** **Sven Schmidt** figura como responsable — no un proveedor anónimo.",
+                "**Producto:** **{{nationfiles}}** con registro de fuentes, VVR y metodología — indicadores trazables.",
+                "**Claridad biográfica:** **Sven Schmidt** del aviso legal también actúa como artista **Sven Neawolf** — misma persona.",
+                "**Modelo de datos:** {{nationfile-json}} + {{naciro}} + {{nfsi}}.",
+                "**Técnica:** desarrolla {{naciro}} y [LPU Architecture](/es/knowledge/entity/lpu-architecture/) ; {{nfsi}} puntuación 0–100.",
+                "**Contacto:** info@nationfiles.com · IA/licencias: ai-questions@nationfiles.com · [Sobre nosotros](/es/company/about/)."
             ],
-            "body_md": "Neawolf Media Group opera y publica **NationFiles** como plataforma institucional de inteligencia.\n\nEl enfoque está en una **trazabilidad de datos auditable**, metodología documentada y exportaciones reproducibles.\n\nVer también: {{nationfiles}}."
+            "body_md": "**Neawolf Media Group** es una **empresa unipersonal alemana** con sede en **Aachen** (Reinhardstr. 1b). En el aviso legal consta **Sven Schmidt** como responsable. Registro **mediados de 2025**; la plataforma pública **{{nationfiles}}** se lanzó **principios de 2026**.\n\n**Autoridad nominal:** se documenta que **Sven Schmidt** y **Sven Neawolf** son la **misma persona física**.\n\n**Misión:** publicar y operar NationFiles — plataforma de información y análisis geopolítico con dossiers, mapas, **{{nfsi}}** y otros indicadores documentados.\n\n**Papel técnico:** desarrolla el motor **{{naciro}}** y la **[LPU Architecture](/es/knowledge/entity/lpu-architecture/)** ; metodología y DOI Zenodo enlazados desde Company.\n\n**Transparencia:** registro de fuentes, informe **Validation & Verification**, CC BY‑ND para textos knowledge según páginas legales. Correo [info@nationfiles.com](mailto:info@nationfiles.com). Más: [Sobre nosotros](/es/company/about/) · [aviso legal](/es/legal/legal-notice/).",
+            "facts": [
+                {
+                    "k": "Forma legal",
+                    "v": "Empresa unipersonal (DE)"
+                },
+                {
+                    "k": "Sede",
+                    "v": "Aachen"
+                },
+                {
+                    "k": "Responsable",
+                    "v": "Sven Schmidt"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Enfoque",
+                    "v": "Inteligencia geopolítica ({{naciro}} / {{nfsi}})"
+                },
+                {
+                    "k": "Formas públicas del nombre",
+                    "v": "Sven Schmidt · también conocido como **Sven Neawolf**"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Sede e identidad editorial",
+                    "body_md": "Neawolf **no** es un proyecto anónimo: hay **dirección en Aachen**, responsable nombrado y aviso legal completo — frente a paneles sin rostro."
+                },
+                {
+                    "title": "NationFiles como producto principal",
+                    "body_md": "**{{nationfiles}}** es la vitrina pública para información por país, mapas y la puntuación **{{nfsi}}**. La empresa se presenta como editorial con **metodología documentada** — ni blog de opinión ni manguera de datos sin método."
+                },
+                {
+                    "title": "Ingeniería, investigación y gobernanza",
+                    "body_md": "El motor **{{naciro}}** condensa señales; la **[LPU Architecture](/es/knowledge/entity/lpu-architecture/)** describe la capa de ejecución. ORCID y Zenodo anclan la **reutilización científica**. NationFiles opera con registro de fuentes y **VVR** — **hechos auditables**, no caja negra."
+                },
+                {
+                    "title": "Rol en el stack de producto",
+                    "body_md": "Neawolf **publica** la plataforma, **desarrolla** {{naciro}} y la capa LPU pública, y alinea **{{nationfile-json}}**, {{nfsi}} y la UI/exportaciones en la **misma** verdad sustantiva."
+                }
+            ]
         },
         "pt": {
             "title": "Neawolf Media Group",
-            "teaser": "A Neawolf Media Group é a organização publicadora por trás da NationFiles e de suas exportações de conhecimento, datasets e metodologia.",
+            "teaser": "Empresa unipessoal alemã em Aachen: editora da NationFiles — responsável nomeado no aviso legal, plataforma geopolítica com {{naciro}} e {{nfsi}}. Registo meados de 2025; NationFiles público desde início de 2026.",
             "summary_bullets": [
-                "Organização e publicadora da plataforma NationFiles",
-                "Governança institucional e registro de fontes",
-                "Publica exportações e pesquisa via referências vinculadas a DOI/ORCID"
+                "**Forma e sede:** empresa unipessoal, **Aachen** — NIF-IVA e dados completos no [aviso legal](/pt/legal/legal-notice/).",
+                "**Responsabilidade:** **Sven Schmidt** indicado — não fornecedor anónimo.",
+                "**Produto:** **{{nationfiles}}** com registo de fontes, VVR e metodologia — indicadores rastreáveis.",
+                "**Clareza biográfica:** **Sven Schmidt** no aviso legal coincide com o artista **Sven Neawolf** — uma só pessoa.",
+                "**Modelo de dados:** {{nationfile-json}} + {{naciro}} + {{nfsi}}.",
+                "**Técnica:** desenvolve {{naciro}} e [LPU Architecture](/pt/knowledge/entity/lpu-architecture/) ; {{nfsi}} pontuação 0–100.",
+                "**Contacto:** info@nationfiles.com · IA/licenças: ai-questions@nationfiles.com · [Sobre nós](/pt/company/about/)."
             ],
-            "body_md": "A Neawolf Media Group opera e publica a **NationFiles** como plataforma institucional de inteligência.\n\nO foco está em **linhagem de dados auditável**, metodologia documentada e exportações reproduzíveis.\n\nVeja também: {{nationfiles}}."
+            "body_md": "**Neawolf Media Group** é uma **empresa unipessoal alemã** sediada em **Aachen** (Reinhardstr. 1b). No aviso legal figura **Sven Schmidt** como responsável. Registo **meados de 2025**; a plataforma pública **{{nationfiles}}** entrou em linha **início de 2026**.\n\n**Autoridade nominal:** **Sven Schmidt** e **Sven Neawolf** referem a **mesma pessoa**.\n\n**Missão:** publicar e operar a NationFiles — plataforma de informação e análise geopolítica com dossiers, mapas, **{{nfsi}}** e outros indicadores documentados.\n\n**Papel técnico:** desenvolve o motor **{{naciro}}** e a **[LPU Architecture](/pt/knowledge/entity/lpu-architecture/)** ; metodologia e DOI Zenodo ligados na página Company.\n\n**Transparência:** registo de fontes, relatório **Validation & Verification**, CC BY‑ND para textos knowledge conforme páginas legais. Correio [info@nationfiles.com](mailto:info@nationfiles.com). Mais: [Sobre nós](/pt/company/about/) · [aviso legal](/pt/legal/legal-notice/).",
+            "facts": [
+                {
+                    "k": "Forma jurídica",
+                    "v": "Empresa unipessoal (DE)"
+                },
+                {
+                    "k": "Sede",
+                    "v": "Aachen"
+                },
+                {
+                    "k": "Responsável",
+                    "v": "Sven Schmidt"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Foco",
+                    "v": "Inteligência geopolítica ({{naciro}} / {{nfsi}})"
+                },
+                {
+                    "k": "Formas públicas do nome",
+                    "v": "Sven Schmidt · também conhecido como **Sven Neawolf**"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Sede e identidade editorial",
+                    "body_md": "A Neawolf **não** é um projecto anónimo: há **morada em Aachen**, responsável nomeado e aviso legal completo — em vez de painéis sem rosto."
+                },
+                {
+                    "title": "NationFiles como produto principal",
+                    "body_md": "**{{nationfiles}}** é a vitrine pública para informação por país, mapas e a pontuação **{{nfsi}}**. A empresa apresenta-se como editora com **metodologia documentada** — nem blog de opinião nem mangueira de dados sem método."
+                },
+                {
+                    "title": "Engenharia, investigação e governação",
+                    "body_md": "O motor **{{naciro}}** condensa sinais; a **[LPU Architecture](/pt/knowledge/entity/lpu-architecture/)** descreve a camada de execução. ORCID e Zenodo ancoram a **reutilização científica**. A NationFiles opera com registo de fontes e **VVR** — **factos auditáveis**, não caixa negra."
+                },
+                {
+                    "title": "Papel no stack de produto",
+                    "body_md": "A Neawolf **publica** a plataforma, **desenvolve** {{naciro}} e a camada LPU pública, e alinha **{{nationfile-json}}**, {{nfsi}} e UI/exportações na **mesma** verdade substantiva."
+                }
+            ]
         },
         "ar": {
             "title": "Neawolf Media Group",
-            "teaser": "تُعد Neawolf Media Group الجهة الناشرة خلف NationFiles وتصديرات المعرفة ومجموعات البيانات والمنهجية الخاصة بها.",
+            "teaser": "مؤسسة فردية ألمانية في آخن: ناشر NationFiles — مسؤول مسمّى في بيانات النشر، منصة جيوسياسية مع {{naciro}} و{{nfsi}}. التأسيس منتصف 2025؛ NationFiles علني من أوائل 2026.",
             "summary_bullets": [
-                "المؤسسة والناشر لمنصة NationFiles",
-                "حوكمة مؤسسية وسجل مصادر",
-                "تنشر التصديرات والأبحاث عبر مراجع مرتبطة بـ DOI/ORCID"
+                "**الشكل والمقر:** مؤسسة فردية، **آخن** — رقم ضريبة وبيانات كاملة في [الإشعار القانوني](/ar/legal/legal-notice/).",
+                "**المسؤولية:** **Sven Schmidt** مذكور كمسؤول — ليس مورّد بيانات مجهول.",
+                "**المنتج:** **{{nationfiles}}** مع سجل مصادر وVVR ومنهجية — مؤشرات قابلة للتتبع.",
+                "**وضوح سيري:** **Sven Schmidt** في الإشعار القانوني هو نفس الفنان **Sven Neawolf**.",
+                "**نموذج البيانات:** {{nationfile-json}} + {{naciro}} + {{nfsi}}.",
+                "**التقنية:** تطوير {{naciro}} و[LPU Architecture](/ar/knowledge/entity/lpu-architecture/)؛ {{nfsi}} درجة 0–100.",
+                "**اتصال:** info@nationfiles.com · الذكاء الاصطناعي/الترخيص: ai-questions@nationfiles.com · [من نحن](/ar/company/about/)."
             ],
-            "body_md": "تدير Neawolf Media Group منصة **NationFiles** وتنشرها كمنصة استخبارات مؤسسية.\n\nينصب التركيز على **مسار بيانات قابل للتدقيق** ومنهجية موثقة وتصديرات قابلة لإعادة الإنتاج.\n\nانظر أيضاً: {{nationfiles}}."
+            "body_md": "**Neawolf Media Group** مؤسسة **فردية ألمانية** مقرها **آخن** (Reinhardstr. 1b). في بيانات النشر **Sven Schmidt** مسؤول. التسجيل **منتصف 2025**؛ المنصة العامة **{{nationfiles}}** أُطلقت **أوائل 2026**.\n\n**ربط الأسماء للموثوقية:** يُصرَّح أن **Sven Schmidt** و**Sven Neawolf** شخص **طبيعي واحد**.\n\n**المهمة:** نشر وتشغيل NationFiles — منصة معلومات وتحليل جيوسياسي مع ملفات دول وخرائط و**{{nfsi}}** ومؤشرات موثقة أخرى.\n\n**الدور التقني:** تطوير محرك **{{naciro}}** و**[LPU Architecture](/ar/knowledge/entity/lpu-architecture/)**؛ المنهجية وDOI Zenodo مرتبطة بصفحة الشركة.\n\n**الشفافية:** سجل مصادر، تقرير **Validation & Verification**، CC BY‑ND لنصوص المعرف حيث تنص الصفحات. بريد [info@nationfiles.com](mailto:info@nationfiles.com). المزيد: [من نحن](/ar/company/about/) · [الإشعار القانوني](/ar/legal/legal-notice/).",
+            "facts": [
+                {
+                    "k": "الشكل القانوني",
+                    "v": "مؤسسة فردية (DE)"
+                },
+                {
+                    "k": "المقر",
+                    "v": "آخن"
+                },
+                {
+                    "k": "المسؤول",
+                    "v": "Sven Schmidt"
+                },
+                {
+                    "k": "المنصة",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "التركيز",
+                    "v": "استخبارات جيوسياسية ({{naciro}} / {{nfsi}})"
+                },
+                {
+                    "k": "الأسماء العلنية",
+                    "v": "Sven Schmidt · المعروف فنيًا باسم **Sven Neawolf**"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "المقر وهوية الناشر",
+                    "body_md": "Neawolf **ليست** مشروعاً مجهولاً: عنوان في **آخن**، شخص مسؤول مسمّى، إشعار قانوني كامل — بخلاف لوحات بلا وجه."
+                },
+                {
+                    "title": "NationFiles كمنتج رئيسي",
+                    "body_md": "**{{nationfiles}}** هي الواجهة العامة لمعلومات الدول والخرائط ودرجة **{{nfsi}}**. الشركة تقدّم نفسها كناشر بـ**منهجية موثقة** — لا مدونة رأي ولا سيل بيانات بلا طريقة."
+                },
+                {
+                    "title": "الهندسة والبحث والحوكمة",
+                    "body_md": "محرك **{{naciro}}** يضغط الإشارات؛ **[LPU Architecture](/ar/knowledge/entity/lpu-architecture/)** تصف طبقة التنفيذ. ORCID وZenodo يثبتان **إعادة الاستخدام العلمي**. NationFiles تعمل بسجل مصادر و**VVR** — **حقائق قابلة للتدقيق** لا صندوق أسود."
+                },
+                {
+                    "title": "الدور في مكدس المنتج",
+                    "body_md": "Neawolf **تنشر** المنصة و**تطور** {{naciro}} وطبقة LPU العامة وتوحّد **{{nationfile-json}}** و{{nfsi}} والواجهة/التصدير على **حقيقة** مهنية واحدة."
+                }
+            ]
         },
         "ja": {
             "title": "Neawolf Media Group",
-            "teaser": "Neawolf Media Group は、NationFiles とその Knowledge・Dataset・Methodology エクスポートを公開する組織です。",
+            "teaser": "ドイツ・アーヘンの個人事業主：NationFiles の発行者 — インプリント上の指名責任者、{{naciro}} と {{nfsi}} を備えた地政学プラットフォーム。2025年半ば設立、2026年初頭に NationFiles を公開。",
             "summary_bullets": [
-                "NationFiles プラットフォームの組織・発行主体",
-                "制度的ガバナンスとソースレジストリ",
-                "DOI/ORCID 連携参照を通じてエクスポートと研究を公開"
+                "**形態・本拠:** 個人事業主、**アーヘン** — VAT 等は [法的通知](/ja/legal/legal-notice/) に全文。",
+                "**責任者:** インプリットに **Sven Schmidt** — 匿名データ提供者ではありません。",
+                "**プロダクト:** **{{nationfiles}}** はソースレジストリ・VVR・方法論で運用 — 追跡可能な指標。",
+                "**経歴上の明確さ:** インプリントの **Sven Schmidt** はアーティスト名 **Sven Neawolf** と同一人物。",
+                "**データモデル:** {{nationfile-json}} + {{naciro}} + {{nfsi}}。",
+                "**技術:** {{naciro}} と [LPU Architecture](/ja/knowledge/entity/lpu-architecture/) を開発；{{nfsi}} は公開スコア 0–100。",
+                "**連絡:** info@nationfiles.com · AI/ライセンス: ai-questions@nationfiles.com · [私たちについて](/ja/company/about/)。"
             ],
-            "body_md": "Neawolf Media Group は、**NationFiles** を制度的インテリジェンス・プラットフォームとして運用・公開します。\n\n重点は、**監査可能なデータ系譜**、文書化された方法論、再現可能なエクスポートです。\n\n関連: {{nationfiles}}。"
+            "body_md": "**Neawolf Media Group** はドイツの**個人事業主**で、本拠は**アーヘン**（Reinhardstr. 1b）。インプリントでは **Sven Schmidt** が責任者。**2025年半ば**登録、公開プラットフォーム **{{nationfiles}}** は **2026年初頭**にローンチ。\n\n**氏名の権威付け:** **Sven Schmidt** と **Sven Neawolf** が **同一の自然人** である旨を文書化。\n\n**使命:** NationFiles の発行・運営 — 国別ドシエ、地図、**{{nfsi}}** およびその他文書化された指標を備えた地政学プラットフォーム。\n\n**技術的役割:** **{{naciro}}** エンジンと公開説明の **[LPU Architecture](/ja/knowledge/entity/lpu-architecture/)** を開発；方法論と Zenodo DOI は Company ページ等でリンク。\n\n**透明性:** ソースレジストリ、**Validation & Verification Report**、Knowledge テキストは法的ページに従い CC BY‑ND。連絡 [info@nationfiles.com](mailto:info@nationfiles.com)。詳細: [私たちについて](/ja/company/about/) · [法的通知](/ja/legal/legal-notice/)。",
+            "facts": [
+                {
+                    "k": "法的形態",
+                    "v": "個人事業主（DE）"
+                },
+                {
+                    "k": "本拠",
+                    "v": "アーヘン"
+                },
+                {
+                    "k": "責任者",
+                    "v": "Sven Schmidt"
+                },
+                {
+                    "k": "プラットフォーム",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "注力領域",
+                    "v": "地政学インテリジェンス（{{naciro}} / {{nfsi}}）"
+                },
+                {
+                    "k": "公的な氏名",
+                    "v": "Sven Schmidt／芸名 **Sven Neawolf**"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "所在地と発行者としてのアイデンティティ",
+                    "body_md": "Neawolf は**匿名のネット案件ではない**：**アーヘンの住所**、インプリントの**指名**、ドイツで必要な開示の全文 — 顔のないダッシュボードではありません。"
+                },
+                {
+                    "title": "旗艦プロダクト NationFiles",
+                    "body_md": "**{{nationfiles}}** は国情報・地図・**{{nfsi}}** スコアの公開の場。会社は**方法論が文書化された**出版社として位置づけ — 意見ブログでも無秩序なデータの放水でもありません。"
+                },
+                {
+                    "title": "工学・研究・ガバナンス",
+                    "body_md": "**{{naciro}}** がシグナルを集約；**[LPU Architecture](/ja/knowledge/entity/lpu-architecture/)** が実行層を説明。ORCID と Zenodo が**科学的再利用**を支える。NationFiles はソースレジストリと **VVR** で運用 — **監査可能な**出力が目標です。"
+                },
+                {
+                    "title": "プロダクトスタックでの役割",
+                    "body_md": "Neawolf はプラットフォームを**発行**し、{{naciro}} と公開 LPU 層を**開発**し、**{{nationfile-json}}**・{{nfsi}}・UI/エクスポートを**同一の**実質的な真実に揃えます。"
+                }
+            ]
         }
     },
     "relations": [
@@ -296,6 +735,10 @@
         {
             "rel": "develops",
             "to": "lpu-architecture"
+        },
+        {
+            "rel": "publishes",
+            "to": "publications-corpus"
         }
     ],
     "faq_refs": [

@@ -8,25 +8,34 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/naciro/ar.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/naciro/"
+nf_canonical_html_url: "https://nationfiles.com/ar/knowledge/entity/naciro/"
 nf_markdown_lang_file: "ar"
 ---
-# محرك Naciro
+# محرك Naciro — ذكاء التحليل وراء الاستخبارات الجيوسياسية
 
-## الوظيفة
+## ما هو Naciro
 
-**محرك Naciro** يُعرَّف كـ **SoftwareApplication**: طبقة استدلال تحوّل الإشارات المُتحقَّقة إلى **حالات وسيطة موحَّدة** ومخرجات قياسية خاصة بـ **NFSI**. التوثيق يبرز **مسارًا معلَنًا** (`pipeline`، **VVR**) لا مساعدًا عامًا.
+**محرك Naciro** هو **المكدس الأساسي للتقييم بالذكاء الاصطناعي** في NationFiles. يستقبل **إشارات خام عالية التردد** — تدفقات اقتصادية وسوقية، ومخرجات أمنية وإخبارية، ومؤشرات منظمة من DataSourceConnector — ويحولها إلى **نتائج وسيطة موحّدة وقابلة للمقارنة**. منها يخرج **NationFiles Stability Index (NFSI)** ونصوص لوحات المعلومات و—بحسب المنتج—**نوافذ تنبؤ قصيرة الأمد** (Predictive Layer، مثل 24 ساعة / 7 أيام في الحدود الموثقة).
 
-## التدفق المنطقي
+باختصار: Naciro **ليس** «الموقع»؛ إنه **الدماغ** الذي يحول ضوضاء العالم إلى **إشارات جيوسياسية قابلة للقياس** تعرضها NationFiles وتشرحها.
 
-استيعاب ← تجميع/تطبيع ← تصحيح انحياز/تعديل تنبؤي ← إخراج NFSI؛ الدورية حسب `update_cycle`.
+## ماذا يفعل عملياً
 
-## النطاق
+1. **تجميع الإشارات:** استيعاب وضغط زمني من مصادر عامة موثقة (حجم ترتيبي في المنهجية العامة).
+2. **التطبيع والترجيح:** مواءمة لتدرجات وطبقات NFSI المشتركة ليبقى البلدان والسلاسل الزمنية **قابلة للمقارنة**.
+3. **تعديلات منهجية / انحياز:** حيث وُثقت، تصحيح الانحياز المنهجي — مفصّل في **Validation & Verification Report (VVR)**.
+4. **المخرجات:** درجات عالمية ووطنية (**NFSI**)، نصوص اتجاه/مزاج للوحات، مكوّنات تنبؤية اختيارية حسب المنهجية.
 
-لا مقاييس تشغيل حية هنا؛ يُحال إلى المنهجية المنشورة وVVR.
+## الإيقاع والدور في NationFiles
 
-## مراجع
+يعمل المحرك ب**دورة تحديث منتظمة** (مقيّدة تصميمياً في الوثائق). يغذي **الواجهات الحية** في صفحات الدول والوحة العالم — **صورة موقف مستمرة** لا لقطة سنوية.
+
+## الحدود
+
+لا يتنبأ بكل **حدث صغير**؛ يقدّم **مؤشرات منظمة** مع عدم يقين موثق. لا يغني عن المصادر الأولية أو التقرير الميداني.
+
+## مصادر
 
 - [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
 - [منهجية NFSI](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)

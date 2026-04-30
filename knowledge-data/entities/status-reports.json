@@ -1,0 +1,664 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "status-reports",
+    "kind": "entity",
+    "type": "Article",
+    "status": "active",
+    "updated_utc": "2026-05-01T12:00:00Z",
+    "topics": [
+        "status-reports",
+        "situation-analysis",
+        "elections",
+        "crises",
+        "causality",
+        "long-form",
+        "editorial",
+        "nfsi"
+    ],
+    "aliases": [
+        "Lageberichte",
+        "Status reports",
+        "Situation reports",
+        "NationFiles situation analysis"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles Status Reports (Lageberichte): event-anchored deep-dive documents—scoped to specific elections, security crises, or macro shocks—that privilege causal chain reconstruction, latency-aware data hygiene, and longitudinal impact arcs over headline velocity alone.",
+            "depends_on": [
+                "nationfiles",
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Status reports",
+                    "url": "https://nationfiles.com/en/statusreports/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**NationFiles Lageberichte (Status Reports):** **ereignisverankerte** Tiefenanalysen — z. B. **Wahlen**, **Sicherheitskrisen**, **Makroschocks** — mit Fokus auf **Kausalitätsketten**, latenzbewusste **Datenhygiene** und **langfristige Wirkungsbögen** statt nur **Ticker-Tempo**.",
+                "en": "NationFiles Status Reports (Lageberichte): event-anchored deep-dive documents—scoped to specific elections, security crises, or macro shocks—that privilege causal chain reconstruction, latency-aware data hygiene, and longitudinal impact arcs over headline velocity alone.",
+                "fr": "**Rapports de situation** NationFiles : analyses **ancrées événement** — **élections**, **crises** sécurité, **chocs** macro — privilégiant **chaînes causales**, hygiène **sensible latence** et **arcs longs** plutôt que seule vélocité de Une.",
+                "es": "**Informes de situación** NationFiles: análisis **anclados al evento** — **elecciones**, **crisis** de seguridad, **choques** macro — priorizan **cadenas causales**, higiene **consciente de latencia** y **arcos** de impacto **largo** frente al ritmo de titular.",
+                "pt": "**Relatórios de situação** NationFiles: análises **ancoradas em evento** — **eleições**, **crises** de segurança, **choques** macro — privilegiam **cadeias causais**, higiene **consciente da latência** e **arcos** de impacto **longos** em vez de só velocidade de manchete.",
+                "ar": "**تقارير الوضع** من NationFiles: تحليلات **مربوطة بحدث** — **انتخابات**، **أزمات** أمنية، **صدمات** ماكرو — تفضّل **سلاسل سببية** و**نظافة بيانات** واعية بالزمن و**آثار طويلة** لا سرعة العنوان فقط.",
+                "ja": "NationFiles **Status Reports（ラゲベリヒテ）**：**選挙**、**安全上の危機**、**マクロショック**など**事象アンカー**の深層レポート——**因果連鎖**、遅延を踏まえた**データ衛生**、**長期の影響弧**を、見出しの速さ**だけ**より優先する。"
+            }
+        },
+        {
+            "key": "core_metric",
+            "value": "Explanatory depth index: how completely a report maps triggers → transmission channels → second-order governance and market effects, while resisting monocausal storytelling and snapshot bias that flatten countries into slogans.",
+            "depends_on": [
+                "nfsi",
+                "naciro",
+                "country-intelligence-dashboard"
+            ],
+            "sources": [
+                {
+                    "label": "Status reports",
+                    "url": "https://nationfiles.com/en/statusreports/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Erklärungstiefe:** wie vollständig Auslöser → **Übertragungskanäle** → **governance-** und marktseitige **Folgeeffekte** abgebildet werden — bei **Widerstand** gegen **mono-kausale** Storytelling-Flache und **Snapshot-Bias**, der Staaten zu **Slogans** plättet.",
+                "en": "Explanatory depth index: how completely a report maps triggers → transmission channels → second-order governance and market effects, while resisting monocausal storytelling and snapshot bias that flatten countries into slogans.",
+                "fr": "**Profondeur explicative :** déclencheurs → **canaux** → effets **de gouvernance** et de marché **d’ordre 2**, en résistant au récit **mono-causal** et au biais **instantané** qui aplatit les États en **slogans**.",
+                "es": "**Profundidad explicativa:** disparadores → **canales** → efectos **de gobernanza** y de mercado **de segundo orden**, resistiendo relato **mono-causal** y sesgo **instantáneo** que aplana países a **eslogan**.",
+                "pt": "**Profundidade explicativa:** gatilhos → **canais** → efeitos **de governação** e de mercado **de segunda ordem**, resistindo a narrativa **mono-causal** e viés **instantâneo** que achata países a **slogan**.",
+                "ar": "**عمق التفسير:** المحفزات ← **قنوات النقل** ← آثار **الحوكمة** والسوق **من الدرجة الثانية** — مع **مقاومة** سرد **أحادي السبب** وانحياز **لقطة** يُسطّح الدول إلى **شعارات**.",
+                "ja": "**説明の深さ**：トリガー→**伝播チャネル**→**二階**のガバナンス・市場効果をどれだけ**地図化**するか。**単一因果**の物語と、国を**スローガン**に潰す**スナップショット・バイアス**に抗する指標。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Event dossier intake → verified primary and registry-aligned feeds → Naciro-assisted structuring of timelines, scenarios, and inertia-aware NFSI cross-reads → published narrative with synchronized syndication (RSS/Atom/JSON) under declared refresh ethics.",
+            "depends_on": [
+                "naciro",
+                "nfsi",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Pipeline:** Ereignisakte → **verifizierte** Primär- und **registerkonforme** Feeds → **Naciro**-gestützte **Zeitachsen/Szenarien** + **trägheitsbewusste** NFSI-Querlesart → veröffentlichte Narrative mit **RSS/Atom/JSON** unter deklarierter **Refresh-Ethik**.",
+                "en": "Event dossier intake → verified primary and registry-aligned feeds → Naciro-assisted structuring of timelines, scenarios, and inertia-aware NFSI cross-reads → published narrative with synchronized syndication (RSS/Atom/JSON) under declared refresh ethics.",
+                "fr": "**Pipeline :** dossier **événement** → primaires **vérif**/registre → structuration **Naciro** (chronos, scénarios, lecture **NFSI** avec inertie) → publication + **syndication** RSS/Atom/JSON et **éthique** de fraîcheur.",
+                "es": "**Pipeline:** expediente **evento** → primarios **verificados**/registro → estructura **Naciro** (cronos, escenarios, lectura cruzada **NFSI** con inercia) → narrativa + **sindicación** RSS/Atom/JSON.",
+                "pt": "**Pipeline:** dossier **evento** → primários **verificados**/registo → estruturação **Naciro** (cronologias, cenários, leitura cruzada **NFSI** com inércia) → narrativa + **sindicação** RSS/Atom/JSON.",
+                "ar": "**خط المعالجة:** ملف **حدث** → تغذيات **أولية موثقة** ومتوافقة مع السجل → هيكلة بمساعدة **Naciro** (خط زمني، سيناريوهات، قراءة متقاطعة **NFSI** واعية بالقصور) → نشر + **مزامنة** RSS/Atom/JSON.",
+                "ja": "**パイプライン：** イベント**ドシエ**→検証済み**プライマリ**／登録整合フィード→**Naciro** 補助の**タイムライン・シナリオ**＋慣性を踏まえた **NFSI** クロスリード→公開ナラティブ＋**RSS/Atom/JSON** シンジケーション。"
+            }
+        },
+        {
+            "key": "forecast_horizon",
+            "value": "Deliberately medium-to-long arc: reports foreground second- and third-order effects (institutional lag, coalition politics, fiscal transmission, humanitarian spillovers) that break-news formats rarely hold open—not deterministic predictions, but structured conditional outlooks.",
+            "depends_on": [
+                "nfsi",
+                "governance-institutions-index"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "Status reports",
+                    "url": "https://nationfiles.com/en/statusreports/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Mittel-bis-langfristiger Bogen:** Berichte betonen **zweite und dritte Ordnung** (institutionelle **Verzögerung**, Koalitionspolitik, **fiskale Transmission**, humanitäre **Spillovers**), die **Breaking** selten offenhält — **keine** deterministische Prognose, sondern **strukturierte** bedingte Ausblicke.",
+                "en": "Deliberately medium-to-long arc: reports foreground second- and third-order effects (institutional lag, coalition politics, fiscal transmission, humanitarian spillovers) that break-news formats rarely hold open—not deterministic predictions, but structured conditional outlooks.",
+                "fr": "**Arc moyen-long :** effets **2e/3e ordre** (délai institutionnel, politique de coalition, transmission **budgétaire**, **débordements** humanitaires) — pas **prédictions** déterministes, mais **perspectives conditionnelles structurées**.",
+                "es": "**Arco medio-largo:** efectos de **2.º/3.º orden** (rezago institucional, política de coalición, transmisión **fiscal**, **desbordes** humanitarios) — no **predicciones** deterministas, sino **perspectivas condicionadas** estructuradas.",
+                "pt": "**Arco médio-longo:** efeitos de **2.ª/3.ª ordem** (atraso institucional, política de coligação, transmissão **fiscal**, **transbordamentos** humanitários) — não **previsões** deterministas, mas **perspetivas condicionadas** estruturadas.",
+                "ar": "**أفق متوسط إلى طويل:** آثار من **الدرجة الثانية والثالثة** (تأخر مؤسسي، سياسة تحالفات، **إرسال** مالي، **تداعيات** إنسانية) — ليست **تنبؤات** حتمية بل **آفاق مشروطة** منظمة.",
+                "ja": "**中長期の弧**：**第2・第3次**効果（制度ラグ、連立政治、**財政伝播**、人道**スピルオーバー**）を前面に——**決定論的予測**ではなく、**条件付きの整理された見通し**。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Election commissions, verified security feeds named in the legal sources posture, humanitarian situational awareness where methodology permits, market-structure indicators from documented national series—explicitly excluding anonymous leak dumps and unverified social crusades as standalone primaries.",
+            "depends_on": [
+                "legal-sources-registry",
+                "security-radar"
+            ],
+            "sources": [
+                {
+                    "label": "Legal Sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Global security radar",
+                    "url": "https://nationfiles.com/en/security/global-security-radar/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Eingaben:** Wahlkommissionen, im Quellenregister benannte **verifizierte** Security-Feeds, humanitäre **Lagebilder** wo Methodik es erlaubt, Marktstrukturindikatoren aus **dokumentierten** Nationalreihen — **ausgeschlossen** anonyme **Leak-Dumps** und unverifizierte **Social-Crusades** als **alleinige** Primäre.",
+                "en": "Election commissions, verified security feeds named in the legal sources posture, humanitarian situational awareness where methodology permits, market-structure indicators from documented national series—explicitly excluding anonymous leak dumps and unverified social crusades as standalone primaries.",
+                "fr": "**Entrées :** commissions **électorales**, flux sécurité **vérif**/registre, **sensibilisation humanitaire** si méthodo, indicateurs de marché depuis **séries nationales** documentées — **excluant** fuites **anonymes** et croisades **sociales** non vérifiables comme primaires **seules**.",
+                "es": "**Entradas:** comisiones **electorales**, feeds de seguridad **verificados**/registro, **conciencia humanitaria** si metodología, indicadores desde **series** nacionales documentadas — **excluye** vertidos **anónimos** y cruzadas **sociales** no verificadas como primaires **únicas**.",
+                "pt": "**Entradas:** comissões **eleitorais**, feeds de segurança **verificados**/registo, **consciência humanitária** se metodologia, indicadores de **séries** nacionais documentadas — **exclui** *dumps* **anónimos** e cruzadas **sociais** não verificáveis como primários **únicos**.",
+                "ar": "**مدخلات:** هيئات **انتخابات**، تغذيات أمن **موثقة**/السجل، **وعي** إنساني حيث تسمح المنهجية، مؤشرات من **سلاسل** وطنية موثقة — **لا** تسريبات **مجهولة** ولا **حملات** اجتماعية غير موثقة كأوليات **وحيدة**.",
+                "ja": "**入力：** 選挙管理委、**ソース登録**で名指しの**検証済み**安全フィード、**方法論が許す**人道状況、文書化された**国内系列**の市場指標——匿名**リーク**や未検証の**ソーシャル十字軍**を**独立プライマリ**にしない。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Editorially framed situation reports per event family, machine-syndicated feeds for transparency, cross-linked Knowledge entities for methodology continuity, and explicit refrains on what the report does not claim (no silent oracle on election winners, no substitute for counsel).",
+            "depends_on": [
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Status reports",
+                    "url": "https://nationfiles.com/en/statusreports/"
+                },
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Outputs:** redaktionell gerahmte **Lageberichte** pro Ereignisfamilie, **syndizierte** Feeds für Transparenz, **Knowledge**-Querverweise für Methodenkontinuität, **explizite** Abgrenzungen (**kein** stiller **Orakel**-Gewinnercheck, **kein** Rechtsersatz).",
+                "en": "Editorially framed situation reports per event family, machine-syndicated feeds for transparency, cross-linked Knowledge entities for methodology continuity, and explicit refrains on what the report does not claim (no silent oracle on election winners, no substitute for counsel).",
+                "fr": "**Livrables :** rapports **encadrés** par famille d’événements, **syndication** pour transparence, entités **Knowledge** croisées, **limites** explicites (pas d’**oracle** silencieux sur vainqueur, pas de substitut au **conseil**).",
+                "es": "**Entregables:** informes **enmarcados** por familia de evento, **sindicación** transparente, entidades **Knowledge** enlazadas, **límites** explícitos (sin **oráculo** silencioso sobre ganador, sin sustituto de **asesoría**).",
+                "pt": "**Entregas:** relatórios **enquadrados** por família de evento, **sindicação** transparente, entidades **Knowledge** cruzadas, **limites** explícitos (sem **oráculo** silencioso sobre vencedor, sem substituto de **aconselhamento**).",
+                "ar": "**المخرجات:** تقارير **مؤطرة** تحريريًا لكل عائلة أحداث، **مزامنة** شفافة، كيانات **Knowledge** متقاطعة، **حدود** صريحة (**لا** تنبؤ صامت بالفائز، **لا** بديل استشارة).",
+                "ja": "**成果物：** イベント系ごとの**編集枠**付きレポート、透明性のための**シンジケーション**、方法論連続のための **Knowledge** クロスリンク——**黙示の当選予言**や**法的助言の代替**を**主張しない**明記。"
+            }
+        },
+        {
+            "key": "update_cycle",
+            "value": "Cadence follows event volatility: quiet phases respect inertia; escalation triggers accelerated refresh windows with changelog discipline on the hub—readers always see whether a paragraph aged or genuinely updated.",
+            "depends_on": [
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Status reports",
+                    "url": "https://nationfiles.com/en/statusreports/"
+                },
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                }
+            ],
+            "value_i18n": {
+                "de": "**Kadenz** folgt **Ereignisvolatilität:** ruhige Phasen respektieren **Trägheit**; Eskalation öffnet **beschleunigte** Refresh-Fenster mit **Changelog**-Disziplin — Leser:innen sehen, ob Text **gealtert** oder **wirklich** aktualisiert wurde.",
+                "en": "Cadence follows event volatility: quiet phases respect inertia; escalation triggers accelerated refresh windows with changelog discipline on the hub—readers always see whether a paragraph aged or genuinely updated.",
+                "fr": "**Cadence** suit la **volatilité** : phases calmes = **inertie** ; escalade = fenêtres **accélérées** + **changelog** — le lecteur voit si le texte **a vieilli** ou **a été** mis à jour.",
+                "es": "**Cadencia** sigue **volatilidad**; fases quietas respetan **inercia**; escalada → ventanas **aceleradas** + **changelog** — se ve si el texto **envejece** o **se actualiza**.",
+                "pt": "**Cadência** segue **volatilidade**; fases calmas respeitam **inércia**; escalada → janelas **aceleradas** + **changelog**.",
+                "ar": "**الإيقاع** يتبع **تقلب** الحدث: هدوء يحترم **القصور**؛ تصعيد يفتح نافذة **أسرع** مع **سجل تغيير** — يُرى إن **هرم النص** أم **تحديث فعلي**.",
+                "ja": "**更新リズム**は**事象のボラ**に追従。静穏は**慣性**を尊重、エスカレーションは**加速窓**＋ハブの**変更ログ**——段落が**陳腐化**したか**実更新**かが分かる。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                },
+                {
+                    "label": "Status reports",
+                    "url": "https://nationfiles.com/en/statusreports/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "security-radar"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "core-hierarchy"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Lageberichte (Status Reports)",
+            "teaser": "**Lageberichte** sind NationFiles’ **Tiefenformat**: **ereignisbezogene** Dokumente zu **Wahlen**, **Krisen** und strukturellen Brüchen — mit **kausalem** Fokus und **langfristigen** Wirkungen statt **nur** Tagesschläge; **{{naciro}}**/**NFSI** liefern die **Brems- und Bändigungslogik** gegen **Slogan-Politik**.",
+            "summary_bullets": [
+                "**Tiefenanalyse:** Kette Auslöser → Transmission → Folgen — nicht nur Schlagzeile.",
+                "**Ereignisfokus:** Wahlen, Konflikt- oder Finanzschocks mit **Dossier-Logik**.",
+                "**Kausalität vor Mem:** **Mono-Kausal** wird **methodisch** infrage gestellt.",
+                "**Langbogen:** institutionelle Verzögerung und **2./3.-Ordnungs-Effekte**.",
+                "**Hygiene:** Register- und **VVR**-alignierte Primärlogik.",
+                "**Syndication:** RSS/Atom/JSON als **Lesbarkeits-Versprechen**."
+            ],
+            "body_md": "Wo **Breaking News** die Welt in **Minutentakt** sortiert, verlieren **Ursachen** und **Nebenwirkungen** oft die Bühne — und mit ihnen die Möglichkeit, **vernünftig** über Risiken zu streiten. NationFiles’ **Lageberichte** (**Status Reports**) sind das bewusste Gegenprogramm: **Dokumente**, die sich an **konkreten Ereignissen** festmachen lassen — eine **Wahl**, eine **militärische Eskalation**, ein **Bankenstress**, ein **humanitärer Kollaps** — ohne zu behaupten, das **Schicksal** einer Nation in einem Absatz zu **entscheiden**.\n\nDer **Fokus auf Kausalität** ist hier **redaktionelle Arbeit**, keine **Modellmagie**. Es geht darum, **Trigger** von **Übertragungsmechanismen** zu trennen, **Koalitionsmechanik** und **Haushaltslogik** sichtbar zu machen und **Folgewirkungen** zweiter Ordnung **ehrlich** offenzuhalten — auch wenn sie **unbequem** sind. Das **Anti-Bias**-Versprechen ist **prozessual**: Wer Länder nur über **Social-Lautstärke** bewertet, verliert im NationFiles-Kanon **legitime** Primärstellung.\n\n**Langfristige Auswirkungen** heißen: **Trägheit** respektieren — und trotzdem **nicht** den Fehler machen, alles in **Ewiggeraten** zu überführen. Die Lageberichte **formulieren bedingte** Perspektiven: Wenn X, dann **wahrscheinlicher** Y — aber **kein** stiller **Gewinnercheck** vor ausgezählten Stimmen, **kein** heimlicher **Kriegsende**-Slide vor **humanitären** Primärinformationen.\n\nSyndizierte Feeds (**RSS**, **Atom**, **JSON**) machen die **Arbeitsspur** sichtbar: wie sich Lagen **fortschreiben**, ohne Leser:innen in **Versionierungsnebel** zu stellen. Kurz: **Lageberichte** sind **Politik mit Laufzeit** — **Analyse**, die **über den Ticker hinausreicht**.",
+            "facts": [
+                {
+                    "k": "Format",
+                    "v": "Ereignisverankerte Tiefe."
+                },
+                {
+                    "k": "Kausalität",
+                    "v": "Ketten statt Slogans."
+                },
+                {
+                    "k": "Anti-Bias",
+                    "v": "Primäre & Methodik."
+                },
+                {
+                    "k": "Grenze",
+                    "v": "Kein Rechts-/Wahlorakel."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Wahlnächte und Wochen danach",
+                    "body_md": "**Lageberichte** halten **Protokolle** der **Übertragung**: institutionelle **Latenz**, Koalitionsrechnung, Marktreaktion — **nicht** nur Sieger**foto**."
+                },
+                {
+                    "title": "Krisen ohne Katastrophen-Theater",
+                    "body_md": "Sicherheits- und **Humanitäts**spuren werden **nur** dort **gekreuzt**, wo die Methodik **Zwang und Transparenz** zulässt."
+                },
+                {
+                    "title": "Syndication als Ethik",
+                    "body_md": "Offene **Syndication** zeigt **Aktualität** und **Reife** des Textes — **kein** heimliches Umschreiben als \"schon immer richtig\"."
+                }
+            ]
+        },
+        "en": {
+            "title": "Status Reports (Lageberichte)",
+            "teaser": "**Status reports** are NationFiles’ **depth lane**: event-specific dossiers—**elections**, **crises**, structural ruptures—with **causal** spine and **long-horizon** effects rather than **traffic-only** headlines; **{{naciro}}**/**NFSI** supply the **governed** counterweight to **meme-speed** politics.",
+            "summary_bullets": [
+                "**Deep analysis:** triggers → transmission → consequences—not just the ticker.",
+                "**Event focus:** elections, security or financial shocks with **dossier logic**.",
+                "**Causality before memes:** **monocausal** shortcuts are **methodologically** challenged.",
+                "**Long arc:** institutional lag and **2nd/3rd-order** effects named.",
+                "**Hygiene:** registry- and **VVR**-aligned primary posture.",
+                "**Syndication:** RSS/Atom/JSON as a **transparency pledge**."
+            ],
+            "body_md": "Breaking formats reward **velocity**; they rarely keep room for **mechanism**. NationFiles **status reports** (**Lageberichte**) reclaim that room as **documents** tied to **discrete events**—a **poll**, a **border crisis**, a **bank stress episode**, a **humanitarian collapse**—without pretending to **oracle** outcomes that belong to voters, courts, or field truth.\n\n**Causality** is the editorial spine: separating **triggers** from **channels**, budget politics from **market plumbing**, and naming **second-order** effects even when they **complicate** a clean narrative. The **bias guardrail** is **procedural**: social volume is **not** sovereign proof; **primaries** named in the **legal sources posture** are.\n\n**Long-term impacts** mean respecting **inertia**—yet refusing to turn every shock into **prophecy**. Reports offer **conditional** outlooks: if X shifts, **watch** Y—but never a **silent call** on **winners**, never a **covert** declaration of **peace** ahead of **verifiable** facts.\n\nSyndicated feeds make **change legible**: what updated, what aged, what stayed **stable** by design. **Status reports** are, in short, **politics with runtime**—analysis that **outlasts** the headline beat.",
+            "facts": [
+                {
+                    "k": "Format",
+                    "v": "Event-anchored depth."
+                },
+                {
+                    "k": "Causality",
+                    "v": "Chains, not slogans."
+                },
+                {
+                    "k": "Anti-bias",
+                    "v": "Primaries + methodology."
+                },
+                {
+                    "k": "Boundary",
+                    "v": "No legal/election oracle."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Election nights—and weeks after",
+                    "body_md": "Reports track **transmission**: coalition math, institutional **lag**, market repricing—not only a **victory graphic**."
+                },
+                {
+                    "title": "Crises without catastrophe theatre",
+                    "body_md": "Security and **humanitarian** reads cross **only** when methodology demands **honest** juxtaposition."
+                },
+                {
+                    "title": "Syndication as ethics",
+                    "body_md": "Open feeds show **refresh** discipline—no **stealth** rewrite dressed as timeless truth."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Rapports de situation (Lageberichte)",
+            "teaser": "Les **rapports de situation** sont le **volet profond** de NationFiles : dossiers **événementiels** — **élections**, **crises** — avec **chaîne causale** et effets **longs** plutôt que seule la **Une** ; **{{naciro}}**/**NFSI** apportent la **gouvernance** contre la politique **mème**-vitesse.",
+            "summary_bullets": [
+                "**Analyse profonde :** déclencheurs → transmission → suites.",
+                "**Focus événement :** scrutins, chocs **sécurité/finance** avec logique **dossier**.",
+                "**Causalité :** le **mono-causal** est **questionné** méthodiquement.",
+                "**Long arc :** délais institutionnels, effets **2e/3e ordre**.",
+                "**Hygiène :** primaires alignées **registre/VVR**.",
+                "**Syndication :** RSS/Atom/JSON comme **engagement** de transparence."
+            ],
+            "body_md": "Les formats **breaking** aiment la **vitesse** ; ils **ferment** vite la porte aux **mécanismes**. Les **rapports de situation** rouvrent cette porte : documents **ancrés** — élection, **escalade**, **stress** financier, **effondrement** humanitaire — sans **oracle** sur des **sort** qui relèvent encore du vote ou du terrain.\n\nLa **causalité** est le fil : séparer **déclencheur** et **canal**, budget et **marché**, nommer effets **d’ordre 2** même s’ils **gênent**. Le **garde-fou biais** est **procédural** : le volume **social** ne **prouve** pas ; les **primaires** du **registre**, si.\n\n**Impacts longs** = respecter **inertie** sans basculer dans la **prophétie**. Perspectives **conditionnelles** : si X bouge, surveiller Y — **jamais** appel **silencieux** sur les **vainqueurs**.\n\nLa **syndication** rend les **mises à jour** lisibles. En bref : **politique avec durée** — analyse **au-delà** du ticker.",
+            "facts": [
+                {
+                    "k": "Format",
+                    "v": "Profondeur ancrée."
+                },
+                {
+                    "k": "Causalité",
+                    "v": "Chaînes, pas slogans."
+                },
+                {
+                    "k": "Anti-biais",
+                    "v": "Primaires + méthodo."
+                },
+                {
+                    "k": "Limite",
+                    "v": "Pas d’oracle électoral/juridique."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Soirées électorales — et après",
+                    "body_md": "**Transmission** : arithmétique de coalition, **latence** institutions, marchés — pas seulement **visuel** de victoire."
+                },
+                {
+                    "title": "Crises sans spectacle",
+                    "body_md": "Croisement sécurité/**humanitaire** **seulement** si la méthodo impose **honnêteté**."
+                },
+                {
+                    "title": "Syndication = éthique",
+                    "body_md": "Flux ouverts = discipline de **rafraîchissement** — pas **réécriture** furtive."
+                }
+            ]
+        },
+        "es": {
+            "title": "Informes de situación (Lageberichte)",
+            "teaser": "Los **informes de situación** son el **carril profundo** de NationFiles: **dossiers** por **elecciones** y **crisis** con **causalidad** y **horizonte** largo más allá del titular; **{{naciro}}**/**NFSI** aportan **gobernanza** frente a política de **meme**.",
+            "summary_bullets": [
+                "**Análisis profundo:** disparadores → transmisión → consecuencias.",
+                "**Evento:** elecciones, choques **seguridad/finanzas** con lógica de **expediente**.",
+                "**Causalidad:** el **mono-causal** se **cuestiona** metódicamente.",
+                "**Arco largo:** rezago, efectos **2.º/3.º orden**.",
+                "**Higiene:** primarios alineados a **registro/VVR**.",
+                "**Sindicación:** RSS/Atom/JSON como **compromiso** de transparencia."
+            ],
+            "body_md": "El **breaking** premia **velocidad**; rara vez **guarda** mecanismo. Los **informes** reabren el espacio: **anclados** a **votación**, **escalada**, **estrés** bancario, **colapso** **humanitario** — sin **oráculo** sobre desenlaces de **urnas** o terreno.\n\n**Causalidad** une la pieza: gatillo vs **canal**, política fiscal vs **mercado**, efectos **2.º orden** aunque **molesten**. **Anti-sesgo** **procedural**: el **ruido social** no **prueba**; los **primarios** del **registro**, sí.\n\n**Impacto largo** con **inercia** y sin **profecía** forzada. **Perspectivas condicionadas** — **nunca** llamado **silencioso** al ganador.\n\n**Sindicación** legible. En suma: **política con tiempo de ejecución**.",
+            "facts": [
+                {
+                    "k": "Formato",
+                    "v": "Profundidad anclada."
+                },
+                {
+                    "k": "Causalidad",
+                    "v": "Cadenas, no eslóganes."
+                },
+                {
+                    "k": "Anti-sesgo",
+                    "v": "Primarios + metodología."
+                },
+                {
+                    "k": "Límite",
+                    "v": "Sin oráculo legal/electoral."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Noches electorales y después",
+                    "body_md": "**Transmisión**: coaliciones, **rezago**, mercados — no solo **gráfico**."
+                },
+                {
+                    "title": "Crisis sin teatro",
+                    "body_md": "Cruce seguridad/**humanitario** solo si la metodología exige **honestidad**."
+                },
+                {
+                    "title": "Sindicación ética",
+                    "body_md": "Feeds abiertos = disciplina de **actualización**."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Relatórios de situação (Lageberichte)",
+            "teaser": "Os **relatórios de situação** são o **corredor profundo** da NationFiles: **dossiers** para **eleições** e **crises** com **causalidade** e **horizonte** longo além da manchete; **{{naciro}}**/**NFSI** trazem **governação** contra política de **meme**.",
+            "summary_bullets": [
+                "**Análise profunda:** gatilhos → transmissão → consequências.",
+                "**Evento:** eleições, choques **segurança/finanças** com lógica de **dossier**.",
+                "**Causalidade:** **mono-causal** é **questionado** metodicamente.",
+                "**Arco longo:** atraso institucional, efeitos **2.ª/3.ª ordem**.",
+                "**Higiene:** primários alinhados a **registo/VVR**.",
+                "**Sindicação:** RSS/Atom/JSON como **compromisso** de transparência."
+            ],
+            "body_md": "O **breaking** valoriza **velocidade**; raramente **guarda** mecanismo. Os **relatórios** reabrem espaço: **ancorados** a **votação**, **escalada**, **stress** financeiro, **colapso** **humanitário** — sem **oráculo** sobre desfechos de **urnas** ou terreno.\n\n**Causalidade** estrutura: gatilho vs **canal**, orçamento vs **mercado**, efeitos **de 2.ª ordem** mesmo quando **incomodam**. **Anti-viés** **processual**: **barulho social** não **prova**; **primários** do **registo**, sim.\n\n**Impacto longo** com **inércia**, sem **profecia** forçada. **Perspetivas condicionadas** — **nunca** aposta **silenciosa** no vencedor.\n\n**Sindicação** legível. Em suma: **política com tempo de execução**.",
+            "facts": [
+                {
+                    "k": "Formato",
+                    "v": "Profundidade ancorada."
+                },
+                {
+                    "k": "Causalidade",
+                    "v": "Cadeias, não slogans."
+                },
+                {
+                    "k": "Anti-viés",
+                    "v": "Primários + metodologia."
+                },
+                {
+                    "k": "Limite",
+                    "v": "Sem oráculo legal/eleitoral."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Noites eleitorais e depois",
+                    "body_md": "**Transmissão**: coligações, **atraso**, mercados — não só **gráfico**."
+                },
+                {
+                    "title": "Crises sem teatro",
+                    "body_md": "Cruze segurança/**humanitário** só se a metodologia exige **honestidade**."
+                },
+                {
+                    "title": "Sindicação como ética",
+                    "body_md": "Feeds abertos = disciplina de **atualização**."
+                }
+            ]
+        },
+        "ar": {
+            "title": "تقارير الوضع (Lageberichte)",
+            "teaser": "**تقارير الوضع** ممرّ **العمق** في NationFiles: ملفات **محددة بالحدث** — **انتخابات**، **أزمات** — بـ**سببية** و**آفاق طويلة** لا عنوانًا يوميًا فقط؛ **{{naciro}}**/**NFSI** يضفيان **حوكمة** بوجه **سياسة الميم** السريعة.",
+            "summary_bullets": [
+                "**تحليل عميق:** محفزات ← انتقال ← عواقب.",
+                "**حدث:** انتخابات، صدمات **أمن/مال** بمنطق **ملف**.",
+                "**سببية:** الطريق **أحادي السبب** يُفند **منهجيًا**.",
+                "**قوس طويل:** تأخر مؤسسي، آثار **من الدرجة الثانية/الثالثة**.",
+                "**نظافة:** أوليات متوافقة مع **السجل/VVR**.",
+                "**مزامنة:** RSS/Atom/JSON كـ**تعهد** شفافية."
+            ],
+            "body_md": "صيغ **العاجل** تكافئ **السرعة**؛ نادرًا ما **تحتفظ** بالآلية. **تقارير الوضع** تعيد فتح المساحة: **مرتبطة** بـ**اقتراع**، **تصعيد**، **ضغط** مصرفي، **انهيار** إنساني — **بلا** تنبؤ صارم بما للناخبين أو الميدان.\n\n**السببية** العمود: الفصل بين **المحفز** و**القناة**، المالية مقابل **السوق**، تسمية آثار **الدرجة الثانية** حتى لو **أزعجت**. **مناعة الانحياز** **إجرائية**: **الضجيج الاجتماعي** لا **يثبت**؛ **الأوليات** في **السجل** تثبت.\n\n**أثر بعيد** مع **قصور حركي** وبلا **تنبؤ** مفروض. **آفاق مشروطة** — **لا** حكم صامت على **الفائز**.\n\n**المزامنة** تجعل التحديث **قارئًا**. باختصار: **سياسة بزمن تشغيل**.",
+            "facts": [
+                {
+                    "k": "الشكل",
+                    "v": "عمق مربوط بحدث."
+                },
+                {
+                    "k": "السببية",
+                    "v": "سلاسل لا شعارات."
+                },
+                {
+                    "k": "مناعة انحياز",
+                    "v": "أوليات + منهجية."
+                },
+                {
+                    "k": "حد",
+                    "v": "لا أوراكل قانوني/انتخابي."
+                }
+            ],
+            "sections": [
+                {
+                    "title": "ليالي انتخاب ولاحقها",
+                    "body_md": "**الانتقال**: تحالفات، **تأخر**، أسواق — ليس **فقط** شكل فوز."
+                },
+                {
+                    "title": "أزمات بلا مسرح",
+                    "body_md": "تقاطع أمن/**إنساني** فقط عندما تفرض المنهجية **صدقًا**."
+                },
+                {
+                    "title": "المزامنة أخلاق",
+                    "body_md": "فيد مفتوح = انضباط **تحديث** — لا **إعادة كتابة** خفية."
+                }
+            ]
+        },
+        "ja": {
+            "title": "状況レポート（Lageberichte）",
+            "teaser": "**Status Reports（ラゲベリヒテ）** は NationFiles の **深層レーン**：**選挙**や**危機**など**事象単位**のドシエ——**因果の芯**と**長期の波及**を**速報だけ**より重くする。**{{naciro}}**／**NFSI** が **ミーム速度**の政治への**抑制と整合**を与える。",
+            "summary_bullets": [
+                "**深層分析：** トリガー→伝播→帰結。",
+                "**事象フォーカス：** 選挙、**安全・金融**ショックの**ドシエ思考**。",
+                "**因果優先：** **単一因果**の近道は**方法論的**に問う。",
+                "**長期弧：** 制度ラグ、**第2・3次**効果。",
+                "**衛生：** **登録／VVR** と整合するプライマリ。",
+                "**シンジケーション：** RSS/Atom/JSON で**透明性の約束**。"
+            ],
+            "body_md": "**速報**は**速さ**を賞する。**メカニズム**を残さない。**状況レポート**は**事象に括られた文書**としてその余白を取る——**投票**、**境界のエスカレーション**、**金融ストレス**、**人道崩壊**など。**当選**や**現地の真実**に属する結論を**神託**しない。\n\n**因果**が背骨。**トリガー**と**伝播チャネル**を分け、**予算政治**と**市場の配管**を分け、きれいな話を**壊す**二階効果も**名指し**する。**バイアス耐性**は**手続き**：**SNS音量**は**証明**にならない。**法的ソースの姿勢**で名指しされた**プライマリ**が然る。\n\n**長期影響**は**慣性**を踏まえつつ、**予言**に全体をすり替えない。**条件的見通し**——**黙示の当選予測**も**検証前の決着宣言**もしない。\n\n**シンジケーション**で更新と**熟成**が読める。要するに**政治にランタイムを持たせる分析**——**ヘッドラインの拍**を超える仕事。",
+            "facts": [
+                {
+                    "k": "フォーマット",
+                    "v": "事象アンカーの深さ。"
+                },
+                {
+                    "k": "因果",
+                    "v": "連鎖優先。"
+                },
+                {
+                    "k": "バイアス",
+                    "v": "一次＋方法論。"
+                },
+                {
+                    "k": "境界",
+                    "v": "法・選挙の神託なし。"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "選挙の夜とその後",
+                    "body_md": "**伝播**：連立の数え、**制度ラグ**、市場の**再価格付け**——**勝利図**だけではない。"
+                },
+                {
+                    "title": "劇場にしない危機",
+                    "body_md": "**安全**と**人道**の併読は**方法論が誠実さを要求**するときに限る。"
+                },
+                {
+                    "title": "シンジケーション＝倫理",
+                    "body_md": "公開フィードが**更新規律**を見せる——**密かな書き換え**はない。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "status-reports"
+        },
+        "repository_relative_path": "knowledge-data/entities/status-reports.json"
+    }
+}

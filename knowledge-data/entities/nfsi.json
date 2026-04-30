@@ -4,7 +4,7 @@
     "kind": "entity",
     "type": "Dataset",
     "status": "active",
-    "updated_utc": "2026-04-28T22:00:00Z",
+    "updated_utc": "2026-04-30T18:30:00Z",
     "topics": [
         "index",
         "stability",
@@ -24,7 +24,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "0–100",
+                "en": "0-100",
+                "fr": "0–100",
+                "es": "0–100",
+                "pt": "0–100",
+                "ar": "0–100",
+                "ja": "0–100"
+            }
         },
         {
             "key": "score_bands",
@@ -34,7 +43,16 @@
                     "label": "NFSI FAQ",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "A (81–100), B (61–80), C (41–60), D (21–40), E (0–20)",
+                "en": "A (81-100), B (61-80), C (41-60), D (21-40), E (0-20)",
+                "fr": "A (81–100), B (61–80), C (41–60), D (21–40), E (0–20)",
+                "es": "A (81–100), B (61–80), C (41–60), D (21–40), E (0–20)",
+                "pt": "A (81–100), B (61–80), C (41–60), D (21–40), E (0–20)",
+                "ar": "A (81–100)، B (61–80)، C (41–60)، D (21–40)، E (0–20)",
+                "ja": "A（81–100）、B（61–80）、C（41–60）、D（21–40）、E（0–20）"
+            }
         },
         {
             "key": "country_coverage",
@@ -48,7 +66,16 @@
                     "label": "NFSI VVR",
                     "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "195 Staaten",
+                "en": "195 nations",
+                "fr": "195 pays",
+                "es": "195 países",
+                "pt": "195 países",
+                "ar": "195 دولةً",
+                "ja": "195 か国"
+            }
         },
         {
             "key": "update_cycle",
@@ -61,7 +88,16 @@
                     "label": "NFSI FAQ",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Alle 15 Minuten",
+                "en": "Every 15 minutes",
+                "fr": "Toutes les 15 minutes",
+                "es": "Cada 15 minutos",
+                "pt": "A cada 15 minutos",
+                "ar": "كل 15 دقيقة",
+                "ja": "15分ごと"
+            }
         },
         {
             "key": "computed_by",
@@ -74,7 +110,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{naciro}}",
+                "en": "{{naciro}}",
+                "fr": "{{naciro}}",
+                "es": "{{naciro}}",
+                "pt": "{{naciro}}",
+                "ar": "{{naciro}}",
+                "ja": "{{naciro}}"
+            }
         },
         {
             "key": "published_via",
@@ -87,11 +132,20 @@
                     "label": "llms.txt",
                     "url": "https://nationfiles.com/llms.txt"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
         },
         {
             "key": "input_sources",
-            "value": "115+ real-time sources; indicator framework documented in VVR",
+            "value": "115+ near-real-time feeds aggregated per Layers 1–4 / VVR—including, among broader thematic families, curated FX/currency-market signals, news- and sentiment-bearing media strands, security/defence and strategic context strands—composed into one 0–100 headline on NationFiles.",
             "sources": [
                 {
                     "label": "NFSI FAQ",
@@ -101,7 +155,16 @@
                     "label": "NFSI VVR",
                     "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "115+ nah-Echtzeit-Feeds aggregiert über Layer 1–4 / VVR — u. a. kuratierte FX-/Devisensignale, nachrichten- und sentimenttragende Medienstränge sowie sicherheits-/verteidigungs- und strategische Kontextstränge — zu einem 0–100-Kopfwert auf NationFiles.",
+                "en": "115+ near-real-time feeds aggregated per Layers 1–4 / VVR—including, among broader thematic families, curated FX/currency-market signals, news- and sentiment-bearing media strands, security/defence and strategic context strands—composed into one 0–100 headline on NationFiles.",
+                "fr": "Plus de 115 flux quasi temps réel agrégés (couches 1–4 / VVR) — signaux FX/devises, fils médias d’actualité et de sentiment, contexte sécurité/défense et stratégique — en un score 0–100 sur NationFiles.",
+                "es": "Más de 115 feeds casi en tiempo real agregados por capas 1–4 / VVR — señales FX/divisas, hilos con noticias y sentimiento, contexto seguridad/defensa y estratégico — en un titular 0–100 en NationFiles.",
+                "pt": "Mais de 115 feeds quase em tempo real nas camadas 1–4 / VVR — sinais FX/câmbio, fios de media com notícias e sentimento, contexto de segurança/defesa e estratégico — num headline 0–100 na NationFiles.",
+                "ar": "أكثر من 115 تغذية شبه لحظية عبر الطبقات 1–4 / VVR — بما فيها إشارات سوق العملات وخيوط إعلامية بالمحتوى والمشاعر وسياق أمني/دفاعي واستراتيجي — إلى درجة رأسية 0–100 على NationFiles.",
+                "ja": "Layer 1–4 / VVR に従い 115 超の準リアルタイムフィード（為替、ニュース／センチメント、安全保障・防衛と戦略文脈など）を NationFiles の 0–100 ヘッドラインに統合。"
+            }
         },
         {
             "key": "pipeline",
@@ -114,7 +177,16 @@
                     "label": "NFSI VVR",
                     "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Layer 1 Indikator-Scoring → Layer 2 Aggregation → Layer 3 gewichteter Endscore → Layer 4 Trägheits-Glättung",
+                "en": "Layer 1 indicator scoring -> Layer 2 aggregation -> Layer 3 weighted final score -> Layer 4 inertia smoothing",
+                "fr": "Couche 1 notation → couche 2 agrégation → couche 3 score final pondéré → couche 4 lissage d’inertie",
+                "es": "Capa 1 puntuación → capa 2 agregación → capa 3 puntuación final ponderada → capa 4 suavizado por inercia",
+                "pt": "Camada 1 pontuação → camada 2 agregação → camada 3 pontuação final ponderada → camada 4 suavização de inércia",
+                "ar": "الطبقة 1 تسجيل المؤشرات ← 2 التجميع ← 3 الدرجة النهائية المرجّحة ← 4 تنعيم القصور الذاتي",
+                "ja": "Layer 1 指標スコア → Layer 2 集約 → Layer 3 加重確定スコア → Layer 4 慣性スムージング"
+            }
         },
         {
             "key": "forecast_horizon",
@@ -127,7 +199,16 @@
                     "label": "NFSI VVR",
                     "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "7-Tage-Prognoseschicht",
+                "en": "7-day forecast layer",
+                "fr": "Couche de prévision à 7 jours",
+                "es": "Capa de previsión a 7 días",
+                "pt": "Camada de previsão de 7 dias",
+                "ar": "طبقة توقع 7 أيام",
+                "ja": "7日先までの予測レイヤー"
+            }
         },
         {
             "key": "core_metric",
@@ -137,7 +218,16 @@
                     "label": "NFSI Methodology",
                     "url": "https://nationfiles.com/en/company/nfsi/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "Operativer geopolitischer Stabilitäts- und Risiko-Score",
+                "en": "Operational geopolitical stability and risk score",
+                "fr": "Score opérationnel de stabilité et de risque géopolitiques",
+                "es": "Puntuación operativa de estabilidad y riesgo geopolíticos",
+                "pt": "Pontuação operacional de estabilidade e risco geopolíticos",
+                "ar": "درجة تشغيلية للاستقرار والمخاطر الجيوسياسية",
+                "ja": "地政学的安定性とリスクの運用スコア"
+            }
         },
         {
             "key": "license",
@@ -147,17 +237,63 @@
                     "label": "Legal Notice",
                     "url": "https://nationfiles.com/en/legal/legal-notice/"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "CC BY-ND 4.0",
+                "en": "CC BY-ND 4.0",
+                "fr": "CC BY-ND 4.0",
+                "es": "CC BY-ND 4.0",
+                "pt": "CC BY-ND 4.0",
+                "ar": "CC BY-ND 4.0",
+                "ja": "CC BY-ND 4.0"
+            }
         },
         {
             "key": "citation_doi",
-            "value": "10.5281/zenodo.19758890",
+            "value": "10.5281/zenodo.19783682",
             "sources": [
                 {
-                    "label": "NFSI Research DOI",
-                    "url": "https://doi.org/10.5281/zenodo.19758890"
+                    "label": "NFSI Validation and Verification Report (DOI)",
+                    "url": "https://doi.org/10.5281/zenodo.19783682"
                 }
-            ]
+            ],
+            "value_i18n": {
+                "de": "10.5281/zenodo.19783682",
+                "en": "10.5281/zenodo.19783682",
+                "fr": "10.5281/zenodo.19783682",
+                "es": "10.5281/zenodo.19783682",
+                "pt": "10.5281/zenodo.19783682",
+                "ar": "10.5281/zenodo.19783682",
+                "ja": "10.5281/zenodo.19783682"
+            }
+        },
+        {
+            "key": "canonical_data_format",
+            "value": "NFSI values are embedded in {{nationfile-json}} profiles and UI exports on {{nationfiles}}",
+            "depends_on": [
+                "nationfile-json",
+                "nationfiles",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "NFSI Methodology",
+                    "url": "https://nationfiles.com/en/company/nfsi/"
+                },
+                {
+                    "label": "VVR",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "value_i18n": {
+                "de": "NFSI-Werte stecken in {{nationfile-json}}-Profilen und UI-Exporten auf {{nationfiles}}",
+                "en": "NFSI values are embedded in {{nationfile-json}} profiles and UI exports on {{nationfiles}}",
+                "fr": "Les valeurs NFSI sont intégrées aux profils {{nationfile-json}} et exports UI sur {{nationfiles}}",
+                "es": "Los valores NFSI están en perfiles {{nationfile-json}} y exportaciones de la UI en {{nationfiles}}",
+                "pt": "Valores NFSI estão em perfis {{nationfile-json}} e exportações de UI em {{nationfiles}}",
+                "ar": "قيم NFSI مضمّنة في ملفات {{nationfile-json}} وتصدير الواجهة على {{nationfiles}}",
+                "ja": "NFSI の値は {{nationfile-json}} と {{nationfiles}} の UI エクスポートに埋め込まれる"
+            }
         }
     ],
     "dynamic_slots": {
@@ -170,13 +306,16 @@
     "i18n": {
         "de": {
             "title": "NationFiles Stability Index (NFSI)",
-            "teaser": "Der NFSI ist ein quantitativer Stabilitäts-Score (0–100). Er wird von der {{naciro}} berechnet und als Echtzeit-Output über {{nationfiles}} veröffentlicht.",
+            "teaser": "**0–100 als dokumentierte Aggregation:** Der NFSI verdichtet u. a. **Forex/Devisensignale**, **Nachrichten‑ & Mediensentiment** sowie **sicherheits-/strategische Hinweise** — gemeinsam mit weiteren dokumentierten Echtzeitfamilien — in einen geopolitischen Stabilitäts‑/Risikowert; berechnet von **{{naciro}}**, angezeigt auf **{{nationfiles}}**.",
             "summary_bullets": [
-                "Skala 0–100 zur Einordnung geopolitischer Stabilität",
-                "Echtzeit-Output: berechnet durch Naciro",
-                "Verknüpft mit Methodik- und Quellenreferenzen"
+                "**Worauf NFSI konkret zurückgreift:** Er ist ein **Aggregator**: Die Layer‑Schichtungen führen u. o. dokumentierte „Forex/Devisenkurse“, „Nachrichten & Sentiment“ und „Sicherheit/strategisches Umfeld“ zusammen mit vielen anderen Indikatoren in **einen** 0–100‑Score ein (Gewichte und Vollaussage nach Methodik/VVR — kein Einzel-Schlagzahl).",
+                "Schnelle Orientierung: ein Score pro Land, der viele Signale bündelt (nicht ein einzelnes Ereignis).",
+                "Nachvollziehbar: Methodik, Quellen und Prüfpfade sind in NFSI-Dokumentation und VVR beschrieben.",
+                "Praktisch nutzbar: in Dashboards, Welt-NFSI und Länderprofilen – ideal zum Vergleichen über die Zeit.",
+                "Aktuell: typischerweise alle 15 Minuten neu berechnet; optional sehen Sie den Weltwert auch dynamisch auf dieser Seite.",
+                "Kein Ratgeber: der NFSI ersetzt keine Reise-, Rechts- oder Anlageberatung; er ist ein dokumentiertes Analysewerkzeug."
             ],
-            "body_md": "Der **NFSI** ist ein standardisierter Output-Index.\n\nEr wird von {{naciro}} berechnet und im Kontext von {{nationfiles}} bereitgestellt.\n\nAuf Knowledge-Seiten kann der aktuelle Wert dynamisch eingebunden werden (Slot: `global_current`).",
+            "body_md": "Der **NFSI** (NationFiles Stability Index) ist die **Maßzahl für geopolitische Stabilität und dokumentiertes Risiko** auf NationFiles — **ein Score von 0 bis 100** pro abgedecktem Land und als Weltaggregation.\n\n**Kritischer Punkt beim Verständnis:** Der NFSI ist **keine** monotone Einzelserie, sondern die **Aggregation** dokumentierter Eingänge: In Produkt‑ und Methodikliteratur zusammengefasst fließen u. a. **Foreign‑Exchange-/Währungssignalpfade**, **News‑ und Sentiment getragene Medienspuren** sowie **sicherheitsbezogene Kontextinfos** zusammen mit vielen weiteren thematisch gruppierten Quellen (**115+ dokumentierte Near‑Realtime‑Feeds**) in Layer 1 bis 4 — jeweils **gewichteter** Schlusskopf erst nach dokumentierter Logik ([NFSI-Methodik](/de/company/nfsi/), [VVR](/de/legal/validation-and-verification-report/)). **Ohne diese Einordnung** kann der NFSI **fälschlich** als simpler Trend einer einzelnen Nachrichtenskala gelesen werden.\n\n**Nutzen:** schneller Vergleich von Staaten und Zeiträumen; gemeinsames Zahlenformat für Analysten, Medien und Institutionen.\n\n**Herleitung:** Layer 1–4 und Gewichte sind in NFSI‑Dokumentation und VVR beschrieben; berechnet durch **{{naciro}}**, veröffentlicht über **{{nationfiles}}**.\n\n**Integration:** NFSI-Werte und zugehörige Zeitreihen erscheinen in **{{nationfile-json}}**-Profilen und in der **{{nationfiles}}**-Oberfläche (Charts, Badges, Exporte) — dieselbe Kennzahl, mehrere konsistente Darstellungen.",
             "facts": [
                 {
                     "k": "Berechnet durch",
@@ -185,24 +324,47 @@
                 {
                     "k": "Publiziert über",
                     "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Profil-/Exportkontext",
+                    "v": "{{nationfile-json}}"
                 }
             ],
             "sections": [
                 {
-                    "title": "Score-Bereiche (Kurzform)",
+                    "title": "Vom Rohsignal zum Index",
+                    "body_md": "Der **NFSI** erscheint am Ende dokumentierter Pipelines — nicht „aus der Luft“.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGix\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMix\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Stufe | Inhalt |\n| --- | --- |\n| 1 | Rohsignale / Connector-Ausgaben (siehe VVR) |\n| 2 | {{naciro}} — Gewichtung, Validierung, Zwischenstände |\n| 3 | **{{nfsi}}** 0–100 auf Länderoberflächen & Exporten |"
+                },
+                {
+                    "title": "So lesen Sie den NFSI im Alltag",
+                    "body_md": "- **0–100** steht für den dokumentierten Stabilitäts- und Risikomix, nicht für ein einzelnes Schlagwort.\n- **Buchstaben A–E** fassen grobe Bänder zusammen (von „sehr stabil“ bis „sehr angespannt“ im definierten Sinne).\n- **Trends** sind oft aussagekräftiger als ein einzelner Tageswert – nutzen Sie dafür die Ländercharts auf NationFiles."
+                },
+                {
+                    "title": "Transparenz & Qualität",
+                    "body_md": "NationFiles veröffentlicht bewusst **first-party**-Dokumentation: Quellenregister, Methodik und VVR. So bleibt nachvollziehbar, *welche* Signale in den Index einfließen und *wie* sie zusammengeführt werden."
+                },
+                {
+                    "title": "Vier dokumentierte Schichten (Kurz)",
+                    "body_md": "Laut VVR: **Layer 1** Einzelindikatoren → **Layer 2** Aggregation → **Layer 3** gewichteter Endscore 0–100 → **Layer 4** Trägheit/Glättung. So wirkt der NFSI **robuster** als ein einzelner Rohwert und bleibt dennoch täglich aktualisierbar."
+                },
+                {
+                    "title": "Score-Bänder (Kurzform)",
                     "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
                 }
             ]
         },
         "en": {
             "title": "NationFiles Stability Index (NFSI)",
-            "teaser": "NFSI is a quantitative stability score (0–100). It is computed by {{naciro}} and published as a real-time output via {{nationfiles}}.",
+            "teaser": "**0–100 as a documented aggregator:** NFSI folds **Forex-linked currency signals**, **news and sentiment-bearing media strands**, and **security / strategic-context streams** together with dozens of additional documented realtime families into one geopolitical stability score—computed by **{{naciro}}** and surfaced on **{{nationfiles}}**.",
             "summary_bullets": [
-                "0–100 scale to classify geopolitical stability",
-                "Real-time output computed by Naciro",
-                "Linked to methodology and source references"
+                "**What goes in:** NFSI **aggregates documented inputs** named in methodology/VVR—including FX strands, headline sentiment-bearing news pipelines, broader security/defence context—before Layer 4 smoothing; treat it as a **composite headline**, not a lone indicator.",
+                "Fast orientation: one score per country that bundles many signals (not one headline event).",
+                "Explainable: methodology, sources, and audit trails are documented on the NFSI pages and in the VVR.",
+                "Practical: dashboards, global NFSI, and country profiles help you compare countries over time.",
+                "Fresh: typically recomputed every ~15 minutes; this page can also show a live global reading where configured.",
+                "Not advice: NFSI is a documented analysis output—not travel, legal, or investment guidance."
             ],
-            "body_md": "**NFSI** is a standardized output index.\n\nIt is computed by {{naciro}} and published within {{nationfiles}}.\n\nKnowledge pages can embed the current value dynamically (slot: `global_current`).",
+            "body_md": "The **NFSI** (NationFiles Stability Index) is NationFiles’ **headline geopolitical stability / risk score**: **0–100** per covered country and as a world aggregate.\n\n**Critical nuance:** NFSI is deliberately an **aggregation**—not equivalent to tracking a single source. Published methodology groups **FX / currency-linked feeds**, **news and sentiment-bearing media strands**, **security/defence and strategic-context signals**, and many other thematic families from **115+ documented near-real-time inputs** across Layers **1→4**, with inertia smoothing thereafter. Readers who skip that framing risk misreading NFSI as “just volatility / just headlines”; the VVR outlines *how* strands mix before the final headline.\n\n**Use:** fast cross-country and over-time comparison; shared numeric frame for analysts, media, and institutions.\n\n**Derivation:** Layers 1–4 and weights are documented in the [NFSI methodology](/en/company/nfsi/) and [VVR](/en/legal/validation-and-verification-report/); computed by **{{naciro}}**, published via **{{nationfiles}}**.\n\n**Integration:** NFSI readings and related time series live inside **{{nationfile-json}}** profiles and across the **{{nationfiles}}** UI (charts, badges, exports)—one headline number, multiple consistent surfaces.",
             "facts": [
                 {
                     "k": "Computed by",
@@ -211,9 +373,29 @@
                 {
                     "k": "Published via",
                     "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Profile / export context",
+                    "v": "{{nationfile-json}}"
                 }
             ],
             "sections": [
+                {
+                    "title": "From raw signals to the index",
+                    "body_md": "**{{nfsi}}** sits at the end of documented pipelines—not invented ad hoc.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGix\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMix\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Step | Content |\n| --- | --- |\n| 1 | Raw signals / connector outputs (see VVR) |\n| 2 | {{naciro}} — weighting, validation, intermediates |\n| 3 | **{{nfsi}}** 0–100 on country surfaces & exports |"
+                },
+                {
+                    "title": "How to read NFSI in practice",
+                    "body_md": "- **0–100** reflects the documented stability/risk mix—not a single news item.\n- **A–E bands** summarize coarse buckets (from “very stable” to “very stressed” in the defined sense).\n- **Trends** often matter more than one snapshot—use the country charts on NationFiles."
+                },
+                {
+                    "title": "Transparency & quality",
+                    "body_md": "NationFiles publishes **first-party** documentation: source registry, methodology, and the VVR so you can see *which* signals enter the index and *how* they are combined."
+                },
+                {
+                    "title": "Four documented layers (short)",
+                    "body_md": "Per VVR: **Layer 1** indicator scoring → **Layer 2** aggregation → **Layer 3** weighted final 0–100 → **Layer 4** inertia / smoothing. That makes NFSI **steadier to read** than any single raw input while staying on a frequent refresh cadence."
+                },
                 {
                     "title": "Score bands (short)",
                     "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
@@ -222,53 +404,248 @@
         },
         "fr": {
             "title": "Indice de stabilité NationFiles (NFSI)",
-            "teaser": "Le NFSI est un score quantitatif de stabilité (0–100). Il est calculé par {{naciro}} et publié en temps réel via {{nationfiles}}.",
+            "teaser": "Le NFSI condense en un score 0–100 des familles documentées—**forex/devises**, **actualités & tonalité media**, **signaux sécurité/défense**—avec de nombreux autres flux temps réel agrégés avant lissage Layer 4 ; calcul **{{naciro}}**, diffusion **{{nationfiles}}**.",
             "summary_bullets": [
-                "Échelle 0–100 pour classer la stabilité géopolitique",
-                "Sortie en temps réel calculée par Naciro",
-                "Lié à la méthodologie et aux références de sources"
+                "**Nature agrégée:** le NFSI fusionne des fils FX, des fils d’actualités porteurs de sentiment et des fils sécurité/contexte avec d’autres indicateurs ; lisez‑le comme **composite** (méthodo/VVR).",
+                "Lecture rapide : un score par pays qui agrège de nombreux signaux (pas un seul événement).",
+                "Traçable : méthodologie, sources et audit sont décrits sur les pages NFSI et dans le VVR.",
+                "Utile au quotidien : tableaux de bord, NFSI mondial et profils pays pour comparer dans le temps.",
+                "À jour : recalcul typique toutes les ~15 minutes ; cette page peut afficher une valeur globale dynamique si activée.",
+                "Pas un conseil : l’outil documente une analyse—notamment pas un conseil voyage, juridique ou financier."
             ],
-            "body_md": "**NFSI** est un indice de sortie standardisé.\n\nIl est calculé par {{naciro}} et publié dans {{nationfiles}}.\n\nLes pages Knowledge peuvent intégrer dynamiquement la valeur actuelle (slot: `global_current`)."
+            "body_md": "Le **NFSI** est l’**indicateur principal stabilité / risque géopolitique** de NationFiles : **0–100** par pays couvert et en agrégat mondial.\n\n**Lecture critique:** le NFSI **agrège** explicitement des **brins Forex/devises**, des **flux d’actualités et de sentiment médiatique** et des **sources sécurité/contexte stratégique** avec des dizaines d’autres familles documentées (115+ flux), selon les couches 1→4 décrites dans le VVR. Le **manquer** revient souvent à traiter le NFSI comme une simple tendance d’actualité — alors qu’il résume **plusieurs canaux** après pondération.\n\n**Usage :** comparaison rapide dans le temps et entre pays ; cadre numérique partagé.\n\n**Calcul :** couches et poids dans la [méthodologie NFSI](/fr/company/nfsi/) et le [VVR](/fr/legal/validation-and-verification-report/) ; moteur **{{naciro}}**, publication **{{nationfiles}}**.\n\n**Intégration :** les valeurs NFSI et séries associées vivent dans des profils **{{nationfile-json}}** et sur **{{nationfiles}}** (graphiques, badges, exports).",
+            "facts": [
+                {
+                    "k": "Calculé par",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Publié via",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Contexte profils / exports",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Des signaux bruts à l’indice",
+                    "body_md": "Le **{{nfsi}}** clôt des pipelines documentés — pas une valeur improvisée.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGix\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMix\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Étape | Contenu |\n| --- | --- |\n| 1 | Signaux bruts / sorties connecteurs (voir VVR) |\n| 2 | {{naciro}} — pondération, validation, intermédiaires |\n| 3 | **{{nfsi}}** 0–100 sur pages pays & exports |"
+                },
+                {
+                    "title": "Comment lire le NFSI",
+                    "body_md": "- **0–100** reflète le mix documenté stabilité/risque.\n- **Bandes A–E** donnent une lecture grossière.\n- **Les tendances** comptent souvent plus qu’un instantané."
+                },
+                {
+                    "title": "Transparence",
+                    "body_md": "Documentation first-party : registre des sources, méthodologie et VVR pour voir *quels* signaux entrent et *comment* ils sont combinés."
+                },
+                {
+                    "title": "Quatre couches (rappel)",
+                    "body_md": "Selon le VVR : **Layer 1** indicateurs → **Layer 2** agrégation → **Layer 3** score pondéré 0–100 → **Layer 4** inertie/lissage — lecture plus stable qu’un seul signal brut."
+                },
+                {
+                    "title": "Bandes (rappel)",
+                    "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
+                }
+            ]
         },
         "es": {
             "title": "Índice de Estabilidad NationFiles (NFSI)",
-            "teaser": "El NFSI es una puntuación cuantitativa de estabilidad (0–100). Lo calcula {{naciro}} y se publica en tiempo real vía {{nationfiles}}.",
+            "teaser": "El NFSI agrega señales documentadas de **forex/divisas**, **noticias y sentimiento mediático** y **seguridad/contexto estratégico**, junto con decenas de familias en tiempo casi real, en un único 0–100; motor **{{naciro}}**, difusión **{{nationfiles}}**.",
             "summary_bullets": [
-                "Escala 0–100 para clasificar la estabilidad geopolítica",
-                "Salida en tiempo real calculada por Naciro",
-                "Vinculado a metodología y referencias de fuentes"
+                "**Agregación explícita:** no es un solo hilo—combina FX, noticias/sentimiento y pistas de seguridad con más indicadores (ver metodología/VVR).",
+                "Orientación rápida: un puntaje por país que agrupa muchas señales (no un solo titular).",
+                "Explicable: metodología, fuentes y auditoría están en las páginas NFSI y en el VVR.",
+                "Práctico: paneles, NFSI global y perfiles país para comparar en el tiempo.",
+                "Actualizado: recálculo típico cada ~15 minutos; esta página puede mostrar un valor global dinámico si aplica.",
+                "No es asesoría: es un producto de análisis documentado, no consejo de viaje, legal ni de inversión."
             ],
-            "body_md": "**NFSI** es un índice de salida estandarizado.\n\nLo calcula {{naciro}} y se publica en {{nationfiles}}.\n\nLas páginas de Knowledge pueden integrar dinámicamente el valor actual (slot: `global_current`)."
+            "body_md": "El **NFSI** es el **indicador principal de estabilidad / riesgo geopolítico** en NationFiles: **0–100** por país cubierto y como agregado mundial.\n\n**Nuance crítica:** NFSI es una **mezcla documentada** de **familias FX/divisas**, **noticias y sentimiento mediático** y **haces de seguridad/contexto estratégico**, además de decenas de otras líneas tiempo real (115+ feeds) siguiendo capas **1→4** del VVR. Sin esa lectura, se confunde demasiado a menudo con “solo titulares”; el proceso describe **pesos exactos antes del 0–100**.\n\n**Uso:** comparación rápida entre países y en el tiempo; marco numérico compartido.\n\n**Derivación:** capas y pesos en [metodología NFSI](/es/company/nfsi/) y [VVR](/es/legal/validation-and-verification-report/); motor **{{naciro}}**, publicación **{{nationfiles}}**.\n\n**Integración:** los valores NFSI y series viven en perfiles **{{nationfile-json}}** y en la UI de **{{nationfiles}}** (gráficos, badges, exportaciones).",
+            "facts": [
+                {
+                    "k": "Calculado por",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Publicado vía",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Contexto perfiles / export",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "De señal bruta al índice",
+                    "body_md": "**{{nfsi}}** cierra pipelines documentados — no es un número improvisado.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGix\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMix\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Paso | Contenido |\n| --- | --- |\n| 1 | Señales / salidas connector (ver VVR) |\n| 2 | {{naciro}} — ponderación, validación, intermedios |\n| 3 | **{{nfsi}}** 0–100 en superficies país y exportaciones |"
+                },
+                {
+                    "title": "Cómo leer el NFSI",
+                    "body_md": "- **0–100** refleja la mezcla documentada de estabilidad/riesgo.\n- **Bandas A–E** son un resumen grueso.\n- **Las tendencias** suelen importar más que un solo valor."
+                },
+                {
+                    "title": "Transparencia",
+                    "body_md": "Documentación first-party: registro de fuentes, metodología y VVR para ver *qué* entra y *cómo* se combina."
+                },
+                {
+                    "title": "Cuatro capas (recordatorio)",
+                    "body_md": "Según el VVR: **Layer 1** indicadores → **Layer 2** agregación → **Layer 3** puntaje ponderado 0–100 → **Layer 4** inercia/suavizado."
+                },
+                {
+                    "title": "Bandas (recordatorio)",
+                    "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
+                }
+            ]
         },
         "pt": {
             "title": "Índice de Estabilidade NationFiles (NFSI)",
-            "teaser": "O NFSI é uma pontuação quantitativa de estabilidade (0–100). É calculado por {{naciro}} e publicado em tempo real via {{nationfiles}}.",
+            "teaser": "O NFSI junta fluxos FX/divisas, notícias e sentimento mediático e sinais de segurança/contexto estratégico com muitas outras famílias em quase‑tempo‑real até um único 0–100 ; motor **{{naciro}}**, publicação **{{nationfiles}}**.",
             "summary_bullets": [
-                "Escala 0–100 para classificar a estabilidade geopolítica",
-                "Saída em tempo real calculada pela Naciro",
-                "Vinculado a metodologia e referências de fontes"
+                "**Agregação explícita:** mistura materiais FX, notícias/sentimento e segurança com mais feeds documentados — leia sempre como headline composto (VVR/metodologia).",
+                "Leitura rápida: uma pontuação por país que agrega muitos sinais (não um único evento).",
+                "Rastreável: metodologia, fontes e auditoria estão nas páginas NFSI e no VVR.",
+                "Prático: painéis, NFSI global e perfis de país para comparar ao longo do tempo.",
+                "Atualizado: recálculo típico a cada ~15 minutos; esta página pode mostrar leitura global dinâmica se configurado.",
+                "Não é aconselhamento: é um produto de análise documentado, não orientação de viagem, jurídica ou de investimento."
             ],
-            "body_md": "**NFSI** é um índice de saída padronizado.\n\nEle é calculado por {{naciro}} e publicado em {{nationfiles}}.\n\nAs páginas de Knowledge podem incorporar dinamicamente o valor atual (slot: `global_current`)."
+            "body_md": "O **NFSI** é o **indicador principal de estabilidade / risco geopolítico** na NationFiles: **0–100** por país abrangido e como agregado mundial.\n\n**Leitura crítica:** o NFSI **agrega conscientemente ramos cambiais FX**, **tópicos de notícias e sentimento mediático** e **pistas de segurança/defesa/contexto estratégico**, juntamente com dezenas de outras famílias próximas do tempo‑real (**115+ fontes**) ao longo das camadas descritas no VVR até à suavização final. Omitir esse enquadramento costuma fazê‑lo soar como „só sentimento de redes“ — quando o relatório público evidencia vários canais.\n\n**Uso:** comparação rápida no tempo e entre países; quadro numérico partilhado.\n\n**Derivação:** camadas e pesos em [metodologia NFSI](/pt/company/nfsi/) e [VVR](/pt/legal/validation-and-verification-report/); motor **{{naciro}}**, publicação **{{nationfiles}}**.\n\n**Integração:** valores NFSI e séries aparecem em perfis **{{nationfile-json}}** e na UI **{{nationfiles}}** (gráficos, badges, exportações).",
+            "facts": [
+                {
+                    "k": "Calculado por",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Publicado via",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Contexto perfis / export",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Do sinal bruto ao índice",
+                    "body_md": "**{{nfsi}}** fecha pipelines documentados — não é um número improvisado.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGix\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMix\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| Passo | Conteúdo |\n| --- | --- |\n| 1 | Sinais / saídas connector (ver VVR) |\n| 2 | {{naciro}} — ponderação, validação, intermediários |\n| 3 | **{{nfsi}}** 0–100 em páginas país e exportações |"
+                },
+                {
+                    "title": "Como ler o NFSI",
+                    "body_md": "- **0–100** reflete a mistura documentada de estabilidade/risco.\n- **Faixas A–E** são um resumo grosso.\n- **Tendências** costumam importar mais que um único número."
+                },
+                {
+                    "title": "Transparência",
+                    "body_md": "Documentação first-party: registo de fontes, metodologia e VVR para ver *o que* entra e *como* se combina."
+                },
+                {
+                    "title": "Quatro camadas (lembrete)",
+                    "body_md": "Segundo o VVR: **Layer 1** indicadores → **Layer 2** agregação → **Layer 3** pontuação ponderada 0–100 → **Layer 4** inércia/suavização."
+                },
+                {
+                    "title": "Faixas (lembrete)",
+                    "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
+                }
+            ]
         },
         "ar": {
             "title": "مؤشر الاستقرار NationFiles (NFSI)",
-            "teaser": "NFSI هو درجة استقرار كمية (0–100). يتم حسابه بواسطة {{naciro}} ونشره كمخرج فوري عبر {{nationfiles}}.",
+            "teaser": "يجمّع NFSI تيارات موثقة من **أسعار الصرف/FX** و**الأخبار ومشاعر الإعلام** و**مؤشرات الأمن والسياق الاستراتيجي** مع عشرات المصادر الزمن شبه‑الفورية في درجة واحدة 0–100؛ يحسبها {{naciro}} وتعرضها {{nationfiles}}.",
             "summary_bullets": [
-                "مقياس 0–100 لتصنيف الاستقرار الجيوسياسي",
-                "مخرج فوري يتم حسابه بواسطة Naciro",
-                "مرتبط بالمنهجية ومراجع المصادر"
+                "**تجميع واضح:** ليس سلسلة واحدة — FX + أخبار/مشاعر + الأمن وباقي الأسرة المذكورة في المنشور قبل التنعيم؛ راجع المنهجية وVVR.",
+                "قراءة سريعة: درجة لكل دولة تجمع إشارات كثيرة وليس حدثاً واحداً.",
+                "قابل للتتبع: المنهجية والمصادر ومسار التدقيق موثقة في صفحات NFSI وتقرير VVR.",
+                "عملي: لوحات ومؤشر عالمي وملفات دول لمقارنة التطور عبر الزمن.",
+                "محدث: يُعاد حسابه عادة كل نحو 15 دقيقة؛ ويمكن عرض قراءة عالمية ديناميكية في هذه الصفحة عند التفعيل.",
+                "ليس استشاراً: مخرج تحليلي موثق وليس نصيحة سفر أو قانون أو استثمار."
             ],
-            "body_md": "**NFSI** هو مؤشر مخرجات موحد.\n\nيتم حسابه بواسطة {{naciro}} ونشره ضمن {{nationfiles}}.\n\nيمكن لصفحات Knowledge تضمين القيمة الحالية بشكل ديناميكي (slot: `global_current`)."
+            "body_md": "**NFSI** هو **المؤشر الرئيسي للاستقرار / المخاطر الجيوسياسية** على NationFiles: **0–100** لكل دولة مغطاة وكمجمّع عالمي.\n\n**فهم أساسي:** NFSI ليس عدداً وحيد المنبع؛ يُنشأ عبر دمج التيارات **التي تعكس أسواق العملات/FX** و**مسارات الأخبار والمشاعر الإعلامية** و**مؤشرات أمن وسياق استراتيجي** مع عشرات المجموعات الموثقة (115+ مغذي زمن‑قريب) وفق الطبقات في VVR. بدون ذلك قد يُختزل خطأ إلى „شريط أخبار“، بينما التوثيق يشرح **دمج المرجح**.\n\n**الاستخدام:** مقارنة سريعة عبر الزمن وبين الدول؛ إطار رقمي مشترك.\n\n**الاشتقاق:** الطبقات والأوزان في [منهجية NFSI](/ar/company/nfsi/) و[VVR](/ar/legal/validation-and-verification-report/)؛ المحرك **{{naciro}}** والنشر عبر **{{nationfiles}}**.\n\n**التكامل:** تظهر قيم NFSI والسلاسل الزمنية في ملفات **{{nationfile-json}}** وواجهة **{{nationfiles}}** (رسوم، شارات، تصدير).",
+            "facts": [
+                {
+                    "k": "يُحسب بواسطة",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "يُنشر عبر",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "سياق الملفات / التصدير",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "من الإشارة الخام إلى المؤشر",
+                    "body_md": "**{{nfsi}}** ختام مسارات موثقة — لا رقمًا مبتكرًا عشوائيًا.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGix\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMix\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| خطوة | المحتوى |\n| --- | --- |\n| 1 | إشارات خام / مخرجات موصل (راجع VVR) |\n| 2 | {{naciro}} — ترجيح، تحقق، وسطيات |\n| 3 | **{{nfsi}}** 0–100 على صفحات الدول والتصدير |"
+                },
+                {
+                    "title": "كيف تقرأ NFSI",
+                    "body_md": "- **0–100** تعكس المزيج الموثق للاستقرار/المخاطر.\n- **شرائح A–E** ملخص خشن.\n- **الاتجاهات** غالباً أهم من لقطة لحظية."
+                },
+                {
+                    "title": "الشفافية",
+                    "body_md": "توثيق first-party: سجل المصادر والمنهجية وVVR لمعرفة *ما* الذي يدخل و*كيف* يُدمج."
+                },
+                {
+                    "title": "أربع طبقات (تذكير)",
+                    "body_md": "حسب VVR: **Layer 1** مؤشرات → **Layer 2** تجميع → **Layer 3** درجة مرجحة 0–100 → **Layer 4** قصور/تنعيم."
+                },
+                {
+                    "title": "الشرائح (تذكير)",
+                    "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
+                }
+            ]
         },
         "ja": {
             "title": "NationFiles Stability Index (NFSI)",
-            "teaser": "NFSI は定量的な安定性スコア（0–100）です。{{naciro}} が計算し、{{nationfiles}} を通じてリアルタイム公開されます。",
+            "teaser": "NFSI は **FX・通貨市場由来の情報**・**ニュース／センチメント系ストリーム**・**安全保障・戦略コンテキスト** に加え、多数のニアリアルタイム系列をレイヤ処理して **ひとつの 0–100 に圧縮**します。**{{naciro}}** が計算し **{{nationfiles}}** が表示します。",
             "summary_bullets": [
-                "地政学的安定性を分類する 0–100 スケール",
-                "Naciro が計算するリアルタイム出力",
-                "方法論とソース参照に連携"
+                "**集約インデックスです:** 「単一ソース」ではありません——FX／ニュース情緒／セキュリティ等を統合後に平滑化まで含めて公開（詳細は方法論と VVR）。",
+                "素早い把握: 国ごとに多くのシグナルを束ねたスコア（単一ニュースではありません）。",
+                "追跡可能: 方法論・ソース・監査経路は NFSI ページと VVR に記載。",
+                "実用向け: ダッシュボード、世界 NFSI、国プロフィールで時系列比較がしやすい。",
+                "鮮度: おおよそ 15 分ごとに再計算；設定により本ページに世界値を動的表示可能。",
+                "助言ではありません: 文書化された分析出力であり、旅行・法律・投資のアドバイスではありません。"
             ],
-            "body_md": "**NFSI** は標準化された出力インデックスです。\n\n{{naciro}} により計算され、{{nationfiles}} 内で公開されます。\n\nKnowledge ページでは現在値を動的に埋め込めます（slot: `global_current`）。"
+            "body_md": "**NFSI** は NationFiles の **主要な地政学的安定性／リスク指標**です：**対象各国および世界集約で 0–100**。\n\n**読み間違いの要注意点:** NFSI は **複数チャネルを束ねた集約ヘッドライン**です。**外国為替に寄った系列**・**ニュース／メディアのセンチメントを含む系統**・**安全保障・軍事コンテキスト系**だけでなく、その他ドキュメント化されたニアリアルタイム系列 (**115 系統超**) をレイヤ構成し、公開手順にある貫性平滑化まで経て単一値になります。その前提を省略すると NFSI が「ひとつの速報」のように誤解されがちです（重みについては **方法論および VVR**）。\n\n**用途:** 国と時系列の迅速な比較；共有の数値枠。\n\n**算出:** レイヤと重みは [NFSI 方法論](/ja/company/nfsi/) と [VVR](/ja/legal/validation-and-verification-report/) に記載。**{{naciro}}** が計算し、**{{nationfiles}}** が公開します。\n\n**統合:** NFSI の値と関連系列は **{{nationfile-json}}** プロファイルと **{{nationfiles}}** の UI（チャート、バッジ、エクスポート）に現れます。",
+            "facts": [
+                {
+                    "k": "計算",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "公開",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "プロファイル／エクスポート",
+                    "v": "{{nationfile-json}}"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "生シグナルから指数へ",
+                    "body_md": "**{{nfsi}}** は文書化パイプラインの末尾に置かれます——即興の数値ではありません。\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 480 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGix\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMix\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"73\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"142\" y1=\"44\" x2=\"162\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"166\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"235\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"304\" y1=\"44\" x2=\"324\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMix)\"/><rect x=\"328\" y=\"18\" width=\"138\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGix)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"397\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text></g></svg></div>\n\n| 段 | 内容 |\n| --- | --- |\n| 1 | 生シグナル / コネクタ出力（VVR 参照） |\n| 2 | {{naciro}} — 重み付け・検証・中間結果 |\n| 3 | **{{nfsi}}** 0–100 を国ページとエクスポートに |"
+                },
+                {
+                    "title": "NFSI の読み方",
+                    "body_md": "- **0–100** は文書化された安定性/リスクの合成であり、単一事件ではありません。\n- **A–E バンド** は大まかな区分です。\n- **トレンド** はスナップショットより重要なことが多いです。"
+                },
+                {
+                    "title": "透明性",
+                    "body_md": "ファーストパーティの文書（ソースレジストリ、方法論、VVR）で、*何が*入り*どう*合成されるかを確認できます。"
+                },
+                {
+                    "title": "4 レイヤ（要約）",
+                    "body_md": "VVR に沿う概略：**Layer 1** 指標スコア → **Layer 2** 集約 → **Layer 3** 重み付き最終 0–100 → **Layer 4** 慣性／平滑化。"
+                },
+                {
+                    "title": "バンド早見",
+                    "body_md": "A (81–100) · B (61–80) · C (41–60) · D (21–40) · E (0–20)"
+                }
+            ]
         }
     },
     "relations": [
@@ -279,6 +656,18 @@
         {
             "rel": "isPartOf",
             "to": "nationfiles"
+        },
+        {
+            "rel": "usesInputFrom",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "complements",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "complements",
+            "to": "governance-institutions-index"
         }
     ],
     "faq_refs": [

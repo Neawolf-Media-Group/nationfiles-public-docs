@@ -8,25 +8,34 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/naciro/ja.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/naciro/"
+nf_canonical_html_url: "https://nationfiles.com/ja/knowledge/entity/naciro/"
 nf_markdown_lang_file: "ja"
 ---
-# Naciro Engine
+# Naciro Engine — 地政学インテリジェンスを支える分析 AI
 
-## 機能
+## Naciro とは
 
-**Naciro Engine** は **SoftwareApplication** としてモデル化される推論層で、検証済みシグナルを **正規化された中間状態** と **スカラー出力（主に NFSI）** に変換します。一般対話ボットではなく、**宣言されたパイプライン**（属性 `pipeline`、**VVR**）として説明されます。
+**Naciro Engine** は NationFiles の中核となる **AI 駆動の評価スタック**です。**高頻度の生シグナル** — 経済・市場フィード、安全保障・ニュース由来のストリーム、DataSourceConnector の構造化指標 — を取り込み、**正規化・比較可能な中間結果**に変換します。そこから **NationFiles Stability Index (NFSI)**、ダッシュボード用テキスト、製品設定に応じた **短期予測ウィンドウ**（文書化された範囲の Predictive Layer、例: 24h / 7 日）が生まれます。
 
-## 論理的データフロー
+一言で言えば、Naciro は「サイト」ではなく、ノイズを **測定可能な地政学シグナル**に変え NationFiles が提示・説明する **ブレイン**です。
 
-取り込み → 集約・正規化 → バイアス補正／予測調整 → NFSI 出力。更新周期は `update_cycle` に従います。
+## 実務ですること
 
-## 範囲
+1. **シグナル集約:** 公開・文書化された多数ソースからの取り込みと時間集約（ソース規模は公開方法論参照）。
+2. **正規化・重み付け:** 共通の NFSI スケール／レイヤへ合わせ、国と時系列を**比較可能**に保つ。
+3. **方法論上の調整・バイアス:** 文書化されている範囲で系統的歪みを補正 — 詳細は **Validation & Verification Report (VVR)**。
+4. **出力:** 世界値・国値（**NFSI**）、ダッシュボード向けトレンド／ムード文、方法論ページに従う任意の予測コンポーネント。
 
-本ページはランタイムテレメトリを保持しません。公開方法論と VVR を参照してください。
+## NationFiles 上のリズムと役割
 
-## 参照
+**定期的な更新周期**（設計上の前提として公開）で稼働し、国ページと世界ダッシュボードの**ライブ面**を供給します — 年次スナップショットではなく**継続的な状況像**です。
+
+## 限界
+
+あらゆる**微小イベント**を予言するものではなく、**構造化された指標**と文書化された不確実性を提供します。一次ソースや現地報道の代替ではありません。
+
+## 出典
 
 - [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
 - [NFSI 方法論](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)

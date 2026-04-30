@@ -8,29 +8,29 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/lpu-architecture/pt.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/lpu-architecture/"
+nf_canonical_html_url: "https://nationfiles.com/pt/knowledge/entity/lpu-architecture/"
 nf_markdown_lang_file: "pt"
 ---
-# Arquitetura LPU
+# LPU Architecture — base de cálculo para inferência em tempo real
 
-## Função
+## O que a LPU significa neste produto
 
-**LPU Architecture** é a **camada de hardware de inferência dedicada** sob o Naciro: **determinismo e baixa latência** nos sinais que alimentam cargas NFSI. O tipo **`CreativeWork`** e o DOI tratam a página como **documento de arquitetura**, não ficha de produto dinâmica.
+**LPU Architecture** designa a **camada de inferência de alto desempenho** por baixo do motor Naciro: formaliza como a NationFiles garante **execução determinística e de baixa latência** para os percursos que alimentam **NFSI**, textos de painel e **análise geopolítica em tempo real**. Onde jobs cloud genéricos seriam imprevisíveis, esta camada visa uma **base de computação planificável** para pontuações e resumos **estáveis e repetíveis**.
 
-## Latência
+A documentação pública cita **< 50 ms** de latência de inferência no setup de referência — **meta de engenharia**, não medição nesta página.
 
-`inference_latency`: **< 50 ms** (meta documentada).
+## O que entrega
 
-## DOI
+- **Débito:** pontuação de alta frequência sem o analytics como estrangulamento.
+- **Determinismo:** resultados comparáveis no tempo — essencial para um índice institucional.
+- **Acoplamento ao Naciro:** a LPU é o **substrato hardware/arquitectura**; o Naciro é a **lógica**; o NFSI a **pontuação visível**.
 
-**10.5281/zenodo.19774594**.
+## Referência
 
-## Contexto
+DOI **10.5281/zenodo.19774594**.
 
-Motor `naciro`, métrica `nfsi`, publicação via `nationfiles`.
-
-## Referências
+## Fontes
 
 - [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
 - [Metodologia NFSI](https://nationfiles.com/en/company/nfsi/)
-- [DOI](https://doi.org/10.5281/zenodo.19774594)
+- [DOI LPU](https://doi.org/10.5281/zenodo.19774594)

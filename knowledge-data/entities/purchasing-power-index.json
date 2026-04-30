@@ -1,0 +1,677 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "purchasing-power-index",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T20:25:00Z",
+    "topics": [
+        "economy",
+        "ppi",
+        "world-bank",
+        "country-profiles",
+        "exports"
+    ],
+    "aliases": [
+        "PPI",
+        "Purchasing Power Index",
+        "Kaufkraft-Index",
+        "Indice de pouvoir d'achat",
+        "Macro-KPI-Paket",
+        "GDP at purchasing power parity per capita"
+    ],
+    "attributes": [
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "model_type",
+            "value": "NationFiles country macro bundle: GDP at purchasing power parity (PPP) per person as the headline cross-country comparator, together with prices, labour market, reserves, VAT context, and optional co-bundled {{nfsi}} — not a substitute for official national accounts interpretation or for {{nfsi}} semantics. Macroeconomic series stay distinct from—but are meant to be read beside—near-daily refreshed FX quotations that {{naciro}} aggregates for the NationFiles UX.",
+            "depends_on": [
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles country macro bundle: GDP at purchasing power parity (PPP) per person as the headline cross-country comparator, together with prices, labour market, reserves, VAT context, and optional co-bundled {{nfsi}} — not a substitute for official national accounts interpretation or for {{nfsi}} semantics. Macroeconomic series stay distinct from—but are meant to be read beside—near-daily refreshed FX quotations that {{naciro}} aggregates for the NationFiles UX.",
+                "de": "NationFiles‑Ländermakro‑Bündel: BIP nach Kaufkraftparität pro Kopf als zentraler länderübergreifender Vergleichsanker zusammen mit Preisen, Arbeitsmarkt, Reserven, MWSt.‑Rahmen und optional mit ausgespieltem {{nfsi}} — kein Ersatz für die Interpretation offizieller Volkswirtschaftlicher Gesamtrechnungen und keine Substitution der {{nfsi}}‑Semantik. Makroserien sind klar davon zu trennen, sollen jedoch im selben Lesekontext neben häufig fast täglichen FX‑Notierungen gesehen werden, die {{naciro}} für die NationFiles‑Oberfläche bündelt.",
+                "fr": "Bloc macro‑pays NationFiles : le PIB en parité de pouvoir d’achat par habitant comme comparateur référencé entre pays, avec prix, marché du travail, réserves, cadre TVA et mise en avant optionnelle d’un bundle incluant {{nfsi}} — sans se substituer à l’analyse officielle des comptes ni à la définition précise du {{nfsi}}. Les macros restent séparées, tout en se lisant couramment avec les cotations FX quasi quotidiennes que {{naciro}} agrège pour l’expérience NationFiles.",
+                "es": "Paquete macro por país NationFiles: PIB a paridad de poder adquisitivo por persona como comparador país‑a‑país, junto con precios, mercado laboral, reservas y contexto de IVA más posible coexistencia técnica con {{nfsi}} — no sustituye la lectura oficial de cuentas nacionales ni la semántica de {{nfsi}}. Las macros son distintas de las cotizaciones FX casi‑diarias que {{naciro}} sintetiza en la UX; deben lecturarse en conjunto cuando corresponda.",
+                "pt": "Bundle macro por país NationFiles: PIB em paridade do poder de compra per capita como comparador transversal‑país inclui preços, mercado laboral, reservas, enquadramento de IVA e {{nfsi}} opcionalmente no mesmo agrupamento — não substitui interpretação de contabilidade nacional oficial nem semânticas de {{nfsi}}. As macros distinguem‑se das cotações FX quase‑diárias que {{naciro}} agrega na UX NationFiles mas dialogam com elas no leitor.",
+                "ar": "حزمة الماكرو للدول على NationFiles: الناتج المحلي الإجمالي بتعادل القدرة الشرائية للفرد كمقياس أساس للمقارنة بين الدول، مع الأسعار وسوق العمل والاحتياطيات وإطار ضريبة القيمة المضافة وقد يُعرَض معها {{nfsi}} في الطرد الواحد حيث يُمكن — لا يُغني عن تفسير الحسابات القومية الرسمية ولا عن مقصد {{nfsi}} الإجرائي الموثَّق. تظل سلسلة الماكرو منفصلة عمّا تجمعه {{naciro}} من أسعار صرف يُجدَّد بكثافة تقارب اليوم؛ تُقرأ المجالات معًا حيث يلائم ذلك.",
+                "ja": "NationFiles の国情報マクロ束：クロスカントリー比較の要点として一人当たり購買力平価GDPに加え、物価・労働市場・外貯・標準VAT文脈、必要なら同一バンドル化された {{nfsi}} — 公式国民経済計算の読み替えや {{nfsi}} の意味論の代替ではない。 {{naciro}} が UX で束ねる準日足的 FX とは系列的に別であるが並読される前提にある。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Each displayed KPI is wired to documented upstream tables/series; internal keys (e.g. gdp_ppp_pc, inflation_cpi_pct) are declared in NationFiles' application-side metric registry for reproducibility between UI, snapshots, and exports.",
+            "depends_on": [
+                "nfsi",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "NationFiles web application (registry)",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Jede angezeigte KPI ist mit dokumentierten Upstream-Tabellen/Serien verdrahtet; interne Schlüssel (z. B. gdp_ppp_pc, inflation_cpi_pct) sind in der veröffentlichten Kennzahlen-Registry der NationFiles-Anwendung für Reproduzierbarkeit zwischen UI, Snapshots und Exporten deklariert.",
+                "en": "Each displayed KPI is wired to documented upstream tables/series; internal keys (e.g. gdp_ppp_pc, inflation_cpi_pct) are declared in NationFiles' application-side metric registry for reproducibility between UI, snapshots, and exports.",
+                "fr": "Chaque KPI affichée est reliée à des tables/séries amont documentées ; les clés internes sont déclarées dans le registre public de métriques NationFiles pour reproduire UI, snapshots et exports.",
+                "es": "Cada KPI mostrada enlaza tablas/series documentadas aguas arriba; las claves internas se declaran en el registro público de métricas NationFiles para replicar UI, instantáneas y exportaciones.",
+                "pt": "Cada KPI exibida liga-se a tabelas séries documentadas a montante; chaves internas estão no registo público NationFiles para reprodutibilidade entre UI, snapshots e exportações.",
+                "ar": "كل مؤشر KPI المعروض مربوط بجداول/سلاسل مصدر موثّقة؛ المفاتيح الداخلية مُعلَنة في سجل المقاييس العام لـ NationFiles لإعادة إنتاج الواجهة واللقطات والتصدير.",
+                "ja": "表示される各 KPI は文書化された上流テーブル／系列に接続され、内部キーは NationFiles の公開指標レジストリで宣言され、UI・スナップショット・エクスポート間で再現可能にする。"
+            }
+        },
+        {
+            "key": "country_coverage",
+            "value": "195 nations (platform scope; concrete series availability follows datasource coverage)",
+            "sources": [
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "de": "195 Staaten (Plattformumfang; konkrete Serienverfügbarkeit folgt der Datenquellenabdeckung)",
+                "en": "195 nations (platform scope; concrete series availability follows datasource coverage)",
+                "fr": "195 pays (périmètre plateforme ; disponibilité des séries selon les sources)",
+                "es": "195 países (ámbito de plataforma; disponibilidad según cobertura de fuentes)",
+                "pt": "195 países (âmbito da plataforma; disponibilidade segundo cobertura das fontes)",
+                "ar": "195 دولةً (نطاق المنصة؛ توفر السلاسل يتبع تغطية المصدر)",
+                "ja": "195 か国（プラットフォーム範囲；系列の利用可否はデータソースの範囲に従う）"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Primarily World Bank open indicators (e.g. GDP PPP per capita, CPI inflation, total and youth unemployment, total reserves); standard VAT via lookup/API; {{nfsi}} where the same KPI bundle includes the stability headline. Near-real-time FX quotations curated through {{naciro}} are a recommended cross-read on country/economy surfaces but are not inputs to the PPI World Bank series themselves.",
+            "depends_on": [
+                "naciro",
+                "nfsi"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Primär offene Indikatoren der World Bank (u. a. BIP KKP pro Kopf, VPI-Inflation, Erwerbslosigkeit gesamt/jugend, Gesamtreserven); Standard-MwSt. via Lookup/API; {{nfsi}} wenn dasselbe KPI-Bündel die Stabilitäts-Headline enthält. Aktualisierte FX-Notierungen über {{naciro}} sind empfohlene Querlektüre, aber keine Eingabe der PPI-World-Bank-Serien.",
+                "en": "Primarily World Bank open indicators (e.g. GDP PPP per capita, CPI inflation, total and youth unemployment, total reserves); standard VAT via lookup/API; {{nfsi}} where the same KPI bundle includes the stability headline. Near-real-time FX quotations curated through {{naciro}} are a recommended cross-read on country/economy surfaces but are not inputs to the PPI World Bank series themselves.",
+                "fr": "Principalement indicateurs ouverts Banque mondiale (PIB PPA/habitant, inflation IPC, chômage total/jeunesse, réserves) ; TVA standard via API ; {{nfsi}} si le bundle KPI inclut la headline stabilité. Cotations FX via {{naciro}} : lecture croisée recommandée, pas entrée des séries PPI Banque mondiale.",
+                "es": "Indicadores abiertos del Banco Mundial (PIB PPA per cápita, IPC, desempleo total/juvenil, reservas); IVA estándar vía API; {{nfsi}} si el mismo paquete incluye la cabecera de estabilidad. FX casi en tiempo real vía {{naciro}}: lectura cruzada, no insumo directo de las series PPI del Banco.",
+                "pt": "Indicadores abertos do Banco Mundial (PIB PPC per capita, IPC inflação, desemprego total/jovem, reservas); IVA padrão via API; {{nfsi}} se o mesmo bundle incluir a headline de estabilidade. Cotações FX via {{naciro}}: leitura cruzada recomendada, não entrada das séries PPI do Banco.",
+                "ar": "مؤشرات مفتوحة للبنك الدولي (ناتج تعادل القوة الشرائية للفرد، التضخم، البطالة، الاحتياطيات)؛ ضريبة القيمة المضافة المعيارية عبر واجهة؛ {{nfsi}} عندما يتضمن الحزم نفسها عنوان الاستقرار. أسعار الصرف عبر {{naciro}} للقراءة المتوازية وليست مدخلات سلسلة PPI نفسها.",
+                "ja": "主に世界銀行のオープン指標（一人当たり GDP PPP、CPI インフレ、失業、準備金など）；標準 VAT は API／ルックアップ；同一 KPI バンドルに安定性見出しがあれば {{nfsi}}。{{naciro}} 経由の準リアルタイム FX は横読み推奨だが PPI の WB 系列そのものの入力ではない。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Country KPI snapshot tables, PDF/JSON exports where enabled, PPI/GGI copy on country dashboards — timestamps in bundles (e.g. built_at_utc) per UI FAQ",
+            "depends_on": [
+                "nationfiles",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "de": "Länder-KPI-Snapshot-Tabellen, PDF/JSON-Exporte wo freigeschaltet, PPI/GGI-Text auf Länder-Dashboards — Zeitstempel in Bündeln (z. B. built_at_utc) laut UI-FAQ",
+                "en": "Country KPI snapshot tables, PDF/JSON exports where enabled, PPI/GGI copy on country dashboards — timestamps in bundles (e.g. built_at_utc) per UI FAQ",
+                "fr": "Tableaux snapshot KPI pays, exports PDF/JSON si activés, textes PPI/GGI sur dashboards — horodatages (ex. built_at_utc) selon FAQ UI",
+                "es": "Tablas snapshot KPI por país, exportaciones PDF/JSON si activadas, textos PPI/GGI en paneles — marcas de tiempo (p. ej. built_at_utc) según FAQ",
+                "pt": "Tabelas snapshot KPI por país, exportações PDF/JSON se ativas, texto PPI/GGI nos dashboards — carimbos (ex. built_at_utc) conforme FAQ",
+                "ar": "جداول لقطة KPI للدول، تصدير JSON/PDF عند التفعيل، نصوص PPI/GGI على لوحات الدول — أختام زمنية مثل built_at_utc حسب الأسئلة الشائعة",
+                "ja": "国別 KPI スナップショット表、有効なら PDF/JSON エクスポート、国ダッシュボードの PPI/GGI 文言 — バンドル内の built_at_utc などは UI FAQ に従う"
+            }
+        },
+        {
+            "key": "knowledge_hub",
+            "value": "https://nationfiles.com/en/knowledge/",
+            "sources": [
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/knowledge/",
+                "en": "https://nationfiles.com/en/knowledge/",
+                "fr": "https://nationfiles.com/en/knowledge/",
+                "es": "https://nationfiles.com/en/knowledge/",
+                "pt": "https://nationfiles.com/en/knowledge/",
+                "ar": "https://nationfiles.com/en/knowledge/",
+                "ja": "https://nationfiles.com/en/knowledge/"
+            }
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Purchasing Power Index (PPI)",
+            "teaser": "**Länderlage auf einen Blick:** Auf {{nationfiles}} fasst der PPI **dokumentierte Makrodaten** zu Wirtschaftskraft, Preisen, Arbeitsmarkt und Finanzpuffern — mit **Schwerpunkt** auf **BIP in Kaufkraftstandards pro Kopf** (international vergleichbar, preisbereinigt). **{{nfsi}}** bleibt die **eigenständige** Stabilitäts-Headline (0–100) und wird dadurch **nicht** ersetzt.",
+            "summary_bullets": [
+                "**{{naciro}}‑FX als Kontext:** PPI bleibt dokumentierte **World‑Bank‑Makrologik** — sinnvoll **zusammen mit** den häufig täglich/frisch befüllten **Devisen-/Forex‑Feeds**, die **{{naciro}}** auf {{nationfiles}} technisch bündelt (**kein automatischer Bestandteil der PPI‑Tabellen**, aber branchenübliches „Kaufkraft + Kurs“‑Lesepaar).",
+                "**Kaufkraft-Leitbild:** „BIP (KKP) pro Kopf“ vergleicht wirtschaftliche Leistung **mit angeglichenen Preisniveaus** — ein gängiges Maß in Statistik und Öffentlichkeit; es ist **nicht** dasselbe wie nominaler BIP‑Kopfwert und **kein** privater Wohlstandsindex.",
+                "**Weitere Bausteine:** u. a. Inflation (VPI), Erwerbslosigkeit (gesamt/jugend), Devisenreserven, **Standard‑Mehrwertsteuer** — je nach Verfügbarkeit der Quelle.",
+                "**Klare Rollen:** {{nfsi}} bündelt dokumentierte geopolitische Stabilität/Risiko in **einem** Score; der PPI liefert **klassische** Makrogrößen — oft **nebeneinander** im KPI‑Snapshot oder Export.",
+                "**Oberfläche:** Länderscreens, Kennzahlen‑Snapshot, Exporte; JSON‑Bundles können Zeitstempel wie `built_at_utc` für den Datenstand nennen.",
+                "**Quellen:** überwiegend **World Bank**‑Logik; Urheber und Methodik bitte über das Quellenregister und die Anbieterseiten prüfen.",
+                "**Keine Beratung:** Darstellung öffentlicher Kennzahlen — keine Finanz‑, Steuer‑ oder Rechtsberatung."
+            ],
+            "body_md": "Der **Purchasing Power Index (PPI)** auf NationFiles ist **kein** eigenständiges „Ranking‑Produkt“ im Sinne eines einzigen zusammengesetzten Rankings, sondern das **kuratierte Makrolagepaket** hinter den Länderkarten: Es gruppiert **nachvollziehbar dokumentierte** Serien — vor allem aus der **World‑Bank**‑Ökosphäre — und ordnet sie technisch so, dass Oberfläche, Snapshot und Export **dieselben** Kennzahlen meinen.\n\n**NFSI‑Ökosystem (präzise):** Die dokumentierten World‑Bank‑/Makro‑Connector‑Familien hinter den PPI‑KPIs liegen in derselben **öffentlich beschriebenen Connector‑Ökologie**, die **{{naciro}}** beim dokumentierten **{{nfsi}}**‑Turnus dort einbindet, wo VVR/NFSI‑Methodik diese Serien nennen. Das **sichtbare PPI‑Bundle** ist **kein** eigener Summand der NFSI‑Headline‑Formel, sondern eine **parallel erzählte KPI‑Säule** derselben Quellengrundlage.\n\n**Operative Schnittfläche mit {{naciro}}:** Da **{{naciro}}** parallel **aktuellisierte Fremdwährungsdaten / FX‑Feeds** bereitstellt, empfiehlt sich die PPI‑Interpretation häufig im **gemeinsamen Kontext**: Makrogrundlage **plus** operative Wechselkursticker — ohne die Serien rechnerisch aus FX abzuleiten.\n\n**Warum der Name „Purchasing Power“?** In der öffentlichen Debatte steht „Kaufkraft“ oft für die Frage, wie **groß** eine Volkswirtschaft **wäre**, wenn man Preisunterschiede zwischen Ländern berücksichtigt. Genau dafür ist **BIP in Kaufkraftstandards pro Kopf** ein Standard‑Indikator: Er drückt wirtschaftliche Outputgröße in **international vergleichbaren** Einheiten aus — nützlich für Ländervergleiche, aber **ohne** jedes Detail von Einkommen, Ungleichheit oder Lebenshaltungskosten abzubilden.\n\n**Neben BIP (KKP):** Inflation beschreibt das **Tempo** der Preisänderungen am Konsumkorb; Arbeitsmarktkennzahlen zeigen **Beanspruchung** von Arbeit; Reserven geben einen **Puffer** in Fremdwährung wieder; die **Standard‑MwSt.** ordnet den fiskalischen Rahmen ein. **{{nfsi}}** kann im **selben** technischen Bündel vorkommen, bleibt inhaltlich aber ein **eigener** dokumentierter Stabilitäts‑Score — kein „Teil“ des BIP.\n\n**Grenzen:** Indikatoren sind **Zeitpunkt‑ und revisionsabhängig**; Definitionen der Anbieter (z. B. World Bank) gelten. NationFiles **ersetzt** weder Primärquellen noch amtliche Statistik — bitte dort nachziehen, wenn Sie Entscheidungen vorbereiten.",
+            "facts": [
+                {
+                    "k": "Domäne",
+                    "v": "Ökonomische Makro-Kennzahlen"
+                },
+                {
+                    "k": "Plattform",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Profilformat",
+                    "v": "{{nationfile-json}}"
+                },
+                {
+                    "k": "Leitkennzahl",
+                    "v": "BIP (KKP) pro Kopf (World Bank–Logik)"
+                },
+                {
+                    "k": "Stabilität",
+                    "v": "{{nfsi}} (eigenständiger Index)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Was „Kaufkraft“ hier meint",
+                    "body_md": "Gemeint ist vor allem **wirtschaftliche Größe und internationale Vergleichbarkeit** über **Kaufkraftparitäten** — nicht ein Einzelpreisindex für den Warenkorb und auch **nicht** dasselbe wie der **{{nfsi}}**‑Score."
+                },
+                {
+                    "title": "Typische Kennzahlen",
+                    "body_md": "Neben **gdp_ppp_pc** zählen u. a. **inflation_cpi_pct**, **unemployment_total**, **unemployment_youth**, **reserves_usd**, **vat_standard**; **nfsi** erscheint nur dort, wo das Profil beides bündelt — jeweils mit dokumentiertem Anbieter."
+                },
+                {
+                    "title": "Missverständnisse vermeiden",
+                    "body_md": "**Höheres BIP (KKP) pro Kopf** bedeutet nicht automatisch „besser für jeden Bürger“ (Verteilung, Sektorenstruktur, Datenqualität fehlen). **{{nfsi}}** misst **andere** Risiken als Inflation oder Arbeitslosigkeit — alle drei können widersprüchlich wirken."
+                },
+                {
+                    "title": "Technik & Reproduzierbarkeit",
+                    "body_md": "Die Zuordnung **Tabelle/Serie/Anbieter** je Metrik liegt in der **internen Kennzahlen-Registry** der NationFiles-Anwendung — damit bleiben Oberfläche, Snapshots und Exporte konsistent nachvollziehbar."
+                }
+            ]
+        },
+        "en": {
+            "title": "Purchasing Power Index (PPI)",
+            "teaser": "**Country macro at a glance:** On {{nationfiles}}, PPI groups **documented** macro series about economic size, prices, labour, and buffers — centred on **GDP at purchasing power parity (PPP) per capita** so cross-country readings share one price-adjusted yardstick. **{{nfsi}}** remains the **separate** geopolitical stability headline (0–100).",
+            "summary_bullets": [
+                "**Cross-read with {{naciro}} FX ribbons:** PPI stays the **World Bank macro bundle** — pair it deliberately with the **high-refresh FX quotations** the **{{naciro}}** engine aggregates for NationFiles UIs ( FX is **not baked into** the PPI tables, but everyday purchasing-power analysis usually needs both).",
+                "**Purchasing power, in practice:** GDP PPP per capita compares **price-adjusted** economic output across countries — a widely used public-statistics lens; it is **not** the same as nominal GDP per capita and **not** a private welfare index.",
+                "**Companion blocks:** CPI-style inflation, unemployment (total/youth), international reserves, **standard VAT** context — subject to series availability.",
+                "**Roles stay distinct:** **{{nfsi}}** compresses documented stability/risk into **one** score; PPI supplies **conventional macro** readings, often **alongside** NFSI in snapshots or exports.",
+                "**Surfaces:** country pages, KPI snapshot, exports; JSON bundles may carry timestamps such as `built_at_utc`.",
+                "**Sources:** primarily **World Bank**-style open indicators; always verify methodology on the provider and in the legal source registry.",
+                "**Not advice:** indicators for orientation only — not investment, tax, or legal guidance."
+            ],
+            "body_md": "The **Purchasing Power Index (PPI)** on NationFiles is **not** a single proprietary “composite rank” sold as the whole story of a country. It is the **curated macro bundle** that powers comparable country cards: documented upstream series — chiefly in the **World Bank** ecosystem — wired so the website, KPI snapshot, and exports **mean the same numbers**.\n\n**NFSI ecosystem alignment:** Curated World‑Bank‑style macro families behind PPI KPIs share the **same documented connector graph** **{{naciro}}** consumes when recomputing **{{nfsi}}**, wherever VVR/NFSI methodology cites those strands. **PPI’s dashboard framing** remains a **distinct question** — not a quoted term inside the published NFSI linear model.\n\n**Operational pairing with {{naciro}}:** Because **{{naciro}}** also hydrates **near-daily / near-real-time forex feeds** on the same surfaces analysts use for macro, NationFiles treats PPI + FX as the **default storytelling bundle** for purchasing-power questions—always remembering FX streams **do not redefine** the PPI numerator/denominator mathematics.\n\n**Why “purchasing power”?** In everyday economics discourse, purchasing power often points to **how large an economy looks** once you neutralise **price level differences** between countries. **GDP at PPP per capita** is the standard headline for that idea: it expresses output in **internationally comparable** units. Useful for cross-country context, it still **does not** capture income distribution, informal work, or every cost-of-living detail.\n\n**Beyond GDP PPP:** Inflation tracks **how fast** consumer prices change; unemployment metrics show **labour market slack**; reserves indicate **external liquidity buffers**; standard VAT places **tax structure** on the map. **{{nfsi}}** may appear in the **same technical bundle** where profiles wire both, but it remains a **different question** — documented geopolitical stability — not a sub-indicator of GDP.\n\n**Limits:** values are **as-of** and may be revised by providers. NationFiles does **not** replace official statistics; use primary sources when decisions are at stake.",
+            "facts": [
+                {
+                    "k": "Domain",
+                    "v": "Macro-economic indicators"
+                },
+                {
+                    "k": "Platform",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Profile format",
+                    "v": "{{nationfile-json}}"
+                },
+                {
+                    "k": "Headline comparator",
+                    "v": "GDP PPP per capita (World Bank-style series)"
+                },
+                {
+                    "k": "Stability headline",
+                    "v": "{{nfsi}} (separate index)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "What “purchasing power” means here",
+                    "body_md": "It chiefly refers to **cross-country comparability of economic size** using **purchasing power parities** — not a single retail price index and **not** the **{{nfsi}}** score."
+                },
+                {
+                    "title": "Typical indicators",
+                    "body_md": "Besides **gdp_ppp_pc**, expect **inflation_cpi_pct**, **unemployment_total**, **unemployment_youth**, **reserves_usd**, **vat_standard**, and **nfsi** only where the profile bundles both — each with a documented provider."
+                },
+                {
+                    "title": "Common pitfalls",
+                    "body_md": "Higher GDP PPP per capita does **not** automatically mean “better for every resident” (inequality and sector mix matter). **{{nfsi}}** captures **different** risks than inflation or unemployment — the three can diverge."
+                },
+                {
+                    "title": "Engineering traceability",
+                    "body_md": "Table/series/provider mapping is maintained in NationFiles' **internal metric registry** (application layer) so UI, snapshots, and exports stay aligned."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Purchasing Power Index (PPI)",
+            "teaser": "**Macro-pays en un coup d’œil :** sur {{nationfiles}}, le PPI regroupe des séries **documentées** sur la taille de l’économie, les prix, l’emploi et les réserves — autour du **PIB à parité de pouvoir d’achat (PPA) par habitant**. **{{nfsi}}** reste l’**indicateur distinct** de stabilité géopolitique (0–100).",
+            "summary_bullets": [
+                "**Lecture croisée {{naciro}} / FX:** le PPI reste le **socle Banque monde** ; croisez-le avec les cotations forex **rafraîchies fréquemment** que {{naciro}} diffuse sur NationFiles (**pas un champ PPI intégré**, mais combinaison d’analyse pouvoir d’achat ↔ taux usuelle dans l’UI).",
+                "**PPA, concrètement :** le PIB PPA par habitant compare une production **corrigée des niveaux de prix** entre pays — indicateur courant ; ce n’est **pas** le PIB nominal par habitant ni un indice de bien-être individuel.",
+                "**Blocs complémentaires :** inflation (IPC), chômage (total/jeunes), réserves, **TVA standard** — selon disponibilité.",
+                "**Rôles séparés :** **{{nfsi}}** résume stabilité/risque documentés dans **un** score ; le PPI apporte des **macro classiques**, souvent **à côté** dans les snapshots.",
+                "**Surfaces :** pages pays, snapshot KPI, exports ; horodatages possibles (`built_at_utc`).",
+                "**Sources :** surtout logique **Banque mondiale** ; vérifier méthodologie chez le fournisseur.",
+                "**Pas un conseil :** orientation statistique, pas conseil financier ou juridique."
+            ],
+            "body_md": "Le **PPI** sur NationFiles est le **paquet macro curaté** derrière les fiches pays : séries amont documentées — surtout **Banque mondiale** — câblées pour que site, snapshot et exports restent **cohérents**.\n\n**Alignement NFSI (précis) :** les familles macro documentées derrière le PPI appartiennent au **même graphe de connecteurs** que **{{naciro}}** mobilise pour le cycle **{{nfsi}}** lorsque VVR/méthodologie les citent. Le **bloc PPI** du tableau de bord n’est **pas** un agrégat littéral du score NFSI mais une **lecture KPI parallèle** sur des sources qui se croisent.\n\n**Pont opérationnel avec {{naciro}} :** comme **{{naciro}}** hydrate aussi des **flux FX quotidiens / quasi temps réel**, le lecteur professionnel combine typiquement PPI + devises pour interpréter pouvoir d’achat **sans confondre** la logique PPA World Bank avec une simple conversion spot.\n\n**Pourquoi « pouvoir d’achat » ?** On l’associe souvent à la **taille économique comparée** lorsqu’on neutralise les **écarts de prix** entre pays. Le **PIB PPA par habitant** en est l’indicateur phare : utile pour contextualiser, il ne remplace ni la distribution des revenus ni toutes les nuances de coût de la vie.\n\n**Au-delà du PIB PPA :** inflation, chômage, réserves et TVA apportent des angles **prix, marché du travail, liquidité externe, fiscalité**. **{{nfsi}}** peut coexister dans le **même** bundle technique mais répond à une **autre question** (stabilité géopolitique documentée).\n\n**Limites :** valeurs **à date** et révisables ; NationFiles ne remplace pas les statistiques officielles ni les publications des fournisseurs.",
+            "facts": [
+                {
+                    "k": "Domaine",
+                    "v": "Indicateurs macroéconomiques"
+                },
+                {
+                    "k": "Plateforme",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Format profil",
+                    "v": "{{nationfile-json}}"
+                },
+                {
+                    "k": "Comparateur phare",
+                    "v": "PIB PPA par habitant (séries type Banque mondiale)"
+                },
+                {
+                    "k": "Stabilité",
+                    "v": "{{nfsi}} (indice distinct)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Sens de « pouvoir d’achat » ici",
+                    "body_md": "Il s’agit surtout de **comparabilité internationale corrigée des prix** — pas d’un indice de prix détail ni du score **{{nfsi}}**."
+                },
+                {
+                    "title": "Indicateurs typiques",
+                    "body_md": "Outre **gdp_ppp_pc** : **inflation_cpi_pct**, **unemployment_total**, **unemployment_youth**, **reserves_usd**, **vat_standard**, et **nfsi** si le profil combine les deux blocs."
+                },
+                {
+                    "title": "Pièges fréquents",
+                    "body_md": "Un PIB PPA/habitant plus élevé n’implique pas **mieux pour chaque habitant**. **{{nfsi}}**, inflation et chômage mesurent des **risques différents**."
+                },
+                {
+                    "title": "Traçabilité technique",
+                    "body_md": "La table/série/fournisseur est déclarée dans le **registre métrique interne** de l'application NationFiles."
+                }
+            ]
+        },
+        "es": {
+            "title": "Purchasing Power Index (PPI)",
+            "teaser": "**Macro del país en una vista:** en {{nationfiles}}, el PPI agrupa series **documentadas** sobre tamaño económico, precios, empleo y reservas — centrado en el **PIB a paridad de poder adquisitivo (PPA) per cápita**. **{{nfsi}}** sigue siendo el **indicador aparte** de estabilidad geopolítica (0–100).",
+            "summary_bullets": [
+                "**Cruce con FX de {{naciro}}:** el PPI sigue siendo la **macro tipo Banco Mundial**; léalo junto a las **cotizaciones FX de alta frecuencia** que **{{naciro}}** muestra en NationFiles (**no remodelan los campos PPI**, pero completan la lectura habitual de poder adquisitivo).",
+                "**PPA en la práctica:** el PIB PPA per cápita compara producción **ajustada por niveles de precio**; no es lo mismo que PIB nominal per cápita ni un índice de bienestar individual.",
+                "**Bloques de apoyo:** inflación (IPC), desempleo (total/juvenil), reservas, **IVA estándar** — según disponibilidad.",
+                "**Papeles distintos:** **{{nfsi}}** resume riesgo/estabilidad documentados en **un** score; el PPI aporta **macro clásica**, a menudo **junto a** NFSI en snapshots.",
+                "**Superficies:** perfiles, snapshot KPI, exportaciones; marcas de tiempo posibles (`built_at_utc`).",
+                "**Fuentes:** principalmente lógica **Banco Mundial**; verificar metodología en el proveedor.",
+                "**No es asesoramiento:** solo orientación estadística."
+            ],
+            "body_md": "El **PPI** en NationFiles es el **paquete macro curado** detrás de las fichas país: series documentadas — sobre todo **Banco Mundial** — cableadas para que web, snapshot y exportaciones coincidan en **los mismos números**.\n\n**Encaje con NFSI (preciso):** las familias macro documentadas del PPI están en el **mismo mapa público de conectores** que **{{naciro}}** recorre para recalcular **{{nfsi}}** donde VVR/metodología las nombran. El **titular PPI** no es una fila dentro de la fórmula NFSI publicada sino una **columna paralela** con solapamiento de fuentes.\n\n**Puente práctico con {{naciro}}:** **{{naciro}}** también alimenta **rentrollos FX muy recientes** sobre las mismas superficies; combinación recomendada **PPI + divisas diarias** para conversaciones de poder adquisitivo **sin inferir que el PPI se calcula a partir del FX.**\n\n**¿Por qué «poder adquisitivo»?** Suele asociarse al **tamaño económico comparado** cuando se neutralizan **diferencias de precios** entre países. El **PIB PPA per cápita** es el titular habitual: útil para contexto, no sustituye desigualdad ni todos los matices del costo de vida.\n\n**Más allá del PIB PPA:** inflación, paro, reservas e IVA aportan **precios, mercado laboral, liquidez externa, fiscalidad**. **{{nfsi}}** puede coexistir en el **mismo** bundle técnico pero responde a **otra pregunta** (estabilidad geopolítica documentada).\n\n**Límites:** cifras **con fecha** y revisables; NationFiles no reemplaza estadísticas oficiales.",
+            "facts": [
+                {
+                    "k": "Dominio",
+                    "v": "Indicadores macroeconómicos"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Formato de perfil",
+                    "v": "{{nationfile-json}}"
+                },
+                {
+                    "k": "Comparador principal",
+                    "v": "PIB PPA per cápita (series tipo Banco Mundial)"
+                },
+                {
+                    "k": "Estabilidad",
+                    "v": "{{nfsi}} (índice distinto)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Qué significa «poder adquisitivo» aquí",
+                    "body_md": "Sobre todo **comparabilidad internacional corregida por precios** — no un índice minorista único ni el score **{{nfsi}}**."
+                },
+                {
+                    "title": "Indicadores típicos",
+                    "body_md": "Además de **gdp_ppp_pc**: **inflation_cpi_pct**, **unemployment_total**, **unemployment_youth**, **reserves_usd**, **vat_standard**, y **nfsi** si el perfil agrupa ambos."
+                },
+                {
+                    "title": "Errores frecuentes",
+                    "body_md": "Más PIB PPA per cápita **no** implica automáticamente «mejor para cada ciudadano». **{{nfsi}}**, inflación y paro miden **riesgos distintos**."
+                },
+                {
+                    "title": "Trazabilidad técnica",
+                    "body_md": "La asignación tabla/serie/proveedor está en el **registro métrico interno** de la aplicación NationFiles."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Purchasing Power Index (PPI)",
+            "teaser": "**Macro do país num relance:** em {{nationfiles}}, o PPI agrega séries **documentadas** sobre dimensão económica, preços, emprego e reservas — com foco no **PIB a paridade de poder de compra (PPC) per capita**. **{{nfsi}}** mantém-se como **indicador separado** de estabilidade geopolítica (0–100).",
+            "summary_bullets": [
+                "**Combo {{naciro}}‑FX:** o PPI permanece a **macro Banco Mundial**; leia-o com os **quotes FX atualizados** que **{{naciro}}** publica nos mesmos ecrãs (combo operacional corrente, dados distintos do PIB‑PPA).",
+                "**PPC na prática:** o PIB PPC per capita compara produção **ajustada aos níveis de preço**; não equivale ao PIB nominal per capita nem a um índice de bem-estar individual.",
+                "**Blocos complementares:** inflação (IPC), desemprego (total/jovem), reservas, **IVA padrão** — conforme disponibilidade.",
+                "**Papéis distintos:** **{{nfsi}}** resume risco/estabilidade documentados num **único** score; o PPI fornece **macro clássica**, muitas vezes **ao lado** do NFSI.",
+                "**Superfícies:** perfis, snapshot KPI, exportações; carimbos possíveis (`built_at_utc`).",
+                "**Fontes:** sobretudo lógica **Banco Mundial**; validar metodologia na fonte.",
+                "**Não é aconselhamento:** apenas orientação estatística."
+            ],
+            "body_md": "O **PPI** na NationFiles é o **pacote macro curado** por trás dos perfis de país: séries documentadas — principalmente **Banco Mundial** — ligadas para que site, snapshot e exportações partilhem **os mesmos números**.\n\n**Alinhamento NFSI:** as famílias macro World Bank atrás das métricas PPI pertencem ao **mesmo grafo documentado** que **{{naciro}}** usa no ciclo **{{nfsi}}** sempre que VVR/metodologia as listam. O **painel PPI** não substitui um termo explícito da fórmula NFSI mas oferece **leitura complementar** com fontes intersectantes.\n\n**Ponta com operações forex da {{naciro}}:** a mesma infraestrutura **{{naciro}}** atualiza feeds cambiais **rápidos/quase‑diários** — use‑os conscientemente ao narrar PPI para mostrar lado **cotidianamente volátil** da moeda estrangeira ao lado das séries PPP lentas.\n\n**Porque «poder de compra»?** Associa-se frequentemente à **dimensão económica comparada** quando se neutralizam **diferenças de preços** entre países. O **PIB PPC per capita** é o indicador de referência: útil para contexto, não substitui desigualdade nem todos os detalhes do custo de vida.\n\n**Para além do PIB PPC:** inflação, desemprego, reservas e IVA acrescentam **preços, mercado de trabalho, liquidez externa, fiscalidade**. **{{nfsi}}** pode coexistir no **mesmo** bundle técnico, mas responde a **outra pergunta** (estabilidade geopolítica documentada).\n\n**Limites:** valores **com data** e revistos pelos fornecedores; a NationFiles não substitui estatísticas oficiais.",
+            "facts": [
+                {
+                    "k": "Domínio",
+                    "v": "Indicadores macroeconómicos"
+                },
+                {
+                    "k": "Plataforma",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "Formato de perfil",
+                    "v": "{{nationfile-json}}"
+                },
+                {
+                    "k": "Comparador principal",
+                    "v": "PIB PPC per capita (séries tipo Banco Mundial)"
+                },
+                {
+                    "k": "Estabilidade",
+                    "v": "{{nfsi}} (índice distinto)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "O que «poder de compra» significa aqui",
+                    "body_md": "Sobretudo **comparabilidade internacional corrigida por preços** — não um índice de preços de retalho isolado nem o score **{{nfsi}}**."
+                },
+                {
+                    "title": "Indicadores típicos",
+                    "body_md": "Além de **gdp_ppp_pc**: **inflation_cpi_pct**, **unemployment_total**, **unemployment_youth**, **reserves_usd**, **vat_standard**, e **nfsi** quando o perfil agrupa ambos."
+                },
+                {
+                    "title": "Armadilhas comuns",
+                    "body_md": "Maior PIB PPC per capita **não** implica automaticamente «melhor para cada residente». **{{nfsi}}**, inflação e desemprego medem **riscos diferentes**."
+                },
+                {
+                    "title": "Rastreabilidade técnica",
+                    "body_md": "A correspondência tabela/série/fornecedor está no **registo métrico interno** da aplicação NationFiles."
+                }
+            ]
+        },
+        "ar": {
+            "title": "Purchasing Power Index (PPI)",
+            "teaser": "**صورة ماكرو للدولة:** يجمع PPI على {{nationfiles}} سلاسل **موثقة** عن حجم الاقتصاد والأسعار وسوق العمل والاحتياطيات — بتركيز على **الناتج المحلي الإجمالي بتعادل القوة الشرائية للفرد**. **{{nfsi}}** يبقى **مؤشراً منفصلاً** للاستقرار الجيوسياسي (0–100).",
+            "summary_bullets": [
+                "**قراءة مع FX عبر {{naciro}}:** PPI يبقى حزمة **البنك الدولي**؛ اجمعوه مع أسعار الصرف التي يحدّثها **{{naciro}}** بوتيرة يومية/قريبة من اللحظة على الواجهة (**ليست جزءًا من سلسلة PPI**، لكنه يكمِّل رواية القوة الشرائية اليومية).",
+                "**تعادل القوة الشرائية عملياً:** يقارن الناتج **بعد تعديل مستويات الأسعار** بين الدول؛ ليس نفس الناتج الاسمي للفرد وليس مؤشر رفاه فردي.",
+                "**كتل مصاحبة:** تضخم، بطالة (إجمالي/شباب)، احتياطيات، **ضريبة القيمة المضافة القياسية** — حسب توفر السلسلة.",
+                "**أدوار منفصلة:** **{{nfsi}}** يضغط الاستقرار/المخاطر الموثقة في **درجة واحدة**؛ يقدّم PPI **مؤشرات ماكرو تقليدية** غالباً **بجانب** NFSI.",
+                "**الواجهات:** صفحات الدول، لقطات KPI، تصدير؛ قد توجد طوابع زمنية مثل `built_at_utc`.",
+                "**المصادر:** أساساً منطق **البنك الدولي**؛ راجع منهجية المزود.",
+                "**ليس استشارة:** للإحاطة الإحصائية فقط."
+            ],
+            "body_md": "**PPI** على NationFiles هو **حزمة ماكرو منسّقة** خلف بطاقات الدول: سلاسل موثقة — غالباً في منظومة **البنك الدولي** — مربوطة بحيث تتطابق الأرقام بين الموقع ولقطات KPI والتصدير.\n\n**تقاطع منظومة NFSI:** عائلات ماكرو الموثَّقة لتغذية لقطات PPI تندرج ضمن **نفس رسم موصلات** يستخدمه **{{naciro}}** لإعادة حساب **{{nfsi}}** حيث تذكرها VVR/المنهجية. **حزمة PPI** ليست مكوّنًا حرفيًا في معادلة NFSI المنشورة بل **قراءة موازية** لأسئلة KPI.\n\n**تلاقي تشغيلي مع {{naciro}}:** حيث يُغذّي **{{naciro}}** تيارات **صرف عملات تقريباً يومية** ضمن تجربة مستخدم واحدة مع لوحات PPI، فإن الشرح التسويقي الافتراضي للقوة الشرائية يجمع بين **البطاقات الماكرو الموثقة** وبين **أسعار الفوركس الآنية** (**بلا ادعاء أن حساب PPI يعتمد أساسًا على هذه التغذيات**).\n\n**لماذا «قوة شرائية»؟** غالباً يُقصد بها **حجم الاقتصاد بعد تعديل فروقات الأسعار** بين الدول. **الناتج بتعادل القوة الشرائية للفرد** هو المؤشر المرجعي: مفيد للسياق، ولا يغني عن التوزيع أو كل تفاصيل تكلفة المعيشة.\n\n**ما عدا الناتج بتعادل القوة الشرائية:** التضخم والبطالة والاحتياطيات وضريبة القيمة المضافة تضيف زوايا **أسعار، عمل، سيولة خارجية، ضرائب**. قد يظهر **{{nfsi}}** في **نفس** الحزمة التقنية لكنه يجيب عن **سؤال مختلف** (استقرار جيوسياسي موثق).\n\n**حدود:** قيم **لتاريخ معين** وقابلة للمراجعة؛ NationFiles لا يحل محل الإحصاءات الرسمية.",
+            "facts": [
+                {
+                    "k": "المجال",
+                    "v": "مؤشرات ماكرو اقتصادية"
+                },
+                {
+                    "k": "المنصة",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "تنسيق الملف",
+                    "v": "{{nationfile-json}}"
+                },
+                {
+                    "k": "مقارن رئيسي",
+                    "v": "الناتج بتعادل القوة الشرائية للفرد (سلاسل منطق البنك الدولي)"
+                },
+                {
+                    "k": "الاستقرار",
+                    "v": "{{nfsi}} (مؤشر منفصل)"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "معنى «قوة شرائية» هنا",
+                    "body_md": "المقصود غالباً **قابلية المقارنة الدولية بعد تعديل الأسعار** — وليس مؤشر أسعار تجزئة واحداً ولا درجة **{{nfsi}}**."
+                },
+                {
+                    "title": "مؤشرات نموذجية",
+                    "body_md": "إلى جانب **gdp_ppp_pc**: **inflation_cpi_pct**، **unemployment_total**، **unemployment_youth**، **reserves_usd**، **vat_standard**، و**nfsi** عندما يربط الملف الحزمتين معاً."
+                },
+                {
+                    "title": "سوء فهم شائع",
+                    "body_md": "ارتفاع الناتج بتعادل القوة الشرائية للفرد **لا** يعني تلقائياً «أفضل لكل مواطن». **{{nfsi}}** والتضخم والبطالة تقيس **مخاطر مختلفة**."
+                },
+                {
+                    "title": "التتبع التقني",
+                    "body_md": "ربط الجدول/السلسلة/المزود محفوظ في **سجل المقاييس الداخلي** لتطبيق NationFiles."
+                }
+            ]
+        },
+        "ja": {
+            "title": "Purchasing Power Index（PPI）",
+            "teaser": "**国のマクロを一望:** {{nationfiles}} では PPI が、経済規模・物価・労働・外貨準備などの **文書化された** マクロ系列を束ねます。中核は **購買力平価（PPP）ベースの一人当たり GDP** です。**{{nfsi}}** は **別軸**の地政学的安定性ヘッドライン（0–100）のままです。",
+            "summary_bullets": [
+                "**{{naciro}} FX と併読:** PPI は変わらず **世界銀行ベースのマクロ**。同じ国ビューに **{{naciro}} が供給する日次級の為替クリップ**を足すと説得力ある「購買力」の語りになります（為替シリーズ自体は PPI の算出系列ではありません）。",
+                "**PPP の意味:** 一人当たり GDP（PPP）は国間で **物価水準を調整した** 経済規模の比較に使われる代表的指標で、名目一人当たり GDP や個人の福祉指標とは **別物** です。",
+                "**付随ブロック:** インフレ（CPI 系）、失業（全体/若年）、準備金、**標準 VAT** — 系列の提供状況に依存。",
+                "**役割の分離:** **{{nfsi}}** は文書化された安定性/リスクを **1 つの** スコアに圧縮；PPI は **古典的マクロ** を供給し、スナップショットでは **併記** されがち。",
+                "**表示面:** 国プロフィール、KPI スナップショット、エクスポート；`built_at_utc` などの時刻が付く場合あり。",
+                "**ソース:** 主に **世界銀行** 系の公開指標；定義は必ず原典で確認。",
+                "**投資助言ではない:** 統計上の参照用。"
+            ],
+            "body_md": "NationFiles の **PPI** は、国カードを支える **キュレート済みマクロ・バンドル** です。主に **世界銀行** 系の文書化系列を、サイト・スナップショット・エクスポートで **同じ数値意味** になるよう配線します。\n\n**NFSI エコシステムとの位置づけ:** PPI を支える文書化 World Bank 系列は、**VVR／NFSI 方法論**が列挙する範囲で **{{naciro}}** が **{{nfsi}}** の再評価に用いる **同一のコネクタグラフ**に属します。ダッシュボード上の PPI は NFSI の数式項目をそのまま置き換えるものではなく、**重なる上流系列**への別質問です。\n\n**{{naciro}} との実務接続:** プラットフォーム上で **{{naciro}}** が供する **高頻度の FX ストリーム**は、PPI の PPP 系列とは **数学的に別物** ですが、「購買力」を営業または分析で語る際の **標準的な二画面読み**になります。\n\n**「購買力」とは？** 国と国の **物価差を除いた** 経済規模の比較に、一人当たり GDP（PPP）が よく使われます。分布や生活コストの細部までは **カバーしません**。\n\n**GDP 以外:** インフレ・失業・準備金・VAT は **物価・労働・対外流動性・税制** の視点を補います。**{{nfsi}}** は同一の技術バンドルに入ることがあっても、問い（文書化された地政学リスク）は **別** です。\n\n**限界:** 値は **時点** と改定の影響を受けます。NationFiles は公式統計の代替ではありません。",
+            "facts": [
+                {
+                    "k": "領域",
+                    "v": "マクロ経済指標"
+                },
+                {
+                    "k": "プラットフォーム",
+                    "v": "{{nationfiles}}"
+                },
+                {
+                    "k": "プロファイル形式",
+                    "v": "{{nationfile-json}}"
+                },
+                {
+                    "k": "中核比較指標",
+                    "v": "一人当たり GDP（PPP）（世界銀行系系列）"
+                },
+                {
+                    "k": "安定性",
+                    "v": "{{nfsi}}（別指標）"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "ここでの「購買力」",
+                    "body_md": "**物価調整後の国際比較** が主眼で、小売物価の単一指標でも **{{nfsi}}** スコアでもありません。"
+                },
+                {
+                    "title": "代表的なキー",
+                    "body_md": "**gdp_ppp_pc** に加え、**inflation_cpi_pct**、**unemployment_total**、**unemployment_youth**、**reserves_usd**、**vat_standard**、プロファイルが束ねる場合は **nfsi**。"
+                },
+                {
+                    "title": "よくある誤解",
+                    "body_md": "一人当たり GDP（PPP）が高いからといって **すべての国民** にとって良いとは限りません。**{{nfsi}}**・物価・失業は **異なるリスク** を映します。"
+                },
+                {
+                    "title": "トレーサビリティ",
+                    "body_md": "テーブル／系列／プロバイダの対応は NationFiles **アプリケーション内のメトリクス・レジストリ**で管理されています。"
+                }
+            ]
+        }
+    },
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "complements",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "governance-institutions-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-calculator"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "economy-vertical"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "expat-metamaps-cluster"
+        }
+    ],
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "purchasing-power-index"
+        },
+        "repository_relative_path": "knowledge-data/entities/purchasing-power-index.json"
+    }
+}

@@ -11,31 +11,33 @@ nf_repository_relative_path: "knowledge-data/md/naciro/en.md"
 nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/naciro/"
 nf_markdown_lang_file: "en"
 ---
-# Naciro Engine
+# Naciro Engine — the analysis AI behind geopolitical intelligence
 
-## Function
+## What Naciro **is**
 
-The **Naciro Engine** is modeled as a **SoftwareApplication**: the inference layer that transforms validated real‑time and archival signals into **normalized intermediates** and **scalar outputs**, notably **NFSI**. It is documented as an **engine with a stated pipeline**, not as an undifferentiated assistant product (see attribute `pipeline` and the **VVR**).
+The **Naciro Engine** is NationFiles’ **core AI-driven evaluation stack**. It ingests **high-frequency raw signals** from the attached data universe — economic and market feeds, security- and news-derived streams, structured indicators from the DataSourceConnector — and converts them into **normalised, comparable intermediate results**. Those feed the **NationFiles Stability Index (NFSI)**, situational dashboard copy, and — depending on product configuration — **short-horizon forecast and scenario windows** (Predictive Layer, e.g. 24h / 7-day framing as documented).
 
-## Logical dataflow
+In one line: Naciro is **not** “the website”; it is the **brain** that turns noisy global inputs into **measurable geopolitical signals** that NationFiles renders and explains.
 
-1. **Ingest** from the documented source universe (`115+` sources cited at FAQ/VVR level — aggregate documentation, not a live meter here).
-2. **Aggregation & normalization** per methodology layers (see **VVR**).
-3. **Bias correction / predictive adjustment** as described in published methodology text.
-4. **Output**: NFSI scores at world and country granularity; cadence per `update_cycle` (15‑minute cadence as documented).
+**Data path:** Naciro works on **{{nationfile-json}}** profiles plus documented connectors—the same structure that ties HTML, maps, and exports together.
 
-## Scope limits
+## What Naciro **does in practice**
 
-This knowledge page carries **no runtime telemetry** (CPU/GPU, queues). It cites **public methodology** and **legal/verification** artefacts instead.
+1. **Signal aggregation:** ingest and temporal condensation from many public, documented sources (order-of-magnitude source count in public methodology).
+2. **Normalisation & weighting:** alignment to shared scales and NFSI layers (see methodology) so countries and time series stay **comparable**.
+3. **Methodological adjustment / bias handling:** where documented, corrections for systematic skew — detailed in the **Validation & Verification Report (VVR)**.
+4. **Outputs:** world and country scores (**NFSI**), trend/mood text for dashboards, optional forecast components per methodology pages.
 
-## Graph edges
+## Cadence and role on NationFiles
 
-- `computes` → `nfsi`
-- `published_via` → `nationfiles`
-- Operator linkage via attributes to `neawolf-media-group`
+The engine runs on a **regular refresh cadence** (published as a planning constraint). It powers the **live surfaces** users see on country pages and the world dashboard — a **running situational picture**, not an annual snapshot.
 
-## References
+## Boundaries
+
+Naciro does **not** predict every micro-event; it delivers **structured indicators** with documented uncertainty. It does not replace primary sources or field reporting.
+
+## Sources
 
 - [Naciro AI (company)](https://nationfiles.com/en/company/naciro-ai/)
 - [NFSI methodology](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)

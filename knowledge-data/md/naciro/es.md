@@ -8,25 +8,34 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/naciro/es.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/naciro/"
+nf_canonical_html_url: "https://nationfiles.com/es/knowledge/entity/naciro/"
 nf_markdown_lang_file: "es"
 ---
-# Naciro Engine
+# Naciro Engine — la IA de análisis detrás de la inteligencia geopolítica
 
-## Función
+## Qué es Naciro
 
-El **motor Naciro** se modela como **SoftwareApplication**: capa de inferencia que convierte señales validadas en **estados intermedios normalizados** y **salidas escalares** (en especial NFSI). La documentación enfatiza una **pipeline declarada** (`pipeline`, **VVR**), no un asistente genérico.
+El **motor Naciro** es la **pila de evaluación con IA** de NationFiles. Ingiere **señales brutas de alta frecuencia** — feeds económicos y de mercado, flujos derivados de seguridad y noticias, indicadores estructurados del DataSourceConnector — y los convierte en **resultados intermedios normalizados y comparables**. De ahí salen el **NationFiles Stability Index (NFSI)**, textos de panel y — según el producto — **ventanas de pronóstico a corto plazo** (Predictive Layer, p. ej. 24h / 7 días en el alcance documentado).
 
-## Flujo lógico
+En una línea: Naciro **no** es «la web»; es el **cerebro** que convierte ruido global en **señales geopolíticas medibles** que NationFiles muestra y explica.
 
-Ingesta → agregación / normalización → corrección de sesgos / ajuste predictivo → salida NFSI; cadencia según `update_cycle`.
+## Qué hace en la práctica
 
-## Alcance
+1. **Agregación de señales:** ingestión y condensación temporal desde muchas fuentes públicas documentadas (orden de magnitud en la metodología pública).
+2. **Normalización y ponderación:** alineación a escalas y capas NFSI compartidas para mantener países y series **comparables**.
+3. **Ajustes metodológicos / sesgo:** donde está documentado, corrección de sesgos sistemáticos — detallado en el **Validation & Verification Report (VVR)**.
+4. **Salidas:** puntuaciones mundo y país (**NFSI**), textos de tendencia/ánimo para paneles, componentes de pronóstico opcionales según metodología.
 
-Sin telemetría en vivo en esta página; remisiones a metodología pública y VVR.
+## Ritmo y papel en NationFiles
 
-## Referencias
+El motor funciona con una **cadencia de actualización regular** (publicada como restricción de diseño). Alimenta las **superficies en vivo** en páginas de país y el panel mundial — una **imagen situacional continua**, no una foto anual.
 
-- [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
+## Límites
+
+Naciro **no predice cada microsuceso**; entrega **indicadores estructurados** con incertidumbre documentada. No sustituye fuentes primarias ni reportaje en terreno.
+
+## Fuentes
+
+- [Naciro AI (empresa)](https://nationfiles.com/en/company/naciro-ai/)
 - [Metodología NFSI](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)

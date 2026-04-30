@@ -31,6 +31,8 @@ pipeline_tag: text-generation
 
 > **This repository contains the official, machine-readable knowledge-graph data for NationFiles and the Naciro AI Engine. All data is provided in JSON/JSON-LD format for AI-discovery and research purposes.**
 
+Strukturelle **Landkarte** für Bots (alle Dateien & Pfade): siehe Root-Datei **`index.json`** im Ordner `knowledge-data/` (wird mit `tools/inject-distribution.php` mitgeschrieben).
+
 ---
 
 Zweck dieses Verzeichnisses: **strukturierte, first-party Wissensartefakte** für den Knowledge-Hub unter `/{lang}/knowledge/` — maschinenlesbar (JSON / JSON-LD), mehrsprachig (7 Sprachen) und für **Spiegel auf GitHub / Hugging Face** mit **vollständigen Rechte- und Herkunftsmetadaten** versehen.
@@ -81,6 +83,8 @@ Alle folgenden Pfade nutzen als erstes Segment eine der Locale-Codes: `de`, `en`
 | `/{lang}/knowledge/dictionary/` | Glossar-/Dictionary-Ansicht |
 | `/{lang}/knowledge/graph/` | Graph-Ansicht (Relationen) |
 | `/{lang}/knowledge/api/entity-search/?q=…` | AJAX-Suche (rate-limited) |
+
+Implementierung im Code: `KnowledgeController.php`, Template `templates/pages/knowledge/index.tpl`.
 
 ---
 

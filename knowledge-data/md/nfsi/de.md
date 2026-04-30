@@ -8,44 +8,39 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/nfsi/de.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/nfsi/"
+nf_canonical_html_url: "https://nationfiles.com/de/knowledge/entity/nfsi/"
 nf_markdown_lang_file: "de"
 ---
-# NationFiles Stability Index (NFSI)
+# NationFiles Stability Index (NFSI) — geopolitischer Stabilitäts- und Risiko-Score
 
-## Definition
+## Was der NFSI **ist**
 
-Der **NFSI** ist ein **quantitativer Index auf der Skala 0–100**, der geopolitische Stabilität bzw. das dokumentierte Risikoprofil **aggregiert** darstellt. Im Knowledge Graph ist er als **`Dataset`** modelliert, um klarzustellen: Es handelt sich um eine **zeitlich aktualisierte Kennzahlenserie** mit beschriebener Pipeline — nicht um einen narrativen Länderartikel.
+Der **NationFiles Stability Index (NFSI)** ist die **zentrale quantitative Kennzahl** der geopolitischen Analyse auf NationFiles: Er fasst für jedes abgedeckte Land (und als Weltaggregation) **Stabilität versus dokumentiertes Risiko** in **einer Zahl von 0 bis 100** zusammen. Analysten, Medien und Forschung nutzen ihn als **schnelles Orientierungsinstrument** — vergleichbar mit einem „Tacho“ für die dokumentierte Lage, nicht mit einem narrative Langreport.
 
-## Skala und Bänder
+Der Index wird aus **mehreren Schichten** berechnet (Layer 1–3 in der Methodik): Rohindikatoren → Aggregation → gewichteter Endscore → optional Glättung. Welche Größen eingehen und wie sie gewichtet sind, steht im **Validation & Verification Report** und auf der NFSI-Methodikseite — damit der Score **prüfbar** bleibt.
 
-| Band | Punktebereich (laut Attribut `score_bands`) |
-|------|-----------------------------------------------|
-| A | 81–100 |
-| B | 61–80 |
-| C | 41–60 |
-| D | 21–40 |
-| E | 0–20 |
+**Integration:** NFSI-Werte und Zeitreihen erscheinen in **{{nationfile-json}}**-Profilen und in der NationFiles-Oberfläche (Charts, Badges, Exporte) — eine Kennzahl, mehrere konsistente Darstellungen.
 
-Die Zuordnung eines Landes oder der Welt zu einem Band erfolgt rechnerisch gemäß der im **VVR** und der Methodenseite beschriebenen Schichten.
+## Wofür der NFSI **da ist**
 
-## Pipeline (high level)
+- **Ländervergleich:** Gleiche Skala für alle souveränen Staaten im Abdeckungsumfang — Ideal für Rankings, Heatmaps und Zeitverläufe.
+- **Frühwarnung / Monitoring:** Verschiebungen im Score signalisieren strukturelle Verschlechterung oder Beruhigung — **vor** dem Punkt, an dem rein qualitative Berichte nachziehen.
+- **Kommunikation:** Ein gemeinsames Vokabular (inkl. Kategorien A–E) für Stakeholder, die **Zahlen und Farblogik** teilen müssen.
 
-Attribut `pipeline` (Kurznotation): Layer 1 Indikatoren → Layer 2 Aggregation → Layer 3 gewichteter Endscore → Layer 4 Trägheit / Glättung („inertia smoothing“). Detailgrade stehen im **Validation & Verification Report**, nicht auf dieser Übersichtsseite.
+## Skala und Bänder (Kurz)
 
-## Aktualisierung und Abdeckung
+Die Zuordnung zu Bändern **A–E** folgt dokumentierten Grenzen (>20, >40, >60, >80 in der Produktlogik) und den Farben der Plattform — Details in der Methodik, nicht auf dieser Übersichtsseite wiederholt.
 
-- **Länder**: 195 (Attribut `country_coverage`).
-- **Zyklus**: alle 15 Minuten Neuaufbereitung laut `update_cycle` (systemische Vorgabe, keine Echtzeit‑CPU‑Anzeige hier).
-- **Live‑Slot**: Auf dieser Seite kann — falls konfiguriert — der **aktuelle Welt‑Aggregatwert** aus dem Slot `global_current` erscheinen; Quelle Server‑Funktion `get_last_score_values()`, nicht der statische JSON‑Export allein.
+## Was der NFSI **nicht** ist
 
-## Lizenz und DOI
+Kein Orakel für Einzelereignisse; kein Ersatz für diplomatische Originaltexte; **keine Anlageempfehlung**. Er komprimiert dokumentierte Indikatoren — er ersetzt nicht die Tiefe eines ausführlichen Ländergutachtens.
 
-Attribut `license`: **CC BY‑ND 4.0** (laut Verweis auf Legal Notice).  
-`citation_doi`: **10.5281/zenodo.19758890** — für akademisches Zitieren und Datenreferenz.
+## Lizenz und Zitation
 
-## Referenzen
+CC BY-ND 4.0 für die öffentliche Nutzung der Daten wie auf den Legal-Seiten angegeben; **DOI** für akademisches Zitieren (Zenodo).
 
-- [NFSI Methodik](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
-- [Research DOI](https://doi.org/10.5281/zenodo.19758890)
+## Quellen
+
+- [NFSI-Methodik](https://nationfiles.com/en/company/nfsi/)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)
+- [DOI](https://doi.org/10.5281/zenodo.19783682)

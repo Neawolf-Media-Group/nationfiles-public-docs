@@ -1,0 +1,611 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "knowledge-hub-nfkg",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T21:30:00Z",
+    "topics": [
+        "knowledge-hub",
+        "nfkg",
+        "knowledge-graph",
+        "semantic-network",
+        "json-ld",
+        "exports",
+        "cdn",
+        "nationfiles-knowledge-data"
+    ],
+    "aliases": [
+        "Knowledge Hub NFKG",
+        "NFKG Knowledge Hub",
+        "NationFiles Knowledge Data",
+        "NFKG Meta",
+        "Wissensgraph Hub",
+        "Knowledge Graph Hub"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles Knowledge Hub — meta definition of the NationFiles Knowledge Graph (NFKG): the curated, publicly intended bundle of multilingual entity records, FAQs, glossary entries, optional Markdown companions, and distribution metadata that {{nationfiles}} exposes under /{lang}/knowledge/ plus JSON/JSON-LD exports. It is the descriptive layer that tells humans and machines how node identities, relation labels, and locale fallbacks fit together before anyone opens a single country page.",
+            "depends_on": [
+                "nationfiles",
+                "core-hierarchy"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                },
+                {
+                    "label": "llms.txt",
+                    "url": "https://nationfiles.com/llms.txt"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles Knowledge Hub — meta definition of the NationFiles Knowledge Graph (NFKG): the curated, publicly intended bundle of multilingual entity records, FAQs, glossary entries, optional Markdown companions, and distribution metadata that {{nationfiles}} exposes under /{lang}/knowledge/ plus JSON/JSON-LD exports. It is the descriptive layer that tells humans and machines how node identities, relation labels, and locale fallbacks fit together before anyone opens a single country page.",
+                "de": "**NationFiles Knowledge Hub** — **Meta-Definition** des **NationFiles Knowledge Graph (NFKG)**: das **kuratierte**, **öffentlich** bestimmte Bündel aus mehrsprachigen **Entitäts**- und **FAQ**-Datensätzen, **Glossar**, optionalen **Markdown**-Begleittexten und **Distribution**-Metadaten, das {{nationfiles}} unter `/{lang}/knowledge/` sowie über **JSON/JSON-LD-Exporte** bereitstellt. Es ist die **beschreibende** Schicht dafür, wie **Knoten-IDs**, **Relationslabels** und **Locale-Fallbacks** zusammenspielen — **bevor** eine Länderseite geladen wird.",
+                "fr": "**Knowledge Hub NationFiles —** méta-définition du **graphe de connaissances (NFKG)** : lot **curaté** et **public** d’enregistrements d’**entités** et **FAQ** multilingues, **glossaire**, **Markdown** optionnel et métadonnées de **distribution**, exposé sous `/{lang}/knowledge/` et via **exports JSON/JSON-LD**. C’est la couche **descriptive** qui explique identifiants de **nœuds**, étiquettes de **relations** et **repli linguistique**.",
+                "es": "**Knowledge Hub NationFiles —** meta-definición del **grafo de conocimiento (NFKG)** : conjunto **curado** y **público** de registros multilingües de **entidades** y **FAQs**, **glosario**, **Markdown** opcional y metadatos de **distribución**, expuesto bajo `/{lang}/knowledge/` y **exportaciones JSON/JSON-LD**. Es la capa **descriptiva** de identidades de **nodos**, **relaciones** y **reserva de idioma**.",
+                "pt": "**Knowledge Hub NationFiles —** meta-definição do **grafo de conhecimento (NFKG)** : pacote **curado** e **público** de registos multilingues de **entidades** e **FAQs**, **glossário**, **Markdown** opcional e metadados de **distribuição**, sob `/{lang}/knowledge/` e **exportações JSON/JSON-LD**. Camada **descritiva** de identidades de **nós**, **relações** e **fallback** de locale.",
+                "ar": "**مركز المعرفة NationFiles —** تعريف ميتا لـ**بيان المعرفة (NFKG)**: حزمة **من** تاليف **علني** من سجلات **الكيانات** و**الأسئلة الشائعة** متعددة اللغات، **المسرد**، **Markdown** اختياري وبيانات وصفية **للتوزيع**، تُعرض تحت `/{lang}/knowledge/` و**تصدير JSON/JSON-LD**. طبقة **توضيحية** لهويات **العقد** و**علاقات** و**الاحتياط اللغوي**.",
+                "ja": "NationFiles **Knowledge Hub** — **NFKG（NationFiles Knowledge Graph）**のメタ定義：**エンティティ**・**FAQ**・**用語集**の多言語レコード、任意の **Markdown** 同伴、**distribution** メタをまとめ、`/{lang}/knowledge/` と **JSON/JSON-LD エクスポート**で {{nationfiles}} が公開する**キュレート**束。**ノード ID**・**関係ラベル**・**ロケールフォールバック**がどう揃うかを説明する層。"
+            }
+        },
+        {
+            "key": "semantic_network_contract",
+            "value": "Each NFKG node is a JSON object with a stable kebab-case id, Schema.org-typed surface, multilingual i18n payloads, and a relations array whose rel/to pairs form directed edges consumed by the /knowledge/graph/ view and JSON-LD exporters. Aliases, topics, and glossary terms increase fuzzy search recall; they are not secondary identities for the same legal entity unless explicitly documented.",
+            "depends_on": [
+                "nationfiles",
+                "core-hierarchy"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge graph view",
+                    "url": "https://nationfiles.com/en/knowledge/graph/"
+                },
+                {
+                    "label": "Knowledge export index.json",
+                    "url": "https://nationfiles.com/en/knowledge/export/index.json"
+                }
+            ],
+            "value_i18n": {
+                "en": "Each NFKG node is a JSON object with a stable kebab-case id, Schema.org-typed surface, multilingual i18n payloads, and a relations array whose rel/to pairs form directed edges consumed by the /knowledge/graph/ view and JSON-LD exporters. Aliases, topics, and glossary terms increase fuzzy search recall; they are not secondary identities for the same legal entity unless explicitly documented.",
+                "de": "Jeder **NFKG-Knoten** ist ein **JSON-Objekt** mit stabiler **kebab-case**-`id`, **Schema.org**-typisierter Oberfläche, mehrsprachigen **i18n**-Nutzdaten und einem **relations**-Array — **rel**/**to**-Paare bilden **gerichtete Kanten** für die Ansicht `/{lang}/knowledge/graph/` und **JSON-LD**-Exporte. **Aliases**, **Topics** und Glossarbegriffe verbessern die **fuzzy** Suchtreffer; sie sind **keine** zweite Identität derselben **Rechtsperson**, sofern nicht ausdrücklich dokumentiert.",
+                "fr": "Chaque **nœud NFKG** est un objet **JSON** avec `id` stable kebab-case, surface typée **Schema.org**, charges **i18n**, et tableau **relations** — paires **rel**/**to** = **arêtes dirigées** pour `/{lang}/knowledge/graph/` et exports **JSON-LD**. **Alias**, **topics** et glossaire augmentent la recherche **floue** ; ce ne sont pas des identités juridiques secondaires sans preuve écrite.",
+                "es": "Cada **nodo NFKG** es un objeto **JSON** con `id` kebab estable, superficie **Schema.org**, **i18n** y array **relations** — pares **rel**/**to** forman **aristas** dirigidas para `/{lang}/knowledge/graph/` y export **JSON-LD**. **Alias**, **topics** y glosario mejoran búsqueda **difusa**; no son segunda identidad legal sin constancia.",
+                "pt": "Cada **nó NFKG** é objeto **JSON** com `id` kebab estável, superfície **Schema.org**, **i18n** e vetor **relations** — pares **rel**/**to** geram **arestas** dirigidas para `/{lang}/knowledge/graph/` e export **JSON-LD**. **Aliases**, **topics** e glossário ajudam busca **fuzzy**; não são segunda identidade legal sem documento.",
+                "ar": "كل **عقدة NFKG** كائن **JSON** بـ`id` ثابت بنمط kebab، سطح **Schema.org**، حمولات **i18n**، ومصفوفة **relations** — أزواج **rel**/**to** تُكوّن **حوافًا موجهة** لعُرض `/{lang}/knowledge/graph/` وتصدير **JSON-LD**. **الأسماء البديلة** و**الموضوعات** والمسرد **تعزّز** **بحثًا تقريبيًا**؛ ليست هوية قانونية ثانية دون توثيق.",
+                "ja": "各 **NFKG** ノードは安定した **kebab-case** の `id`、**Schema.org** 型、多言語 **i18n**、**relations** 配列を持つ **JSON** オブジェクト——**rel**/**to** の組が `/{lang}/knowledge/graph/` と **JSON-LD** 出力で使う**有向辺**。**エイリアス**・**topics**・用語は **fuzzy** 検索の再現率を上げるが、文書が無ければ**別法人格**ではない。"
+            }
+        },
+        {
+            "key": "export_and_cdn_contract",
+            "value": "Live exports assemble entities and FAQs with merged _distribution blocks and UTC timestamps where required. CDN URLs in documentation follow the nationfiles.com + language prefix + /knowledge/export/… pattern described publicly; clients should treat HTTPS endpoints as the citation anchors, not scraped HTML fragments. Localized exports rewrite internal NationFiles links away from the default /en/ technical entry where the controller policy specifies.",
+            "depends_on": [
+                "nationfiles",
+                "ai-guidelines"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge export graph.jsonld",
+                    "url": "https://nationfiles.com/en/knowledge/export/graph.jsonld"
+                },
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Live exports assemble entities and FAQs with merged _distribution blocks and UTC timestamps where required. CDN URLs in documentation follow the nationfiles.com + language prefix + /knowledge/export/… pattern described publicly; clients should treat HTTPS endpoints as the citation anchors, not scraped HTML fragments. Localized exports rewrite internal NationFiles links away from the default /en/ technical entry where the controller policy specifies.",
+                "de": "**Live-Exporte** fügen Entitäten und FAQs mit eingebetteten **`_distribution`**-Blöcken und **UTC**-Zeitstempeln zusammen, wo vorgesehen. **CDN**-Adressen folgen öffentlich beschriebenem Muster **nationfiles.com** + Sprachpräfix + `/knowledge/export/…`; Clients sollen **HTTPS**-Endpunkte als **Zitationsanker** nutzen — **nicht** ausgelesene **HTML**-Fragmente. **Lokalisierte** Exporte mappen interne NationFiles-Links gemäß **Controller**-Regel von technischem **`/en/`**-Eingang auf die **aktive** UI-Sprache.",
+                "fr": "Les **exports live** assemblent entités/FAQs avec blocs **`_distribution`** et horodatages **UTC** requis. Les URL **CDN** suivent le motif public nationfiles.com + préfixe langue + `/knowledge/export/…`; les clients doivent citer les **HTTPS**, pas des fragments HTML grattés. Les exports **localisés** réécrivent les liens internes selon la politique **controller** hors entrée technique `/en/`.",
+                "es": "Los **exports en vivo** unen entidades/FAQs con bloques **`_distribution`** y sellos **UTC** donde aplica. Las URL **CDN** siguen el patrón público nationfiles.com + prefijo de idioma + `/knowledge/export/…`; hay que citar **HTTPS**, no fragmentos HTML raspados. Exportes **localizados** reescriben enlaces internos según política del **controlador** más allá del `/en/` técnico.",
+                "pt": "**Exports ao vivo** juntam entidades/FAQs com blocos **`_distribution`** e carimbos **UTC** quando aplicável. URLs **CDN** seguem padrão público nationfiles.com + prefixo de língua + `/knowledge/export/…`; citar **HTTPS**, não fragmentos HTML. Exports **localizados** reescrevem ligações internas conforme política do **controlador** além do `/en/` técnico.",
+                "ar": "**التصدير الحي** يجمّع الكيانات والأسئلة الشائعة مع كتل **`_distribution`** و**UTC** عند الحاجة. عناوين **CDN** تتبع نمطًا علنيًا nationfiles.com + بادئة لغة + `/knowledge/export/…`؛ يُستشهد بـ**HTTPS** لا بشظايا HTML. التصدير **المُوطَّن** يعيد كتابة الروابط الداخلية وفقاً لسياسة **المُتحكم** بعيدًا عن مدخل `/en/` التقني.",
+                "ja": "**ライブ** エクスポートは必要に応じ **`_distribution`** ブロックと **UTC** タイムスタンプでエンティティと FAQ を束ねる。**CDN** URL は公開どおり nationfiles.com + 言語接頭辞 + `/knowledge/export/…`。引用は **HTTPS** エンドポイントとし、スクレイプした HTML 断片に**しない**。**ローカライズ**されたエクスポートは **Controller** 方針に従い、技術的な **`/en/`** から内部リンクを書き換える。"
+            }
+        },
+        {
+            "key": "cardinality_and_verifiability",
+            "value": "The open NFKG mirror documents a curated cardinality (entities, FAQs, glossary scope) that changes with every release; authoritative counts appear in the published export index payload alongside the repository map, not in hearsay. Roadmap or marketing figures citing hundreds of thousands of graph nodes must not be copied into NFKG text as ground truth unless the identical figure, with defined scope, appears in those HTTPS exports—otherwise readers receive fictional precision.",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge export index.json",
+                    "url": "https://nationfiles.com/en/knowledge/export/index.json"
+                }
+            ],
+            "value_i18n": {
+                "en": "The open NFKG mirror documents a curated cardinality (entities, FAQs, glossary scope) that changes with every release; authoritative counts appear in the published export index payload alongside the repository map, not in hearsay. Roadmap or marketing figures citing hundreds of thousands of graph nodes must not be copied into NFKG text as ground truth unless the identical figure, with defined scope, appears in those HTTPS exports—otherwise readers receive fictional precision.",
+                "de": "Der **öffentliche** NFKG-Spiegel dokumentiert eine **kuratierte** Kardinalität (**Entitäten**, **FAQs**, Glossarumfang), die sich **pro** Release ändert; **maßgebliche** Zählungen stehen im **veröffentlichten** Export-**Index** neben der **Repo-Landkarte** — nicht im **Hörensagen**. **Roadmap**- oder **Marketing**-Zahlen mit **sechsstellig** verkündeten Graphknoten dürfen **nicht** als **Fakten** ins NFKG, solange **dieselbe** Zahl mit **definiertem** Geltungsbereich **nicht** in diesen **HTTPS**-Exporten steht — sonst entsteht **Scheingenauigkeit**.",
+                "fr": "Le miroir **public** NFKG documente une cardinalité **curatée** (entités, FAQ, glossaire) qui change à chaque livraison ; les comptes **faisant foi** sont dans l’**index** d’export publié et la carte repo — pas par ouï-dire. Chiffres **marketing** ou feuille de route parlant de centaines de milliers de **nœuds** ne doivent **pas** figurer comme vérité sans la **même** donnée et portée dans exports **HTTPS** — sinon c’est de la fausse précision.",
+                "es": "El espejo **público** NFKG documenta cardinalidad **curada** (entidades, FAQs, glosario) que cambia por **release**; los recuentos **autorizados** están en el **índice** de export publicado y el mapa del repo — no en rumores. Cifras de **marketing** u hoja de ruta con cientos de miles de **nodos** no deben copiarse como **hecho** sin la **misma** cifra y alcance en exports **HTTPS** — sería precisión ficticia.",
+                "pt": "O espelho **público** NFKG documenta cardinalidade **curada** (entidades, FAQs, glossário) que muda por **release**; contagens **oficiais** estão no **índice** de export publicado e mapa do repo — não em boato. Números de **marketing** ou roadmap com centenas de mil **nós** não devem virar **fato** sem o **mesmo** número e âmbito nos exports **HTTPS** — seria precisão fictícia.",
+                "ar": "المرآة **العامة** لـNFKG توثّق **عددًا** منتقى (كيانات، أسئلة شائعة، نطاق مسرد) يتغيّر مع كل **إصدار**؛ الأعداد **المرجعية** في **فهرس** التصدير المنشور وخريطة المستودع — لا بالإشاعة. أرقام **تسويق** أو خارطة طريق تدّعي مئات الآلاف من **العقد** لا تُنسخ ك**حقيقة** دون **نفس** الرقم والنطاق في exports **HTTPS** — وإلا دقة **وهمية**.",
+                "ja": "**公開** NFKG ミラーは**キュレート**された件数（エンティティ、FAQ、用語の範囲）をリリースごとに文書化する。**正**の件数は**公開**エクスポート**索引**とリポジトリ付随の地図に載る——**噂**にない。**六桁**級のノードを謳うロードマップや**宣伝**数を、**同一**数値と**射程**が **HTTPS** エクスポートに現れない限り**事実**として書かない——でないと**虚偽の精密度**になる。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles",
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Knowledge Hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                },
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "en": "{{nationfiles}}",
+                "de": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "core-hierarchy"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "publications-corpus"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "publications-hub"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "expat-metamaps-cluster"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "economy-vertical"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nature-vertical"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Knowledge Hub",
+            "teaser": "Der **Knowledge Hub (NFKG)** ist die **Meta-Ebene** über dem öffentlichen **Knowledge Graph** von {{nationfiles}}: er erklärt, wie **IDs**, **Relationen** und **Sieben-Sprachen-Texte** zusammenspielen, wo **Exporte** und **CDN**-Pfade angesiedelt sind — **ohne** Größenangaben zu **erfinden**, die **nicht** in den veröffentlichten **HTTPS**-Indexen stehen.",
+            "summary_bullets": [
+                "**NFKG:** kuratiertes Bündel aus **Entitäten**, **FAQs**, **Glossar**, optional **Markdown**.",
+                "**Semantik:** `relations` mit **rel**/**to** speisen Graph- und **JSON-LD**-Ausgaben.",
+                "**Exports:** Index und **Graph** unter `/{lang}/knowledge/export/…` — **Zitationsanker**.",
+                "**Skala:** Roadmap-Zahlen **nur** mit identischer Zahl in **Export-Metadaten**, sonst **weglassen**.",
+                "**Lesereihenfolge:** oft **Teaser → Fakten → Relationen** für KI-Snippets."
+            ],
+            "body_md": "Wenn externe Teams sagen, der Knowledge-Bereich sei das „**zentrale Nervensystem**“ der Plattform, meinen sie selten Anatomie, sondern **Ordnung**: Wo steht **welche** Definition, **wer** darf sie zitieren, und **wie** gelangt dieselbe Aussage aus einem **Export** wieder auf eine **Länderseite**? Genau diese **Ordnung** beschreibt der **Knowledge Hub (NFKG)** sachlich — als **Dataset-Ebene** über den strukturierten Datensätzen, die NationFiles öffentlich spiegelt.\n\n**Semantisches Netz** heißt hier nicht Mystik, sondern **konkret**: Jede Entität hat eine **stabile** `id`. Kanten entstehen aus **`relations`**, nicht aus Bauchgefühl. Suchbegriffe in **Topics** und **Aliases** helfen Menschen, Einträge **trotz Tippfehler** in der Hub-Suche zu finden — sie ersetzen **keine** juristische **Identität**, wenn das nirgends steht.\n\n**CDN und Exportlogik** sind **Politik** plus **Technik**: Live-Endpunkte unter **HTTPS** bündeln Entitäten und FAQs, hängen **Distribution**-Metadaten an und liefern UTC-Zeit, wo das Produkt es vorsieht. Wer Daten **weiterverarbeitet**, soll **dieselben** URLs zitieren, die auch im **AI-Guidelines**-Kontext genannt werden — nicht den zufälligen HTML-Ausschnitt von gestern.\n\n**Zur Größe:** In Produktgesprächen tauchen **große** Knotenzahlen auf. **Öffentlicher** Anspruch verlangt **öffentlichen** Beleg. Steht eine Zahl **nicht** im **Export-Index** mit **klar** umrissenem Umfang, gehört sie **nicht** in NFKG-Fließtext als **hart**e Tatsache — sonst täuscht sie Leser:innen **Präzision** vor, die das Dataset **nicht** trägt.\n\n**Lesen Sie parallel:** [Core Hierarchy](/de/knowledge/entity/core-hierarchy/), [Publikationen](/de/knowledge/entity/publications-corpus/), [AI Guidelines](/de/knowledge/entity/ai-guidelines/).",
+            "facts": [
+                {
+                    "k": "Schicht",
+                    "v": "Meta-Beschreibung des NFKG"
+                },
+                {
+                    "k": "Knoten",
+                    "v": "Entitäten, FAQs, Glossar"
+                },
+                {
+                    "k": "Kanten",
+                    "v": "`relations` rel/to"
+                },
+                {
+                    "k": "Zählregel",
+                    "v": "Nur mit Export-Beleg"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Von Entität zu Export",
+                    "body_md": "Der **Knowledge Hub** beschreibt, wie stabile IDs und Kanten **parallel** in HTML und JSON/JSON-LD lesbar bleiben.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGkh\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMkh\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Stufe | Fokus |\n| --- | --- |\n| 1 | **Entitäten** mit Typ, Thema, Attributen |\n| 2 | **Relationen** (`relatedTo`, …) zwischen Konzepten |\n| 3 | **Exports** (`index.json`, `graph.jsonld`) |\n| 4 | **Leseseiten** wie diese — mit Glossar & Zitation |"
+                },
+                {
+                    "title": "Warum es eine Meta-Ebene braucht",
+                    "body_md": "Ohne **Meta**-Text wird aus dem Graph schnell ein **Rätsel**: Leser:innen erraten Kanten, Maschinen **halluzinieren** Rollen. Der Hub **benennt** die Spielregeln."
+                },
+                {
+                    "title": "Exports als Vertragsstand",
+                    "body_md": "JSON unter **HTTPS** ist **der** stabile Vertrag; HTML ist **Darstellung**. Wer **forkt**, soll wissen, welche Felder **Pflicht** sind."
+                },
+                {
+                    "title": "Prüfung für Redaktionen",
+                    "body_md": "Vor jeder **Millionen**-Zahl **fragen**: **Steht** sie im Index? **Welcher** Scope? Wenn **nein** — **nicht** drucken."
+                }
+            ]
+        },
+        "en": {
+            "title": "Knowledge Hub (NFKG)",
+            "teaser": "The **Knowledge Hub (NFKG)** is the **meta layer** atop {{nationfiles}}’ public knowledge graph: it explains how **IDs**, **relations**, and **seven-locale copy** align, and where **exports** and **CDN-facing** endpoints live—**without** inventing node totals missing from published **HTTPS** indexes.",
+            "summary_bullets": [
+                "**NFKG:** curated bundle of **entities**, **FAQs**, **glossary**, optional Markdown.",
+                "**Semantics:** `relations` **rel**/**to** edges feed graph + **JSON-LD** exports.",
+                "**Exports:** index + graph under `/{lang}/knowledge/export/…` as **citation anchors**.",
+                "**Scale:** cite roadmap millions **only** if the **same** scoped number appears in export metadata.",
+                "**Reading order:** teaser → facts → relations helps GEO/KI snippets."
+            ],
+            "body_md": "When teams call the knowledge area the platform’s “brain,” they usually mean **ordering**, not biology: **where** a definition lives, **who** may cite it, and **how** an export statement returns on a **country** surface. The **Knowledge Hub (NFKG)** documents that order plainly—as a **dataset-level** narration above the public JSON records NationFiles mirrors.\n\nA **semantic network** here means something **testable**: each entity carries a stable `id`; edges come from explicit **`relations`**; **topics** and **aliases** widen fuzzy search—they do **not** silently clone legal identities.\n\n**CDN export logic** is part contract, part mechanics: HTTPS endpoints bundle entities/FAQs, attach distribution metadata, and publish UTC stamps when the product specifies. Downstream automation should cite the **same** URLs the **AI guidelines** foreground—not whichever HTML fragment was cached last.\n\n**About huge node counts:** product roadmaps sometimes quote **massive** graphs. Public honesty demands public proof. If a figure is **absent** from the **export index** with a **defined** scope, it does **not** belong in NFKG prose as hard fact—otherwise readers inherit **false precision**.\n\n**Read next:** [Core hierarchy](/en/knowledge/entity/core-hierarchy/), [Publications corpus](/en/knowledge/entity/publications-corpus/), [AI guidelines](/en/knowledge/entity/ai-guidelines/).",
+            "facts": [
+                {
+                    "k": "Layer",
+                    "v": "Meta description of NFKG"
+                },
+                {
+                    "k": "Nodes",
+                    "v": "Entities, FAQs, glossary"
+                },
+                {
+                    "k": "Edges",
+                    "v": "`relations` rel/to"
+                },
+                {
+                    "k": "Count rule",
+                    "v": "Only with export proof"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "From entity to export",
+                    "body_md": "The **knowledge hub** explains how stable IDs & edges stay legible **both** in HTML and JSON/JSON-LD.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGkh\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMkh\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Step | Focus |\n| --- | --- |\n| 1 | **Entities** with type, topics, attributes |\n| 2 | **Relations** between concepts |\n| 3 | **Exports** (`index.json`, `graph.jsonld`) |\n| 4 | **Reader pages** like this—with glossary & citation |"
+                },
+                {
+                    "title": "Why a meta layer exists",
+                    "body_md": "Without it, humans guess edges and models invent roles. The hub **states** the contract."
+                },
+                {
+                    "title": "Exports as the contract surface",
+                    "body_md": "**HTTPS JSON** is the stable agreement; HTML is **presentation**. Forks need to know which fields are **mandatory**."
+                },
+                {
+                    "title": "Editorial stress test",
+                    "body_md": "Before printing **millions**, ask: is it in the index, for **which** scope? If **no**—**omit**."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Knowledge Hub (NFKG)",
+            "teaser": "Le **Knowledge Hub (NFKG)** est la **couche méta** du graphe public {{nationfiles}} : il explique **IDs**, **relations** et textes **sept langues**, et où vivent **exports** et points **CDN** — **sans** inventer des totaux absents des index **HTTPS** publiés.",
+            "summary_bullets": [
+                "**NFKG :** lot d’**entités**, **FAQ**, **glossaire**, Markdown optionnel.",
+                "**Sémantique :** `relations` **rel**/**to** alimente graphe + **JSON-LD**.",
+                "**Exports :** index + graphe sous `/{lang}/knowledge/export/…` comme **ancres**.",
+                "**Échelle :** millions **uniquement** si la métadonnée d’export les porte avec **périmètre**.",
+                "**Lecture :** teaser → faits → relations pour extraits IA."
+            ],
+            "body_md": "Quand on dit que la zone Knowledge est le « cerveau », on parle souvent d’**ordre** : **où** vit la définition, **qui** cite, **comment** une phrase exportée revient sur une fiche pays. Le **Knowledge Hub (NFKG)** décrit cet ordre — comme **couche dataset** au-dessus des JSON publics.\n\n**Réseau sémantique** ici est **vérifiable** : `id` stable ; arêtes via **`relations`** ; **topics/alias** pour fuzzy search — pas d’identité juridique **implicite**.\n\n**Exports/CDN** : contrat + mécanique ; clients doivent citer **HTTPS**, pas HTML fragmenté.\n\n**Gros nombres** : preuve publique requise ; sinon **précision fictive**.\n\n**Suite :** [Core hierarchy](/fr/knowledge/entity/core-hierarchy/), [Publications corpus](/fr/knowledge/entity/publications-corpus/), [AI guidelines](/fr/knowledge/entity/ai-guidelines/).",
+            "facts": [
+                {
+                    "k": "Couche",
+                    "v": "Méta-description NFKG"
+                },
+                {
+                    "k": "Nœuds",
+                    "v": "Entités, FAQ, glossaire"
+                },
+                {
+                    "k": "Arêtes",
+                    "v": "`relations` rel/to"
+                },
+                {
+                    "k": "Règle de compte",
+                    "v": "Preuve export requise"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "De l’entité à l’export",
+                    "body_md": "Le **hub Knowledge** explique comment IDs stables & arêtes restent lisibles en HTML **et** JSON/JSON-LD.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGkh\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMkh\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Étape | Focus |\n| --- | --- |\n| 1 | **Entités** (type, sujets, attributs) |\n| 2 | **Relations** entre concepts |\n| 3 | **Exports** (`index.json`, `graph.jsonld`) |\n| 4 | **Pages lecteur** avec glossaire & citation |"
+                },
+                {
+                    "title": "Pourquoi une couche méta",
+                    "body_md": "Sans elle, les humains **devinent** les liens et les modèles **inventent** des rôles."
+                },
+                {
+                    "title": "Exports = contrat",
+                    "body_md": "Le **JSON HTTPS** est l’accord stable ; le HTML est **l’écran**."
+                },
+                {
+                    "title": "Garde-fou rédactionnel",
+                    "body_md": "Avant d’écrire des **millions**, vérifier l’**index** et le **périmètre**."
+                }
+            ]
+        },
+        "es": {
+            "title": "Knowledge Hub (NFKG)",
+            "teaser": "El **Knowledge Hub (NFKG)** es la **capa meta** del grafo público de {{nationfiles}}: explica **IDs**, **relaciones** y textos en **siete idiomas**, y dónde están **exportaciones** y **CDN** — **sin** inventar totales ausentes de índices **HTTPS** publicados.",
+            "summary_bullets": [
+                "**NFKG:** conjunto de **entidades**, **FAQs**, **glosario**, Markdown opcional.",
+                "**Semántica:** `relations` **rel**/**to** alimenta grafo + **JSON-LD**.",
+                "**Exports:** índice + grafo bajo `/{lang}/knowledge/export/…` como **anclas**.",
+                "**Escala:** grandes cifras **solo** si la metadata de export las fija con **alcance**.",
+                "**Lectura:** teaser → hechos → relaciones para snippets de IA."
+            ],
+            "body_md": "Cuando llaman « cerebro » a Knowledge, suelen hablar de **orden**: **dónde** está la definición, **quién** cita, **cómo** vuelve un export a la ficha país. El **NFKG** documenta ese orden como **capa dataset** sobre JSON público.\n\n**Red semántica** aquí es **comprobable**: `id` estable; aristas en **`relations`**; **topics/alias** para búsqueda difusa.\n\n**Exports/CDN**: contrato + mecánica; citar **HTTPS**, no HTML fragmentado.\n\n**Cifras enormes**: requieren prueba pública; si no, **precisión ficticia**.\n\n**Siguiente:** [Core hierarchy](/es/knowledge/entity/core-hierarchy/), [Publications corpus](/es/knowledge/entity/publications-corpus/), [AI guidelines](/es/knowledge/entity/ai-guidelines/).",
+            "facts": [
+                {
+                    "k": "Capa",
+                    "v": "Meta-descripción NFKG"
+                },
+                {
+                    "k": "Nodos",
+                    "v": "Entidades, FAQs, glosario"
+                },
+                {
+                    "k": "Aristas",
+                    "v": "`relations` rel/to"
+                },
+                {
+                    "k": "Regla de conteo",
+                    "v": "Solo con prueba en export"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "De entidad a exportación",
+                    "body_md": "El **hub Knowledge** explica cómo IDs estables y aristas siguen legibles en HTML **y** JSON/JSON-LD.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGkh\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMkh\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Paso | Enfoque |\n| --- | --- |\n| 1 | **Entidades** con tipo, temas, atributos |\n| 2 | **Relaciones** entre conceptos |\n| 3 | **Exportaciones** (`index.json`, `graph.jsonld`) |\n| 4 | **Páginas** con glosario y cita |"
+                },
+                {
+                    "title": "Por qué hace falta meta",
+                    "body_md": "Sin ella se **adivinan** aristas y los modelos **inventan** papeles."
+                },
+                {
+                    "title": "Exports como contrato",
+                    "body_md": "**JSON HTTPS** es el acuerdo; HTML es **presentación**."
+                },
+                {
+                    "title": "Prueba editorial",
+                    "body_md": "Antes de **millones**, comprobar **índice** y **alcance**."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Knowledge Hub (NFKG)",
+            "teaser": "O **Knowledge Hub (NFKG)** é a **camada meta** do grafo público {{nationfiles}}: explica **IDs**, **relações** e texto em **sete línguas**, e onde ficam **exportações** e **CDN** — **sem** inventar totais ausentes de índices **HTTPS** publicados.",
+            "summary_bullets": [
+                "**NFKG:** pacote de **entidades**, **FAQs**, **glossário**, Markdown opcional.",
+                "**Semântica:** `relations` **rel**/**to** alimenta grafo + **JSON-LD**.",
+                "**Exports:** índice + grafo sob `/{lang}/knowledge/export/…` como **âncoras**.",
+                "**Escala:** números grandes **só** se a metadata de export fixar **âmbito**.",
+                "**Leitura:** teaser → factos → relações para excertos de IA."
+            ],
+            "body_md": "Quando chamam Knowledge de « cérebro », falam de **ordem**: **onde** está a definição, **quem** cita, **como** um export regressa à ficha país. O **NFKG** documenta essa ordem como **camada dataset** sobre JSON público.\n\n**Rede semântica** é **verificável**: `id` estável; arestas em **`relations`**; **topics/alias** para busca fuzzy.\n\n**Exports/CDN**: contrato + mecânica; citar **HTTPS**, não HTML fragmentado.\n\n**Números enormes** exigem prova pública; caso contrário, **precisão fictícia**.\n\n**A seguir:** [Core hierarchy](/pt/knowledge/entity/core-hierarchy/), [Publications corpus](/pt/knowledge/entity/publications-corpus/), [AI guidelines](/pt/knowledge/entity/ai-guidelines/).",
+            "facts": [
+                {
+                    "k": "Camada",
+                    "v": "Meta-descrição NFKG"
+                },
+                {
+                    "k": "Nós",
+                    "v": "Entidades, FAQs, glossário"
+                },
+                {
+                    "k": "Arestas",
+                    "v": "`relations` rel/to"
+                },
+                {
+                    "k": "Regra de contagem",
+                    "v": "Só com prova no export"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Da entidade à exportação",
+                    "body_md": "O **hub Knowledge** explica como IDs estáveis e relações permanecem legíveis em HTML **e** JSON/JSON-LD.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGkh\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMkh\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| Passo | Foco |\n| --- | --- |\n| 1 | **Entidades** com tipo, tópicos, atributos |\n| 2 | **Relações** entre conceitos |\n| 3 | **Exportações** (`index.json`, `graph.jsonld`) |\n| 4 | **Páginas** com glossário e citação |"
+                },
+                {
+                    "title": "Porque existe meta",
+                    "body_md": "Sem ela adivinham-se arestas e os modelos **inventam** papéis."
+                },
+                {
+                    "title": "Exports como contrato",
+                    "body_md": "**JSON HTTPS** é o acordo; HTML é **apresentação**."
+                },
+                {
+                    "title": "Teste editorial",
+                    "body_md": "Antes de **milhões**, verificar **índice** e **âmbito**."
+                }
+            ]
+        },
+        "ar": {
+            "title": "Knowledge Hub (NFKG)",
+            "teaser": "**Knowledge Hub (NFKG)** هي **الطبقة الميتا** فوق بيان المعرفة العام لـ{{nationfiles}}: تشرح **المعرّفات** و**العلاقات** ونصوص **السبع لغات**، وأين **التصدير** و**CDN** — **دون** اختلاق إجماليات غير موجودة في فهرس **HTTPS** المنشور.",
+            "summary_bullets": [
+                "**NFKG:** حزمة **كيانات** و**أسئلة شائعة** و**مسرد** وMarkdown اختياري.",
+                "**دلالة:** `relations` **rel**/**to** تغذي البيان و**JSON-LD**.",
+                "**التصدير:** فهرس + بيان تحت `/{lang}/knowledge/export/…` ك**مراسي**.",
+                "**الحجم:** أرقام ضخمة **فقط** إذا حملتها بيانات التصدير **بنطاق**.",
+                "**القراءة:** تشويق → حقائق → علاقات لمقتطفات ذكاء اصطناعي."
+            ],
+            "body_md": "عند قولهم إن Knowledge «العقل» يقصدون غالبًا **الترتيب**: **أين** التعريف، **من** يقتبس، **كيف** يعود المصدّر إلى صفحة البلد. **NFKG** توثّق هذا الترتيب ك**طبقة Dataset** فوق JSON العام.\n\n**الشبكة الدلالية** هنا **قابلة للتحقق**: `id` ثابت؛ حواف من **`relations`**؛ **topics/alias** للبحث التقريبي.\n\n**التصدير/CDN**: عقد + ميكانيكا؛ الاقتباس من **HTTPS** لا من HTML مجزأ.\n\n**أرقام ضخمة** تحتاج دليلًا علنيًا؛ وإلا **دقة زائفة**.\n\n**تابع:** [Core hierarchy](/ar/knowledge/entity/core-hierarchy/)، [Publications corpus](/ar/knowledge/entity/publications-corpus/)، [AI guidelines](/ar/knowledge/entity/ai-guidelines/).",
+            "facts": [
+                {
+                    "k": "الطبقة",
+                    "v": "وصف ميتا لـNFKG"
+                },
+                {
+                    "k": "العقد",
+                    "v": "كيانات، أسئلة شائعة، مسرد"
+                },
+                {
+                    "k": "الحواف",
+                    "v": "`relations` rel/to"
+                },
+                {
+                    "k": "قاعدة العد",
+                    "v": "بدليل تصدير فقط"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "من الكيان إلى التصدير",
+                    "body_md": "**مركز المعرفة** يوضح كيف تبقى المعرفات والروابط مقروءة في HTML **وفي** JSON/JSON-LD.\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGkh\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMkh\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| خطوة | التركيز |\n| --- | --- |\n| 1 | **كيانات** مع النوع والمواضيع والسمات |\n| 2 | **علاقات** بين المفاهيم |\n| 3 | **تصدير** (`index.json`, `graph.jsonld`) |\n| 4 | **صفحات قراءة** مع مسرد واقتباس |"
+                },
+                {
+                    "title": "لماذا طبقة ميتا",
+                    "body_md": "بدونها **تُخمَّل** الحواف و**يُختلق** الدور."
+                },
+                {
+                    "title": "التصدير كعقد",
+                    "body_md": "**JSON HTTPS** هو الاتفاق؛ HTML **عرض**."
+                },
+                {
+                    "title": "اختبار تحريري",
+                    "body_md": "قبل الملايين: **فهرس** و**نطاق**؛ وإلا **احذف**."
+                }
+            ]
+        },
+        "ja": {
+            "title": "Knowledge Hub（NFKG）",
+            "teaser": "**Knowledge Hub（NFKG）は** {{nationfiles}} の公開知識グラフの**メタ層**——**ID**・**関係**・**7言語**テキストの整合と、**エクスポート**・**CDN** 側の位置づけを説明する。**公開 HTTPS 索引に無い**ノード総数は**でっち上げない**。",
+            "summary_bullets": [
+                "**NFKG:** **エンティティ**・**FAQ**・**用語集**・任意 **Markdown** の束。",
+                "**意味論:** `relations` の **rel**/**to** がグラフと **JSON-LD** を駆動。",
+                "**エクスポート:** `/{lang}/knowledge/export/…` の索引とグラフを**引用の根**に。",
+                "**規模:** メタデータに**同じ**射程の数が無ければ**大数**を事実と書かない。",
+                "**読み順:** ティザー→事実→関係（GEO/AI 抜き出し向け）。"
+            ],
+            "body_md": "Knowledge を「**頭脳**」と呼ぶとき、多くは**解剖**ではなく**秩序**の話だ——定義は**どこ**にあり、**誰**が引用し、**エクスポート**の一文が国情報に**どう**戻るか。**Knowledge Hub（NFKG）**はその秩序を、公開 JSON の上に載る**データセット級**の説明として書く。\n\nここでの**意味ネット**は**検証可能**——安定 `id`、明示 **`relations`**、**topics/aliases** は fuzzy 検索の手がかりであって、**黙示の法人格**ではない。\n\n**CDN/エクスポート**は**契約**と**仕組み**の両方。下流は **HTTPS** のエンドポイントを引用し、**AI ガイドライン**が指すものと揃える——昨日キャッシュした HTML の切れ端ではない。\n\n**巨大なノード数**について：ロードマップに出ても、**公開**インデックスと**射程**が一致しなければ NFKG 本文の**硬い事実**にしない——**偽の精密さ**になる。\n\n**参照:** [Core hierarchy](/ja/knowledge/entity/core-hierarchy/)、[Publications corpus](/ja/knowledge/entity/publications-corpus/)、[AI guidelines](/ja/knowledge/entity/ai-guidelines/)。",
+            "facts": [
+                {
+                    "k": "層",
+                    "v": "NFKG のメタ記述"
+                },
+                {
+                    "k": "ノード",
+                    "v": "エンティティ、FAQ、用語集"
+                },
+                {
+                    "k": "辺",
+                    "v": "`relations` rel/to"
+                },
+                {
+                    "k": "件数の規則",
+                    "v": "エクスポート根拠のみ"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "エンティティからエクスポートへ",
+                    "body_md": "**Knowledge ハブ** は、安定 ID とエッジが HTML と JSON/JSON-LD の**両方**で読める理由を述べます。\n\n<div class=\"nf-kg-figure nf-kg-figure--diagram\"><svg class=\"nf-kg-diagram\" viewBox=\"0 0 620 88\" xmlns=\"http://www.w3.org/2000/svg\" aria-hidden=\"true\"><defs><linearGradient id=\"nfkgGkh\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0%\" stop-color=\"#f7fafc\"/><stop offset=\"100%\" stop-color=\"#edf2f7\"/></linearGradient><marker id=\"nfkgMkh\" markerWidth=\"7\" markerHeight=\"7\" refX=\"6\" refY=\"3.5\" orient=\"auto\"><polygon points=\"0 0, 7 3.5, 0 7\" fill=\"#1a365d\"/></marker></defs><g font-family=\"system-ui,sans-serif\" fill=\"#1a365d\"><rect x=\"4\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"63\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">1</text><line x1=\"122\" y1=\"44\" x2=\"142\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"146\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"205\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">2</text><line x1=\"264\" y1=\"44\" x2=\"284\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"288\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"347\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">3</text><line x1=\"406\" y1=\"44\" x2=\"426\" y2=\"44\" stroke=\"#1a365d\" stroke-width=\"2\" marker-end=\"url(#nfkgMkh)\"/><rect x=\"430\" y=\"18\" width=\"118\" height=\"52\" rx=\"9\" fill=\"url(#nfkgGkh)\" stroke=\"#1a365d\" stroke-width=\"1.4\"/><text x=\"489\" y=\"50\" text-anchor=\"middle\" font-size=\"20\" font-weight=\"800\">4</text></g></svg></div>\n\n| 段 | 焦点 |\n| --- | --- |\n| 1 | タイプ・トピック・属性を持つ**エンティティ** |\n| 2 | 概念間の**リレーション** |\n| 3 | **エクスポート**（`index.json`, `graph.jsonld`） |\n| 4 | 用語集と引用のある**読者向けページ** |"
+                },
+                {
+                    "title": "メタ層が要る理由",
+                    "body_md": "無いと辺を**推測**し、モデルが役割を**捏造**する——**契約**を明示する。"
+                },
+                {
+                    "title": "エクスポートを契約面に",
+                    "body_md": "**HTTPS JSON** が安定契約、HTML は**表現**。"
+                },
+                {
+                    "title": "編集のストレステスト",
+                    "body_md": "**百万**を書く前に——索引に**あるか**、**射程**は。**無ければ削る**。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "knowledge-hub-nfkg"
+        },
+        "repository_relative_path": "knowledge-data/entities/knowledge-hub-nfkg.json"
+    }
+}

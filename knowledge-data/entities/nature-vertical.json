@@ -1,0 +1,691 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "nature-vertical",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T08:08:59Z",
+    "topics": [
+        "environment",
+        "ecology",
+        "climate-risk",
+        "resource-scarcity",
+        "biodiversity",
+        "flora-fauna-live",
+        "national-security-assessment",
+        "maps",
+        "country-dashboard"
+    ],
+    "aliases": [
+        "Natur & Ökologie",
+        "Natur und Ökologie",
+        "Nature vertical",
+        "Vertical nature",
+        "Verticale nature",
+        "Vertical naturaleza",
+        "Flora & Fauna Live",
+        "Flora Fauna Live",
+        "Umweltrisiken",
+        "environmental risk NationFiles",
+        "climate security context",
+        "Ressourcenknappheit",
+        "Biodiversität NationFiles",
+        "植物ライブ",
+        "野生動物トラッカー",
+        "الطبيعة والبيئة",
+        "Flora Fauna"
+    ],
+    "attributes": [
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Maps hub",
+                    "url": "https://nationfiles.com/en/map/"
+                },
+                {
+                    "label": "Countries hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                },
+                {
+                    "label": "Legal notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "model_type",
+            "value": "The NationFiles nature & ecology vertical describes how environmental risk—climate stress, resource scarcity, and biodiversity-relevant monitoring that the site markets publicly as Flora & Fauna Live—is presented alongside security-typed readouts on shared country and map surfaces. The legal notice summarizes Flora & Fauna Live as environmental monitoring based on evaluated imagery; the vertical does not claim to replace national environmental law, meteorological authority products, or protected-area registers unless those are cited on their own pages. Layer availability follows the routes NationFiles actually publishes.",
+            "depends_on": [
+                "nationfiles",
+                "security-radar",
+                "country-intelligence-dashboard",
+                "metamaps",
+                "naciro",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "Legal notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                },
+                {
+                    "label": "Knowledge graph",
+                    "url": "https://nationfiles.com/en/knowledge/graph/"
+                }
+            ],
+            "value_i18n": {
+                "en": "The NationFiles nature & ecology vertical describes how environmental risk—climate stress, resource scarcity, and biodiversity-relevant monitoring that the site markets publicly as Flora & Fauna Live—is presented alongside security-typed readouts on shared country and map surfaces. The legal notice summarizes Flora & Fauna Live as environmental monitoring based on evaluated imagery; the vertical does not claim to replace national environmental law, meteorological authority products, or protected-area registers unless those are cited on their own pages. Layer availability follows the routes NationFiles actually publishes.",
+                "de": "Die **Natur- und Ökologie-Sparte** auf NationFiles beschreibt, wie **Umwelt- und Klimarisiken**, **Ressourcenknappheit** und **biodiversitätsnahe** Überwachung — öffentlich unter **Flora & Fauna Live** geführt — **nebeneinander** mit sicherheitsgeprägten Lesarten auf **gemeinsamen** Länder- und Kartenoberflächen auftauchen. Im **Legal Notice** steht, dass **Flora & Fauna Live** Umwelt‑Monitoring auf Basis **ausgewerteter Bildinformationen** meint; die Sparte **ersetzt** weder nationales **Naturschutzrecht**, Wetterdienste noch Schutzgebietsregister, **es sei denn**, diese werden **separat** zitiert. **Verfügbarkeit** von Layern folgt den **tatsächlich** veröffentlichten Routen.",
+                "fr": "La **verticale nature & écologie** NationFiles décrit comment risques **environnementaux** et **climatiques**, **pénurie** de ressources et surveillance liée à la **biodiversité** — commercialisée publiquement comme **Flora & Fauna Live** — apparaissent **à côté** de lectures de **sécurité** sur des surfaces pays/cartes partagées. Le **legal notice** résume **Flora & Fauna Live** comme suivi environnemental fondé sur une **évaluation** d’images ; la verticale **ne remplace** pas le droit environnemental national, les services météorologiques ou les inventaires d’aires protégées **sauf** citation distincte. La **disponibilité** des couches suit les routes réellement publiées.",
+                "es": "La **vertical naturaleza y ecología** NationFiles explica cómo el riesgo **ambiental** y **climático**, la **escasez** de recursos y el seguimiento ligado a la **biodiversidad** —presentado públicamente como **Flora & Fauna Live**— se muestra **junto** a lecturas de **seguridad** en superficies país/mapa compartidas. El **aviso legal** resume **Flora & Fauna Live** como monitoreo ambiental basado en **imagen evaluada**; la vertical **no sustituye** la normativa ambiental nacional, productos meteorológicos oficiales ni inventarios de áreas protegidas **salvo** cita aparte. La **disponibilidad** de capas sigue las rutas que NationFiles **publica**.",
+                "pt": "A **vertical natureza & ecologia** NationFiles descreve como risco **ambiental** e **climático**, **escassez** de recursos e monitorização ligada à **biodiversidade** — pública como **Flora & Fauna Live** — surge **com** leituras de **segurança** nas mesmas superfícies país/mapa. O **aviso legal** resume **Flora & Fauna Live** como monitorização ambiental com **imagem avaliada**; a vertical **não substitui** ordenamento ambiental nacional, produtos meteorológicos oficiais nem inventários de áreas protegidas **salvo** citação própria. **Disponibilidade** de camadas segue rotas **efectivamente** publicadas.",
+                "ar": "**قطاع الطبيعة والبيئة** على NationFiles يشرح كيف تُعرض مخاطر **بيئية** و**مناخية** و**ندرة** موارد ومراقبة تتعلق **بالتنوع الحيوي** —تُسوَّق علنيًا كـ**Flora & Fauna Live**— **إلى جانب** قراءات **أمنية** على أسطح دول/خرائط مشتركة. **الإشعار القانوني** يلخّص **Flora & Fauna Live** كمراقبة بيئية تعتمد **تقييم صور**؛ القطاع **لا يحل** محل القانون البيئي الوطني ولا نشرات الأرصاد ولا سجلات المناطق المحمية **ما لم** تُستشهد **بشكل** منفصل. **توفر** الطبقات يتبع المسارات التي **تنشرها** NationFiles فعليًا.",
+                "ja": "NationFiles の**自然・生態系**領域は、**気候ストレス**・**資源の逼塞**・**生き物相**に関わるモニタリング（サイト上では **Flora & Fauna Live** として公開説明される）が、国ページや地図面で**安全保障寄り**の読みと**どう並ぶか**を述べる。**リーガルノーティス**では **Flora & Fauna Live** を**評価された画像**に基づく環境モニタリングと要約している。この領域は、別途引用が無い限り**各国の環境法**・**気象当局**の製品・**保護地域**台帳の**代替**ではない。**レイヤ**の有無は NationFiles が**実際に**出すルートに従う。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "{{metamaps}} provides stacked geographic overlays—megacities, nuclear-generation siting, tension-typed lenses—where the methodology pages say so; the security maps hub carries the enforcement- versus strategy-stratified view documented for {{security-radar}}. {{country-intelligence-dashboard}} can place {{nfsi}}, Security Radar, and short predictive copy on one ISO page so ecological context and security assessment stay visually adjacent when the product turns that layout on. {{naciro}} handles orchestration in line with public company descriptions—not a hidden second product name inside NFKG text.",
+            "depends_on": [
+                "metamaps",
+                "security-radar",
+                "country-intelligence-dashboard",
+                "nfsi",
+                "naciro",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Meta maps hub",
+                    "url": "https://nationfiles.com/en/map/metamap/"
+                },
+                {
+                    "label": "Security maps hub",
+                    "url": "https://nationfiles.com/en/map/security/"
+                }
+            ],
+            "value_i18n": {
+                "en": "{{metamaps}} provides stacked geographic overlays—megacities, nuclear-generation siting, tension-typed lenses—where the methodology pages say so; the security maps hub carries the enforcement- versus strategy-stratified view documented for {{security-radar}}. {{country-intelligence-dashboard}} can place {{nfsi}}, Security Radar, and short predictive copy on one ISO page so ecological context and security assessment stay visually adjacent when the product turns that layout on. {{naciro}} handles orchestration in line with public company descriptions—not a hidden second product name inside NFKG text.",
+                "de": "{{metamaps}} liefert **gestapelte** Geo-Overlays — Megacity-, Kernkraft-, Spannungs-Linsen — **soweit** Methodenseiten das **begründen**; der **Sicherheits-Kartenhub** trägt die für {{security-radar}} dokumentierte Trennung **Justiz-/Fahndungsnähe** vs. **strategische** Lesart. {{country-intelligence-dashboard}} kann {{nfsi}}, Security Radar und kurze **Predictive**-Texte auf **einer** ISO-Seite vereinen, damit **ökologischer** und **sicherheitsrelevanter** Kontext **nebeneinander** bleiben, wenn das Produkt das **freischaltet**. {{naciro}} orchestriert laut **öffentlicher** Unternehmensbeschreibung — kein **zweiter** Produktname im NFKG-Fließtext.",
+                "fr": "{{metamaps}} fournit des **empilements** géographiques — mégapoles, nucléaire, lentilles tension — **si** les pages méthode le **disent** ; le hub cartes **sécurité** porte la **stratification** répression vs. stratégie documentée pour {{security-radar}}. {{country-intelligence-dashboard}} peut réunir {{nfsi}}, Security Radar et texte **predictifs** courts sur **une** page ISO pour garder **écologie** et **évaluation sécurité** **côte à côte** si le produit l’active. {{naciro}} orchestre selon les textes **publics** d’entreprise — pas de **second** nom produit caché dans le NFKG.",
+                "es": "{{metamaps}} aporta **apilados** geográficos — megaciudades, **nuclear**, tensión — **donde** las páginas método lo **avalen**; el hub de mapas **seguridad** aloja la vista documentada de {{security-radar}} separando **cumplimiento** y **estrategia**. {{country-intelligence-dashboard}} puede colocar {{nfsi}}, Security Radar y **predictivo** corto en **una** página ISO para mantener **ecología** y **evaluación de seguridad** **juntas** si el producto lo **activa**. {{naciro}} orquesta según descripciones **públicas** — sin **otro** nombre de producto en el NFKG.",
+                "pt": "{{metamaps}} oferece sobreposições **empilhadas** — megacidades, **nuclear**, tensão — **onde** a metodologia **autoriza**; o hub de mapas **segurança** carrega a leitura documentada de {{security-radar}} separando **cumprimento** e **estratégia**. {{country-intelligence-dashboard}} pode reunir {{nfsi}}, Security Radar e texto **predictivo** curto numa página **ISO** para manter **ecologia** e **avaliação de segurança** **lado a lado** quando o produto **liga**. {{naciro}} orquestra segundo texto **público** da empresa — sem **segundo** nome de produto no NFKG.",
+                "ar": "{{metamaps}} يوفّر طبقات جغرافية **مكدّسة** — مدن ضخمة، **نووي**، توتر — **حيث** تسمح صفحات المنهجية؛ مركز خرائط **الأمن** يحمل التمييز الموثَّق لـ{{security-radar}} بين **إنفاذ** و**استراتيجية**. {{country-intelligence-dashboard}} يمكن أن يضع {{nfsi}} وSecurity Radar و**نصًا تنبؤيًا** قصيرًا في **صفحة ISO** واحدة ليبقى **السياق البيئي** و**تقييم الأمن** **مجاورين** عند تفعيل الواجهة. {{naciro}} ينسّط وفق وصف **علني** — **لا** اسم منتج ثانٍ مخفي في NFKG.",
+                "ja": "{{metamaps}} は手法ページの範囲で**重ねる**地理レイヤ（巨大都市、原子力立地、緊張レンズ）を出す。**セキュリティ地図**ハブは {{security-radar}} で区別される**執行系**と**戦略系**の見え方を載せる。{{country-intelligence-dashboard}} は {{nfsi}}・Security Radar・短い**先行**文を**同一** ISO ページに置き、製品がそのレイアウトを**オン**にすれば**生態**文脈と**安全保障**評価を**隣接**で読ませる。{{naciro}} は**公開**の会社説明どおりに統合する——NFKG 本文に**隠れた**第二商品名は置かない。"
+            }
+        },
+        {
+            "key": "forecast_horizon",
+            "value": "Ecosystems and climate shift across seasons and decades; the dashboard’s short operational horizons (for example the 24h/7d predictive layer described on {{country-intelligence-dashboard}}) support briefing, not decadal climate guarantees. Environmental forward-looking copy stays tied to published refresh cycles, export timestamps, and UI disclaimers referenced from the AI guidelines—rather than a single undisclosed planetary model.",
+            "depends_on": [
+                "country-intelligence-dashboard",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "AI guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Ecosystems and climate shift across seasons and decades; the dashboard’s short operational horizons (for example the 24h/7d predictive layer described on {{country-intelligence-dashboard}}) support briefing, not decadal climate guarantees. Environmental forward-looking copy stays tied to published refresh cycles, export timestamps, and UI disclaimers referenced from the AI guidelines—rather than a single undisclosed planetary model.",
+                "de": "**Ökosysteme** und **Klima** ändern sich über **Jahreszeiten** und **Jahrzehnte**; kurze **Lagehorizonte** im Dashboard (z. B. **24h/7d**-Schicht laut {{country-intelligence-dashboard}}) dienen **Briefing**, nicht **Dekaden**-Klimagarantien. **Umwelt**-Prosatexte bleiben an **Refresh**-Zyklus, Export-**Zeitstempel** und **UI**-Hinweise aus den **AI Guidelines** gebunden — **nicht** an ein einziges **undokumentiertes** Planetenmodell.",
+                "fr": "Les **écosystèmes** et le **climat** évoluent sur **saisons** et **décennies** ; les horizons **opérationnels** courts du tableau de bord (ex. couche **24h/7j** selon {{country-intelligence-dashboard}}) servent le **briefing**, pas une **garantie** climatique décennale. Le texte prospectif **environnemental** reste lié aux cycles de **rafraîchissement** publiés, horodatages d’**export** et mentions **UI** des **AI guidelines** — pas à un modèle planétaire **secret** unique.",
+                "es": "**Ecosistemas** y **clima** cambian en **estaciones** y **décadas**; los horizontes **breves** del panel (p. ej. capa **24h/7d** en {{country-intelligence-dashboard}}) apoyan el **briefing**, no **garantías** climáticas decenales. El texto prospectivo **ambiental** se ata a **ciclos** publicados, **sellos** de export y avisos de **UI** en **AI guidelines** — no a un modelo planetario **oculto** único.",
+                "pt": "**Ecossistemas** e **clima** mudam em **estações** e **décadas**; horizontes **curtos** do painel (ex. camada **24h/7d** em {{country-intelligence-dashboard}}) servem **briefing**, não **garantias** climáticas decenais. Texto prospectivo **ambiental** prende-se a **ciclos** publicados, **carimbos** de exportação e avisos de **UI** nas **AI guidelines** — não a um modelo planetário **oculto** único.",
+                "ar": "تتغيّر **الأنظمة البيئية** وال**مناخ** على مدى **فصول** و**عقود**؛ آفاق التشغيل **القصيرة** في اللوحة (مثل طبقة **24س/7أ** وفق {{country-intelligence-dashboard}}) تدعم **الإحاطة** لا **ضمانات** مناخية عشرينية. النص البيئي **التوقعي** يرتبط بدورات **التحديث** المنشورة وأختام **التصدير** وتنبيهات **الواجهة** في **إرشادات الذكاء الاصطناعي** — لا بنموذج كوكبي **سري** واحد.",
+                "ja": "生態系と気候は**季節**・**数十年**で動く。ダッシュボードの**短い**運用地平（{{country-intelligence-dashboard}} にある **24h/7d** レイヤの説明）は**ブリーフィング**向けで、**数十年**スケールの気候保証ではない。**環境**の先を見る表現は、公開された**更新**周期・エクスポート**タイムスタンプ**・**AI ガイドライン**に沿う UI 注意に**結ばれる**——**一つの**未公開惑星モデルではない。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "Public legal-notice wording on Flora & Fauna Live, published metamap and security-map methodology, registry rows in {{legal-sources-registry}}, ISO-aligned bundles described with {{nationfile-json}}, and the channel-separation rules documented for {{security-radar}}. Each source family keeps explicit limits: imagery monitoring is not automatic field verification; heatmaps are not ground-truth adjudication.",
+            "depends_on": [
+                "legal-sources-registry",
+                "nationfile-json",
+                "security-radar",
+                "metamaps"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "Legal notice",
+                    "url": "https://nationfiles.com/en/legal/legal-notice/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Public legal-notice wording on Flora & Fauna Live, published metamap and security-map methodology, registry rows in {{legal-sources-registry}}, ISO-aligned bundles described with {{nationfile-json}}, and the channel-separation rules documented for {{security-radar}}. Each source family keeps explicit limits: imagery monitoring is not automatic field verification; heatmaps are not ground-truth adjudication.",
+                "de": "Öffentlicher **Legal-Notice**-Text zu **Flora & Fauna Live**, veröffentlichte **Metamap**- und **Sicherheitskarten**-Methodik, Registereinträge in {{legal-sources-registry}}, **ISO**-Bündel im Einklang mit {{nationfile-json}} und die Kanal-Trennung aus {{security-radar}}. Jede Quellenfamilie nennt **Grenzen**: Bildmonitoring ist **keine** automatische **Feld**prüfung; Heatmaps sind **keine** rechtliche **Wahrheitsfeststellung**.",
+                "fr": "Formulations **legal notice** sur **Flora & Fauna Live**, méthodologies publiques **metamap** et cartes **sécurité**, lignes du {{legal-sources-registry}}, paquets **ISO** alignés sur {{nationfile-json}} et séparation des canaux de {{security-radar}}. Chaque famille de sources **borne** : surveillance imagerie ≠ vérification terrain ; heatmap ≠ verdict juridique.",
+                "es": "Redacción pública del **legal notice** sobre **Flora & Fauna Live**, metodología publicada de **metamap** y mapas **seguridad**, filas de {{legal-sources-registry}}, paquetes **ISO** alineados con {{nationfile-json}} y reglas de canal de {{security-radar}}. Cada familia **delimita** : monitoreo por imagen ≠ verificación de campo; heatmap ≠ fallo legal.",
+                "pt": "Texto público do **legal notice** sobre **Flora & Fauna Live**, metodologia publicada de **metamap** e mapas **segurança**, linhas em {{legal-sources-registry}}, pacotes **ISO** com {{nationfile-json}} e separação de canais de {{security-radar}}. Cada família **fixa limites** : imagem ≠ verificação de terreno; heatmap ≠ decisão jurídica.",
+                "ar": "صياغة **الإشعار القانوني** العلنية لـ**Flora & Fauna Live**، منهجيات **metamap** وخرائط **الأمن** المنشورة، سجلات {{legal-sources-registry}}، حزم **ISO** المتوافقة مع {{nationfile-json}} وقواعد فصل القنوات لـ{{security-radar}}. كل فئة **توضّح حدودها**: المراقبة بالصور **ليست** تحققًا ميدانيًا آليًا؛ الخريطة الحرارية **ليست** حكمًا قضائيًا.",
+                "ja": "**Flora & Fauna Live** についての**リーガルノーティス**の公開文言、公開された **metamap** と**セキュリティ地図**の方法論、{{legal-sources-registry}} の行、{{nationfile-json}} に沿う **ISO** 束、{{security-radar}} のチャンネル分離規則。各ソース種は**限界**を明示する——画像監視は**自動の現地検証**ではない；ヒートマップは**真実の裁定**ではない。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Country intelligence surfaces, security map views, metamap overlays when enabled, and the same HTTPS citation pattern as other NationFiles public layers; Flora & Fauna Live copy tracks the legal-notice description rather than improvising unpublished ingestion detail.",
+            "depends_on": [
+                "country-intelligence-dashboard",
+                "security-radar",
+                "metamaps",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Global security radar",
+                    "url": "https://nationfiles.com/en/security/security-radar/security-radar/"
+                },
+                {
+                    "label": "Countries hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Country intelligence surfaces, security map views, metamap overlays when enabled, and the same HTTPS citation pattern as other NationFiles public layers; Flora & Fauna Live copy tracks the legal-notice description rather than improvising unpublished ingestion detail.",
+                "de": "Länder-Intelligence-Oberflächen, Sicherheitskarten, Metamap-Overlays wenn aktiv — **dieselbe** **HTTPS**-Zitationslogik wie bei anderen öffentlichen NationFiles-Schichten; Text zu **Flora & Fauna Live** folgt dem **Legal Notice**, ohne **undokumentierte** Ingest-Details zu erfinden.",
+                "fr": "Surfaces pays, cartes sécurité, overlays metamap si actifs — **même** logique de citation **HTTPS** que les autres couches publiques ; le texte **Flora & Fauna Live** suit le **legal notice** sans inventer d’ingestion **non publiée**.",
+                "es": "Superficies país, mapas seguridad, overlays metamap si están activos — **mismo** patrón de citas **HTTPS** ; el texto **Flora & Fauna Live** sigue el **aviso legal** sin inventar ingestión **no publicada**.",
+                "pt": "Superfícies país, mapas segurança, overlays metamap quando ativos — **mesmo** padrão **HTTPS** ; texto **Flora & Fauna Live** segue o **aviso legal** sem inventar ingestão **não publicada**.",
+                "ar": "أسطح الدول وخرائط الأمن وطبقات metamap عند التفعيل — **نفس** نمط الاقتباس **HTTPS**؛ نص **Flora & Fauna Live** يتتبع **الإشعار القانوني** دون اختلاق تفاصيل استيعاب **غير منشورة**.",
+                "ja": "国情報面、セキュリティ地図、有効なら metamap オーバーレイ——他の公開レイヤと同じ **HTTPS** 引用パターン。**Flora & Fauna Live** の表現は**リーガルノーティス**に沿い、未公開の取り込み詳細を**でっち上げ**ない。"
+            }
+        },
+        {
+            "key": "knowledge_hub",
+            "value": "https://nationfiles.com/en/knowledge/",
+            "sources": [
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "value_i18n": {
+                "de": "https://nationfiles.com/en/knowledge/",
+                "en": "https://nationfiles.com/en/knowledge/",
+                "fr": "https://nationfiles.com/en/knowledge/",
+                "es": "https://nationfiles.com/en/knowledge/",
+                "pt": "https://nationfiles.com/en/knowledge/",
+                "ar": "https://nationfiles.com/en/knowledge/",
+                "ja": "https://nationfiles.com/en/knowledge/"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "security-radar"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "metamaps"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nfsi"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "knowledge-hub-nfkg"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "expat-metamaps-cluster"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        }
+    ],
+    "faq_refs": [],
+    "blocks": [
+        {
+            "type": "summary"
+        },
+        {
+            "type": "markdown"
+        },
+        {
+            "type": "attribute_table"
+        },
+        {
+            "type": "fact_table"
+        },
+        {
+            "type": "sections"
+        },
+        {
+            "type": "relations"
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Natur & Ökologie",
+            "teaser": "Die **Natur- und Ökologie-Sparte** erklärt, wie **Umweltrisiken**, **Klimastress** und **Flora & Fauna Live** neben **Security Radar** und **Länder-Dashboards** gelesen werden — **ohne** behördliche oder juristische **Ersatzfunktion** zu behaupten.",
+            "summary_bullets": [
+                "**Risiko:** Klima-, Ressourcen- und Biodiversitätskontext neben {{security-radar}} und {{metamaps}}.",
+                "**Flora & Fauna Live:** im Legal Notice als bildbasiertes Umweltmonitoring beschrieben — **kein** automatisches Geländeprotokoll.",
+                "**Sicherheit:** ökologische Signale können die **nationale Sicherheitseinordnung** ergänzen, **ersetzen** sie nicht.",
+                "**Horizont:** kurze Dashboard-Horizonte dienen **Briefings**, nicht Jahrzehntsgarantien.",
+                "**Einstieg:** [Karten](/de/map/), [Länder](/de/countries/), [Knowledge](/de/knowledge/)."
+            ],
+            "body_md": "Umwelt- und Sicherheitsdebatten greifen oft **nebeneinander**, werden aber selten **gemeinsam** erklärt. NationFiles gruppiert Karten-, Dashboard- und Methodentexte so, dass **ökologischer Stress**—etwa durch Vegetation, Tierbestand oder Ressourcenknappheit, soweit die Oberflächen es hergeben—**im selben ISO-Kontext** wie **NFSI**-Kopfzahlen und **Security Radar** auftauchen kann.\n\n**Flora & Fauna Live** taucht im **Legal Notice** als Umweltmonitoring mit **ausgewerteter Bildinformation** auf. Das ist **kein** Ersatz für Inventare von Naturschutzbehörden oder für **Wetterwarnungen**; es ist ein **zusätzlicher** öffentlich beschriebener Blick, dessen **Route** den tatsächlichen Veröffentlichungen folgt.\n\n**Ressourcenknappheit** und **Klima** betreffen oft Ernährung, Energie und Migration—Themen, die wiederum **Sicherheitspolitik** berühren. Die Sparte **verbietet** nicht, diese Linien zu verbinden; sie **verlangt**, dass jede Schicht ihre **Methodik** offen lässt und keine **vollständige** Weltdarstellung vortäuscht.\n\n**Weiterlesen:** {{security-radar}}, {{country-intelligence-dashboard}}, {{metamaps}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Schwerpunkt",
+                    "v": "Umwelt-Risiko neben Sicherheitslage"
+                },
+                {
+                    "k": "Live-Produkt",
+                    "v": "Flora & Fauna Live (Legal Notice)"
+                },
+                {
+                    "k": "Kartenpfad",
+                    "v": "{{metamaps}} + Map-Hub"
+                },
+                {
+                    "k": "Grenze",
+                    "v": "Kein Ersatz für Behörden-Fachverfahren"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum Ökologie im Sicherheitsbild vorkommt",
+                    "body_md": "Dürren, Feuer, Verlust landwirtschaftlicher Flächen und Degradation von Ökosystemen können **konkrete** Folgen für Stabilität haben. NationFiles **ordnet** diese Signale **sachlich** neben andere Dashboard-Teile — ohne Panikmache."
+                },
+                {
+                    "title": "Typische Missverständnisse",
+                    "body_md": "**Heatmaps** zeigen **Dichte**, nicht automatisch **Schuld**. **KI**-ausgewertete Bilder sind **kein** Gerichtsurteil. **Kurzfristige** Lage-Updates **decken** keine **Klimamodelle** ab."
+                },
+                {
+                    "title": "Rechtliche Lesarten",
+                    "body_md": "Verbindliche Aussagen bleiben auf **Zitat** aus dem **Quellenregister**, **Legal Notice** und den Methodenseiten der jeweiligen Kennzahl — nicht auf **unverbindliche** Menübezeichnungen ohne Methodik."
+                }
+            ]
+        },
+        "en": {
+            "title": "Nature & ecology",
+            "teaser": "The **nature & ecology vertical** explains how **environmental risk**, **climate stress**, and **Flora & Fauna Live** sit beside **Security Radar** and country dashboards—**without** claiming to replace statutory environmental or enforcement processes.",
+            "summary_bullets": [
+                "**Risk lens:** climate, resources, and biodiversity context next to {{security-radar}} and {{metamaps}}.",
+                "**Flora & Fauna Live:** legal notice describes image-evaluated environmental monitoring—not automatic field inspection.",
+                "**Security:** ecology can **inform** national risk readouts; it does **not** replace them.",
+                "**Horizon:** short dashboard windows serve **briefings**, not decadal climate guarantees.",
+                "**Start:** [Maps](/en/map/), [Countries](/en/countries/), [Knowledge](/en/knowledge/)."
+            ],
+            "body_md": "Environmental and security conversations often run in parallel; NationFiles tries to show **how** they meet on the same screens. Ecological stress—vegetation or wildlife signals and resource pressure when routes expose them—can appear **alongside** {{nfsi}} headlines and the {{security-radar}} context on ISO-scoped pages.\n\n**Flora & Fauna Live** is summarized in the **legal notice** as environmental monitoring based on **evaluated imagery**. That is **not** a substitute for protected-area inventories, hydrological bulletins, or meteorological warnings unless those authorities are cited elsewhere.\n\nScarcity and climate touch food, energy, and displacement—issues that **do** shape security planning. The vertical **allows** that linkage when documented; it **rejects** pretend completeness or a single hidden planetary model.\n\n**Read next:** {{security-radar}}, {{country-intelligence-dashboard}}, {{metamaps}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Focus",
+                    "v": "Environmental risk beside security assessment"
+                },
+                {
+                    "k": "Live product",
+                    "v": "Flora & Fauna Live (legal notice)"
+                },
+                {
+                    "k": "Map path",
+                    "v": "{{metamaps}} + map hub"
+                },
+                {
+                    "k": "Boundary",
+                    "v": "Not a regulator replacement"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why ecology shows up in security framing",
+                    "body_md": "Drought, fire, crop loss, and ecosystem decline can **materially** affect stability. NationFiles **positions** those signals **next to** enforcement- and strategy-typed layers where the product enables it."
+                },
+                {
+                    "title": "Common misconceptions",
+                    "body_md": "Heatmaps show **density**, not automatic **guilt**. Image workflows are **not** court rulings. **24h/7d** briefing copy is **not** a climate projection guarantee."
+                },
+                {
+                    "title": "Authoritative wording",
+                    "body_md": "Binding claims still trace to the **source registry**, **legal notice**, and each indicator’s methodology page—not to slogan-level navigation labels."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Nature & écologie",
+            "teaser": "La **verticale nature & écologie** décrit comment **risque environnemental**, **stress climatique** et **Flora & Fauna Live** coexistent avec **Security Radar** et les tableaux pays — **sans** se présenter comme substitut réglementaire.",
+            "summary_bullets": [
+                "**Risque:** climat, ressources, biodiversité à côté de {{security-radar}} et {{metamaps}}.",
+                "**Flora & Fauna Live:** notice légale — surveillance par **imagerie évaluée**, pas inspection terrain automatique.",
+                "**Sécurité:** l’écologie **informe** la lecture risque pays ; elle ne la **remplace** pas.",
+                "**Horizon:** fenêtres courtes pour **briefing**, pas garantie climatique décennale.",
+                "**Entrées:** [Cartes](/fr/map/), [Pays](/fr/countries/), [Knowledge](/fr/knowledge/)."
+            ],
+            "body_md": "Environnement et sécurité circulent souvent en **silos** ; NationFiles montre **où** ils se rejoignent. Le stress écologique—signaux végétation/faune et pression sur les ressources lorsque l’UI l’expose—peut apparaître **avec** {{nfsi}} et le contexte {{security-radar}} sur des surfaces ISO.\n\n**Flora & Fauna Live** est résumé au **legal notice** comme suivi environnemental fondé sur une **évaluation** d’images — **pas** un inventaire d’aires protégées ni un bulletin météorologique **à lui seul**.\n\nRareté des ressources et climat touchent alimentation, énergie, déplacements — sujets **pertinents** pour la stabilité. La verticale **autorise** ce lien **documenté** ; elle refuse la **prétention** d’exhaustivité.\n\n**Suite:** {{security-radar}}, {{country-intelligence-dashboard}}, {{metamaps}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Focus",
+                    "v": "Risque environnemental + lecture sécurité"
+                },
+                {
+                    "k": "Produit live",
+                    "v": "Flora & Fauna Live (notice)"
+                },
+                {
+                    "k": "Cartes",
+                    "v": "{{metamaps}} + hub cartes"
+                },
+                {
+                    "k": "Limite",
+                    "v": "Pas de substitution réglementaire"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi l’écologie entre dans le risque pays",
+                    "body_md": "Sécheresse, incendies, pertes agricoles ou dégradation d’écosystèmes peuvent **peser** sur la stabilité. La plateforme **coaffiche** ces signaux avec les lectures de sécurité lorsque le produit le permet."
+                },
+                {
+                    "title": "Malentendus fréquents",
+                    "body_md": "Les heatmaps montrent la **densité**, pas une **culpabilité** automatique. Les flux image **ne sont pas** des jugements. Les horizons **24h/7j** ne **gèlent** pas le climat à trente ans."
+                },
+                {
+                    "title": "Références sérieuses",
+                    "body_md": "Les obligations de citation restent celles du **registre des sources**, du **legal notice** et des pages méthode — pas des slogans de navigation."
+                }
+            ]
+        },
+        "es": {
+            "title": "Naturaleza y ecología",
+            "teaser": "La **vertical naturaleza y ecología** explica cómo el **riesgo ambiental**, el **estrés climático** y **Flora & Fauna Live** conviven con **Security Radar** y paneles país — **sin** suplantar procesos legales o técnicos oficiales.",
+            "summary_bullets": [
+                "**Riesgo:** clima, recursos, biodiversidad junto a {{security-radar}} y {{metamaps}}.",
+                "**Flora & Fauna Live:** aviso legal — monitoreo por **imagen evaluada**, no inspección automática en campo.",
+                "**Seguridad:** la ecología **informa** la lectura de riesgo; **no** la sustituye.",
+                "**Horizonte:** ventanas cortas para **briefing**, no garantía climática decenal.",
+                "**Entrada:** [Mapas](/es/map/), [Países](/es/countries/), [Knowledge](/es/knowledge/)."
+            ],
+            "body_md": "Medio ambiente y seguridad suelen tratarse por separado; NationFiles indica **dónde** convergen. El estrés ecológico—vegetación, fauna o presión sobre recursos cuando la interfaz lo muestra—puede aparecer **junto** a {{nfsi}} y el contexto {{security-radar}} en la misma ficha ISO.\n\n**Flora & Fauna Live** se resume en el **aviso legal** como monitoreo ambiental basado en **imagen evaluada** — **no** sustituye inventarios de áreas protegidas ni avisos meteorológicos **por sí solos**.\n\nEscasez y clima afectan alimentación, energía y desplazamientos—vectores relevantes para la **estabilidad**. La vertical **permite** el vínculo **documentado** y **rechaza** la falsa totalidad.\n\n**Seguir:** {{security-radar}}, {{country-intelligence-dashboard}}, {{metamaps}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Enfoque",
+                    "v": "Riesgo ambiental + lectura de seguridad"
+                },
+                {
+                    "k": "Producto live",
+                    "v": "Flora & Fauna Live (aviso legal)"
+                },
+                {
+                    "k": "Mapas",
+                    "v": "{{metamaps}} + hub de mapas"
+                },
+                {
+                    "k": "Límite",
+                    "v": "No sustituye a reguladores"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por qué la ecología entra en el riesgo país",
+                    "body_md": "Sequías, incendios o pérdidas agrícolas **inciden** en la estabilidad. La plataforma **coloca** esos indicios junto a capas de seguridad cuando el producto lo habilita."
+                },
+                {
+                    "title": "Errores habituales",
+                    "body_md": "Un **heatmap** muestra **densidad**, no culpabilidad directa. Flujos de imagen **no son** sentencias. Horizontes **24h/7d** **no** proyectan clima decadal."
+                },
+                {
+                    "title": "Voz pericial",
+                    "body_md": "Lo vinculante sigue el **registro de fuentes**, el **aviso legal** y las páginas metodológicas—no eslóganes de menú."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Natureza & ecologia",
+            "teaser": "A **vertical natureza & ecologia** explica como **risco ambiental**, **stress climático** e **Flora & Fauna Live** convivem com o **Security Radar** e painéis país — **sem** substituir processos legais ou técnicos oficiais.",
+            "summary_bullets": [
+                "**Risco:** clima, recursos, biodiversidade junto de {{security-radar}} e {{metamaps}}.",
+                "**Flora & Fauna Live:** aviso legal — monitorização por **imagem avaliada**, não inspecção de terreno automática.",
+                "**Segurança:** a ecologia **informa** a leitura de risco; **não** a substitui.",
+                "**Horizonte:** janelas curtas para **briefing**, sem garantia climática decenal.",
+                "**Entrada:** [Mapas](/pt/map/), [Países](/pt/countries/), [Knowledge](/pt/knowledge/)."
+            ],
+            "body_md": "Ambiente e segurança correm muitas vezes em paralelo; a NationFiles mostra **onde** se cruzam. Stress ecológico—vegetação, fauna ou pressão sobre recursos quando a UI expõe—pode surgir **com** {{nfsi}} e o contexto {{security-radar}} na mesma superfície ISO.\n\n**Flora & Fauna Live** consta no **aviso legal** como monitorização ambiental com **imagem avaliada** — **não** substitui inventários de áreas protegidas nem avisos meteorológicos **só por si**.\n\nEscassez e clima tocam alimentação, energia e deslocações—factores de **estabilidade**. A vertical **autoriza** a ligação **documentada** e **recusa** totalidades falsas.\n\n**Continuar:** {{security-radar}}, {{country-intelligence-dashboard}}, {{metamaps}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Foco",
+                    "v": "Risco ambiental + leitura de segurança"
+                },
+                {
+                    "k": "Produto live",
+                    "v": "Flora & Fauna Live (aviso legal)"
+                },
+                {
+                    "k": "Mapas",
+                    "v": "{{metamaps}} + hub de mapas"
+                },
+                {
+                    "k": "Limite",
+                    "v": "Não substitui autoridades"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Porque a ecologia entra no risco país",
+                    "body_md": "Secas, fogos ou perdas agrícolas **pesam** na estabilidade. A plataforma **coloca** esses sinais junto de camadas de segurança quando o produto permite."
+                },
+                {
+                    "title": "Confusões frequentes",
+                    "body_md": "**Heatmaps** mostram **densidade**, não culpa direta. Imagem avaliada **não é** decisão judicial. Horizontes **24h/7d** **não** são projeção climática decenal."
+                },
+                {
+                    "title": "Autoridade textual",
+                    "body_md": "O que obriga a citar continua a ser o **registo de fontes**, o **aviso legal** e as páginas de método — não slogan de navegação."
+                }
+            ]
+        },
+        "ar": {
+            "title": "الطبيعة والبيئة",
+            "teaser": "**قطاع الطبيعة والبيئة** يشرح كيف يُعرض **الخطر البيئي** و**إجهاد المناخ** و**Flora & Fauna Live** بجانب **Security Radar** ولوحات الدول — **دون** الادّعاء بأنه **يحل** محل إجراءات جهات رسمية.",
+            "summary_bullets": [
+                "**خطر:** مناخ وموارد وتنوع حيوي مع {{security-radar}} و{{metamaps}}.",
+                "**Flora & Fauna Live:** إشعار قانوني — مراقبة بيئية ب**صور مُقيَّمة** لا تفتيش ميداني آلي.",
+                "**الأمن:** البيئة **تغذي** قراءة المخاطر و**لا** **تغني** عنها.",
+                "**الأفق:** نوافذ قصيرة لل**إحاطة** لا ضمان مناخي عقدي.",
+                "**مدخل:** [الخرائط](/ar/map/)، [الدول](/ar/countries/)، [Knowledge](/ar/knowledge/)."
+            ],
+            "body_md": "غالبًا ما يُعالَج البيئة والأمن بمعزلٍ عن بعضهما؛ NationFiles تبيّن **أين** يلتقيان. الإجهاد البيئي—غطاء نباتي أو أثر على الحياة البرية أو ضغط على الموارد عندما تعرضه الواجهة—قد يظهر **بجانب** {{nfsi}} وسياق {{security-radar}} في نفس سطح ISO.\n\n**Flora & Fauna Live** مُلخَّص في **الإشعار القانوني** كمراقبة بيئية قائمة على **تقييم صور** — **لا** يُغني عن سجلات المناطق المحمية أو تنبيهات الأرصاد **من دون** استشهاد منفصل.\n\nالندرة والمناخ يمسّان غذاءً وطاقةً وتَرحيلاً—عوامل **استقرار**. القطاع **يسمح** بالربط **الموثَّق** و**يرفض** دعوى الشمول الزائف.\n\n**متابعة:** {{security-radar}}، {{country-intelligence-dashboard}}، {{metamaps}}، {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "التركيز",
+                    "v": "خطر بيئي بجانب تقييم أمني"
+                },
+                {
+                    "k": "منتج مباشر",
+                    "v": "Flora & Fauna Live (إشعار قانوني)"
+                },
+                {
+                    "k": "الخرائط",
+                    "v": "{{metamaps}} ومركز الخرائط"
+                },
+                {
+                    "k": "الحد",
+                    "v": "ليس بديلاً عن جهات التنظيم"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا تدخل البيئة في صورة المخاطر",
+                    "body_md": "الجفاف والحرائق أو خسائر زراعية **تؤثر** في الاستقرار. المنصة **تضع** هذه الإشارات **بجوار** طبقات الأمن عند تفعيل المنتج."
+                },
+                {
+                    "title": "أخطاء شائعة",
+                    "body_md": "**خريطة الحرارة** تعني **كثافة** لا إدانة آلية. مسار الصور **ليس** حكمًا. أفق **24س/7أ** **لا** يضمن مناخًا لعقود."
+                },
+                {
+                    "title": "المرجعية",
+                    "body_md": "ما يجب الاستشهاد به يبقى **سجل المصادر** وال**إشعار القانوني** وصفحات المنهجية—لا عناوين قائمة تنقل."
+                }
+            ]
+        },
+        "ja": {
+            "title": "自然・生態系",
+            "teaser": "**自然・生態系**領域は、**環境リスク**・**気候ストレス**・**Flora & Fauna Live** を **Security Radar** や国ダッシュボードと**どう並べて読むか**を述べる——**行政・法的手続の代替**とは限らない。",
+            "summary_bullets": [
+                "**リスク:** 気候・資源・生物多様性を {{security-radar}} と {{metamaps}} の横に置く。",
+                "**Flora & Fauna Live:** リーガルノーティスで**評価画像**に基づく環境モニタリングと説明——**現地調査の自動化**ではない。",
+                "**安全保障:** 生態系信号は**国情の読み**を**補い**、**置き換え**ない。",
+                "**地平:** 短い運用窓は**ブリーフィング**向けで数十年気候保証ではない。",
+                "**入口:** [地図](/ja/map/)、[国](/ja/countries/)、[Knowledge](/ja/knowledge/)。"
+            ],
+            "body_md": "環境と安全保障は別枠で語られがちだが、NationFiles は**接点**を示す。植生や野生生物・資源圧力などの生態ストレスは、UI が出す限り**同一** ISO 面上で {{nfsi}} 見出しや {{security-radar}} 文脈と**並ぶ**ことがある。\n\n**Flora & Fauna Live** は**リーガルノーティス**で**評価された画像**に基づく環境モニタリングと要約される。**保護地域**台帳や**気象警報**そのものの代替ではない（別途引用されない限り）。\n\n資源逼迫と気候は食料・エネルギー・移動に触れ、**安定性**に効く。文書化された限りで**接続**を許し、**全知**のふりはしない。\n\n**関連:** {{security-radar}}、{{country-intelligence-dashboard}}、{{metamaps}}、{{knowledge-hub-nfkg}}。",
+            "facts": [
+                {
+                    "k": "焦点",
+                    "v": "環境リスクと安全保障読みの併読"
+                },
+                {
+                    "k": "ライブ製品",
+                    "v": "Flora & Fauna Live（リーガル）"
+                },
+                {
+                    "k": "地図",
+                    "v": "{{metamaps}} とマップハブ"
+                },
+                {
+                    "k": "境界",
+                    "v": "規制当局の代替ではない"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "なぜ安全保障の文脈に生態系が入るか",
+                    "body_md": "干ばつ・火災・農業損失などは**安定**に実害を与えうる。製品が許すとき、プラットフォームはそれらを安全保障系レイヤの**隣**に置く。"
+                },
+                {
+                    "title": "よくある誤解",
+                    "body_md": "**ヒートマップ**は**密度**であって自動的な**責任認定**ではない。画像ワークフローは**判決**ではない。**24h/7d** は**数十年**気象予測ではない。"
+                },
+                {
+                    "title": "権威ある言い回し",
+                    "body_md": "引用の義務は**ソース登録**・**リーガルノーティス**・各指標の方法ページに残る——ナビのキャッチコピーにはない。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "nature-vertical"
+        },
+        "repository_relative_path": "knowledge-data/entities/nature-vertical.json"
+    }
+}

@@ -8,46 +8,33 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/core-hierarchy/de.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/core-hierarchy/"
+nf_canonical_html_url: "https://nationfiles.com/de/knowledge/entity/core-hierarchy/"
 nf_markdown_lang_file: "de"
 ---
-# Core Hierarchy
+# Core Hierarchy — Aufbau der geopolitischen Analyse-Plattform
 
-## Zweck und Anwendungsfall
+## Wozu dieses Bild dient
 
-Die **Core Hierarchy** ist die kanonische Abbildung der **System- und Organisationsstruktur** von NationFiles. Sie ordnet die Akteure und Schichten so, dass dieselbe Terminologie in der Web-Oberfläche, in Exporten (JSON, JSON-LD) und in optionalen Markdown-Dateien verwendet wird. Ziel ist **keine Marketing-Hierarchie**, sondern eine **referenzierbare Kette**: von der juristisch geführten Organisation über das öffentliche System bis zu Inferenz, Hardware-Metapher und quantitativer Metrik.
+Die **Core Hierarchy** beschreibt den **Aufbau des NationFiles-Systems** aus Nutzersicht und Verantwortung — nicht eine Marketinggrafik, sondern eine **Rollenkette**: wer published und haftet, wo die öffentliche Plattform sitzt, wo die Auswertungs-KI läuft, wo die Kennzahl entsteht und welche Rechenschicht darunter liegt.
 
-## Ebenen im Überblick
+## Die Ebenen — was jeweils **macht**
 
-| Ebene | Entität (Knowledge-ID) | Rolle (Kurz) |
-|------|---------------------------|--------------|
-| 1 | `neawolf-media-group` | Trägerorganisation / Publisher |
-| 2 | `nationfiles` | System- und Web-Präsenz |
-| 3 | `naciro` | Inferenz- und Logik-Engine |
-| 4a | `lpu-architecture` | Hardware- bzw. Ausführungsschicht (dedizierte Inferenz-Basis) |
-| 4b | `nfsi` | Statistische Kennzahl (0–100), Dataset |
+| Ebene | Entität | Rolle im Produkt |
+|-------|---------|------------------|
+| 1 | **Neawolf Media Group** | **Verlag / Betreiber** — Impressum, rechtliche Verantwortung; finanziert und steuert NationFiles. |
+| 2 | **NationFiles** | **Geopolitische Intelligence-Oberfläche** — Website, Länderanalyse, Karten, Dashboards, API/Sichten je nach Produkt. |
+| 3 | **Naciro Engine** | **Auswertungs-KI** — verdichtet Rohsignale zu NFSI, Texten, Prognosekomponenten nach Methodik. |
+| 4a | **LPU Architecture** | **Inferenz-Rechengrundlage** — deterministische, schnelle Ausführung für Naciro-Pfade. |
+| 4b | **NFSI** | **Geopolitischer Stabilitäts- und Risiko-Score** — quantitatives Ergebnis der Pipeline (0–100). |
 
-Auf derselben fachlichen Stufe können **mehrere** Entitäten stehen (hier: LPU und NFSI), weil **Logik/Engine** und **Output-Metrik** getrennt modelliert werden.
+**Wichtig:** „Engine“ und „Index“ sind **gleichrangig am Ende der Kette**, weil **Rechenlogik** und **sichtbares Ergebnis** verschiedene Dinge sind — wie Motor und Tacho im Auto.
 
-## Warum getrennte Knoten statt „alles in einer Kiste“
+## Was diese Hierarchie **nicht** ist
 
-- **Verantwortung**: Organisation (Recht, Impressum) vs. Plattform vs. Software vs. Metrik.
-- **Zitierfähigkeit**: Jede Schicht hat eigene Quellen (Legal Notice, `llms.txt`, Methodik, VVR, DOI).
-- **Technische Wahrheit**: Die NFSI-Werte entstehen in einer Pipeline; die Hierarchie spiegelt **Rollen**, nicht unbedingt einen linearen Single-Parent-Baum in der Infrastruktur.
+Kein Netzwerkdiagramm der Serverräume; kein Organigramm einzelner Mitarbeitende. Sie ordnet **Produktrollen** für Leser und Partner, die verstehen wollen, **woher Zahlen und Analysen kommen**.
 
-## Beziehungen im Graph
+## Quellen
 
-In dieser Knowledge-Base sind die Komponenten über `relations` mit `relatedTo` (und teils Fach-Relationen wie `computes`, `isPartOf`) verknüpft. Im **JSON-LD-Export** werden ausgewählte Relationen als `hasPart` / `isPartOf` oder als `makesOffer` abgebildet, sofern Schema.org und der Entity-Typ das hergeben.
-
-## Maschinenlesbarkeit
-
-- Jede Entität besitzt eine **stabile ID** (kebab-case).
-- **Exporte** enthalten `generated_at_utc`, `canonical_url` und strukturierte Attribute.
-- **Hierarchie-Metadaten** (`hierarchy.levels`) dienen der Visualisierung des Blocks „Hierarchieebenen“ und fließen im JSON-LD u. a. als `ItemList` ein.
-
-## Referenzen (einstieg)
-
-- [llms.txt](https://nationfiles.com/llms.txt) – maschinenlesbare Einstiegsregeln
-- [Legal Notice](https://nationfiles.com/en/legal/legal-notice/) – Impressum / Rechtsrahmen
-- [NFSI Methodik](https://nationfiles.com/en/company/nfsi/) – Score und Datenzyklus
-- [VVR (Validation & Verification Report)](https://nationfiles.com/en/legal/validation-and-verification-report/) – methodische Vertiefung
+- [llms.txt](https://nationfiles.com/llms.txt)
+- [Legal Notice](https://nationfiles.com/de/legal/legal-notice/)
+- [NFSI-Methodik](https://nationfiles.com/en/company/nfsi/)

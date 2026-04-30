@@ -1,0 +1,596 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "purchasing-calculator",
+    "kind": "entity",
+    "type": "SoftwareApplication",
+    "status": "active",
+    "updated_utc": "2026-04-30T14:30:00Z",
+    "topics": [
+        "purchasing-calculator",
+        "ppi",
+        "purchasing-power",
+        "expats",
+        "international-hr",
+        "forex",
+        "cost-comparison",
+        "relocation"
+    ],
+    "aliases": [
+        "Kaufkraft-Rechner",
+        "Kaufkraftrechner",
+        "Purchasing power calculator",
+        "PPI calculator",
+        "Expat calculator",
+        "international HR calculator",
+        "NationFiles Kaufkraft-Rechner"
+    ],
+    "attributes": [
+        {
+            "key": "model_type",
+            "value": "NationFiles purchasing-power calculator surface: combines publicly documented PPI-style macro context (including GDP at purchasing power parity per capita and related series where surfaced on country profiles), user-entered local cost assumptions, and high-refresh foreign-exchange context aggregated by {{naciro}} to produce illustrative real-value comparisons between locations. It is aimed at expatriates and international human-resources teams who need a shared numeric frame before payroll, policy, or mobility decisions — not a substitute for statutory interpretation, tax guidance, or investment advice.",
+            "depends_on": [
+                "nationfiles",
+                "purchasing-power-index",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Purchasing Power Index (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                },
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                }
+            ],
+            "value_i18n": {
+                "en": "NationFiles purchasing-power calculator surface: combines publicly documented PPI-style macro context (including GDP at purchasing power parity per capita and related series where surfaced on country profiles), user-entered local cost assumptions, and high-refresh foreign-exchange context aggregated by {{naciro}} to produce illustrative real-value comparisons between locations. It is aimed at expatriates and international human-resources teams who need a shared numeric frame before payroll, policy, or mobility decisions — not a substitute for statutory interpretation, tax guidance, or investment advice.",
+                "de": "**Kaufkraft-Rechner** auf NationFiles: führt **öffentlich** dokumentierten **PPI**-/Makro-Kontext (u. a. **BIP in Kaufkraftstandards pro Kopf** und begleitende Serien, wo auf Länderprofilen sichtbar), **vom Nutzer eingegebene** lokale **Kostenannahmen** und über **{{naciro}}** gebündelten, **häufig frischen** **Devisenkontext** zu **veranschaulichenden** Realwert-Vergleichen zwischen Standorten zusammen. Zielgruppe sind **Expats** und **internationale HR-Teams**, die vor Lohn-/Politik- oder **Mobilitäts**-Entscheidungen einen **gemeinsamen** Zahlenrahmen brauchen — **kein** Ersatz für **gesetzliche** Auslegung, Steuerberatung oder Anlageempfehlung.",
+                "fr": "**Calculateur de pouvoir d’achat** NationFiles : relie le **contexte macro** documenté façon **PPI** (PIB PPA par habitant et séries associées lorsqu’elles apparaissent sur les profils pays), des **hypothèses de coûts locaux** saisies par l’utilisateur et le **contexte de change** fréquemment actualisé agrégé par **{{naciro}}** pour produire des **comparaisons illustratives** de valeur réelle entre lieux. Pensé pour **expatriés** et **RH internationales** qui cherchent un **cadre numérique partagé** avant paie, politique ou mobilité — **pas** un substitut à l’interprétation juridique, au fiscal ni au conseil en investissement.",
+                "es": "**Calculadora de poder adquisitivo** en NationFiles: combina **contexto macro** documentado estilo **PPI** (PIB PPA per cápita y series asociadas donde aparecen en fichas país), **supuestos de coste local** introducidos por la persona usuaria y el **contexto cambiario** de alta frecuencia que agrega **{{naciro}}** para obtener **comparaciones ilustrativas** de valor real entre ubicaciones. Orientada a **expatriados** y **RR. HH. internacionales** que necesitan un **marco numérico común** antes de nómina, política o movilidad — **no** sustituye interpretación legal, fiscal ni asesoramiento de inversión.",
+                "pt": "**Calculadora de poder de compra** NationFiles: junta **contexto macro** documentado ao estilo **PPI** (PIB PPC per capita e séries associadas onde visíveis nos perfis país), **pressupostos de custo local** introduzidos pelo utilizador e **contexto cambial** de atualização frequente agregado por **{{naciro}}** para **comparações ilustrativas** de valor real entre locais. Destina-se a **expatriados** e **RH internacionais** que precisam de **quadro numérico partilhado** antes de decisões de salário, política ou mobilidade — **não** substitui interpretação legal, fiscal nem aconselhamento de investimento.",
+                "ar": "**حاسبة القدرة الشرائية** على NationFiles: تدمج **سياق الماكرو** الموثَّق بأسلوب **PPI** (الناتج المحلي الإجمالي بتعادل القدرة الشرائية للفرد والسلاسل المرافقة حيث تظهر في ملفات الدول)، و**افتراضات تكلفة محلية** يدخلها المستخدم، وسياق **صرف أجنبي** يُحدَّث بكثافة عبر **{{naciro}}** لتوليد **مقارنات توضيحية** للقيمة الحقيقية بين المواقع. موجهة للـ**مغتربين** و**موارد بشرية دولية** يحتاجون **إطارًا رقميًا مشتركًا** قبل الرواتب أو السياسات أو التنقل — **ليست** بديلاً عن تفسير نظامي أو ضريبي أو استشارة استثمار.",
+                "ja": "NationFiles **購買力計算**面：**PPI** 系の公開マクロ文脈（国プロフィールに表示される**一人当たり GDP PPP** や関連系列）、利用者が入力する**現地コスト仮定**、**{{naciro}}** が束ねる**更新頻度の高い**為替文脈を組み合わせ、拠点間の**イメージしやすい実質比較**を出す。**駐在員**や**国際人事**が、給与・制度・モビリティ判断の前に**共通の数値枠**を要する用途向け。**法令解釈・税務・投資助言の代替ではない**。"
+            }
+        },
+        {
+            "key": "ppi_and_profile_alignment",
+            "value": "The calculator reads the same published PPI macro bundle NationFiles exposes on country pages — GDP PPP per capita as the headline cross-country comparator plus companion indicators where the profile wires them — so desk estimates line up with the tables analysts already cite. It does not silently mix unrelated vintage series; outputs remain tied to whatever the active profile snapshot documents.",
+            "depends_on": [
+                "purchasing-power-index",
+                "nationfile-json"
+            ],
+            "sources": [
+                {
+                    "label": "Purchasing Power Index (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                },
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "en": "The calculator reads the same published PPI macro bundle NationFiles exposes on country pages — GDP PPP per capita as the headline cross-country comparator plus companion indicators where the profile wires them — so desk estimates line up with the tables analysts already cite. It does not silently mix unrelated vintage series; outputs remain tied to whatever the active profile snapshot documents.",
+                "de": "Der Rechner nutzt dasselbe **veröffentlichte** PPI‑Makrobündel wie die Länderseiten — **BIP (KKP) pro Kopf** als zentraler Ländervergleich plus begleitende Indikatoren, wo das Profil sie ausgibt — damit **Schreibtischrechnungen** zu denselben Tabellen passen, auf die Analysten sich ohnehin beziehen. **Unvermitteltes** Mischen unterschiedlicher Serien-Vintages findet nicht statt; Ergebnisse bleiben an den **aktuellen Profil-Snapshot** gebunden.",
+                "fr": "Le calculateur s’appuie sur le **même** paquet macro **PPI** publié que les pages pays — PIB PPA par habitant comme comparateur central et indicateurs compagnons là où le profil les affiche — pour **aligner** les estimations de bureau sur les tableaux déjà cités. Pas de mélange silencieux de séries hétérogènes ; les sorties restent **ancrées** dans ce que documente le **snapshot** actif.",
+                "es": "La calculadora lee el **mismo** paquete macro **PPI** publicado que las fichas país — PIB PPA per cápita como comparador central e indicadores compañeros donde el perfil los cablea — para que las **estimaciones de escritorio** coincidan con las tablas de referencia. No mezcla en silencio series de distinto vintage; la salida **depende** del **snapshot** activo documentado.",
+                "pt": "A calculadora usa o **mesmo** pacote macro **PPI** público das páginas país — PIB PPC per capita como comparador central e indicadores associados onde o perfil os expõe — para **alinhar** estimativas de secretáriado às tabelas já citadas. Não mistura silenciosamente séries de vintage distinto; o resultado mantém-se **ligado** ao **snapshot** ativo documentado.",
+                "ar": "تقرأ الحاسبة **نفس** حزمة الماكرو **PPI** المنشورة التي تعرضها صفحات الدول — الناتج بتعادل القدرة الشرائية للفرد كمقارن رئيس بين الدول مع مؤشرات مرافقة حيث يربطها الملف — فتلتقي **تقديرات المكتب** مع الجداول نفسها. لا تخلط سلاسل بصمتٍ ذات مراجع زمنية مختلفة؛ المخرجات **مرتبطة** بلقطة الملف **النشطة** الموثَّقة.",
+                "ja": "計算面は国ページと同じ**公開 PPI マクロ束**を読む——クロスカントリー比較の要点は**一人当たり GDP PPP**、プロフィールが配線する随伴指標——**デスク試算**が参照中の表と**噛み合う**。**無言のVintage混在**は避け、出力は**有効なプロフィールスナップショット**が文書化する範囲に**留まる**。"
+            }
+        },
+        {
+            "key": "currency_volatility",
+            "value": "Spot and near-daily FX ribbons curated through {{naciro}} explain why nominal conversions swing even when PPI denominators move slowly. The calculator surfaces that contrast so international HR and expats see both the slow-moving parity story and the fast-moving rate story, without pretending FX feeds redefine World Bank PPP methodology.",
+            "depends_on": [
+                "naciro",
+                "purchasing-power-index"
+            ],
+            "sources": [
+                {
+                    "label": "Naciro AI",
+                    "url": "https://nationfiles.com/en/company/naciro-ai/"
+                },
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Spot and near-daily FX ribbons curated through {{naciro}} explain why nominal conversions swing even when PPI denominators move slowly. The calculator surfaces that contrast so international HR and expats see both the slow-moving parity story and the fast-moving rate story, without pretending FX feeds redefine World Bank PPP methodology.",
+                "de": "**Spot- und** nahezu tägliche **FX-Bänder** über **{{naciro}}** zeigen, warum **nominale** Umrechnungen **schwanken**, selbst wenn PPI‑Nenner **langsam** wandern. Der Rechner macht diesen **Kontrast** sichtbar, damit internationale HR und Expats **beide** Geschichten sehen — die **langsame** Paritäts‑Ebene und die **schnelle** Kurs‑Ebene — **ohne** so zu tun, als würden FX‑Feeds die World‑Bank‑PPP‑Methodik **umschreiben**.",
+                "fr": "Les **rubans FX spot** ou quasi quotidiens via **{{naciro}}** montrent pourquoi les conversions nominales **bougent** même quand les dénominateurs PPI évoluent **lentement**. Le calculateur rend ce **contraste** lisible pour les RH internationales et les expatriés — récit **parc** de parité et récit **rapide** de taux — **sans** prétendre que les flux FX **redéfinissent** la méthodologie PPA Banque mondiale.",
+                "es": "Las **cintas FX** spot o casi diarias de **{{naciro}}** explican por qué las conversiones nominales **oscilan** aunque los denominadores PPI cambien **lento**. La calculadora muestra ese **contraste** para RR. HH. internacionales y expatriados: narrativa **lenta** de paridad y **rápida** de tipo — **sin** afirmar que los feeds FX **reescriban** la metodología PPA del Banco Mundial.",
+                "pt": "As **fitas FX** spot ou quase diárias via **{{naciro}}** explicam por que conversões nominais **oscilam** mesmo quando denominadores PPI mudam **devagar**. A calculadora evidencia esse **contraste** para RH internacionais e expatriados — história **lenta** de paridade e **rápida** de câmbio — **sem** fingir que feeds FX **redefinam** a metodologia PPC do Banco Mundial.",
+                "ar": "شرائط **FX** الفورية أو شبه اليومية عبر **{{naciro}}** تُبيّن لماذا **تتأرجح** التحويلات الاسمية حتى عندما تتحرك مقامات **PPI** **ببطء**. تجعل الحاسبة هذا **التباين** واضحًا لموارد بشرية دولية ومغتربين — قصة **بطيئة** للتعادل وقصة **سريعة** للسعر — **دون** الادّعاء أن تغذيات FX **تعيد تعريف** منهجية تعادل القوة الشرائية للبنك الدولي.",
+                "ja": "**{{naciro}}** が束ねるスポット／準日足の **FX** により、PPI 分母が**ゆっくり**動いても**名目換算**が**振れる**理由を説明できる。計算面はその**対比**を示し、国際人事と駐在員が**ゆっくりなパリティ**の話と**速い**レートの話の**両方**を見られるようにする——FX フィードが世界銀行 PPP 方法論を**書き換える**わけではない。"
+            }
+        },
+        {
+            "key": "expatriate_and_hr_use",
+            "value": "Typical workflows: compare a home salary offer against a host location using the same PPI-visible anchors the organisation already trusts; sanity-check relocation allowances against locally entered rent, schooling, or travel assumptions; brief executives with one sheet that cites both macro parity context and current FX. The tool documents assumptions explicitly so compensation committees can audit inputs.",
+            "depends_on": [
+                "purchasing-power-index",
+                "naciro"
+            ],
+            "sources": [
+                {
+                    "label": "Country Intelligence Dashboard",
+                    "url": "https://nationfiles.com/en/knowledge/entity/country-intelligence-dashboard/"
+                },
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Typical workflows: compare a home salary offer against a host location using the same PPI-visible anchors the organisation already trusts; sanity-check relocation allowances against locally entered rent, schooling, or travel assumptions; brief executives with one sheet that cites both macro parity context and current FX. The tool documents assumptions explicitly so compensation committees can audit inputs.",
+                "de": "**Typische Abläufe:** ein **Heimat**-Gehaltsangebot gegen den **Zielstandort** legen — mit denselben **PPI-sichtbaren** Ankern, denen die Organisation ohnehin vertraut; **Umzugszulagen** gegen **lokal eingetragene** Miet‑, Schul‑ oder Mobilitätsannahmen **plausibel prüfen**; Führungskräfte **auf einer Seite** informieren, die **sowohl** Makro‑Paritätskontext **als auch** aktuelle FX nennt. Der Rechner **legt Annahmen offen**, sodass **Vergütungsgremien** Eingaben **nachvollziehen** können.",
+                "fr": "**Scénarios types:** comparer une offre salariale **pays d’origine** au **lieu d’accueil** avec les **ancres PPI** déjà utilisées par l’organisation; **contrôler** les indemnités de **relogement** contre des hypothèses locales (loyer, scolarité, mobilité); **brief** dirigeants sur **une page** mêlant **contexte macro PPA** et **FX actuel**. L’outil **expose** les hypothèses pour que les comités **rémunération** puissent **auditer** les entrées.",
+                "es": "**Flujos típicos:** comparar oferta salarial **origen** con **destino** usando los mismos **anclajes PPI** que ya usa la organización; **contrastar** subsidios de **reubicación** con alquiler, colegios o movilidad introducidos localmente; **informar** a dirección en **una** hoja con **contexto macro PPA** y **FX** actual. La herramienta **documenta** supuestos para que comités de **compensación** puedan **auditar** entradas.",
+                "pt": "**Fluxos típicos:** comparar proposta salarial **origem** com **destino** usando as **âncoras PPI** que a organização já confia; **validar** subsídios de **realojamento** face a renda escolar ou mobilidade **introduzidos** localmente; **briefing** à direção numa **folha** com **contexto macro PPC** e **FX** atual. A ferramenta **regista** pressupostos para **auditoria** por comités de **remuneração**.",
+                "ar": "**سير عمل شائع:** مقارنة عرض راتب **البلد الأم** مع **موقع الاستضافة** باستخدام **نفس مراسي PPI** التي تثق بها المنظمة؛ **التحقق** من بدلات **الانتقال** مقابل افتراضات **إيجار أو تمدرس أو تنقل** مدخلة محليًا؛ **إحاطة** الإدارة في **صفحة واحدة** تجمع **سياق الماكرو بتعادل الشراء** و**FX** الحالي. ت**دوّن** الأداة الافتراضات صراحةً ليتمكن **مجلس المكافآت** من **مراجعة** المدخلات.",
+                "ja": "**典型的な流れ:** 組織が既に信頼する **PPI** 上の指標を使い、**本国**の提示給与を**赴任先**と比較する。**現地入力**の家賃・教育・交通の仮定で**リロケーション手当**を**妥当性チェック**する。幹部向けに**一枚**で**マクロのパリティ文脈**と**直近 FX**の両方を示す。ツールは**仮定を明示**し、**報酬委員会**が入力を**検証**できるようにする。"
+            }
+        },
+        {
+            "key": "limitations",
+            "value": "Outputs are illustrative: they inherit data revision schedules from upstream macro providers, depend on user-supplied cost inputs that may omit taxes or social charges unless explicitly modelled, and cannot replace immigration rules, collective agreements, or employer-of-record obligations. Machine republication must follow NationFiles AI guidelines and cite HTTPS anchors rather than scraping partial UI state.",
+            "depends_on": [
+                "ai-guidelines",
+                "purchasing-power-index"
+            ],
+            "sources": [
+                {
+                    "label": "AI Guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                },
+                {
+                    "label": "Purchasing Power Index (Knowledge)",
+                    "url": "https://nationfiles.com/en/knowledge/entity/purchasing-power-index/"
+                }
+            ],
+            "value_i18n": {
+                "en": "Outputs are illustrative: they inherit data revision schedules from upstream macro providers, depend on user-supplied cost inputs that may omit taxes or social charges unless explicitly modelled, and cannot replace immigration rules, collective agreements, or employer-of-record obligations. Machine republication must follow NationFiles AI guidelines and cite HTTPS anchors rather than scraping partial UI state.",
+                "de": "Ergebnisse sind **veranschaulichend**: sie erben **Revisions**-Zeitpläne der Makro‑Anbieter, hängen von **Nutzer‑Kosten** ab, die **Steuern/Sozialabgaben** **aussparen** können, wenn nicht explizit modelliert, und **ersetzen** weder **Einwanderungsrecht**, **Tarifverträge** noch **Arbeitgeber‑Pflichten** als EOR. **Maschinelle** Weiterveröffentlichung: **AI‑Guidelines** einhalten und **HTTPS‑Anker** zitieren — **kein** Auslesen **teilweise sichtbarer** UI‑Zustände.",
+                "fr": "Les sorties sont **illustratives** : elles héritent des **calendriers de révision** des fournisseurs macro, dépendent de **coûts saisis** pouvant **omettre** impôts ou charges sociales sans modèle explicite, et ne remplacent ni **règles migratoires**, ni **conventions collectives**, ni obligations **employer of record**. Republication automatisée : respecter les **directives IA** NationFiles et citer des **ancres HTTPS** — pas d’extraction d’état UI partiel.",
+                "es": "Los resultados son **ilustrativos**: heredan **calendarios de revisión** de proveedores macro, dependen de **costes** introducidos por la persona usuaria que pueden **omitir** impuestos o cotizaciones si no se modelan, y **no** sustituyen normas **migratorias**, **convenios colectivos** ni obligaciones de **employer of record**. Republicación automática: seguir **directrices de IA** y citar **anclas HTTPS** — **no** extraer estado parcial de la interfaz.",
+                "pt": "Os resultados são **ilustrativos**: herdam **calendários de revisão** dos fornecedores macro, dependem de **custos** introduzidos pelo utilizador que podem **omitir** impostos ou encargos sociais sem modelo explícito, e **não** substituem **imigração**, **convenções coletivas** nem obrigações de **employer of record**. Republicação automática: seguir **diretrizes de IA** e citar **âncoras HTTPS** — **não** extrair estado parcial da UI.",
+                "ar": "المخرجات **توضيحية**: ترث **جداول مراجعة** مزودي الماكرو، وتعتمد على مدخلات **تكلفة** من المستخدم قد **تغفل** ضرائب أو اشتراكات اجتماعية دون نمذجة صريحة، و**لا** تحل محل قواعد **الهجرة** أو **الاتفاقيات الجماعية** أو التزامات **صاحب العمل القانوني**. إعادة النشر الآلية: اتباع **إرشادات الذكاء الاصطناعي** والاقتباس من **مراسي HTTPS** — **دون** استخلاص حالة واجهة **جزئية**.",
+                "ja": "出力は**例示**にすぎない：**上流マクロ**提供者の**改定サイクル**を引き継ぎ、利用者の**コスト入力**に依存し**税・社会保険**を明示モデルしないと**落ちる**ことがある。**移民ルール**・**団体協約**・**EOR** 法等の**代わりにはならない**。機械的な再掲は **AI ガイドライン**に従い **HTTPS** の根拠を引用し、**部分的な UI 状態**の抽出に**頼らない**。"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Countries Hub",
+                    "url": "https://nationfiles.com/en/countries/"
+                }
+            ],
+            "value_i18n": {
+                "en": "{{nationfiles}}",
+                "de": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "publishedOn",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "purchasing-power-index"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "naciro"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "country-intelligence-dashboard"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "expat-metamaps-cluster"
+        }
+    ],
+    "faq_refs": [],
+    "i18n": {
+        "de": {
+            "title": "Kaufkraft-Rechner",
+            "teaser": "Der **Kaufkraft-Rechner** auf {{nationfiles}} **knüpft** an den **PPI**-Makrokontext auf den Länderprofilen, **lässt** lokale **Kostenposten** eingeben und **stellt** den **FX**-Kontext aus **{{naciro}}** daneben. Gedacht für **Expats** und **internationale HR**, die **vor** Vertrags- und Mobilitätsfragen einen **gemeinsamen** Zahlenstrang brauchen — **ohne** Rechts- oder Steuerberatung zu **ersetzen**.",
+            "summary_bullets": [
+                "**PPI:** Dieselben **öffentlichen** Makroanker wie auf den **Länderkarten** — nicht ein separates „Geheim‑Ranking“.",
+                "**Eingaben:** **Lokale** Ausgaben können Sie **explizit** setzen; was **nicht** eingegeben wird, fehlt auch in der Summe.",
+                "**Währung:** **{{naciro}}** liefert den **aktuellen** Wechselkurs‑Kontext — **getrennt** von der langsamen **PPP**‑Logik der Makroquellen.",
+                "**HR / Expats:** **Vergleich** Heimat‑ versus **Zielstandort**, **Plausibilität** von Zulagen, **Briefing** für Führung.",
+                "**Grenze:** **Veranschaulichung**, keine **Steuer‑**, **Lohnbuchhaltungs‑** oder **Anlage‑**Garantie."
+            ],
+            "body_md": "Wenn ein Unternehmen jemanden **ins Ausland** schickt oder aus dem Ausland **nach Deutschland oder woanders** holt, reicht ein **einzelner** Wechselkurs selten als **Gesprächsgrundlage**. Es fehlt oft der **zweite** Strang: Wie groß ist die **Volkswirtschaft** im Vergleich, **preisbereinigt**? Was kosten **Miete, Schule, Pendeln** in der neuen Stadt **in der Praxis**? Und wie stark **schwankt** der **Kurs**, den Sie bei der Bank oder auf dem Konto **heute** sehen, im Verhältnis zu den **langsam** nachgeführten **Kaufkraftparitäten**, die in Makrodaten stecken?\n\nDer **Kaufkraft-Rechner** bündelt diese Fragen auf **NationFiles**. Im **Kern** hängt er am **PPI**: dem **Makropaket**, das auf den **Länderprofilen** ohnehin dokumentiert ist — mit **BIP in Kaufkraftstandards pro Kopf** als **vergleichbare** Größe zwischen Staaten. So bleibt die **Zahl**, die Personalabteilungen ihren Kandidaten zeigen, **anschlussfähig** an die **Tabellen**, die Analysten und Journalisten **ohnehin** zitieren.\n\n**Lokale Kosten** tragen Sie **bewusst** ein. Der Rechner **ersetzt** weder Ihre **Lohnabrechnung** noch Ihr **Steuerprogramm**: Ohne dass Sozialversicherungsgrenzen, **Progressionsvorbehalt** oder **Doppelbesteuerungsabkommen** modelliert sind, bleibt das Ergebnis **bewusst** **schlank**. Das ist **kein** Mangel, sondern **Ehrlichkeit**: Je mehr Sie **weglassen**, desto mehr wird aus dem Tool eine **Skizze** — und das soll **offen** bleiben.\n\n**Wechselkursvolatilität** behandelt **{{naciro}}** als **schnellen** Datenstrom neben den **langsamen** Makroserien. **Bewegt** sich der **Spotkurs** stark, während die **PPP**-Kurve **ruhig** wirkt, sehen Sie **beide** Lesarten **nebeneinander**. Das ist für **internationale HR** der Punkt, an dem **Mobilitätsrichtlinien** oft **springen**: Ein **starres** Umrechnungs‑Excel reicht nicht, wenn der **Markt** in wenigen Wochen eine andere **Richtung** nimmt.\n\n**Wofür das gedacht ist:** Absprachen **vor** Unterzeichnen eines **Angebots**, interne **Zulagenprüfungen**, **Workshop** mit Finance und Legal. **Wofür nicht:** endgültige **Steuererklärung**, **Visum**-Nachweis oder **Investment**entscheid. Wer Ergebnisse **automatisch** weiterverarbeitet, sollte die **[AI Guidelines](/de/ai-guidelines/)** lesen und **HTTPS**-Seiten **zitieren**, statt Teile der Oberfläche **ohne** Kontext zu kopieren.",
+            "facts": [
+                {
+                    "k": "Datenanker",
+                    "v": "PPI / {{purchasing-power-index}}"
+                },
+                {
+                    "k": "FX-Kontext",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Typische Nutzer",
+                    "v": "Expats, internationale HR"
+                },
+                {
+                    "k": "Rolle",
+                    "v": "Orientierung, keine Rechtsberatung"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Warum PPI und FX zusammengehören",
+                    "body_md": "**PPI** erklärt **Struktur** und **niveau** über **Jahre**; **FX** erklärt **heute**. Beides zu **ignorieren** oder zu **vermischen**, würde entweder **kurzfristige** Zahlungsschocks **verstecken** oder **kurzfristige** Ruhe **für langfristige** Sicherheit **verkaufen**."
+                },
+                {
+                    "title": "Checkliste für HR",
+                    "body_md": "**Eingaben** mit dem Kandidaten **abgleichen**; **Zeitstempel** der Makrodaten **notieren**; **Finance** einbinden, bevor **Zusage**; bei **Grenzgängern** **zusätzliche** Abteilungen **einschalten**."
+                },
+                {
+                    "title": "Technische Ehrlichkeit",
+                    "body_md": "Was das Formular **nicht** abfragt, **kann** der Rechner **nicht** erraten — **Abschläge**, **13. Monatsgehälter**, **Equity**: nur **sichtbar**, wenn Sie sie **modellieren** oder **separat** besprechen."
+                }
+            ]
+        },
+        "en": {
+            "title": "Purchasing power calculator",
+            "teaser": "The **purchasing power calculator** on {{nationfiles}} **ties** into the **PPI** macro context already shown on country profiles, lets you enter **local** cost lines, and places **{{naciro}}** **FX** context alongside. Built for **expats** and **international HR** who need a **shared numeric thread** before contract or mobility work — **without** replacing legal or tax counsel.",
+            "summary_bullets": [
+                "**PPI:** Same **published** macro anchors as the **country cards** — not a parallel secret index.",
+                "**Inputs:** **Local** spending is **explicit**; anything you **skip** stays **out** of the total.",
+                "**Currency:** **{{naciro}}** supplies **current** FX context — **distinct** from slow‑moving **PPP** macro logic.",
+                "**HR / expats:** **Home vs host** comparison, allowance **sanity checks**, executive **briefings**.",
+                "**Boundary:** **Illustrative** output — not tax, payroll, or investment **certainty**."
+            ],
+            "body_md": "Sending someone abroad — or hiring them across a border — usually needs more than a **single** exchange rate **pulled once** from a bank screen. Teams also ask how **large** economies look **after** adjusting for **price levels**, and how **rent, tuition, commuting** in the new city stack up against **assumptions** typed into a spreadsheet. They also need to see **why** nominal amounts **jump** when **spot FX** moves even though the **purchasing‑power parity** story embedded in macro data **barely** budged that week.\n\nNationFiles **purchasing power calculator** addresses that bundle. It rests on the **Purchasing Power Index** (**PPI**) material already **documented** on each country profile — **GDP at PPP per capita** is the **headline** comparator, with companion indicators where the profile wires them. Personnel teams can therefore show candidates numbers that **line up** with the same tables analysts already cite.\n\n**Local costs** stay **user‑entered** on purpose. The calculator does **not** silently infer payroll taxes, visa‑specific deductions, or stock compensation unless you **model** them elsewhere. That keeps the surface **honest**: omit an input, and the chart tells a **partial** story — which is exactly what compensation committees should **see** before they **lock** policy.\n\n**{{naciro}}** supplies **frequently refreshed** FX ribbons. When **spot** moves faster than the **macro** parity narrative, both lines appear **side by side** so international HR can explain **short‑term** volatility without pretending the **World Bank‑style** PPP series **instantly** rewrote themselves.\n\nUse the tool for **offer conversations**, **allowance reviews**, and **executive one‑pagers**. Do **not** treat it as an **employer‑of‑record** checklist, a **visa** evidence pack, or an **investment** memo. Automated republication belongs under the **[AI guidelines](/en/ai-guidelines/)** with **HTTPS** citations — **not** scraped widget text without methodology context.",
+            "facts": [
+                {
+                    "k": "Anchors",
+                    "v": "PPI / {{purchasing-power-index}}"
+                },
+                {
+                    "k": "FX context",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Typical users",
+                    "v": "Expats, international HR"
+                },
+                {
+                    "k": "Role",
+                    "v": "Orientation, not legal advice"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why PPI and FX belong together",
+                    "body_md": "**PPI** explains **structure** over **years**; **FX** explains **today**. Ignoring one **hides** shocks; confusing the two **overstates** stability."
+                },
+                {
+                    "title": "HR checklist",
+                    "body_md": "**Reconcile** inputs with the employee; **note** macro **as‑of** dates; loop **Finance** before **final offer**; bring **immigration** in for cross‑border edge cases."
+                },
+                {
+                    "title": "What the form cannot infer",
+                    "body_md": "Bonuses, thirteenth‑month habits, **equity**, **shadow** taxes: if you **do not** enter or attach them, the calculator **cannot** fabricate them responsibly."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Calculateur de pouvoir d’achat",
+            "teaser": "Le **calculateur de pouvoir d’achat** sur {{nationfiles}} **s’appuie** sur le **contexte macro PPI** déjà affiché sur les profils pays, **permet** de saisir des **postes de coûts locaux** et place le **contexte FX** de **{{naciro}}** à côté. Conçu pour **expatriés** et **RH internationales** qui ont besoin d’un **fil numérique partagé** avant contrat ou mobilité — **sans** remplacer juriste ou fiscaliste.",
+            "summary_bullets": [
+                "**PPI :** mêmes ancrages macro **publiés** que les **fiches pays** — pas un indice parallèle secret.",
+                "**Saisies :** les **dépenses locales** sont **explicites** ; ce que vous **omettez** reste **hors** total.",
+                "**Monnaie :** **{{naciro}}** fournit le **FX** actuel — **distinct** de la logique **PPA** lente des séries macro.",
+                "**RH / expats :** comparaison **origine / accueil**, **contrôle** des indemnités, **brief** direction.",
+                "**Limite :** résultat **illustratif** — pas **certitude** juridique, paie ou placement."
+            ],
+            "body_md": "Envoyer quelqu’un à l’étranger — ou le recruter depuis un autre pays — exige plus qu’un **taux** pris une fois sur un écran bancaire. Les équipes veulent aussi voir comment l’économie se situe **après correction des prix**, combien coûtent **loyer, scolarité, transport** dans la ville d’accueil, et pourquoi les montants **nominals** **bougent** quand le **spot FX** s’agite alors que **l’histoire PPA** dans les données macro reste **presque** plate sur la même période.\n\nLe **calculateur** NationFiles répond à ce besoin. Il s’ancre sur le **PPI** déjà **documenté** sur chaque profil — le **PIB PPA par habitant** comme comparateur **phare**, plus les indicateurs compagnons là où le profil les montre. Les RH peuvent ainsi présenter des chiffres **alignés** avec les tableaux que les analystes citent déjà.\n\nLes **coûts locaux** restent **saisis** par l’utilisateur. L’outil **n’invente pas** cotisations, clauses fiscales spécifiques ou **stock** implicite — cela garde la surface **transparente** : omettre une ligne, c’est accepter une **lecture partielle**, ce qu’un comité **rémunération** doit **voir** avant de verrouiller une politique.\n\n**{{naciro}}** hydrate des rubans **FX** fréquemment mis à jour. Quand le **spot** va plus vite que la narration **PPA**, les deux courbes **coexistent** pour expliquer la **volatilité court terme** sans prétendre que les séries Banque mondiale **se réécrivent** du jour au lendemain.\n\nUsage **offre**, **révision d’indemnités**, **note** de direction — pas **preuve visa**, **checklist EOR** ou **mémo investissement**. Republication automatique : **[directives IA](/fr/ai-guidelines/)** et citations **HTTPS**, pas extraction **d’état UI** isolé.",
+            "facts": [
+                {
+                    "k": "Ancres",
+                    "v": "PPI / {{purchasing-power-index}}"
+                },
+                {
+                    "k": "Contexte FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Utilisateurs",
+                    "v": "Expatriés, RH internationales"
+                },
+                {
+                    "k": "Rôle",
+                    "v": "Orientation, pas conseil juridique"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Pourquoi PPI et FX vont ensemble",
+                    "body_md": "Le **PPI** porte la **structure** ; le **FX** porte **l’instant**. Les confondre **fausse** la décision ; en ignorer un **cache** le choc."
+                },
+                {
+                    "title": "Liste RH",
+                    "body_md": "**Recouper** les hypothèses avec le salarié ; **noter** les dates **macro** ; faire intervenir **Finance** avant **signature** ; mobiliser **immigration** pour les cas limites."
+                },
+                {
+                    "title": "Ce que le formulaire n’infère pas",
+                    "body_md": "Primes, **13e mois**, actions : **absents** de la saisie, **absents** du résultat — c’est voulu."
+                }
+            ]
+        },
+        "es": {
+            "title": "Calculadora de poder adquisitivo",
+            "teaser": "La **calculadora de poder adquisitivo** en {{nationfiles}} **se apoya** en el **contexto macro PPI** ya visible en las fichas país, **permite** introducir **partidas de coste local** y sitúa el **contexto FX** de **{{naciro}}** al lado. Pensada para **expatriados** y **RR. HH. internacionales** que necesitan un **hilo numérico común** antes del contrato o la movilidad — **sin** sustituir asesor legal o fiscal.",
+            "summary_bullets": [
+                "**PPI:** los mismos **anclajes macro públicos** que las **fichas país** — no un índice paralelo oculto.",
+                "**Entradas:** el **gasto local** es **explícito**; lo que **omite** queda **fuera** del total.",
+                "**Moneda:** **{{naciro}}** aporta **FX** actual — **distinto** de la lógica **PPA** lenta.",
+                "**HR / expats:** comparación **origen‑destino**, **revisión** de subsidios, **brief** a dirección.",
+                "**Límite:** resultado **ilustrativo** — no **certeza** fiscal, nómina ni inversión."
+            ],
+            "body_md": "Mandar a alguien al extranjero — o contratarlo cruzando una frontera — suele requerir más que un **único** tipo de cambio mirado una vez. También importa cómo se ve la economía **ajustada por precios**, qué cuestan **alquiler, colegio, desplazamientos** en la ciudad nueva, y por qué los **importes nominales** **saltan** cuando el **FX spot** se mueve aunque la **PPA** en datos macro apenas **cambie** esa semana.\n\nLa **calculadora** NationFiles responde a ese paquete. Descansa en el **PPI** **documentado** en cada perfil — **PIB PPA per cápita** como comparador **central** e indicadores compañeros donde el perfil los cablea. Así RR. HH. muestra cifras **alineadas** con las tablas que ya citan los analistas.\n\nLos **costes locales** los introduce la persona usuaria **a propósito**. La herramienta **no infiere** cotizaciones, recargos fiscales específicos ni **equity** salvo que se modele aparte — omite una partida y el gráfico cuenta una historia **parcial**, justo lo que un comité de **compensación** debe **ver** antes de fijar política.\n\n**{{naciro}}** ofrece **cintas FX** con refresco frecuente. Si el **spot** va más rápido que la narrativa **PPA**, ambas lecturas **conviven** para explicar **volatilidad** a corto plazo sin fingir que las series tipo Banco Mundial **se reescriben** de la noche a la mañana.\n\nÚsela para **conversaciones de oferta**, **revisiones de subsidios** y **notas** ejecutivas — no como **prueba consular**, lista **EOR** o **memo** de inversión. Republicación automática: **[directrices de IA](/es/ai-guidelines/)** y anclas **HTTPS**, no **raspado** parcial de interfaz.",
+            "facts": [
+                {
+                    "k": "Anclajes",
+                    "v": "PPI / {{purchasing-power-index}}"
+                },
+                {
+                    "k": "Contexto FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Usuarios típicos",
+                    "v": "Expatriados, RR. HH. internacionales"
+                },
+                {
+                    "k": "Papel",
+                    "v": "Orientación, no asesoramiento legal"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Por qué PPI y FX van juntos",
+                    "body_md": "El **PPI** explica **estructura** en **años**; el **FX** explica **hoy**. Mezclarlos **engaña**; ignorar uno **esconde** golpes."
+                },
+                {
+                    "title": "Lista para RR. HH.",
+                    "body_md": "**Cuadrar** supuestos con la persona empleada; **anotar** fechas **macro**; involucrar **Finanzas** antes de la **firma**; avisar **inmigración** en casos límite."
+                },
+                {
+                    "title": "Lo que el formulario no deduce",
+                    "body_md": "Bonos, pagas **extra**, **stock**: si **no** están, el resultado **no** debe inventarlos."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Calculadora de poder de compra",
+            "teaser": "A **calculadora de poder de compra** em {{nationfiles}} **liga-se** ao **contexto macro PPI** já mostrado nos perfis país, **permite** introduzir **linhas de custo local** e coloca o **contexto FX** da **{{naciro}}** ao lado. Pensada para **expatriados** e **RH internacionais** que precisam de um **fio numérico partilhado** antes do contrato ou da mobilidade — **sem** substituir assessoria jurídica ou fiscal.",
+            "summary_bullets": [
+                "**PPI:** as mesmas **âncoras macro públicas** dos **perfis país** — não um índice paralelo oculto.",
+                "**Entradas:** **despesa local** é **explícita**; o que **omitir** fica **fora** do total.",
+                "**Moeda:** **{{naciro}}** fornece **FX** atual — **distinto** da lógica **PPC** lenta.",
+                "**RH / expats:** comparação **origem‑destino**, **revisão** de subsídios, **brief** à direção.",
+                "**Limite:** resultado **ilustrativo** — não **certeza** fiscal, salários ou investimento."
+            ],
+            "body_md": "Mobilizar alguém para o estrangeiro — ou contratar através de fronteiras — raramente se resolve com um **único** câmbio olhado uma vez. Interessa também o tamanho da economia **ajustado a preços**, o custo de **renda, escola, deslocações** na cidade nova, e por que **valores nominais** **oscilam** quando o **FX spot** se move apesar da **história PPC** nos dados macro **mudar pouco** na mesma semana.\n\nA **calculadora** NationFiles cobre esse pacote. Ancora-se no **PPI** **documentado** em cada perfil — **PIB PPC per capita** como comparador **central** e indicadores associados onde o perfil os expõe. Assim, RH mostra números **alinhados** às tabelas que analistas já citam.\n\nOs **custos locais** são introduzidos **de propósito** pelo utilizador. A ferramenta **não infere** encargos salariais, recortes fiscais específicos ou **equity** salvo modelação à parte — omitir uma linha deixa o gráfico **parcial**, o que um comité de **remuneração** deve **ver** antes de fechar política.\n\nA **{{naciro}}** alimenta **fitas FX** com refresco frequente. Quando o **spot** é mais rápido que a narrativa **PPC**, ambas as leituras **convivem** para explicar **volatilidade** de curto prazo sem fingir que séries tipo Banco Mundial **se reescrevem** da noite para o dia.\n\nUse em **negociação de oferta**, **revisão de subsídios** e **notas** executivas — não como **prova consular**, lista **EOR** ou **memorando** de investimento. Republicação automática: **[diretrizes de IA](/pt/ai-guidelines/)** e âncoras **HTTPS**, não **varredura** parcial da interface.",
+            "facts": [
+                {
+                    "k": "Âncoras",
+                    "v": "PPI / {{purchasing-power-index}}"
+                },
+                {
+                    "k": "Contexto FX",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "Utilizadores típicos",
+                    "v": "Expatriados, RH internacionais"
+                },
+                {
+                    "k": "Função",
+                    "v": "Orientação, não aconselhamento legal"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Porque PPI e FX devem aparecer juntos",
+                    "body_md": "O **PPI** explica **estrutura** em **anos**; o **FX** explica **hoje**. Misturar **engana**; ignorar um **esconde** choques."
+                },
+                {
+                    "title": "Lista para RH",
+                    "body_md": "**Cruzar** pressupostos com o colaborador; **registar** datas **macro**; envolver **Finanças** antes da **assinatura**; alertar **imigração** nos casos‑limite."
+                },
+                {
+                    "title": "O que o formulário não deduz",
+                    "body_md": "Bónus, **13.º mês**, **stock**: se **não** entram, o resultado **não** os inventa."
+                }
+            ]
+        },
+        "ar": {
+            "title": "حاسبة القدرة الشرائية",
+            "teaser": "**حاسبة القدرة الشرائية** على {{nationfiles}} **تتصل** ب**سياق الماكرو PPI** الظاهر أصلًا في ملفات الدول، **تسمح** بإدخال **بنود تكلفة محلية** وتضع **سياق الصرف** من **{{naciro}}** بجانبها. موجهة لل**مغتربين** و**الموارد البشرية الدولية** الذين يحتاجون **خيطًا رقميًا مشتركًا** قبل العقد أو التنقل — **دون** أن تحل محل مستشار قانوني أو ضريبي.",
+            "summary_bullets": [
+                "**PPI:** نفس **مراسي الماكرو المنشورة** في **ملفات الدول** — وليس مؤشرًا موازيًا سريًا.",
+                "**المدخلات:** **الإنفاق المحلي** **صريح**؛ ما **تُحذفه** يبقى **خارج** المجموع.",
+                "**العملة:** **{{naciro}}** يزود **FX** الحالي — **منفصل** عن منطق **تعادل الشرائية** البطيء.",
+                "**الموارد البشرية / المغتربون:** مقارنة **البلد الأم والاستضافة**، **مراجعة** البدلات، **إحاطة** للإدارة.",
+                "**الحد:** ناتج **توضيحي** — لا **يقين** ضريبي أو رواتب أو استثمار."
+            ],
+            "body_md": "إرسال موظف إلى الخارج — أو توظيفه عبر حدود — يحتاج غالبًا أكثر من **سعر صرف واحد** تُلتقط لقطة له. تريد الفرق أيضًا رؤية حجم الاقتصاد **بعد تعديل الأسعار**، وتكلفة **الإيجار والمدرسة والتنقل** في المدينة الجديدة، ولماذا **تتأرجح** المبالغ **الاسمية** عندما يتحرك **الفوري** بينما قصة **تعادل الشرائية** في بيانات الماكرو **تكاد** لا تتحرك في الأسبوع نفسه.\n\n**حاسبة NationFiles** تجمع هذه الأسئلة. تستند إلى **PPI** **الموثَّق** في كل ملف — **الناتج المحلي بتعادل القدرة الشرائية للفرد** كمقارن **رئيس** مع مؤشرات مرافقة حيث يعرضها الملف. يمكن لقسم الموارد البشرية إظهار أرقام **متسقة** مع الجداول نفسها التي يقتبس منها المحللون.\n\n**التكاليف المحلية** تدخل **عمدًا** من المستخدم. الأداة **لا تستنتج** اشتراكات ضريبية أو خصومات تأشيرة أو **أسهم** ما لم تُعرَّف في مكان آخر — إن حُذفت بندية يصبح الإطار **جزئيًا**، وهذا ما يجب أن **يراه** مجلس **المكافآت** قبل تثبيت سياسة.\n\n**{{naciro}}** يزود **شرائط FX** تُحدَّث كثيرًا. حين يتحرك **الفوري** أسرع من سرد **تعادل الشرائية**، تظهر **القراءتان** معًا لتفسير **التقلب قصير الأجل** دون الادّعاء أن سلسلة أسلوب البنك الدولي **أعيدت كتابتها** بين ليلة وضحاها.\n\nاستخدمها ل**مفاوضات العرض** و**مراجعة البدلات** و**ملخص تنفيذي** — لا ك**دليل تأشيرة** أو قائمة **صاحب عمل مسجل** أو **مذكرة استثمار**. لإعادة النشر الآلي اتبع **[إرشادات الذكاء الاصطناعي](/ar/ai-guidelines/)** واذكر **مراسي HTTPS** — دون نسخ **جزء واجهة** بلا سياق منهجي.",
+            "facts": [
+                {
+                    "k": "المراسي",
+                    "v": "PPI / {{purchasing-power-index}}"
+                },
+                {
+                    "k": "سياق الصرف",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "مستخدمون نموذجيون",
+                    "v": "مغتربون، موارد بشرية دولية"
+                },
+                {
+                    "k": "الدور",
+                    "v": "توجيه، لا استشارة قانونية"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "لماذا PPI وFX معًا",
+                    "body_md": "**PPI** يشرح **البنية** على **سنوات**؛ **FX** يشرح **اليوم**. خلطهما **يضلل**؛ تجاهل أحدهما **يخفي** الصدمة."
+                },
+                {
+                    "title": "قائمة للموارد البشرية",
+                    "body_md": "**طابق** الافتراضات مع الموظف؛ **دوّن** تواريخ **الماكرو**؛ أشرك **المالية** قبل **التوقيع**؛ استدعِ **الهجرة** للحالات الحدية."
+                },
+                {
+                    "title": "ما لا يستنتجه النموذج",
+                    "body_md": "مكافآت و**رواتب إضافية** و**أسهم**: إن **غابت** عن الإدخال فلا يجوز للأداة **اختلاقها**."
+                }
+            ]
+        },
+        "ja": {
+            "title": "購買力計算ツール",
+            "teaser": "{{nationfiles}} の**購買力計算**は、国プロフィールに既にある **PPI** マクロ文脈に**つながり**、**現地コスト**を入力し、**{{naciro}}** の **FX** 文脈を**横**に置く。**契約やモビリティの前**に**共通の数値筋**が要る**駐在員**と**国際人事**向け——**法務・税務の代わり**にはならない。",
+            "summary_bullets": [
+                "**PPI:** **国カード**と同じ**公開**マクロ錨——別の隠し指数ではない。",
+                "**入力:** **現地支出**は**明示**；**省いた**線は**合計に入らない**。",
+                "**通貨:** **{{naciro}}** が**更新の速い** **FX** — **ゆるやかな** **PPP** マクロ論理とは**別**。",
+                "**人事／駐在:** **本国と赴任先**の比較、**手当**の妥当性、**経営ブリーフ**。",
+                "**境界:** **例示**出力——**税・給与・投資の確定**ではない。"
+            ],
+            "body_md": "海外へ人を送る——あるいは国境を越えて雇う——とき、**一度見た**為替だけでは**話が足りない**場面が多い。**価格水準を揃えた**経済規模はどうか。新しい都市の**家賃・学費・通勤**は表の仮定と**どうズレる**か。**スポット**が動くのに、マクロに埋まる**PPP**の話は**ほぼ**動かない週もある。なぜ**名目**だけが**跳ねる**のか。\n\nNationFiles の**購買力計算**はその束を扱う。各プロフィールに**文書化**されている **PPI** に足を置く——クロスカントリー比較の要点は**一人当たり GDP PPP**、プロフィールが配線する随伴指標。**分析者が既に引用する表**と**噛み合う**数を候補者や社内に示せる。\n\n**現地コスト**は利用者が**意図的に**入れる。給与税やビザ特有の控除、**ストック**を**暗黙**に埋め込まない——行を抜けばグラフは**部分的**な物語になり、それを**報酬委員会**が政策確定前に**見る**べきだ。\n\n**{{naciro}}** は準日足的に**FX**を供給する。**スポット**が**PPA**叙述より速いとき、二本を**並べ**短期ボラを説明できる——世界銀行型の系列が**一晩で書き換わった**ふりはしない。\n\n**オファー面談**、**手当見直し**、**経営向け一枚**に使う。**ビザ証跡**や**EORチェックリスト**、**投資メモ**の代わりにしない。機械的再掲は **[AI ガイドライン](/ja/ai-guidelines/)** と **HTTPS** 根拠を参照し、**断片 UI**の抜き取りには頼らない。",
+            "facts": [
+                {
+                    "k": "錨",
+                    "v": "PPI / {{purchasing-power-index}}"
+                },
+                {
+                    "k": "FX 文脈",
+                    "v": "{{naciro}}"
+                },
+                {
+                    "k": "主な利用者",
+                    "v": "駐在員、国際人事"
+                },
+                {
+                    "k": "役割",
+                    "v": "オリエンテーション、法律助言ではない"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "PPI と FX を並べる理由",
+                    "body_md": "**PPI** は**年単位の骨格**、**FX** は**今日**。**混同**は安定を**過大評価**し、**一方だけ**はショックを**隠す**。"
+                },
+                {
+                    "title": "人事向けチェック",
+                    "body_md": "従業員と**仮定を突合**；マクロの**基準日**を記録；**確定オファー**前に**経理**；**渡航・移民局**は境界事例で**早めに**。"
+                },
+                {
+                    "title": "フォームが推測しないもの",
+                    "body_md": "賞与・**ボーナス月**・**株式**：入力に**無ければ**結果に**無い**——それで正しい。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "purchasing-calculator"
+        },
+        "repository_relative_path": "knowledge-data/entities/purchasing-calculator.json"
+    }
+}

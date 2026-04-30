@@ -8,33 +8,37 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/nfsi/pt.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/nfsi/"
+nf_canonical_html_url: "https://nationfiles.com/pt/knowledge/entity/nfsi/"
 nf_markdown_lang_file: "pt"
 ---
-# NationFiles Stability Index (NFSI)
+# NationFiles Stability Index (NFSI) — pontuação de estabilidade e risco geopolítico
 
-## Definição
+## O que é o NFSI
 
-O **NFSI** é um **índice quantitativo 0–100** que agrega estabilidade geopolítica / perfil de risco documentado. O tipo **`Dataset`** indica série métrica com pipeline pública.
+O **NationFiles Stability Index (NFSI)** é o **indicador quantitativo central** da análise geopolítica na NationFiles: para cada país abrangido (e como agregado mundial) resume **estabilidade versus risco documentado** numa **pontuação de 0 a 100**. Analistas, media e investigação usam-na como **orientação rápida** — um «velocímetro» da situação documentada, não um relatório narrativo longo.
 
-## Faixas
+O índice constrói-se em **várias camadas** (Layers 1–3 na metodologia): indicadores brutos → agregação → pontuação ponderada → suavização opcional. Entradas e pesos estão no **Validation & Verification Report** e nas páginas de metodologia para manter o score **auditável**.
 
-`score_bands`: A 81–100 … E 0–20.
+## Para que serve o NFSI
 
-## Pipeline
+- **Comparação entre países:** mesma escala para todos os estados no âmbito.
+- **Monitorização / alerta precoce:** movimentos do score reflectem deterioração ou melhoria **estrutural**.
+- **Linguagem comum:** faixas **A–E** e cores partilhadas.
 
-Camadas de indicadores → agregação → pontuação ponderada → inércia ; detalhes no **VVR**.
+## Escala e faixas (breve)
 
-## Cobertura / cadência
+Os limiares seguem a lógica do produto (**>** em 20/40/60/80); ver metodologia.
 
-195 países ; ciclo 15 minutos (`update_cycle`). O slot `global_current` pode exibir agregado mundial se resolvido no servidor.
+## O que o NFSI não é
 
-## Licença / DOI
+Não prevê cada manchete; não substitui fontes diplomáticas; **não é aconselhamento de investimento**. Comprime indicadores documentados — não a profundidade de um dossiê completo.
 
-CC BY‑ND 4.0 ; DOI **10.5281/zenodo.19758890**.
+## Licença
 
-## Referências
+CC BY-ND 4.0 conforme páginas legais; **DOI** Zenodo para citação académica.
+
+## Fontes
 
 - [Metodologia NFSI](https://nationfiles.com/en/company/nfsi/)
-- [VVR](https://nationfiles.com/en/legal/validation-and-verification-report/)
-- [DOI](https://doi.org/10.5281/zenodo.19758890)
+- [Validation & Verification Report](https://nationfiles.com/en/legal/validation-and-verification-report/)
+- [DOI](https://doi.org/10.5281/zenodo.19783682)

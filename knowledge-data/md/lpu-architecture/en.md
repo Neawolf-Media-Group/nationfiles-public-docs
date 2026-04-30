@@ -11,31 +11,25 @@ nf_repository_relative_path: "knowledge-data/md/lpu-architecture/en.md"
 nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/lpu-architecture/"
 nf_markdown_lang_file: "en"
 ---
-# LPU Architecture
+# LPU Architecture — compute foundation for real-time inference
 
-## Role
+## What LPU means **in this product**
 
-**LPU Architecture** denotes the **dedicated inference hardware layer** beneath the Naciro Engine. It captures requirements for **deterministic, low‑latency execution** on signal paths that feed NFSI‑related workloads. The Schema.org type **`CreativeWork`** positions the entry as a **cited architecture description** with a DOI—**not** a live product SKU sheet.
+**LPU Architecture** names the **dedicated high-performance inference layer** beneath the Naciro Engine. It specifies how NationFiles delivers **deterministic, low-latency execution** for the evaluation paths that feed **NFSI computation**, dashboard language models, and related **real-time geopolitical outputs**. Where general-purpose cloud jobs would be noisy, this layer provides a **predictable compute base** so headline scores and briefings can refresh **reliably and repeatably**.
 
-## Latency figure
+Public documentation cites **sub‑50 ms inference latency** as a planning figure for critical paths in the reference setup — an **engineering target**, not a live gauge on this page.
 
-Attribute **`inference_latency`**: **< 50 ms** as a documented planning target for inference paths in the reference design (no live measurement on this page).
+## What it **delivers**
+
+- **Throughput:** sustain high-frequency scoring across countries and signal paths without analytics becoming the bottleneck.
+- **Determinism:** comparable results over time — essential for an index used in institutional workflows.
+- **Coupling to Naciro:** LPU is the **hardware/architecture substrate**; Naciro remains the **logic**; NFSI is the **visible score**.
 
 ## Research anchor
 
-`citation_doi`: **10.5281/zenodo.19774594** — use the Zenodo record/PDF for authoritative detail; this page only summarizes graph attributes.
+DOI **10.5281/zenodo.19774594** anchors the technical description for citation and replication.
 
-## System context
-
-- **Engine**: `naciro` (logic above the LPU layer).
-- **Metric**: `nfsi` — LPU supplies **compute/determinism semantics**, not the headline score in isolation.
-- **Publishing**: via `nationfiles`; vendor/org linkage through attributes.
-
-## Out of scope
-
-No manufacturing roadmaps, shopping‑cart configs, or live silicon telemetry—only **facts referenced by DOI / attributes**.
-
-## References
+## Sources
 
 - [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
 - [NFSI methodology](https://nationfiles.com/en/company/nfsi/)

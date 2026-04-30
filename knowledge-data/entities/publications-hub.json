@@ -1,0 +1,1092 @@
+{
+    "schema_version": "nfkg-1.0",
+    "id": "publications-hub",
+    "kind": "entity",
+    "type": "Dataset",
+    "status": "active",
+    "updated_utc": "2026-04-30T08:19:24Z",
+    "topics": [
+        "communications",
+        "publications-hub",
+        "press",
+        "video",
+        "official-statements",
+        "media-presence",
+        "archive",
+        "neawolf",
+        "nationfiles"
+    ],
+    "aliases": [
+        "Medien-Hub",
+        "Media hub",
+        "Hub médias",
+        "Hub de medios",
+        "Publications hub",
+        "Press NationFiles",
+        "Video NationFiles",
+        "offizielle Statements",
+        "المركز الإعلامي",
+        "メディアハブ",
+        "NationFiles Presse"
+    ],
+    "attributes": [
+        {
+            "key": "operator",
+            "value": "{{neawolf-media-group}}",
+            "depends_on": [
+                "neawolf-media-group"
+            ],
+            "sources": [
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/de/company/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/en/company/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/fr/company/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/es/company/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/pt/company/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/ar/company/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/ja/company/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "de": "{{neawolf-media-group}}",
+                "en": "{{neawolf-media-group}}",
+                "fr": "{{neawolf-media-group}}",
+                "es": "{{neawolf-media-group}}",
+                "pt": "{{neawolf-media-group}}",
+                "ar": "{{neawolf-media-group}}",
+                "ja": "{{neawolf-media-group}}"
+            }
+        },
+        {
+            "key": "published_via",
+            "value": "{{nationfiles}}",
+            "depends_on": [
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Publications",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Company",
+                    "url": "https://nationfiles.com/en/company/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/de/publications/"
+                    },
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/de/company/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/en/publications/"
+                    },
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/en/company/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/fr/publications/"
+                    },
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/fr/company/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/es/publications/"
+                    },
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/es/company/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/pt/publications/"
+                    },
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/pt/company/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ar/publications/"
+                    },
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/ar/company/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ja/publications/"
+                    },
+                    {
+                        "label": "Company",
+                        "url": "https://nationfiles.com/ja/company/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "de": "{{nationfiles}}",
+                "en": "{{nationfiles}}",
+                "fr": "{{nationfiles}}",
+                "es": "{{nationfiles}}",
+                "pt": "{{nationfiles}}",
+                "ar": "{{nationfiles}}",
+                "ja": "{{nationfiles}}"
+            }
+        },
+        {
+            "key": "model_type",
+            "value": "NationFiles publications hub (media-facing): the communications interface where press-oriented pages, on-site video explainers described as part of NationFiles’ public storytelling, and official Neawolf or NationFiles statements are expected to converge. It documents how the operator archives its published media presence for outsiders who cite clips or quotes. This entity is intentionally narrower than {{publications-corpus}}, which houses DOI-backed methodology and long validation writing; promotional sentences still cannot override legal notice or registry facts.",
+            "depends_on": [
+                "nationfiles",
+                "publications-corpus",
+                "neawolf-media-group",
+                "legal-sources-registry"
+            ],
+            "sources": [
+                {
+                    "label": "Publications",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Knowledge hub",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/de/publications/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/de/knowledge/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/en/publications/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/en/knowledge/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/fr/publications/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/fr/knowledge/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/es/publications/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/es/knowledge/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/pt/publications/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/pt/knowledge/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ar/publications/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/ar/knowledge/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ja/publications/"
+                    },
+                    {
+                        "label": "Knowledge hub",
+                        "url": "https://nationfiles.com/ja/knowledge/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "NationFiles publications hub (media-facing): the communications interface where press-oriented pages, on-site video explainers described as part of NationFiles’ public storytelling, and official Neawolf or NationFiles statements are expected to converge. It documents how the operator archives its published media presence for outsiders who cite clips or quotes. This entity is intentionally narrower than {{publications-corpus}}, which houses DOI-backed methodology and long validation writing; promotional sentences still cannot override legal notice or registry facts.",
+                "de": "NationFiles **Medien-Hub** (kommunikationsnah): die **beschriebene** Schnittstelle, an der **Presse**-nahe Seiten, **auf der Website erklärende Videos** als Teil der **öffentlichen** Darstellung von NationFiles und **offizielle** Statements von Neawolf bzw. NationFiles **zusammenlaufen** sollen. Er dokumentiert, wie der Betreiber die **veröffentlichte** mediale Präsenz für **externe** Zitation **archiviert**. Die Entität ist **bewusst** enger als {{publications-corpus}} mit **DOI**-Methodik und langen Validierungstexten; **Werbesätze** dürfen **Legal Notice**- oder Registerfakten **nicht** überstimmen.",
+                "fr": "**Hub publications** NationFiles (côté **médias**) : interface **communication** où pages **presse**, **vidéos explicatives** sur le site dans le **récit public** de NationFiles et **déclarations** officielles Neawolf/NationFiles **convergent**. Il documente comment l’opérateur **archive** la présence médiatique **publiée** pour tiers qui **citent** clips ou phrases. Plus **étroit** que {{publications-corpus}} (méthodo **DOI** et validations longues) ; la **promo** ne **prime** pas sur notice ou registre.",
+                "es": "**Hub de publicaciones** NationFiles (cara **medios**): interfaz donde páginas **prensa**, **vídeos** explicativos en el sitio dentro del **relato público** y **declaraciones** oficiales Neawolf/NationFiles **convergen**. Documenta cómo el operador **archiva** la presencia mediática **publicada** para quienes **citan** clips o frases. Más **estrecho** que {{publications-corpus}} (metodología **DOI** y validación larga); la **promo** no **vence** al aviso legal ni al registro.",
+                "pt": "**Hub de publicações** NationFiles (frente **media**): interface onde páginas de **imprensa**, **vídeos** explicativos no site no **relato público** e **declarações** oficiais Neawolf/NationFiles **convergem**. Documenta como o operador **arquiva** a presença mediática **publicada** para terceiros que **citam** clips ou frases. Mais **estreito** que {{publications-corpus}} (metodologia **DOI** e validação longa); **promo** não **prevalece** sobre aviso legal ou registo.",
+                "ar": "**مركز المنشورات** NationFiles (واجهة **إعلامية**): واجهة تلتقي عندها صفحات **صحافة**، و**فيديوهات** توضيحية على الموقع ضمن **السرد العلني**، و**تصريحات** رسمية لـNeawolf/NationFiles. يوثّق كيف يؤرشف المشغّل **الحضور الإعلامي** المنشور لمن **يقتبس** مقاطع أو جمل. **أضيق** من {{publications-corpus}} (منهجية **DOI** ونصوص تحقق طويلة)؛ **الدعاية** **لا تتقدّم** على الإشعار القانوني أو السجل.",
+                "ja": "NationFiles **出版物ハブ**（**メディア**向け）：**プレス**寄りページ、サイト上の**説明動画**（ NationFiles の**公開**ストーリー内）、Neawolf／NationFiles の**公式**表明が**交わる**インターフェース。Operator が**公開した**メディア露出を引用する**第三者**向けに**どう残すか**を述べる。{{publications-corpus}} の **DOI** 方法論・長い検証文より**意図的に狭い**。**宣伝文**は**リーガルノーティス**やレジストリの事実を**上書き**しない。"
+            }
+        },
+        {
+            "key": "pipeline",
+            "value": "Live publications and company route trees surface downloadable or streamable assets where the product enables them; {{publications-corpus}} remains the anchor when a communication points to numbered methodology. Short-cycle copy—press blurbs, video captions—is expected to inherit the same numeric facts as dashboards and exports documented alongside {{nationfile-json}} profiles. {{neawolf-media-group}} is the named corporate author on official statements tied to imprint duties.",
+            "depends_on": [
+                "publications-corpus",
+                "nationfile-json",
+                "neawolf-media-group",
+                "nationfiles"
+            ],
+            "sources": [
+                {
+                    "label": "Publications",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Company about",
+                    "url": "https://nationfiles.com/en/company/about/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/de/publications/"
+                    },
+                    {
+                        "label": "Company about",
+                        "url": "https://nationfiles.com/de/company/about/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/en/publications/"
+                    },
+                    {
+                        "label": "Company about",
+                        "url": "https://nationfiles.com/en/company/about/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/fr/publications/"
+                    },
+                    {
+                        "label": "Company about",
+                        "url": "https://nationfiles.com/fr/company/about/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/es/publications/"
+                    },
+                    {
+                        "label": "Company about",
+                        "url": "https://nationfiles.com/es/company/about/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/pt/publications/"
+                    },
+                    {
+                        "label": "Company about",
+                        "url": "https://nationfiles.com/pt/company/about/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ar/publications/"
+                    },
+                    {
+                        "label": "Company about",
+                        "url": "https://nationfiles.com/ar/company/about/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ja/publications/"
+                    },
+                    {
+                        "label": "Company about",
+                        "url": "https://nationfiles.com/ja/company/about/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "Live publications and company route trees surface downloadable or streamable assets where the product enables them; {{publications-corpus}} remains the anchor when a communication points to numbered methodology. Short-cycle copy—press blurbs, video captions—is expected to inherit the same numeric facts as dashboards and exports documented alongside {{nationfile-json}} profiles. {{neawolf-media-group}} is the named corporate author on official statements tied to imprint duties.",
+                "de": "Die **publications**- und **company**-Routenbäume zeigen **herunterladbare** oder **streambare** Inhalte, wo das Produkt es **freischaltet**; {{publications-corpus}} bleibt **Anker**, wenn eine Kommunikation auf **nummerierte** Methodik zeigt. **Kurzlaufende** Texte (Pressebox, Video-Untertitel) sollen **dieselben** Zahlenfakten **wie** Dashboards und Exporte tragen, die zu {{nationfile-json}}-Profilen dokumentiert sind. {{neawolf-media-group}} gilt als **benannte** Verfasserinstanz bei **offiziellen** Statements im **Impressum**-Kontext.",
+                "fr": "Les arborescences **publications** et **company** exposent les ressources **téléchargeables/streamables** si le produit les active ; {{publications-corpus}} reste **ancre** quand un message pointe vers une méthodo **numérotée**. Les textes **courts** (chapo presse, sous-titres vidéo) doivent **hériter** des **mêmes** faits chiffrés que tableaux et exports liés aux profils {{nationfile-json}}. {{neawolf-media-group}} est l’**auteur** corporate nommé pour déclarations officielles sous **mentions légales**.",
+                "es": "Los árboles de rutas **publications** y **company** muestran activos **descargables/stream** si el producto lo permite ; {{publications-corpus}} sigue siendo **ancla** si el mensaje apunta a metodología **numerada**. Textos **breves** (nota de prensa, subtítulos) deben **heredar** los **mismos** hechos numéricos que paneles y exportes documentados con perfiles {{nationfile-json}}. {{neawolf-media-group}} es el **autor** corporativo nombrado en declaraciones oficiales ligadas al **aviso legal**.",
+                "pt": "Árvores de rotas **publications** e **company** mostram ficheiros **transferíveis/stream** se o produto activar ; {{publications-corpus}} permanece **âncora** quando a mensagem aponta metodologia **numerada**. Texto **curto** (nota imprensa, legendas) deve **herdar** os **mesmos** factos numéricos que painéis e exportações com perfis {{nationfile-json}}. {{neawolf-media-group}} é **autor** empresarial nomeado em declarações oficiais no âmbito **legal**.",
+                "ar": "مسارات **publications** و**company** تعرض أصولًا **قابلة للتنزيل/البث** عند تفعيل المنتج؛ {{publications-corpus}} يبقى **مرساة** عند الإشارة لمنهجية **مرقمة**. نصوص **قصيرة** (مقتطف صحافة، ترجمة فيديو) يُفترض أن **ترث** **نفس** الحقائق الرقمية للوحات والتصدير الموثقة مع ملفات {{nationfile-json}}. {{neawolf-media-group}} **المؤلف** المؤسسي المُسمّى في تصريحات رسمية ضمن **إشعار قانوني**.",
+                "ja": "稼働中の **publications** / **company** ツリーは、製品が許すところ**ダウンロード／ストリーム**資産を出す。メッセージが**番号付き**方法論を指すときの**錨**は {{publications-corpus}}。**短い**コピー（プレス短文、キャプション）は {{nationfile-json}} プロフィールと**同じ**数値的事実を継ぐ想定。**公式**表明の**名義**は {{neawolf-media-group}}（表記・法的枠）。"
+            }
+        },
+        {
+            "key": "input_sources",
+            "value": "NationFiles-hosted publications and company pages, entries recorded in {{legal-sources-registry}} when communications must quote canonical legal facts, cross-links into {{publications-corpus}} for methodology paragraphs, and {{ai-guidelines}} for machine-readable citation etiquette when automated clients summarize press copy.",
+            "depends_on": [
+                "legal-sources-registry",
+                "publications-corpus",
+                "ai-guidelines"
+            ],
+            "sources": [
+                {
+                    "label": "Legal sources",
+                    "url": "https://nationfiles.com/en/legal/sources/"
+                },
+                {
+                    "label": "AI guidelines",
+                    "url": "https://nationfiles.com/en/ai-guidelines/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/de/legal/sources/"
+                    },
+                    {
+                        "label": "AI guidelines",
+                        "url": "https://nationfiles.com/de/ai-guidelines/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/en/legal/sources/"
+                    },
+                    {
+                        "label": "AI guidelines",
+                        "url": "https://nationfiles.com/en/ai-guidelines/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/fr/legal/sources/"
+                    },
+                    {
+                        "label": "AI guidelines",
+                        "url": "https://nationfiles.com/fr/ai-guidelines/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/es/legal/sources/"
+                    },
+                    {
+                        "label": "AI guidelines",
+                        "url": "https://nationfiles.com/es/ai-guidelines/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/pt/legal/sources/"
+                    },
+                    {
+                        "label": "AI guidelines",
+                        "url": "https://nationfiles.com/pt/ai-guidelines/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/ar/legal/sources/"
+                    },
+                    {
+                        "label": "AI guidelines",
+                        "url": "https://nationfiles.com/ar/ai-guidelines/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Legal sources",
+                        "url": "https://nationfiles.com/ja/legal/sources/"
+                    },
+                    {
+                        "label": "AI guidelines",
+                        "url": "https://nationfiles.com/ja/ai-guidelines/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "NationFiles-hosted publications and company pages, entries recorded in {{legal-sources-registry}} when communications must quote canonical legal facts, cross-links into {{publications-corpus}} for methodology paragraphs, and {{ai-guidelines}} for machine-readable citation etiquette when automated clients summarize press copy.",
+                "de": "Auf NationFiles gehostete **Publications**- und **Company**-Seiten, {{legal-sources-registry}}-Einträge wenn Kommunikation **kanonische** Rechtsfakten zitieren muss, **Querverweise** ins {{publications-corpus}} für **Methodikabsätze** und {{ai-guidelines}} für **maschinenlesbare** Zitationsregeln wenn automatisierte Clients **Presse**texte zusammenfassen.",
+                "fr": "Pages **publications** et **company** hébergées NationFiles, entrées {{legal-sources-registry}} quand la communication doit citer des **faits légaux canoniques**, renvois vers {{publications-corpus}} pour paragraphes méthodo, et {{ai-guidelines}} pour **citations** lisibles par machines si des clients auto résument la **presse**.",
+                "es": "Páginas **publications** y **company** en NationFiles, filas {{legal-sources-registry}} cuando haya que citar **hechos legales canónicos**, enlaces a {{publications-corpus}} para párrafos metodológicos y {{ai-guidelines}} para **citas** legibles por máquinas si clientes automáticos resumen **prensa**.",
+                "pt": "Páginas **publications** e **company** na NationFiles, linhas {{legal-sources-registry}} quando a comunicação cite **factos legais canónicos**, ligações a {{publications-corpus}} para parágrafos metodológicos e {{ai-guidelines}} para **citações** legíveis por máquinas se clientes automáticos resumirem **imprensa**.",
+                "ar": "صفحات **publications** و**company** على NationFiles، سجلات {{legal-sources-registry}} عند الحاجة لاقتباس **حقائق قانونية مرجعية**، روابط إلى {{publications-corpus}} لفقرات منهجية، و{{ai-guidelines}} لآداب **اقتباس** يقرؤها برنامج عند تلخيص **صحافة** آلياً.",
+                "ja": "NationFiles 上の **publications**／**company** ページ、**法的**事実を引用しなければならないときの {{legal-sources-registry}} の行、方法論段落のための {{publications-corpus}} への**横リンク**、自動クライアントが**プレス**文を要約するときの {{ai-guidelines}} に沿った**機械可読**な引用作法。"
+            }
+        },
+        {
+            "key": "key_outputs",
+            "value": "Press listings, video explainers indexed alongside country and knowledge surfaces, pointers to official statements that stable exports can cite, and consistent cross-links back to {{knowledge-hub-nfkg}} so automated clients separate informal marketing tone from validation-grade text in the VVR lineage.",
+            "depends_on": [
+                "knowledge-hub-nfkg",
+                "nationfiles",
+                "validation-verification-report"
+            ],
+            "sources": [
+                {
+                    "label": "Publications",
+                    "url": "https://nationfiles.com/en/publications/"
+                },
+                {
+                    "label": "Validation & Verification Report",
+                    "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/de/publications/"
+                    },
+                    {
+                        "label": "Validation & Verification Report",
+                        "url": "https://nationfiles.com/de/legal/validation-and-verification-report/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/en/publications/"
+                    },
+                    {
+                        "label": "Validation & Verification Report",
+                        "url": "https://nationfiles.com/en/legal/validation-and-verification-report/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/fr/publications/"
+                    },
+                    {
+                        "label": "Validation & Verification Report",
+                        "url": "https://nationfiles.com/fr/legal/validation-and-verification-report/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/es/publications/"
+                    },
+                    {
+                        "label": "Validation & Verification Report",
+                        "url": "https://nationfiles.com/es/legal/validation-and-verification-report/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/pt/publications/"
+                    },
+                    {
+                        "label": "Validation & Verification Report",
+                        "url": "https://nationfiles.com/pt/legal/validation-and-verification-report/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ar/publications/"
+                    },
+                    {
+                        "label": "Validation & Verification Report",
+                        "url": "https://nationfiles.com/ar/legal/validation-and-verification-report/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Publications",
+                        "url": "https://nationfiles.com/ja/publications/"
+                    },
+                    {
+                        "label": "Validation & Verification Report",
+                        "url": "https://nationfiles.com/ja/legal/validation-and-verification-report/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "en": "Press listings, video explainers indexed alongside country and knowledge surfaces, pointers to official statements that stable exports can cite, and consistent cross-links back to {{knowledge-hub-nfkg}} so automated clients separate informal marketing tone from validation-grade text in the VVR lineage.",
+                "de": "**Presse**-Listings, **Video**-Erklärer **neben** Länder- und Knowledge-Oberflächen, Verweise auf **offizielle** Statements die **stabile** Exporte **zitieren** können, und **konsistente** Rückverweise auf {{knowledge-hub-nfkg}}, damit automatisierte Clients **lockeren** **Werbeton** von **Validierungs**-Niveau im VVR-Kontext **trennen**.",
+                "fr": "Listings **presse**, **vidéos** explicatives indexées près des surfaces pays/Knowledge, pointeurs vers **déclarations** officielles **citables** par exports stables, et renvois **cohérents** vers {{knowledge-hub-nfkg}} pour que clients auto séparent **ton promo** de texte **validation** type VVR.",
+                "es": "Listados **prensa**, **vídeos** explicativos junto a superficies país/Knowledge, punteros a **declaraciones** oficiales **citables** por exportes estables, y enlaces a {{knowledge-hub-nfkg}} para que clientes auto separen **tono promo** de texto **validación** tipo VVR.",
+                "pt": "Listagens **imprensa**, **vídeos** explicativos junto de superfícies país/Knowledge, apontadores a **declarações** oficiais **citáveis** por exportações estáveis, e ligações a {{knowledge-hub-nfkg}} para clientes auto separarem **tom promocional** de texto **validação** tipo VVR.",
+                "ar": "قوائم **صحافة**، **فيديوهات** توضيحية بجانب أسطح الدول/Knowledge، مؤشرات إلى **تصريحات** رسمية يمكن للتصدير **المستقر** اقتباسها، وروابط إلى {{knowledge-hub-nfkg}} لفصل العملاء الآليون بين **لهجة دعائية** ونص **تحقق** بخط VVR.",
+                "ja": "**プレス**一覧、国／Knowledge 面に**索引**される説明動画、**安定**エクスポートが引用できる**公式**表明へのポインタ、**宣伝調**と **VVR** 系**検証**級本文を分ける {{knowledge-hub-nfkg}} への**一貫**した逆リンク。"
+            }
+        },
+        {
+            "key": "knowledge_hub",
+            "value": "https://nationfiles.com/en/knowledge/",
+            "sources": [
+                {
+                    "label": "Knowledge",
+                    "url": "https://nationfiles.com/en/knowledge/"
+                }
+            ],
+            "sources_i18n": {
+                "de": [
+                    {
+                        "label": "Knowledge",
+                        "url": "https://nationfiles.com/de/knowledge/"
+                    }
+                ],
+                "en": [
+                    {
+                        "label": "Knowledge",
+                        "url": "https://nationfiles.com/en/knowledge/"
+                    }
+                ],
+                "fr": [
+                    {
+                        "label": "Knowledge",
+                        "url": "https://nationfiles.com/fr/knowledge/"
+                    }
+                ],
+                "es": [
+                    {
+                        "label": "Knowledge",
+                        "url": "https://nationfiles.com/es/knowledge/"
+                    }
+                ],
+                "pt": [
+                    {
+                        "label": "Knowledge",
+                        "url": "https://nationfiles.com/pt/knowledge/"
+                    }
+                ],
+                "ar": [
+                    {
+                        "label": "Knowledge",
+                        "url": "https://nationfiles.com/ar/knowledge/"
+                    }
+                ],
+                "ja": [
+                    {
+                        "label": "Knowledge",
+                        "url": "https://nationfiles.com/ja/knowledge/"
+                    }
+                ]
+            },
+            "value_i18n": {
+                "de": "https://nationfiles.com/de/knowledge/",
+                "en": "https://nationfiles.com/en/knowledge/",
+                "fr": "https://nationfiles.com/fr/knowledge/",
+                "es": "https://nationfiles.com/es/knowledge/",
+                "pt": "https://nationfiles.com/pt/knowledge/",
+                "ar": "https://nationfiles.com/ar/knowledge/",
+                "ja": "https://nationfiles.com/ja/knowledge/"
+            }
+        }
+    ],
+    "relations": [
+        {
+            "rel": "isPartOf",
+            "to": "nationfiles"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "publications-corpus"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "neawolf-media-group"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "knowledge-hub-nfkg"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "legal-sources-registry"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "ai-guidelines"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "validation-verification-report"
+        },
+        {
+            "rel": "relatedTo",
+            "to": "nationfile-json"
+        }
+    ],
+    "faq_refs": [],
+    "blocks": [
+        {
+            "type": "summary"
+        },
+        {
+            "type": "markdown"
+        },
+        {
+            "type": "attribute_table"
+        },
+        {
+            "type": "fact_table"
+        },
+        {
+            "type": "sections"
+        },
+        {
+            "type": "relations"
+        }
+    ],
+    "i18n": {
+        "de": {
+            "title": "Medien-Hub",
+            "teaser": "Der **Medien-Hub** beschreibt die **öffentliche** Kommunikationsschicht von NationFiles: Presse, **Video-Angebote**, offizielle Statements und die **Archivlogik** dessen, was der Betreiber über die **mediale Präsenz** dokumentiert — **getrennt** vom **forschungslastigen** {{publications-corpus}}.",
+            "summary_bullets": [
+                "**Rolle:** Schnittstelle für **Kommunikation** statt DOI-Methodik allein.",
+                "**Presse:** Verweise auf {{neawolf-media-group}} und **Company**-Routen, soweit veröffentlicht.",
+                "**Video:** erklärende Clips dort, wo die Seite sie ausspielt — **kein** Ersatz für Senderarchive.",
+                "**Statements:** bindende Formulierungen bleiben bei **Legal Notice** und Register.",
+                "**Korpus:** lange Texte und **DOI**-Disziplin im {{publications-corpus}}."
+            ],
+            "body_md": "Redaktionen, Investoren und Forscher:innen landen bei NationFiles oft an **unterschiedlichen** Einstiegen. Wer **Zitate**, **Statements** oder **bewegte** Erklärungen sucht, braucht eine **klare** Adresse neben dem **Publikationskorpus**. Genau diese **Adresse** meint der **Medien-Hub** in diesem Knowledge-Eintrag.\n\nDas **{{publications-corpus}}** bleibt der Ort für **nummerierte** Methodik, **Validierung** und **DOI**-Disziplin. Der **Hub** erklärt daneben, wie **Pressefassaden**, **Video**-Erklärer und **Kurzstatements** **dieselben** faktischen Grenzen respektieren müssen: Wer in einem Clip **eine** Zahl nennt, muss sich mit der **Profil-Ansicht** und den **Exporten** vertragen, die NationFiles öffentlich ausweist.\n\n**Offizielle Äußerungen** — etwa zu Lizenzierung oder Datenverfügbarkeit — können auf den **Company**- und **Publications**-Routen erscheinen; **bindende** Fassungen bleiben im **Legal-Notice**- und **Quellenregister**-Kontext. Kurze Texte **ersetzen** keine **Validierungs**-Sätze aus dem offiziellen Bericht.\n\n**Weiterlesen:** {{publications-corpus}}, {{neawolf-media-group}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Ebene",
+                    "v": "Kommunikation und Archiv der Medienpräsenz"
+                },
+                {
+                    "k": "Abgrenzung",
+                    "v": "{{publications-corpus}} ist der Forschungskorpus"
+                },
+                {
+                    "k": "Betreiber",
+                    "v": "{{neawolf-media-group}}"
+                },
+                {
+                    "k": "Bindung",
+                    "v": "Legal Notice und Quellenregister"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Zwei Publikationslinien",
+                    "body_md": "Eine **Forschungsschiene** und eine **öffentlichkeitsnahe** Schiene erfüllen **verschiedene** Aufgaben. Beide hängen an {{nationfiles}} und dürfen sich **sachlich** nicht widersprechen."
+                },
+                {
+                    "title": "Video und Video-Intelligence",
+                    "body_md": "Gemeint sind **auf der Website sichtbare** Erklärvideos **und** vergleichbare Formate. Tiefe und nummerierte Methodik bleiben beim **Korpus**."
+                },
+                {
+                    "title": "Archivierung",
+                    "body_md": "Was NationFiles **bewusst** online lässt, ist die **Grundlage** externer Zitation. Fehlende Seiten bedeuten meist **Aktualisierung** oder **Scope**, nicht automatisch Geheimhaltung."
+                }
+            ]
+        },
+        "en": {
+            "title": "Publications hub (media)",
+            "teaser": "The **publications hub** is NationFiles’ **communications-facing** layer: press paths, on-site **video explainers**, official statements, and the **archival stance** on what the operator publishes about its **media footprint**—distinct from the research-heavy {{publications-corpus}}.",
+            "summary_bullets": [
+                "**Role:** communications interface, not only DOI methodology.",
+                "**Press:** links through {{neawolf-media-group}} and company routes where live.",
+                "**Video:** clips the site actually serves—not a full broadcast archive.",
+                "**Statements:** binding language stays with legal notice and registries.",
+                "**Corpus:** long-form work and DOI discipline lives in {{publications-corpus}}."
+            ],
+            "body_md": "Editors, investors, and researchers rarely enter NationFiles through the same door. People hunting **quotes**, **clips**, or **short official lines** need a clear description next to the **publications corpus**. This entity is that description.\n\n{{publications-corpus}} remains the home for **numbered** methodology, **validation** memos, and **DOI** hygiene. The **hub** explains how press pages, **video-style** explainers, and terse statements must still respect the **same** factual guardrails: if a clip cites a figure, it has to line up with the **country surfaces** and **exports** NationFiles exposes.\n\nOfficial lines about licensing or data availability may appear on **company** or **publications** routes; **binding** text remains anchored in the **legal notice** and **source registry**. Short copy must not **contradict** validation sentences from the formal report.\n\n**Read next:** {{publications-corpus}}, {{neawolf-media-group}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Layer",
+                    "v": "Communications and media-presence archive"
+                },
+                {
+                    "k": "Boundary",
+                    "v": "{{publications-corpus}} is the research corpus"
+                },
+                {
+                    "k": "Operator",
+                    "v": "{{neawolf-media-group}}"
+                },
+                {
+                    "k": "Binding copy",
+                    "v": "Legal notice and registry"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Why two tracks exist",
+                    "body_md": "A **research track** and a **public communications** track serve different duties. Both sit under {{nationfiles}} and must stay **fact-consistent**."
+                },
+                {
+                    "title": "Video and video intelligence",
+                    "body_md": "This covers **site-visible** explainers and similar formats. Depth stays with the **corpus**."
+                },
+                {
+                    "title": "Archiving",
+                    "body_md": "What NationFiles **keeps** online is what outsiders may cite. Missing pages usually mean **scope** or **refresh**."
+                }
+            ]
+        },
+        "fr": {
+            "title": "Hub médias",
+            "teaser": "Le **hub médias** est la couche **communication** de NationFiles : **presse**, **vidéos** sur site, **déclarations** officielles et **logique d’archivage** de la **présence médiatique** publiée — **distincte** du {{publications-corpus}} axé recherche.",
+            "summary_bullets": [
+                "**Rôle:** interface de **communication**, pas seulement méthodo DOI.",
+                "**Presse:** chemins via {{neawolf-media-group}} et pages **company** si publiées.",
+                "**Vidéo:** ce que le site **diffuse** — pas un **archivage** télé intégral.",
+                "**Déclarations:** le **texte contraignant** reste notice et registres.",
+                "**Corpus:** long format et **DOI** dans {{publications-corpus}}."
+            ],
+            "body_md": "Les rédactions n’entrent pas toutes par la même porte. Celles qui cherchent **citations**, **clips** ou **formulations courtes** ont besoin d’un cadre **à côté** du **corpus**. Cette entité est ce cadre.\n\n{{publications-corpus}} garde la **méthodo numérotée**, la **validation** et la discipline **DOI**. Le **hub** dit comment pages presse, **vidéos** explicatives et **notes** courtes doivent respecter les **mêmes garde-fous** : un chiffre annoncé dans une vidéo doit **coller** aux **surfaces pays** et **exports** publics.\n\nLes **déclarations** sur licence ou données peuvent vivre sur **company** ou **publications** ; la version **engageante** demeure **legal notice** et **registre**. Une phrase promo ne **contredit** pas un paragraphe de validation **officiel**.\n\n**Suite:** {{publications-corpus}}, {{neawolf-media-group}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Couche",
+                    "v": "Communication et archive médiatique"
+                },
+                {
+                    "k": "Limite",
+                    "v": "{{publications-corpus}} = corpus recherche"
+                },
+                {
+                    "k": "Opérateur",
+                    "v": "{{neawolf-media-group}}"
+                },
+                {
+                    "k": "Texte engageant",
+                    "v": "Notice et registre"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Deux rails",
+                    "body_md": "**Recherche** et **communication** ont des devoirs différents ; tous deux sont **sous** {{nationfiles}}."
+                },
+                {
+                    "title": "Vidéo",
+                    "body_md": "On parle de ce que le site **montre** réellement."
+                },
+                {
+                    "title": "Archivage",
+                    "body_md": "Ce qui reste en ligne est **citable** ; l’absence de page reflète souvent **périmètre** ou **mise à jour**."
+                }
+            ]
+        },
+        "es": {
+            "title": "Hub de medios",
+            "teaser": "El **hub de medios** es la capa de **comunicación** de NationFiles: **prensa**, **vídeos** en sitio, **declaraciones** oficiales y la **lógica de archivo** de la **presencia mediática** publicada — **distinta** del {{publications-corpus}} orientado a investigación.",
+            "summary_bullets": [
+                "**Rol:** interfaz de **comunicación**, no solo DOI.",
+                "**Prensa:** rutas vía {{neawolf-media-group}} y **company** si están vivas.",
+                "**Vídeo:** lo que el sitio **sirve** — no archivo de broadcast completo.",
+                "**Declaraciones:** el texto **vinculante** sigue en aviso legal y registros.",
+                "**Corpus:** texto largo y **DOI** en {{publications-corpus}}."
+            ],
+            "body_md": "Quien busca **citas**, **clips** o **frases** cortas necesita un marco claro junto al **corpus**. Esta entidad es ese marco.\n\n{{publications-corpus}} conserva **metodología** numerada, **validación** y **DOI**. El **hub** exige que prensa, **vídeos** explicativos y notas cortas respeten los **mismos** límites: una cifra en vídeo debe **alinear** con **superficies país** y **exportaciones** públicas.\n\nLas **declaraciones** sobre licencias pueden vivir en **company** o **publications**; la redacción **obligatoria** permanece en **aviso legal** y **registro**. El texto breve no **reemplaza** los párrafos de validación **oficiales**.\n\n**Seguir:** {{publications-corpus}}, {{neawolf-media-group}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Capa",
+                    "v": "Comunicación y archivo mediático"
+                },
+                {
+                    "k": "Límite",
+                    "v": "{{publications-corpus}} = corpus de investigación"
+                },
+                {
+                    "k": "Operador",
+                    "v": "{{neawolf-media-group}}"
+                },
+                {
+                    "k": "Texto vinculante",
+                    "v": "Aviso legal y registro"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Dos vías",
+                    "body_md": "**Investigación** y **comunicación** cumplen tareas distintas bajo {{nationfiles}}."
+                },
+                {
+                    "title": "Vídeo",
+                    "body_md": "Solo lo que el sitio **muestra** al público."
+                },
+                {
+                    "title": "Archivo",
+                    "body_md": "Lo publicado **online** es lo **citable**."
+                }
+            ]
+        },
+        "pt": {
+            "title": "Hub de media",
+            "teaser": "O **hub de media** é a camada de **comunicação** da NationFiles: **imprensa**, **vídeos** no site, **declarações** oficiais e a **lógica de arquivo** da **presença mediática** publicada — **distinta** do {{publications-corpus}} focado em investigação.",
+            "summary_bullets": [
+                "**Papel:** interface de **comunicação**, não só DOI.",
+                "**Imprensa:** rotas via {{neawolf-media-group}} e **company** quando activas.",
+                "**Vídeo:** o que o site **serve** — não arquivo de televisão completo.",
+                "**Declarações:** texto **vinculativo** permanece em aviso legal e registos.",
+                "**Corpus:** texto longo e **DOI** em {{publications-corpus}}."
+            ],
+            "body_md": "Quem procura **citações**, **clips** ou **frases** curtas precisa de um enquadramento junto do **corpus**. Esta entidade é esse enquadramento.\n\n{{publications-corpus}} mantém **metodologia** numerada, **validação** e disciplina **DOI**. O **hub** exige que imprensa, **vídeos** explicativos e notas curtas respeitem os **mesmos** limites: um número num clip deve **alinhar** com **superfícies país** e **exportações** públicas.\n\n**Declarações** sobre licenças podem estar em **company** ou **publications**; a redacção **vinculativa** fica no **aviso legal** e **registo**. Texto curto não **substitui** parágrafos de validação **oficiais**.\n\n**Continuar:** {{publications-corpus}}, {{neawolf-media-group}}, {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "Camada",
+                    "v": "Comunicação e arquivo mediático"
+                },
+                {
+                    "k": "Limite",
+                    "v": "{{publications-corpus}} = corpus de investigação"
+                },
+                {
+                    "k": "Operador",
+                    "v": "{{neawolf-media-group}}"
+                },
+                {
+                    "k": "Texto vinculativo",
+                    "v": "Aviso legal e registo"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "Duas linhas",
+                    "body_md": "**Investigação** e **comunicação** têm deveres diferentes sob {{nationfiles}}."
+                },
+                {
+                    "title": "Vídeo",
+                    "body_md": "Conta apenas o que o site **mostra** ao público."
+                },
+                {
+                    "title": "Arquivo",
+                    "body_md": "O que permanece online é **citável**."
+                }
+            ]
+        },
+        "ar": {
+            "title": "المركز الإعلامي",
+            "teaser": "**المركز الإعلامي** هو طبقة **الاتصال** في NationFiles: **صحافة**، **فيديوهات** على الموقع، **تصريحات** رسمية و**منطق أرشفة** لل**حضور الإعلامي** المنشور — **منفصل** عن {{publications-corpus}} البحثي.",
+            "summary_bullets": [
+                "**الدور:** واجهة **تواصل** لا منهجية **DOI** فقط.",
+                "**صحافة:** مسارات عبر {{neawolf-media-group}} و**company** إن وُجدت.",
+                "**فيديو:** ما يعرضه الموقع فعليًا — **ليس** أرشيف بث كامل.",
+                "**التصريحات:** النص **الملزم** يبقى مع الإشعار القانوني والسجلات.",
+                "**المجموعة:** نص طويل و**DOI** في {{publications-corpus}}."
+            ],
+            "body_md": "من يبحث عن **اقتباسات** أو **مقاطع** أو **جمل** قصيرة يحتاج إطارًا بجانب **المجموعة**. هذا الكيان هو الإطار.\n\n{{publications-corpus}} يحتفظ بال**منهجية** المرقمة وال**تحقق** وانضباط **DOI**. **المركز** يفرض أن الصفحات الصحفية و**الفيديوهات** التوضيحية والملاحظات القصيرة تحترم **نفس** حدود الحقائق: رقم في مقطع يجب أن **يتوافق** مع **أسطح الدول** وال**تصدير** العلني.\n\n**التصريحات** عن الترخيص قد تظهر في **company** أو **publications**؛ النص **الملزم** يظل في **الإشعار القانوني** و**السجل**. النص القصير **لا يحل** محل فقرات التحقق **الرسمية**.\n\n**متابعة:** {{publications-corpus}}، {{neawolf-media-group}}، {{knowledge-hub-nfkg}}.",
+            "facts": [
+                {
+                    "k": "الطبقة",
+                    "v": "اتصال وأرشفة إعلامية"
+                },
+                {
+                    "k": "الفصل",
+                    "v": "{{publications-corpus}} = مجموعة بحث"
+                },
+                {
+                    "k": "المشغّل",
+                    "v": "{{neawolf-media-group}}"
+                },
+                {
+                    "k": "النص الملزم",
+                    "v": "إشعار قانوني وسجل"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "مساران",
+                    "body_md": "**البحث** و**التواصل** مهام مختلفة تحت {{nationfiles}}."
+                },
+                {
+                    "title": "فيديو",
+                    "body_md": "يُقصد ما يعرضه الموقع **علنًا**."
+                },
+                {
+                    "title": "أرشفة",
+                    "body_md": "ما يبقى على الشبكة **قابل للاقتباس**."
+                }
+            ]
+        },
+        "ja": {
+            "title": "メディア・ハブ",
+            "teaser": "**メディア・ハブ**は NationFiles の**対外コミュニケーション**層：プレス、**サイト上の動画**、公式ステートメント、Operator が**メディア上の露出**について公開する物の**保存方針**——研究寄りの {{publications-corpus}} とは**別枠**。",
+            "summary_bullets": [
+                "**役割:** **広報**インターフェースであり、DOI 方法論だけではない。",
+                "**プレス:** {{neawolf-media-group}} と **company** 系ルート（公開されている範囲）。",
+                "**動画:** サイトが**実際に**出す説明映像——**全**放送アーカイブの代替ではない。",
+                "**表明:** **拘束力**ある文言はリーガルノーティスとレジストリ。",
+                "**コーパス:** 長文と **DOI** は {{publications-corpus}}。"
+            ],
+            "body_md": "**引用**や**短い公式文**を探す利用者には、**コーパス**の横に**別の**説明が要る。本エンティティがそれだ。\n\n{{publications-corpus}} は**番号付き**方法論・**検証**・**DOI** 運用の居場所。**ハブ**は、プレス面・**動画による説明**・短文が**同じ**事実境界を守ることを示す——動画の数値は、 NationFiles が公開する**国面**と**エクスポート**と**整合**しなければならない。\n\nライセンスやデータについての**表明**は **company** ／ **publications** に載りうるが、**法的に効く**表現は**リーガルノーティス**と**ソース登録**に**留まる**。短文は**正式**な検証報告の段落を**置き換え**ない。\n\n**関連:** {{publications-corpus}}、{{neawolf-media-group}}、{{knowledge-hub-nfkg}}。",
+            "facts": [
+                {
+                    "k": "層",
+                    "v": "広報・メディア露出のアーカイブ方針"
+                },
+                {
+                    "k": "境界",
+                    "v": "{{publications-corpus}} = 研究コーパス"
+                },
+                {
+                    "k": "運用主体",
+                    "v": "{{neawolf-media-group}}"
+                },
+                {
+                    "k": "拘束テキスト",
+                    "v": "リーガルノーティス／レジストリ"
+                }
+            ],
+            "sections": [
+                {
+                    "title": "二つの系列",
+                    "body_md": "**研究**と**対外発信**は役割が違う。どちらも {{nationfiles}} 配下で**事実**を争わない。"
+                },
+                {
+                    "title": "動画",
+                    "body_md": "**サイトが公開表示する**範囲が、ここでいうビデオ・インテリジェンス寄りの位置づけに含まれる。"
+                },
+                {
+                    "title": "アーカイブ",
+                    "body_md": "オンラインに残るものが**引用対象**になる。"
+                }
+            ]
+        }
+    },
+    "_distribution": {
+        "schema_version": "nf-distribution-1.0",
+        "updated_utc": "2026-04-28T00:00:00Z",
+        "dataset": {
+            "id": "nationfiles-knowledge-data",
+            "name": "NationFiles Knowledge Data (NFKG)",
+            "description": "Structured knowledge graph records (entities, FAQs, glossary) and optional markdown companions published by NationFiles for machine-readable grounding. Mirror targets include GitHub and Hugging Face under Neawolf Media Group.",
+            "homepage": "https://nationfiles.com/en/knowledge/",
+            "same_as": [
+                "https://github.com/Neawolf-Media-Group/",
+                "https://huggingface.co/Neawolf-Media-Group",
+                "https://www.linkedin.com/company/nationfiles"
+            ]
+        },
+        "copyright": {
+            "holder": "Neawolf Media Group",
+            "holder_url": "https://nationfiles.com/en/company/",
+            "years": "2025–2026",
+            "notice_en": "© 2025–2026 Neawolf Media Group. NationFiles and related marks and datasets are proprietary unless a separate written license applies. Unauthorized commercial redistribution of derived database extracts may infringe database rights and copyright.",
+            "notice_de": "© 2025–2026 Neawolf Media Group. NationFiles und zugehörige Marken sowie Datensätze sind urheberrechtlich geschützt; kommerzielle Weitergabe oder Aufbereitung ohne gesonderte Lizenz ist unzulässig, soweit nicht ausdrücklich erlaubt.",
+            "jurisdiction_note": "Operator/imprint: Germany — see nationfiles.com legal pages for registered details."
+        },
+        "license": {
+            "name": "NationFiles data & AI usage policy (canonical)",
+            "url": "https://nationfiles.com/en/ai-guidelines/",
+            "spdx_expression": "LicenseRef-NationFiles-AI-Guidelines",
+            "summary_en": "Automated access follows robots.txt; prefer citation of canonical HTTPS pages; machine-readable exports may be used for grounding under the conditions described at the license URL and llms.txt.",
+            "summary_de": "Automatisierter Zugriff richtet sich nach robots.txt; bitte kanonische HTTPS-Seiten zitieren; maschinenlesbare Exporte dürfen für Grounding genutzt werden, sofern die Bedingungen unter der Lizenz-URL und llms.txt eingehalten werden."
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Neawolf Media Group",
+            "legal_name": "Neawolf Media Group",
+            "url": "https://nationfiles.com/en/company/",
+            "email_general": "info@nationfiles.com",
+            "email_ai_licensing": "ai-questions@nationfiles.com",
+            "email_privacy": "privacy@nationfiles.com",
+            "vat_id": "DE323880906",
+            "project_brand": "NationFiles",
+            "project_url": "https://nationfiles.com"
+        },
+        "references": {
+            "llms_txt": "https://nationfiles.com/llms.txt",
+            "llms_full_txt": "https://nationfiles.com/llms-full.txt",
+            "legal_sources": "https://nationfiles.com/en/legal/sources/",
+            "privacy_en": "https://nationfiles.com/en/legal/privacy/",
+            "imprint_en": "https://nationfiles.com/en/legal/imprint/"
+        },
+        "attribution": {
+            "required": true,
+            "cite_as_en": "NationFiles Knowledge (Neawolf Media Group), <canonical URL of the NationFiles HTML page or this file’s export URL>, retrieved <date>.",
+            "cite_as_de": "NationFiles Knowledge (Neawolf Media Group), <kanonische URL der HTML-Seite bzw. Export-URL dieser Datei>, abgerufen am <Datum>."
+        },
+        "huggingface_github": {
+            "github_org": "https://github.com/Neawolf-Media-Group/",
+            "public_docs": "https://github.com/Neawolf-Media-Group/nationfiles-public-docs",
+            "huggingface_org": "https://huggingface.co/Neawolf-Media-Group"
+        },
+        "artifact": {
+            "kind": "entity",
+            "id": "publications-hub"
+        },
+        "repository_relative_path": "knowledge-data/entities/publications-hub.json"
+    }
+}

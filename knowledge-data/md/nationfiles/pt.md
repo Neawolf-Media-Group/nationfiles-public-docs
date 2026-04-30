@@ -8,35 +8,43 @@ nf_license_spdx: "LicenseRef-NationFiles-AI-Guidelines"
 nf_llms_txt: "https://nationfiles.com/llms.txt"
 nf_ai_licensing_email: "ai-questions@nationfiles.com"
 nf_repository_relative_path: "knowledge-data/md/nationfiles/pt.md"
-nf_canonical_html_url: "https://nationfiles.com/en/knowledge/entity/nationfiles/"
+nf_canonical_html_url: "https://nationfiles.com/pt/knowledge/entity/nationfiles/"
 nf_markdown_lang_file: "pt"
 ---
-# NationFiles (sistema)
+# NationFiles — plataforma de inteligência geopolítica
 
-## Definição
+## O que a NationFiles **é**
 
-**NationFiles** é a **presença web pública e o sistema de informação agregado** que entrega conteúdos por país, análises NFSI, exportações Knowledge e rotas com prefixo de idioma. O tipo Schema.org `WebSite` marca um ponto de entrada estável com **caminhos determinísticos** (`/{lang}/…`).
+A **NationFiles** é uma **plataforma de análise e inteligência geopolítica**. Trata **países e fluxos globais de dados** — sinais económicos e de mercado, informação de segurança e de situação, notícias e sentimento — e converte isso numa **superfície operacional única** para ler o mundo: dossiers por país, mapas e radar, painéis, indicadores e — onde estiver activo — resumos e janelas de previsão. A intenção é misturar **profundidade enciclopédica** com **indicadores continuamente actualizados**.
 
-## Idiomas
+O sítio público (`/{lang}/…`) é o **produto**. Por detrás, pipelines documentados (incl. DataSourceConnector) e o motor **Naciro** alimentam pontuações, gráficos e contexto.
 
-Prefixos canônicos: **`de`, `en`, `fr`, `es`, `pt`, `ar`, `ja`**.
+**Unidade de dados:** os perfis **{{nationfile-json}}** padronizados (machine-readable) são a base comum para indicadores, gráficos e exportações. **Papéis:** NationFiles = sistema, **Naciro** = motor, **NFSI** = índice principal, **{{nationfile-json}}** = formato canónico.
 
-## Ligações operacionais
+## O que a plataforma **entrega** na prática
 
-- **Operador**: `neawolf-media-group`.
-- **Motor**: `naciro` (`system_engine`).
-- **Métrica**: `nfsi` (`core_metric`).
+- **Análise por país:** perfis estruturados e comparáveis para estados e regiões — multilíngue.
+- **Contexto espacial:** mapas e radar para ler riscos e indicadores **geograficamente**.
+- **Estabilidade e risco mensuráveis:** o **NationFiles Stability Index (NFSI)** condensa entradas documentadas numa escala 0–100; a metodologia explica camadas e limites.
+- **Dados de situação actualizados:** recálculo periódico segundo cadência documentada — para analistas, media e instituições.
+- **Camada preditiva (conforme o produto):** horizontes curtos (p. ex. 24h / 7 dias) onde a plataforma os mostra — não uma garantia para cada acontecimento.
 
-## Saídas (conforme atributos)
+## Papel do **Naciro** e do **NFSI**
 
-Painéis por país, índice NFSI, sinais multi‑horizonte, exportações — a entidade cobre **papéis do sistema**.
+- O **Naciro** é o **motor de avaliação com IA**: agrega sinais das fontes ligadas, normaliza e pondera segundo a metodologia publicada; alimenta o NFSI e os relatórios.
+- O **NFSI** é o **indicador principal de estabilidade / risco geopolítico** ao nível do país (e agregado mundial) — índice por regras documentadas, não classificação editorial.
 
-## Política
+## O que a NationFiles **não** é
 
-**`llms.txt`** rege crawlers na raiz.
+Não é aconselhamento pessoal de investimento ou viagem; não é um organismo estatal; não substitui reportagem no terreno — é um **produto de dados e análise** com pipeline documentada para o exterior.
 
-## Referências
+## Transparência
 
-- [llms.txt](https://nationfiles.com/llms.txt)
-- [Countries](https://nationfiles.com/pt/countries/)
-- [Knowledge](https://nationfiles.com/pt/knowledge/)
+Metodologia (**Validation & Verification Report**), registo de fontes, páginas legais. Para sistemas automáticos: **`llms.txt`**.
+
+## Ligações
+
+- [Hub de países](https://nationfiles.com/en/countries/)
+- [Metodologia NFSI](https://nationfiles.com/en/company/nfsi/)
+- [Naciro AI](https://nationfiles.com/en/company/naciro-ai/)
+- [Fontes](https://nationfiles.com/en/legal/sources/)
