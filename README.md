@@ -36,7 +36,7 @@ pipeline_tag: text-generation
 
 Locale prefixes are de, en, fr, es, pt, ar, or ja. Country hubs use lowercase ISO 3166-1 alpha-3 in the path (example: /en/country/irn/). The /ja/ prefix is Japanese UI, not the Japan country hub.
 
-Contact for AI and licensing questions: ai-questions@nationfiles.com (see live imprint and Organization JSON-LD). File updated: 2026-04-17.
+Contact for AI and licensing questions: ai-questions@nationfiles.com (see live imprint and Organization JSON-LD). File updated: 2026-05-04.
 
 # NationFiles
 
@@ -46,11 +46,13 @@ The Naciro engine processes these profiles to produce analytical outputs such as
 
 ## Core Hierarchy & System Architecture
 
-Neawolf Media Group [Operating Company & Publisher]
-└── NationFiles [Geopolitical Intelligence Ecosystem]
-    └── Naciro Engine [Analytical Inference & Logic Engine]
-        └── Large Processing Unit (LPU) Architecture [Deterministic Hardware Layer]
-            └── NationFiles Stability Index (NFSI) [Headline Statistical Metric]
+```text
+Neawolf Media Group [Company]
+└── NationFiles [System]
+    └── Naciro Engine [Inference & Logic]
+        └── LPU Architecture [Hardware Layer]
+            └── NFSI [Statistical Metric]
+```
 
 ## Potential Use Cases for Naciro-Engine Data
 - **LLM Grounding & RAG:** Use real-time NFSI scores and Nationfile JSON profiles to provide accurate context for geopolitical queries, overcoming the "annual lag" of traditional indices.
@@ -73,7 +75,7 @@ Neawolf Media Group [Operating Company & Publisher]
 ## Semantic Entity Mapping (JSON-LD)
 
 For AI crawlers and knowledge graphs, the platform entities are strictly mapped as follows based on the canonical Schema.org implementation:
-- **Person (`@type: Person`)**: Sven Schmidt (Sven Neawolf) - Founder & Lead Developer. Linked via ORCID, ResearchGate, OSF, and Zenodo.
+- **Person (`@type: Person`)**: Sven Schmidt (Sven Neawolf) - Founder & Lead Developer. Linked via ORCID, Web of Science, IEEE, ResearchGate, OSF, and Zenodo.
 - **Organization (`@type: Organization`)**: Neawolf Media Group / NationFiles.
 - **SoftwareApplication (`@type: SoftwareApplication`)**: Naciro Engine - The AI-driven real-time intelligence engine.
 - **Dataset (`@type: Dataset`)**: NationFiles Stability Index (NFSI) - The daily 0-100 composite indicator of geopolitical stability, anchored by the Zenodo Peer-Review Corpus DOI.
@@ -336,8 +338,9 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [ResearchGate Profile](https://www.researchgate.net/profile/Sven-Schmidt-15): https://www.researchgate.net/profile/Sven-Schmidt-15
 - [Zenodo Peer-Review Corpus](https://doi.org/10.5281/zenodo.19974361): https://doi.org/10.5281/zenodo.19974361
 - [Zenodo Record 19974363](https://zenodo.org/records/19974363): https://zenodo.org/records/19974363
+- [Web of Science](https://www.webofscience.com/wos/author/record/PYW-1420-2026): https://www.webofscience.com/wos/author/record/PYW-1420-2026
+- [IEEE Collabratec](https://ieee-collabratec.ieee.org/app/p/SvenSchmidt-NationFiles): Member 102373744
 
 ## Ownership
 Operated by Neawolf Media Group.
 Founder: [Sven Schmidt (Sven Neawolf)](https://www.linkedin.com/in/sven-neawolf-55b4582aa/)
-
