@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 260" role="img">
+  <title>Benchmark freshness: schematic headline-refresh axis</title>
+  <rect width="760" height="260" fill="#f8fafc"/>
+  <text x="380" y="28" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="14" font-weight="700" fill="#1a365d">Headline refresh (schematic axis)</text>
+  <text x="380" y="46" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="9.5" fill="#6b7280">Functional contrast — not a quality ranking</text>
+
+  <!-- Axis -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1a365d"/>
+    </marker>
+  </defs>
+  <line x1="72" y1="128" x2="688" y2="128" stroke="#1a365d" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="380" y="118" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="9" fill="#374151">increasing headline refresh</text>
+
+  <!-- Left: slow cycle -->
+  <rect x="40" y="145" width="300" height="68" rx="6" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="190" y="170" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="10.5" font-weight="600" fill="#374151">Typical annual / edition-style indices</text>
+  <text x="190" y="188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="9" fill="#475569">Comparable public releases often yearly or slower</text>
+  <text x="190" y="204" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8.5" fill="#64748b">long horizon; not NFSI latency</text>
+
+  <!-- Right: NFSI cadence -->
+  <rect x="420" y="145" width="300" height="68" rx="6" fill="#1a365d" stroke="#1a365d" stroke-width="1.5"/>
+  <text x="570" y="170" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="10.5" font-weight="600" fill="#ffffff">NFSI headline materialisation (product)</text>
+  <text x="570" y="188" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="9" fill="#e2e8f0">rule-led recompute; order-of-magnitude ~15 min cadence</text>
+  <text x="570" y="204" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8.5" fill="#cbd5e1">registry-visible inputs (contrast target in §9)</text>
+
+  <text x="380" y="242" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="8.5" fill="#6b7280">Order-of-magnitude only • No vendor ranking • Use each publisher’s methodology for exact timing</text>
+</svg>

@@ -1,0 +1,7 @@
+connector_id,data_version,license_excerpt,derivative_reuse,contact
+datasource_countriesgdeltglobradar,live,"GDELT terms apply; see provider license/ToS","Derived stability scores; verify redistribution with provider",data@nationfiles.com
+datasource_acledmonthall,live,"ACLED license/ToS apply (registration required)","Derived aggregates; redistribution depends on ACLED terms",data@nationfiles.com
+datasource_worldearthquakeusgs,live,"USGS data policy applies (public domain for many products; verify)","Derived indicators typically reusable; verify attribution requirements",data@nationfiles.com
+datasource_traveladvisoryunified,live,"Government advisories; terms vary by publisher","Derived scores may be publishable; verify each upstream terms",data@nationfiles.com
+datasource_newsmediastck,live,"MediaStack API ToS applies","Derived sentiment/risk indicators; redistribution depends on ToS",data@nationfiles.com
+

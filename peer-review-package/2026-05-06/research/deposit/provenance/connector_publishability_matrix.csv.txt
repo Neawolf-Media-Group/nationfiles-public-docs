@@ -1,0 +1,6 @@
+connector_id,raw_data_redistributable,aggregated_score_publishable,attribution_required,publishable,rationale_short,contact
+datasource_countriesgdeltglobradar,conditional,conditional,required,conditional,provider ToS governs redistribution,data@nationfiles.com
+datasource_acledmonthall,conditional,conditional,required,conditional,provider ToS governs redistribution,data@nationfiles.com
+datasource_worldearthquakeusgs,yes,yes,recommended,yes,"public-domain source, verify citation style",data@nationfiles.com
+datasource_traveladvisoryunified,conditional,conditional,required,conditional,provider ToS governs redistribution,data@nationfiles.com
+datasource_newsmediastck,conditional,conditional,required,conditional,provider ToS governs redistribution,data@nationfiles.com

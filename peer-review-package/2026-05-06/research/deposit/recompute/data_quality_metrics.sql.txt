@@ -1,0 +1,66 @@
+-- Data quality metrics queries (audit-oriented)
+-- Adapt table/column names to deployed schema if needed.
+
+-- 1) Coverage per country/day: fraction of connectors with at least one raw row
+WITH expected AS (
+  SELECT DISTINCT c.iso2, d.date_ymd, m.connector_id
+  FROM (SELECT DISTINCT iso2 FROM connectors_raw) c
+  CROSS JOIN (SELECT DISTINCT date_ymd FROM connectors_raw) d
+  CROSS JOIN connector_meta m
+),
+observed AS (
+  SELECT DISTINCT iso2, date_ymd, connector_id
+  FROM connectors_raw
+)
+SELECT
+  e.iso2,
+  e.date_ymd,
+  COUNT(o.connector_id) * 1.0 / NULLIF(COUNT(e.connector_id), 0) AS coverage_ratio
+FROM expected e
+LEFT JOIN observed o
+  ON o.iso2 = e.iso2 AND o.date_ymd = e.date_ymd AND o.connector_id = e.connector_id
+GROUP BY e.iso2, e.date_ymd
+ORDER BY e.iso2, e.date_ymd;
+
+-- 2) Missingness by connector/day
+SELECT
+  m.connector_id,
+  r.date_ymd,
+  COUNT(DISTINCT r.iso2) AS countries_with_data
+FROM connector_meta m
+LEFT JOIN connectors_raw r ON r.connector_id = m.connector_id
+GROUP BY m.connector_id, r.date_ymd
+ORDER BY m.connector_id, r.date_ymd;
+
+-- 3) Connector uptime over period
+WITH days AS (
+  SELECT COUNT(DISTINCT date_ymd) AS total_days
+  FROM connectors_raw
+),
+active_days AS (
+  SELECT connector_id, COUNT(DISTINCT date_ymd) AS active_days
+  FROM connectors_raw
+  GROUP BY connector_id
+)
+SELECT
+  a.connector_id,
+  a.active_days,
+  d.total_days,
+  a.active_days * 1.0 / NULLIF(d.total_days, 0) AS uptime_ratio
+FROM active_days a
+CROSS JOIN days d
+ORDER BY uptime_ratio ASC;
+
+-- 4) Ingestion latency distribution
+-- Requires columns source_event_ts_utc and fetch_ts_utc in connectors_raw
+SELECT
+  connector_id,
+  percentile_cont(0.50) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM (fetch_ts_utc - source_event_ts_utc))/60.0) AS p50_latency_min,
+  percentile_cont(0.90) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM (fetch_ts_utc - source_event_ts_utc))/60.0) AS p90_latency_min,
+  percentile_cont(0.99) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM (fetch_ts_utc - source_event_ts_utc))/60.0) AS p99_latency_min
+FROM connectors_raw
+WHERE source_event_ts_utc IS NOT NULL
+  AND fetch_ts_utc IS NOT NULL
+GROUP BY connector_id
+ORDER BY connector_id;
+

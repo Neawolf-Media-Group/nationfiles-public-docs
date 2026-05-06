@@ -1,0 +1,29 @@
+{
+  "generated_at_utc": "2026-05-05 08:05:32 UTC",
+  "git": {
+    "commit": "398bf305b802091d3bab7a47e103c470d287ab1d",
+    "branch": "main",
+    "dirty_files_count": 140
+  },
+  "files": [
+    {"path": "research/algorithmic-geopolitics-nfsi-comprehensive-peer-review.md", "sha256": "ff1c6d4c45e56c1e85402ac8d40f0d3e737a99c7bc5d666a46888b7b44e1d859"}    ,
+    {"path": "research/peer_review_main.md", "sha256": "4e8426932b072b40aaf5258b56f43eb0d1273696451fe77576867b470d74c341"}    ,
+    {"path": "research/ResearchPdfBuilder.php", "sha256": "1d11cf5bcba01e01da59cd9a3c48e5c4d1681f895985bfa3974a2787d95802f0"}    ,
+    {"path": "classes/helpers/LegalPdfBuilder.php", "sha256": "e49c180284cd12da68848c011212d0dc42e7e8424a04053e652820d7eae6db6a"}    ,
+    {"path": "research/nationFiles-Stability-Index--NFSI--Validation-and-Verification-Report.md", "sha256": "4d2e188963e62ad2505a25e4c901a83d191d004e9df5035c268a2ae06528b33e"}    ,
+    {"path": "download/research/nationFiles-Stability-Index--NFSI--Validation-and-Verification-Report.md", "sha256": "86a9850f292492066a7790028c3e84bedb34ff63b93594d91596787678734582"}    ,
+    {"path": "bin/DataSourceConnector/StabilityIndex.php", "sha256": "85c8f391730ff6901c14f9767d92b9f8323b0b9d59f8b325b0ce295aeaf5ab09"}    ,
+    {"path": "research/peer-review/figures/fig01-paradigm-shift.svg", "sha256": "d01f27419d02d269072273fe88205fe98e69db51ce655561804f66cfd7d6d50f"}    ,
+    {"path": "research/peer-review/figures/fig02-system-architecture.svg", "sha256": "ed14f81940d18c87fe97b9be7ee42271691f182634025c0a33d5d2b6c9a35205"}    ,
+    {"path": "research/peer-review/figures/fig03-nfsi-layers.svg", "sha256": "af7d01ad35f34fec4395db84609c8dbe31986bc53b39f356500aef7ca6cb79ea"}    ,
+    {"path": "research/peer-review/figures/fig04-lpu-sram.svg", "sha256": "3084c19f384fab23482c5c73894383291dd9ee744ab3168b18155ce0ef736d9f"}    ,
+    {"path": "research/peer-review/figures/fig05-stress-fault-tree.svg", "sha256": "2d53225867331c0b527699900ce33596884d5ab8d85ad824cb108b394b26e597"}    ,
+    {"path": "research/peer-review/figures/fig06-benchmark-freshness.svg", "sha256": "920c51e75a81321028d3082887cb4681d71d7622073c03dfd07e17277f8e018e"}    ,
+    {"path": "research/peer-review/figures-png/fig01-paradigm-shift.png", "sha256": "73c9f9013de794ba4f9943b9a654de2daa8841348fedc169f386aaad53efb4dc"}    ,
+    {"path": "research/peer-review/figures-png/fig02-system-architecture.png", "sha256": "fd22b3fbc8439aa0a17e89c290c38f85bee57f69fbedba21f55950dd6cf36188"}    ,
+    {"path": "research/peer-review/figures-png/fig03-nfsi-layers.png", "sha256": "4a463dc3228b6905887a61a8afe64de00bb2e52e973fe16e88d4b269f263b0bc"}    ,
+    {"path": "research/peer-review/figures-png/fig04-lpu-sram.png", "sha256": "50fb1edced359f925c66cb7f3f28af2b36622651cd5d4867a3423e5ee3bbe69a"}    ,
+    {"path": "research/peer-review/figures-png/fig05-stress-fault-tree.png", "sha256": "b03c0a5de0acc8e162bff6961edf9ec24b2dcde121d9e1c2ab7311fdbe877e4e"}    ,
+    {"path": "research/peer-review/figures-png/fig06-benchmark-freshness.png", "sha256": "e8fe60d71c902e03d7426cfce6e46d3d79329b50411833163fc5fc31cf9f4a46"}
+  ]
+}

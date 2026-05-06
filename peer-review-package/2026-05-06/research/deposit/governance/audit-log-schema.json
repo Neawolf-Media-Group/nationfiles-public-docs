@@ -1,0 +1,32 @@
+{
+  "version": "1.0",
+  "purpose": "Audit log for deterministic NFSI recompute (Layers 1-4).",
+  "fields": [
+    {"name": "timestamp_utc", "type": "string", "example": "2026-05-05 09:42:00Z"},
+    {"name": "iso2", "type": "string", "example": "DE"},
+    {"name": "date_ymd", "type": "string", "example": "2026-01-03"},
+    {"name": "connector_id", "type": "string", "example": "SEC_CONFLICT"},
+    {"name": "fetch_ts_utc", "type": "string", "example": "2026-01-03 00:05:00Z"},
+    {"name": "row_hash_sha256", "type": "string", "example": "sha256(<canonical_row_bytes>)"},
+    {"name": "delta", "type": "integer", "example": 1},
+    {"name": "raw_value", "type": "number"},
+    {"name": "l1_score_row", "type": "number"},
+    {"name": "l2_day_score", "type": "number"},
+    {"name": "l2_score_final", "type": "number"},
+    {"name": "l3_eff_weight", "type": "number"},
+    {"name": "l3_base_score", "type": "number"},
+    {"name": "l3_conflict_malus", "type": "number"},
+    {"name": "l3_fragility_malus", "type": "number"},
+    {"name": "l3_small_pop_malus", "type": "number"},
+    {"name": "l3_pop_bonus", "type": "number"},
+    {"name": "l3_wgi_pull_applied", "type": "number"},
+    {"name": "l3_nfsi_raw", "type": "number"},
+    {"name": "l4_prev_score", "type": "number"},
+    {"name": "l4_crash_mode", "type": "boolean"},
+    {"name": "l4_inertia_weight", "type": "number"},
+    {"name": "l4_nfsi_today", "type": "number"},
+    {"name": "git_commit", "type": "string", "example": "<40-hex>"},
+    {"name": "code_version_tag", "type": "string", "example": "StabilityIndex v2.5"}
+  ]
+}
+

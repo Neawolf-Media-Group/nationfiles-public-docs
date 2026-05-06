@@ -1,0 +1,25 @@
+{
+  "generated_utc": "2026-05-05T12:44:31Z",
+  "git_commit": "6fb80b681ed00597255a342adf6200f6b138e3d8",
+  "inputs": [
+    {
+      "path": "research/deposit/backtest/backtest_events.csv.txt",
+      "sha256": "e562c5829af4c6c285305afbc043397037138fe8c58086abcf60dac3bc2e565c"
+    },
+    {
+      "path": "research/deposit/backtest-named/named_events_backtest.csv.txt",
+      "sha256": "36e24691ca80a83f7b201bf79c8648a1247445db63609f169592c7335a277683"
+    }
+  ],
+  "rng": {
+    "seed": 1337,
+    "permutations": 10000,
+    "test": "sign_flip_paired_summary"
+  },
+  "outputs": [
+    {
+      "path": "research/deposit/backtest/sensitivity_fixture_delta_matrix.csv.txt",
+      "sha256": "MISSING"
+    }
+  ]
+}

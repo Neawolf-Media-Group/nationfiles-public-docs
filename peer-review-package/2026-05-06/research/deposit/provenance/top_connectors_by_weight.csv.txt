@@ -1,0 +1,11 @@
+rank,connector_id,group,connector_weight,update_mult,influence_score,license_text_snippet,derivative_reuse,deposit_provenance_row_sha256,live_vs_archived
+1,DisasterGdacsHumNat,100,100,7.3,73000,GDACS Terms of Use,Derived indicators; verify attribution/terms,7179cff4deacd027db8bf76a0f3736b22fc1552408595e74329f5c1b1b29573d,live_feed
+2,NfMilitaryMassViolence,100,100,7.3,73000,Internal processing for NationFiles Intelligence,Not for public redistribution unless explicitly licensed,f0cdc213db075a1bd831054ba9d8710f676a7b93542f808a3a0f927121b49e36,live_feed
+3,WorldEarthQuakeUsgs,100,100,7.3,73000,USGS Public Domain,Derived indicators typically reusable with attribution,508ae3a48ad3ba31425d5ea20cfce344c60862d6ff04dbf8342d761bffad91be,live_feed
+4,CountriesGdeltGlobRadar,100,85,7.3,62050,GDELT Terms of Use (see provider),Derived indicators; verify redistribution with provider,10581898059e974ac42d89982906e668138ea2d6060541fc0f2d7841b9d6ac36,live_feed
+5,CountryNewsRiskLevel,100,100,3.65,36500,CC BY-ND 4.0,Derived indicators; no-derivatives constraints may apply to redistribution,5619203c1f727edcae68100d512c742d06c2f871b40c786728b85089e5495ce4,live_feed
+6,NfRawNewsSignalsEventRisk,100,100,3.65,36500,CC BY-ND 4.0,Derived indicators; no-derivatives constraints may apply to redistribution,d0b903e4ccc1c24e2b9ceda03bf695deb3bb3ba126ad892cb5bd5876506cc789,live_feed
+7,CountriesConflictUcdpGed,100,85,3.65,31025,"Free for academic, commercial, governmental use (see UCDP)",Derived indicators; verify attribution/terms,2e0e7c5eaec15bb7e608764734e25ac05fb02c971bf7ff6101329f4c7cf8cb9c,live_feed
+8,TravelStateGov,100,80,3.65,29200,U.S. Government Work,Derived indicators typically reusable with attribution,26e099194287948b30ce1ed3d2c84629126c7fe68a6b9b75bc3c139f44da6c52,live_feed
+9,TravelAdvisoryUnified,100,75,3.65,27375,Refer to Source Link,Derived indicators; verify attribution/terms,e08f51c8ffa5d667afdb56ef8b7cb843224181d1d00de5e2d9ad15f977299aa1,live_feed
+10,TrvlWarnUk,100,75,3.65,27375,Open Government Licence v2.0,Derived indicators reusable with attribution,3cafe011d397c6ac2ea25a7d99295bf662ebe954169598d201c141959bd93ff4,live_feed

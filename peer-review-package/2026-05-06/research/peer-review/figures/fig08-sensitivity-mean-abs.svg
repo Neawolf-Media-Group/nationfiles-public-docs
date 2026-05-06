@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#ffffff"/>
+  <text x="320" y="28" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="14" fill="#1a365d">Mean absolute delta NFSI - sensitivity fixture (N=30 per perturbation)</text>
+  <line x1="72" y1="56" x2="72" y2="280" stroke="#333333" stroke-width="1"/>
+  <line x1="72" y1="280" x2="580" y2="280" stroke="#333333" stroke-width="1"/>
+  <rect x="88" y="176" width="72" height="104" fill="#1a365d"/>
+  <text x="124" y="300" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#333333">SEC+10</text>
+  <text x="124" y="168" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#1a365d">0.037</text>
+  <rect x="180" y="235" width="72" height="45" fill="#1a365d" opacity="0.85"/>
+  <text x="216" y="300" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#333333">NET+10</text>
+  <text x="216" y="228" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#1a365d">0.015</text>
+  <rect x="272" y="228" width="72" height="52" fill="#1a365d" opacity="0.85"/>
+  <text x="308" y="300" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#333333">SOC+10</text>
+  <text x="308" y="220" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#1a365d">0.019</text>
+  <rect x="364" y="265" width="72" height="15" fill="#1a365d" opacity="0.7"/>
+  <text x="400" y="300" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#333333">ECO+10</text>
+  <text x="400" y="258" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#1a365d">0.005</text>
+  <rect x="456" y="267" width="72" height="13" fill="#1a365d" opacity="0.7"/>
+  <text x="492" y="300" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#333333">GOV+10</text>
+  <text x="492" y="260" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="9" fill="#1a365d">0.005</text>
+  <text x="36" y="200" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="10" fill="#666666" transform="rotate(-90 36 200)">mean abs delta</text>
+  <text x="320" y="338" text-anchor="middle" font-family="DejaVu Sans, Helvetica, Arial, sans-serif" font-size="10" fill="#666666">Perturbation family (deposit)</text>
+</svg>

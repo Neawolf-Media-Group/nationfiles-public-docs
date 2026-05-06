@@ -1,0 +1,54 @@
+{
+    "generated_at_utc": "2026-05-05T10:28:22+00:00",
+    "source_domain": "nationfiles.com",
+    "items": [
+        {
+            "iso2": "usa",
+            "key": "country_nfsi_30d",
+            "url": "https://nationfiles.com/en/country/usa/nfsi/?export=json&chart=country_nfsi_30d",
+            "path": "research/deposit/public-exports/usa__country_nfsi_30d.json",
+            "sha256": "c5cb25233619cf43e5f2d8975eabe235795cc8def4a6f60f0ef8f36b5414f50e",
+            "bytes": 1316
+        },
+        {
+            "iso2": "usa",
+            "key": "country_snapshot",
+            "url": "https://nationfiles.com/en/country/usa/snapshot/?export=json&chart=country_nfsi_30d",
+            "path": "research/deposit/public-exports/usa__country_snapshot.json",
+            "sha256": "c5cb25233619cf43e5f2d8975eabe235795cc8def4a6f60f0ef8f36b5414f50e",
+            "bytes": 1316
+        },
+        {
+            "iso2": "deu",
+            "key": "country_nfsi_30d",
+            "url": "https://nationfiles.com/en/country/deu/nfsi/?export=json&chart=country_nfsi_30d",
+            "path": "research/deposit/public-exports/deu__country_nfsi_30d.json",
+            "sha256": "251fe307bc507ef448728417d118db80601d0c7252fc10fd4655fee00ee82e3d",
+            "bytes": 1318
+        },
+        {
+            "iso2": "deu",
+            "key": "country_snapshot",
+            "url": "https://nationfiles.com/en/country/deu/snapshot/?export=json&chart=country_nfsi_30d",
+            "path": "research/deposit/public-exports/deu__country_snapshot.json",
+            "sha256": "251fe307bc507ef448728417d118db80601d0c7252fc10fd4655fee00ee82e3d",
+            "bytes": 1318
+        },
+        {
+            "iso2": "ukr",
+            "key": "country_nfsi_30d",
+            "url": "https://nationfiles.com/en/country/ukr/nfsi/?export=json&chart=country_nfsi_30d",
+            "path": "research/deposit/public-exports/ukr__country_nfsi_30d.json",
+            "sha256": "98855895acefa7c7d41265bff4a90fa070106258a56ee436ef22aa7252b32f7a",
+            "bytes": 1318
+        },
+        {
+            "iso2": "ukr",
+            "key": "country_snapshot",
+            "url": "https://nationfiles.com/en/country/ukr/snapshot/?export=json&chart=country_nfsi_30d",
+            "path": "research/deposit/public-exports/ukr__country_snapshot.json",
+            "sha256": "98855895acefa7c7d41265bff4a90fa070106258a56ee436ef22aa7252b32f7a",
+            "bytes": 1318
+        }
+    ]
+}

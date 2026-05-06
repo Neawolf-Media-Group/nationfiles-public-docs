@@ -1,0 +1,33 @@
+-- Minimal fixture schema (portable subset)
+--
+-- Note: stored as .txt to avoid environments that restrict .sql files.
+
+CREATE TABLE IF NOT EXISTS connectors_raw (
+  iso2 TEXT NOT NULL,
+  date_ymd TEXT NOT NULL,          -- YYYY-MM-DD
+  connector_id TEXT NOT NULL,
+  raw_value REAL,
+  delta INTEGER NOT NULL DEFAULT 1
+);
+
+CREATE TABLE IF NOT EXISTS connector_meta (
+  connector_id TEXT PRIMARY KEY,
+  group_weight INTEGER NOT NULL,
+  connector_weight REAL NOT NULL,
+  update_multiplier REAL NOT NULL,
+  higher_raw_is_worse INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS country_meta (
+  iso2 TEXT PRIMARY KEY,
+  population REAL NOT NULL,
+  wgi_est_total REAL
+);
+
+CREATE TABLE IF NOT EXISTS nfsi_prev (
+  iso2 TEXT NOT NULL,
+  date_ymd TEXT NOT NULL,
+  nfsi_prev REAL NOT NULL,
+  PRIMARY KEY (iso2, date_ymd)
+);
+

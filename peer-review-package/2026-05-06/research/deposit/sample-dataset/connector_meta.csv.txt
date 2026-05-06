@@ -1,0 +1,7 @@
+connector_id,group_weight,connector_weight,update_multiplier,higher_raw_is_worse
+SEC_CONFLICT,100,100,2.0,1
+GOV_WGI,60,60,0.1,0
+ECO_INFL,50,50,1.0,1
+NET_OUTAGE,85,40,4.0,1
+SOC_SENT,40,40,3.0,0
+

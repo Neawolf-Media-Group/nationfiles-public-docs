@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" role="img">
+  <title>NFSI layers L1 through L4</title>
+  <rect width="700" height="280" fill="#f8fafc"/>
+  <text x="350" y="28" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="14" font-weight="700" fill="#1a365d">NFSI processing layers (implementation reference)</text>
+  <g font-family="DejaVu Sans,sans-serif" font-size="10">
+    <rect x="40" y="48" width="150" height="70" rx="6" fill="#fff" stroke="#1a365d" stroke-width="2"/>
+    <text x="115" y="72" text-anchor="middle" font-weight="700" fill="#1a365d">L1</text>
+    <text x="115" y="92" text-anchor="middle" fill="#374151">normalise rows</text>
+    <text x="115" y="108" text-anchor="middle" font-size="9" fill="#6b7280">min-max, direction</text>
+    <rect x="210" y="48" width="150" height="70" rx="6" fill="#fff" stroke="#1a365d" stroke-width="2"/>
+    <text x="285" y="72" text-anchor="middle" font-weight="700" fill="#1a365d">L2</text>
+    <text x="285" y="92" text-anchor="middle" fill="#374151">daily + 0.6/0.4 mix</text>
+    <text x="285" y="108" text-anchor="middle" font-size="9" fill="#6b7280">security: MIN</text>
+    <rect x="380" y="48" width="150" height="70" rx="6" fill="#fff" stroke="#1a365d" stroke-width="2"/>
+    <text x="455" y="72" text-anchor="middle" font-weight="700" fill="#1a365d">L3</text>
+    <text x="455" y="90" text-anchor="middle" fill="#374151">weighted mean + malus</text>
+    <text x="455" y="108" text-anchor="middle" font-size="9" fill="#6b7280">WGI pull, dummies 0/100</text>
+    <rect x="550" y="48" width="110" height="70" rx="6" fill="#1a365d" stroke="#1a365d" stroke-width="2"/>
+    <text x="605" y="78" text-anchor="middle" font-weight="700" fill="#fff">L4</text>
+    <text x="605" y="96" text-anchor="middle" fill="#e2e8f0" font-size="9">inertia +/-3</text>
+    <text x="605" y="112" text-anchor="middle" fill="#fecaca" font-size="9">crash if minSec &lt; 25</text>
+  </g>
+  <path d="M190 83 H210 M360 83 H380 M530 83 H550" stroke="#64748b" stroke-width="2"/>
+  <text x="350" y="200" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-size="10" fill="#374151">StabilityIndex v2.5: missing connector uses neutral 50 in L3 unless noted in annex.</text>
+</svg>
