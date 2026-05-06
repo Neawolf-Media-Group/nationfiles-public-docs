@@ -1,0 +1,66 @@
+% Peer-review PDF prelude (IEEEtran + Pandoc): figures, URL breaks, listings, wide tables.
+% Build: research/build-peer-review-pdf-ieee.sh (IEEEtran peerreview,journal,onecolumn).
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{textcomp}% tt-safe \textless/\textgreater for listings literate maps
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\usepackage{listingsutf8}
+\usepackage{xurl}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\/\do\_\do\-\do\.\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9}
+\makeatother
+\setlength{\emergencystretch}{3em}
+% Report serious overfull boxes (do not hide layout defects entirely)
+\setlength{\hfuzz}{2pt}
+\setlength{\vfuzz}{2pt}
+% Wide longtables (deposit constants, connector inventory)
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{seqsplit}
+% --- Figures: Pandoc emits \includegraphics{path}; scale to text width + label via {#fig:...} in Markdown
+\AtBeginDocument{%
+  \makeatletter
+  \let\NFSPandocIncludeGraphics\includegraphics
+  \renewcommand{\includegraphics}[2][]{%
+    \NFSPandocIncludeGraphics[width=0.9\linewidth,keepaspectratio,#1]{#2}%
+  }%
+  \makeatother
+}
+% --- Longtables: smaller body + tighter columns (reduces Overfull \hbox from wide CSV-style rows)
+\AtBeginEnvironment{longtable}{%
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}%
+  \renewcommand{\arraystretch}{1.05}%
+}
+% (Landscape blocks are used selectively in the manuscript for exceptionally wide tables.)
+% --- Listings (Pseudocode / SQL fences via pandoc --listings)
+\AtBeginDocument{%
+  \lstset{%
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    columns=fullflexible,
+    keepspaces=true,
+    mathescape=false,
+    texcl=false,
+    % Angle brackets and relational ops stay literal text (no accidental math mode)
+    literate={<=}{{\texttt{<=}}}2 {>=}{{\texttt{>=}}}2 {<}{{\textless}}1 {>}{{\textgreater}}1,
+    frame=single,
+    framerule=0.35pt,
+    xleftmargin=0.75em,
+    xrightmargin=0.75em,
+    aboveskip=0.75em,
+    belowskip=0.75em
+  }%
+}
+% --- Optional: shrink an exceptionally wide single table (enable around env if needed)
+\newenvironment{nfsiwide}{%
+  \begin{adjustbox}{max width=\linewidth,center}}{\end{adjustbox}}

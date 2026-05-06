@@ -1,0 +1,2799 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  11pt,
+  peerreview,journal,onecolumn]{IEEEtran}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{listings}
+\newcommand{\passthrough}[1]{#1}
+\lstset{defaultdialect=[5.3]Lua}
+\lstset{defaultdialect=[x86masm]Assembler}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Peer-review PDF prelude (IEEEtran + Pandoc): figures, URL breaks, listings, wide tables.
+% Build: research/build-peer-review-pdf-ieee.sh (IEEEtran peerreview,journal,onecolumn).
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{textcomp}% tt-safe \textless/\textgreater for listings literate maps
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\usepackage{listingsutf8}
+\usepackage{xurl}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\/\do\_\do\-\do\.\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9}
+\makeatother
+\setlength{\emergencystretch}{3em}
+% Report serious overfull boxes (do not hide layout defects entirely)
+\setlength{\hfuzz}{2pt}
+\setlength{\vfuzz}{2pt}
+% Wide longtables (deposit constants, connector inventory)
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\usepackage{pdflscape}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{seqsplit}
+% --- Figures: Pandoc emits \includegraphics{path}; scale to text width + label via {#fig:...} in Markdown
+\AtBeginDocument{%
+  \makeatletter
+  \let\NFSPandocIncludeGraphics\includegraphics
+  \renewcommand{\includegraphics}[2][]{%
+    \NFSPandocIncludeGraphics[width=0.9\linewidth,keepaspectratio,#1]{#2}%
+  }%
+  \makeatother
+}
+% --- Longtables: smaller body + tighter columns (reduces Overfull \hbox from wide CSV-style rows)
+\AtBeginEnvironment{longtable}{%
+  \footnotesize
+  \setlength{\tabcolsep}{3pt}%
+  \renewcommand{\arraystretch}{1.05}%
+}
+% (Landscape blocks are used selectively in the manuscript for exceptionally wide tables.)
+% --- Listings (Pseudocode / SQL fences via pandoc --listings)
+\AtBeginDocument{%
+  \lstset{%
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    columns=fullflexible,
+    keepspaces=true,
+    mathescape=false,
+    texcl=false,
+    % Angle brackets and relational ops stay literal text (no accidental math mode)
+    literate={<=}{{\texttt{<=}}}2 {>=}{{\texttt{>=}}}2 {<}{{\textless}}1 {>}{{\textgreater}}1,
+    frame=single,
+    framerule=0.35pt,
+    xleftmargin=0.75em,
+    xrightmargin=0.75em,
+    aboveskip=0.75em,
+    belowskip=0.75em
+  }%
+}
+% --- Optional: shrink an exceptionally wide single table (enable around env if needed)
+\newenvironment{nfsiwide}{%
+  \begin{adjustbox}{max width=\linewidth,center}}{\end{adjustbox}}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Algorithmic Geopolitics: Comprehensive Methodology, Architecture, and Validation of the NationFiles Stability Index (NFSI)},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Algorithmic Geopolitics: Comprehensive Methodology, Architecture,
+and Validation of the NationFiles Stability Index (NFSI)}
+\author{}
+\date{2026-05-05}
+
+\begin{document}
+\maketitle
+
+\hypertarget{algorithmic-geopolitics-comprehensive-methodology-architecture-and-validation-of-the-nationfiles-stability-index-nfsi}{%
+\section{Algorithmic Geopolitics: Comprehensive Methodology,
+Architecture, and Validation of the NationFiles Stability Index
+(NFSI)}\label{algorithmic-geopolitics-comprehensive-methodology-architecture-and-validation-of-the-nationfiles-stability-index-nfsi}}
+
+\textbf{Document control:} version 1.6.5 · \textbf{As of:} 2026-05-05 ·
+\textbf{Publisher:} Neawolf Media Group (NationFiles).
+
+\textbf{Suggested citation:} Neawolf Media Group (2026).
+\emph{Algorithmic Geopolitics: Comprehensive Methodology, Architecture,
+and Validation of the NationFiles Stability Index (NFSI)}. Peer-review
+manuscript v1.6.5, 2026-05-05. Aachen, Germany.
+
+\textbf{Repository paths:} Deposit/evidence locations are cited as
+\textbf{SM-xx} in the main text; full
+\passthrough{\lstinline!research/deposit/...!} and
+\passthrough{\lstinline!research/evidence/...!} paths appear
+\textbf{only} in Supplementary Material \textbf{Table 17} (merged in
+IEEE PDF builds after main matter).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{abstract}{%
+\subsection{Abstract}\label{abstract}}
+
+This manuscript specifies a \textbf{deterministic, auditable}
+computation for the \textbf{NationFiles Stability Index (NFSI)}: a
+bounded composite score on \([1,100]\) produced by layers \textbf{L1-L4}
+(row normalisation; connector‑day aggregation and smoothing;
+country‑level composition with malus/bonus terms; inertia and a
+crash‑mode gate). \textbf{Determinism} means: given \textbf{pinned}
+upstream connector inputs, \textbf{fixed} release manifests (connector
+metadata, optional MI seeds where explicitly declared), and a
+\textbf{pinned implementation identifier} (see \textbf{Discussion →
+Implementation constancy}), recomputation yields the \textbf{same} NFSI
+outputs; the pipeline does \textbf{not} inject stochastic draws outside
+documented branches. It states \textbf{definitions, constants,
+pseudocode, validation hooks, reproducibility artefacts}, and
+\textbf{deposit-backed empirical excerpts} (persistence-baseline
+residuals on the toy fixture, named-event classification metrics,
+sensitivity magnitudes; aggregated under \textbf{Validation and
+Results}) for the NationFiles reference implementation.
+
+\textbf{Keywords:} NationFiles; NFSI; Naciro; OSINT; validation;
+stability index; inertia; crash mode; reproducibility.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{list-of-figures}{%
+\subsection{List of figures}\label{list-of-figures}}
+
+\textbf{Table 1 --- Figure placement index.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1667}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4583}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3750}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+ID
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Placement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Content
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Fig. 1 & Introduction & Paradigm: archival snapshot vs operational
+situational loop \\
+Fig. 2 & Related Work & Headline refresh axis (benchmark contrast) \\
+Fig. 3 & Methodology & Data plane: L1-L4 to delivery; NationFiles
+(frontend) vs Naciro (backend engine) \\
+Fig. 4 & Methodology & Layers L1-L4 and crash-mode gate \\
+Fig. 5 & Validation and Results & Integrity fault tree (excerpt) \\
+Fig. 6 & Validation and Results & Sensitivity fixture: mean absolute
+NFSI delta by perturbation family \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{list-of-tables}{%
+\subsection{List of tables}\label{list-of-tables}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1935}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3871}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4194}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Table
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Placement
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Short title
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & List of figures & Figure placement index \\
+2 & Introduction & Normative class definitions \\
+3 & Methodology & NFSI connector groups and semantics \\
+4 & Methodology & Connector inventory excerpt (audit-facing) \\
+5 & Validation and Results & Sensitivity fixture summary statistics \\
+6 & Validation and Results & Forecast skill: persistence baseline (toy
+fixture) \\
+7 & Validation and Results & Named-event stress classification
+metrics \\
+8 & Validation and Results & Crash-mode rule conformance checks \\
+9 & Validation and Results & Comparator indices: cadence, coverage,
+correlation stance \\
+10 & Discussion & Abbreviated glossary of terms \\
+11 & Discussion & Errata and specification deltas \\
+12 & Appendix A & NFSI constants: Layer 1 \\
+13 & Appendix A & NFSI constants: Layer 2 \\
+14 & Appendix A & NFSI constants: Layer 3 \\
+15 & Appendix A & NFSI constants: Layer 4 \\
+16 & Appendix C & Manuscript vs shipped PHP (implementation parity) \\
+17 & Supplementary Material & Repository artefact index (SM-ID paths) \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{introduction}{%
+\subsection{Introduction}\label{introduction}}
+
+NationFiles materialises country-level indicators on a fixed cadence
+through scheduled \textbf{connectors}. The \textbf{published NFSI}
+\(S_c(t)\) for country \(c\) at date \(t\) is \textbf{operationally
+defined} by the L1-L4 pipeline--not estimated as a latent factor. On the
+scale feeding Layer 4, \textbf{higher NFSI corresponds to lower acute
+geopolitical stress}.
+
+\hypertarget{index-mode-published-nfsi-vs-predictive-layer}{%
+\subsubsection{Index mode (published NFSI vs Predictive
+Layer)}\label{index-mode-published-nfsi-vs-predictive-layer}}
+
+This manuscript normatively specifies the \textbf{daily NFSI composite}
+(Layers 1--4): a \textbf{descriptive, auditably deterministic}
+country-day score on \([1,100]\) derived from connector inputs and
+declared substitution rules. That score functions as the
+\textbf{baseline situational index} for NationFiles products and for any
+downstream analytics that \textbf{consume} NFSI as a \textbf{state
+variable} (level, short-run momentum, cross-country rank).
+
+Where the product surface includes a \textbf{Predictive
+Layer}---\textbf{short-horizon outlooks} such as \textbf{24-hour} or
+\textbf{7-day} trajectories---those outputs are \textbf{not} produced by
+L1--L4 alone. They require a \textbf{separate forecasting stack}
+(models, ensembles, recalibration, backtests, and publication semantics)
+that may \textbf{condition on} recent NFSI, connector histories, and
+other covariates to emit forward-looking estimates with model-specific
+uncertainty. In that architecture, \textbf{current NFSI is an input /
+anchor signal} to the Predictive Layer, not the forecast itself.
+
+\textbf{Scope boundary (explicit):} This manuscript defines
+\textbf{L1--L4 NFSI only}. The \textbf{Predictive Layer} (short-horizon
+outlooks such as 24h/7d paths built on top of NFSI) has its \textbf{own}
+mathematics, training regime, governance, and acceptance
+criteria---\textbf{outside} this document. Persistence baselines and
+RMSE scaffolds under \textbf{Validation} are \textbf{non-normative
+illustrations} unless superseded by a frozen evaluation annex;
+operational forecasts must cite a \textbf{separate} versioned
+specification when claimed.
+
+\hypertarget{scope-and-normative-hierarchy}{%
+\subsubsection{Scope and normative
+hierarchy}\label{scope-and-normative-hierarchy}}
+
+\textbf{Table 2 --- Normative class definitions.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4375}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5625}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Class
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Meaning
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Normative} & SHALL/MUST requirements for specification
+compliance (Methodology; Validation; governance minima in
+Discussion). \\
+\textbf{Informative} & Figures and non-binding interpretation. \\
+\textbf{Implementation} & Equivalence to the pinned PHP reference
+(\textbf{Discussion}, Reproducibility subsection). \\
+\end{longtable}
+
+\textbf{Independent verification:} formulas map to deposit recompute
+scripts, validation playbooks, and evidence manifests. \textbf{Normative
+manuscript behaviour} is \textbf{one} specification: security-group
+Layer‑2 MIN aggregation uses \textbf{missing-as-worst structural pads
+(value 0)} and conservative gap-synthesis endpoints aligned with that
+stance (\textbf{Methodology}). Parity checks against the
+\textbf{deployed PHP module} may follow different literals
+(\passthrough{\lstinline!100.0!} MIN pads, etc.); that mapping is
+\textbf{non-normative} for manuscript claims and is isolated in
+\textbf{Appendix C (Implementation note)}.
+
+\textbf{Safety hooks:} Layer‑4 \textbf{crash mode} bypasses inertia when
+measured security minima fall below
+\passthrough{\lstinline!LAYER4\_SECURITY\_CRISIS\_THRESHOLD!}.
+Operational gates \textbf{T1-T3} appear under Validation and Discussion.
+
+\textbf{Other limits:} causal identification and uncertainty bands are
+\textbf{not} asserted unless backed by deposited evaluation manifests
+(see \textbf{Discussion and Limitations → Epistemic scope}).
+
+\begin{figure}
+\hypertarget{fig:01-paradigm}{%
+\centering
+\includegraphics{research/peer-review/figures-png/fig01-paradigm-shift.png}
+\caption{Fig. 1 -- Paradigm: static stock vs operational situational
+picture}\label{fig:01-paradigm}
+}
+\end{figure}
+
+\emph{Fig. 1 -- Caption:} Continuous situational picture vs archival
+snapshot; headline outputs share one pipeline.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{related-work}{%
+\subsection{Related Work}\label{related-work}}
+
+Peers include long-horizon academic/NGO indices, mandate-bound advisory,
+and market-linked risk feeds. ``Benchmarking'' here means
+\textbf{functional} comparison of refresh cadence and traceability--not
+a quality ranking.
+
+\begin{figure}
+\hypertarget{fig:02-benchmark}{%
+\centering
+\includegraphics{research/peer-review/figures-png/fig06-benchmark-freshness.png}
+\caption{Fig. 2 -- Headline refresh axis (benchmark
+contrast)}\label{fig:02-benchmark}
+}
+\end{figure}
+
+\emph{Fig. 2 -- Caption:} Long-cycle indices versus high-frequency NFSI
+(schematic).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{methodology}{%
+\subsection{Methodology}\label{methodology}}
+
+\hypertarget{service-boundaries-nationfiles-vs.-naciro}{%
+\subsubsection{Service boundaries (NationFiles
+vs.~Naciro)}\label{service-boundaries-nationfiles-vs.-naciro}}
+
+\textbf{NationFiles} is the \textbf{delivery and publication plane}:
+public web presence, operator-facing surfaces where applicable, stable
+HTTP/API endpoints, and structured \textbf{data exports} (scores,
+provenance flags, manifests) consumed by reviewers and downstream
+systems. It does \textbf{not} host the full heavy ingestion and scoring
+stack as a monolith on the same boundary as static or semi-static site
+delivery.
+
+\textbf{Naciro} is a \textbf{separate backend programme}---the
+\textbf{processing and intelligence engine}---that runs connector
+pipelines, scheduled recomputation, orchestration of raw-to-score
+workflows, and any \textbf{model-assisted or NLP preprocessing} required
+before Layer‑1 normalisation. Deterministic NFSI layers (L1--L4)
+described in this manuscript are implemented and executed in that
+\textbf{backend processing} context; outputs are then exposed through
+NationFiles as \textbf{published artefacts}.
+
+Readers should assume a \textbf{two-tier layout} (typically \textbf{two
+server roles or clusters}): \textbf{(i) frontend / delivery}---TLS
+termination, web UI, public API, caching, and export bundles;
+\textbf{(ii) backend / engine}---Naciro workers, databases holding
+connector and NFSI state, batch jobs, and internal orchestration. Trust
+boundaries, scaling, observability, and incident response
+\textbf{separate web delivery from compute}: NationFiles answers
+\emph{what we publish}; Naciro answers \emph{how scores are produced}
+from pinned inputs. Cross-references to ``orchestration'' in
+architecture figures denote \textbf{Naciro-side} coordination of
+ingestion and scoring, not NationFiles web rendering.
+
+\hypertarget{system-overview}{%
+\subsubsection{System overview}\label{system-overview}}
+
+Connectors write to relational stores; aggregates flow \textbf{L1 → L2 →
+L3 → L4} before API/web delivery. Fig. 3 shows \textbf{logical} data
+flow.
+
+\begin{figure}
+\hypertarget{fig:03-architecture}{%
+\centering
+\includegraphics{research/peer-review/figures-png/fig02-system-architecture.png}
+\caption{Fig. 3 -- High-level data-flow}\label{fig:03-architecture}
+}
+\end{figure}
+
+\emph{Fig. 3 -- Caption:} Ingestion through layered scoring to
+publication. \textbf{Service boundaries:} NationFiles delivers outputs
+to clients; \textbf{Naciro} (backend engine) performs ingestion,
+orchestration, and L1--L4 computation on processing infrastructure---see
+\textbf{Service boundaries (NationFiles vs.~Naciro)} above.
+
+\hypertarget{normative-specification}{%
+\subsubsection{Normative specification}\label{normative-specification}}
+
+This manuscript adopts \textbf{one} binding NFSI rule-set:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Security group (\(g=100\)):} multiset \textbf{MIN} over
+  connector-day scores; absent structural slots in the MIN construction
+  are padded with \textbf{0} (missing-as-worst), \textbf{to strictly
+  prevent masking security crises when connectors go missing under
+  benign outages or adversarial withholding.}\\
+\item
+  \textbf{Non-security groups:} anchored average recipe with midpoint
+  pads \textbf{50} to uniform length \(M\) (see Layer 2 below).\\
+\item
+  \textbf{Exports:} operational systems may record padding/imputation
+  provenance with boolean flags (\passthrough{\lstinline!was\_padded!},
+  \passthrough{\lstinline!was\_imputed!}, \ldots). \textbf{No} parallel
+  ``profile × variant'' grid is normative here--alternate numeric
+  mappings exist only as \textbf{implementation parity} notes
+  (\textbf{Appendix C}).
+\end{itemize}
+
+\hypertarget{population-consensus-inputs-to-layer-3}{%
+\subsubsection{Population consensus (inputs to Layer
+3)}\label{population-consensus-inputs-to-layer-3}}
+
+Population \passthrough{\lstinline!country\_meta.pop!} is a weighted
+consensus across public sources (Eurostat, UN WPP, IMF, World Bank, RDF,
+CIA, REST Countries, API-Ninjas) with weights \textbf{1.5 / 1.5 / 1.2 /
+1.2 / 0.9 / 0.8 / 0.8 / 0.5}. Extrapolation fills gaps;
+\passthrough{\lstinline!allowedGrowth = MAX(0.015, masterRate + 0.005)!}
+caps implausible positive annual drift from 2024 onward. Details:
+\textbf{Appendix A}; deposit mirror \textbf{SM-15} (Supplementary
+Material index).
+
+\hypertarget{algebraic-definition}{%
+\subsubsection{Algebraic definition}\label{algebraic-definition}}
+
+\textbf{Layer 1 -- Row normalisation.} Let
+\(\mathrm{MIN}_{\mathrm{raw}}\), \(\mathrm{MAX}_{\mathrm{raw}}\) be the
+extrema of raw values for connector \(k\) on the audit slice;
+\(\mathrm{SPAN}=\mathrm{MAX}_{\mathrm{raw}}-\mathrm{MIN}_{\mathrm{raw}}\).
+For each row,
+
+\[\mathrm{normalized}=
+\begin{cases}
+50, & \mathrm{SPAN}\le 0 \text{ or missing bounds} \\
+100\cdot\frac{r-\mathrm{MIN}_{\mathrm{raw}}}{\mathrm{SPAN}}, & \text{otherwise}
+\end{cases}\]
+
+Let \(\mathrm{norm}_{01}=\mathrm{clamp}(\mathrm{normalized},0,100)\).
+With direction flag ``higher raw is worse'',
+\(\mathrm{score}_{\mathrm{row}}=\mathrm{round}\!\left(\mathrm{clamp}(100-\mathrm{norm}_{01},0,100),2\right)\);
+otherwise swap \(100-\cdot\).
+
+\textbf{Layer 2 -- Connector-day.} Let \(M\) be the maximum row-count
+across ISO2 for fixed \((\mathrm{connector\_id},\mathrm{date})\). For
+security (\(g=100\)), let observed scores form multiset \(\mathcal{S}\);
+pad to length \(M\) with literal \textbf{0} as needed;
+\(\mathrm{dayScore}=\min(\mathcal{S}\cup\{\text{padded zeros}\})\). For
+non-security groups, build
+\(\mathbf{v}=(0,s_1,\ldots,s_k,\underbrace{50,\ldots,50}_{M-k},100)\)
+and \(\mathrm{dayScore}=\mathrm{mean}(\mathbf{v})\). Smooth:
+
+\[\mathrm{score}^{L2}_{t}=0.6\cdot \mathrm{dayScore}+0.4\cdot \mathrm{yesterday}\]
+
+(with documented defaults \textbf{70} / \textbf{85} when no yesterday).
+
+\hypertarget{gap-synthesis}{%
+\paragraph{Gap synthesis}\label{gap-synthesis}}
+
+Let \(A_D\) denote the deposited availability statistic for calendar day
+\(D\) on the audited slice (row-count or coverage tally per frozen
+recompute manifest). Define the day-on-day growth ratio
+
+\[\rho_D =
+\begin{cases}
+A_D / A_{D-1}, & \text{if } A_{D-1} \text{ exists and } A_{D-1} > 0 \\
+1, & \text{otherwise}
+\end{cases}\]
+
+\textbf{Layer 3 -- Composite.} With
+\(\mathrm{effW}_n=g_n\cdot(w_n/100)\cdot u_n\), dummy anchors at \(0\)
+and \(100\), weighted mean \(\mathrm{baseScore}\); apply conflict malus
+using \(\mathrm{minSec}\) from Layer 3 inputs; fragility / small-pop /
+bonus; governance pull via \(\mathrm{est\_total}\) →
+\(\mathrm{nfsi\_raw}\) (terms exactly as in \textbf{Appendix A}
+constants).
+
+\textbf{Layer 4 -- Security minimum, crash mode, inertia.} Let
+\(\mathcal{N}\) denote the connector universe for the release. For each
+country-day \((c,t)\), define the set of \textbf{real, non-placeholder}
+group-100 connector-day scores as
+
+\[\mathcal{S}_{c,t} = \{ s_{n,c,t} \in [0,100] \mid n \in \mathcal{N},\, g_n = 100,\, \mathrm{isReal}(n,c,t)=1,\, \mathrm{isPlaceholder}(n,c,t)=0 \}.\]
+
+Define
+
+\[\mathrm{minSec}(c,t)=
+\begin{cases}
+\displaystyle\min_{s\in\mathcal{S}_{c,t}} s, & |\mathcal{S}_{c,t}|>0\\
+\texttt{LAYER3\_NO\_SECURITY\_DEFAULT\_MINSEC}, & |\mathcal{S}_{c,t}|=0
+\end{cases}\]
+
+\textbf{Crash mode} (normative predicate):
+
+\[\mathrm{crash\_mode}(c,t)=\mathbf{1}\left\{\mathrm{minSec}(c,t)<\texttt{LAYER4\_SECURITY\_CRISIS\_THRESHOLD}\right\}.\]
+
+\textbf{Inertia weight} (normative, binary):
+
+\[w_{\mathrm{inertia}} =
+\begin{cases}
+0.50, & N_{\mathrm{no\_data}} > 0 \\
+0.80, & N_{\mathrm{no\_data}} = 0
+\end{cases}\]
+
+If \(\mathrm{crash\_mode}=1\), published NFSI equals Layer‑3 output
+(after floor/bounds). Otherwise let \(w=w_{\mathrm{inertia}}\) and apply
+inertia and daily cap \(\pm\texttt{LAYER4\_DAILY\_CHANGE\_CAP}\), round
+to two decimals.
+
+\hypertarget{normative-sql-mathrmminsec-and-crash-predicate}{%
+\subsubsection{\texorpdfstring{Normative SQL -- \(\mathrm{minSec}\) and
+crash
+predicate}{Normative SQL -- \textbackslash mathrm\{minSec\} and crash predicate}}\label{normative-sql-mathrmminsec-and-crash-predicate}}
+
+The following is \textbf{normative} for audits that materialise scores
+in \passthrough{\lstinline!nfsi\_connector!} joined to
+\passthrough{\lstinline!datasource\_meta!}. Bind
+\passthrough{\lstinline!:default\_minsec!} to
+\textbf{\passthrough{\lstinline!LAYER3\_NO\_SECURITY\_DEFAULT\_MINSEC!}}
+(\textbf{Appendix A}).
+
+\begin{lstlisting}
+WITH sec AS (
+  SELECT nc.score AS score_final
+  FROM nfsi_connector nc
+  INNER JOIN datasource_meta dm ON dm.connector_id = nc.connector_id
+  WHERE nc.iso2 = :iso2
+    AND nc.date = :d
+    AND dm.nfsi_group = 100
+    AND nc.was_placeholder = 0
+)
+SELECT CASE WHEN COUNT(*) = 0 THEN :default_minsec ELSE MIN(score_final) END AS minSec
+FROM sec;
+\end{lstlisting}
+
+\hypertarget{pseudocode-listings}{%
+\subsubsection{Pseudocode listings}\label{pseudocode-listings}}
+
+All listings use a single fence style
+(\passthrough{\lstinline!```text!}) for KaTeX HTML PDF and Pandoc/LaTeX
+pipelines; treat them as \textbf{lstlisting-style} monospace blocks in
+journal templates (\textbf{no} \passthrough{\lstinline!$...$!} / TeX
+escapes inside fences; relational operators are literal text under PDF
+\passthrough{\lstinline!listings!}).
+
+\textbf{Listing -- Layer 1}
+
+\begin{lstlisting}
+SPAN = MAX_RAW - MIN_RAW
+FOR each row:
+  IF SPAN <= 0 OR bounds missing:
+      score_row = 50
+  ELSE:
+      normalized = 100 * (raw - MIN_RAW) / SPAN
+      normalized = CLAMP(normalized, 0, 100)
+      IF higher_raw_is_worse: score_row = 100 - normalized ELSE score_row = normalized
+  score_row = ROUND(CLAMP(score_row, 0, 100), 2)
+\end{lstlisting}
+
+\textbf{Listing -- Layer 2 (normative security MIN + pad 0)}
+
+\begin{lstlisting}
+M = MAX row-count k over iso2 for this (connector_id, date)
+IF group == 100:
+    scores_ext = observed_scores ++ REPEAT(0, M - k_observed)
+    dayScore = MIN(scores_ext)
+ELSE:
+    dayScore = AVG( [0] ++ observed_scores ++ PAD(50, M-k) ++ [100] )
+score_final = ROUND(CLAMP(0.6*dayScore + 0.4*yesterday, 0, 100), 2)
+\end{lstlisting}
+
+\textbf{Listing -- Layer 4 inertia / crash}
+
+\begin{lstlisting}
+minSec = MIN(real group-100 scores) OR DEFAULT_MINSEC
+IF minSec < LAYER4_SECURITY_CRISIS_THRESHOLD:
+    NFSI_Today = nfsi_raw
+ELSE IF prevScore exists:
+    inertiaWeight = IF noDataCount > 0 THEN 0.50 ELSE 0.80
+    smoothed = prevScore * inertiaWeight + nfsi_raw * (1 - inertiaWeight)
+    APPLY daily cap +/- LAYER4_DAILY_CHANGE_CAP vs prevScore
+    NFSI_Today = ROUND(smoothed, 2)
+\end{lstlisting}
+
+Full line-by-line artefact: \textbf{Appendix B} and \textbf{SM-28}
+(deposit may mention legacy pad literals--\textbf{Appendix C} reconciles
+shipped PHP).
+
+\begin{figure}
+\hypertarget{fig:04-nfsi-layers}{%
+\centering
+\includegraphics{research/peer-review/figures-png/fig03-nfsi-layers.png}
+\caption{Fig. 4 -- NFSI layered pipeline + crash-mode
+gate}\label{fig:04-nfsi-layers}
+}
+\end{figure}
+
+\emph{Fig. 4 -- Caption:} L1-L4 with crash branch on measured security
+minima.
+
+\hypertarget{constants-in-formulas}{%
+\subsubsection{Constants in formulas}\label{constants-in-formulas}}
+
+Numeric \textbf{pins} for every configuration key appear \textbf{once},
+in \textbf{Appendix A} (Tables \textbf{12--15}). This subsection relates
+\textbf{symbol names} to their \textbf{roles in the equations above},
+without repeating scalar values.
+
+\textbf{Layer 2.} Connector-day smoothing uses
+\(\mathrm{score}^{L2}_{t}=\alpha\cdot \mathrm{dayScore}+\beta\cdot \mathrm{yesterday}\)
+with \(\alpha+\beta=1\), implemented as
+\(\alpha=\texttt{LAYER2\_TODAY\_WEIGHT}\),
+\(\beta=\texttt{LAYER2\_YESTERDAY\_WEIGHT}\). Cold-start defaults for
+\(\mathrm{yesterday}\), recovery increments and horizons,
+anchored-average multiset endpoints (dummy lows/highs and midpoint
+pads), and operational coverage warnings are keyed to the remaining
+Layer‑2 constants listed under \textbf{Appendix A.2}.
+
+\textbf{Layer 3.} Neutral substitution for missing connectors uses
+\(\texttt{LAYER3\_NO\_DATA\_NEUTRAL\_SCORE}\); dummy anchors at \(0\)
+and \(100\) carry weights \(\texttt{LAYER3\_DUMMY\_LOW\_WEIGHT}\),
+\(\texttt{LAYER3\_DUMMY\_HIGH\_WEIGHT}\). Conflict malus compares
+\(\mathrm{minSec}\) to \(\texttt{LAYER3\_CONFLICT\_THRESHOLD}\) with
+slope \(\texttt{LAYER3\_CONFLICT\_MALUS\_FACTOR}\) capped by
+\(\texttt{LAYER3\_CONFLICT\_MALUS\_CAP}\). Fragility, small-population,
+population-bonus, and governance-pull terms use the population and
+WGI-related pins in \textbf{Appendix A.3}. When
+\(|\mathcal{S}_{c,t}|=0\), \(\mathrm{minSec}\) falls back to
+\(\texttt{LAYER3\_NO\_SECURITY\_DEFAULT\_MINSEC}\) as in the piecewise
+definition above---numerical values \textbf{only} in the appendix
+tables.
+
+\textbf{Layer 4.} The \textbf{Crash mode} and \textbf{Inertia weight}
+displays above compare \(\mathrm{minSec}(c,t)\) and
+\(N_{\mathrm{no\_data}}\) to the Layer‑4 keys
+\(\texttt{LAYER4\_SECURITY\_CRISIS\_THRESHOLD}\),
+\(\texttt{LAYER4\_INERTIA\_SCORE\_WITHOUT\_L1L2}\),
+\(\texttt{LAYER4\_INERTIA\_STANDARD}\), and bound daily moves with
+\(\texttt{LAYER4\_DAILY\_CHANGE\_CAP}\); scalar pins are listed
+\textbf{once} in \textbf{Appendix A.4} (Table \textbf{15}).
+
+\hypertarget{connector-roles-and-provenance}{%
+\subsubsection{Connector roles and
+provenance}\label{connector-roles-and-provenance}}
+
+Groups \textbf{100} (security MIN), \textbf{85}, \textbf{60},
+\textbf{50}, \textbf{40}, \textbf{\textless0} excluded define thematic
+roles. Full per-connector table: \textbf{SM-23} (Supplementary Material
+index; not duplicated here).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{validation-and-results}{%
+\subsection{Validation and Results}\label{validation-and-results}}
+
+\hypertarget{integrity-testing-and-event-style-evidence}{%
+\subsubsection{Integrity testing and event-style
+evidence}\label{integrity-testing-and-event-style-evidence}}
+
+Scenario identifiers (internal QA anchors) serve as \textbf{test
+questions} (e.g., missing-media semantics, territorial fallbacks,
+crash-mode behaviour). They are not presented as historical ground-truth
+adjudication.
+
+\begin{figure}
+\hypertarget{fig:05-fault-tree}{%
+\centering
+\includegraphics{research/peer-review/figures-png/fig05-stress-fault-tree.png}
+\caption{Fig. 5 -- Fault tree sketch}\label{fig:05-fault-tree}
+}
+\end{figure}
+
+\emph{Fig. 5 -- Caption:} Each branch requires explicit policy:
+substitution semantics, structured status exports, or documented
+mitigations -- not silent ``all clear.''
+
+\textbf{Empirical validation note (minimum evidence added):} A
+data-driven event-style backtest is provided from an internal
+country-day score table (available from a documented cutover date in the
+product implementation). The backtest selects the top-\(k\) largest
+absolute daily deltas (unique countries) and reports windowed effect
+summaries (pre-mean, pre-sd, post-min/post-max, and a z-style deviation
+vs.~the pre window). This does \textbf{not} adjudicate historical
+``crises'' as ground truth; it provides a reproducible quantitative
+sanity check and a template for crisis-labelled studies.
+
+Deposit artefacts for this block: \textbf{SM-31}, \textbf{SM-09},
+\textbf{SM-08}, \textbf{SM-35}, \textbf{SM-07}, \textbf{SM-06} (paths
+indexed as \textbf{SM-xx} in Supplementary Material).
+
+\textbf{Backtest (top-\(k\) absolute daily deltas, unique ISO2;
+window=7d).} Row-level metrics are deposited as \textbf{SM-08} with
+narrative \textbf{SM-09}; full numeric rows are \textbf{not} inlined
+here (IEEE/PDF-friendly layout).
+
+\textbf{Illustrative summary (backtest excerpt; full rows in SM-08).}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Statistic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Note
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Largest \(|z|\) (studentised vs pre-window) & \textbf{8.14} & NU,
+2026-03-31 (\textbf{SM-08}) \\
+Illustrative two-sided normal tail at \(|z|=8.14\) &
+\(\approx 4.4\times 10^{-16}\) & \textbf{Non-inferential}: residuals are
+\textbf{not} assumed i.i.d.; use block bootstrap / permutation tests
+(\textbf{Validation}). \\
+\end{longtable}
+
+\textbf{Named events (external event-source annotations;
+post-window=7d).} Raw rows and scoring outputs are \textbf{SM-06},
+\textbf{SM-44}, \textbf{SM-45}, \textbf{SM-43}; aggregates appear below
+as \textbf{Table 7}.
+
+\hypertarget{ethics-and-operational-thresholds}{%
+\subsubsection{Ethics and operational
+thresholds}\label{ethics-and-operational-thresholds}}
+
+This index can be misused or misinterpreted. Potential harms include:
+(i) misclassification leading to inappropriate travel or operational
+decisions, (ii) reputational impacts on countries or populations, (iii)
+market or policy misuse, and (iv) feedback loops when users treat an
+index as ground truth.
+
+Minimum mitigations for deployment and publication: * \textbf{Separation
+of concerns:} distinguish descriptive stability scoring from forecasts
+and from any policy advice. * \textbf{Human review thresholds (minimum,
+audit-ready):} - \textbf{T1 (large movement):} if
+\(|\Delta \text{NFSI}_{c,t}| > 6\) within 24h, require human review
+before external dissemination. - \textbf{T2 (crash mode):} if crash mode
+triggers (\(\min(S)<25\) for group-100 scores excluding placeholders),
+require 2-person review within 4h. - \textbf{T3 (data integrity):} if
+no-data ratio \(\ge 0.5\), any group-100 connector ingestion anomaly
+occurs, or
+\passthrough{\lstinline!security\_missingness\_review=required!}
+(padding policy / Methodology), require review within 8h. *
+\textbf{Transparency:} document score scope, provenance links, and a
+dispute channel in published materials. * \textbf{Red-team / misuse
+testing:} test for adversarial data gaps, systematic bias from
+missingness, and interpretation hazards.
+
+\textbf{Escalation workflow / SLA (minimum):} A deposit-ready SOP is
+provided as \textbf{SM-20} (roles A1/A2/E1/M1, evidence requirements,
+and a public dispute/correction pathway).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{reproducibility-and-audit}{%
+\subsubsection{Reproducibility and
+audit}\label{reproducibility-and-audit}}
+
+This paper supports independent verification (traceability to code,
+constants, and disclosed provenance). Third-party certification or
+endorsement, if any, must be cited from separate publications.
+
+\hypertarget{machine-executable-recompute-recipe}{%
+\paragraph{Machine-executable recompute
+recipe}\label{machine-executable-recompute-recipe}}
+
+The following is a \textbf{minimal recompute recipe} sufficient to
+reproduce Layers 1-4 on a deposited dataset snapshot.
+
+\textbf{Pinned implementation:} a stable implementation identifier
+(commit/tag/build provenance) recorded in \textbf{SM-49/SM-50} and
+referenced under \textbf{Discussion → Implementation constancy} (single
+canonical pin for this manuscript; redacted in the public package to
+avoid internal targeting data).
+
+\textbf{Environment (minimum):} * PHP (\textgreater= 8.1) * a SQL
+database containing the deposited snapshot tables
+
+\textbf{Input tables (snapshot):} *
+\passthrough{\lstinline!connectors\_raw!} -- raw rows for all connectors
+(columns at minimum): - \passthrough{\lstinline!connector\_id!} (string)
+- \passthrough{\lstinline!iso2!} (string) -
+\passthrough{\lstinline!date!} (YYYY-MM-DD) -
+\passthrough{\lstinline!raw\_value!} (float) or connector-specific
+numeric raw - optional: \passthrough{\lstinline!severity!} (float) if
+the connector defines a severity transform before normalisation *
+\passthrough{\lstinline!connector\_meta!} -- connector metadata: -
+\passthrough{\lstinline!connector\_id!} -
+\passthrough{\lstinline!group\_weight!} (e.g.~100/85/60/50/40; negative
+= excluded) - \passthrough{\lstinline!weight!} (0-100) -
+\passthrough{\lstinline!higher\_raw\_is\_worse!} (bool) -
+\passthrough{\lstinline!update\_frequency!} (categorical or numeric
+multiplier) * \passthrough{\lstinline!country\_meta!} -- country-level
+metadata used by malus/bonus: - \passthrough{\lstinline!iso2!} -
+\passthrough{\lstinline!population!} - \(\mathrm{est\_total}\) (0-100
+governance) * \passthrough{\lstinline!nfsi\_prev!} -- previous-day NFSI
+values (for Layer 4), or empty for cold start.
+
+\textbf{Layer 1 (row score)} * For each
+\passthrough{\lstinline!connector\_id!}, compute
+\passthrough{\lstinline!min\_raw!}, \passthrough{\lstinline!max\_raw!}
+over the snapshot. * For each row: - if \(\mathrm{SPAN}\le 0\) or
+missing min/max \(\Rightarrow\) \(\mathrm{score}_{\mathrm{row}} := 50\)
+- else
+\(\mathrm{normalized}:=100\cdot(\mathrm{raw}-\mathrm{MIN}_{\mathrm{raw}})/\mathrm{SPAN}\)
+- if \(\mathrm{higher\_raw\_is\_worse}=1\) \(\Rightarrow\)
+\(\mathrm{score}_{\mathrm{row}} := 100-\mathrm{normalized}\), else
+\(\mathrm{score}_{\mathrm{row}} := \mathrm{normalized}\) - clamp to
+{[}0,100{]}, round to 2 decimals.
+
+\textbf{Layer 2 (connector-day score)} * Collect all
+\(\mathrm{score}_{\mathrm{row}}\) for a given
+\((\mathrm{connector\_id},\mathrm{iso2},\mathrm{date})\). * If
+\(g=100\): \(\mathrm{dayScore}=\min(\mathcal{S})\) after padding absent
+multiset slots with \textbf{0} (manuscript-normative missing-as-worst).
+* Else: compute \(\mathrm{dayScore}\) by the anchored-average
+construction with midpoint pads \textbf{50} (see \textbf{Layer 2}
+above). * Smooth with previous day:
+\(\mathrm{score}_{\mathrm{final}}=0.6\,\mathrm{dayScore}+0.4\,\mathrm{yesterday}\),
+where \(\mathrm{yesterday}\) defaults to 70 (security) or 85 (others)
+when absent.
+
+\textbf{Layer 3 (country score)} * For each
+\((\mathrm{iso2},\mathrm{date})\) aggregate all connector-day
+\(\mathrm{score}_{\mathrm{final}}\) into a weighted mean using: -
+\(\mathrm{effW}_n=g_n\cdot(w_n/100)\cdot u_n\) - include dummies 0 and
+100 with weight 1 each * Apply malus/bonus sequence exactly as in Layer
+3 / Appendix B.
+
+\textbf{Layer 4 (inertia and crash mode)} * Compute crash mode as
+specified for Layer 4: min of real, non-placeholder group-100 scores
+\textless{} 25 → bypass smoothing. * Else apply inertia and daily-change
+cap ±3.
+
+\hypertarget{deposit-packaging-and-evidence-pointers}{%
+\paragraph{Deposit packaging and evidence
+pointers}\label{deposit-packaging-and-evidence-pointers}}
+
+The full line-by-line pseudo-code is in \textbf{Appendix B} and
+\textbf{SM-28}. For audits, the evidence deposit should additionally
+include a small fixture and a log bundle of intermediate values per
+country/day (see \textbf{Discussion → Reproducibility} and
+\textbf{SM-48}).
+
+\textbf{Deposit packaging (checklist):} * Deposit manuscript, markdown
+sources, and figures (SVG + PNG). * Pin versions: manuscript
+\passthrough{\lstinline!version!} and the implementation pin documented
+under \textbf{Discussion → Implementation constancy} (commit + module
+path + internal version label). * Include licence statements per
+artefact.
+
+\textbf{Evidence pack (generated in this repository):} * \textbf{SM-49}
+and \textbf{SM-50} * Generator: \textbf{SM-52}
+
+\textbf{Forecast evaluation (optional):} * RMSE/backtest scaffold:
+\textbf{SM-51} * No RMSE values are asserted here without a separately
+published evaluation report.
+
+\hypertarget{data-provenance-and-connectors}{%
+\subsubsection{Data provenance and
+connectors}\label{data-provenance-and-connectors}}
+
+Per-connector \textbf{numeric Layer‑1 basis fields}, weights, and
+implementation-class pointers: see \textbf{connector inventory excerpt}
+below and \textbf{SM-23} for the full machine-readable table.
+
+\hypertarget{connector-groups-and-semantics}{%
+\subsubsection{Connector groups and
+semantics}\label{connector-groups-and-semantics}}
+
+The \textbf{Top‑10-by-influence} excerpt (computed licence/snapshot
+fingerprints) is available in the supplementary deposit paths
+\textbf{SM-27} and \textbf{SM-26} (\textbf{SHA‑256} in the Markdown
+header). These rows are mechanically derived from \textbf{SM-23};
+\passthrough{\lstinline!deposit\_provenance\_row\_sha256!} fingerprints
+the deposited provenance tuple for \textbf{audit diffing} when upstream
+raw payloads are absent from git. Authoritative provider wording remains
+upstream; redistribution of derivatives must comply with provider terms.
+
+\textbf{Provenance/licence appendix (deposit):} machine-readable
+provenance is provided as \textbf{SM-23} (includes
+\passthrough{\lstinline!connector\_id, source\_url, data\_version, last\_snapshot\_date, weight, group, higher\_raw\_is\_worse, update\_mult!})
+and an additional licence-focused appendix as \textbf{SM-24}.
+
+Connector groups define \textbf{semantic roles} in the composite and
+constrain aggregation behaviour (e.g.~security MIN rule). Unless
+otherwise stated, \(g_n\) denotes the group weight of connector \(n\).
+
+\textbf{Table 3 --- NFSI connector groups and semantics.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Group (g)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Name (one line)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Semantics / required handling
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+100 & Security / acute safety & Crisis-relevant telemetry. Layer‑2 uses
+\textbf{MIN} (one critical signal dominates). Included in
+\(\mathrm{minSec}\) and crash/conflict predicates, but \textbf{only} for
+real, non-placeholder observations. \\
+85 & Governance \& rule-of-law & Structural institutional indicators;
+aggregated with non-security AVG recipe; contributes to Layer‑3 weighted
+mean and governance-related adjustments (WGI pull operates separately on
+\(\mathrm{est\_total}\)). \\
+60 & Economic / macro-financial & Non-security group; averaged with
+anchors/pads; contributes via weights and update multipliers. \\
+50 & Infrastructure / societal & Non-security group; averaged with
+anchors/pads; contributes via weights and update multipliers. \\
+40 & Demographic / slow structural & Non-security group; averaged with
+anchors/pads; generally lower cadence; contributes via weights and
+update multipliers. \\
+\textless{} 0 & Excluded & Connector is excluded from NFSI composition
+(implementation filter). Must remain present in provenance but is not a
+contributor. \\
+\end{longtable}
+
+This table defines \textbf{group semantics}; per-connector group
+assignments are enumerated in deposited provenance CSVs.
+
+\hypertarget{linguistic-processing-and-locale-standardization}{%
+\paragraph{Linguistic Processing and Locale
+Standardization}\label{linguistic-processing-and-locale-standardization}}
+
+Some connectors materialise multilingual fields or parallel translation
+columns (e.g.~\textbf{\passthrough{\lstinline!translate\_de!}},
+\textbf{\passthrough{\lstinline!translate\_en!}},
+\textbf{\passthrough{\lstinline!translate\_fr!}},
+\textbf{\passthrough{\lstinline!translate\_es!}},
+\textbf{\passthrough{\lstinline!translate\_pt!}},
+\textbf{\passthrough{\lstinline!translate\_ar!}},
+\textbf{\passthrough{\lstinline!translate\_ja!}} on feeds ingested via
+\textbf{NaciroTelegram}). \textbf{Japanese} text uses \textbf{ISO 639-1
+\passthrough{\lstinline!ja!}} (\passthrough{\lstinline!translate\_ja!});
+do \textbf{not} label language fields as
+\textbf{\passthrough{\lstinline!JP!}} (that is \textbf{ISO 3166-1}
+country code). Layer‑4 NFSI arithmetic does \textbf{not} branch on
+language; locale metadata supports \textbf{provenance, QA, and
+connector-specific audits} only.
+
+\hypertarget{connector-inventory-excerpt}{%
+\paragraph{Connector inventory
+excerpt}\label{connector-inventory-excerpt}}
+
+\textbf{Audit-facing inventory (normative for manuscript
+self-containment):} this table maps each
+\passthrough{\lstinline!connector\_id!} to its effective NFSI group, the
+primary Layer‑1 basis field used for audits, the connector weight, and
+the implementation class. Full legal language, upstream URLs, and
+snapshot dating remain in \textbf{SM-23}. Maintainer-only regeneration
+of this embedded fragment is documented under \textbf{SM-02}
+(Peer-review manuscript PDF / connector inventory).
+
+\textbf{Table 4 --- Connector inventory excerpt (audit-facing).}
+
+\begingroup
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.05}
+\footnotesize
+\begin{longtable}{@{}p{0.22\linewidth}c p{0.26\linewidth}c p{0.18\linewidth}p{0.22\linewidth}@{}}
+\textbf{Connector ID} & \textbf{Grp} & \textbf{Layer-1 basis} & \textbf{Wgt} & \textbf{PHP class} & \textbf{Licence digest} \\
+\hline
+\endhead
+AcledMonthAll & 10 & ACLED-style event fields (\texttt{fatalities} + event-type weights $\rightarrow$ per-row NF score) & 90 & \ttfamily\seqsplit{AcledMonthAllConnector} & ACLED / filtered, aggregated for Naciro Intelligence; mult=1.0; live \\
+AcledMonthAllOverview & 10 & ACLED-style event fields (\texttt{fatalities} + event-type weights $\rightarrow$ per-row NF score) & 95 & \ttfamily\seqsplit{AcledMonthAllOverviewConnector} & ACLED / filtered, aggregated for Naciro Intelligence; mult=1.0; live \\
+CountriesConflictUcdpGed & 100 & high & 85 & \ttfamily\seqsplit{CountriesConflictUcdpGedConnector} & Free for academic, commercial, governmental use (see UCDP); mult=3.65; live \\
+CountriesCurrencyFromFa & 60 & EUR & 65 & \ttfamily\seqsplit{CurrencyDailyFaConnector} & Internal; mult=3.65; live \\
+CountriesGdeltGlobRadar & 100 & GoldsteinScale & 85 & \ttfamily\seqsplit{CountriesGdeltGlobRadarConnector} & GDELT Terms of Use (see provider); mult=7.30; live \\
+CountriesNetAbuseIpDb & 85 & count & 70 & \ttfamily\seqsplit{CountriesNetAbuseIpDbConnector} & AbuseIPDB Terms of Use; mult=3.65; live \\
+CountriesNetGrpTrfcAnom & 50 & value & 55 & \ttfamily\seqsplit{CountriesNetGrpTrfcAnomConnector} & Cloudflare Terms of Use; mult=7.30; live \\
+CountriesNetSpmBot & 85 & total\_today & 70 & \ttfamily\seqsplit{CountriesNetSpmBotConnector} & Spamhaus Terms \& Conditions; mult=3.65; live \\
+CountriesNetTrfcAnom & 50 & value & 70 & \ttfamily\seqsplit{CountriesNetTrfcAnomConnector} & Cloudflare Terms of Use; mult=7.30; live \\
+CountriesPopPrisn100K & 85 & Prison\_population\_rate & 50 & \ttfamily\seqsplit{CountriesPopPrisn100KConnector} & CC BY / Our World in Data; mult=1.0; live \\
+CountriesVatRatesApiVer & 60 & rate\_standard & 60 & \ttfamily\seqsplit{CountriesVatRatesApiVerConnector} & APIVerve Terms of Service; mult=1.12; live \\
+CountriesVatRatesVatLup & 60 & rate\_standard & 60 & \ttfamily\seqsplit{CountriesVatRatesVatLupConnector} & Refer to source (EC data); mult=1.0; live \\
+CountriesWb65Up & 40 & \texttt{value} field for WB indicator \texttt{SP.POP.65UP.TO.ZS} & 10 & \ttfamily\seqsplit{CountriesWb65UpConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbAccsZs & 40 & \texttt{value} field for WB indicator \texttt{EG.ELC.ACCS.ZS} & 60 & \ttfamily\seqsplit{CountriesWbAccsZsConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbCcEst & 100 & \texttt{value} field for WB indicator \texttt{CC.EST} & 85 & \ttfamily\seqsplit{CountriesWbCcEstConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbCdrtIn & 40 & \texttt{value} field for WB indicator \texttt{SP.DYN.CDRT.IN} & 30 & \ttfamily\seqsplit{CountriesWbCdrtInConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbCpiTotlZg & 60 & connector-specific (see connector class) (\texttt{WB:FP.CPI.TOTL.ZG}) & 75 & \ttfamily\seqsplit{CountriesWbCpiTotlZgConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbFpCpiTotl & 60 & connector-specific (see connector class) (\texttt{WB:FP.CPI.TOTL.ZG}) & 20 & \ttfamily\seqsplit{CountriesWbFpCpiTotlConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbLe00 & 40 & \texttt{value} field for WB indicator \texttt{SP.DYN.LE00.IN} & 45 & \ttfamily\seqsplit{CountriesWbLe00Connector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbMilTotl & 40 & \texttt{value} field for WB indicator \texttt{MS.MIL.TOTL.P1} & 40 & \ttfamily\seqsplit{CountriesWbMilTotlConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbNetUser & 40 & \texttt{value} field for WB indicator \texttt{IT.NET.USER.ZS} & 40 & \ttfamily\seqsplit{CountriesWbNetUserConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbPopDpnd & 40 & \texttt{value} field for WB indicator \texttt{SP.POP.DPND} & 20 & \ttfamily\seqsplit{CountriesWbPopDpndConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbPopGrow & 40 & \texttt{value} field for WB indicator \texttt{SP.POP.GROW} & 25 & \ttfamily\seqsplit{CountriesWbPopGrowConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbPovGini & 60 & \texttt{value} field for WB indicator \texttt{SI.POV.GINI} & 60 & \ttfamily\seqsplit{CountriesWbPovGiniConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbPsrcP5 & 100 & \texttt{value} field for WB indicator \texttt{VC.IHR.PSRC.P5} & 100 & \ttfamily\seqsplit{CountriesWbPsrcP5Connector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbResTotlCd & 40 & \texttt{value} field for WB indicator \texttt{FI.RES.TOTL.CD} & 25 & \ttfamily\seqsplit{CountriesWbResTotlCdConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbRlEst & 100 & \texttt{value} field for WB indicator \texttt{RL.EST} & 80 & \ttfamily\seqsplit{CountriesWbRlEstConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbUem1524 & 60 & \texttt{value} field for WB indicator \texttt{SL.UEM.1524.ZS} & 70 & \ttfamily\seqsplit{CountriesWbUem1524Connector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbUemTotl & 60 & \texttt{value} field for WB indicator \texttt{SL.UEM.TOTL.ZS} & 55 & \ttfamily\seqsplit{CountriesWbUemTotlConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbVaEst & 100 & \texttt{value} field for WB indicator \texttt{VA.EST} & 50 & \ttfamily\seqsplit{CountriesWbVaEstConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountriesWbWgiPvCcRl & 100 & est\_total (\texttt{WB:PV.EST}) & 85 & \ttfamily\seqsplit{CountriesWbWgiPvCcRlConnector} & CC BY 4.0 / filtered, aggregated; mult=1.0; live \\
+CountryNewsRiskLevel & 100 & risk\_level & 100 & \ttfamily\seqsplit{CountryNewsRiskLevelConnector} & CC BY-ND 4.0; mult=3.65; live \\
+DisasterGdacsHumNat & 100 & value & 100 & \ttfamily\seqsplit{DisasterGdacsHumNatConnector} & GDACS Terms of Use; mult=7.30; live \\
+EconFredHerCountScOvSc & 60 & overall\_score & 60 & \ttfamily\seqsplit{EconFredHerCountScOvScConnector} & Refer to Source Link; mult=1.0; live \\
+EconFredHerCountScRanks & 60 & total & 60 & \ttfamily\seqsplit{EconFredHerCountScRanksConnector} & Refer to Source Link; mult=1.0; live \\
+EconFredHerCountScRights & 100 & property\_rights & 100 & \ttfamily\seqsplit{EconFredHerCountScRightsConnector} & Refer to Source Link; mult=1.0; live \\
+EconFredHerCountScTax & 60 & total & 60 & \ttfamily\seqsplit{EconFredHerCountScTaxConnector} & Refer to Source Link; mult=1.0; live \\
+EurostatStatArblsQ & 60 & value & 60 & \ttfamily\seqsplit{EurostatStatArblsQConnector} & Refer to Source Link; mult=1.12; live \\
+EurostatStatTps & 40 & value & 40 & \ttfamily\seqsplit{EurostatStatTpsConnector} & Refer to Source Link; mult=1.0; live \\
+GovFbiMw & 100 & OpenSanctions NDJSON entities (aggregate COUNT per iso2/date) & 80 & \ttfamily\seqsplit{GovFbiMwConnector} & OpenSanctions / FBI data - Public Domain (DOJ); mult=1.52; live \\
+GovIntPol & 100 & INTERPOL Red Notices: count per capita per iso2/day (aggregated iso2/date; direction negative) & 85 & \ttfamily\seqsplit{GovIntPolConnector} & INTERPOL Terms of Use; mult=1.52; live \\
+NewsMediaStck & 70 & sentiment & 50 & \ttfamily\seqsplit{NewsMediaStckConnector} & Refer to Service Agreement; mult=3.65; live \\
+NfMilitaryMassViolence & 100 & mlmv\_actor\_day\_stress & 100 & \ttfamily\seqsplit{NfMilitaryMassViolenceNfsiConnector} & Internal processing for NationFiles Intelligence; mult=7.30; live \\
+NfNewsCountry24 & 70 & risk\_level & 70 & \ttfamily\seqsplit{NfNewsCountry24Connector} & CC BY-ND 4.0; mult=3.65; live \\
+NfRawNewsSignalsEventRisk & 100 & event\_risk\_level & 100 & \ttfamily\seqsplit{NfRawNewsSignalsEventRiskConnector} & CC BY-ND 4.0; mult=3.65; live \\
+OecdSdmxGdpvAnnpct & 60 & value & 60 & \ttfamily\seqsplit{OecdSdmxGdpvAnnpctConnector} & OECD Terms \& Conditions; mult=1.0; live \\
+OWIDDemocracyIndex & 70 & value & 70 & \ttfamily\seqsplit{OWIDDemocracyIndexConnector} & CC BY / Our World in Data; mult=1.0; live \\
+SdgGlobalIndexSdsn & 60 & overall\_score & 60 & \ttfamily\seqsplit{SdgGlobalIndexSdsnConnector} & Refer to Source Link; mult=1.0; live \\
+TravelAdvisoryUnified & 100 & warning-source count in unified row (\texttt{pub\_*} columns non-null): 1 source $\rightarrow$ raw 75; two or more sources $\rightarrow$ raw 100 (0-100; negative direction) & 75 & \ttfamily\seqsplit{TravelAdvisoryUnifiedConnector} & Refer to Source Link; mult=3.65; live \\
+TravelStateGov & 100 & DoS Level-4 advisories only: row score via \texttt{getStabilityRowScore}; \texttt{travel\_alert\_level} documents threat level in DB & 80 & \ttfamily\seqsplit{TravelStateGovConnector} & U.S. Government Work; mult=3.65; live \\
+TrvlWarnCaVoy & 100 & advisory\_state & 75 & \ttfamily\seqsplit{TrvlWarnCaVoyConnector} & Open Government Licence - Canada; mult=1.52; live \\
+TrvlWarnDe & 100 & warning,partial\_warning,situation\_warning & 75 & \ttfamily\seqsplit{TrvlWarnDeConnector} & Refer to Source Link; mult=1.52; live \\
+TrvlWarnDeWarn & 100 & connector-specific (see connector class) & 75 & \ttfamily\seqsplit{TrvlWarnDeWarnConnector} & Refer to Source Link; mult=1.52; live \\
+TrvlWarnUk & 100 & has\_travel\_advice & 75 & \ttfamily\seqsplit{TrvlWarnUkConnector} & Open Government Licence v2.0; mult=3.65; live \\
+WorldEarthQuakeUsgs & 100 & value & 100 & \ttfamily\seqsplit{WorldEarthQuakeUsgsConnector} & USGS Public Domain; mult=7.30; live \\
+WorldUnivDataSetIpsa & 40 & universities-per-capita score from COUNT(domains) vs population per iso2/\texttt{date\_published} & 25 & \ttfamily\seqsplit{WorldUnivDataSetIpsaConnector} & Refer to repository; mult=1.0; live \\
+\end{longtable}
+\endgroup
+
+\hypertarget{validation-protocol}{%
+\subsubsection{Validation protocol}\label{validation-protocol}}
+
+This part defines a \textbf{deposit-backed} validation protocol
+(hypotheses, metrics, sensitivity gates) and records \textbf{concrete
+numerical excerpts} regenerated from pinned deposit artefacts
+(\textbf{Empirical validation results} below). Protocol-only claims
+remain distinguished from \textbf{reported metrics}: anything tabulated
+there cites an on-disk CSV/JSON path or a reproducible command.
+
+\textbf{Validation protocol scope:} full-panel forecasting benchmarks
+and \textbf{annual-index correlation studies} (FSI / GPI / WGI) require
+additional \textbf{released exports} merged to a frozen ISO/year panel;
+\textbf{Comparator indices} reports structural comparators now and
+defers cross-index Spearman coefficients until such a manifest exists.
+Bootstrap intervals and per‑source bias audits remain supported via
+deposit annexes.
+
+\hypertarget{hypotheses-and-baselines}{%
+\subsubsection{Hypotheses and
+baselines}\label{hypotheses-and-baselines}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{H1 (event reaction):} event-window shift differs from baseline
+  windows.\\
+\item
+  \textbf{H2 (classification quality):} crash predicate and event labels
+  achieve better-than-random discrimination.\\
+\item
+  \textbf{H3 (forecast baseline):} persistence baseline is reported and
+  compared to alternative baselines.
+\end{itemize}
+
+Baselines to include in deposited evaluations:
+
+\begin{itemize}
+\item
+  persistence: \((\hat{y}_{t+h} = y_t)\) (naive copy-value forecast),
+\item
+  \textbf{GDELT-derived alarm score baseline (reproducible):} For each
+  country-day \((c,t)\), compute the \textbf{day-mean Goldstein scale}
+  \(G_{c,t}\) over all GDELT event rows retained by the \textbf{same
+  iso2/day filter} recorded in the deposit's GDELT→Layer‑1 recipe
+  (\passthrough{\lstinline!CountriesGdeltGlobRadarConnector!} row
+  window; empty days treated as missing unless a declared forward-fill
+  rule is versioned in the evaluation manifest). Map to an alarm level
+  on \([0,100]\) via \(a_{c,t} = 100 \cdot \frac{10 - G_{c,t}}{20}\), so
+  that \(G=-10 \Rightarrow a=100\) (most conflictual) and
+  \(G=+10 \Rightarrow a=0\). The series \(\{a_{c,t}\}\) is the
+  \textbf{GDELT alarm baseline} for windowed contrasts against NFSI (and
+  may be \(z\)-scored in the evaluation script, provided the transform
+  is deposited).
+\item
+  externally published index baseline where license permits comparison.
+\end{itemize}
+
+\hypertarget{metrics-and-significance-tests}{%
+\subsubsection{Metrics and significance
+tests}\label{metrics-and-significance-tests}}
+
+\begin{itemize}
+\tightlist
+\item
+  Event detection: precision, recall, F1, ROC/AUC.
+\item
+  Forecast: RMSE, MAE per horizon.
+\item
+  Robustness: sensitivity deltas under connector/constant perturbations.
+\item
+  Significance: permutation sign-flip test (default), bootstrap CI where
+  window-level samples are available.
+\end{itemize}
+
+Reference artefacts:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-10}
+\item
+  \textbf{SM-11}
+\item
+  \textbf{SM-12}
+\item
+  \textbf{Validation annex (deposit):} \textbf{SM-47}
+\item
+  \textbf{Sensitivity / robustness report template (deposit):}
+  \textbf{SM-46}
+\item
+  \textbf{One-shot reproduce bundle:} \textbf{SM-41}
+\end{itemize}
+
+Named-event illustrative metrics (deposit outputs, regenerated by the
+bundle):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-44}
+\item
+  \textbf{SM-45}
+\item
+  \textbf{SM-43}
+\end{itemize}
+
+\hypertarget{crash-mode-operational-definition}{%
+\subsubsection{Crash-mode operational
+definition}\label{crash-mode-operational-definition}}
+
+The \textbf{normative} mathematical definition of \(\mathrm{minSec}\),
+\(\mathrm{crash\_mode}\), and the \textbf{authoritative SQL listing} are
+stated once under \textbf{Methodology} (``Normative SQL --
+\(\mathrm{minSec}\) and crash predicate'').
+
+Crash evaluation uses \textbf{real, non-placeholder} group-100 inputs
+only: connector-days synthesised at Layer‑3 as neutral
+\passthrough{\lstinline!LAYER3\_NO\_DATA\_NEUTRAL\_SCORE!} carry a
+\textbf{\passthrough{\lstinline!no\_data!} flag} and \textbf{must be
+excluded} from \(\mathrm{minSec}\) / crash predicates.
+
+Third-party audits MUST align warehouse views to those predicates
+(repository-aligned naming; \passthrough{\lstinline!nfsi\_connector!} /
+\passthrough{\lstinline!nfsi\_daily!} /
+\passthrough{\lstinline!nf\_stab\_*!} deployments may alias
+columns--document equivalence).
+
+Windowing for evaluation:
+
+\begin{itemize}
+\tightlist
+\item
+  primary: 24h trigger window,
+\item
+  secondary robustness: 72h aggregation.
+\end{itemize}
+
+Evaluation outputs must report false-positive and false-negative rates
+against deposited event labels.
+
+\hypertarget{data-quality-metrics}{%
+\subsubsection{Data quality metrics}\label{data-quality-metrics}}
+
+Required operational metrics per release:
+
+\begin{itemize}
+\tightlist
+\item
+  coverage per country/date,
+\item
+  missingness by connector/day,
+\item
+  connector uptime,
+\item
+  ingestion latency distribution (p50/p90/p99).
+\end{itemize}
+
+SQL queries: \textbf{SM-32}.
+
+\hypertarget{sensitivity-and-robustness}{%
+\subsubsection{Sensitivity and
+robustness}\label{sensitivity-and-robustness}}
+
+This subsection is \textbf{normative} for publication-style review: NFSI
+releases MUST include a sensitivity/robustness artefact set that
+demonstrates bounded output changes under the highest-leverage knobs and
+under missingness stress. The intent is not to optimise NFSI but to
+quantify \textbf{fragility} and to prevent silent behavioural drift.
+
+\textbf{Required perturbation families (minimum):}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Layer‑4 daily cap}: vary
+  \passthrough{\lstinline!LAYER4\_DAILY\_CHANGE\_CAP!} over a declared
+  grid.
+\item
+  \textbf{Security conflict/crash thresholds}: vary
+  \passthrough{\lstinline!LAYER3\_CONFLICT\_THRESHOLD!} and
+  \passthrough{\lstinline!LAYER4\_SECURITY\_CRISIS\_THRESHOLD!}.
+\item
+  \textbf{Update multipliers}: multiply all
+  \passthrough{\lstinline!updateMult!} values by a scalar
+  \(m \in [m_{\min}, m_{\max}]\) and report delta distributions.
+\item
+  \textbf{Missingness worst-case}: run at least one declared missingness
+  stress mode (e.g.~increase \(\mathrm{noDataRatio}\) by synthetic row
+  removal and quantify crash-trigger deltas).
+\item
+  \textbf{Dummy anchors}: vary dummy-anchor weights
+  (\passthrough{\lstinline!W\_L!}, \passthrough{\lstinline!W\_H!}) and
+  report sensitivity of the Layer‑3 base score.
+\end{itemize}
+
+\textbf{Deposit linkage (minimum artefacts):}
+
+\begin{itemize}
+\tightlist
+\item
+  Sweep plan: \textbf{SM-13}
+\item
+  Execution template: \textbf{SM-38}
+\item
+  Fixture delta matrix (example panel): \textbf{SM-12}
+\item
+  Report template: \textbf{SM-46}
+\end{itemize}
+
+\textbf{Minimum panel size (full sweep, normative acceptance):} Let
+\(|\mathcal{C}|\) be the audited active ISO2 universe for the release
+and let \(|T|\) be the count of evaluation calendar dates in that
+release window. The production sensitivity sweep MUST include at least
+\(N_{\min}=|\mathcal{C}|\cdot|T|\) country-days (complete grid unless a
+reviewer-approved sampling plan documents coverage and stratification).
+
+\textbf{Fixture excerpt (panel illustration, not a full sweep):} the
+deposited \textbf{SM-12} artefact uses a toy grid with \(N=30\). Summary
+statistics (mean, median, p95, \(\max(|\Delta|)\)):
+
+\textbf{Table 5 --- Sensitivity fixture summary statistics (toy grid,
+\(N=30\) per perturbation family).}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+perturb
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(N\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+mean \(\Delta\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+median \(\Delta\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+p95 \(\Delta\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(\max(|\Delta|)\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\passthrough{\lstinline!SEC\_CONFLICT\_plus10!} & 30 & +0.0373 & +0.0500
+& +0.0700 & 0.0700 \\
+\passthrough{\lstinline!NET\_OUTAGE\_plus10!} & 30 & -0.0120 & -0.0100 &
++0.0100 & 0.0300 \\
+\passthrough{\lstinline!SOC\_SENT\_plus10!} & 30 & -0.0187 & -0.0200 &
++0.0000 & 0.0500 \\
+\passthrough{\lstinline!ECO\_INFL\_plus10!} & 30 & -0.0047 & +0.0000 &
++0.0000 & 0.0200 \\
+\passthrough{\lstinline!GOV\_WGI\_plus10!} & 30 & -0.0047 & +0.0000 &
++0.0000 & 0.0100 \\
+\end{longtable}
+
+\textbf{Acceptance gate:} a release MUST provide the full sweep and a
+signed manifest (hashes of CSV + plots) when the manuscript/deposit is
+updated for a new implementation version.
+
+\textbf{Hard pass/fail criterion (normative default):} Let
+\(\Delta_{c,t}\) denote the NFSI point delta for country \(c\) and date
+\(t\) versus the unperturbed baseline for the same implementation
+snapshot. For any perturbation row in the signed sweep that is
+classified as a \textbf{standard} knob in the sweep plan (excluding rows
+explicitly tagged \passthrough{\lstinline!exploratory!} /
+\passthrough{\lstinline!stress\_only!} in \textbf{SM-13}), the release
+\textbf{fails} validation if
+
+\[\max_{c \in \mathcal{C},\, t \in T} |\Delta_{c,t}| > 2.0\]
+
+A failed gate \textbf{blocks} external dissemination until: (i) rollback
+to the last passing build, (ii) manual recalibration with documented
+reviewer sign-off and updated constants/manifest, or (iii) a waiver
+recorded in the release manifest with a quantitative justification.
+Fixture illustrations with \(N \ll |\mathcal{C}|\cdot|T|\) do not
+substitute for this full-panel test.
+
+\hypertarget{empirical-validation-results}{%
+\subsubsection{Empirical validation
+results}\label{empirical-validation-results}}
+
+The tables below restate outputs already present under \textbf{SM-01}
+(or values computed \textbf{deterministically} from those files). They
+are \textbf{illustrative} where \(N\) is small or the panel is a toy
+fixture; they nonetheless satisfy the minimum expectation that empirical
+quantities are \textbf{named, bounded, and reproducible}.
+
+\hypertarget{forecast-skill-persistence-baseline-toy-fixture}{%
+\paragraph{Forecast skill -- persistence baseline (toy
+fixture)}\label{forecast-skill-persistence-baseline-toy-fixture}}
+
+Using the published sample fixture (\textbf{SM-39}) and \textbf{SM-36},
+the \textbf{naive persistence} forecaster \(\hat{y}_{t}=y_{t-1}\)
+(previous published NFSI vs next-day NFSI on the same ISO2) yields, over
+\textbf{20} successive country-day transitions on that fixture:
+
+\textbf{Table 6 --- Forecast skill: persistence baseline (toy fixture).}
+
+\begin{longtable}[]{@{}lrl@{}}
+\toprule\noalign{}
+Metric & Horizon \(h=1\) & Notes \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+RMSE & \textbf{12.76} & toy panel; not production headline skill \\
+MAE & \textbf{7.06} & same \\
+\end{longtable}
+
+\textbf{Reproduce:} Run \textbf{SM-36} against the toy fixture tree
+\textbf{SM-39} (exact CLI flags in \textbf{SM-02}), then pair successive
+rows per ISO2. Production-grade RMSE requires exporting
+\passthrough{\lstinline!(forecast\_date, horizon, y\_pred, y\_true)!}
+and running \textbf{SM-51} (\textbf{Reproducibility subsection}).
+
+\hypertarget{named-event-stress-classification-real-db-excerpt-small-n}{%
+\paragraph{\texorpdfstring{Named-event stress classification (real DB
+excerpt, small
+\(n\))}{Named-event stress classification (real DB excerpt, small n)}}\label{named-event-stress-classification-real-db-excerpt-small-n}}
+
+Deposit outputs score \textbf{same-day deterioration} after external
+events listed in \textbf{SM-06}. Let \textbf{positive} denote ``large
+same-day downward move'' per the deposited rule
+\passthrough{\lstinline!positive\_if\_delta\_1d\_lte = -3.0!} (bootstrap
+CI manifest \textbf{SM-43}). This is \textbf{not} the Layer‑4
+\textbf{crash\_mode} Boolean; it is a \textbf{discriminative stress
+proxy} for manuscript \textbf{H2}.
+
+Summary (\textbf{SM-45}, \(n=5\) event rows, positive rate 0.6):
+
+\textbf{Table 7 --- Named-event stress classification metrics (deposit
+excerpt, small \(n\)).} \emph{ROC AUC is shown as \textbf{n/a}
+(\passthrough{\lstinline!-1.0!} deposited) because this isolated \(n=5\)
+slice yields \textbf{no false positives or true negatives}, so
+trapezoidal ROC area is mathematically undefined---not an empirical
+failure of rank scoring.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Metric
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Comment
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Precision (at scanned threshold) & \textbf{1.00} & tp=3, fp=0 \\
+Recall & \textbf{1.00} & fn=0 \\
+F1 & \textbf{1.00} & degenerate perfect separation on \(n=5\) \\
+ROC AUC (trapezoid) & \textbf{n/a} & deposited value
+\passthrough{\lstinline!-1.0!} indicates \textbf{undefined} metric under
+tiny-\(n\) scoring tie rules \\
+\end{longtable}
+
+\textbf{Bootstrap mean \(\Delta\) NFSI (day of event vs baseline):} mean
+\textbf{-1.45} index points; 95\% bootstrap CI \textbf{{[}-5.28,
++2.51{]}} (\(B=5000\), same JSON manifest).
+
+\hypertarget{crash-mode-rule-conformance-deterministic-checks}{%
+\paragraph{Crash-mode rule conformance (deterministic
+checks)}\label{crash-mode-rule-conformance-deterministic-checks}}
+
+\textbf{Discriminative F1 for crash\_mode vs an external crisis
+catalogue} is \textbf{not} deposited: it requires a labelled evaluation
+calendar. The following \textbf{implementation conformance} checks are
+nonetheless quantitative pass/fail artefacts:
+
+\textbf{Table 8 --- Crash-mode rule conformance (deterministic checks).}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Check
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Artefact
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Disposition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Predicate
+\(\mathrm{minSec}<\texttt{LAYER4\_SECURITY\_CRISIS\_THRESHOLD}\)
+triggers bypass & \textbf{SM-37} Test A & \textbf{Pass} (fixture forces
+crash where expected) \\
+SQL outline alignment & \textbf{Methodology} normative SQL vs
+contributor filtering & \textbf{Closed} by construction \\
+\end{longtable}
+
+\hypertarget{comparator-indices-refresh-coverage-correlation-stance}{%
+\paragraph{Comparator indices -- refresh, coverage, correlation
+stance}\label{comparator-indices-refresh-coverage-correlation-stance}}
+
+Structural comparison (cadence and publisher-reported scale scope).
+\textbf{Spearman \(\rho\)} between \textbf{annualised NFSI} and each
+index requires a \textbf{dated merge manifest} (ISO3 harmonisation, lag
+alignment, overlapping years); cells show \textbf{n.a.} until that file
+ships alongside \textbf{SM-49}.
+
+\textbf{Table 9 --- Comparator indices: refresh cadence, coverage, and
+correlation stance.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Family
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Median refresh interval
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Economies covered (order of magnitude)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Spearman \(\rho\) vs annualised NFSI
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Primary public methodology
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{NFSI (this work)} & \textbf{1 calendar day} & broad ISO2 surface
+(connector-dependent; comparable to \(\approx 190+\) when connectors
+active) & -- & this manuscript + pinned implementation \\
+Fragile States Index (FSI) & \(\approx\) \textbf{365 d} & \(\approx\)
+\textbf{178} & \textbf{n.a.} (manifest pending) & Fund for Peace FSI
+reports \\
+Global Peace Index (GPI) & \(\approx\) \textbf{365 d} & \(\approx\)
+\textbf{163} & \textbf{n.a.} & Institute for Economics \& Peace \\
+Worldwide Governance Indicators (WGI) & \(\approx\) \textbf{730 d}
+(biennial wave spacing typical) & \textbf{200+} & \textbf{n.a.} & World
+Bank WGI \\
+NFSI vs WGI sub-indicators & -- & -- & \textbf{Mechanically coupled} for
+governance pull: \textbf{WGI-derived \(\mathrm{est\_total}\)} feeds
+Layer‑3; standalone \(\rho\) must be interpreted as \textbf{construct
+overlap}, not independent validation & \\
+\end{longtable}
+
+\begin{figure}
+\hypertarget{fig:06-sensitivity-mean-abs}{%
+\centering
+\includegraphics{research/peer-review/figures-png/fig08-sensitivity-mean-abs.png}
+\caption{Fig. 6 -- Sensitivity fixture: mean absolute NFSI
+delta}\label{fig:06-sensitivity-mean-abs}
+}
+\end{figure}
+
+\emph{Fig. 6 -- Caption:} Mean absolute published NFSI delta under five
+deposited perturbation families on the toy sensitivity grid (\(N=30\)
+cells each); values coincide with the \textbf{Sensitivity and
+robustness} table columns ``mean Δ'' (absolute magnitude). Source:
+\textbf{SM-12}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{discussion-and-limitations}{%
+\subsection{Discussion and
+Limitations}\label{discussion-and-limitations}}
+
+This opening subsection positions the NFSI for \textbf{scientific
+readers} without altering the \textbf{normative} computation in
+\textbf{Methodology through Validation}.
+
+\hypertarget{epistemic-scope}{%
+\subsubsection{Epistemic scope}\label{epistemic-scope}}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Not causal identification.} The pipeline specifies a
+  deterministic mapping from declared inputs to \(S_c(t)\); it does
+  \textbf{not}, by itself, identify causal effects of policies,
+  incidents, or interventions on countries' stability outcomes.
+\item
+  \textbf{Composite subjectivity.} Connector weights, group assignments,
+  malus/bonus terms, and inertia/crash thresholds encode
+  \textbf{engineering and policy choices}. They are documented and
+  sweepable (\textbf{Validation and Results → Sensitivity and
+  robustness}) but not uniquely determined by a single welfare
+  objective.
+\item
+  \textbf{Uncertainty.} Published NFSI values are \textbf{point
+  outputs}. Probabilistic bands are \textbf{not} implied except where
+  \textbf{Variant D} multiple imputation documents seeds and manifests;
+  other layers are deterministic given pinned inputs.
+\end{itemize}
+
+\hypertarget{endogeneity-and-feedback}{%
+\subsubsection{Endogeneity and
+feedback}\label{endogeneity-and-feedback}}
+
+High-frequency inputs (e.g.~news-derived risk feeds) may co-move with
+geopolitical stress. \textbf{Misinterpretation risk:} treating NFSI as
+an independent ``ground truth'' can confuse descriptive composite
+movement with causal attribution. Operators SHOULD separate
+\textbf{inputs}, \textbf{outputs}, and \textbf{downstream decisions}
+(see \textbf{Governance ethics subsection}).
+
+\hypertarget{external-validation-and-comparability}{%
+\subsubsection{External validation and
+comparability}\label{external-validation-and-comparability}}
+
+Deposit-backed \textbf{numerical excerpts} (persistence-baseline
+residuals on the toy fixture, named-event metrics, sensitivity
+magnitudes, comparator cadence/coverage) appear in \textbf{Validation --
+empirical excerpts}. \textbf{Cross-index Spearman correlations} against
+FSI / GPI / WGI await a \textbf{frozen annual merge manifest}
+(harmonised ISO list, year alignment); until then \(\rho\) cells in
+\textbf{Validation -- Comparator indices} remain \textbf{n.a.} Readers
+SHOULD consult each publisher's methodology before interpreting rank or
+level comparisons.
+
+\hypertarget{comparison-landscape}{%
+\subsubsection{Comparison landscape}\label{comparison-landscape}}
+
+Quantitative refresh/coverage comparators for headline indices are
+consolidated in \textbf{Validation -- Comparator indices}. Qualitative
+contrasts with additional peer families (e.g.~V‑Dem) remain as in prior
+editions: annual methodology publications and open datasets where
+licenced.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{governance-operations-and-threats}{%
+\subsubsection{Governance, operations, and
+threats}\label{governance-operations-and-threats}}
+
+\hypertarget{roles-controls-and-audit-logs}{%
+\paragraph{Roles, controls, and audit
+logs}\label{roles-controls-and-audit-logs}}
+
+\begin{itemize}
+\tightlist
+\item
+  Publication/change authority is defined in \textbf{SM-20}
+  (A1/A2/E1/M1).
+\item
+  Audit-log field schema: \textbf{SM-18}.
+\item
+  Retention policy: \textbf{SM-22}.
+\item
+  Technical attestation template: \textbf{SM-17}.
+\end{itemize}
+
+\hypertarget{change-control-and-rollback}{%
+\paragraph{Change control and
+rollback}\label{change-control-and-rollback}}
+
+Constants and logic changes are governed by:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-19}.
+\end{itemize}
+
+Minimum gate set before rollout:
+
+\begin{itemize}
+\tightlist
+\item
+  fixture tests pass,
+\item
+  invariant checks pass,
+\item
+  sensitivity artefacts updated,
+\item
+  documented rollback reference.
+\end{itemize}
+
+\hypertarget{license-and-publishability-matrix}{%
+\paragraph{License and publishability
+matrix}\label{license-and-publishability-matrix}}
+
+Connector-level publishability assessment is deposited at:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-25}.
+\end{itemize}
+
+Fields include: raw-data redistributability, aggregated-score
+publishability, attribution requirement, and publishability status
+(\passthrough{\lstinline!yes/no/conditional!}).
+
+\hypertarget{api-transparency-contract}{%
+\paragraph{API transparency contract}\label{api-transparency-contract}}
+
+A minimal OpenAPI contract for published NFSI outputs is provided at:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-05}.
+\end{itemize}
+
+\hypertarget{threat-model}{%
+\paragraph{Threat model}\label{threat-model}}
+
+This subsection is \textbf{normative} for publication‑grade security
+review of an operational, connector‑backed stability index and documents
+minimum threat assumptions and mitigations.
+
+\textbf{Assets and trust boundaries} * \textbf{Assets:} raw connector
+payloads; Layer‑1/2 intermediates; published NFSI values;
+provenance/flags (padded/imputed/placeholder); release manifests; audit
+logs. * \textbf{Boundaries:} connector ingestion boundary (external →
+internal); computation boundary (L1-L4); publication boundary (API/web
+exports).
+
+\textbf{Threats / attack vectors} * \textbf{Data poisoning:} adversary
+injects or manipulates upstream signals (e.g.~automated news spam,
+event-source manipulation) to move security-group minima or amplify
+deltas. * \textbf{Adversarial missingness:} targeted outages/delays of
+high-influence connectors to suppress crash mode or to bias the
+composite toward neutral substitutions. * \textbf{Weight/constant
+tampering:} unauthorized changes to \textbf{SM-15} / connector metadata
+(weights, groups, update multipliers) to alter scores. * \textbf{Replay
+/ stale-data attacks:} old connector-day scores replayed to avoid
+detection of acute changes. * \textbf{Export integrity attacks:}
+tampering with published JSON/CSV so consumers see altered NFSI values
+or missing provenance flags.
+
+\textbf{Mitigations (minimum required)} * \textbf{Provenance +
+flagging:} exports MUST include
+\passthrough{\lstinline!was\_placeholder!},
+\passthrough{\lstinline!was\_padded!},
+\passthrough{\lstinline!was\_imputed!}, coverage metrics, and
+last-update timestamps per connector-day (optional legacy keys such as
+\passthrough{\lstinline!pad\_variant!} may remain for
+backward-compatible audits--see \textbf{Appendix C}). *
+\textbf{Integrity gates:} deterministic recompute fixtures, invariant
+checks, and evidence hashes (see \textbf{Reproducibility} subsection and
+\textbf{SM-48}). * \textbf{Change control:} constants/weights changes
+require logged approvals and tagged releases (see \textbf{SM-19}). *
+\textbf{Anti-replay:} ingestion stores provider snapshot timestamps and
+rejects/flags out-of-window payloads (operator policy; export the
+resulting flags). * \textbf{Monitoring:} operational alerting on
+coverage drops, latency spikes, and abrupt cross-connector distribution
+shifts. For \textbf{country-day} \(\mathrm{noDataRatio}\)
+(\textbf{Methodology / Appendix B}): emit a \textbf{severity‑2
+(warning)} when \(\mathrm{noDataRatio} \geq 0.40\) on monitored
+aggregates; escalate to \textbf{severity‑1} when
+\(\mathrm{noDataRatio} \geq 0.50\). These thresholds track
+\textbf{missingness operational risk}; Layer‑4 inertia remains
+\textbf{binary} (\(0.50\) if \(N_{\mathrm{no\_data}}>0\), else \(0.80\);
+\textbf{Methodology / Appendix A}). * \textbf{Red-team tests:}
+adversarial missingness simulations (random/block/country-targeted) must
+be run per release candidate; publish FPR/FNR for crash gate where
+labels exist.
+
+\textbf{Discrimination limits: random outage vs systematic suppression
+(Layers 1-2).} Layer‑1/Layer‑2 score algebra \textbf{cannot}, by itself,
+invert the missingness mechanism: a benign CDN outage, a routing
+partition, and a coordinated state-level signal blackout can yield
+\textbf{indistinguishable} sparse score matrices at the connector-day
+granularity. The NFSI pipeline therefore does \textbf{not} claim to
+classify ``server fault'' vs ``strategic withholding'' from scores
+alone. Instead, audit-grade operation must fuse \textbf{orthogonal
+evidence}: (i) cross-connector correlation of dropout (single-AS
+failures vs broad, geography-aligned gaps); (ii) external reachability /
+BGP / public incident telemetry where available; (iii) temporal
+clustering relative to known conflict escalations; (iv) mandatory
+\passthrough{\lstinline!security\_missingness\_review!} when structural
+pads contribute to security MIN under the \textbf{manuscript normative}
+missing-as-worst rule (\textbf{Methodology}). Neutral midpoint pads
+(\textbf{50}) apply \textbf{only} to non-security anchored averages--not
+to security MIN semantics.
+
+\hypertarget{ethics-and-societal-impact}{%
+\paragraph{Ethics and societal
+impact}\label{ethics-and-societal-impact}}
+
+Beyond operational threat controls (\textbf{Governance subsection
+above}) and protocol ethics (\textbf{Validation (T1-T3)}),
+publication-grade use SHOULD address:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Misuse / dual-use:} Composite indices can inform travel,
+  finance, insurance, or migration narratives. Publishers SHOULD avoid
+  implying precision beyond documented uncertainty (see
+  \textbf{Limitations}) and SHOULD maintain dispute and correction
+  pathways (\textbf{SM-20}).
+\item
+  \textbf{Equity and dignity:} Country-level scores aggregate
+  heterogeneous populations; they MUST NOT substitute for situational
+  intelligence or ground verification in humanitarian or security
+  contexts.
+\item
+  \textbf{Feedback loops:} Repeated consumption of the same headline
+  score in automated systems may amplify volatility perception;
+  governance SHOULD favour provenance-rich exports and human gates
+  (\textbf{T1-T3}).
+\item
+  \textbf{Environmental footprint:} High-frequency ingestion has compute
+  and energy costs; operators SHOULD document retention and batching
+  policies (\textbf{SM-22}).
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{terminology}{%
+\subsubsection{Terminology}\label{terminology}}
+
+\textbf{Table 10 --- Abbreviated glossary of terms.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Term
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Definition
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{NFSI} & NationFiles Stability Index. A 0-100 normalised
+stability indicator per country and day. Higher value = more stable
+assessment; computed from multiple data sources across four processing
+layers (Layers 1-4). \\
+\textbf{Layer 1} & First processing layer: raw values from each source
+are normalised to a row-level score 0-100 (min-max, with fixed direction
+`higher = better/worse'). \\
+\textbf{Layer 2} & Second layer: row scores are aggregated per source,
+country, and date into a daily score and smoothed with the previous day
+(e.g.~60\% today, 40\% previous day). \\
+\textbf{Layer 3} & Third layer: the country NFSI (raw score) is computed
+from all source scores: weighted average with effective weights,
+conflict malus, WGI pull, and other adjustments. \\
+\textbf{Layer 4} & Fourth layer: daily smoothing (inertia). The shipped
+implementation applies \(w_{\mathrm{inertia}}\) to \textbf{yesterday's
+published NFSI} and \((1-w_{\mathrm{inertia}})\) to \textbf{today's
+Layer‑3 bounded score}
+\(\max(\texttt{LAYER3\_SCORE\_FLOOR},\mathrm{nfsi\_raw}^{\mathrm{rounded}})\)
+(post‑floor Layer‑3 output), \textbf{not} the raw pre‑floor value.
+\textbf{Effective} weights are
+\textbf{\((w_{\mathrm{prev}},w_{\mathrm{today}})=(0.50,0.50)\)} when any
+neutral Layer‑3 substitution occurred (\(N_{\mathrm{no\_data}}>0\)),
+else \textbf{\((0.80,0.20)\)}; see \textbf{Methodology / Appendix A}.
+Crash mode bypasses smoothing;
+\(\pm\texttt{LAYER4\_DAILY\_CHANGE\_CAP}\) applies when inertia runs. \\
+\textbf{Raw value (raw)} & Original numeric value from a data source
+before conversion to a 0-100 score (e.g.~conflict count, percentage,
+scale value). \\
+\textbf{Normalisation} & Conversion of raw values into a common range
+(here 0-100). With min-max: (value - minimum) / (maximum - minimum) *
+100, optionally inverted when `higher = worse'. \\
+\textbf{Score (row / daily / country)} & A value bounded to 0-100: row
+score per record (Layer 1), daily score per source/country/date (Layer
+2), country score = NFSI (Layers 3-4). \\
+\textbf{Goldstein scale} & Scale used by GDELT from -10 (highly
+conflictual) to +10 (cooperative). Translated into stability scores in
+NFSI logic (higher Goldstein = better stability). \\
+\textbf{Dummy value} & Fixed additive value (0 and 100) in aggregation
+so that averages and weighting remain stable even when few sources are
+available. \\
+\textbf{Inertia} & Smoothing over time: published NFSI blends
+yesterday's value with today's Layer‑3 output. \textbf{Shipped} policy:
+faster reaction (\(0.50\) previous weight) whenever \textbf{any} neutral
+Layer‑3 substitution exists; otherwise standard \textbf{\(0.80\)}
+(\textbf{Methodology / Appendix A}). \\
+\textbf{Recovery} & When no new data exists for a country/date, the
+score is gradually raised (up to cap 95) so that gaps are not penalised
+indefinitely. \\
+\textbf{Recovery cap} & Upper bound on recovery-driven score increases
+without new measurements
+(e.g.~\passthrough{\lstinline!LAYER2\_RECOVERY\_CAP=95!}). Bounded
+recovery mechanisms prevent asymptotic convergence to an unrealistically
+``perfect'' stability score when observations remain absent. \\
+\textbf{Conflict malus} & Deduction from the NFSI when the minimum of
+security indicators (e.g.~conflicts, violence) falls below a threshold
+(70). Emphasises the role of security data. \\
+\textbf{WGI (Worldwide Governance Indicators)} & World Bank indicators
+of government quality (rule of law, effectiveness, etc.). In NFSI: `WGI
+pull' can raise the raw score when governance is strong. \\
+\textbf{Security group (group 100)} & Thematic group of
+security-critical sources (e.g.~conflicts, travel warnings). For daily
+aggregation the minimum is taken (one critical event suffices). \\
+\textbf{Coverage} & For a fixed
+\passthrough{\lstinline!(connector\_id, date)!}, the fraction of ISO2
+countries with at least one \textbf{real Layer‑1} row
+(\passthrough{\lstinline!k\_meas>0!}). Used to flag low-coverage
+connector-days. \\
+\textbf{Trend synthesis} & Deterministic imputation step used when a
+connector-day is active for some countries but missing for a specific
+country; the missing cell is synthesised from last known value and
+cross-country day trend and must be flagged as imputed/placeholder as
+applicable. \\
+\textbf{Connector / data source} & An integrated data source (e.g.~World
+Bank, GDELT, ACLED) that contributes to the NFSI in Layers 1-3. Each
+connector has a thematic group and a weight. \\
+\textbf{\passthrough{\lstinline!contributors\_count!}} & In
+exports/logs: typically \(N_{\mathrm{slots}}\)--Layer‑3 connector slots
+in the composite for \passthrough{\lstinline!(iso2, date)!} (includes
+neutral fills). Distinct from ``rows with measured Layer‑1
+evidence.'' \\
+\textbf{No-data (Layer‑3 substitution)} & A connector lacks a real
+\passthrough{\lstinline!nfsi\_connector!} observation for
+\passthrough{\lstinline!(iso2, date)!} during Layer‑3 aggregation.
+Implemented as
+\textbf{\passthrough{\lstinline!LAYER3\_NO\_DATA\_NEUTRAL\_SCORE!} (50)}
+plus an explicit internal \passthrough{\lstinline!\_no\_data!} flag so
+neutral substitution is \textbf{never} mistaken for measured security
+deterioration. \\
+\textbf{Placeholder score} & Synthetic \textbf{non-real} substitution
+emitted for operational completeness (distinct from statistical
+missingness); must be excluded from crash/min-security predicates
+(\(\mathrm{minSec}\)). Flag names vary by deployment; exporters should
+materialise \passthrough{\lstinline!was\_placeholder!}/equivalent
+explicitly. \\
+\textbf{\passthrough{\lstinline!refLog!} /
+\passthrough{\lstinline!popLog!}} & Code identifiers for \(R_{\log}\),
+\(P_{\log}\) (Layer 3):
+\(R_{\log}=\log_{10}(\max(N_{\mathrm{ref}},\mathrm{Pop}_{\min}))\),
+\(P_{\log}=\log_{10}(\max(\mathrm{pop},\mathrm{Pop}_{\min}))\) with
+\(N_{\mathrm{ref}}=\) \passthrough{\lstinline!LAYER3\_POPULATION\_REF!},
+\(\mathrm{Pop}_{\min}=\)
+\passthrough{\lstinline!LAYER3\_POP\_LOG\_MIN!}. \\
+\textbf{\passthrough{\lstinline!popNegMult!}} & Code identifier for
+\(M_{\mathrm{neg}}\): \(\min(2,\ R_{\log}/P_{\log})\) with cap
+\passthrough{\lstinline!LAYER3\_POP\_NEG\_MULTIPLIER\_CAP!} (=2). \\
+\textbf{\passthrough{\lstinline!sumWeighted!},
+\passthrough{\lstinline!sumWeights!}, \passthrough{\lstinline!effW\_n!}}
+& Layer‑3 numerators/denominator for weighted composition:
+\(effW_n = g_n \cdot (w_n/100)\cdot u_n\), then aggregate with dummy
+anchors (\passthrough{\lstinline!NFSI\_DUMMY\_LOW!},
+\passthrough{\lstinline!NFSI\_DUMMY\_HIGH!}) as in the \textbf{reference
+implementation} (pinned PHP module). \\
+\textbf{\passthrough{\lstinline!contributors\_count!} /
+\passthrough{\lstinline!no\_data\_ratio!}} & \(N_{\mathrm{slots}}\) vs
+\(N_{\mathrm{no\_data}}\) (internal
+\passthrough{\lstinline!\_no\_data\_connectors!});
+\(\mathrm{noDataRatio}=N_{\mathrm{no\_data}}/N_{\mathrm{slots}}\).
+Shipped inertia uses
+\passthrough{\lstinline!\_score\_without\_l1\_l2\_data!}
+\(\Leftrightarrow (N_{\mathrm{no\_data}}>0)\) (\textbf{Methodology /
+Appendix B}). \\
+\textbf{VAR (vector autoregression)} & Multivariate time-series model
+relating several variables over time; used in some optional product
+stacks, \textbf{not} specified by L1--L4 here. \\
+\textbf{Data provenance} & Origin and traceability of data: which
+source, which licence, how often updated. Documented in this report's
+data inventory and legal sources. \\
+\textbf{Audit trail} & Traceable log of changes (e.g.~data snapshot,
+model version) with timestamp and hash, for auditors and
+reproducibility. \\
+\textbf{Reproducibility} & Property that the same result can be obtained
+from the same inputs and methodology. Pursued via documented formulas,
+code, and data provenance. \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{related-documents}{%
+\subsubsection{Related documents}\label{related-documents}}
+
+Operator-published summaries (methodology, governance, security posture)
+may accompany this manuscript but are \textbf{not} normative substitutes
+for the deposited artefacts in \textbf{SM-01} and \textbf{SM-48}.
+Reviewers should privilege: the deposited evidence manifests
+(\textbf{SM-49/SM-50}), \textbf{SM-23}--\textbf{SM-24}, \textbf{SM-15},
+governance SOPs under \textbf{SM-16}, and the OpenAPI stub
+\textbf{SM-05}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{reproducibility-evidence-pack-and-errata}{%
+\subsubsection{Reproducibility, evidence pack, and
+errata}\label{reproducibility-evidence-pack-and-errata}}
+
+This annex provides a \textbf{verifiable evidence mechanism} for
+reviewers and auditors:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Implementation constancy}: pin to a stable implementation
+  identifier; hash key artefacts.
+\item
+  \textbf{Reproducibility}: define what inputs are required; provide a
+  fixture pattern and testable invariants.
+\item
+  \textbf{Forecast validation (optional):} deposit backtest/RMSE tooling
+  (\textbf{SM-51}, \textbf{SM-42}); performance claims belong in dated
+  artefacts, not static prose.
+\end{itemize}
+
+In addition, a \textbf{deposit-ready local bundle} is provided at
+\textbf{SM-01}, including:
+
+\begin{itemize}
+\tightlist
+\item
+  a synthetic/redacted \textbf{sample dataset fixture} (\textgreater= 10
+  countries x 30 days),
+\item
+  a minimal schema (\textbf{SM-40}),
+\item
+  executable unit tests and validation scaffolds (\textbf{SM-30}),
+\item
+  governance artefacts (\textbf{SM-16}),
+\item
+  a formal, machine-checkable formulas annex (\textbf{SM-04} and
+  \textbf{SM-03}),
+\item
+  machine-readable connector provenance (\textbf{SM-23}),
+\item
+  validation annex templates (\textbf{SM-47}, \textbf{SM-46}),
+\item
+  one-shot reviewer runner (\textbf{SM-41}).
+\end{itemize}
+
+\hypertarget{implementation-constancy-codecommit-hashes}{%
+\paragraph{Implementation constancy (code/commit +
+hashes)}\label{implementation-constancy-codecommit-hashes}}
+
+\textbf{Reference module:} redacted in the public package
+(\textbf{security hardening}). For peer reviewers who require
+source-level verification, the exact module path can be provided under
+controlled access together with the pinned implementation identifier.
+
+\textbf{Pinned implementation identifier:}
+\passthrough{\lstinline!redacted identifier (available to reviewers under controlled access)!}
+(redacted in the public package; recorded in evidence manifests and
+available to reviewers under controlled access if required).
+
+\textbf{Evidence manifest (auto-generated):} \textbf{SM-49} (generated
+at \passthrough{\lstinline!2026-05-05 08:05:32 UTC!}).
+
+\textbf{SHA-256 sums (auto-generated):} \textbf{SM-50}.
+
+Notes: * The repository can be operationally ``dirty'' due to connector
+runtime artefacts (queues, timestamps). The evidence manifest hashes
+\textbf{only} the key documentation/build artefacts and a pinned
+implementation artifact (redacted in the public package), not runtime
+queues. * For a third-party audit, pin to a clean tag and attach the
+manifest + sums as deposited artefacts (see the deposit packaging
+checklist in the \textbf{Validation} section above).
+
+\hypertarget{reproducibility-on-real-inputs-or-a-clean-fixture}{%
+\paragraph{Reproducibility on real inputs (or a clean
+fixture)}\label{reproducibility-on-real-inputs-or-a-clean-fixture}}
+
+To reproduce a country/day NFSI value deterministically, a reviewer
+needs:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Layer 1 inputs}: raw rows per connector per (iso2, date) for
+  the defined raw column(s), plus direction metadata (``higher =
+  worse/better'').
+\item
+  \textbf{Layer 2 inputs}: per-connector/day aggregation policy,
+  including group handling (security MIN), dummies/pads, recovery rules,
+  and start values.
+\item
+  \textbf{Layer 3 inputs}: connector-day scores, connector group/weight
+  matrix, governance inputs (e.g.~\(\mathrm{est\_total}\) where used),
+  and population values where penalties/bonuses apply.
+\item
+  \textbf{Layer 4 inputs}: previous-day score, \(\mathrm{minSec}\), and
+  the inertia/crash-mode rules.
+\end{itemize}
+
+\textbf{Fixture recommendation (publishable):} * Provide a minimal
+synthetic dataset with a handful of countries (e.g.~3) and 10-20
+consecutive days. * Include cases for: - Missing connectors (no-data
+ratio \(\geq 0.5\)) - Security group present vs absent - Crash mode
+triggered (\(\mathrm{minSec} < 25\)) - Daily change cap (±3) binding
+
+\textbf{Testable invariants (audit checks):} * All emitted scores must
+satisfy \((1 \leq \text{NFSI} \leq 100)\) (floor and cap). * If crash
+mode triggers, Layer 4 must not apply inertia (reason logged). * If
+inertia applies, the per-day delta must be capped at \(\pm 3\). *
+Missing connectors must not be treated as security negatives for
+\(\mathrm{minSec}\) (only real group-100 data contributes to
+crash/conflict minima).
+
+Deposit-side executable checks: * \textbf{Bundle:} \textbf{SM-41}
+(markdown audit → deterministic fixture recompute ×2 → invariants → unit
+tests → playbook assertions → pandoc/lualatex smoke → PDF text sanity) *
+\textbf{À-la-carte:} \textbf{SM-36}, \textbf{SM-53}, and \textbf{SM-37}
+against fixture \textbf{SM-39} (CLI examples in \textbf{SM-02}). *
+Invariant definitions: \textbf{SM-21}
+
+\hypertarget{forecast-validation-optional-backtest-rmse}{%
+\paragraph{Forecast validation (optional): backtest +
+RMSE}\label{forecast-validation-optional-backtest-rmse}}
+
+For traceability, deposited tooling supports evaluation without freezing
+fragile numbers in prose:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Performance annex (if claimed):} dataset window, exclusions,
+  target, baselines, rolling-origin protocol, horizons/metrics.
+\item
+  \textbf{RMSE scaffold:} \textbf{SM-51} --- input CSV columns
+  \passthrough{\lstinline!iso2, forecast\_date, horizon\_days, y\_pred, y\_true!};
+  outputs RMSE overall and per horizon.
+\end{itemize}
+
+Archive generated RMSE/MAE tables under \textbf{SM-42} with timestamps
+and input manifests; cite a dated backtest report when asserting
+performance.
+
+Computation scripts and raw export snapshots are provided in the deposit
+bundle:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-34}
+\item
+  \textbf{SM-33}
+\item
+  \textbf{SM-29}
+\end{itemize}
+
+Normative pipeline pseudocode (deposit artefact):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-28}
+\end{itemize}
+
+Backtest protocol runner (no Jupyter required):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{SM-11}
+\end{itemize}
+
+\hypertarget{errata-and-intentional-specification-deltas}{%
+\paragraph{Errata and intentional specification
+deltas}\label{errata-and-intentional-specification-deltas}}
+
+Shipped-code parity differences versus this manuscript's \textbf{single
+normative variant} are consolidated in \textbf{Appendix C}. Summary:
+
+\textbf{Table 11 --- Errata and intentional specification deltas.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.0875}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3125}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.6000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Topic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Manuscript (normative)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Deployed PHP (non-normative for prose claims)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+L2 security MIN structural pads & Pad absent multiset slots with
+\textbf{0} & Literal \textbf{\passthrough{\lstinline!100.0!}} in MIN
+multiset for parity audits \\
+Gap synthesis when Layer‑2 history absent & Conservative \textbf{0}
+endpoint aligned with missing-as-worst & Default
+\textbf{\passthrough{\lstinline!100.0!}} in reference module \\
+L4 inertia & Binary \textbf{0.50} / \textbf{0.80} vs
+\(N_{\mathrm{no\_data}}\) & Same binary mapping in shipped reference
+module (\textbf{Appendix C}) \\
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Pseudocode naming:} CamelCase symbols in \textbf{Methodology /
+  Appendix B} map to \passthrough{\lstinline!snake\_case!} PHP fields
+  where noted.
+\end{itemize}
+
+\textbf{PDF / build note:} The \textbf{canonical} reviewer PDF is
+generated by the NationFiles \textbf{HTML + KaTeX} pipeline
+(\passthrough{\lstinline!ResearchPdfBuilder!}). The \textbf{IEEE-style}
+PDF for journal submission builds via
+\textbf{\passthrough{\lstinline!bash research/build-peer-review-pdf-ieee.sh!}}
+(Pandoc + \textbf{IEEEtran} + \textbf{pdflatex} ×3, optional
+\textbf{bibtex} if \passthrough{\lstinline!\\bibdata!} is present).
+Overfull box warnings can still appear on wide tables; treat them as
+\textbf{typographic} unless paired with
+\passthrough{\lstinline!LaTeX Error!}. Combined transcript:
+\textbf{SM-14} (SM supplement appended after main matter).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{conclusion}{%
+\subsection{Conclusion}\label{conclusion}}
+
+The NationFiles Stability Index is specified as a \textbf{deterministic}
+mapping from declared connector inputs and manifests to a bounded daily
+country score \(S_c(t)\in[1,100]\). Four layers--normalisation,
+connector-day aggregation with explicit missingness semantics, a
+weighted national composite with malus/bonus terms, and inertia with a
+crash-mode gate driven by measured security minima--yield reproducible
+outputs under a pinned implementation. \textbf{Validation and Results}
+summarises deposit-backed metrics (fixture persistence errors,
+named-event discrimination, sensitivity panels, structural comparison to
+annual indices). Full rank correlations against FSI/GPI/WGI require
+frozen merge manifests. Operators SHOULD combine headline scores with
+provenance exports, mandatory human gates where stated, and the
+reproducibility bundle described under \textbf{Discussion}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{references}{%
+\subsection{References}\label{references}}
+
+Composite methodology, reproducibility, and comparator indices
+(selection for positioning NFSI in the literature; URLs current as of
+manuscript date):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  OECD \& Joint Research Centre (2008). \emph{Handbook on Constructing
+  Composite Indicators: Methodology and User Guide}. OECD Publishing.
+  \url{https://doi.org/10.1787/9789264043466-en}
+\item
+  Saltelli, A., Ratto, M., Andres, T., et al.~(2008). \emph{Global
+  Sensitivity Analysis: The Primer}. Wiley.
+\item
+  Peng, R. D. (2011). Reproducible research in computational science.
+  \emph{Science}, 334(6060), 1226-1227.
+  \url{https://doi.org/10.1126/science.1213847}
+\item
+  Stodden, V., McNutt, M., Bailey, D. H., et al.~(2016). Enhancing
+  reproducibility for computational methods. \emph{Science}, 354(6317),
+  1240-1241. \url{https://doi.org/10.1126/science.aah6168}
+\item
+  Fund for Peace (ongoing). \emph{Fragile States Index -- Methodology}.
+  \url{https://fragilestatesindex.org/methodology/}
+\item
+  Institute for Economics \& Peace (ongoing). \emph{Global Peace Index}
+  -- methodology in annual report annexes.
+  \url{https://www.economicsandpeace.org/}
+\item
+  World Bank (ongoing). \emph{Worldwide Governance Indicators --
+  Overview / methodology}.
+  \url{https://www.worldbank.org/en/publication/worldwide-governance-indicators}
+\item
+  Coppedge, M., et al.~(ongoing). \emph{V-Dem Methodology}. V-Dem
+  Institute. \url{https://www.v-dem.net/documents/methodology/}
+\item
+  Raleigh, C., et al.~ACLED methodology \& codebook (ongoing). Armed
+  Conflict Location \& Event Data Project.
+  \url{https://acleddata.com/methodology/}
+\item
+  Leetaru, K., Schrodt, P. A., et al.~GDELT project documentation
+  (ongoing). \url{https://www.gdeltproject.org/}
+\item
+  Morgan, M. G., \& Henrion, M. (1990). \emph{Uncertainty: A Guide to
+  Dealing with Uncertainty in Quantitative Risk and Policy Analysis}.
+  Cambridge University Press.
+\item
+  Saisana, M., Saltelli, A., \& Tarantola, S. (2005). Uncertainty and
+  sensitivity analysis techniques as tools for the quality assessment of
+  composite indicators. \emph{Journal of the Royal Statistical Society:
+  Series A}, 168(2), 307-323.
+  \url{https://doi.org/10.1111/j.1467-985X.2005.00350.x}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{appendix-a-full-constants-table}{%
+\subsection{Appendix A -- Full constants
+table}\label{appendix-a-full-constants-table}}
+
+For self‑contained peer review, this appendix reproduces the complete
+constant set that is otherwise deposited as \textbf{SM-15}.
+\textbf{Sensitivity} follows the taxonomy of \textbf{Validation and
+Results → Sensitivity and robustness} (required perturbation families
+and operational audit distinction). Tables are split by layer for
+LaTeX/IEEE column width (same content as a single matrix).
+
+\hypertarget{appendix-a.1-layer-1}{%
+\subsubsection{Appendix A.1 -- Layer 1}\label{appendix-a.1-layer-1}}
+
+\textbf{Table 12 --- NFSI constants: Layer 1.}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rationale
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Sensitivity
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\passthrough{\lstinline!LAYER1\_DEFAULT\_SCORE!} &
+\passthrough{\lstinline!50!} & Neutral score when raw span is degenerate
+or bounds missing & Indirect (neutral fill propagates); not a named
+sweep axis \\
+\end{longtable}
+
+\hypertarget{appendix-a.2-layer-2}{%
+\subsubsection{Appendix A.2 -- Layer 2}\label{appendix-a.2-layer-2}}
+
+\textbf{Table 13 --- NFSI constants: Layer 2.}
+
+\begingroup
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\footnotesize
+\begin{longtable}{@{}>{\RaggedRight\ttfamily\arraybackslash}p{0.28\linewidth} >{\RaggedRight\ttfamily\arraybackslash}p{0.09\linewidth} >{\RaggedRight\arraybackslash}p{0.31\linewidth} >{\RaggedRight\arraybackslash}p{0.30\linewidth}@{}}
+\textbf{Name} & \textbf{Value} & \textbf{Rationale} & \textbf{Sensitivity} \\
+\hline
+\endhead
+\seqsplit{LAYER2\_TODAY\_WEIGHT} & 0.6 & Today weight $\alpha$ in connector-day smoothing & Indirect (smoothing geometry); couples to headline volatility \\
+\seqsplit{LAYER2\_YESTERDAY\_WEIGHT} & 0.4 & Yesterday weight $\beta$ in connector-day smoothing & Indirect (paired with \seqsplit{LAYER2\_TODAY\_WEIGHT}) \\
+\seqsplit{LAYER2\_NO\_DATA\_START\_SECURITY} & 70 & Default “yesterday” when no prior day exists (security group) & Missingness / continuity path \\
+\seqsplit{LAYER2\_NO\_DATA\_START\_OTHER} & 85 & Default “yesterday” when no prior day exists (non-security) & Missingness / continuity path \\
+\seqsplit{LAYER2\_RECOVERY\_PER\_DAY\_SECURITY} & 0.2 & Recovery increment per empty day (security), capped elsewhere & Missingness stress (recovery ladder) \\
+\seqsplit{LAYER2\_RECOVERY\_PER\_DAY\_OTHER} & 1.0 & Recovery increment per empty day (non-security) & Missingness stress (recovery ladder) \\
+\seqsplit{LAYER2\_RECOVERY\_CAP} & 95 & Upper cap for recovery-filled scores & Missingness stress (bounds) \\
+\seqsplit{LAYER2\_RECOVERY\_MAX\_DAYS} & 90 & Maximum consecutive recovery days & Missingness stress (horizon) \\
+\seqsplit{NFSI\_DUMMY\_LOW} & 0 & Low anchor in non-security AVG multiset & Direct sweep knob -- dummy anchors (Validation sensitivity) \\
+\seqsplit{NFSI\_DUMMY\_HIGH} & 100 & High anchor in non-security AVG multiset & Direct sweep knob -- dummy anchors \\
+\seqsplit{NFSI\_ARRAY\_PAD\_VALUE} & 50 & MID pad value for non-security length alignment & Missingness / substitution geometry \\
+\seqsplit{LAYER2\_SECURITY\_STRUCTURAL\_PAD\_VALUE} & 100 & MIN multiset pad in \textbf{deployed PHP} (length $M$); manuscript normative MIN uses \textbf{0} (Appendix C) & Parity-only literal; not used for manuscript methodological claims \\
+\seqsplit{LAYER2\_COVERAGE\_WARN\_THRESHOLD} & 0.2 & Fractional coverage below which operators SHOULD flag sparse connector-days & Operational audit only (not a score sweep knob) \\
+\end{longtable}
+\endgroup
+
+\hypertarget{appendix-a.3-layer-3}{%
+\subsubsection{Appendix A.3 -- Layer 3}\label{appendix-a.3-layer-3}}
+
+\textbf{Table 14 --- NFSI constants: Layer 3.}
+
+\begingroup
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\footnotesize
+\begin{longtable}{@{}>{\RaggedRight\ttfamily\arraybackslash}p{0.28\linewidth} >{\RaggedRight\ttfamily\arraybackslash}p{0.09\linewidth} >{\RaggedRight\arraybackslash}p{0.31\linewidth} >{\RaggedRight\arraybackslash}p{0.30\linewidth}@{}}
+\textbf{Name} & \textbf{Value} & \textbf{Rationale} & \textbf{Sensitivity} \\
+\hline
+\endhead
+\seqsplit{LAYER3\_NO\_DATA\_NEUTRAL\_SCORE} & 50 & Substitute score for flagged missing connectors at composition & Missingness stress / substitution \\
+\seqsplit{LAYER3\_SCORE\_FLOOR} & 1 & Lower bound on published / post-floor NFSI & Indirect (bounds published scale) \\
+\seqsplit{LAYER3\_NO\_SECURITY\_DEFAULT\_MINSEC} & 80 & Default $\mathrm{minSec}$ when no real security connector exists & Indirect (gates conflict/crash predicates) \\
+\seqsplit{LAYER3\_DUMMY\_LOW\_WEIGHT} & 1 & Weight on dummy low anchor in Layer-3 mean & Direct sweep knob -- dummy anchors \\
+\seqsplit{LAYER3\_DUMMY\_HIGH\_WEIGHT} & 1 & Weight on dummy high anchor in Layer-3 mean & Direct sweep knob -- dummy anchors \\
+\seqsplit{LAYER3\_CONFLICT\_THRESHOLD} & 70 & $\mathrm{minSec}$ below which conflict malus activates & Direct sweep knob -- conflict threshold family \\
+\seqsplit{LAYER3\_CONFLICT\_MALUS\_FACTOR} & 1.0 & Linear multiplier on depth below threshold & Direct sweep knob -- conflict threshold family \\
+\seqsplit{LAYER3\_CONFLICT\_MALUS\_CAP} & 35 & Cap on conflict malus points & Direct sweep knob -- conflict threshold family \\
+\seqsplit{LAYER3\_POPULATION\_REF} & 45000000 & Reference population for pop malus/bonus & Indirect composite lever \\
+\seqsplit{LAYER3\_POP\_LOG\_MIN} & 100000 & Floor on population used in log terms & Indirect composite lever \\
+\seqsplit{LAYER3\_POP\_NEG\_MULTIPLIER\_CAP} & 2.0 & Caps population-negative multiplier & Indirect composite lever \\
+\seqsplit{LAYER3\_WGI\_SENTIMENT\_SCALE} & 10 & Maps $\mathrm{est\_total}$ to a $[0,10]$-style WGI axis in formulas & Indirect (ties to governance pull) \\
+\seqsplit{LAYER3\_FRAGILITY\_POP\_FACTOR} & 3.0 & Scales fragility population term & Indirect composite lever \\
+\seqsplit{LAYER3\_FRAGILITY\_MALUS\_CAP} & 15 & Cap on fragility malus & Indirect composite lever \\
+\seqsplit{LAYER3\_SMALL\_POP\_THRESHOLD} & 5000000 & Threshold for small-population malus & Indirect composite lever \\
+\seqsplit{LAYER3\_SMALL\_POP\_MALUS\_PER\_LOG10} & 4.0 & Malus per $\log_{10}$ band below threshold & Indirect composite lever \\
+\seqsplit{LAYER3\_SMALL\_POP\_MALUS\_CAP} & 25 & Cap on small-pop malus & Indirect composite lever \\
+\seqsplit{LAYER3\_POPULATION\_BONUS\_FACTOR} & 0.5 & Scales population bonus term & Indirect composite lever \\
+\seqsplit{LAYER3\_POPULATION\_BONUS\_CAP} & 4.0 & Cap on population bonus & Indirect composite lever \\
+\seqsplit{LAYER3\_WGI\_PULL} & 0.95 & Strength of governance pull toward $\mathrm{est\_total}$ & Indirect composite lever (construct overlap with WGI) \\
+\end{longtable}
+\endgroup
+
+\hypertarget{appendix-a.4-layer-4}{%
+\subsubsection{Appendix A.4 -- Layer 4}\label{appendix-a.4-layer-4}}
+
+\textbf{Table 15 --- NFSI constants: Layer 4.}
+
+\begingroup
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\footnotesize
+\begin{longtable}{@{}>{\RaggedRight\ttfamily\arraybackslash}p{0.28\linewidth} >{\RaggedRight\ttfamily\arraybackslash}p{0.09\linewidth} >{\RaggedRight\arraybackslash}p{0.31\linewidth} >{\RaggedRight\arraybackslash}p{0.30\linewidth}@{}}
+\textbf{Name} & \textbf{Value} & \textbf{Rationale} & \textbf{Sensitivity} \\
+\hline
+\endhead
+\seqsplit{LAYER4\_INERTIA\_STANDARD} & 0.80 & Inertia weight when $N_{\mathrm{no\_data}}=0$ & Indirect (smoothing path; not a listed sweep family) \\
+\seqsplit{LAYER4\_INERTIA\_SCORE\_WITHOUT\_L1L2} & 0.50 & Inertia weight when $N_{\mathrm{no\_data}}>0$ (matches \texttt{\_score\_without\_l1l2\_data}) & Indirect (paired with standard weight) \\
+\seqsplit{LAYER4\_DAILY\_CHANGE\_CAP} & 3 & Max absolute day-on-day move under inertia & Direct sweep knob -- daily cap family \\
+\seqsplit{LAYER4\_SECURITY\_CRISIS\_THRESHOLD} & 25 & $\mathrm{minSec}$ threshold for crash mode & Direct sweep knob -- crash threshold family \\
+\end{longtable}
+\endgroup
+
+\textbf{Rounding / storage (applies to all layers):} round all stored
+scores to \textbf{two decimals} (round-half-away-from-zero); suggested
+SQL type \textbf{\passthrough{\lstinline!DECIMAL(5,2)!}} for published
+intermediates in deposit outputs.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{appendix-b-layer-pseudocode}{%
+\subsection{Appendix B -- Layer
+pseudocode}\label{appendix-b-layer-pseudocode}}
+
+The authoritative full pseudocode is \textbf{SM-28}. The deposit text
+may still describe \textbf{100}-based security MIN padding for recompute
+bundle compatibility; the \textbf{manuscript-normative} security MIN
+uses structural pad \textbf{0} (\textbf{Methodology}). Excerpt
+(opening):
+
+\begin{lstlisting}
+NFSI L1-L4 deterministic pseudocode
+
+========================
+L1 - Row-level normalisation
+========================
+INPUT per connector k:
+  - rows r_i with raw_value r_i and row timestamp/event id (for deterministic sorting)
+  - direction higher_raw_is_worse_k in {0,1}
+  - bounds min_raw_k, max_raw_k over the deposited snapshot for connector k
+
+FOR each row i:
+  span = max_raw_k - min_raw_k
+  IF span <= 0 OR min_raw_k/max_raw_k missing:
+      normalized = 50
+  ELSE:
+      normalized = 100 * (r_i - min_raw_k) / span
+  normalized = clamp(normalized, 0, 100)
+
+  IF higher_raw_is_worse_k == 1:
+      score_row = 100 - normalized
+  ELSE:
+      score_row = normalized
+  score_row = round2(clamp(score_row, 0, 100))
+
+OUTPUT:
+  - score_row per row (0..100)
+
+========================
+L2 - Connector-day aggregation + smoothing + recovery
+========================
+INPUT per (connector k, country c, day t):
+  - all L1 score_row values for that triple, sorted deterministically by event_timestamp ASC
+  - group_weight g_k (100 = security group)
+  - pad policy:
+      - security: MIN(scores), missing padded with 100 for MIN semantics
+      - non-security: arr = [0] + scores + [100]; dayScore = AVG(arr)
+  - smoothing weights alpha=0.6 (today), beta=0.4 (yesterday)
+  - default yesterday:
+      - security: 70
+      - other: 85
+  - recovery:
+      - per day without data: +0.2 (security) or +1.0 (other), capped at 95
+      - maximum recovery days: 90
+
+DAY AGGREGATION:
+  IF g_k == 100:
+      dayScore = MIN(scores)  (if score list empty: dayScore is "missing")
+  ELSE:
+      arr = [0] + scores + [100]
+      dayScore = AVG(arr)
+
+SMOOTHING (if dayScore present):
+  y = yesterday L2 score for (k,c,t-1) if exists else default_yesterday(g_k)
+  score_final = alpha * dayScore + beta * y
+  score_final = round2(clamp(score_final, 0, 100))
+
+RECOVERY (if dayScore missing for a day):
+  Start from last available score_final on previous day; apply per-day recovery step until:
+    - next real dayScore exists, OR
+    - recovery reaches cap 95, OR
+    - 90 days filled.
+
+OUTPUT:
+  - score_final per connector/country/day (0..100)
+
+========================
+L3 - Country composition (nfsi_raw)
+========================
+INPUT per (country c, day t):
+  - per connector k: L2 score_final (0..100) if present else missing
+  - connector meta:
+      - group g_k (int; group < 0 excluded)
+      - scoreValue_k = connector_weight_k / 100 (float 0..1)
+      - updateMult_k (float)
+  - constants:
+      - LAYER3_NO_DATA_NEUTRAL_SCORE = 50
+      - conflict threshold = 70, factor=1.0, cap=35
+      - population ref = 45,000,000; pop log min=100,000; popNeg cap=2.0
+      - fragility factor=3.0 cap=15; WGI_0_10 = est_total/10; governanceGap=10-WGI_0_10
+      - small country threshold=5,000,000; malus per log10=4.0 cap=25
+      - population bonus = min(4, log10(pop)*0.5)
+      - WGI pull = 0.95
+      - floor=1 cap=100
+\end{lstlisting}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{appendix-c-implementation-note}{%
+\subsection{Appendix C -- Implementation
+note}\label{appendix-c-implementation-note}}
+
+\textbf{Status: non-normative for manuscript claims.} This appendix
+records how the \textbf{pinned PHP reference} behaves when auditors
+require \textbf{numeric parity} with the deployed connector pipeline. It
+does \textbf{not} replace the \textbf{single} rule-set in
+\textbf{Methodology} (security MIN with structural pad \textbf{0}).
+
+\textbf{Table 16 --- Manuscript normative behaviour vs shipped PHP
+reference module (implementation parity).}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1081}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3378}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5541}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Aspect
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Manuscript (normative)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Shipped reference module (parity audits)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Security-group MIN padding to length \(M\) & pad with \textbf{0}
+(missing-as-worst) & literal \textbf{\passthrough{\lstinline!100.0!}} in
+MIN multiset (see
+\passthrough{\lstinline!LAYER2\_SECURITY\_STRUCTURAL\_PAD\_VALUE!} in
+\textbf{Appendix A}) \\
+Gap-synthesis default when no in-country L2 history & \textbf{0}
+(aligned with missing-as-worst) & default
+\textbf{\passthrough{\lstinline!100.0!}} in PHP for cold-start cells \\
+Export / manifest keys & optional provenance flags
+(\passthrough{\lstinline!was\_padded!},
+\passthrough{\lstinline!was\_imputed!}, \ldots) & legacy keys
+(e.g.~\passthrough{\lstinline!pad\_profile!},
+\passthrough{\lstinline!pad\_variant!}) may appear in operator exports
+for audit trails only \\
+L4 inertia (parity audits) & Binary weights \textbf{0.50} /
+\textbf{0.80} vs neutral substitution (\(N_{\mathrm{no\_data}}\)) & Same
+mapping in current reference sources \\
+\end{longtable}
+
+\textbf{Maintenance (changelog-level, non-normative):} Older PHP
+snapshots included an extra inertia literal
+(\passthrough{\lstinline!0.45!}, keyed on
+\passthrough{\lstinline!noDataRatio!}) that was unreachable alongside
+\passthrough{\lstinline!\_score\_without\_l1\_l2\_data!}; it has been
+dropped from current reference sources. Normative L4 behaviour remains
+the binary rule in \textbf{Methodology}. Commit-level audits SHOULD diff
+\passthrough{\lstinline!redacted internal source artifact!} against the
+pinned hash under \textbf{Discussion → Reproducibility}.
+
+\textbf{Labelling rule:} report implementation comparisons as
+\textbf{``PROD parity''} or \textbf{``reference-module parity''}; report
+scientific methodology claims \textbf{only} against \textbf{Methodology}
++ \textbf{Appendix A/B} as stated here.
+
+\clearpage
+
+\hypertarget{supplementary-material-repository-artefact-index}{%
+\subsection{Supplementary Material --- Repository artefact
+index}\label{supplementary-material-repository-artefact-index}}
+
+This section consolidates \textbf{repository-relative paths} referenced
+from the peer-review manuscript so the main PDF body can use shorter
+cross-references (\passthrough{\lstinline!SM-xx!}) instead of full
+monospace paths in tables and governance lists. Paths are relative to
+the NationFiles repository root.
+
+\textbf{Table 17 --- Supplementary repository artefact index (SM-ID
+paths).}
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2414}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2069}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5517}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+SM-ID
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Path
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Role (summary)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+SM-01 & \passthrough{\lstinline!research/deposit/!} & Deposit bundle
+root \\
+SM-02 & \passthrough{\lstinline!research/deposit/README.md!} &
+Maintainer notes / regeneration \\
+SM-03 & \passthrough{\lstinline!research/deposit/annex\_formulas.json!}
+& Formal formulas (JSON) \\
+SM-04 & \passthrough{\lstinline!research/deposit/annex\_formulas.tex!} &
+Formal formulas (LaTeX) \\
+SM-05 &
+\passthrough{\lstinline!research/deposit/api/nfsi\_openapi\_minimal.yaml!}
+& Minimal OpenAPI contract \\
+SM-06 &
+\passthrough{\lstinline!research/deposit/backtest-named/named\_events\_backtest.csv!}
+& Named-events excerpt \\
+SM-07 &
+\passthrough{\lstinline!research/deposit/backtest-named/named\_events\_backtest.md!}
+& Named-events documentation \\
+SM-08 &
+\passthrough{\lstinline!research/deposit/backtest/backtest\_events.csv!}
+& DB-derived delta excerpt \\
+SM-09 &
+\passthrough{\lstinline!research/deposit/backtest/backtest\_events.md!}
+& Backtest narrative \\
+SM-10 &
+\passthrough{\lstinline!research/deposit/backtest/backtest\_protocol.md!}
+& Backtest protocol \\
+SM-11 &
+\passthrough{\lstinline!research/deposit/backtest/run\_backtest\_protocol.py!}
+& Protocol runner \\
+SM-12 &
+\passthrough{\lstinline!research/deposit/backtest/sensitivity\_fixture\_delta\_matrix.csv!}
+& Sensitivity toy grid \\
+SM-13 &
+\passthrough{\lstinline!research/deposit/backtest/sensitivity\_plan.csv!}
+& Sensitivity sweep plan \\
+SM-14 &
+\passthrough{\lstinline!research/deposit/build/logs/latex\_ieee\_merged.log!}
+& IEEE PDF build (merged pdflatex passes) \\
+SM-15 & \passthrough{\lstinline!research/deposit/const\_table.md!} &
+Canonical constants table (deposit) \\
+SM-16 & \passthrough{\lstinline!research/deposit/governance/!} &
+Governance bundle directory \\
+SM-17 &
+\passthrough{\lstinline!research/deposit/governance/attestation-template.md!}
+& Attestation template \\
+SM-18 &
+\passthrough{\lstinline!research/deposit/governance/audit-log-schema.json!}
+& Audit-log schema \\
+SM-19 &
+\passthrough{\lstinline!research/deposit/governance/change-control-protocol.md!}
+& Change control \\
+SM-20 &
+\passthrough{\lstinline!research/deposit/governance/hil\_sop.md!} &
+Human-in-the-loop SOP \\
+SM-21 &
+\passthrough{\lstinline!research/deposit/governance/invariants.md!} &
+Invariant definitions \\
+SM-22 &
+\passthrough{\lstinline!research/deposit/governance/retention-policy.md!}
+& Retention policy \\
+SM-23 &
+\passthrough{\lstinline!research/deposit/provenance/connector\_provenance.csv!}
+& Full connector provenance \\
+SM-24 &
+\passthrough{\lstinline!research/deposit/provenance/connector\_provenance\_license.csv!}
+& Licence appendix \\
+SM-25 &
+\passthrough{\lstinline!research/deposit/provenance/connector\_publishability\_matrix.csv!}
+& Publishability matrix \\
+SM-26 &
+\passthrough{\lstinline!research/deposit/provenance/top\_connectors\_by\_weight.csv!}
+& Top connectors (CSV) \\
+SM-27 &
+\passthrough{\lstinline!research/deposit/provenance/top\_connectors\_by\_weight.md!}
+& Top connectors (MD + hashes) \\
+SM-28 &
+\passthrough{\lstinline!research/deposit/pseudocode/nfsi\_layers\_pseudocode!}
+& Full layer pseudocode artefact \\
+SM-29 &
+\passthrough{\lstinline!research/deposit/public-exports/MANIFEST.json!}
+& Public export manifest \\
+SM-30 & internal tooling (redacted from public release; available to
+reviewers under controlled access) & Recompute/validation tooling
+(redacted from public package; available to reviewers under controlled
+access if required) \\
+SM-31 & \passthrough{\lstinline!redacted internal source artifact!} & DB
+backtest exporter \\
+SM-32 & internal tooling (redacted from public release; available to
+reviewers under controlled access) & Data-quality SQL (redacted from
+public package; controlled-access if required) \\
+SM-33 & \passthrough{\lstinline!redacted internal source artifact!} &
+Export fetch helper \\
+SM-34 & \passthrough{\lstinline!redacted internal source artifact!} &
+Persistence skill \\
+SM-35 & \passthrough{\lstinline!redacted internal source artifact!} &
+Named-events exporter \\
+SM-36 & \passthrough{\lstinline!redacted internal source artifact!} &
+Fixture recompute \\
+SM-37 & \passthrough{\lstinline!redacted internal source artifact!} &
+Validation playbooks \\
+SM-38 & internal tooling (redacted from public release; available to
+reviewers under controlled access) & Sensitivity sweep template
+(redacted from public package; controlled-access if required) \\
+SM-39 & \passthrough{\lstinline!research/deposit/sample-dataset/!} & Toy
+fixture directory \\
+SM-40 & \passthrough{\lstinline!research/deposit/schema!} & Schema
+notes \\
+SM-41 & internal tooling (redacted from public release; available to
+reviewers under controlled access) & One-shot validation runner
+(redacted from public package; controlled-access if required) \\
+SM-42 & \passthrough{\lstinline!research/deposit/validation/outputs/!} &
+Validation outputs directory \\
+SM-43 &
+\passthrough{\lstinline!research/deposit/validation/outputs/named\_events\_bootstrap\_delta\_ci.json!}
+& Bootstrap CI artefact \\
+SM-44 &
+\passthrough{\lstinline!research/deposit/validation/outputs/named\_events\_roc\_pr\_points.csv!}
+& ROC/PR points \\
+SM-45 &
+\passthrough{\lstinline!research/deposit/validation/outputs/named\_events\_score\_metrics.csv!}
+& Score metrics \\
+SM-46 &
+\passthrough{\lstinline!research/deposit/validation/sensitivity\_robustness\_report.md!}
+& Sensitivity report template \\
+SM-47 &
+\passthrough{\lstinline!research/deposit/validation/validation\_annex.md!}
+& Validation annex \\
+SM-48 & \passthrough{\lstinline!research/evidence/!} & Evidence bundle
+root \\
+SM-49 & \passthrough{\lstinline!research/evidence/evidence.json!} &
+Evidence manifest \\
+SM-50 & \passthrough{\lstinline!research/evidence/evidence.sha256!} &
+Evidence hash \\
+SM-51 & \passthrough{\lstinline!redacted internal source artifact!} &
+RMSE scaffold \\
+SM-52 & \passthrough{\lstinline!research/evidence/generate-evidence.sh!}
+& Evidence generator \\
+SM-53 & \passthrough{\lstinline!redacted internal source artifact!} &
+Fixture invariant checks \\
+\end{longtable}
+
+\textbf{Figure assets} (PNG for PDF builds) live under
+\passthrough{\lstinline!research/peer-review/figures-png/!} and are not
+duplicated here.
+
+\par\bigskip
+\hrule
+\medskip
+\noindent\textbf{End of peer-review package (IEEE-style render).}\\
+\noindent As of: 2026-05-06\\
+\noindent Contact for legal inquiries: Sven Schmidt; info@nationfiles.com\\
+\noindent Transparency \& data ethics: \url{https://nationfiles.com/legal/governance/}\\
+\noindent Sources \& licences: \url{https://nationfiles.com/legal/sources/}\\
+\medskip
+\noindent \textbf{Suggested citation:} Neawolf Media Group (2026). \textit{Algorithmic Geopolitics: Comprehensive Methodology, Architecture, and Validation of the NationFiles Stability Index (NFSI)}. Peer-review manuscript v1.6.5, 2026-05-05. Aachen, Germany.\\
+\noindent \textbf{Licence notice:} \copyright\ NationFiles / Neawolf Media Group -- All rights reserved. Third-party artefacts remain under their respective licences as stated in the manuscript and Supplementary Material (see SM-23/SM-24).\\
+\noindent Sven Schmidt; ORCID: 0009-0002-5010-1902
+\medskip
+\hrule
+
+\end{document}
