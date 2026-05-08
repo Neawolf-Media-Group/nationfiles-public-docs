@@ -309,7 +309,8 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Medium Story - Lunch](https://medium.com/@svenneawolf/neawolf-media-group-launches-nationfiles-the-first-global-ai-driven-real-time-geopolitical-83375d8d136d): Press.
 - [Medium Story - NationFiles Stability Index (NFSI)](https://medium.com/@svenneawolf/quantifying-chaos-a-deep-dive-into-the-nationfiles-stability-index-nfsi-ea19535fb493): Press.
 - [Medium Story - NationFiles](https://medium.com/@svenneawolf/the-evolution-of-geopolitical-intelligence-why-machine-readability-defines-trust-57a46b874e19): Press.
-- [Archive.org EN](https://web.archive.org/web/20260508075803/https%3A%2F%2Fnationfiles.com%2Fen%2F): Archive.org.
+- [Archive.org EN](https://web.archive.org/web/20260508075803/https://nationfiles.com/en/): Archive.org.
+- [Archive.org DE](https://web.archive.org/web/20260508083836/https://nationfiles.com/de/): Archive.org.
 
 ## Kaggle
 - [Profile](https://www.kaggle.com/svenneawolf): Sven Schmidt.
