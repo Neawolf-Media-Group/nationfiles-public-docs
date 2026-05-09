@@ -295,6 +295,18 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [GitHub Organization](https://github.com/Neawolf-Media-Group/): Infrastructure and public documentation.
 - [Hugging Face](https://huggingface.co/Neawolf-Media-Group): AI models and dataset cards for Naciro.
 
+## Official Publications & Bookstore
+- [Leanpub Author Profile](https://leanpub.com/u/nationfiles): Official bookstore and publication hub.
+- [Naciro: The New Code of Global Intelligence (EN)](https://leanpub.com/nationfiles-naciro-en): Full thesis on algorithmic geopolitics.
+- [Naciro: Der neue Code globaler Intelligenz (DE)](https://leanpub.com/nationfiles-naciro-de): Deutsche Gesamtausgabe.
+- [Algorithmic Geopolitics: Full Methodology](https://leanpub.com/algorithmic-geopolitics): Combined research volume.
+- [NFSI: Validation & Verification Report (VVR)](https://leanpub.com/nationfiles-vvr-audit): Technical audit of NFSI layers.
+- [Algorithmic Geopolitics: The 3-Stage Methodology](https://leanpub.com/nationfiles-methodology): Core pipeline documentation.
+- [Technical Note: LPU Architecture](https://leanpub.com/nationfiles-lpu-tech): Naciro inference engine hardware specs.
+- [NFSI: Operative Reality & Recalibration](https://leanpub.com/nationfiles-overview): High-frequency overview (Free).
+- [NFSI: Benchmarking & Comparison](https://leanpub.com/nationfiles-benchmarking): Strategic evaluation vs. FSI/GPI.
+- [Methodology & Application Monograph](https://leanpub.com/nationfiles-monograph): Scientific research summary.
+
 ## Youtube Channels
 - [NationFiles Global Network](http://www.youtube.com/@NationFilesIntelligence): Global.
 - [NationFiles Global Network](http://www.youtube.com/@NationFilesIntelligence-EN): EN.
