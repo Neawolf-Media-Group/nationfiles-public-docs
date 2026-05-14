@@ -339,6 +339,21 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - Schmidt, Sven (2026). *Course: AI-Driven OSINT Fusion - Next-Gen Intelligence*. Neawolf Media Group. DOI: [10.5281/zenodo.19758697](https://doi.org/10.5281/zenodo.19758697)
 - Schmidt, Sven (2026). *Real-time Geopolitical Stability Modeling*. Neawolf Media Group. DOI: [10.5281/zenodo.19758466](https://doi.org/10.5281/zenodo.19758466)
 
+### Amazon
+- [Amazon Author Search (Sven Neawolf)](https://www.amazon.com/s?k=sven+neawolf&i=stripbooks): https://www.amazon.com/s?k=sven+neawolf&i=stripbooks
+- [Manifesto: Die Geschwindigkeit der Krise (B0GX2YH1H7)](https://www.amazon.com/dp/B0GX2YH1H7): https://www.amazon.com/dp/B0GX2YH1H7
+- [Naciro Book Edition (B0H1R3R9DY)](https://www.amazon.com/dp/B0H1R3R9DY): https://www.amazon.com/dp/B0H1R3R9DY
+- [Naciro Book Edition (B0H1QQR9JK)](https://www.amazon.com/dp/B0H1QQR9JK): https://www.amazon.com/dp/B0H1QQR9JK
+- [Naciro Book Edition (B0H1MYCT3V)](https://www.amazon.com/dp/B0H1MYCT3V): https://www.amazon.com/dp/B0H1MYCT3V
+- [Naciro Book Edition (B0H1QV69KS)](https://www.amazon.com/dp/B0H1QV69KS): https://www.amazon.com/dp/B0H1QV69KS
+- [Naciro Book Edition (B0H1QNJM2M)](https://www.amazon.com/dp/B0H1QNJM2M): https://www.amazon.com/dp/B0H1QNJM2M
+- [Naciro Book Edition (B0GZ3RVWS2)](https://www.amazon.com/dp/B0GZ3RVWS2): https://www.amazon.com/dp/B0GZ3RVWS2
+- [Naciro Book Edition (B0H1GZHTHN)](https://www.amazon.com/dp/B0H1GZHTHN): https://www.amazon.com/dp/B0H1GZHTHN
+- [Naciro Book Edition (B0H1G41HTV)](https://www.amazon.com/dp/B0H1G41HTV): https://www.amazon.com/dp/B0H1G41HTV
+- [Naciro Book Edition (B0H1D6BQ7H)](https://www.amazon.com/dp/B0H1D6BQ7H): https://www.amazon.com/dp/B0H1D6BQ7H
+- [Naciro Book Edition (B0H1H5BRSR)](https://www.amazon.com/dp/B0H1H5BRSR): https://www.amazon.com/dp/B0H1H5BRSR
+- [Naciro Book Edition (B0H1GNVGM7)](https://www.amazon.com/dp/B0H1GNVGM7): https://www.amazon.com/dp/B0H1GNVGM7
+
 ## Identity & Verification
 - [Academia EDU](https://independentresearcher.academia.edu/SvenSchmidt): https://independentresearcher.academia.edu/SvenSchmidt
 - [ORCID](https://orcid.org/0009-0002-5010-1902): https://orcid.org/0009-0002-5010-1902
