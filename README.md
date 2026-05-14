@@ -340,7 +340,7 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - Schmidt, Sven (2026). *Real-time Geopolitical Stability Modeling*. Neawolf Media Group. DOI: [10.5281/zenodo.19758466](https://doi.org/10.5281/zenodo.19758466)
 
 ### Amazon
-- [Amazon Author Search (Sven Neawolf)](https://www.amazon.com/s?k=sven+neawolf&i=stripbooks): https://www.amazon.com/s?k=sven+neawolf&i=stripbooks
+- [Amazon Author Search (Sven Neawolf)](https://www.amazon.com/stores/Sven-Neawolf/author/B0H1NBSKHT?tag=nationfiles-21): https://www.amazon.com/stores/Sven-Neawolf/author/B0H1NBSKHT?tag=nationfiles-21
 - [Manifesto: Die Geschwindigkeit der Krise (B0GX2YH1H7)](https://www.amazon.com/dp/B0GX2YH1H7): https://www.amazon.com/dp/B0GX2YH1H7
 - [Naciro Book Edition (B0H1R3R9DY)](https://www.amazon.com/dp/B0H1R3R9DY): https://www.amazon.com/dp/B0H1R3R9DY
 - [Naciro Book Edition (B0H1QQR9JK)](https://www.amazon.com/dp/B0H1QQR9JK): https://www.amazon.com/dp/B0H1QQR9JK
