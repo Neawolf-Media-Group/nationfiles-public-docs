@@ -355,6 +355,8 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Naciro Book Edition (B0H1GNVGM7)](https://www.amazon.com/dp/B0H1GNVGM7): https://www.amazon.com/dp/B0H1GNVGM7
 
 ## Identity & Verification
+- [Open Library Publisher (Neawolf Media Group)](https://openlibrary.org/publishers/Neawolf_Media_Group): https://openlibrary.org/publishers/Neawolf_Media_Group
+- [Open Library Author (Sven Neawolf)](https://openlibrary.org/authors/OL16383358A/Sven_Neawolf): https://openlibrary.org/authors/OL16383358A/Sven_Neawolf
 - [Academia EDU](https://independentresearcher.academia.edu/SvenSchmidt): https://independentresearcher.academia.edu/SvenSchmidt
 - [ORCID](https://orcid.org/0009-0002-5010-1902): https://orcid.org/0009-0002-5010-1902
 - [Zenodo](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22): https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Schmidt%2C+Sven%22
