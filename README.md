@@ -353,6 +353,8 @@ When adding new public segments or renaming URLs, update **this file**, `llms.tx
 - [Naciro Book Edition (B0H1D6BQ7H)](https://www.amazon.com/dp/B0H1D6BQ7H): https://www.amazon.com/dp/B0H1D6BQ7H
 - [Naciro Book Edition (B0H1H5BRSR)](https://www.amazon.com/dp/B0H1H5BRSR): https://www.amazon.com/dp/B0H1H5BRSR
 - [Naciro Book Edition (B0H1GNVGM7)](https://www.amazon.com/dp/B0H1GNVGM7): https://www.amazon.com/dp/B0H1GNVGM7
+- [Neawolf Media group on Amazon EN](https://www.amazon.com/stores/page/5E768EC3-C4B2-4765-BE5C-3A258E880141&tag=nationfiles-21): Official global Amazon (EN) catalog.
+- [Neawolf Media group on Amazon DE](https://www.amazon.de/stores/page/1CAAB591-D19E-4A2C-961C-99846041242C&tag=nationfiles-21): Official global Amazon (DE) catalog.
 
 ## Identity & Verification
 - [Open Library Publisher (Neawolf Media Group)](https://openlibrary.org/publishers/Neawolf_Media_Group): https://openlibrary.org/publishers/Neawolf_Media_Group
